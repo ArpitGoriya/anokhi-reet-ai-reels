@@ -1,0 +1,56 @@
+/* Anokhi Reet brand tokens for reels. Copy of Marketing Studio's brand + the website's free-tools tokens
+   (2026-11-13). Source of truth for reels: change here (owner only). See BRAND.md. */
+@font-face { font-family: "Inter"; src: url("fonts/Inter-Variable.ttf") format("truetype"); font-weight: 100 900; }
+@font-face { font-family: "Arya"; src: url("fonts/Arya-Regular.ttf") format("truetype"); font-weight: 400; }
+
+:root {
+  /* brand */
+  --ar-red: #890304;
+  --ar-red-dark: #4a0002;
+  --ar-maroon-deep: #2b0001;
+  --ar-cream: #FFF2DF;
+  --ar-beige: #E8E5C3;
+  --ar-gold-tan: #D6B97A;
+  --ar-gold: #F8D36A;
+  --ar-brown-dark: #7A5C2E;
+  --ar-text: #1A1A1A;
+  --ar-text-light: #767676;
+  --ar-white: #FFFFFF;
+
+  --ar-grad-maroon: linear-gradient(135deg, #9A0000 0%, #5D0000 100%);
+  --ar-grad-maroon-deeper: linear-gradient(180deg, #570000 0%, #3B0000 100%);
+  --ar-grad-cream: linear-gradient(135deg, #F5E6C8 0%, #E8D3A5 100%);
+  --ar-grad-gold: linear-gradient(90deg, #A16F35 0%, #F8D36A 18%, #F8D36A 72%, #9A6A36 100%);
+  --ar-grad-tagline-gold: linear-gradient(90deg, #F8B97A 0%, #E0B073 25%, #B98A3F 38%, #EBB97A 56%, #BB897A 80%, #80533A 100%);
+
+  --ar-shadow: 0 20px 60px rgba(74, 0, 2, 0.18);
+  --ar-font: "Inter", sans-serif;
+  --ar-font-hindi: "Arya", serif;
+
+  /* free tools (Anokhi Reet Tools) */
+  --tool-surface: #FAF7F3;
+  --tool-raised: #FFFFFF;
+  --tool-sunken: #F2EEE9;
+  --tool-line: #E6E0D9;
+  --tool-ink: #141110;
+  --tool-muted: #655C57;
+  --tool-beige: #E8E5C3;
+  --tool-cream: #FFF2DF;
+  --tool-success: #1F7A4D;
+  --tool-success-soft: #E3F3EA;
+  --tool-warning: #94560F;
+  --tool-warning-soft: #FCEFD2;
+  --tool-danger: #B23B3B;
+  --tool-danger-soft: #FBE7E7;
+  --tool-grad: linear-gradient(91.51deg, #9A0000 -0.55%, #5D0000 100.55%);
+  --tool-radius-control: 12px;
+  --tool-radius-card: 16px;
+  --tool-radius-hero: 24px;
+
+  /* reel frame (1080x1920) */
+  --reel-safe-top: 270px;
+  --reel-safe-bottom: 420px;
+  --reel-safe-right-lower: 150px;
+  --reel-phone-width: 590px;
+  --reel-ease: cubic-bezier(.65, 0, .35, 1);
+}

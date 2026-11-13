@@ -17,3 +17,16 @@
   built-in voice (sounds mixed-gender), cloning a paid ElevenLabs Library voice.
 
 - **Setup only through Claude** (owner): no .bat files. Teammates say "clone ... and set me up"; Claude installs everything (Windows or Mac), then opens `.env` in Notepad/TextEdit for them to paste their key. Skills: `set-me-up`, `make-voice`.
+
+## 2026-11-13: reels
+
+- **Reels are made with Claude + Marketing Studio** (real app screens by recording or screenshots), voice-over
+  first, every scene timed to its voice line (Marketing Studio's `inbox` gives the line timings).
+- **Brand copied into this repo** (`brand/`): Marketing Studio's Anokhi Reet brand (colours, gradients, fonts,
+  logos, patterns, rules, never-say) + the website's free-tools design system ("Anokhi Reet Tools"). Updates happen
+  here; this copy wins over the originals for reels (owner).
+- **Fonts: Inter for everything, Arya only for Hindi** (Marketing Studio / website). The older video studio's
+  Playfair Display headlines are not used.
+- **AI voices are allowed in these reels** (the older `anokhireet-videos` studio's "no AI voices" rule stays there).
+- **Teammates' changes override the defaults for their own reel**, recorded in the reel's `REEL.md`; logo rules,
+  never-say list and voices stay. Changes for everyone go to the owner.

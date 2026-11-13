@@ -3,7 +3,7 @@
 Make voice-overs for Anokhi Reet reels with our two AI voices, a **male** and a **female** voice. Both are free,
 sound like a young Indian creator, and speak natural Hinglish.
 
-> **Status:** making voice-overs works. Making the full reel (video) is the next step; see "Making reels" below.
+> **Status:** voice-overs work. Reels are made with Claude + Marketing Studio, on brand, timed to the voice.
 
 ## Listen to the voices
 
@@ -53,16 +53,31 @@ later. Each person's own key has its own limit, so ask before making dozens of t
 
 ## Making reels
 
-The voices are ready. The reel-making part (video) comes next. Anokhi Reet already has a video studio
-(the `anokhireet-videos` repo) that can take a voice-over file. Ask the owner before using AI voices in it:
-that studio currently has a "no AI voices" rule.
+Tell Claude what you want, for example **"make a 20-second reel about the mehndi tracker, female voice"**. Claude:
+
+1. asks a few questions (what, for whom, voice, recording or screenshots, music);
+2. writes the **script and storyboard** together and waits for your OK;
+3. makes the **voice-over first** for you to listen to;
+4. films the real app on anokhireet.in with **Marketing Studio** (screen recording or screenshots);
+5. builds the video **on brand**, every scene starting on its voice line, and shows a preview with the post caption;
+6. changes it until you're happy (your changes are written down and kept in every round);
+7. you press **"HD version"** for the final. Say **"save my reel"** to store its script and notes on GitHub.
+
+Videos need the **Marketing Studio** extension in the Claude app (the owner sets it up). Each reel's notes live in
+`reels/<date>-<name>/REEL.md`; the finished video stays on your computer.
+
+**Your changes win for your reel.** The brand rules in [`brand/BRAND.md`](brand/BRAND.md) are the starting point;
+whatever you ask for your reel is kept (except the logo rules, the "never say" list and the voices). If you want
+something changed for everyone, Claude notes it for the owner.
 
 ## What's inside
 
 | Path | What it is |
 |---|---|
-| `.claude/skills/` | What Claude follows for "set me up" and "make a voice-over" |
+| `.claude/skills/` | What Claude follows: `set-me-up`, `make-voice`, `make-reel` |
 | `tools/setup_helper.py` | Setup checks, opens the key file and the output folder |
+| `brand/` | Brand guide (`BRAND.md`, incl. the Anokhi Reet Tools design system), colours (`tokens.css`), logos, patterns, fonts |
+| `reels/` | One folder per reel with its brief, script, changes and lessons (`_template/` to start) |
 | `voice/samples/` | The approved male and female voices |
 | `voice/examples/` | Example scripts |
 | `voice/gen_voice.py` | The voice tool (Claude runs it) |

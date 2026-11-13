@@ -12,3 +12,11 @@ scripts/current-script.txt
 *.wav
 Thumbs.db
 .DS_Store
+
+# Reel media stays on the maker's computer (Marketing Studio project folder, output/)
+*.mp4
+*.mov
+*.webm
+reels/**/*.mp3
+reels/**/*.png
+reels/**/*.jpg

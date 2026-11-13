@@ -35,4 +35,7 @@ Check the OS first (Windows or Mac) and use the matching commands. Paths below:
    - Key doesn't work → it was copied incompletely, or with spaces: open it again and ask them to paste it fresh.
    - Mac TextEdit: if the key line looks odd, it may have saved as rich text; ask them to use Format → Make Plain
      Text, then save.
-7. Never commit `.env`. Nothing to push after setup.
+7. **Video (Marketing Studio):** call the Marketing Studio `status` tool. If it works, say videos are ready too.
+   If the tool isn't available, tell them: "Voice-overs work. For videos you also need the Marketing Studio
+   extension in the Claude app; ask the owner (ArpitGoriya) to set it up." Don't try to install it yourself.
+8. Never commit `.env`. Nothing to push after setup.
