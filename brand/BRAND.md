@@ -1,9 +1,9 @@
 # Anokhi Reet brand for reels (including the Tools design system)
 
-**This folder is the source of truth for reels.** It is a copy (2026-11-13) of the Anokhi Reet brand in Marketing
-Studio (`brand.json`, logos, patterns, fonts) plus the free-tools design system from the website
-(`anokhireet/apps/web/.agents/context/DESIGN_SYSTEM.md`, `app/theme.css`). Update it **here**. If Marketing Studio's
-brand tool or the website says something different, **this file wins** for reels.
+**This folder is the source of truth for reels.** It is a copy (2026-11-13) of the Anokhi Reet brand
+(`brand.json`, logos, patterns, fonts) plus the free-tools design system from the website
+(`anokhireet/apps/web/.agents/context/DESIGN_SYSTEM.md`, `app/theme.css`). Update it **here**. If any other brand copy
+or the website says something different, **this file wins** for reels.
 
 Only the owner (ArpitGoriya) changes these defaults. A teammate's request changes **their own reel only**
 (see "Defaults vs. a teammate's changes" at the end).
@@ -45,17 +45,17 @@ All as CSS variables: [`tokens.css`](tokens.css).
 
 ## Logos (`logos/`)
 
-In Marketing Studio designs, refer to them as `brand:<name>`.
+The names are short handles used in these docs and in reel notes.
 
 | Name | File | Use |
 |---|---|---|
-| wordmark | `logo-text.svg` | ANOKHI REET wordmark, beige, for maroon grounds; on cream `brand:wordmark?color=red` |
+| wordmark | `logo-text.svg` | ANOKHI REET wordmark, beige, for maroon grounds; on cream, recoloured red `#890304` |
 | seal | `logo-icon.svg` | Round seal, beige, for maroon grounds |
 | seal-on-maroon | `seal-on-maroon.svg` | Seal on a maroon disc, any ground |
 | app-icon | `app-icon.png` | The app icon |
 | lockup-maroon | `AnokhiReet_logo_maroon.svg` | Seal + wordmark in maroon, for cream |
-| shops | `shops.svg` | SHOPS logo (seal ring as the O), maroon gradient; on maroon `?color=beige` |
-| vendors | `vendors.svg` | VENDORS logo, maroon gradient; on maroon `?color=beige` |
+| shops | `shops.svg` | SHOPS logo (seal ring as the O), maroon gradient; on maroon, recoloured beige |
+| vendors | `vendors.svg` | VENDORS logo, maroon gradient; on maroon, recoloured beige |
 | pro-badge | `pro.svg` | Vendor PRO badge, any ground |
 | lockup-shops / -dark | `Anokhireet_shop_logo.svg` / `_dark.svg` | Shop partner-programme lockup (maroon ground / cream ground) |
 | lockup-vendors / -dark | `AnokhiReet_vendors_Trasparent_logo.svg` / `_dark.svg` | Vendor partner-programme lockup |

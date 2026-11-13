@@ -13,7 +13,7 @@ scripts/current-script.txt
 Thumbs.db
 .DS_Store
 
-# Reel media stays on the maker's computer (Marketing Studio project folder, output/)
+# Reel media stays on the maker's computer (output/)
 *.mp4
 *.mov
 *.webm

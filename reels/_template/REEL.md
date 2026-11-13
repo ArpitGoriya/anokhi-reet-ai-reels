@@ -30,7 +30,7 @@ Everything here is applied in every round and never silently reverted.
 ## Voice-over
 
 - File: `output/<name>.mp3` (on the maker's computer) — approved: yes/no
-- Line timings (from Marketing Studio `inbox`):
+- Line timings (from `tools/voice_timing.py`):
 
 ## Feedback rounds
 
