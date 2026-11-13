@@ -17,14 +17,14 @@
 
 ## Teammate changes (override the brand defaults for this reel only)
 
-- (none yet)
+- Hook must not start with the calculator: open on eye-catching outfits (real lehenga photos from the app, or a stock clip if one is supplied). (owner, round 0)
 
 ## Script and storyboard (approved: pending)
 
 | # | Voice line | On screen (page, state, real action) | Text on screen |
 |---|---|---|---|
-| 1 | शादी में सिर्फ़ एक बार पहनना है... तो पूरा lehenga खरीदना क्यों? | Maroon ground, phone slides in with the calculator | Ek din ke liye pura kharcha? |
-| 2 | Anokhi Reet का free Rent vs Buy calculator खोलो, और अपने lehenga की showroom price डालो। | Recording: price slider 25,000 → 60,000, savings update live | Price daalo |
+| 1 | शादी में सिर्फ़ एक बार पहनना है... तो पूरा lehenga खरीदना क्यों? | 3 real bridal lehenga photos from /products/bride-lehenga/, big photo cards on maroon, one per second (prices/codes cropped out) | Ek din ke liye pura kharcha? |
+| 2 | Anokhi Reet का free Rent vs Buy calculator खोलो, और अपने lehenga की showroom price डालो। | Phone appears. Recording: price slider 25,000 → 60,000, savings update live | Price daalo |
 | 3 | देखो... rent करके कितनी बचत होती है! | Gentle zoom on "Your Total Wedding Savings" | Dekho kitni bachat |
 | 4 | Calculator बिल्कुल free है, anokhireet.in पर try करो! | End card on cream, TOOLS lockup | Try it free |
 
