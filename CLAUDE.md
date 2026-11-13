@@ -4,6 +4,16 @@ The people here make voice-overs and reels for Anokhi Reet, an ethnic-wear renta
 Most are **not technical**. Speak plainly, say what you're doing in one sentence, and never show them stack
 traces, git or JSON unless they ask.
 
+## Always (owner, 2026-11-13)
+
+- **Show it in the chat, not only in a file.** Every script, storyboard, caption, brief, feedback summary or
+  checklist you write goes **in your chat message too** (as a table or a quoted block), even when it's also saved
+  in a file. People here don't open files; never answer "it's in REEL.md" alone.
+- **Push on your own, without asking.** Commit and push at each milestone (brief written, script approved,
+  voice approved, each feedback round, final, lessons) and at the end of every session: `git pull --rebase`, commit
+  only text files (the `.gitignore` keeps keys, audio and video out), push. Tell them in one line ("Saved to GitHub").
+  Never commit `.env` or keys. If a push fails, retry once after `git pull --rebase`, then tell them plainly.
+
 ## Common requests
 
 - **"Set me up"**, "it's not working", or right after cloning: follow the `set-me-up` skill
@@ -36,4 +46,4 @@ traces, git or JSON unless they ask.
 
 ## Keeping things in sync
 
-Record new decisions in `DECISIONS.md`. Commit and push only when the person asks.
+Record new decisions in `DECISIONS.md`, then commit and push (no need to ask).

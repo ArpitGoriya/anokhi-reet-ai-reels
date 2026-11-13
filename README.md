@@ -61,7 +61,9 @@ Tell Claude what you want, for example **"make a 20-second reel about the mehndi
 4. films the real app on anokhireet.in with **Marketing Studio** (screen recording or screenshots);
 5. builds the video **on brand**, every scene starting on its voice line, and shows a preview with the post caption;
 6. changes it until you're happy (your changes are written down and kept in every round);
-7. you press **"HD version"** for the final. Say **"save my reel"** to store its script and notes on GitHub.
+7. you press **"HD version"** for the final.
+
+Claude shows every script, storyboard and caption **right in the chat**, and saves your reel's notes to GitHub by itself as you go.
 
 Videos need the **Marketing Studio** extension in the Claude app (the owner sets it up). Each reel's notes live in
 `reels/<date>-<name>/REEL.md`; the finished video stays on your computer.

@@ -5,7 +5,9 @@ description: Make an Anokhi Reet Instagram reel (9:16 video) with real app scree
 
 # Make a reel
 
-The person is usually not technical: short, plain messages, one question at a time with 2-3 options. The goal is a
+The person is usually not technical: short, plain messages, one question at a time with 2-3 options.
+**Show everything in the chat** (brief, script + storyboard table, caption, feedback, checklist), not only in
+`REEL.md`. **Commit and push on your own** after each milestone (see step 8), saying "Saved to GitHub". The goal is a
 **perfect** reel, so agree everything before the slow steps (capturing, rendering) and check before every export.
 
 `PY` = `.venv/Scripts/python.exe` (Windows) or `.venv/bin/python` (Mac/Linux).
@@ -83,10 +85,11 @@ The voice drives the timing, so write them together, in one table, and show it:
 - [ ] Every "Teammate changes" item applied.
 - [ ] Caption ready.
 
-## 8. Save
+## 8. Save (automatic)
 
-When they say "save my reel" (or at the end, if they agree): fill "Lessons" in `REEL.md`, then commit **only** that
-reel's folder (text files; the `.gitignore` keeps audio and video out) with `git pull --rebase` first, and push.
+Without asking, after each milestone (brief, script approved, voice approved, each feedback round, final, lessons):
+`git pull --rebase`, commit **only** that reel's folder (text files; the `.gitignore` keeps audio and video out),
+push, and say "Saved to GitHub" in one line. At the end, fill "Lessons" in `REEL.md` and push again.
 Finished videos stay in Marketing Studio's project folder and `output/` on their computer; share them however they like.
 
 Shared defaults (`brand/`, the voices, these skills) change only with the owner's OK. If a teammate wants a change

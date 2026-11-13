@@ -9,7 +9,7 @@ description: Make an Anokhi Reet voice-over (MP3) with the approved male or fema
 `set-me-up` skill first.
 
 1. **Male or female?** Ask if they didn't say. Male = Sadachbia (warm, confident), female = Vindemiatrix (sweet).
-2. **Script check** (fix it yourself, then show them the final text in one block):
+2. **Script check** (fix it yourself, then **show the final text in the chat** in one block, always):
    - Hindi in Devanagari, English words in Latin letters. If they wrote Hinglish in Roman letters, convert the
      Hindi parts to Devanagari.
    - **Female voice = female Hindi** ("दिखाने वाली हूँ", "भेज दूँगी", "मैं गई"); male = "वाला हूँ", "दूँगा".

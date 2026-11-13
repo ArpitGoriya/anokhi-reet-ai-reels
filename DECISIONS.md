@@ -30,3 +30,7 @@
 - **AI voices are allowed in these reels** (the older `anokhireet-videos` studio's "no AI voices" rule stays there).
 - **Teammates' changes override the defaults for their own reel**, recorded in the reel's `REEL.md`; logo rules,
   never-say list and voices stay. Changes for everyone go to the owner.
+- **Show everything in the chat** (scripts, storyboards, captions, briefs), not only in files: teammates aren't
+  technical (owner).
+- **Claude commits and pushes on its own** at each milestone and at the end of a session, without asking (owner).
+  Only text files; never keys, audio or video.
