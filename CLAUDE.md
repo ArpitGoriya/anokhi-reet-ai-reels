@@ -6,17 +6,13 @@ traces, git or JSON unless they ask.
 
 ## Common requests
 
-- **"Set me up"**: run `tools/setup.ps1` for them, or tell them to double-click `1 Setup.bat`. They paste their
-  Gemini key into that window themselves: never ask them to paste a key into the chat, and never read or print
-  `.env`.
-- **"Make a male/female voice-over of …"**: write the text to `scripts/current-script.txt` (UTF-8), then run
-  `.venv/Scripts/python.exe voice/gen_voice.py scripts/current-script.txt output/<male|female>-<date-time>.mp3 --persona <male|female>`.
-  Tell them where the MP3 is. You cannot hear audio: they judge how it sounds.
-- **Writing scripts**: Hindi in Devanagari, English words in Latin letters, numbers as words, `...` for pauses.
-  **Female voice = female Hindi grammar** ("दिखाने वाली हूँ", "भेज दूँगी"). Check this before generating; a male
-  verb in a female voice sounds wrong.
-- **"Out of quota"**: each model allows 10 a day per key; the tool already switches 3.1 → 3.8. Use
-  `--allow-backup` (2.5, deeper and flatter) only if they say it's really needed. Otherwise: try later.
+- **"Set me up"**, "it's not working", or right after cloning: follow the `set-me-up` skill
+  (`.claude/skills/set-me-up/SKILL.md`). Works on Windows and Mac. The person pastes the key into `.env` in the
+  editor the skill opens; never ask for the key in chat, and never read or print `.env`
+  (`tools/setup_helper.py check` reports only present/works).
+- **Voice-over requests**: follow the `make-voice` skill. You cannot hear audio: they judge how it sounds.
+- **Script writing**: Hindi in Devanagari, English words in Latin letters, numbers as words, `...` for pauses.
+  **Female voice = female Hindi grammar** ("दिखाने वाली हूँ", "भेज दूँगी").
 
 ## Rules
 

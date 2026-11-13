@@ -15,3 +15,5 @@
 - **One key per person/project**, no key rotation to get around limits.
 - **Rejected earlier** (don't re-propose): Kokoro Hindi voices (flat), Edge Madhur (announcer-like), Chatterbox's
   built-in voice (sounds mixed-gender), cloning a paid ElevenLabs Library voice.
+
+- **Setup only through Claude** (owner): no .bat files. Teammates say "clone ... and set me up"; Claude installs everything (Windows or Mac), then opens `.env` in Notepad/TextEdit for them to paste their key. Skills: `set-me-up`, `make-voice`.

@@ -10,22 +10,29 @@ sound like a young Indian creator, and speak natural Hinglish.
 - Male: [`voice/samples/male-voice.mp3`](voice/samples/male-voice.mp3), warm, confident and friendly.
 - Female: [`voice/samples/female-voice.mp3`](voice/samples/female-voice.mp3), sweet, warm and gentle.
 
-## First time on a computer (Windows, about 5 minutes)
+## First time on a computer (Windows or Mac, about 5 minutes)
 
-1. Get this folder on your computer (the owner shares the GitHub link; click **Code → Download ZIP** and unzip it,
-   or ask Claude to clone it). Don't put it inside OneDrive.
-2. Get a free Gemini key: open <https://aistudio.google.com/apikey>, sign in with Google and click
-   **Create API key**. Copy it.
-3. Double-click **`1 Setup.bat`**. It installs what's needed and asks for the key: paste it and press Enter.
+You only talk to Claude; it does the installing.
 
-The key is saved only on your computer. **Never send it to anyone or post it anywhere.**
+1. Open the **Claude desktop app**, go to the **Code** tab and pick a folder to work in (not inside OneDrive or
+   iCloud, for example `C:\Reels` or `~/Reels`).
+2. Say: **"Clone https://github.com/ArpitGoriya/anokhi-reet-ai-reels and set me up."**
+   (You need access to this private repo: the owner invites your GitHub account.)
+3. Claude installs everything, then asks you to get a free Gemini key at <https://aistudio.google.com/apikey>
+   (**Create API key**) and opens a small file in **Notepad** (Windows) or **TextEdit** (Mac).
+   Paste the key after `GEMINI_API_KEY=`, **save** (Ctrl+S / Cmd+S), close it, and tell Claude "done".
+4. Claude checks the key works. That's it.
+
+The key stays only on your computer. **Never send it to anyone, and never paste it into the chat.**
 
 ## Making a voice-over
 
-1. Double-click **`2 Make Voice.bat`**.
-2. Type **1** for the male voice or **2** for the female voice.
-3. Notepad opens: write or paste what the voice should say, then **save and close** Notepad.
-4. Wait about a minute. The MP3 appears in the **`output`** folder, and the folder opens by itself.
+Tell Claude what to say and which voice, for example:
+
+> make a female voice-over: नमस्ते दोस्तों! आज मैं आपको Anokhi Reet का नया lehenga collection दिखाने वाली हूँ...
+
+Claude checks the script, makes the MP3 and opens the **`output`** folder. Listen and tell Claude if a word
+sounds wrong; it will fix the spelling and redo it.
 
 ### Writing the script so it sounds right
 
@@ -44,11 +51,6 @@ The voices come from Google Gemini's free plan: **10 voice-overs per day on the 
 second model**. The tool switches between them by itself. If both are used up it says so; try again a few hours
 later. Each person's own key has its own limit, so ask before making dozens of takes.
 
-## Using Claude instead
-
-You can also open this folder in the Claude desktop app (**Code** tab) and just ask, for example:
-"make a female voice-over of this: …" or "set me up". Claude follows [`CLAUDE.md`](CLAUDE.md).
-
 ## Making reels
 
 The voices are ready. The reel-making part (video) comes next. Anokhi Reet already has a video studio
@@ -59,10 +61,15 @@ that studio currently has a "no AI voices" rule.
 
 | Path | What it is |
 |---|---|
-| `1 Setup.bat`, `2 Make Voice.bat` | The two buttons for everyday use |
+| `.claude/skills/` | What Claude follows for "set me up" and "make a voice-over" |
+| `tools/setup_helper.py` | Setup checks, opens the key file and the output folder |
 | `voice/samples/` | The approved male and female voices |
 | `voice/examples/` | Example scripts |
-| `voice/gen_voice.py` | The voice tool (the buttons run it) |
+| `voice/gen_voice.py` | The voice tool (Claude runs it) |
 | `docs/voices.md` | Exact voice settings, for other tools or AI agents |
 | `DECISIONS.md` | Choices made and why |
 | `output/` | Your finished voice-overs (stay on your computer, not on GitHub) |
+
+## Something not working?
+
+Say **"it's not working"** or **"set me up"** again to Claude. It re-checks everything and fixes what it can.

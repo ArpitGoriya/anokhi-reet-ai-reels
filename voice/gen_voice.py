@@ -73,11 +73,11 @@ FEMALE_PRESET = "sweet"
 def api_key():
     k = os.environ.get("GEMINI_API_KEY", "").strip()
     if not k and (ROOT / ".env").exists():
-        for line in (ROOT / ".env").read_text(encoding="utf-8").splitlines():
+        for line in (ROOT / ".env").read_text(encoding="utf-8-sig").splitlines():
             if line.startswith("GEMINI_API_KEY="):
                 k = line.split("=", 1)[1].strip().strip('"').strip("'")
     if not k:
-        raise SystemExit("No Gemini key found. Double-click '1 Setup.bat' and paste your key when it asks.")
+        raise SystemExit("No Gemini key found. Ask Claude: set me up.")
     return k
 
 
