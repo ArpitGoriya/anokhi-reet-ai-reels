@@ -1,0 +1,14 @@
+# Secrets: never on GitHub
+.env
+.env.*
+!.env.example
+
+# This computer only
+.venv/
+__pycache__/
+output/*
+!output/.gitkeep
+scripts/current-script.txt
+*.wav
+Thumbs.db
+.DS_Store
