@@ -81,8 +81,8 @@ Voice script: [`script.txt`](script.txt) (Devanagari, female voice). One small f
    captions re-timed; mausi's lips follow the voice on her line; eyes look at each other / the phone / the board;
    soft zoom into the "sunk cost" card and fade into the moral; caption words spaced and kept clear of the
    right-side buttons; the uncle and the male researcher lost their hair bun. (owner + Claude)
-3. Owner: the voice runs ahead of the video. Found: the render is frame-exact, but caption times inside long
-   sentences were estimated and ran late. Fixed the tools (word times from faster-whisper, word-by-word highlight
+3. Owner: the whole video runs behind the voice (seen by the owner; a file check found cuts on the right frame,
+   so the cause is not proven). Caption times inside long sentences were estimated and ran late. Fixed the tools (word times from faster-whisper, word-by-word highlight
    from real times). **To do when reel work resumes:** `PY tools/caption_timing.py` on take 2 (with whisper), then
    re-render and check by ear. The current `output/` video is the old, out-of-sync one. (owner + Claude)
 

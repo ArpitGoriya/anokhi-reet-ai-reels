@@ -5,8 +5,10 @@ See [GUIDE.md](GUIDE.md) section 8.
 
 ## 2026-11-14 (later): captions in sync with the voice
 
-- Owner: the voice ran ahead of the picture. The renderer was exact (cuts land on the frame, audio not shifted);
-  the caption times were estimated inside long sentences and ran late.
+- Owner: the voice runs ahead of the picture. Caption times inside long sentences were estimated and ran late
+  (fixed below). **Still open:** the owner sees the whole video behind the voice, not only the captions, although
+  a file check showed cuts on the right frame and the audio unshifted. Paused by the owner (2026-11-14); look into
+  it if it shows up again (check on a phone, and with real word times).
 - `tools/caption_timing.py` now uses **faster-whisper** to hear when every word is said (falls back to pauses if
   it isn't installed or memory is short) and writes `WORDS`, so the word-by-word highlight follows the voice.
   Captions appear 0.08 s before the word.
