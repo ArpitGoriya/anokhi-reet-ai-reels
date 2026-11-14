@@ -21,9 +21,12 @@ Check the OS first (Windows or Mac) and use the matching commands. Paths below:
    - If missing, Mac: `curl -LsSf https://astral.sh/uv/install.sh | sh`
    - Then use the full path `~/.local/bin/uv` (the current shell may not see it yet).
 3. **Python + packages:** `uv venv --python 3.11 .venv` (skip if `.venv` exists), then
-   `uv pip install --python PY google-genai imageio-ffmpeg playwright`.
+   `uv pip install --python PY google-genai imageio-ffmpeg playwright faster-whisper`.
    Videos are rendered with Edge (always on Windows) or Google Chrome. Mac without Chrome: run
    `PY -m playwright install chromium` once (a free browser just for rendering, about 150 MB).
+   `faster-whisper` keeps captions in sync with the voice; its free model (about 460 MB) downloads by itself the
+   first time captions are timed. If the computer is short of disk space, skip it: timing still works, a little
+   less exactly.
 4. **Check:** `PY tools/setup_helper.py check`. If the only thing missing is the key, go on.
 5. **Key:** tell them, in this order, in one short message:
    1. Open <https://aistudio.google.com/apikey>, sign in with Google, click **Create API key**, copy it.
@@ -39,4 +42,10 @@ Check the OS first (Windows or Mac) and use the matching commands. Paths below:
      Text, then save.
 7. **Videos:** the check's `video renderer` line must say OK. If it says MISSING, do what it says (install
    `playwright`, or `PY -m playwright install chromium`), then check again. Then say videos are ready too.
-8. Never commit `.env`. Nothing to push after setup.
+8. **Saving to GitHub** (their work is pushed automatically later, so set this up now):
+   - Name on their saves: if `git config user.name` is empty, ask their name and the email of their GitHub
+     account, then set them for this folder only: `git config user.name "<name>"`, `git config user.email "<email>"`.
+   - Permission: `git push --dry-run`. If it asks them to sign in, a GitHub window opens: they sign in there.
+     If it says permission denied / 403, tell them: "Ask the owner (ArpitGoriya) to give your GitHub account
+     **write** access to anokhi-reet-ai-reels." Everything else still works meanwhile.
+9. Never commit `.env`. Nothing to push after setup.

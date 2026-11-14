@@ -1,0 +1,10 @@
+# Same line endings on Windows and Mac (no whole-file diffs between teammates)
+* text=auto
+*.mp3 binary
+*.wav binary
+*.mp4 binary
+*.png binary
+*.jpg binary
+*.webp binary
+*.ttf binary
+*.otf binary

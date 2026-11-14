@@ -36,7 +36,7 @@ function applyPop(el, t, svg) {
 // ---------- captions ----------
 let CAPS = [];
 function captionsInit() {
-  CAPS = CHUNKS.map(([id, text]) => {
+  CAPS = CHUNKS.map(([id, text], ci) => {
     const words = []; let hl = false;
     text.split(' ').forEach(w => {
       const n = (w.match(/\*/g) || []).length;
@@ -46,7 +46,18 @@ function captionsInit() {
     const [a, b] = CT[id];
     const total = words.reduce((n, x) => n + x.w.length + 1, 0);
     const speak = Math.min(b - a - .1, Math.max(.45, total * .072));
-    let acc = 0; words.forEach(x => { x.t = a + speak * acc / total - .04; acc += x.w.length + 1; });
+    // WORDS (from tools/caption_timing.py) = when each script word of this chunk is spoken: light words in step
+    const wt = (typeof WORDS !== 'undefined' && WORDS[ci] && WORDS[ci].length) ? WORDS[ci] : null;
+    let acc = 0;
+    words.forEach(x => {
+      const f = acc / total;
+      if (wt) {
+        const k = f * wt.length, i0 = Math.min(wt.length - 1, Math.floor(k));
+        const t1 = i0 + 1 < wt.length ? wt[i0 + 1] : Math.min(b, wt[i0] + .4);
+        x.t = lerp(wt[i0], t1, k - i0) - .06;
+      } else x.t = a + speak * f - .04;
+      acc += x.w.length + 1;
+    });
     return { id, a, b, words, html: words.map((x, i) => `<span class="w${x.g ? ' g' : ''}" data-i="${i}">${x.w}</span>`).join(' ') };
   });
 }

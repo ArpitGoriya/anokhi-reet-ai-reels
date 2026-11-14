@@ -46,4 +46,8 @@
 - **Keep improving:** every reel adds at least one improvement to the library, logged in `animation/CHANGELOG.md`.
 - **Story numbers** (a character's own prices in her story) are allowed in story reels; Anokhi Reet's own prices,
   savings and number claims stay on the never-say list (Deep, 2026-11-13; owner to confirm as a default).
+- **Captions timed from what the voice really says** (faster-whisper, free, installed by setup), after the owner
+  found the voice running ahead of the picture (2026-11-14).
+- **Team readiness:** setup also sets each person's name for GitHub saves and checks push access; line endings are
+  fixed by `.gitattributes` so Windows and Mac teammates don't clash.
 

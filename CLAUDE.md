@@ -23,6 +23,8 @@ traces, git or JSON unless they ask.
 - **Voice-over requests**: follow the `make-voice` skill. You cannot hear audio: they judge how it sounds.
 - **Reel / video requests**: follow the `make-reel` skill: 2D cartoon animation drawn in code (style, motion and
   commands in `animation/GUIDE.md`), the voice-over first, captions timed to it, rendered on the computer.
+- **"Show me the cast"**: send `animation/cast/cast-sheet.png` and list who's in `animation/cast/CAST.md`.
+- **"Update"**: `git pull`, then say in one line what changed (from the commit messages).
 - **Script writing**: Hindi in Devanagari, English words in Latin letters, numbers as words, `...` for pauses.
   **Female voice = female Hindi grammar** ("दिखाने वाली हूँ", "भेज दूँगी").
 

@@ -60,6 +60,21 @@ def check_video():
     return False
 
 
+def check_extras():
+    """Nice to have, not needed for voice-overs: exact caption timing, and a name on GitHub saves."""
+    try:
+        import faster_whisper  # noqa: F401
+        print("caption sync (faster-whisper): OK")
+    except Exception:
+        print("caption sync (faster-whisper): not installed - optional, captions are timed a little less exactly")
+    try:
+        name = subprocess.run(["git", "config", "user.name"], cwd=ROOT, capture_output=True, text=True).stdout.strip()
+        mail = subprocess.run(["git", "config", "user.email"], cwd=ROOT, capture_output=True, text=True).stdout.strip()
+        print("name on GitHub saves: " + ("OK" if name and mail else "MISSING - set git config user.name and user.email"))
+    except Exception:
+        print("name on GitHub saves: MISSING - git is not installed")
+
+
 def check():
     ok = True
     py_ok = sys.prefix != sys.base_prefix and pathlib.Path(sys.prefix).resolve() == (ROOT / ".venv").resolve()
@@ -74,6 +89,7 @@ def check():
         print("voice packages: MISSING - install google-genai and imageio-ffmpeg")
         ok = False
     ok &= check_video()
+    check_extras()
     key = read_key()
     if not ENV.exists():
         print("key file (.env): MISSING - run open-key")

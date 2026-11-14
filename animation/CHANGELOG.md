@@ -3,6 +3,15 @@
 Every reel adds at least one improvement to the engine or library and writes it here (newest first).
 See [GUIDE.md](GUIDE.md) section 8.
 
+## 2026-11-14 (later): captions in sync with the voice
+
+- Owner: the voice ran ahead of the picture. The renderer was exact (cuts land on the frame, audio not shifted);
+  the caption times were estimated inside long sentences and ran late.
+- `tools/caption_timing.py` now uses **faster-whisper** to hear when every word is said (falls back to pauses if
+  it isn't installed or memory is short) and writes `WORDS`, so the word-by-word highlight follows the voice.
+  Captions appear 0.08 s before the word.
+- Not yet re-checked by ear on a rendered reel.
+
 ## 2026-11-14: shared library and our own renderer (owner + Claude)
 
 - The engine from Deep's reel became a **shared library** in `animation/`: `engine/` (rig, timing, scenes, captions,
