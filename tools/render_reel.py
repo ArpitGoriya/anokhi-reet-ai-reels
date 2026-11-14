@@ -119,15 +119,29 @@ def sheet(browser, stage, times, out, cols=4, scale=0.36):
     return out
 
 
+def loudnorm_filter(voice, target=-14.0):
+    """Two-pass loudness levelling (one pass undershoots on speech with pauses): measure, then apply exactly."""
+    ff = imageio_ffmpeg.get_ffmpeg_exe()
+    base = f"loudnorm=I={target}:TP=-1.5:LRA=11"
+    err = subprocess.run([ff, "-hide_banner", "-i", str(voice), "-af", base + ":print_format=json", "-f", "null", "-"],
+                         capture_output=True, text=True, encoding="utf-8", errors="replace").stderr
+    try:
+        m = json.loads(err[err.rindex("{"):err.rindex("}") + 1])
+        return (base + f":measured_I={m['input_i']}:measured_TP={m['input_tp']}:measured_LRA={m['input_lra']}"
+                f":measured_thresh={m['input_thresh']}:offset={m['target_offset']}:linear=true")
+    except (ValueError, KeyError):
+        return base
+
+
 def encode(stage, out, fps, voice, scale):
     ff = imageio_ffmpeg.get_ffmpeg_exe()
     dur = stage.duration
     n = int(round(dur * fps))
     cmd = [ff, "-y", "-v", "error", "-f", "image2pipe", "-c:v", "mjpeg", "-framerate", str(fps), "-i", "-"]
     if voice:
-        cmd += ["-i", str(voice), "-map", "0:v", "-map", "1:a", "-af", "loudnorm=I=-14:TP=-1.5:LRA=11",
-                "-c:a", "aac", "-b:a", "192k"]
-    cmd += ["-c:v", "libx264", "-preset", "medium" if scale == 1 else "veryfast", "-crf", "18" if scale == 1 else "24",
+        cmd += ["-i", str(voice), "-map", "0:v", "-map", "1:a", "-af", loudnorm_filter(voice),
+                "-ar", "48000", "-c:a", "aac", "-b:a", "192k"]
+    cmd += ["-vf", "scale=in_range=pc:out_range=tv,format=yuv420p", "-color_range", "tv", "-c:v", "libx264", "-preset", "medium" if scale == 1 else "veryfast", "-crf", "18" if scale == 1 else "24",
             "-pix_fmt", "yuv420p", "-movflags", "+faststart", "-t", f"{dur:.3f}", str(out)]
     proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
     t0 = time.time()
