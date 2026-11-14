@@ -12,7 +12,12 @@ traces, git or JSON unless they ask.
 - **Push on your own, without asking.** Commit and push at each milestone (brief written, script approved,
   voice approved, each feedback round, final, lessons) and at the end of every session: `git pull --rebase`, commit
   only text files (the `.gitignore` keeps keys, audio and video out), push. Tell them in one line ("Saved to GitHub").
-  Never commit `.env` or keys. If a push fails, retry once after `git pull --rebase`, then tell them plainly.
+  Never commit `.env` or keys. If a push fails, retry once after `git pull --rebase`; if it still fails, run
+  `PY tools/github_login.py check` and follow the `set-me-up` skill's step 8 (GitHub account, sign-in, invitation).
+  Until saving works, keep working: their work is committed on their computer and goes up with the next push. Say
+  "Saved on your computer; saving to GitHub isn't set up yet" instead of "Saved to GitHub".
+- **This repo is public** (owner, 2026-11-14): anyone can read it. Never commit keys, personal emails, phone
+  numbers or anything private; saves use GitHub's no-reply email (`tools/github_login.py identity`).
 
 ## Common requests
 

@@ -70,7 +70,7 @@ def check_extras():
     try:
         name = subprocess.run(["git", "config", "user.name"], cwd=ROOT, capture_output=True, text=True).stdout.strip()
         mail = subprocess.run(["git", "config", "user.email"], cwd=ROOT, capture_output=True, text=True).stdout.strip()
-        print("name on GitHub saves: " + ("OK" if name and mail else "MISSING - set git config user.name and user.email"))
+        print("name on GitHub saves: " + ("OK" if name and mail else "MISSING - run: tools/github_login.py identity <github-username> "<name>""))
     except Exception:
         print("name on GitHub saves: MISSING - git is not installed")
 

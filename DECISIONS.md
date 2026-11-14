@@ -50,4 +50,8 @@
   found the voice running ahead of the picture (2026-11-14).
 - **Team readiness:** setup also sets each person's name for GitHub saves and checks push access; line endings are
   fixed by `.gitattributes` so Windows and Mac teammates don't clash.
+- **The repo is public** (owner, 2026-11-14), so teammates can clone without a GitHub account. Saving (pushing)
+  needs a free GitHub account, Write access from the owner and an accepted invitation; Claude does the sign-in
+  with `tools/github_login.py` (Git's own sign-in window on Windows, GitHub's `gh` device code on Mac). Saves use
+  GitHub's no-reply email so no real emails appear publicly.
 

@@ -12,7 +12,8 @@ free, made by Claude on your computer. The voices sound like a young Indian crea
 
 ## Before you start (once)
 
-- A **GitHub account** with access to this private repo: send the owner (ArpitGoriya) your GitHub username.
+- A free **GitHub account** (<https://github.com/signup>), only for saving your work to GitHub. Downloading and
+  making voice-overs and reels work without one. Send your GitHub username to the owner (ArpitGoriya).
 - The **Claude desktop app**, signed in.
 - A **Google account** (for the free voice key).
 - About **2 GB free** on your computer (the tools, plus a free model that keeps captions in sync).
@@ -24,12 +25,16 @@ You only talk to Claude; it does the installing.
 1. Open the **Claude desktop app**, go to the **Code** tab and pick a folder to work in (not inside OneDrive or
    iCloud, for example `C:\Reels` or `~/Reels`).
 2. Say: **"Clone https://github.com/ArpitGoriya/anokhi-reet-ai-reels and set me up."**
-   (You need access to this private repo: the owner invites your GitHub account.)
+   (Anyone can download it; no GitHub account needed for this step.)
 3. Claude installs everything, then asks you to get a free Gemini key at <https://aistudio.google.com/apikey>
    (**Create API key**) and opens a small file in **Notepad** (Windows) or **TextEdit** (Mac).
    Paste the key after `GEMINI_API_KEY=`, **save** (Ctrl+S / Cmd+S), close it, and tell Claude "done".
-4. Claude checks the key works, and asks your name and GitHub email once (so your saves show your name).
-   If a GitHub window asks you to sign in, sign in. That's it.
+4. Claude checks the key works.
+5. **Saving to GitHub** (once): Claude asks your GitHub username and your name, then opens GitHub's own sign-in:
+   a **Connect to GitHub** window on Windows, or a GitHub page with a short code on Mac. Sign in there and click
+   **Authorize**. If Claude opens an invitation page, click **Accept invitation**. That's it.
+
+**Never type a password into the chat.** You only sign in on GitHub's own window or page.
 
 The key stays only on your computer. **Never send it to anyone, and never paste it into the chat.**
 
@@ -87,7 +92,7 @@ something changed for everyone, Claude notes it for the owner.
 |---|---|
 | `.claude/skills/` | What Claude follows: `set-me-up`, `make-voice`, `make-reel` |
 | `animation/` | The 2D animation library: style guide (`GUIDE.md`), engine, cast of characters, starter reel, changelog |
-| `tools/` | Setup checks, video build and render, caption and voice timing (Claude runs them) |
+| `tools/` | Setup checks, GitHub sign-in, video build and render, caption and voice timing (Claude runs them) |
 | `brand/` | Brand guide (`BRAND.md`, incl. the Anokhi Reet Tools design system), colours (`tokens.css`), logos, patterns, fonts |
 | `reels/` | One folder per reel with its brief, script, changes and lessons (`_template/` to start) |
 | `voice/samples/` | The approved male and female voices |
@@ -113,9 +118,12 @@ Your videos and voice-overs stay in the `output` folder on your computer.
 
 ## For the owner: adding a teammate
 
-1. GitHub → this repo → **Settings → Collaborators → Add people** → their username, role **Write**.
-2. Send them the "Before you start" and "First time" sections above.
-3. Each person makes **their own** free Gemini key (never share keys).
+1. They make a free GitHub account and send you their **username**.
+2. GitHub → this repo → **Settings → Collaborators → Add people** → their username, role **Write**.
+3. They accept the invitation (Claude opens the page for them during setup, or they find it in their email).
+4. Send them the "Before you start" and "First time" sections above.
+5. Each person makes **their own** free Gemini key (never share keys).
+6. The repo is **public**: anyone can read it, so nothing private goes in (Claude keeps keys and emails out).
 
 ## Something not working?
 

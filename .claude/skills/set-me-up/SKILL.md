@@ -42,10 +42,23 @@ Check the OS first (Windows or Mac) and use the matching commands. Paths below:
      Text, then save.
 7. **Videos:** the check's `video renderer` line must say OK. If it says MISSING, do what it says (install
    `playwright`, or `PY -m playwright install chromium`), then check again. Then say videos are ready too.
-8. **Saving to GitHub** (their work is pushed automatically later, so set this up now):
-   - Name on their saves: if `git config user.name` is empty, ask their name and the email of their GitHub
-     account, then set them for this folder only: `git config user.name "<name>"`, `git config user.email "<email>"`.
-   - Permission: `git push --dry-run`. If it asks them to sign in, a GitHub window opens: they sign in there.
-     If it says permission denied / 403, tell them: "Ask the owner (ArpitGoriya) to give your GitHub account
-     **write** access to anokhi-reet-ai-reels." Everything else still works meanwhile.
+8. **Saving to GitHub.** Voice-overs and reels work without this; it's only for saving their work to GitHub. Do it
+   with `PY tools/github_login.py` (the person never types a password or token into the chat, only into GitHub's
+   own window or page):
+   1. `check` → `OK`: done, say "Saving to GitHub works".
+   2. `NO NAME` → ask in one message: "Do you have a GitHub account? If not, make a free one at
+      <https://github.com/signup> (any email works). Then tell me your GitHub **username** and your name as it
+      should show on your work." Then `identity <username> "<name>"` (it uses GitHub's private no-reply email, so
+      their real email never appears in this public repo). Tell them: "Send your GitHub username to the owner
+      (ArpitGoriya) so you can be added." Then `check` again.
+   3. `NOT SIGNED IN` → `login`, then tell them plainly what it printed:
+      - Windows (`WINDOW:`): "A **Connect to GitHub** window is opening (look behind other windows too): click
+        **Sign in with your browser**, sign in, then **Authorize**. Tell me when it's done."
+      - Mac (`CODE:`): "A GitHub page opened. Type this code: **XXXX-XXXX**, click **Continue**, then
+        **Authorize**. Tell me when it's done." (If no page opened, give them <https://github.com/login/device>.)
+      Then `check` again.
+   4. `NO ACCESS` → `invite` (opens the invitation page): "Click **Accept invitation**." No invitation there means
+      the owner hasn't added them yet: they send their username to the owner; everything else keeps working and
+      their work is saved on their computer until then. After accepting, `check` again.
+   5. `OFFLINE` → GitHub didn't answer: try again later.
 9. Never commit `.env`. Nothing to push after setup.
