@@ -1,6 +1,6 @@
 ---
 name: set-me-up
-description: Set up this folder on a new Windows or Mac computer so the person can make Anokhi Reet voice-overs. Use when they say "set me up", "setup", "install", "it's not working", or have just cloned the repo.
+description: Set up this folder on a new Windows or Mac computer so the person can make Anokhi Reet voice-overs and 2D animated reels. Use when they say "set me up", "setup", "install", "it's not working", or have just cloned the repo.
 ---
 
 # Set me up
@@ -21,7 +21,9 @@ Check the OS first (Windows or Mac) and use the matching commands. Paths below:
    - If missing, Mac: `curl -LsSf https://astral.sh/uv/install.sh | sh`
    - Then use the full path `~/.local/bin/uv` (the current shell may not see it yet).
 3. **Python + packages:** `uv venv --python 3.11 .venv` (skip if `.venv` exists), then
-   `uv pip install --python PY google-genai imageio-ffmpeg`.
+   `uv pip install --python PY google-genai imageio-ffmpeg playwright`.
+   Videos are rendered with Edge (always on Windows) or Google Chrome. Mac without Chrome: run
+   `PY -m playwright install chromium` once (a free browser just for rendering, about 150 MB).
 4. **Check:** `PY tools/setup_helper.py check`. If the only thing missing is the key, go on.
 5. **Key:** tell them, in this order, in one short message:
    1. Open <https://aistudio.google.com/apikey>, sign in with Google, click **Create API key**, copy it.
@@ -35,7 +37,6 @@ Check the OS first (Windows or Mac) and use the matching commands. Paths below:
    - Key doesn't work → it was copied incompletely, or with spaces: open it again and ask them to paste it fresh.
    - Mac TextEdit: if the key line looks odd, it may have saved as rich text; ask them to use Format → Make Plain
      Text, then save.
-7. **Video (Marketing Studio):** call the Marketing Studio `status` tool. If it works, say videos are ready too.
-   If the tool isn't available, tell them: "Voice-overs work. For videos you also need the Marketing Studio
-   extension in the Claude app; ask the owner (ArpitGoriya) to set it up." Don't try to install it yourself.
+7. **Videos:** the check's `video renderer` line must say OK. If it says MISSING, do what it says (install
+   `playwright`, or `PY -m playwright install chromium`), then check again. Then say videos are ready too.
 8. Never commit `.env`. Nothing to push after setup.

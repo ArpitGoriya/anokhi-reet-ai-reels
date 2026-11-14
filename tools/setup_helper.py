@@ -40,6 +40,26 @@ def open_path(path, editor=False):
         subprocess.Popen(["xdg-open", str(path)])
 
 
+def check_video():
+    """Videos are rendered with Edge/Chrome (or Playwright's own Chromium) through the playwright package."""
+    try:
+        from playwright.sync_api import sync_playwright
+    except Exception:
+        print("video renderer: MISSING - install playwright")
+        return False
+    with sync_playwright() as p:
+        for ch in ("msedge", "chrome", None):
+            try:
+                b = p.chromium.launch(channel=ch) if ch else p.chromium.launch()
+                b.close()
+                print(f"video renderer: OK ({ch or 'chromium'})")
+                return True
+            except Exception:
+                continue
+    print("video renderer: MISSING - no browser; run: PY -m playwright install chromium")
+    return False
+
+
 def check():
     ok = True
     py_ok = sys.prefix != sys.base_prefix and pathlib.Path(sys.prefix).resolve() == (ROOT / ".venv").resolve()
@@ -53,6 +73,7 @@ def check():
     except Exception:
         print("voice packages: MISSING - install google-genai and imageio-ffmpeg")
         ok = False
+    ok &= check_video()
     key = read_key()
     if not ENV.exists():
         print("key file (.env): MISSING - run open-key")

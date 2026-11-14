@@ -1,9 +1,9 @@
 # Anokhi Reet AI Reels
 
-Make voice-overs for Anokhi Reet reels with our two AI voices, a **male** and a **female** voice. Both are free,
-sound like a young Indian creator, and speak natural Hinglish.
+Make Anokhi Reet reels: **2D cartoon animations** with our two AI voices, a **male** and a **female** voice. All
+free, made by Claude on your computer. The voices sound like a young Indian creator and speak natural Hinglish.
 
-> **Status:** voice-overs work. Reels are made with Claude + Marketing Studio, on brand, timed to the voice.
+> **Status:** voice-overs and 2D animated reels work. First reel: Hetal ben's lehenga (Deep).
 
 ## Listen to the voices
 
@@ -53,20 +53,21 @@ later. Each person's own key has its own limit, so ask before making dozens of t
 
 ## Making reels
 
-Tell Claude what you want, for example **"make a 20-second reel about the mehndi tracker, female voice"**. Claude:
+Tell Claude what you want, for example **"make a 60-second story reel about renting for a sangeet, female voice"**.
+Claude:
 
-1. asks a few questions (what, for whom, voice, recording or screenshots, music);
+1. asks a few questions (what, for whom, voice, length, which characters);
 2. writes the **script and storyboard** together and waits for your OK;
 3. makes the **voice-over first** for you to listen to;
-4. films the real app on anokhireet.in with **Marketing Studio** (screen recording or screenshots);
-5. builds the video **on brand**, every scene starting on its voice line, and shows a preview with the post caption;
-6. changes it until you're happy (your changes are written down and kept in every round);
-7. you press **"HD version"** for the final.
+4. draws and animates the reel in our **2D cartoon style** (our own characters like Hetal ben, or new ones),
+   with word-by-word captions timed to the voice;
+5. renders the **video** (MP4) on your computer and sends it with the post caption;
+6. changes it until you're happy (your changes are written down and kept in every round).
 
 Claude shows every script, storyboard and caption **right in the chat**, and saves your reel's notes to GitHub by itself as you go.
 
-Videos need the **Marketing Studio** extension in the Claude app (the owner sets it up). Each reel's notes live in
-`reels/<date>-<name>/REEL.md`; the finished video stays on your computer.
+Each reel's notes live in `reels/<date>-<name>/REEL.md`; the finished video is in the **`output`** folder on your
+computer. See the characters we can reuse in [`animation/cast/cast-sheet.png`](animation/cast/cast-sheet.png).
 
 **Your changes win for your reel.** The brand rules in [`brand/BRAND.md`](brand/BRAND.md) are the starting point;
 whatever you ask for your reel is kept (except the logo rules, the "never say" list and the voices). If you want
@@ -77,7 +78,8 @@ something changed for everyone, Claude notes it for the owner.
 | Path | What it is |
 |---|---|
 | `.claude/skills/` | What Claude follows: `set-me-up`, `make-voice`, `make-reel` |
-| `tools/setup_helper.py` | Setup checks, opens the key file and the output folder |
+| `animation/` | The 2D animation library: style guide (`GUIDE.md`), engine, cast of characters, starter reel, changelog |
+| `tools/` | Setup checks, video build and render, caption and voice timing (Claude runs them) |
 | `brand/` | Brand guide (`BRAND.md`, incl. the Anokhi Reet Tools design system), colours (`tokens.css`), logos, patterns, fonts |
 | `reels/` | One folder per reel with its brief, script, changes and lessons (`_template/` to start) |
 | `voice/samples/` | The approved male and female voices |
@@ -85,7 +87,7 @@ something changed for everyone, Claude notes it for the owner.
 | `voice/gen_voice.py` | The voice tool (Claude runs it) |
 | `docs/voices.md` | Exact voice settings, for other tools or AI agents |
 | `DECISIONS.md` | Choices made and why |
-| `output/` | Your finished voice-overs (stay on your computer, not on GitHub) |
+| `output/` | Your finished voice-overs and videos (stay on your computer, not on GitHub) |
 
 ## Something not working?
 

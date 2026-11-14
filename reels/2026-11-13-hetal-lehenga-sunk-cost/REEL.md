@@ -67,12 +67,20 @@ Voice script: [`script.txt`](script.txt) (Devanagari, female voice). One small f
 
 ## Voice-over
 
-- File: `output/female-hetal-lehenga-2026-11-13_16-32-46.mp3` (take 1, 102.6 s) — approved for building the video; **redo later**: "lehenga almari se nikali" sounds like "nakli" → change to "निकाला" (lehenga as masculine there). Inbox copy: `hetal-lehenga-voice-v1.mp3`.
-- Line timings: word-level from a local speech tool (faster-whisper, free), snapped to the pauses; per caption chunk in `video/captions.js` (`STARTS`). A new voice take needs new timings.
+- Take 1: `output/female-hetal-lehenga-2026-11-13_16-32-46.mp3` (102.6 s, on Deep's computer). "निकाली" sounded
+  like "nakli".
+- **Take 2** (2026-11-14, owner's computer): `output/female-hetal-lehenga-take2.mp3`, 105.0 s, script with
+  "निकाला". Approved: pending (listen for "निकाला").
+- Captions timed to take 2 with `tools/caption_timing.py` (script breaks anchored to the voice's pauses). A new take
+  needs that command again.
 
 ## Feedback rounds
 
 1. Voice take 1: "निकाली" sounds like "nakli" → use "निकाला" in the next take. Video: must look like proper animation (as good as the reference or better), natural movement, nothing distracting. (Deep)
+2. Owner liked the 2D animation and asked to keep improving it (2026-11-14). Done: voice take 2 with "निकाला",
+   captions re-timed; mausi's lips follow the voice on her line; eyes look at each other / the phone / the board;
+   soft zoom into the "sunk cost" card and fade into the moral; caption words spaced and kept clear of the
+   right-side buttons; the uncle and the male researcher lost their hair bun. (owner + Claude)
 
 ## Caption
 
@@ -87,13 +95,13 @@ Aisi aur kahaniyon ke liye follow karo Anokhi Reet.
 
 ## How the video is built
 
-- `video/` holds the source: `lib.js` (characters, props, rooms), `scenes.js` (28 scenes), `captions.js` (caption text +
-  timings), `main.js` (engine), `style.css`. `python3 video/build.py` writes `video.html`, a local `preview.html`
-  (`?t=seconds` shows one frame) and copies the code to the Marketing Studio Inbox as `hetal-reel.js`;
-  `video-small.html` is the page given to Marketing Studio's export (it loads `inbox:hetal-reel.js`).
-- Marketing Studio project: "Hetal lehenga reel", export "hetal-lehenga-reel" (voice: `inbox:hetal-lehenga-voice-v1.mp3`).
-- Cover: `video/cover.js` (same art), exported as "hetal-reel-cover" (1080x1920 PNG; title and labels kept inside the centre 1080x1350 grid crop).
-- Male voice test (first 19 s): `output/male-hetal-lehenga-20s-2026-11-13_17-10-32.mp3`. Voice for the final not decided yet.
+- 2D animation with the shared library in `animation/` (engine, sets, props, cast came from this reel). This
+  folder keeps only the reel's own parts: `video/captions.js` (caption text + times), `video/scenes.js` (28 scenes),
+  `video/cover.js`, `video/reel.json` (voice file).
+- Check: `PY tools/render_reel.py reels/2026-11-13-hetal-lehenga-sunk-cost --sheet`; video: same without `--sheet`
+  → `output/2026-11-13-hetal-lehenga-sunk-cost.mp4`; cover: `--cover`.
+- Male voice test (first 19 s): `output/male-hetal-lehenga-20s-2026-11-13_17-10-32.mp3` (Deep's computer). Voice
+  for the final not decided yet.
 
 ## Suggested default (for the owner)
 

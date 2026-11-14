@@ -21,8 +21,8 @@ traces, git or JSON unless they ask.
   editor the skill opens; never ask for the key in chat, and never read or print `.env`
   (`tools/setup_helper.py check` reports only present/works).
 - **Voice-over requests**: follow the `make-voice` skill. You cannot hear audio: they judge how it sounds.
-- **Reel / video requests**: follow the `make-reel` skill (the voice-over first, scenes timed to it, brand from
-  `brand/BRAND.md`).
+- **Reel / video requests**: follow the `make-reel` skill: 2D cartoon animation drawn in code (style, motion and
+  commands in `animation/GUIDE.md`), the voice-over first, captions timed to it, rendered on the computer.
 - **Script writing**: Hindi in Devanagari, English words in Latin letters, numbers as words, `...` for pauses.
   **Female voice = female Hindi grammar** ("दिखाने वाली हूँ", "भेज दूँगी").
 
@@ -35,6 +35,8 @@ traces, git or JSON unless they ask.
 - **One Gemini key per person or project. Don't rotate several keys or accounts** to get past the free limits
   (against Google's terms; risks a ban).
 - **Free tools only** for voice and video.
+- **2D animation look stays** (`animation/GUIDE.md` section 1, owner): each reel gets its own story, scenes and
+  character acting; reuse cast characters when it fits; add at least one improvement to `animation/` per reel.
 - **Brand:** [`brand/BRAND.md`](brand/BRAND.md) is the source of truth for reels (a copy of the Anokhi Reet
   brand + the website's free-tools design system). It wins over any other brand copy and the website.
   Only the owner changes it.

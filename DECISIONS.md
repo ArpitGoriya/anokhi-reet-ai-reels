@@ -20,12 +20,11 @@
 
 ## 2026-11-13: reels
 
-- **Reels are made with Claude + Marketing Studio** (real app screens by recording or screenshots), voice-over
-  first, every scene timed to its voice line (Marketing Studio's `inbox` gives the line timings).
-- **Brand copied into this repo** (`brand/`): Marketing Studio's Anokhi Reet brand (colours, gradients, fonts,
+- **Voice-over first, every scene timed to its voice line.**
+- **Brand copied into this repo** (`brand/`): the Anokhi Reet brand (colours, gradients, fonts,
   logos, patterns, rules, never-say) + the website's free-tools design system ("Anokhi Reet Tools"). Updates happen
   here; this copy wins over the originals for reels (owner).
-- **Fonts: Inter for everything, Arya only for Hindi** (Marketing Studio / website). The older video studio's
+- **Fonts: Inter for everything, Arya only for Hindi** (brand / website). The older video studio's
   Playfair Display headlines are not used.
 - **AI voices are allowed in these reels** (the older `anokhireet-videos` studio's "no AI voices" rule stays there).
 - **Teammates' changes override the defaults for their own reel**, recorded in the reel's `REEL.md`; logo rules,
@@ -34,3 +33,17 @@
   technical (owner).
 - **Claude commits and pushes on its own** at each milestone and at the end of a session, without asking (owner).
   Only text files; never keys, audio or video.
+
+## 2026-11-14: 2D animation
+
+- **Reels are flat 2D cartoon animations drawn in code** (owner, after Deep's "Hetal ben's lehenga" reel, which
+  the owner liked). Keep its art style; make every reel's story, scenes and character acting its own; reuse
+  characters from earlier reels when the story fits. Guide: `animation/GUIDE.md`.
+- **Shared library** in `animation/` (engine, sets, props, cast, starter); each reel keeps only its own scenes and
+  captions. Library additions are welcome; the look (GUIDE.md section 1) changes only with the owner's OK.
+- **Videos are rendered on the computer** with Edge/Chrome + ffmpeg (`tools/render_reel.py`), free; captions are
+  timed from the voice by `tools/caption_timing.py`; voice timings by `tools/voice_timing.py`.
+- **Keep improving:** every reel adds at least one improvement to the library, logged in `animation/CHANGELOG.md`.
+- **Story numbers** (a character's own prices in her story) are allowed in story reels; Anokhi Reet's own prices,
+  savings and number claims stay on the never-say list (Deep, 2026-11-13; owner to confirm as a default).
+

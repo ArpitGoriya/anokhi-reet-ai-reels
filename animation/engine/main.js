@@ -1,6 +1,8 @@
 // ===== engine: scenes, pops, captions, frame loop =====
 const SC = [];
-// addScene(from, to, {svg, html, upd(t, lt, s), init(s), cam:[z0,z1], fx, fy, capY, noCap})
+// addScene(from, to, {svg, html, upd(t, lt, s), init(s), cam:[z0,z1], fx, fy, capY, noCap, noWm, noSettle,
+//                      tin, trans})  tin = seconds this scene blends in over the previous one (0 = hard cut),
+//                      trans = 'fade' (default) | 'slide' | 'rise' | 'zoom' | 'iris'
 function addScene(a, b, o) { SC.push(Object.assign({ a: T(a), b: T(b) }, o)); }
 
 function applyPop(el, t, svg) {
@@ -84,13 +86,30 @@ function build() {
   });
   captionsInit();
 }
+// transition in: k goes 0 -> 1 over the scene's `tin` seconds before its start
+function transIn(s, k) {
+  const kind = s.trans || 'fade', e = E.io(k);
+  let x = 0, y = 0, sc = 1, o = 1, clip = '';
+  if (kind === 'fade') o = e;
+  else if (kind === 'slide') x = (1 - e) * W;
+  else if (kind === 'rise') { y = (1 - e) * 260; o = clamp(k * 2); }
+  else if (kind === 'zoom') { sc = lerp(1.14, 1, e); o = e; }
+  else if (kind === 'iris') clip = k < 1 ? `circle(${(e * 120).toFixed(1)}% at 50% 47%)` : '';
+  s.g.setAttribute('transform', `translate(${x.toFixed(1)},${y.toFixed(1)}) translate(540,900) scale(${sc.toFixed(4)}) translate(-540,-900)`);
+  s.g.setAttribute('opacity', o.toFixed(3));
+  s.g.style.clipPath = clip; s.d.style.clipPath = clip;
+  s.d.style.opacity = o.toFixed(3);
+  s.d.style.transform = `translate(${x.toFixed(1)}px,${y.toFixed(1)}px) scale(${sc.toFixed(4)})`;
+}
 function render(t) {
   let cur = null;
   SC.forEach(s => {
-    const on = t >= s.a && t < s.b;
+    const tin = s.tin || 0;
+    const on = t >= s.a - tin && t < s.b;
     if (on !== s.on) { s.g.style.display = on ? '' : 'none'; s.d.style.display = on ? '' : 'none'; s.on = on; }
     if (!on) return;
-    cur = s;
+    if (tin) transIn(s, clamp((t - (s.a - tin)) / tin));
+    if (t >= s.a) cur = s;
     const lt = t - s.a, dur = s.b - s.a;
     const cz = s.cam || [1, 1.035];
     const settle = s.noSettle ? 1 : 1 + .02 * (1 - E.out(clamp(lt / .7)));

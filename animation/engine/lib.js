@@ -82,7 +82,7 @@ function person(id, o = {}) {
   PERS[id] = { tw: (o.wide ? 135 : (o.male ? 118 : 108)) - 8, skin: o.skin || C.skin };
   const skin = o.skin || C.skin, skin2 = o.skin2 || C.skin2, hair = o.hair || C.hair;
   const top = o.top || C.teal, topD = o.topD || C.tealDark, border = o.border || C.gold;
-  const style = o.hairStyle || 'bun';
+  const style = o.hairStyle || (o.male ? 'crop' : 'bun'); // men: short crop (no bun) unless told otherwise
   let s = `<g id="${id}">`;
   s += `<g id="${id}-body">`;
   // full lehenga skirt (standing figure)
@@ -206,8 +206,10 @@ function face(id, t, f = {}) {
   const per = 3.6 + (seed % 3) * .4, ph = ((t + seed * 1.3) % per);
   const blink = ph < .16 ? Math.sin(ph / .16 * Math.PI) : 0;
   const closed = f.closed ? 1 : blink;
-  tf($(`${id}-eyeL`), 0, 0, 1, 0, -38, -378, 1 - closed * .92);
-  tf($(`${id}-eyeR`), 0, 0, 1, 0, 38, -378, 1 - closed * .92);
+  // look: [x, y] from -1 to 1 moves the pupils (look at the phone, at another character, up in thought)
+  const lx = f.look ? f.look[0] * 10 : 0, ly = f.look ? f.look[1] * 8 : 0;
+  tf($(`${id}-eyeL`), lx, ly, 1, 0, -38, -378, 1 - closed * .92);
+  tf($(`${id}-eyeR`), lx, ly, 1, 0, 38, -378, 1 - closed * .92);
   if (f.mouth) { const m = $(`${id}-mouth`); if (m.dataset.k !== f.mouth) { m.dataset.k = f.mouth; m.setAttribute('d', MOUTH[f.mouth]); m.setAttribute('fill', /big|grin|o|talk/.test(f.mouth) ? '#6E2A22' : 'none'); } }
   if (f.brows) { const b = BROWS[f.brows]; $(`${id}-bl`).setAttribute('d', b[0]); $(`${id}-br`).setAttribute('d', b[1]); }
   op($(`${id}-blush`), f.blush || 0);
@@ -219,8 +221,19 @@ function face(id, t, f = {}) {
   const tilt = (f.tilt || 0) + noise(t * .8, seed) * 2.2;
   tf($(`${id}-head`), 0, (f.nod || 0), 1, tilt, 0, -290);
 }
-// talking mouth helper (open/close while speaking)
-function talkMouth(t, speaking) { if (!speaking) return 'smile'; const v = Math.abs(Math.sin(t * 11)) + Math.abs(Math.sin(t * 7.3)) * .6; return v > .9 ? 'talk' : 'flat'; }
+// loudness of the voice-over at time t, 0..1 (VOICE_ENV is built in by tools/build_reel.py from the reel's voice)
+function voiceLevel(t) {
+  if (typeof VOICE_ENV === 'undefined' || !VOICE_ENV.length) return -1;
+  const i = t * ENV_FPS, a = Math.max(0, Math.min(VOICE_ENV.length - 1, Math.floor(i))), b = Math.min(VOICE_ENV.length - 1, a + 1);
+  return lerp(VOICE_ENV[a], VOICE_ENV[b], clamp(i - a));
+}
+// talking mouth: opens with the real voice when the envelope is there (lip sync), else a gentle open/close loop
+function talkMouth(t, speaking) {
+  if (!speaking) return 'smile';
+  const v = voiceLevel(t);
+  if (v >= 0) return v > .5 ? 'talk' : (v > .18 ? 'flat' : 'shy');
+  const w = Math.abs(Math.sin(t * 11)) + Math.abs(Math.sin(t * 7.3)) * .6; return w > .9 ? 'talk' : 'flat';
+}
 
 // ---------- props ----------
 function windowSVG(x, y, w = 200, h = 230, o = {}) {
