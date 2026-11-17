@@ -24,6 +24,7 @@
 Everything here is applied in every round and never silently reverted.
 
 - Narration tells the dream as a story ("Unko sapna aaya ke…"), and the name is "Pankaj bhai" (two words).
+- The dream stays neutral and curious: never say customers chose or booked beforehand; the "why" is revealed later.
 
 - Dream scenes get a soft dreamy glow, sparkles and wavy (rippling) edges; real scenes stay plain.
 - Key words on screen in yellow (gold) highlight boxes.
@@ -41,7 +42,7 @@ Everything here is applied in every round and never silently reverted.
 |---|---|---|---|
 | 1 | Dopahar ka *time*. Dukaan *khaali*. / Aur Pankajbhai ki *aankh lag gayi*… | **Hook frame:** Pankajbhai's rental shop, wide. Racks of lehengas and sherwanis, nobody inside. Wall clock's hand ticks. He rests his head on the counter, eyes droop and close; a small thought cloud with a full shop flickers above him. | Big title from frame 1: **Season ka SAPNA 💭** · pill: Dukaan khaali… 😴 |
 | 2 | Unko *sapna* aaya… | Close on his sleeping face; a gold glow and sparkles spread out from the thought cloud, the picture ripples (wavy edges) into the dream. | Unko sapna aaya… ✨ |
-| 3 | Ki unki dukaan mein / customers ki *bheed* lagi hai. / Har customer phone pe pehle se / *outfit pasand* karke aaya hai. / Register *bookings* se bhar gaya hai… / aur unka har lehenga / kisi *function* mein chamak raha hai. | **Dream (glow, sparkles, wavy edges):** shop full; customers hold up phones, each screen shows the outfit they want → racks empty as outfits go out → register pages flip and fill with ticks → a bride twirls in his red lehenga at a function. Pankajbhai beams and hands outfits over. | Bhari dukaan 🙌 · Full register 📒 · Har lehenga function mein 💃 |
+| 3 | Ki unki dukaan pe / customers ki *bheed* lagi hai. / Sabke haath mein *phone*… / aur har koi keh raha hai, / "Bhaiya, mujhe *ye wala* chahiye!" / Racks *khaali* ho rahe hain, / register *bharta* ja raha hai… / aur unka har lehenga / kisi *function* mein chamak raha hai. | **Dream (glow, sparkles, wavy edges):** shop full; customers hold up phones, each screen shows the outfit they want → racks empty as outfits go out → register pages flip and fill with ticks → a bride twirls in his red lehenga at a function. Pankajbhai beams and hands outfits over. | Bhari dukaan 🙌 · Full register 📒 · Har lehenga function mein 💃 |
 | 4 | Par phone ki *ghanti* bajti hai… / aur sapna *toot* jaata hai. | Phone on the counter buzzes (shake lines). The dream cracks like glass and falls away. Plain shop again, empty. Pankajbhai jerks awake (shock), looks around, shoulders drop. | Sapna toot gaya 😔 |
 | 5 | Phone pe tha *Anokhi Reet*. / Jahan customer apne phone pe / *city, occasion* aur *budget* se / outfit dhoondhte hain. / Pankajbhai ne socha… / shayad sapna *sach* ho sakta hai! | Phone fills the frame: an Anokhi Reet post "Rental shop hai? Apne outfits online laao." → app screen drawn in our flat style: City / Occasion / Budget chips, outfit cards from his city. Back to him: hand on chin, thinking → lightbulb pops above his head, he smiles. | Anokhi Reet 💡 · Sapna sach ho sakta hai? |
 | 6 | WhatsApp pe *photos* aur *rent price* bheje… / aur shop *online*. / Shuru karna bilkul *aasaan*. | He snaps photos of his lehengas and sends them on WhatsApp. Three step pills: 💬 Message → 📸 Photos + rent price → ✅ Shop live. Then three badges drop in. | STEP 1/2/3 · WhatsApp se shuru • Apni city ke customers • Aasaan setup |
@@ -58,6 +59,10 @@ Everything here is applied in every round and never silently reverted.
 1. Voice take 1 (2026-11-17): teammate wanted the dream told as a story ("Pankaj bhai ki aankh lag gayi. Unko
    sapna aaya ke unki dukaan mein customers ki bheed…") → rewrote lines 2-3 that way, dropped "Har rental shop
    wala ek sapna dekhta hai", name written "पंकज भाई" (two words). Take 2.
+2. Voice take 2 (2026-11-17): "dukaan pe customers ki bheed", and don't say customers chose outfits beforehand;
+   keep the dream neutral and make people curious to watch till the end → the dream now shows everyone holding
+   phones and saying "Bhaiya, mujhe ye wala chahiye!" without explaining why; the reason (Anokhi Reet) comes in
+   scene 5, and scene 7's "Mujhe ye lehenga chahiye!" pays it off. Take 3.
 
 ## Caption
 
