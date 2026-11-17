@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-17
 - **Made by:** teammate (script) + Claude
-- **Status:** script waiting for approval
+- **Status:** script approved; voice take 1 waiting for a listen
 
 ## Brief
 
@@ -29,7 +29,7 @@ Everything here is applied in every round and never silently reverted.
 - **Softened** "नया customer एक click पर मिलता है" to "नया customer एक click की दूरी पर है" (brand: no guarantees). (round 0)
 - **Post caption:** kept the teammate's text; hashtags cut to 5 (brand rule) and the cut-off "#Ahm…" removed. (round 0)
 
-## Script and storyboard (approved: no)
+## Script and storyboard (approved: yes)
 
 Voice script: [`script.txt`](script.txt) (Devanagari, male voice).
 
@@ -52,7 +52,7 @@ Voice script: [`script.txt`](script.txt) (Devanagari, male voice).
 
 ## Voice-over
 
-- File: — approved: no
+- Take 1: `output/male-papa-beti-take1.mp3` (52.2 s) — approved: pending
 - Captions timed with `tools/caption_timing.py` (redo after every new take)
 
 ## Feedback rounds
