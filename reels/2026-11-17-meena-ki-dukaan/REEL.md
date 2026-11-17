@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-17
 - **Made by:** teammate (script) + Claude
-- **Status:** animation done and checked; paused before the final render (teammate asked to pause, 2026-11-17)
+- **Status:** video 1 rendered (2026-11-17); sent to the teammate
 
 ## Brief
 
@@ -69,7 +69,7 @@ Voice script: [`script.txt`](script.txt) (Devanagari, female voice).
 ## Feedback rounds
 
 1. (round 0) Trimmed to ~90 s; follow line "Anokhi Reet"; features confirmed; female voice.
-2. Animation (20 scenes) checked; final render paused at the teammate's request. Next: `PY tools/render_reel.py reels/2026-11-17-meena-ki-dukaan`.
+2. Paused, then resumed: video 1 rendered, `output/2026-11-17-meena-ki-dukaan.mp4` (90 s).
 
 ## Caption
 
