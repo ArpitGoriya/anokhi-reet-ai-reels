@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-17
 - **Made by:** dhruvifewtone-wq
-- **Status:** brief
+- **Status:** script approved
 
 ## Brief
 
@@ -33,7 +33,7 @@ Everything here is applied in every round and never silently reverted.
   fee" or "5 minute" in our words (Never-say list). Badges: WhatsApp se shuru • Apni city ke customers •
   Aasaan setup.
 
-## Script and storyboard (approved: no)
+## Script and storyboard (approved: yes, 2026-11-17)
 
 | # | Voice line (caption) | On screen (scene, characters and what they do) | Label / title |
 |---|---|---|---|
