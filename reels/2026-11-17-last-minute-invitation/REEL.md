@@ -34,6 +34,7 @@ Everything here is applied in every round and never silently reverted.
 - Hetalben is a **new** character (not the cast's Hetal ben).
 - The narration tells the full story with the characters' key lines, at a calm pace (pauses, short sentences).
 - Aarti sits IN a big sofa at home (backrest behind her, cushion and armrests over her lap), not behind a small one.
+- Calm hands at the sangeet: gentle, graceful dance; little hand movement; no pointing.
 
 ## Script and storyboard (approved: yes, 2026-11-17)
 
@@ -66,6 +67,9 @@ Everything here is applied in every round and never silently reverted.
    and was approved.
 3. Video round 1 (2026-11-17): "the sofa looks too small and it doesn't look like she is sitting on the sofa" →
    new big sofa (`sofaBackSVG` behind her, `sofaFrontSVG` over her lap) in the three sofa scenes.
+   Same round: "too much hand movement in scene 1 / the sangeet night overall" → a calm, graceful dance (one hand
+   raised softly, the other at the waist, slow small sway, no hops) in every sangeet scene, the rewind slowed down,
+   friends clasp their hands instead of pointing, and Aarti gets more room so her hand never crosses a face.
 
 ## Caption
 

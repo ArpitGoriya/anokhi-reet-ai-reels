@@ -4,7 +4,8 @@ const DH = DIMPLE.home, DS = DIMPLE.sangeet;
 const F1 = SAREE(GUEST_W1, '#7A4FA0', '#5D3A7E'), F2 = SAREE(CUSTOMER_W, '#F4B9C8', C.pinkDark), F3 = SAREE(GUEST_W2, '#E07B39', '#B95F25');
 // countdown: 48 h on Thursday night → 24 h at Friday lunch → 0 at the sangeet
 const HRS = t => KF(t, [[T('c8'), 48], [T('c14'), 47.95], [T('c18'), 47.3], [T('c29e'), 46.9], [T('c30') - .01, 46.9], [T('c30'), 24], [T('c44'), 23.4], [T('c44') + 1.3, 0]], E.lin);
-const DANCE = (t, k = 1) => ({ L: [lerp(9, 150 + wave(t, .9) * 18, k), lerp(-14, -20 + wave(t, .9, .3) * 30, k)], R: [lerp(9, 150 - wave(t, .9) * 18, k), lerp(-14, -20 - wave(t, .9, .3) * 30, k)], hL: 'open', hR: 'open' });
+// calm, graceful dance (teammate: less hand movement): one hand raised softly, the other at the waist, slow sway
+const DANCE = (t, k = 1) => ({ L: [lerp(9, 112 + wave(t, .35) * 8, k), lerp(-14, -62 + wave(t, .35, .25) * 10, k)], R: [lerp(9, 36 + wave(t, .35, .5) * 5, k), lerp(-14, -96, k)], hL: 'open', hR: 'open' });
 const EAR = [123, 95], HEAD = [165, 40], HOLD = [6, -112], SHOW = [128, -36];
 
 // ================= S1 cold open: the star of the sangeet =================
@@ -14,10 +15,10 @@ addScene(0, 'c4', {
     pillH(540, 420, 'c3', 'Aaj: <span class="hl">sangeet ki star</span> ⭐'),
   cam: [1, 1.05], fy: 900,
   upd(t) {
-    tf($('s1-a'), 540 + Math.sin(t * 2.2) * 30, 930 + hop(t, Math.floor(t / .9) * .9, 14, .4), 1, Math.sin(t * 2.2) * 3);
+    tf($('s1-a'), 540 + Math.sin(t * 1.1) * 12, 930 + Math.abs(Math.sin(t * 1.1)) * -4, 1, Math.sin(t * 1.1) * 1.5);
     life('a1', t, Object.assign({ mouth: 'grin', brows: 'up', seed: 1 }, DANCE(t)));
     life('f1a', t, { mouth: 'o', brows: 'up', look: [.8, 0], L: CLASP, R: CLASP, seed: 2 });
-    life('f1b', t, { mouth: 'o', brows: 'up', look: [-.8, 0], L: [70, -6], hL: 'point', seed: 3 });
+    life('f1b', t, { mouth: 'o', brows: 'up', look: [-.8, 0], L: CLASP, R: CLASP, seed: 3 });
   }
 });
 
@@ -28,7 +29,7 @@ addScene('c4', 'c7', {
     `<div class="title" style="top:430px" data-t="c6">Par <span class="g">KAISE?</span> 🤔</div>`,
   cam: [1, 1.05], fy: 880,
   upd(t) {
-    life('f1c', t, { mouth: t < T('c6') ? 'talk' : 'o', brows: 'up', look: [.8, 0], L: [9, -14], R: [70, -6], hR: 'point', seed: 4 });
+    life('f1c', t, { mouth: t < T('c6') ? 'talk' : 'o', brows: 'up', look: [.8, 0], L: [9, -14], R: CLASP, seed: 4 });
     const wink = t > T('c6') + .2 && t < T('c6') + .7;
     life('a1b', t, { mouth: 'shy', brows: 'sure', look: [-.4, 0], tilt: -4, wink, L: CLASP, R: CLASP, seed: 5 });
   }
@@ -42,7 +43,7 @@ addScene('c7', 'c8', {
   upd(t, lt, s) {
     streaks('rw2', t, s.a, s.b - s.a, -1);
     tf($('s2-g'), Math.sin(t * 40) * 14, 0, 1);
-    life('a2', t, Object.assign({ mouth: 'grin', seed: 1 }, DANCE(-t * 3)));
+    life('a2', t, Object.assign({ mouth: 'grin', seed: 1 }, DANCE(-t)));
   }
 });
 
@@ -257,13 +258,13 @@ addScene('c41', 'c44', {
 
 // ================= S7a: fast-forward to Saturday — 00:00:00, the star of the sangeet =================
 addScene('c44', 'c46', {
-  svg: weddingBG() + stand('f18a', F1, 150, 990, .6) + stand('f18b', F3, 930, 990, .6) + stand('d18', DS, 800, 1000, .58) + `<g id="s18-a">${stand('a18', AS, 0, 0, .9)}</g>` + streaksSVG('ff18') +
+  svg: weddingBG() + stand('f18a', F1, 105, 990, .56) + stand('f18b', F3, 930, 990, .6) + stand('d18', DS, 800, 1000, .58) + `<g id="s18-a">${stand('a18', AS, 0, 0, .9)}</g>` + streaksSVG('ff18') +
     `<g transform="translate(330,300)"><g data-t="c44+1.3">${sparkleSVG(30, C.gold)}</g></g>`,
   html: timerHTML('tm18') + pillH(540, 430, 'c45', '<span class="hl">Sangeet ki star</span> ⭐'),
   cam: [1, 1.05], fy: 900,
   upd(t, lt, s) {
     timerSet('tm18', HRS(t)); streaks('ff18', t, s.a, 1.0, 1);
-    tf($('s18-a'), 500 + Math.sin(t * 2.2) * 30, 930 + hop(t, Math.floor(t / .9) * .9, 14, .4), 1, Math.sin(t * 2.2) * 3);
+    tf($('s18-a'), 560 + Math.sin(t * 1.1) * 12, 930 + Math.abs(Math.sin(t * 1.1)) * -4, 1, Math.sin(t * 1.1) * 1.5);
     life('a18', t, Object.assign({ mouth: 'grin', brows: 'up', seed: 1 }, DANCE(t)));
     life('d18', t, { mouth: 'grin', look: [-.7, 0], L: CLASP, R: CLASP, seed: 3 });
     life('f18a', t, { mouth: 'big', look: [.8, 0], L: CLASP, R: CLASP, seed: 2 });
