@@ -80,6 +80,30 @@ Apni shop ya boutique fixed price ke saath Anokhi Reet pe list karo.
 #AnokhiReet #LehengaOnRent #RentalBusiness #BoutiqueBusiness #BusinessStories
 ```
 
+### Instagram description (recommended)
+
+```
+Shop full… par galla khaali? 🤔
+
+Kavita ke saare lehenge rent pe jaate the. Phir bhi har mahine haath khaali.
+Kyunki har customer ka pehla dialogue: "Didi, thoda kam karo na…"
+
+Phir ek "Buy 2 Get 1 Free" ne use sikhaya:
+customer ko kam daam nahi, JEETNE ki feeling chahiye. 🏆
+
+Kavita ne 3 kaam kiye:
+1️⃣ Fixed rent, pehle se likha hua
+2️⃣ Discount band, matching jewellery set free
+3️⃣ Muskurakar: "Rent toh fixed hai… par jewellery meri taraf se" 😊
+
+Customer khush. Kavita khush. Poora rent, har booking pe.
+
+👉 Apni shop ya boutique fixed price ke saath Anokhi Reet pe list karo.
+Aisi aur business stories ke liye follow karo.
+
+#AnokhiReet #LehengaOnRent #RentalBusiness #BoutiqueBusiness #BusinessStories
+```
+
 ## Added to the library (at least two per reel)
 
 - Sets: `shopBG` (lehenga rental shop with rails and a sign) and `mallBG` (mall clothes shop) in `animation/engine/sets.js`.
