@@ -21,6 +21,8 @@ characters are added here after their first reel (add them to `cast.js`, to the 
 | `HETALBEN` | **Hetalben**, 50s, friendly rental shop owner near Aarti's office, Ahmedabad (not Surat's Hetal ben). | Bun, sindoor, wine-red saree with gold pallu | Last minute invitation |
 | `LAB_M`, `LAB_W` | **Researchers** for "a study found…" beats. | White coats, glasses | Hetal's lehenga |
 | `KAVITA.shop` / `.night` / `.mall` | **Kavita**, 30s, owns a lehenga rental shop. Soft-hearted, said yes to every bargain until she learned. | Long braid, marigold kurta with red dupatta and red lehenga skirt at the shop; purple with glasses for late-night accounts; teal at the mall | Kavita aur Bargain (2026-11-17) |
+| `MEENA.shop` / `.night` | **Meena**, 30s-40s, runs a lehenga rental shop in Ahmedabad. Hardworking; learns to put her stock online. | Bun, sindoor, emerald kurta with pink dupatta and pink lehenga skirt; marigold at night | Meena ki dukaan (2026-11-17) |
+| `PATI` | **Meena's husband**, 40s. Calm; asks the simple question that matters. | Short hair, blue shirt | Meena ki dukaan |
 
 Ideas for the cast's next members (make them when a story needs them): a young woman who rents for college
 functions, a groom or brother, a kid, a vendor on the Anokhi Reet app.

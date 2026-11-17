@@ -143,3 +143,63 @@ function needleIcon() {
   return `<circle r="100" fill="#fff" stroke="${OL}" stroke-width="${OW}"/><path d="M-50,50 L44,-44" stroke="${OL}" stroke-width="12" stroke-linecap="round"/><path d="M-50,50 L44,-44" stroke="#D8D4CE" stroke-width="6" stroke-linecap="round"/>` +
     `<ellipse cx="36" cy="-36" rx="6" ry="12" transform="rotate(45,36,-36)" fill="#fff" stroke="${OL}" stroke-width="2"/><path d="M38,-38 Q80,-10 40,30 Q0,70 -40,40" fill="none" stroke="${C.red}" stroke-width="5" stroke-linecap="round"/>`;
 }
+
+// ===== Meena ki dukaan (2026-11-17): hotel room, city map, chat screen, chai, booking toast, cobweb =====
+// hotelRoomBG(id, {night}) an empty hotel room: bed, side lamp, window, door with a number, wall calendar spot
+function hotelRoomBG(id, o = {}) {
+  const night = o.night !== false;
+  let s = `<rect width="${W}" height="${H}" fill="${night ? '#3E3A5C' : '#EDE3D3'}"/><rect x="0" y="${FLOOR - 240}" width="${W}" height="240" fill="${night ? '#35314F' : '#E3D6C1'}"/>`;
+  s += windowSVG(90, 420, 230, 280, { night, curtain: '#6B4A7A' });
+  s += `<g transform="translate(900,${FLOOR})"><rect x="-110" y="-560" width="220" height="560" rx="8" fill="${night ? '#6B4F3A' : C.wood}" stroke="${OL}" stroke-width="${OW}"/><rect x="-70" y="-500" width="140" height="44" rx="8" fill="${C.gold}" stroke="${OL}" stroke-width="4"/><text y="-468" text-anchor="middle" font-family="Inter" font-weight="900" font-size="32" fill="${C.redDark}">203</text><circle cx="80" cy="-280" r="10" fill="${C.gold}" stroke="${OL}" stroke-width="3"/></g>`;
+  s += `<g transform="translate(470,${FLOOR})"><rect x="-300" y="-330" width="40" height="330" rx="10" fill="${C.woodDark}" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<rect x="-280" y="-190" width="600" height="130" rx="20" fill="#FFFFFF" stroke="${OL}" stroke-width="${OW}"/><rect x="-280" y="-120" width="600" height="80" rx="14" fill="${C.red}" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<rect x="-250" y="-250" width="150" height="80" rx="30" fill="#FFFFFF" stroke="${OL}" stroke-width="${OW}"/><rect x="-80" y="-250" width="150" height="80" rx="30" fill="#FFFFFF" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<rect x="-280" y="-60" width="600" height="60" fill="${C.woodDark}" stroke="${OL}" stroke-width="${OW}"/></g>`;
+  s += `<g transform="translate(80,${FLOOR - 60})"><rect x="-50" y="-70" width="100" height="130" rx="8" fill="${C.woodDark}" stroke="${OL}" stroke-width="4"/>${lampSVG(0, 0).replace('<g transform="translate(0,0)">', '<g transform="translate(0,-200)">')}</g>`;
+  if (night) s += `<circle cx="80" cy="${FLOOR - 220}" r="160" fill="url(#glow)" opacity=".7"/>`;
+  s += `<rect x="0" y="${FLOOR}" width="${W}" height="${H - FLOOR}" fill="${night ? '#4A3B33' : '#A47648'}"/><rect x="-10" y="${FLOOR - 14}" width="${W + 20}" height="18" fill="${C.woodDark}" stroke="${OL}" stroke-width="4"/>`;
+  return s;
+}
+// mapPinSVG(col): a map pin with its tip at (0,0)
+function mapPinSVG(col = C.red, r = 34) {
+  return `<path d="M0,0 C${-r * .3},${-r * .9} ${-r},${-r * 1.4} ${-r},${-r * 2.1} A${r},${r} 0 1,1 ${r},${-r * 2.1} C${r},${-r * 1.4} ${r * .3},${-r * .9} 0,0 Z" fill="${col}" stroke="${OL}" stroke-width="4"/><circle cx="0" cy="${-r * 2.1}" r="${r * .4}" fill="#fff" stroke="${OL}" stroke-width="3"/>`;
+}
+// cityMapSVG(id, areas): a flat city map (parks, river, roads) with area name labels [[name, x, y], ...] (relative to centre)
+function cityMapSVG(id, areas = []) {
+  let s = `<g id="${id}"><rect x="-470" y="-560" width="940" height="1120" rx="40" fill="#F4EDE1" stroke="${OL}" stroke-width="${OW}"/>`;
+  s += `<path d="M-470,-120 C-260,-60 -120,-220 60,-160 S320,-60 470,-140 L470,-80 C320,0 200,-110 60,-100 S-260,0 -470,-60 Z" fill="#BFE0EA" stroke="#8FBFCF" stroke-width="4"/>`;
+  for (const [x, y, w, h] of [[-380, -480, 200, 160], [200, 240, 220, 180], [-360, 260, 160, 220], [180, -470, 220, 150]]) s += `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="24" fill="#CFE3BF"/>`;
+  for (const x of [-250, 0, 250]) s += `<path d="M${x},-550 V550" stroke="#fff" stroke-width="26"/><path d="M${x},-550 V550" stroke="#E6DCCB" stroke-width="4" stroke-dasharray="18 16"/>`;
+  for (const y of [-330, 60, 400]) s += `<path d="M-460,${y} H460" stroke="#fff" stroke-width="26"/>`;
+  s += areas.map(([n, x, y]) => `<text x="${x}" y="${y}" text-anchor="middle" font-family="Inter" font-weight="700" font-size="28" fill="#7A6E62">${n}</text>`).join('');
+  return s + `</g>`;
+}
+// chatScreen(id, n): a generic chat inside phoneSVG (centred): header + n photo messages `${id}-m${i}` (pop them in)
+function chatScreen(id, n = 6, w = 400, h = 800) {
+  const top = -h / 2 + 16;
+  let s = `<rect x="${-w / 2 + 16}" y="${top}" width="${w - 32}" height="${h - 32}" rx="42" fill="#EFE7DA"/>`;
+  s += `<path d="M${-w / 2 + 16},${top + 42} Q${-w / 2 + 16},${top} ${-w / 2 + 58},${top} L${w / 2 - 58},${top} Q${w / 2 - 16},${top} ${w / 2 - 16},${top + 42} L${w / 2 - 16},${top + 100} L${-w / 2 + 16},${top + 100} Z" fill="${C.tealDark}"/>`;
+  s += `<circle cx="${-w / 2 + 70}" cy="${top + 62}" r="24" fill="${C.goldTan}"/><text x="${-w / 2 + 108}" y="${top + 72}" font-family="Inter" font-weight="800" font-size="28" fill="#fff">Customer</text>`;
+  const cols = [[C.lehenga, C.lehengaDark], [C.pink, C.pinkDark], [C.emerald, C.emeraldDark], [C.marigold, '#C9821E'], [C.teal, C.tealDark], ['#7A4FA0', '#5D3A7E']];
+  for (let i = 0; i < n; i++) {
+    const [c, d] = cols[i % cols.length], y = top + 130 + i * 110, x = i % 2 ? 40 : 60;
+    s += `<g id="${id}-m${i}" transform="translate(${x},${y})"><rect x="-130" y="0" width="230" height="96" rx="16" fill="#D9F2C9" stroke="#B9D9A6" stroke-width="3"/><rect x="-120" y="10" width="76" height="76" rx="10" fill="${C.cream}"/><g transform="translate(-82,40) scale(.2)">${lehengaHangerSVG('', { c, d, dupatta: C.goldTan })}</g><rect x="-34" y="26" width="110" height="14" rx="7" fill="#B9D9A6"/><rect x="-34" y="52" width="70" height="14" rx="7" fill="#B9D9A6"/><path d="M60,78 l8,8 14,-14 M72,78 l8,8 14,-14" stroke="#3E9BD6" stroke-width="4" fill="none" stroke-linecap="round"/></g>`;
+  }
+  return s;
+}
+// chaiSVG(): a cutting-chai glass with steam (class="sway" on the steam)
+function chaiSVG() {
+  return `<g class="sway"><path d="M-14,-70 q-14,-20 0,-40 q14,-20 0,-40 M14,-70 q-14,-20 0,-40 q14,-20 0,-40" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".8"/></g>` +
+    `<path d="M-46,-60 L46,-60 L36,40 L-36,40 Z" fill="#E9F4F8" fill-opacity=".6" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/><path d="M-42,-34 L42,-34 L36,36 L-36,36 Z" fill="#C88A4E"/><path d="M-46,-60 L46,-60" stroke="${OL}" stroke-width="${OW}"/>`;
+}
+// toastSVG(text, w): a booking notification card (white, rounded, green tick) centred on (0,0)
+function toastSVG(text, w = 520) {
+  return `<rect x="${-w / 2}" y="-46" width="${w}" height="92" rx="26" fill="#FFFFFF" stroke="${OL}" stroke-width="4"/><circle cx="${-w / 2 + 50}" cy="0" r="28" fill="${C.emerald}" stroke="${OL}" stroke-width="3"/><path d="M${-w / 2 + 38},0 l9,9 17,-17" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="${-w / 2 + 96}" y="11" font-family="Inter" font-weight="800" font-size="32" fill="${C.text}">${text}</text>`;
+}
+// cobwebSVG(sc): a corner cobweb (top-left corner at 0,0)
+function cobwebSVG(sc = 1) {
+  let s = `<g transform="scale(${sc})" fill="none" stroke="#FFFFFF" stroke-width="3" opacity=".85">`;
+  for (const a of [0, 22, 45, 68, 90]) { const r = a * Math.PI / 180; s += `<path d="M0,0 L${Math.cos(r) * 150},${Math.sin(r) * 150}"/>`; }
+  for (const R of [40, 80, 120]) { let d = ''; [0, 22, 45, 68, 90].forEach((a, i) => { const r = a * Math.PI / 180; d += `${i ? 'Q' + (Math.cos(r - .2) * R * .86).toFixed(0) + ',' + (Math.sin(r - .2) * R * .86).toFixed(0) + ' ' : 'M'}${(Math.cos(r) * R).toFixed(0)},${(Math.sin(r) * R).toFixed(0)} `; }); s += `<path d="${d}"/>`; }
+  return s + `</g>`;
+}

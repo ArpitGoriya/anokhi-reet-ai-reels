@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-17
 - **Made by:** teammate (script) + Claude
-- **Status:** script approved; voice take 1 waiting for a listen
+- **Status:** video 1 rendered (2026-11-17); waiting for feedback
 
 ## Brief
 
@@ -63,21 +63,30 @@ Voice script: [`script.txt`](script.txt) (Devanagari, female voice).
 
 ## Voice-over
 
-- Take 1: `output/female-meena-ki-dukaan-take1.mp3` (89.3 s) — approved: pending
+- Take 1: `output/female-meena-ki-dukaan-take1.mp3` (89.3 s) — approved: yes (2026-11-17)
 - Captions timed with `tools/caption_timing.py` (redo after every new take)
 
 ## Feedback rounds
 
 1. (round 0) Trimmed to ~90 s; follow line "Anokhi Reet"; features confirmed; female voice.
+2. Video 1: 20 scenes, `output/2026-11-17-meena-ki-dukaan.mp4`. Waiting for feedback.
 
 ## Caption
 
 ```
+200 lehenge… aur sirf 18 rent pe gaye. 😟
+Meena ki dukaan bhari thi, par uska stock kisi ko dikh hi nahi raha tha.
+Hotel ka khaali kamra aur hanger pe latka lehenga: dono ki aaj ki kamaai hamesha ke liye gayi.
+Meena ne lehenge online list kiye, ek link share kiya, aur date ke saath booking li.
+Ab doosre area ke customers bhi aate hain.
+👉 Apni shop, boutique ya studio aaj hi Anokhi Reet pe list karo.
+#AnokhiReet #LehengaOnRent #RentalBusiness #Ahmedabad #BusinessStories
 ```
 
 ## Added to the library (at least two per reel)
 
-- (planned) Hotel room set, city map with pins, WhatsApp-style chat screen, chai cup, booking toasts, Meena and her husband in the cast.
+- Set `hotelRoomBG`; props `cityMapSVG` + `mapPinSVG`, `chatScreen`, `chaiSVG`, `toastSVG`, `cobwebSVG`.
+- New cast: Meena (`MEENA.shop`, `.night`) and her husband (`PATI`), in `CAST.md` and the cast sheet.
 
 ## Suggested default (for the owner)
 
@@ -85,4 +94,5 @@ Voice script: [`script.txt`](script.txt) (Devanagari, female voice).
 
 ## Lessons
 
--
+- Whisper matched this take well (254 of 293 words); no hand timing needed.
+- Phone screens drawn at 560x1000 sit under the step pill and the captions: scale them to .85 around y 830.

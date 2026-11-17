@@ -54,3 +54,11 @@ const KAVITA = {
   night: { top: '#8C6BA8', topD: '#6E5089', pallu: '#B8A0CC', border: C.goldTan, hairStyle: 'braid', skin: '#A86B48', skin2: '#93593A', glasses: true, skirt: { c: '#6E5089', d: '#54396B', b: C.goldTan, w: 210 } },
   mall: { top: C.teal, topD: C.tealDark, pallu: '#F2C14E', border: C.gold, hairStyle: 'braid', skin: '#A86B48', skin2: '#93593A', skirt: { c: C.tealDark, d: '#174A47', b: C.gold, w: 210 } },
 };
+
+// Meena (30s-40s): runs a lehenga rental shop in Ahmedabad. Hardworking, tired of WhatsApp photos; learns to put her stock online. (Meena ki dukaan)
+const MEENA = {
+  shop: { top: C.emerald, topD: C.emeraldDark, pallu: C.pink, border: C.gold, hairStyle: 'bun', skin: '#C08460', skin2: '#A86E4E', sindoor: true, necklace: true, skirt: { c: C.pink, d: C.pinkDark, b: C.gold, w: 210 } },
+  night: { top: '#E0A33A', topD: '#C08728', pallu: '#F2C14E', border: C.red, hairStyle: 'bun', skin: '#C08460', skin2: '#A86E4E', sindoor: true, skirt: { c: '#C08728', d: '#9A6A1E', b: C.red, w: 210 } },
+};
+// Meena's husband (40s): calm, asks the simple question that matters.
+const PATI = { male: true, top: '#3D6B8C', topD: '#2E536D', skin: '#A86B48', skin2: '#93593A', hair: '#2A1A14' };

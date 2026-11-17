@@ -3,6 +3,17 @@
 Every reel adds at least one improvement to the engine or library and writes it here (newest first).
 See [GUIDE.md](GUIDE.md) section 8.
 
+## 2026-11-17: hotel room, city map, chat screen, Meena (Meena ki dukaan)
+
+- **New set** `hotelRoomBG(id, {night})`: an empty hotel room (bed, window, numbered door), for "an empty room
+  tonight is income lost forever".
+- **New props** in `engine/props.js`: `cityMapSVG(id, areas)` (flat city map with river, parks, roads, area names)
+  + `mapPinSVG(col)`; `chatScreen(id, n)` (a generic chat with photo messages `${id}-m${i}`, for phoneSVG);
+  `chaiSVG()`; `toastSVG(text)` (a booking notification); `cobwebSVG()` for stock that hasn't moved.
+- **Reused** the teammates' `rentalShopBG`, `glide`, `arHeader` (app screens) and Kavita's `shopBG`, `ledgerSVG`,
+  `personIcon`, `calendarSVG` flying pages: the library is paying off.
+- **New cast:** Meena (`MEENA.shop`, `.night`) and her husband (`PATI`).
+
 ## 2026-11-17: Last minute invitation (dhruvifewtone-wq)
 
 - **New set: street** (`streetBG(id, {sign, dress})`): office building on the main road, a side lane beside it, and a
