@@ -48,7 +48,7 @@ addScene('c7', 'c8', {
 
 // ================= S2b: Thursday night, 10 pm, relaxing on the sofa =================
 addScene('c8', 'c10', {
-  svg: homeBG('s3', { night: true, noShelf: true, noPlant: true, noWindow: true, lamp: true, lampX: 880, clockX: 880 }) + bust('a3', NOSKIRT(AH), 520, FLOOR + 60, 1.1) + sofaSVG(540, FLOOR + 170),
+  svg: homeBG('s3', { night: true, noShelf: true, noPlant: true, noWindow: true, lamp: true, lampX: 880, clockX: 880 }) + sofaBackSVG(540, FLOOR + 110) + bust('a3', NOSKIRT(AH), 520, FLOOR + 110, 1.1) + sofaFrontSVG(540, FLOOR + 110),
   html: timerHTML('tm3', 'c8') + pillH(540, 420, 'c8+0.15', '<span class="hl">Thursday raat</span>, 10 baje 🌙'),
   cam: [1, 1.04], fy: 900,
   upd(t) { timerSet('tm3', HRS(t)); clockTick('s3-clk', (t - T('c8')) * .3, 600); life('a3', t, { pivot: 0, mouth: 'smile', closed: false, tilt: -8, lean: -3, L: CLASP, R: CLASP, look: [.3, -.4] }); }
@@ -70,7 +70,7 @@ addScene('c10', 'c12', {
 
 // ================= S2d: sangeet the day after tomorrow… outfit? Not yet =================
 addScene('c12', 'c14', {
-  svg: homeBG('s5', { night: true, noShelf: true, noPlant: true, noWindow: true, lamp: true, lampX: 880, clockX: 880 }) + bust('a5', NOSKIRT(AH), 540, FLOOR + 60, 1.15) + sofaSVG(540, FLOOR + 170) +
+  svg: homeBG('s5', { night: true, noShelf: true, noPlant: true, noWindow: true, lamp: true, lampX: 880, clockX: 880 }) + sofaBackSVG(540, FLOOR + 110) + bust('a5', NOSKIRT(AH), 540, FLOOR + 110, 1.1) + sofaFrontSVG(540, FLOOR + 110) +
     `<g transform="translate(330,640)"><g data-t="c12+0.2" data-swing="8">${calendarSVG('s5-cal', 'SATURDAY', '💃')}</g></g>`,
   html: timerHTML('tm5') + pillH(540, 420, 'c13', 'Outfit? <span class="hl">Abhi tak nahi</span> 😱'),
   cam: [1, 1.06], fy: 860,
@@ -111,7 +111,7 @@ addScene('c16', 'c18', {
 
 // ================= S4a: Aarti calls her best friend Dimple =================
 addScene('c18', 'c20', {
-  svg: homeBG('s8', { night: true, noShelf: true, noPlant: true, noWindow: true, lamp: true, lampX: 880, clockX: 880 }) + bust('a8', NOSKIRT(AH), 540, FLOOR + 60, 1.15) + sofaSVG(540, FLOOR + 170) + `<g id="s8-ph">${phoneBackSVG(.8)}</g>`,
+  svg: homeBG('s8', { night: true, noShelf: true, noPlant: true, noWindow: true, lamp: true, lampX: 880, clockX: 880 }) + sofaBackSVG(540, FLOOR + 110) + bust('a8', NOSKIRT(AH), 540, FLOOR + 110, 1.1) + sofaFrontSVG(540, FLOOR + 110) + `<g id="s8-ph">${phoneBackSVG(.8)}</g>`,
   html: timerHTML('tm8') + pillH(540, 420, 'c19', '📞 Calling <span class="hl">Dimple</span>…'),
   cam: [1, 1.05], fy: 860,
   upd(t) {

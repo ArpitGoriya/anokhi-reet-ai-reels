@@ -7,6 +7,8 @@ See [GUIDE.md](GUIDE.md) section 8.
 
 - **New set: street** (`streetBG(id, {sign, dress})`): office building on the main road, a side lane beside it, and a
   small rental shop just round the corner (awning, sign board, an outfit in the window), footpath and road.
+- **Big sofa a character sits in** (`sofaBackSVG` before the bust, `sofaFrontSVG` after, same x and waist y):
+  backrest to the shoulders, seat cushion and armrests over the lap. The old `sofaSVG` was too small to sit in.
 - **Countdown timer** (`timerHTML(id, at)` + `timerSet(id, hours)`, CSS `.pill.timer`): small, top-left, HH:MM:SS.
 - **Rewind / fast-forward streaks** (`streaksSVG` + `streaks(id, t, t0, d, dir)`).
 - **Split-screen video call** (`callPanelSVG(id, y, h, name, inner, bg)` + `callEndSVG`).

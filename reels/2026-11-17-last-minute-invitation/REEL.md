@@ -33,6 +33,7 @@ Everything here is applied in every round and never silently reverted.
 - Scene 6 shows **"Booked ✅"** and Dimple says she booked it (teammate: the app supports booking).
 - Hetalben is a **new** character (not the cast's Hetal ben).
 - The narration tells the full story with the characters' key lines, at a calm pace (pauses, short sentences).
+- Aarti sits IN a big sofa at home (backrest behind her, cushion and armrests over her lap), not behind a small one.
 
 ## Script and storyboard (approved: yes, 2026-11-17)
 
@@ -61,7 +62,10 @@ Everything here is applied in every round and never silently reverted.
    more `...` pauses and shorter sentences; the narrator now tells the full story including the characters' key
    lines (friend's "Aarti! Ye outfit?", the invitation, Dimple's three questions, Aarti's "Ahmedabad… 2,000 tak…
    yellow?", "Ho gaya… 15 minute nikaal", "Ye dukaan yahan thi?", Hetalben's "Aapka outfit ready hai!", "Inhe mera
-   naam kaise pata?", Dimple turning her phone round, "kahan se liya?"). Target about 60 s. Take 3 pending approval.
+   naam kaise pata?", Dimple turning her phone round, "kahan se liya?"). Target about 60 s; take 3 came out at 81 s
+   and was approved.
+3. Video round 1 (2026-11-17): "the sofa looks too small and it doesn't look like she is sitting on the sofa" →
+   new big sofa (`sofaBackSVG` behind her, `sofaFrontSVG` over her lap) in the three sofa scenes.
 
 ## Caption
 

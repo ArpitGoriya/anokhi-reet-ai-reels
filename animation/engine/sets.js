@@ -295,6 +295,21 @@ function callPanelSVG(id, y, h, name, inner, bg = C.wall) {
 }
 function callEndSVG(x, y) { return `<g transform="translate(${x},${y})"><circle r="44" fill="#D9363E" stroke="${OL}" stroke-width="${OW}"/><path d="M-24,4 Q0,-16 24,4 L18,14 L8,8 L8,0 Q0,-4 -8,0 L-8,8 L-18,14 Z" fill="#fff"/></g>`; }
 
+// a big sofa a waist-up character sits IN: sofaBackSVG before bust(), sofaFrontSVG after it (same x, y = the
+// character's waist y). The backrest rises to the shoulders, the seat cushion and armrests cover the lap.
+function sofaBackSVG(x, y, w = 860, col = C.red) {
+  return `<g transform="translate(${x},${y})"><path d="M${-w / 2},40 L${-w / 2},-300 Q${-w / 2},-370 ${-w / 2 + 70},-370 L${w / 2 - 70},-370 Q${w / 2},-370 ${w / 2},-300 L${w / 2},40 Z" fill="${col}" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<path d="M-10,-350 V20 M${-w / 4},-350 Q${-w / 4 - 10},-160 ${-w / 4},20 M${w / 4},-350 Q${w / 4 + 10},-160 ${w / 4},20" stroke="#6E0E11" stroke-width="5" fill="none" opacity=".55"/></g>`;
+}
+function sofaFrontSVG(x, y, w = 860, col = C.red) {
+  const a = 120;
+  return `<g transform="translate(${x},${y})"><rect x="${-w / 2 + 40}" y="-40" width="${w - 80}" height="150" rx="40" fill="#A31D1D" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<path d="M0,-30 V100" stroke="#6E0E11" stroke-width="5" opacity=".6"/>` +
+    `<rect x="${-w / 2 + 30}" y="90" width="${w - 60}" height="150" rx="20" fill="${col}" stroke="${OL}" stroke-width="${OW}"/>` +
+    [-1, 1].map(sd => `<rect x="${sd < 0 ? -w / 2 - 40 : w / 2 - a + 40}" y="-170" width="${a}" height="410" rx="50" fill="#A31D1D" stroke="${OL}" stroke-width="${OW}"/><path d="M${sd * (w / 2 - 20)},-120 V200" stroke="#6E0E11" stroke-width="5" opacity=".5"/>`).join('') +
+    [-1, 1].map(sd => `<rect x="${sd * (w / 2 - 40) - 14}" y="240" width="28" height="44" rx="6" fill="${C.woodDark}" stroke="${OL}" stroke-width="4"/>`).join('') + `</g>`;
+}
+
 // THINK: hand under the chin (life(..., {R: THINK, hR: 'fist'})); IDEA: one finger up beside the head ('point').
 const THINK = [-22, -150];
 const IDEA = [150, 30];
