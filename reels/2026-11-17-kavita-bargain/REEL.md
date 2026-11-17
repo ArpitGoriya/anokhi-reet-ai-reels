@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-17
 - **Made by:** teammate (script) + Claude
-- **Status:** script waiting for approval
+- **Status:** script approved; voice take 1 waiting for a listen
 
 ## Brief
 
@@ -28,7 +28,7 @@ Everything here is applied in every round and never silently reverted.
 - **Maths fix:** 8 of 10 customers bargained → 24 of 30 bookings × ₹500 = **₹12,000** (the draft said ₹15,000). (round 0)
 - **Trimmed** from 384 words (~2 min) to 301 words (~90-95 s), same story. (round 0)
 
-## Script and storyboard (approved: no)
+## Script and storyboard (approved: yes)
 
 Voice script: [`script.txt`](script.txt) (Devanagari, female voice).
 
@@ -61,7 +61,7 @@ Voice script: [`script.txt`](script.txt) (Devanagari, female voice).
 
 ## Voice-over
 
-- File: — approved: no
+- Take 1: `output/female-kavita-bargain-take1.mp3` (93.4 s) — approved: pending
 - Captions timed with `tools/caption_timing.py` (redo after every new take)
 
 ## Feedback rounds
