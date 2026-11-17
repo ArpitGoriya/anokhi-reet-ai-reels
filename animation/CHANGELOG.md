@@ -3,6 +3,21 @@
 Every reel adds at least one improvement to the engine or library and writes it here (newest first).
 See [GUIDE.md](GUIDE.md) section 8.
 
+## 2026-11-17: Last minute invitation (dhruvifewtone-wq)
+
+- **New set: street** (`streetBG(id, {sign, dress})`): office building on the main road, a side lane beside it, and a
+  small rental shop just round the corner (awning, sign board, an outfit in the window), footpath and road.
+- **Countdown timer** (`timerHTML(id, at)` + `timerSet(id, hours)`, CSS `.pill.timer`): small, top-left, HH:MM:SS.
+- **Rewind / fast-forward streaks** (`streaksSVG` + `streaks(id, t, t0, d, dir)`).
+- **Split-screen video call** (`callPanelSVG(id, y, h, name, inner, bg)` + `callEndSVG`).
+- **Expressions:** `wink: true` in `life()`/`face()` (right eye shut), mouth `'shock'` (jaw drop).
+- **Props:** `phoneBackSVG` (screen hidden from the viewer), `arOutfitScreen({chips, look, title, shop})` (app
+  screen: chips, one outfit card from a shop, Book button → "Booked ✓").
+- **New cast:** `AARTI` (.office/.home/.sangeet), `DIMPLE` (.home/.sangeet), `HETALBEN` (rental shop owner,
+  Ahmedabad; not Surat's Hetal ben).
+- Caption timing again needed hand-fixing after 23 s (93 of 230 words matched). The matcher re-anchoring is now
+  the top "Next improvement".
+
 ## 2026-11-17: Season ka sapna (dhruvifewtone-wq)
 
 - **New set: rental shop** (`rentalShopBG` in `sets.js`): racks of lehengas and sherwanis (`rackSVG`, each hanger

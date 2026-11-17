@@ -68,6 +68,7 @@ const MOUTH = {
   worry: 'M-18,-318 Q-9,-326 0,-319 Q9,-312 18,-320',
   talk: 'M-18,-330 Q0,-306 18,-330 Q0,-324 -18,-330 Z',
   shy: 'M-12,-322 Q0,-314 12,-323',
+  shock: 'M-20,-338 Q0,-352 20,-338 Q26,-300 0,-290 Q-26,-300 -20,-338 Z', // jaw drop (Last minute invitation)
 };
 const BROWS = {
   norm: ['M-56,-418 Q-38,-428 -22,-420', 'M22,-420 Q38,-428 56,-418'],
@@ -209,7 +210,7 @@ function face(id, t, f = {}) {
   // look: [x, y] from -1 to 1 moves the pupils (look at the phone, at another character, up in thought)
   const lx = f.look ? f.look[0] * 10 : 0, ly = f.look ? f.look[1] * 8 : 0;
   tf($(`${id}-eyeL`), lx, ly, 1, 0, -38, -378, 1 - closed * .92);
-  tf($(`${id}-eyeR`), lx, ly, 1, 0, 38, -378, 1 - closed * .92);
+  tf($(`${id}-eyeR`), lx, ly, 1, 0, 38, -378, 1 - (f.wink ? 1 : closed) * .92); // wink: right eye shut
   if (f.mouth) { const m = $(`${id}-mouth`); if (m.dataset.k !== f.mouth) { m.dataset.k = f.mouth; m.setAttribute('d', MOUTH[f.mouth]); m.setAttribute('fill', /big|grin|o|talk/.test(f.mouth) ? '#6E2A22' : 'none'); } }
   if (f.brows) { const b = BROWS[f.brows]; $(`${id}-bl`).setAttribute('d', b[0]); $(`${id}-br`).setAttribute('d', b[1]); }
   op($(`${id}-blush`), f.blush || 0);

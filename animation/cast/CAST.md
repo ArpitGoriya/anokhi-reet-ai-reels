@@ -16,6 +16,9 @@ characters are added here after their first reel (add them to `cast.js`, to the 
 | `GUEST_W1`, `GUEST_W2` | **Aunties**, wedding guests and crowd. | Long hair in purple / bun in orange saree | Hetal's lehenga |
 | `PANKAJ` | **Pankaj bhai**, 40s, rental shop owner. Hardworking and hopeful; dreams of a busy season. | Short hair, moustache, indigo kurta with gold buttons | Season ka sapna (2026-11-17) |
 | `CUSTOMER_W` | A young customer, 20s, who shows the outfit she wants on her phone. | Ponytail, pink kurti (add a skirt with `dress` for standing shots) | Season ka sapna |
+| `AARTI.office` / `.home` / `.sangeet` | **Aarti**, 20s, young working woman, Ahmedabad. Gets last-minute invitations. | Long hair; blue office kurti, mint tee at home, yellow chaniya choli with pink dupatta at the sangeet | Last minute invitation (2026-11-17) |
+| `DIMPLE.home` / `.sangeet` | **Dimple**, 20s, Aarti's best friend. Calm, always has a plan. | Short hair, round glasses, emerald top; pink lehenga at the sangeet | Last minute invitation |
+| `HETALBEN` | **Hetalben**, 50s, friendly rental shop owner near Aarti's office, Ahmedabad (not Surat's Hetal ben). | Bun, sindoor, wine-red saree with gold pallu | Last minute invitation |
 | `LAB_M`, `LAB_W` | **Researchers** for "a study found…" beats. | White coats, glasses | Hetal's lehenga |
 | `KAVITA.shop` / `.night` / `.mall` | **Kavita**, 30s, owns a lehenga rental shop. Soft-hearted, said yes to every bargain until she learned. | Long braid, marigold kurta with red dupatta and red lehenga skirt at the shop; purple with glasses for late-night accounts; teal at the mall | Kavita aur Bargain (2026-11-17) |
 

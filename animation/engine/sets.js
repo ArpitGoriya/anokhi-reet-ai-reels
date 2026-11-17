@@ -241,6 +241,60 @@ function mallBG(id) {
   for (let x = 0; x < W; x += 180) s += `<path d="M${x},${FLOOR} V${H}" stroke="#D8CDBE" stroke-width="4"/>`;
   return s + `<rect x="-10" y="${FLOOR - 12}" width="${W + 20}" height="16" fill="#C9C2B8" stroke="${OL}" stroke-width="4"/>`;
 }
+// ===== Street, countdown timer, rewind streaks, video call (Last minute invitation, 2026-11-17) =====
+// streetBG(id, {sign, dress}): office building on the main road (left), a side lane beside it, and a small rental
+// shop just round the corner (right) with an awning, sign board and an outfit in the window. Footpath + road.
+function streetBG(id, o = {}) {
+  let s = `<rect width="${W}" height="${H}" fill="${C.sky}"/>`;
+  s += `<path d="M60,120 q30,-30 70,-10 q30,-20 60,6 q20,4 14,22 h-150 z" fill="#fff" opacity=".9"/><path d="M760,200 q30,-26 66,-8 q26,-16 52,6 q18,6 10,20 h-136 z" fill="#fff" opacity=".9"/>`;
+  // office building
+  s += `<rect x="-20" y="250" width="560" height="${FLOOR - 250}" fill="#C9D3DE" stroke="${OL}" stroke-width="${OW}"/>`;
+  for (let r = 0; r < 6; r++) for (let c = 0; c < 4; c++) s += `<rect x="${30 + c * 125}" y="${300 + r * 118}" width="95" height="82" rx="6" fill="#8FB3CF" stroke="${OL}" stroke-width="4"/><path d="M${44 + c * 125},${314 + r * 118} l26,0 l-20,30" fill="none" stroke="#fff" stroke-width="5" opacity=".6"/>`;
+  s += `<rect x="150" y="${FLOOR - 190}" width="240" height="190" fill="#5D6F86" stroke="${OL}" stroke-width="${OW}"/><path d="M270,${FLOOR - 190} V${FLOOR}" stroke="${OL}" stroke-width="4"/>`;
+  s += `<rect x="130" y="${FLOOR - 250}" width="280" height="50" rx="10" fill="#fff" stroke="${OL}" stroke-width="4"/><text x="270" y="${FLOOR - 214}" text-anchor="middle" font-family="Inter" font-weight="900" font-size="30" fill="#3F4B5C" letter-spacing="3">OFFICE</text>`;
+  // side lane between the buildings
+  s += `<path d="M540,${FLOOR} L600,640 L680,640 L740,${FLOOR} Z" fill="#D8CDBE" stroke="${OL}" stroke-width="4"/><path d="M640,700 V${FLOOR - 40}" stroke="#fff" stroke-width="6" stroke-dasharray="26 22"/>`;
+  s += `<rect x="560" y="560" width="160" height="90" fill="#E6D6BF" stroke="${OL}" stroke-width="4"/>`;
+  // small rental shop round the corner
+  s += `<rect x="720" y="560" width="380" height="${FLOOR - 560}" fill="#F7E1C6" stroke="${OL}" stroke-width="${OW}"/>`;
+  s += `<rect x="740" y="600" width="340" height="86" rx="12" fill="url(#mar)" stroke="${OL}" stroke-width="${OW}"/><text x="910" y="656" text-anchor="middle" font-family="Inter" font-weight="900" font-size="${o.signFs || 32}" fill="${C.gold}" letter-spacing="2">${o.sign || 'RENTALS'}</text>`;
+  for (let i = 0; i < 6; i++) s += `<path d="M${720 + i * 64},700 h64 l-6,70 q-26,24 -52,0 z" fill="${i % 2 ? C.cream : C.red}" stroke="${OL}" stroke-width="4" stroke-linejoin="round"/>`;
+  s += `<rect x="760" y="800" width="190" height="${FLOOR - 840}" rx="8" fill="#FFF8EC" stroke="${OL}" stroke-width="${OW}"/><g transform="translate(855,880)">${lehengaHangerSVG(id + '-win', o.dress || { c: C.marigold2, d: '#D9A52E', b: C.red, dupatta: '#E26A8A' }, .62)}</g>`;
+  s += `<rect x="975" y="840" width="105" height="${FLOOR - 840}" fill="#8C5A32" stroke="${OL}" stroke-width="${OW}"/><circle cx="995" cy="${FLOOR - 170}" r="8" fill="${C.gold}"/>`;
+  // footpath and road
+  s += `<rect x="-10" y="${FLOOR}" width="${W + 20}" height="90" fill="#CFC6B8" stroke="${OL}" stroke-width="4"/>`;
+  for (let x = 0; x < W; x += 120) s += `<path d="M${x},${FLOOR} V${FLOOR + 90}" stroke="#B8AE9E" stroke-width="4"/>`;
+  s += `<rect x="-10" y="${FLOOR + 90}" width="${W + 20}" height="${H - FLOOR - 90}" fill="#6E6A64"/><path d="M0,${FLOOR + 330} H${W}" stroke="#F2EADF" stroke-width="12" stroke-dasharray="70 50"/>`;
+  return s;
+}
+// countdown timer pill (top-left, small): timerHTML(id, at) in a scene's html; timerSet(id, hours) every frame
+function timerHTML(id, at = '-1') { return `<div class="pill timer" id="${id}" style="left:200px;top:300px" data-t="${at}">⏱️ 48:00:00</div>`; }
+function timerSet(id, hours) {
+  const el = $(id); if (!el) return;
+  const s = Math.max(0, Math.round(hours * 3600)), p = n => String(n).padStart(2, '0');
+  el.textContent = `⏱️ ${p(Math.floor(s / 3600))}:${p(Math.floor(s / 60) % 60)}:${p(s % 60)}`;
+}
+// rewind / fast-forward streaks over the frame: streaksSVG(id) on top, streaks(id, t, t0, d, dir) (dir -1 = rewind)
+function streaksSVG(id) {
+  let s = `<g id="${id}" pointer-events="none" opacity="0"><rect width="${W}" height="${H}" fill="${C.maroonDeep || '#2b0001'}" opacity=".25"/>`;
+  for (let i = 0; i < 22; i++) s += `<rect class="sk" x="0" y="${60 + i * 86 + (i % 3) * 20}" width="${220 + (i * 137) % 420}" height="${6 + (i % 4) * 4}" rx="6" fill="#FFFFFF" opacity="${.35 + (i % 3) * .2}"/>`;
+  return s + `</g>`;
+}
+function streaks(id, t, t0, d, dir = -1) {
+  const g = $(id); if (!g) return;
+  const k = (t - t0) / d; op(g, k > 0 && k < 1 ? Math.sin(k * Math.PI) * 1.4 : 0);
+  [...g.querySelectorAll('.sk')].forEach((el, i) => { const x = ((t * 2600 * (1 + (i % 5) * .2) + i * 300) % (W + 700)) - 600; el.setAttribute('x', (dir < 0 ? W - x : x).toFixed(0)); });
+}
+// one panel of a split-screen video call: callPanelSVG(id, y, h, name, inner, bg) — inner is drawn in scene
+// coordinates and clipped to the panel; a name tag sits bottom-left. callEndSVG(x, y) = the red end-call button.
+function callPanelSVG(id, y, h, name, inner, bg = C.wall) {
+  return `<clipPath id="${id}-cp"><rect x="40" y="${y}" width="${W - 80}" height="${h}" rx="34"/></clipPath>` +
+    `<g clip-path="url(#${id}-cp)"><rect x="40" y="${y}" width="${W - 80}" height="${h}" fill="${bg}"/>${inner}</g>` +
+    `<rect x="40" y="${y}" width="${W - 80}" height="${h}" rx="34" fill="none" stroke="${OL}" stroke-width="${OW + 2}"/>` +
+    `<g transform="translate(70,${y + h - 70})"><rect width="${name.length * 22 + 50}" height="50" rx="25" fill="#000" opacity=".55"/><text x="25" y="34" font-family="Inter" font-weight="800" font-size="30" fill="#fff">${name}</text></g>`;
+}
+function callEndSVG(x, y) { return `<g transform="translate(${x},${y})"><circle r="44" fill="#D9363E" stroke="${OL}" stroke-width="${OW}"/><path d="M-24,4 Q0,-16 24,4 L18,14 L8,8 L8,0 Q0,-4 -8,0 L-8,8 L-18,14 Z" fill="#fff"/></g>`; }
+
 // THINK: hand under the chin (life(..., {R: THINK, hR: 'fist'})); IDEA: one finger up beside the head ('point').
 const THINK = [-22, -150];
 const IDEA = [150, 30];

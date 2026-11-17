@@ -48,6 +48,24 @@ function arBrowseScreen() {
     chips.map((c, i) => `<g id="arb-c${i}" transform="translate(${-170 + i * 170},-330)"><rect x="-78" y="-30" width="156" height="60" rx="30" fill="#F2EEE9" stroke="#E6E0D9" stroke-width="3"/><rect id="arb-c${i}-on" x="-78" y="-30" width="156" height="60" rx="30" fill="#141110" opacity="0"/><text x="0" y="11" text-anchor="middle" font-family="Inter" font-weight="700" font-size="28" fill="#655C57">${c}</text><text id="arb-c${i}-t" x="0" y="11" text-anchor="middle" font-family="Inter" font-weight="700" font-size="28" fill="#FFFFFF" opacity="0">${c}</text></g>`).join('') +
     cards.map((it, i) => { const x = i % 2 ? 125 : -125, y = i < 2 ? -110 : 250; return `<g id="arb-k${i}" transform="translate(${x},${y})"><rect x="-112" y="-170" width="224" height="330" rx="16" fill="#FFFFFF" stroke="#E6E0D9" stroke-width="3"/><rect x="-100" y="-158" width="200" height="230" rx="10" fill="${C.cream}"/><g transform="translate(0,-70)">${it.k === 's' ? sherwaniHangerSVG('arb-o' + i, it.c, it.d, .38) : lehengaHangerSVG('arb-o' + i, { c: it.c, d: it.d, dupatta: it.p }, .36)}</g><rect x="-96" y="94" width="130" height="16" rx="8" fill="#E6E0D9"/><rect x="-96" y="122" width="84" height="16" rx="8" fill="#F2EEE9"/><rect x="40" y="104" width="56" height="34" rx="17" fill="url(#mar)"/></g>`; }).join('');
 }
+// ----- Last minute invitation (2026-11-17): phoneBackSVG, arOutfitScreen -----
+// the back of a phone (screen hidden from the viewer): camera bump, maroon case
+function phoneBackSVG(sc = 1) { return `<g transform="scale(${sc})"><rect x="-60" y="-110" width="120" height="220" rx="22" fill="${C.red}" stroke="${OL}" stroke-width="${OW}"/><rect x="-44" y="-94" width="46" height="62" rx="12" fill="#2b0001" stroke="${OL}" stroke-width="3"/><circle cx="-21" cy="-78" r="9" fill="#555"/><circle cx="-21" cy="-48" r="9" fill="#555"/><circle cx="0" cy="40" r="20" fill="none" stroke="${C.goldTan}" stroke-width="4"/></g>`; }
+// Anokhi Reet app: chips (City/Occasion/Budget with values) + one chosen outfit card from a shop + a Book button.
+// ids: arO-c0..2 (chips; arO-cN-on to select), arO-card, arO-btn (Book) and arO-done ("Booked ✅", start hidden)
+function arOutfitScreen(o = {}) {
+  const chips = o.chips || ['Ahmedabad', 'Sangeet', '₹2,000 tak'];
+  const look = o.look || { c: C.marigold2, d: '#D9A52E', b: C.red, dupatta: '#E26A8A' };
+  return arHeader() +
+    chips.map((c, i) => `<g id="arO-c${i}" transform="translate(${-170 + i * 170},-330)"><rect x="-80" y="-30" width="160" height="60" rx="30" fill="#F2EEE9" stroke="#E6E0D9" stroke-width="3"/><rect id="arO-c${i}-on" x="-80" y="-30" width="160" height="60" rx="30" fill="#141110" opacity="0"/><text x="0" y="10" text-anchor="middle" font-family="Inter" font-weight="700" font-size="${c.length > 9 ? 22 : 26}" fill="#655C57">${c}</text><text id="arO-c${i}-t" x="0" y="10" text-anchor="middle" font-family="Inter" font-weight="700" font-size="${c.length > 9 ? 22 : 26}" fill="#fff" opacity="0">${c}</text></g>`).join('') +
+    `<g id="arO-card"><rect x="-230" y="-270" width="460" height="560" rx="22" fill="#fff" stroke="#E6E0D9" stroke-width="3"/><rect x="-210" y="-250" width="420" height="360" rx="16" fill="${C.cream}"/>` +
+    `<g transform="translate(0,-120)">${lehengaHangerSVG('arO-o', look, .62)}</g>` +
+    `<text x="-200" y="160" font-family="Inter" font-weight="800" font-size="34" fill="#141110">${o.title || 'Yellow chaniya choli'}</text>` +
+    `<text x="-200" y="204" font-family="Inter" font-weight="600" font-size="28" fill="#655C57">${o.shop || 'Shop · office ke paas'}</text>` +
+    `<rect x="-200" y="228" width="96" height="40" rx="20" fill="${C.cream}" stroke="${C.goldTan}" stroke-width="3"/><text x="-152" y="256" text-anchor="middle" font-family="Inter" font-weight="800" font-size="24" fill="${C.red}">Rent</text></g>` +
+    `<g id="arO-btn"><rect x="-230" y="320" width="460" height="84" rx="42" fill="url(#mar)"/><text x="0" y="374" text-anchor="middle" font-family="Inter" font-weight="800" font-size="36" fill="${C.cream}">Book karo</text></g>` +
+    `<g id="arO-done" opacity="0"><rect x="-230" y="320" width="460" height="84" rx="42" fill="#1F7A4D"/><text x="0" y="374" text-anchor="middle" font-family="Inter" font-weight="800" font-size="36" fill="#fff">Booked ✓</text></g>`;
+}
 function jarSVG(front) { const d = 'M-110,-150 L110,-150 L120,-120 Q140,-100 140,-60 L140,150 Q140,180 110,180 L-110,180 Q-140,180 -140,150 L-140,-60 Q-140,-100 -120,-120 Z'; return front ? `<path d="${d}" fill="#DCEFF5" fill-opacity=".14" stroke="${OL}" stroke-width="${OW}"/><path d="M-104,-60 V120" stroke="#fff" stroke-width="14" stroke-linecap="round" opacity=".55"/><rect x="-120" y="-178" width="240" height="40" rx="12" fill="${C.goldTan}" stroke="${OL}" stroke-width="${OW}"/>` : `<path d="${d}" fill="#DCEFF5" fill-opacity=".6"/>`; }
 
 // ===== Shop and money props (from the Kavita reel, 2026-11-17). Centred on (0,0) unless said. =====

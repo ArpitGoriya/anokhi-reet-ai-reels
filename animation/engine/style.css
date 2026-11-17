@@ -10,6 +10,7 @@ html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#FFF2DF
 .pill.maroon{background:#890304;color:#FFF2DF;border-color:#2b0001}
 .pill.green{background:#E3F3EA;color:#1F7A4D;border-color:#1F7A4D}
 .pill.big{font-size:56px;padding:16px 38px}
+.pill.timer{font-size:34px;padding:8px 22px;font-variant-numeric:tabular-nums;background:#2b0001;color:#F8D36A;border-color:#F8D36A}
 .step{display:inline-block;background:#890304;color:#FFF2DF;font-size:30px;font-weight:800;padding:6px 14px;border-radius:12px;margin-right:16px;vertical-align:5px}
 .title{position:absolute;left:50%;transform:translate(-50%,-50%);width:1000px;text-align:center;font-weight:900;font-size:82px;line-height:1.08;color:#fff;-webkit-text-stroke:18px #2b0001;paint-order:stroke fill;letter-spacing:0;word-spacing:.18em}
 .title .g{color:#F8D36A}

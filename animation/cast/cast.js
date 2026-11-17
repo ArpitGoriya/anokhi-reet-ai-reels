@@ -30,6 +30,20 @@ const PANKAJ = { male: true, mustache: true, wide: true, top: '#3D5A80', topD: '
 // A young customer (20s), ponytail, pink kurti; holds her phone up to show the outfit she wants.
 const CUSTOMER_W = { hairStyle: 'pony', top: '#D9577A', topD: '#B33F60', skin: '#C98B62', earrings: true, bangles: false };
 
+// Aarti (20s): young working woman, Ahmedabad. Office kurti, home tee, and the yellow chaniya choli at the sangeet.
+const AARTI = {
+  office: { hairStyle: 'long', top: '#4F6D9A', topD: '#3B5478', skin: '#C98B62', skin2: '#B9784F', bangles: false, skirt: { c: '#3B5478', d: '#2E4663', b: C.goldTan, w: 190 } },
+  home: { hairStyle: 'pony', top: '#9CC5B0', topD: '#7FA893', skin: '#C98B62', skin2: '#B9784F', bangles: false, earrings: false },
+  sangeet: { hairStyle: 'long', top: C.marigold2, topD: '#D9A52E', pallu: '#E26A8A', border: C.red, embroidery: true, necklace: true, skin: '#C98B62', skin2: '#B9784F', skirt: { c: C.marigold2, d: '#D9A52E', b: C.red } },
+};
+// Dimple (20s): Aarti's best friend; calm, always has a plan. Short hair, round glasses, emerald top.
+const DIMPLE = {
+  home: { hairStyle: 'short', glasses: true, top: C.emerald, topD: C.emeraldDark, skin: '#D19A72', skin2: '#BD8660', bindi: false, bangles: false, skirt: { c: '#2B3A4F', d: '#1E2A3A', b: C.goldTan, w: 170 } },
+  sangeet: { hairStyle: 'short', glasses: true, top: C.pink, topD: C.pinkDark, pallu: '#F4B9C8', border: C.gold, necklace: true, skin: '#D19A72', skin2: '#BD8660', skirt: { c: C.pink, d: C.pinkDark, b: C.gold } },
+};
+// Hetalben (50s): friendly rental shop owner near Aarti's office, Ahmedabad. Not the cast's Hetal ben from Surat.
+const HETALBEN = { hairStyle: 'bun', top: '#7A1F3D', topD: '#5C1730', pallu: '#E8C25E', border: C.gold, sindoor: true, necklace: true, wide: true, skin: '#B97A55', skin2: '#A66A47', skirt: { c: '#7A1F3D', d: '#5C1730', b: C.gold, w: 215 } };
+
 // helpers
 const NOSKIRT = o => Object.assign({}, o, { skirt: null });                 // waist-up version of a look
 const dress = (look, change) => Object.assign({}, look, change);             // same person, new outfit or detail

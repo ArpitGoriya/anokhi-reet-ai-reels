@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-17 (started fresh the same day, replacing the first draft)
 - **Made by:** dhruvifewtone-wq
-- **Status:** script approved
+- **Status:** video sent
 
 ## Brief
 
@@ -49,7 +49,7 @@ Everything here is applied in every round and never silently reverted.
 
 ## Voice-over
 
-- File: `output/<name>.mp3` (on the maker's computer) — approved: no
+- File: `output/female-last-minute-invitation-take3.mp3` (on the maker's computer) — approved: yes (2026-11-17)
 - Captions timed with `tools/caption_timing.py` (redo after every new take)
 
 ## Feedback rounds
@@ -66,14 +66,23 @@ Everything here is applied in every round and never silently reverted.
 ## Caption
 
 ```
+2 din pehle outfit nahi tha… aur Saturday ko sangeet ki star ⭐
+
+Last minute invitation, pura din office, cupboard mein kuch naya nahi.
+Dimple ne Anokhi Reet pe city, occasion aur budget daala… office ke paas ki shop ka outfit pasand kiya aur book kar liya.
+Agle din lunch break mein outfit ready tha.
+
+Tension mat lo. Download karo Anokhi Reet 👇
+
+#SangeetLook #ChaniyaCholi #OutfitOnRent #AnokhiReet #LastMinuteLook
 ```
 
 ## Added to the library (at least two per reel)
 
-- (planned) Street set with an office and a small shop front.
-- (planned) Countdown timer widget; rewind / fast-forward streak transition.
-- (planned) Split-screen video call; new expressions: wink, shock (jaw drop).
-- (planned) New cast: Aarti, Dimple, Hetalben (shop owner).
+- Street set (`streetBG`): office, side lane, small rental shop round the corner.
+- Countdown timer (`timerHTML`/`timerSet`), rewind / fast-forward streaks (`streaksSVG`/`streaks`).
+- Split-screen video call (`callPanelSVG`, `callEndSVG`); `wink` and `'shock'` expressions.
+- Props `phoneBackSVG`, `arOutfitScreen`. New cast: `AARTI`, `DIMPLE`, `HETALBEN`. All in `animation/CHANGELOG.md`.
 
 ## Suggested default (for the owner)
 
