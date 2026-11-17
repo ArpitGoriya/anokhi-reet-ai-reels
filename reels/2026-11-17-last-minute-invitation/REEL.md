@@ -33,7 +33,7 @@ Everything here is applied in every round and never silently reverted.
 - Hetalben is a **new** character (not the cast's Hetal ben).
 - Scene 6 says "Shop se connect ✅" (not "Booked"), as in the teammate's script.
 
-## Script and storyboard (approved: no)
+## Script and storyboard (approved: yes, 2026-11-17)
 
 | # | Voice line (caption) | On screen (scene, characters and what they do) | Label / title |
 |---|---|---|---|
