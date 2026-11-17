@@ -2,7 +2,7 @@
 const SHEET = [
   ['cs1', 'Hetal ben', 'home', HETAL.home], ['cs2', 'Hetal ben', 'lehenga', HETAL.lehenga], ['cs3', 'Mausi', '', MAUSI],
   ['cs4', 'Bride', '', BRIDE], ['cs5', 'Uncle', 'guest', GUEST_M], ['cs6', 'Auntie 1', 'guest', GUEST_W1],
-  ['cs7', 'Auntie 2', 'guest', GUEST_W2], ['cs8', 'Researcher', 'lab coat', LAB_M], ['cs9', 'Researcher', 'lab coat', LAB_W], ['cs10', 'Kavita', 'shop', KAVITA.shop], ['cs11', 'Pankaj bhai', '', PANKAJ], ['cs12', 'Customer', '', CUSTOMER_W], ['cs13', 'Meena', 'shop', MEENA.shop], ['cs14', 'Meena ka pati', '', PATI],
+  ['cs7', 'Auntie 2', 'guest', GUEST_W2], ['cs8', 'Researcher', 'lab coat', LAB_M], ['cs9', 'Researcher', 'lab coat', LAB_W], ['cs10', 'Kavita', 'shop', KAVITA.shop], ['cs11', 'Pankaj bhai', '', PANKAJ], ['cs12', 'Customer', '', CUSTOMER_W], ['cs13', 'Meena', 'shop', MEENA.shop], ['cs14', 'Meena ka pati', '', PATI], ['cs15', 'Papa', 'Since 1998', PAPA.shop], ['cs16', 'Beti', '', BETI],
 ];
 const XS = [150, 410, 670, 930], YS = [560, 930, 1300, 1670];
 addScene(0, 99, {

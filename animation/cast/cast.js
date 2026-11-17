@@ -62,3 +62,12 @@ const MEENA = {
 };
 // Meena's husband (40s): calm, asks the simple question that matters.
 const PATI = { male: true, top: '#3D6B8C', topD: '#2E536D', skin: '#A86B48', skin2: '#93593A', hair: '#2A1A14' };
+
+// Papa (50s-60s): has run his rental shop since 1998. Proud, warm, trusts face-to-face. Beti (20s): his daughter,
+// puts the shop online. (Papa aur beti)
+const PAPA = {
+  shop: { male: true, mustache: true, hair: '#8F8A84', top: '#E8D3A5', topD: '#C9AE6A', skin: '#A86B48', skin2: '#93593A', embroidery: true },
+  young: { male: true, mustache: true, hair: C.hair, top: '#E8D3A5', topD: '#C9AE6A', skin: '#A86B48', skin2: '#93593A', embroidery: true },
+  night: { male: true, mustache: true, glasses: true, hair: '#8F8A84', top: '#5B8A3A', topD: '#476F2D', skin: '#A86B48', skin2: '#93593A' },
+};
+const BETI = { hairStyle: 'pony', top: C.teal, topD: C.tealDark, pallu: '#F2C14E', border: C.gold, skin: '#B9784F', skin2: '#A0663F', bangles: false, skirt: { c: C.tealDark, d: '#174A47', b: C.gold, w: 200 } };

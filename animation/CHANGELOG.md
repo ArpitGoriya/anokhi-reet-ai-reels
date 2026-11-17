@@ -3,6 +3,14 @@
 Every reel adds at least one improvement to the engine or library and writes it here (newest first).
 See [GUIDE.md](GUIDE.md) section 8.
 
+## 2026-11-17: shop front, split screen, Papa and beti (Papa aur beti)
+
+- **New sets** in `engine/sets.js`: `shopFrontBG(id, {cx, sign, since})` (a shop seen from the street: building,
+  open shutter, lehengas inside, painted board, footpath, road), `oldBoardSVG(name, since)`, and
+  `splitSVG(id, left, right)` (split screen; each side drawn in full-frame coordinates and clipped).
+- **New cast:** Papa (`PAPA.shop`, `.young`, `.night`) and beti (`BETI`).
+- Caption timing: whisper lost its place after 25 s on the male take; the rest was set from pauses (see the reel).
+
 ## 2026-11-17: hotel room, city map, chat screen, Meena (Meena ki dukaan)
 
 - **New set** `hotelRoomBG(id, {night})`: an empty hotel room (bed, window, numbered door), for "an empty room

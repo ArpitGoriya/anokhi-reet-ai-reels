@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-17
 - **Made by:** teammate (script) + Claude
-- **Status:** script approved; voice take 1 waiting for a listen
+- **Status:** video 1 rendered (2026-11-17); sent to the teammate
 
 ## Brief
 
@@ -52,12 +52,13 @@ Voice script: [`script.txt`](script.txt) (Devanagari, male voice).
 
 ## Voice-over
 
-- Take 1: `output/male-papa-beti-take1.mp3` (52.2 s) — approved: pending
+- Take 1: `output/male-papa-beti-take1.mp3` (52.2 s) — approved: yes (2026-11-17)
 - Captions timed with `tools/caption_timing.py` (redo after every new take)
 
 ## Feedback rounds
 
 1. (round 0) Kept at ~55 s; male voice; last line in Devanagari; "एक click की दूरी पर"; hashtags cut to 5.
+2. Video 1: 11 scenes, `output/2026-11-17-papa-beti-generation-gap.mp4` (53 s).
 
 ## Caption
 
@@ -72,12 +73,18 @@ Voice script: [`script.txt`](script.txt) (Devanagari, male voice).
 
 ## Added to the library (at least two per reel)
 
-- (planned) Split-screen helper, street outside a shop, "Since 1998" board, Papa and beti in the cast.
+- Sets: `shopFrontBG` (a shop seen from the street, with road and passers-by), `oldBoardSVG` (painted shop board
+  with "Since ..."), `splitSVG` (split screen helper).
+- New cast: Papa (`PAPA.shop` / `.young` / `.night`) and beti (`BETI`).
 
 ## Suggested default (for the owner)
 
--
+- Teammate asked to use the voice from the DukaanDidi Instagram page. Not possible: it is another creator's voice
+  (no copying or imitating a real person's voice). If the owner wants, a *new* voice with a similar chatty, warm
+  "didi" style could be tried as an experiment (CLAUDE.md: new voices only with the owner's OK).
 
 ## Lessons
 
--
+- Whisper lost its place after 25 s on this male take (66 of 173 words); c18-c35 were timed from the voice's
+  pauses and the words it did hear. Third reel today with this: worth making the matcher re-anchor (owner).
+- The narrator is male, so Papa and beti don't lip-sync; their lines are thought bubbles.

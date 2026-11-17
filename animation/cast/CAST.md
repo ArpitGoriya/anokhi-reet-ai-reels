@@ -23,6 +23,8 @@ characters are added here after their first reel (add them to `cast.js`, to the 
 | `KAVITA.shop` / `.night` / `.mall` | **Kavita**, 30s, owns a lehenga rental shop. Soft-hearted, said yes to every bargain until she learned. | Long braid, marigold kurta with red dupatta and red lehenga skirt at the shop; purple with glasses for late-night accounts; teal at the mall | Kavita aur Bargain (2026-11-17) |
 | `MEENA.shop` / `.night` | **Meena**, 30s-40s, runs a lehenga rental shop in Ahmedabad. Hardworking; learns to put her stock online. | Bun, sindoor, emerald kurta with pink dupatta and pink lehenga skirt; marigold at night | Meena ki dukaan (2026-11-17) |
 | `PATI` | **Meena's husband**, 40s. Calm; asks the simple question that matters. | Short hair, blue shirt | Meena ki dukaan |
+| `PAPA.shop` / `.young` / `.night` | **Papa**, 50s-60s, has run his rental shop since 1998. Proud, warm, trusts face to face. | Grey hair, moustache, cream kurta (black hair when young; glasses at night) | Papa aur beti (2026-11-17) |
+| `BETI` | **Beti**, 20s, his daughter. Puts the shop online. | Ponytail, teal kurti, yellow dupatta | Papa aur beti |
 
 Ideas for the cast's next members (make them when a story needs them): a young woman who rents for college
 functions, a groom or brother, a kid, a vendor on the Anokhi Reet app.

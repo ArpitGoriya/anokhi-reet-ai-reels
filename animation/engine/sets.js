@@ -313,3 +313,32 @@ function sofaFrontSVG(x, y, w = 860, col = C.red) {
 // THINK: hand under the chin (life(..., {R: THINK, hR: 'fist'})); IDEA: one finger up beside the head ('point').
 const THINK = [-22, -150];
 const IDEA = [150, 30];
+
+// ===== Papa aur beti (2026-11-17): shop front on the street, old shop board, split screen =====
+// shopFrontBG(id, {cx, sign, since}): a shop seen from the street: sky, building, open shutter, lehengas inside,
+// painted board with the shop name and "Since ...", footpath and road. cx = the shop's centre x.
+function shopFrontBG(id, o = {}) {
+  const cx = o.cx || 540;
+  let s = `<rect width="${W}" height="${H}" fill="${C.sky}"/><circle cx="${cx + 300}" cy="230" r="60" fill="${C.gold}" opacity=".9"/>`;
+  s += `<rect x="${cx - 470}" y="300" width="940" height="${FLOOR - 300}" fill="#E9CFA9" stroke="${OL}" stroke-width="${OW}"/>`;
+  for (const wx of [cx - 380, cx + 260]) s += `<rect x="${wx}" y="350" width="120" height="110" rx="6" fill="#F6E7CF" stroke="${OL}" stroke-width="4"/><path d="M${wx + 60},350 V460 M${wx},405 H${wx + 120}" stroke="${OL}" stroke-width="4"/>`;
+  s += `<g transform="translate(${cx},560)">${oldBoardSVG(o.sign || 'RENTAL HOUSE', o.since || 'Since 1998')}</g>`;
+  s += `<rect x="${cx - 360}" y="660" width="720" height="${FLOOR - 660}" fill="#4E3A1E" stroke="${OL}" stroke-width="${OW}"/>`;
+  s += `<rect x="${cx - 360}" y="660" width="720" height="60" fill="#A7A39C" stroke="${OL}" stroke-width="4"/>` + [0, 1].map(k => `<path d="M${cx - 360},${676 + k * 20} H${cx + 360}" stroke="#8C8880" stroke-width="4"/>`).join('');
+  const cols = [[C.lehenga, C.lehengaDark], [C.pink, C.pinkDark], [C.emerald, C.emeraldDark], [C.marigold, '#C9821E'], [C.teal, C.tealDark]];
+  s += `<path d="M${cx - 300},760 H${cx + 300}" stroke="${C.goldTan}" stroke-width="10"/>` + cols.map(([c, d], i) => `<g transform="translate(${cx - 240 + i * 120},820)">${lehengaHangerSVG('', { c, d, dupatta: C.goldTan }, .5)}</g>`).join('');
+  s += `<rect x="0" y="${FLOOR}" width="${W}" height="90" fill="#CFC6B8" stroke="${OL}" stroke-width="4"/><rect x="0" y="${FLOOR + 90}" width="${W}" height="${H - FLOOR - 90}" fill="#6E6A64"/>`;
+  for (let x = 20; x < W; x += 180) s += `<rect x="${x}" y="${FLOOR + 260}" width="100" height="16" rx="6" fill="#F4EFE3"/>`;
+  return s;
+}
+// oldBoardSVG(name, since): a painted shop board, wood frame, centred on (0,0)
+function oldBoardSVG(name = 'RENTAL HOUSE', since = 'Since 1998') {
+  return `<rect x="-330" y="-80" width="660" height="160" rx="12" fill="${C.woodDark}" stroke="${OL}" stroke-width="${OW}"/><rect x="-310" y="-62" width="620" height="124" rx="8" fill="${C.cream}"/>` +
+    `<text y="4" text-anchor="middle" font-family="Inter" font-weight="900" font-size="58" fill="${C.red}" letter-spacing="3">${name}</text>` +
+    `<text y="48" text-anchor="middle" font-family="Inter" font-weight="700" font-size="30" fill="${C.brown}" font-style="italic">${since}</text>`;
+}
+// splitSVG(left, right): two half-frame panels with a white divider (each side's content drawn in full-frame coordinates)
+function splitSVG(id, left, right) {
+  return `<clipPath id="${id}L"><rect x="0" y="0" width="540" height="${H}"/></clipPath><clipPath id="${id}R"><rect x="540" y="0" width="540" height="${H}"/></clipPath>` +
+    `<g clip-path="url(#${id}L)">${left}</g><g clip-path="url(#${id}R)">${right}</g><rect x="533" y="0" width="14" height="${H}" fill="#fff" stroke="${OL}" stroke-width="4"/>`;
+}
