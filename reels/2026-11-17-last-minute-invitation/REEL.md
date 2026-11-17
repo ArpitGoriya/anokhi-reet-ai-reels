@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-17 (started fresh the same day, replacing the first draft)
 - **Made by:** dhruvifewtone-wq
-- **Status:** brief
+- **Status:** script approved
 
 ## Brief
 
@@ -33,7 +33,7 @@ Everything here is applied in every round and never silently reverted.
 - Scene 6 shows **"Booked ✅"** and Dimple says she booked it (teammate: the app supports booking).
 - Hetalben is a **new** character (not the cast's Hetal ben).
 
-## Script and storyboard (approved: no)
+## Script and storyboard (approved: yes, 2026-11-17)
 
 | # | Voice line (caption) | On screen (scene, characters and what they do) | Label / title |
 |---|---|---|---|
