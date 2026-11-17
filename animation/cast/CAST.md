@@ -14,6 +14,8 @@ characters are added here after their first reel (add them to `cast.js`, to the 
 | `BRIDE` | A bride, 20s. | Red lehenga, peach dupatta, gajra | Hetal's lehenga |
 | `GUEST_M` | **Uncle**, wedding guest, buffet lover. | Short hair, moustache, mustard kurta | Hetal's lehenga |
 | `GUEST_W1`, `GUEST_W2` | **Aunties**, wedding guests and crowd. | Long hair in purple / bun in orange saree | Hetal's lehenga |
+| `PANKAJ` | **Pankaj bhai**, 40s, rental shop owner. Hardworking and hopeful; dreams of a busy season. | Short hair, moustache, indigo kurta with gold buttons | Season ka sapna (2026-11-17) |
+| `CUSTOMER_W` | A young customer, 20s, who shows the outfit she wants on her phone. | Ponytail, pink kurti (add a skirt with `dress` for standing shots) | Season ka sapna |
 | `LAB_M`, `LAB_W` | **Researchers** for "a study found…" beats. | White coats, glasses | Hetal's lehenga |
 
 Ideas for the cast's next members (make them when a story needs them): a young woman who rents for college

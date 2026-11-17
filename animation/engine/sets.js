@@ -67,6 +67,99 @@ function rosettes(id, x, y, op_ = .14, col = C.gold) {
   s += `<circle r="220" fill="none" stroke="${col}" stroke-width="4" stroke-dasharray="30 14"/>`;
   return s + `</g>`;
 }
+// ---------- rental shop (Season ka sapna, 2026-11-17) ----------
+// sherwani on a hanger (long coat, buttons, stole)
+function sherwaniHangerSVG(id, col = '#E8D3A5', colD = '#C9AE6A', sc = 1) {
+  return `<g id="${id}"><g transform="scale(${sc})">` +
+    `<path d="M0,-80 Q0,-100 14,-98 Q26,-94 20,-82" fill="none" stroke="${OL}" stroke-width="5" stroke-linecap="round"/>` +
+    `<path d="M-80,-40 L0,-80 L80,-40" fill="none" stroke="${C.woodDark}" stroke-width="10" stroke-linecap="round"/>` +
+    `<path d="M-76,-42 Q-40,-56 -22,-54 L0,-30 L22,-54 Q40,-56 76,-42 L86,260 Q0,276 -86,260 Z" fill="${col}" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/>` +
+    `<path d="M0,-30 V266" stroke="${colD}" stroke-width="6"/>` + [0, 1, 2, 3, 4].map(i => `<circle cx="10" cy="${10 + i * 44}" r="6" fill="${C.gold}" stroke="${OL}" stroke-width="2.5"/>`).join('') +
+    `<path d="M-22,-54 L0,-30 L22,-54" fill="none" stroke="${colD}" stroke-width="8"/>` +
+    `<path d="M-60,-46 Q-90,80 -70,250 L-44,250 Q-60,90 -34,-50 Z" fill="${C.red}" stroke="${OL}" stroke-width="4" opacity=".95"/>` +
+    `</g></g>`;
+}
+// clothes rack: a rail with hangers; items = [{k: 'l'|'s', c, d}], each hanger gets id `${id}-i${n}` (hide one to "rent it out")
+function rackSVG(id, x, y, items, w = 420) {
+  let s = `<g id="${id}" transform="translate(${x},${y})">`;
+  s += `<path d="M${-w / 2},0 H${w / 2}" stroke="${OL}" stroke-width="16" stroke-linecap="round"/><path d="M${-w / 2},0 H${w / 2}" stroke="${C.goldTan}" stroke-width="8" stroke-linecap="round"/>`;
+  s += `<path d="M${-w / 2 + 10},0 V470 M${w / 2 - 10},0 V470" stroke="${OL}" stroke-width="10"/>`;
+  const n = items.length, step = (w - 60) / Math.max(1, n - 1);
+  items.forEach((it, i) => {
+    const hx = -w / 2 + 30 + i * step;
+    const g = it.k === 's' ? sherwaniHangerSVG(`${id}-in${i}`, it.c, it.d, .62) : lehengaHangerSVG(`${id}-in${i}`, { c: it.c, d: it.d, dupatta: it.p }, .55);
+    s += `<g id="${id}-i${i}" transform="translate(${hx},${56})">${g}</g>`;
+  });
+  return s + `</g>`;
+}
+// a rental shop: warm wall, two full racks, a mirror, optional sign board (o.sign text), clock (o.clock)
+const RACK_A = [{ k: 'l', c: '#C0262D', d: '#97151B', p: '#F2A08F' }, { k: 's', c: '#E8D3A5', d: '#C9AE6A' }, { k: 'l', c: C.emerald, d: C.emeraldDark, p: '#A6D3B0' }, { k: 'l', c: C.pink, d: C.pinkDark, p: '#F4B9C8' }];
+const RACK_B = [{ k: 's', c: '#7A4FA0', d: '#5D3A7E' }, { k: 'l', c: C.marigold, d: '#C77F22', p: '#F7C548' }, { k: 's', c: C.teal, d: C.tealDark }, { k: 'l', c: C.lehenga, d: C.lehengaDark, p: '#E8C25E' }];
+function rentalShopBG(id, o = {}) {
+  let s = wallSVG('#F3DCC0', '#EACBA8');
+  if (o.sign) s += `<g transform="translate(540,${o.signY || 300})"><rect x="-300" y="-46" width="600" height="92" rx="16" fill="url(#mar)" stroke="${OL}" stroke-width="${OW}"/><text x="0" y="16" text-anchor="middle" font-family="Inter" font-weight="900" font-size="46" fill="${C.cream}" letter-spacing="3">${o.sign}</text></g>`;
+  if (!o.noMirror) s += `<g transform="translate(540,${o.mirrorY || 700})"><ellipse rx="92" ry="140" fill="${C.goldTan}" stroke="${OL}" stroke-width="${OW}"/><ellipse rx="70" ry="116" fill="${C.sky}" stroke="${OL}" stroke-width="4"/><path d="M-30,-60 L10,-90 M-36,-20 L24,-70" stroke="#fff" stroke-width="8" stroke-linecap="round" opacity=".7"/></g>`;
+  s += rackSVG(id + '-rA', o.rackAX || 240, o.rackY || 520, o.rackA || RACK_A);
+  s += rackSVG(id + '-rB', o.rackBX || 840, o.rackY || 520, o.rackB || RACK_B);
+  if (o.clock) s += clockSVG(id + '-clk', o.clockX || 540, o.clockY || 470, 58);
+  s += floorSVG('#A47648');
+  return s;
+}
+// ---------- dream look (soft glow, wavy edges, sparkles) + glass shatter (Season ka sapna) ----------
+// dreamSVG(id) once in a scene's svg (last, on top); dreamUpd(id, t, k) every frame (k = 0..1 how dreamy).
+function sparkleSVG(r = 22, col = '#FFFFFF') { return `<path d="M0,${-r} Q${r * .18},${-r * .18} ${r},0 Q${r * .18},${r * .18} 0,${r} Q${-r * .18},${r * .18} ${-r},0 Q${-r * .18},${-r * .18} 0,${-r} Z" fill="${col}" stroke="${OL}" stroke-width="3"/>`; }
+function dreamSVG(id) {
+  const sp = [[120, 420], [960, 520], [90, 980], [990, 1080], [180, 1560], [900, 1620], [540, 330], [300, 760], [780, 860]];
+  return `<g id="${id}" pointer-events="none"><rect width="${W}" height="${H}" fill="${C.gold}" opacity=".07"/><circle cx="540" cy="900" r="900" fill="url(#glow)" opacity=".55"/>` +
+    `<path id="${id}-e" fill="${C.cream}" fill-rule="evenodd" opacity=".9"/><path id="${id}-l" fill="none" stroke="${C.goldTan}" stroke-width="7"/>` +
+    sp.map(([x, y], i) => `<g transform="translate(${x},${y})"><g class="twinkle" data-i="${i}"><g id="${id}-s${i}">${sparkleSVG(i % 3 ? 16 : 26, i % 2 ? C.gold : '#FFFFFF')}</g></g></g>`).join('') + `</g>`;
+}
+function dreamEdge(t, inset, amp) {
+  const pts = [], x0 = inset, y0 = inset, x1 = W - inset, y1 = H - inset, per = 2 * ((x1 - x0) + (y1 - y0));
+  for (let d = 0; d < per; d += 24) {
+    let x, y, nx, ny;
+    if (d < x1 - x0) { x = x0 + d; y = y0; nx = 0; ny = 1; }
+    else if (d < (x1 - x0) + (y1 - y0)) { x = x1; y = y0 + d - (x1 - x0); nx = -1; ny = 0; }
+    else if (d < 2 * (x1 - x0) + (y1 - y0)) { x = x1 - (d - (x1 - x0) - (y1 - y0)); y = y1; nx = 0; ny = -1; }
+    else { x = x0; y = y1 - (d - 2 * (x1 - x0) - (y1 - y0)); nx = 1; ny = 0; }
+    const o = amp * (Math.sin(d / 46 + t * 2.2) * .7 + Math.sin(d / 23 - t * 3.1) * .3);
+    pts.push(`${(x + nx * o).toFixed(1)},${(y + ny * o).toFixed(1)}`);
+  }
+  return 'M' + pts.join(' L') + ' Z';
+}
+function dreamUpd(id, t, k = 1) {
+  const g = $(id); if (!g) return;
+  op(g, k);
+  const inner = dreamEdge(t, lerp(-40, 64, k), 26);
+  $(id + '-e').setAttribute('d', `M-60,-60 H${W + 60} V${H + 60} H-60 Z ` + inner);
+  $(id + '-l').setAttribute('d', inner);
+  for (let i = 0; i < 9; i++) { const el = $(`${id}-s${i}`); if (el) tf(el, 0, Math.sin(t * 1.6 + i) * 10, .8 + .25 * Math.sin(t * 3 + i * 1.3), t * 20 + i * 15); }
+}
+// glass shards over the whole frame: shardsSVG(id) on top; shatter(id, t, t0) cracks at t0-0.3, breaks and falls at t0
+function shardsSVG(id) {
+  const pts = [[0, 0], [360, 0], [720, 0], [1080, 0], [1080, 640], [1080, 1280], [1080, 1920], [720, 1920], [360, 1920], [0, 1920], [0, 1280], [0, 640]];
+  const cx = 600, cy = 980; let s = `<g id="${id}" pointer-events="none" opacity="0">`;
+  for (let i = 0; i < pts.length; i++) {
+    const a = pts[i], b = pts[(i + 1) % pts.length], m = [(a[0] + b[0]) / 2 + (i % 2 ? 60 : -40), (a[1] + b[1]) / 2 + (i % 3 ? -50 : 40)];
+    for (const [p, q] of [[a, m], [m, b]]) {
+      const n = s.split('<g id="' + id + '-k').length - 1;
+      s += `<g id="${id}-k${n}" data-c="${((p[0] + q[0] + cx) / 3).toFixed(0)},${((p[1] + q[1] + cy) / 3).toFixed(0)}"><path d="M${cx},${cy} L${p[0]},${p[1]} L${q[0]},${q[1]} Z" fill="${C.cream}" fill-opacity=".35" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round"/></g>`;
+    }
+  }
+  return s + `</g>`;
+}
+function shatter(id, t, t0) {
+  const g = $(id); if (!g) return;
+  const crack = clamp((t - t0 + .3) / .12), k = Math.max(0, t - t0);
+  op(g, crack * (1 - clamp(k / .9)));
+  [...g.children].forEach((el, i) => {
+    const [x, y] = el.dataset.c.split(',').map(Number), dx = (x - 600) * .9, dy = (y - 980) * .6;
+    tf(el, dx * k, dy * k + 900 * k * k, 1 - .3 * clamp(k), (i % 2 ? 1 : -1) * k * 40, x, y);
+  });
+}
+// a character walking in: wrap stand() in <g id="mv">, then tf($('mv'), ...glide(t, t0, d, x0, x1)) — glide with a step bob
+function glide(t, t0, d, x0, x1, bob = 14) { const k = clamp((t - t0) / d), walking = k > 0 && k < 1; return [lerp(x0, x1, E.io(k)), walking ? -Math.abs(Math.sin((t - t0) * 9)) * bob : 0]; }
+
 // wrappers that place a character; remember placement for hand maths
 const PL = {};
 function stand(id, o, x, y, sc = .95) { PL[id] = { x, y, sc }; return `<g transform="translate(${x},${y}) scale(${sc})"><ellipse cx="0" cy="372" rx="215" ry="22" fill="#3B2418" opacity=".16"/>${person(id, o)}</g>`; }

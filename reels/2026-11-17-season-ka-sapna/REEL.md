@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-17
 - **Made by:** dhruvifewtone-wq
-- **Status:** script approved
+- **Status:** video sent
 
 ## Brief
 
@@ -51,7 +51,7 @@ Everything here is applied in every round and never silently reverted.
 
 ## Voice-over
 
-- File: `output/<name>.mp3` (on the maker's computer) — approved: no
+- File: `output/female-season-ka-sapna-take3.mp3` (on the maker's computer) — approved: yes (2026-11-17)
 - Captions timed with `tools/caption_timing.py` (redo after every new take)
 
 ## Feedback rounds
@@ -67,14 +67,24 @@ Everything here is applied in every round and never silently reverted.
 ## Caption
 
 ```
+Har rental shop wala yahi sapna dekhta hai… 💭
+
+Season mein dukaan bhari ho, racks khaali ho jaayein, register bookings se bhar jaaye.
+Pankaj bhai apni shop Anokhi Reet pe le aaye. Ab customer phone pe city, occasion aur budget se outfit dhoondh ke dukaan aate hain.
+WhatsApp pe photos aur rent price bhejo, aur shop online. Shuru karna bilkul aasaan.
+
+Aapka season ka sapna kya hai? Comment mein "LIST" likho 👇
+
+#RentalShop #LehengaOnRent #AnokhiReet #WeddingSeason #SherwaniOnRent
 ```
 
 ## Added to the library (at least two per reel)
 
-- (planned) Rental shop set (racks of lehengas and sherwanis, counter, wall clock).
-- (planned) New cast member: Pankajbhai, rental shop owner.
-- (planned) Dream look: glow + sparkles + wavy edges, and a glass-shatter wake-up.
-- (planned) Register (booking book) prop that fills up; lightbulb; thinking pose.
+- Rental shop set (`rentalShopBG`, `rackSVG`, `sherwaniHangerSVG`).
+- Dream look (`dreamSVG`/`dreamUpd`) and glass-shatter wake-up (`shardsSVG`/`shatter`).
+- Walking in (`glide`), register that fills (`registerSVG`/`registerFill`), `bulbSVG`, `buzzSVG`, flat Anokhi Reet
+  app screens (`arPostScreen`, `arBrowseScreen`).
+- New cast: `PANKAJ`, `CUSTOMER_W`. All noted in `animation/CHANGELOG.md`.
 
 ## Suggested default (for the owner)
 

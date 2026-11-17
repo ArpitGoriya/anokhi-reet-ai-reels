@@ -3,6 +3,22 @@
 Every reel adds at least one improvement to the engine or library and writes it here (newest first).
 See [GUIDE.md](GUIDE.md) section 8.
 
+## 2026-11-17: Season ka sapna (dhruvifewtone-wq)
+
+- **New set: rental shop** (`rentalShopBG` in `sets.js`): racks of lehengas and sherwanis (`rackSVG`, each hanger
+  `<rack>-i<n>` can be "rented out"), mirror, optional sign and clock. New prop `sherwaniHangerSVG`.
+- **Dream look** (`dreamSVG` + `dreamUpd`): soft gold glow, cream wavy edges that ripple, drifting sparkles; and a
+  **glass shatter** wake-up (`shardsSVG` + `shatter`). A ripple-into-dream transition with an SVG displacement filter
+  (see the reel's S2).
+- **Walking in** (`glide` in `sets.js`): a character glides in with a step bob (from "Next improvements").
+- **Props** (`props.js`): `registerSVG` + `registerFill` (a booking register that fills row by row), `bulbSVG`
+  (idea), `buzzSVG` (phone ringing), `sparkleSVG`, and **Anokhi Reet app screens in the flat style**:
+  `arPostScreen(line1, line2)` and `arBrowseScreen()` (City / Occasion / Budget chips, outfit cards).
+- **New cast:** `PANKAJ` (Pankaj bhai, rental shop owner) and `CUSTOMER_W` (young customer with a ponytail).
+- **Thinking pose:** hand on chin = `R: [-73, -110]`, `hR: 'fist'` with `look: [.5, -.8]`.
+- Caption timing: whisper's script matcher lost its place after 31 s on this take (only 59 of 145 words matched);
+  the last 12 captions were set by hand from whisper's own word times. Worth making the matcher re-anchor.
+
 ## 2026-11-14 (later): captions in sync with the voice
 
 - Owner: the voice runs ahead of the picture. Caption times inside long sentences were estimated and ran late

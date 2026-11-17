@@ -25,6 +25,11 @@ const GUEST_W2 = { top: '#E07B39', topD: '#B95F25', pallu: '#F4B183', border: C.
 const LAB_M = { male: true, glasses: true, top: '#FFFFFF', topD: '#E8E2D8', skin: '#E2B08A', skin2: '#CF9A74', hair: '#6B4A2A' };
 const LAB_W = { top: '#FFFFFF', topD: '#E8E2D8', skin: '#EBC09A', skin2: '#D9A982', hair: '#8A5A32', hairStyle: 'short', bindi: false, glasses: true, earrings: false, bangles: false };
 
+// Pankaj bhai (40s): rental shop owner, hardworking and hopeful. Indigo kurta, moustache. (Season ka sapna, 2026-11-17)
+const PANKAJ = { male: true, mustache: true, wide: true, top: '#3D5A80', topD: '#2E4663', skin: '#B07150', skin2: '#9A6143', embroidery: true };
+// A young customer (20s), ponytail, pink kurti; holds her phone up to show the outfit she wants.
+const CUSTOMER_W = { hairStyle: 'pony', top: '#D9577A', topD: '#B33F60', skin: '#C98B62', earrings: true, bangles: false };
+
 // helpers
 const NOSKIRT = o => Object.assign({}, o, { skirt: null });                 // waist-up version of a look
 const dress = (look, change) => Object.assign({}, look, change);             // same person, new outfit or detail

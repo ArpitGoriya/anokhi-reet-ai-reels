@@ -1,11 +1,76 @@
 // Caption chunks: [id, Roman Hinglish caption (*gold* words), number of script.txt words it covers]
 // tools/caption_timing.py fills STARTS / VOICE_END / DURATION from the voice (re-run after every voice take).
 const CHUNKS = [
-  ['c1', 'Ek *sawaal*:', 2],
-  ['c2', 'shaadi ka outfit *kitni baar* pehnte ho?', 6],
-  ['c3', 'Ye hain *Hetal ben*.', 4],
-  ['c4', 'Follow karo *Anokhi Reet.*', 4],
+  ['c1', 'Dopahar ka *time*.', 3],
+  ['c2', 'Dukaan *khaali*.', 2],
+  ['c3', 'Aur Pankaj bhai ki *aankh lag gayi*...', 7],
+  ['c4', 'Unko *sapna* aaya...', 3],
+  ['c5', 'ki unki dukaan pe', 4],
+  ['c6', 'customers ki *bheed* lagi hai.', 5],
+  ['c7', 'Sabke haath mein *phone*...', 4],
+  ['c8', 'aur har koi keh raha hai,', 6],
+  ['c9', '"Bhaiya, mujhe *ye wala* chahiye!"', 5],
+  ['c10', 'Racks *khaali* ho rahe hain,', 5],
+  ['c11', 'register *bharta* ja raha hai...', 5],
+  ['c12', 'aur unka har *lehenga*', 4],
+  ['c13', 'kisi *function* mein chamak raha hai.', 6],
+  ['c14', 'Par phone ki *ghanti* bajti hai...', 6],
+  ['c15', 'aur sapna *toot* jaata hai.', 5],
+  ['c16', 'Phone pe tha *Anokhi Reet.*', 5],
+  ['c17', 'Jahan customer apne phone pe', 5],
+  ['c18', '*city, occasion* aur *budget* se', 5],
+  ['c19', 'outfit dhoondhte hain.', 3],
+  ['c20', 'Pankaj bhai ne socha...', 4],
+  ['c21', 'shayad sapna *sach* ho sakta hai!', 6],
+  ['c22', 'WhatsApp pe *photos* aur *rent price* bheje...', 7],
+  ['c23', 'aur shop *online.*', 3],
+  ['c24', 'Shuru karna bilkul *aasaan.*', 4],
+  ['c25', 'Aur dheere dheere...', 3],
+  ['c26', 'wahi sapna *sach* hone laga.', 5],
+  ['c27', 'Customer phone pe *outfit*', 4],
+  ['c28', 'dekh ke aate hain...', 4],
+  ['c29', 'aur *register* bharne laga.', 4],
+  ['c30', 'Aapka season ka *sapna* kya hai?', 6],
+  ['c31', 'Use *sach* karo.', 3],
+  ['c32', 'Comment mein *"LIST"* likho!', 4],
 ];
-// Chunk start times (s): placeholder until a voice exists.
-const STARTS = [0.2, 1.6, 4.4, 6.6];
-const VOICE_END = 8.6, DURATION = 9.6;
+// Chunk start times (s): tools/caption_timing.py (faster-whisper, 59 of 145 words matched), voice female-season-ka-sapna-take3.mp3.
+const STARTS = [
+  0.21, 1.64, 2.83, 5.14, 6.30, 7.16, 8.69, 10.02, 11.16, 12.54, 13.81, 15.10, 16.42, 17.89, 19.76, 21.33,
+  23.54, 25.17, 26.78, 27.94, 29.08, 31.50, 33.44, 35.10, 36.72, 37.96, 39.82, 40.90, 41.74, 43.52, 44.92, 45.88];
+// When each script word of a chunk is spoken (drives the word-by-word highlight).
+const WORDS = [
+  [0.29, 0.86, 1.04],
+  [1.72, 2.1],
+  [2.91, 2.96, 3.43, 3.76, 3.98, 4.28, 4.58],
+  [5.22, 5.27, 5.9],
+  [6.38, 6.43, 6.8, 7.1],
+  [7.24, 7.72, 7.86, 8.28, 8.4],
+  [8.77, 9.23, 9.6, 9.76],
+  [10.1, 10.48, 10.66, 10.78, 10.93, 11.12],
+  [11.24, 11.53, 11.81, 11.99, 12.28],
+  [12.62, 12.95, 13.24, 13.42, 13.65],
+  [13.89, 14.38, 14.66, 14.85, 15.08],
+  [15.18, 15.52, 15.78, 16.14],
+  [16.5, 16.76, 17.18, 17.3, 17.42, 17.56],
+  [17.97, 18.02, 18.73, 18.78, 19.37, 19.74],
+  [19.84, 20.22, 20.27, 20.77, 21.12],
+  [21.41, 22.33, 22.56, 22.78, 23.26],
+  [23.62, 23.97, 24.58, 24.7, 25.06],
+  [25.25, 25.55, 26.07, 26.26, 26.67],
+  [26.86, 27.28, 27.69],
+  [28.02, 28.58, 28.76, 28.88],
+  [29.16, 29.6, 30.0, 30.68, 30.88, 31.14],
+  [31.58, 32.04, 32.14, 32.66, 32.78, 33.02, 33.24],
+  [33.52, 33.96, 34.28],
+  [35.18, 35.44, 35.72, 36.12],
+  [36.8, 37.18, 37.58],
+  [38.04, 38.36, 38.76, 39.06, 39.24],
+  [39.9, 40.3, 40.52, 40.64],
+  [40.98, 41.15, 41.26, 41.5],
+  [41.82, 41.98, 42.42, 42.8],
+  [43.6, 43.88, 44.14, 44.24, 44.52, 44.66],
+  [45.0, 45.2, 45.48],
+  [45.96, 46.3, 46.46, 46.9]];
+// c21-c32 set by hand from whisper's own word times (its script matcher lost its place after 31 s), 2026-11-17.
+const VOICE_END = 47.16, DURATION = 49.6;
