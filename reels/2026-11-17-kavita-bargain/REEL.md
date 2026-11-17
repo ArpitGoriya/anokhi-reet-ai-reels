@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-17
 - **Made by:** teammate (script) + Claude
-- **Status:** video 1 rendered (2026-11-17); waiting for feedback
+- **Status:** final (approved 2026-11-17)
 
 ## Brief
 
@@ -67,7 +67,7 @@ Voice script: [`script.txt`](script.txt) (Devanagari, female voice).
 ## Feedback rounds
 
 1. (round 0) Maths fixed to ₹12,000; trimmed to ~90-95 s; female voice.
-2. Video 1: 22 scenes, `output/2026-11-17-kavita-bargain.mp4`. Waiting for feedback.
+2. Video 1: 22 scenes, `output/2026-11-17-kavita-bargain.mp4`. Approved as final ("Looks good").
 
 ## Caption
 
