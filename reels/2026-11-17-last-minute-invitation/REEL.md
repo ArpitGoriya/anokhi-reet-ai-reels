@@ -32,6 +32,7 @@ Everything here is applied in every round and never silently reverted.
   "2,000 tak" stays (her story number).
 - Scene 6 shows **"Booked ✅"** and Dimple says she booked it (teammate: the app supports booking).
 - Hetalben is a **new** character (not the cast's Hetal ben).
+- The narration tells the full story with the characters' key lines, at a calm pace (pauses, short sentences).
 
 ## Script and storyboard (approved: yes, 2026-11-17)
 
@@ -56,6 +57,11 @@ Everything here is applied in every round and never silently reverted.
 1. Storyboard (2026-11-17): the shop should be a small rental shop around the corner of the street beside
    Aarti's office → scene 5 now shows the office on the main road, the side street right beside it, and the shop
    just round its corner; Dimple walks Aarti there in a few steps.
+2. Voice take 2 (2026-11-17): "too fast and many details are missing" → speed stays (owner-approved voice), so
+   more `...` pauses and shorter sentences; the narrator now tells the full story including the characters' key
+   lines (friend's "Aarti! Ye outfit?", the invitation, Dimple's three questions, Aarti's "Ahmedabad… 2,000 tak…
+   yellow?", "Ho gaya… 15 minute nikaal", "Ye dukaan yahan thi?", Hetalben's "Aapka outfit ready hai!", "Inhe mera
+   naam kaise pata?", Dimple turning her phone round, "kahan se liya?"). Target about 60 s. Take 3 pending approval.
 
 ## Caption
 
