@@ -17,6 +17,7 @@ characters are added here after their first reel (add them to `cast.js`, to the 
 | `PANKAJ` | **Pankaj bhai**, 40s, rental shop owner. Hardworking and hopeful; dreams of a busy season. | Short hair, moustache, indigo kurta with gold buttons | Season ka sapna (2026-11-17) |
 | `CUSTOMER_W` | A young customer, 20s, who shows the outfit she wants on her phone. | Ponytail, pink kurti (add a skirt with `dress` for standing shots) | Season ka sapna |
 | `LAB_M`, `LAB_W` | **Researchers** for "a study found…" beats. | White coats, glasses | Hetal's lehenga |
+| `KAVITA.shop` / `.night` / `.mall` | **Kavita**, 30s, owns a lehenga rental shop. Soft-hearted, said yes to every bargain until she learned. | Long braid, marigold kurta with red dupatta and red lehenga skirt at the shop; purple with glasses for late-night accounts; teal at the mall | Kavita aur Bargain (2026-11-17) |
 
 Ideas for the cast's next members (make them when a story needs them): a young woman who rents for college
-functions, a shop owner in a rental shop, a groom or brother, a kid, a vendor on the Anokhi Reet app.
+functions, a groom or brother, a kid, a vendor on the Anokhi Reet app.

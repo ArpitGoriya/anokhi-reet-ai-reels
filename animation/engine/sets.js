@@ -211,3 +211,36 @@ function bagSVG() {
     `<path d="M-130,-130 L130,-130 L150,150 L-150,150 Z" fill="${C.cream}" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/>` +
     `<path d="M-136,-70 L136,-70" stroke="${C.red}" stroke-width="12"/><circle cx="0" cy="40" r="46" fill="none" stroke="${C.red}" stroke-width="6"/><circle cx="0" cy="40" r="28" fill="none" stroke="${C.red}" stroke-width="4" stroke-dasharray="3 6"/>`;
 }
+
+// ===== Rental shop and mall (from the Kavita reel, 2026-11-17) =====
+// shopBG(id, {night, noRail, noSign, sign, lamp}): a lehenga rental shop: sign board, two rails of lehengas
+// (hanger groups `${id}-h0..7`), floor. mallBG(id): a bright mall clothes shop with a kurti rack (`${id}-k0..6`).
+const SHOP_LEH = [[C.lehenga, C.lehengaDark], [C.pink, C.pinkDark], [C.emerald, C.emeraldDark], [C.marigold, '#C9821E'], [C.teal, C.tealDark], ['#7A4FA0', '#5D3A7E'], ['#C0262D', '#97151B'], [C.marigold2, '#D9A52E']];
+function shopBG(id, o = {}) {
+  let s = wallSVG(o.night ? '#E2C6A6' : '#F7E1C6', o.night ? '#D3B48F' : '#EFD2B0');
+  if (o.night) s += `<circle cx="${o.lampX || 860}" cy="560" r="440" fill="url(#glow)" opacity=".9"/>`;
+  if (!o.noSign) s += `<g transform="translate(540,250)"><rect x="-300" y="-58" width="600" height="116" rx="20" fill="url(#mar)" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<rect x="-282" y="-40" width="564" height="80" rx="12" fill="none" stroke="${C.gold}" stroke-width="4"/>` +
+    `<text x="0" y="18" text-anchor="middle" font-family="Inter" font-weight="900" font-size="50" fill="${C.gold}" letter-spacing="3">${o.sign || 'KAVITA RENTALS'}</text></g>`;
+  if (!o.noRail) for (const [rx, k0] of [[40, 0], [580, 4]]) {
+    s += `<rect x="${rx}" y="470" width="460" height="14" rx="7" fill="${C.goldTan}" stroke="${OL}" stroke-width="4"/>`;
+    s += `<path d="M${rx + 20},484 V${FLOOR} M${rx + 440},484 V${FLOOR}" stroke="${OL}" stroke-width="10"/><path d="M${rx + 20},484 V${FLOOR} M${rx + 440},484 V${FLOOR}" stroke="${C.goldTan}" stroke-width="5"/>`;
+    for (let k = 0; k < 4; k++) { const [c, d] = SHOP_LEH[k0 + k]; s += `<g id="${id}-h${k0 + k}" transform="translate(${rx + 70 + k * 108},560)">${lehengaHangerSVG(`${id}-l${k0 + k}`, { c, d, b: C.gold, dupatta: C.goldTan }, .55)}</g>`; }
+  }
+  if (o.lamp) s += lampSVG(o.lampX || 860, 150);
+  s += floorSVG(o.night ? '#8E6640' : '#A47648');
+  return s;
+}
+function mallBG(id) {
+  let s = `<rect width="${W}" height="${H}" fill="#FBF6EE"/><rect x="0" y="${FLOOR - 220}" width="${W}" height="220" fill="#F2EADF"/>`;
+  for (let x = 120; x < W; x += 280) s += `<path d="M${x - 40},0 L${x + 40},0 L${x + 24},60 L${x - 24},60 Z" fill="#E6E0D9" stroke="${OL}" stroke-width="4"/><circle cx="${x}" cy="66" r="12" fill="${C.gold}" stroke="${OL}" stroke-width="3"/>`;
+  s += `<rect x="60" y="520" width="${W - 120}" height="14" rx="7" fill="#C9C2B8" stroke="${OL}" stroke-width="4"/>`;
+  const kc = [[C.pink, C.pinkDark], [C.teal, C.tealDark], [C.marigold, '#C9821E'], ['#7A4FA0', '#5D3A7E'], [C.emerald, C.emeraldDark], ['#C0262D', '#97151B'], [C.marigold2, '#D9A52E']];
+  kc.forEach(([c, d], i) => { s += `<g id="${id}-k${i}" transform="translate(${130 + i * 137},540)">${kurtiSVG(c, d, .62)}</g>`; });
+  s += `<rect x="0" y="${FLOOR}" width="${W}" height="${H - FLOOR}" fill="#E8DFD2"/>`;
+  for (let x = 0; x < W; x += 180) s += `<path d="M${x},${FLOOR} V${H}" stroke="#D8CDBE" stroke-width="4"/>`;
+  return s + `<rect x="-10" y="${FLOOR - 12}" width="${W + 20}" height="16" fill="#C9C2B8" stroke="${OL}" stroke-width="4"/>`;
+}
+// THINK: hand under the chin (life(..., {R: THINK, hR: 'fist'})); IDEA: one finger up beside the head ('point').
+const THINK = [-22, -150];
+const IDEA = [150, 30];

@@ -19,6 +19,22 @@ See [GUIDE.md](GUIDE.md) section 8.
 - Caption timing: whisper's script matcher lost its place after 31 s on this take (only 59 of 145 words matched);
   the last 12 captions were set by hand from whisper's own word times. Worth making the matcher re-anchor.
 
+## 2026-11-17: rental shop, mall and Kavita (Kavita aur Bargain)
+
+- **New sets** in `engine/sets.js`: `shopBG(id, {night, noRail, noSign, sign, lamp})`, a lehenga rental shop with a
+  sign board and two rails of lehengas (each hanger has an id, so lehengas can go out on rent); `mallBG(id)`, a
+  bright mall clothes shop with a kurti rack.
+- **New props** in `engine/props.js`: `kurtiSVG`, `gallaSVG` (cash box with an opening drawer), `calculatorSVG`
+  (screen text you can change), `ledgerSVG` (open account book), `jewelBoxSVG` (lid opens), `chocolateSVG`, `toffeeSVG`, `noteSVG`,
+  `personIcon` (small customers for counts like "8 out of 10"), `ideaBulbSVG` (big bulb with rays), `shutterSVG` (rolls up), `dryCleanIcon`,
+  `needleIcon`.
+- **New poses**: `THINK` (hand under the chin) and `IDEA` (finger up) for `life(..., {R: THINK})`.
+- **Crowd that changes sides**: a row of `personIcon`s walks from one side to the other (the chocolate/toffee
+  experiment). Kavita walks into the mall with `glide`.
+- Two rental shop sets now exist: `rentalShopBG` (racks, mirror) and `shopBG` (sign board, two lehenga rails).
+  Pick the one that fits; both are kept.
+- **New cast**: Kavita (`KAVITA.shop`, `.night`, `.mall`).
+
 ## 2026-11-14 (later): captions in sync with the voice
 
 - Owner: the voice runs ahead of the picture. Caption times inside long sentences were estimated and ran late
@@ -55,7 +71,7 @@ See [GUIDE.md](GUIDE.md) section 8.
 - **More expressions:** laugh (eyes closed, big mouth), cry, angry, thinking (hand on chin), shock (jaw drop).
 - **Cloth follow-through:** dupatta and pallu swing a little after a move.
 - **Hands holding things:** a helper that keeps a prop in a hand while the arm moves (phone, bag, plate, card).
-- **New sets:** rental shop, street and market, kitchen, office, college, garba ground, auto-rickshaw, Anokhi Reet
+- **New sets:** street and market, kitchen, office, college, garba ground, auto-rickshaw, Anokhi Reet
   app screens drawn in the flat style.
 - **New cast:** see `cast/CAST.md` ideas.
 - **Shot variety:** close-up face shots, over-the-shoulder, top-down table, split screen helpers.

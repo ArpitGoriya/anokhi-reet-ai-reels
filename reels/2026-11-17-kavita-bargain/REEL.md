@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-17
 - **Made by:** teammate (script) + Claude
-- **Status:** script approved; voice take 1 waiting for a listen
+- **Status:** video 1 rendered (2026-11-17); waiting for feedback
 
 ## Brief
 
@@ -61,22 +61,32 @@ Voice script: [`script.txt`](script.txt) (Devanagari, female voice).
 
 ## Voice-over
 
-- Take 1: `output/female-kavita-bargain-take1.mp3` (93.4 s) — approved: pending
+- Take 1: `output/female-kavita-bargain-take1.mp3` (93.4 s) — approved: yes (2026-11-17)
 - Captions timed with `tools/caption_timing.py` (redo after every new take)
 
 ## Feedback rounds
 
 1. (round 0) Maths fixed to ₹12,000; trimmed to ~90-95 s; female voice.
+2. Video 1: 22 scenes, `output/2026-11-17-kavita-bargain.mp4`. Waiting for feedback.
 
 ## Caption
 
 ```
+Shop full… galla khaali?
+Kavita ke saare lehenge rent pe jaate the, par har customer bargain karta tha.
+Ek "Buy 2 Get 1 Free" ne use sikhaya: customer ko discount nahi, jeet ki feeling chahiye.
+Fixed rent + matching jewellery free = customer khush, Kavita khush.
+Apni shop ya boutique fixed price ke saath Anokhi Reet pe list karo.
+#AnokhiReet #LehengaOnRent #RentalBusiness #BoutiqueBusiness #BusinessStories
 ```
 
 ## Added to the library (at least two per reel)
 
-- (planned) Rental shop set with lehenga rails and a galla (cash drawer); mall shop set; Kavita in the cast;
-  props: calculator + register, jewellery box, chocolate and toffee, shop shutter.
+- Sets: `shopBG` (lehenga rental shop with rails and a sign) and `mallBG` (mall clothes shop) in `animation/engine/sets.js`.
+- Props: kurti, galla (cash box), calculator, account book, jewellery box, chocolate, toffee, rupee note, small
+  customer icon, idea bulb, rolling shutter, dry-cleaning and repair icons (`animation/engine/props.js`).
+- Poses `THINK` and `IDEA`; walking in with a step bob; a crowd that walks from one side to the other.
+- New cast member **Kavita** (`KAVITA.shop` / `.night` / `.mall`), added to `CAST.md` and the cast sheet.
 
 ## Suggested default (for the owner)
 
@@ -84,4 +94,7 @@ Voice script: [`script.txt`](script.txt) (Devanagari, female voice).
 
 ## Lessons
 
--
+- Whisper skipped 15.6-30 s of take 1 (the numbers part: "दो हज़ार", "पंद्रह सौ", "बारह हज़ार"), so those captions
+  bunched up. They were timed from the voice's pauses instead. Check caption times around spoken numbers.
+- Two teammates built a rental shop set the same day (`rentalShopBG`, `shopBG`) and both added `registerSVG` /
+  `bulbSVG`; the second ones were renamed (`ledgerSVG`, `ideaBulbSVG`). `git pull` before adding library pieces.

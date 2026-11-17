@@ -49,3 +49,79 @@ function arBrowseScreen() {
     cards.map((it, i) => { const x = i % 2 ? 125 : -125, y = i < 2 ? -110 : 250; return `<g id="arb-k${i}" transform="translate(${x},${y})"><rect x="-112" y="-170" width="224" height="330" rx="16" fill="#FFFFFF" stroke="#E6E0D9" stroke-width="3"/><rect x="-100" y="-158" width="200" height="230" rx="10" fill="${C.cream}"/><g transform="translate(0,-70)">${it.k === 's' ? sherwaniHangerSVG('arb-o' + i, it.c, it.d, .38) : lehengaHangerSVG('arb-o' + i, { c: it.c, d: it.d, dupatta: it.p }, .36)}</g><rect x="-96" y="94" width="130" height="16" rx="8" fill="#E6E0D9"/><rect x="-96" y="122" width="84" height="16" rx="8" fill="#F2EEE9"/><rect x="40" y="104" width="56" height="34" rx="17" fill="url(#mar)"/></g>`; }).join('');
 }
 function jarSVG(front) { const d = 'M-110,-150 L110,-150 L120,-120 Q140,-100 140,-60 L140,150 Q140,180 110,180 L-110,180 Q-140,180 -140,150 L-140,-60 Q-140,-100 -120,-120 Z'; return front ? `<path d="${d}" fill="#DCEFF5" fill-opacity=".14" stroke="${OL}" stroke-width="${OW}"/><path d="M-104,-60 V120" stroke="#fff" stroke-width="14" stroke-linecap="round" opacity=".55"/><rect x="-120" y="-178" width="240" height="40" rx="12" fill="${C.goldTan}" stroke="${OL}" stroke-width="${OW}"/>` : `<path d="${d}" fill="#DCEFF5" fill-opacity=".6"/>`; }
+
+// ===== Shop and money props (from the Kavita reel, 2026-11-17). Centred on (0,0) unless said. =====
+// kurtiSVG(c, d, sc) hanging kurti · gallaSVG(id) cash box: drawer `${id}-dr` (move down to open), `${id}-in` for
+// what's inside · calculatorSVG(id, txt) screen text `${id}-scr` · ledgerSVG() open account book ·
+// jewelBoxSVG(id) lid `${id}-lid` (rotate to open) · chocolateSVG() fancy truffle · toffeeSVG(c) wrapped toffee ·
+// noteSVG() rupee note · personIcon(col) small customer · ideaBulbSVG() big idea bulb with rays · shutterSVG(id, w, h) rolling
+// shutter `${id}-sh` (scale y to roll up) · dryCleanIcon() · needleIcon()
+function kurtiSVG(c = C.pink, d = C.pinkDark, sc = 1) {
+  return `<g transform="scale(${sc})"><path d="M0,-10 Q0,-30 12,-28 Q22,-24 16,-14" fill="none" stroke="${OL}" stroke-width="5" stroke-linecap="round"/>` +
+    `<path d="M-60,10 L0,-12 L60,10" fill="none" stroke="${C.woodDark}" stroke-width="9" stroke-linecap="round"/>` +
+    `<path d="M-30,6 L-70,30 L-96,120 L-66,130 L-52,80 L-58,300 L58,300 L52,80 L66,130 L96,120 L70,30 L30,6 Q0,34 -30,6 Z" fill="${c}" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/>` +
+    `<path d="M-30,6 Q0,34 30,6" fill="none" stroke="${C.gold}" stroke-width="7"/><path d="M0,30 V110" stroke="${d}" stroke-width="5"/>` +
+    `<path d="M-56,270 H56" stroke="${C.gold}" stroke-width="10"/>` + [0, 1, 2].map(i => `<circle cx="${-24 + i * 24}" cy="190" r="6" fill="${d}"/>`).join('') + `</g>`;
+}
+function gallaSVG(id) {
+  return `<g id="${id}"><rect x="-150" y="-110" width="300" height="130" rx="12" fill="${C.woodDark}" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<rect x="-130" y="-92" width="260" height="96" rx="6" fill="#3E2A14"/><g id="${id}-in"></g>` +
+    `<g id="${id}-dr"><rect x="-140" y="-40" width="280" height="80" rx="10" fill="${C.wood}" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<rect x="-36" y="-8" width="72" height="16" rx="8" fill="${C.gold}" stroke="${OL}" stroke-width="3"/></g></g>`;
+}
+function calculatorSVG(id, txt = '0') {
+  let s = `<g id="${id}"><rect x="-150" y="-210" width="300" height="420" rx="30" fill="#3F3A36" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<rect x="-120" y="-180" width="240" height="96" rx="12" fill="#CFE3C8" stroke="${OL}" stroke-width="4"/>` +
+    `<text id="${id}-scr" x="104" y="-112" text-anchor="end" font-family="Inter" font-weight="800" font-size="56" fill="#24331F">${txt}</text>`;
+  for (let r = 0; r < 4; r++) for (let c = 0; c < 4; c++) s += `<rect x="${-120 + c * 62}" y="${-62 + r * 64}" width="52" height="50" rx="12" fill="${c === 3 ? C.marigold : '#ECE6DE'}" stroke="${OL}" stroke-width="3"/>`;
+  return s + `</g>`;
+}
+function ledgerSVG() {
+  let s = `<path d="M0,-6 L-230,-30 L-230,130 L0,150 Z" fill="#FFFDF7" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/><path d="M0,-6 L230,-30 L230,130 L0,150 Z" fill="#FFFDF7" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/>`;
+  for (let i = 0; i < 5; i++) s += `<path d="M-205,${-4 + i * 28} L-25,${14 + i * 28} M25,${14 + i * 28} L205,${-4 + i * 28}" stroke="#C9B9A0" stroke-width="4"/>`;
+  return s + `<path d="M-205,0 L-25,18" stroke="${C.red}" stroke-width="5"/>`;
+}
+function jewelBoxSVG(id) {
+  return `<g id="${id}"><g id="${id}-lid"><path d="M-120,-60 L120,-60 L120,-150 Q120,-170 100,-170 L-100,-170 Q-120,-170 -120,-150 Z" fill="${C.red}" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/>` +
+    `<rect x="-100" y="-152" width="200" height="72" rx="10" fill="#F4E3E6" stroke="${OL}" stroke-width="3"/><circle cx="0" cy="-116" r="14" fill="${C.gold}" stroke="${OL}" stroke-width="3"/></g>` +
+    `<rect x="-124" y="-60" width="248" height="110" rx="12" fill="${C.red}" stroke="${OL}" stroke-width="${OW}"/><rect x="-104" y="-52" width="208" height="56" rx="8" fill="#5C0A12"/>` +
+    `<path d="M-70,-50 Q0,30 70,-50" fill="none" stroke="${C.gold}" stroke-width="10" stroke-linecap="round"/>` +
+    [-50, -25, 0, 25, 50].map((x, i) => `<circle cx="${x}" cy="${-8 - Math.abs(x) * .5}" r="${i === 2 ? 13 : 8}" fill="${i === 2 ? '#C0262D' : C.gold}" stroke="${OL}" stroke-width="3"/>`).join('') +
+    `<path d="M-124,10 H124" stroke="${C.gold}" stroke-width="6"/></g>`;
+}
+function chocolateSVG() {
+  return `<ellipse cx="0" cy="70" rx="120" ry="26" fill="#fff" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<path d="M-90,60 L-70,-10 L70,-10 L90,60 Z" fill="${C.gold}" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/>` +
+    [-50, -16, 18, 52].map(x => `<path d="M${x},-6 L${x * 1.2},56" stroke="#C99A2E" stroke-width="5"/>`).join('') +
+    `<path d="M-74,-6 Q-80,-110 0,-112 Q80,-110 74,-6 Z" fill="#5A3420" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<path d="M-50,-60 Q-20,-80 10,-60 Q40,-80 60,-56" fill="none" stroke="#8A5A3A" stroke-width="8" stroke-linecap="round"/><circle cx="-30" cy="-86" r="6" fill="${C.gold}"/><circle cx="24" cy="-92" r="5" fill="${C.gold}"/>`;
+}
+function toffeeSVG(c = C.pink) {
+  return `<path d="M-46,0 L-86,-30 L-80,30 Z M46,0 L86,-30 L80,30 Z" fill="${c}" stroke="${OL}" stroke-width="4" stroke-linejoin="round"/>` +
+    `<ellipse cx="0" cy="0" rx="52" ry="34" fill="${c}" stroke="${OL}" stroke-width="${OW}"/><path d="M-30,-12 Q0,-24 30,-12" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".7"/>`;
+}
+function noteSVG() {
+  return `<rect x="-80" y="-40" width="160" height="80" rx="8" fill="#BFD9A8" stroke="${OL}" stroke-width="4"/><rect x="-66" y="-28" width="132" height="56" rx="6" fill="none" stroke="#7FA868" stroke-width="3"/>` +
+    `<circle cx="0" cy="0" r="22" fill="#DCEBCF" stroke="#7FA868" stroke-width="3"/><text y="10" text-anchor="middle" font-family="Inter" font-weight="900" font-size="28" fill="#3F6B33">₹</text>`;
+}
+function personIcon(col = C.goldTan) {
+  return `<path d="M-46,70 Q-46,10 0,8 Q46,10 46,70 Z" fill="${col}" stroke="${OL}" stroke-width="4" stroke-linejoin="round"/><circle cx="0" cy="-22" r="28" fill="${C.skinLight}" stroke="${OL}" stroke-width="4"/><path d="M-28,-26 Q-26,-56 0,-54 Q26,-56 28,-26 Q14,-40 0,-38 Q-14,-40 -28,-26 Z" fill="${C.hair}"/>`;
+}
+function ideaBulbSVG() {
+  return `<circle r="160" fill="url(#glow)"/><path d="M-50,10 Q-80,-30 -70,-70 Q-50,-130 0,-130 Q50,-130 70,-70 Q80,-30 50,10 L40,40 L-40,40 Z" fill="${C.gold}" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/>` +
+    `<rect x="-38" y="40" width="76" height="40" rx="8" fill="#B9B2A8" stroke="${OL}" stroke-width="4"/><path d="M-38,58 H38" stroke="${OL}" stroke-width="3"/><path d="M-16,0 Q0,-40 16,0" fill="none" stroke="#C9821E" stroke-width="6"/>` +
+    [[-120, -60], [120, -60], [-100, -150], [100, -150], [0, -190]].map(([x, y]) => `<path d="M${x * .8},${y * .8} L${x},${y}" stroke="${C.gold}" stroke-width="10" stroke-linecap="round"/>`).join('');
+}
+function shutterSVG(id, w = W, h = 1100) {
+  let s = `<g id="${id}-sh"><rect x="0" y="0" width="${w}" height="${h}" fill="#A7A39C" stroke="${OL}" stroke-width="${OW}"/>`;
+  for (let y = 40; y < h; y += 40) s += `<path d="M0,${y} H${w}" stroke="#8C8880" stroke-width="5"/>`;
+  return s + `<rect x="${w / 2 - 70}" y="${h - 36}" width="140" height="24" rx="10" fill="#6E6A64" stroke="${OL}" stroke-width="3"/></g>`;
+}
+function dryCleanIcon() {
+  return `<circle r="100" fill="#fff" stroke="${OL}" stroke-width="${OW}"/><path d="M0,-50 Q0,-66 12,-64 Q22,-60 16,-50" fill="none" stroke="${OL}" stroke-width="5" stroke-linecap="round"/><path d="M-60,-10 L0,-46 L60,-10 Z" fill="none" stroke="${OL}" stroke-width="7" stroke-linejoin="round"/>` +
+    [[-30, 30, 16], [10, 40, 12], [36, 20, 9], [-6, 64, 8]].map(([x, y, r]) => `<circle cx="${x}" cy="${y}" r="${r}" fill="#CFE6EE" stroke="${OL}" stroke-width="3"/>`).join('');
+}
+function needleIcon() {
+  return `<circle r="100" fill="#fff" stroke="${OL}" stroke-width="${OW}"/><path d="M-50,50 L44,-44" stroke="${OL}" stroke-width="12" stroke-linecap="round"/><path d="M-50,50 L44,-44" stroke="#D8D4CE" stroke-width="6" stroke-linecap="round"/>` +
+    `<ellipse cx="36" cy="-36" rx="6" ry="12" transform="rotate(45,36,-36)" fill="#fff" stroke="${OL}" stroke-width="2"/><path d="M38,-38 Q80,-10 40,30 Q0,70 -40,40" fill="none" stroke="${C.red}" stroke-width="5" stroke-linecap="round"/>`;
+}

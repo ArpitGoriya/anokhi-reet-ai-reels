@@ -33,3 +33,10 @@ const CUSTOMER_W = { hairStyle: 'pony', top: '#D9577A', topD: '#B33F60', skin: '
 // helpers
 const NOSKIRT = o => Object.assign({}, o, { skirt: null });                 // waist-up version of a look
 const dress = (look, change) => Object.assign({}, look, change);             // same person, new outfit or detail
+
+// Kavita (30s): owns a lehenga rental shop. Busy, soft-hearted, said yes to every bargain until she learned. (Kavita reel)
+const KAVITA = {
+  shop: { top: C.marigold, topD: '#C9821E', pallu: C.red, border: C.gold, hairStyle: 'braid', skin: '#A86B48', skin2: '#93593A', necklace: true, skirt: { c: C.red, d: C.redDark, b: C.gold, w: 210 } },
+  night: { top: '#8C6BA8', topD: '#6E5089', pallu: '#B8A0CC', border: C.goldTan, hairStyle: 'braid', skin: '#A86B48', skin2: '#93593A', glasses: true, skirt: { c: '#6E5089', d: '#54396B', b: C.goldTan, w: 210 } },
+  mall: { top: C.teal, topD: C.tealDark, pallu: '#F2C14E', border: C.gold, hairStyle: 'braid', skin: '#A86B48', skin2: '#93593A', skirt: { c: C.tealDark, d: '#174A47', b: C.gold, w: 210 } },
+};
