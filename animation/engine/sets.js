@@ -370,7 +370,8 @@ function chalkAuto(s, t) {
 // move a CHALK shape: chalkAt(shape, x, y, sc)
 const chalkAt = (d, x, y, sc = 1) => d.replace(/(-?\d+\.?\d*),(-?\d+\.?\d*)/g, (m, a, b) => `${(+a * sc + x).toFixed(1)},${(+b * sc + y).toFixed(1)}`).replace(/([hv])(-?\d+\.?\d*)/g, (m, c, v) => `${c}${(+v * sc).toFixed(1)}`);
 const CHALK = {
-  lehenga: 'M-36,-96 L36,-96 L44,-44 L-44,-44 Z M-44,-38 Q-84,40 -118,112 Q0,142 118,112 Q84,40 44,-38 M-90,80 Q0,104 90,80',
+  // lehenga = short choli with sleeves, a gap, waistband, flared pleated skirt with a border, dupatta from the shoulder
+  lehenga: 'M-30,-104 Q0,-90 30,-104 L52,-96 L62,-70 L44,-64 L40,-56 L-40,-56 L-44,-64 L-62,-70 L-52,-96 Z M-38,-34 L38,-34 L40,-22 L-40,-22 Z M-40,-22 Q-92,44 -128,112 Q0,138 128,112 Q92,44 40,-22 M-18,-20 Q-38,44 -58,118 M0,-20 L0,124 M18,-20 Q38,44 58,118 M-114,92 Q0,118 114,92 M52,-96 Q98,-24 94,52 Q92,86 106,110',
   phone: 'M-46,-84 L46,-84 Q60,-84 60,-70 L60,70 Q60,84 46,84 L-46,84 Q-60,84 -60,70 L-60,-70 Q-60,-84 -46,-84 Z M-16,64 L16,64',
   person: 'M-14,-32 Q-14,-46 0,-46 Q14,-46 14,-32 Q14,-18 0,-18 Q-14,-18 -14,-32 Z M-26,26 Q-26,-6 0,-6 Q26,-6 26,26',
   coin: 'M-40,0 Q-40,-40 0,-40 Q40,-40 40,0 Q40,40 0,40 Q-40,40 -40,0 Z M-12,-14 L14,-14 M-12,0 L14,0 M-4,-14 Q16,-14 10,6 L-10,24',

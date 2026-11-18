@@ -52,7 +52,9 @@ Everything here is applied in every round and never silently reverted.
 
 ## Feedback rounds
 
-1. (what they asked → what changed)
+1. Video round 1 (2026-11-18): "the lehenga drawing on the chalkboard looks like a gown / one piece" → `CHALK.lehenga`
+   redrawn as a short choli with sleeves, a clear gap at the waist, a waistband, a flared pleated skirt with a
+   border, and a dupatta from the shoulder (all chalk lehengas in the reel, and in the library).
 
 ## Caption
 
