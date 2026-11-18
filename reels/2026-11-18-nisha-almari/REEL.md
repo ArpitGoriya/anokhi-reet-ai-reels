@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-18
 - **Made by:** teammate (script) + Claude
-- **Status:** script approved; voice take 1 waiting for a listen
+- **Status:** video 1 rendered (2026-11-18); sent to the teammate
 
 ## Brief
 
@@ -57,21 +57,31 @@ Voice script: [`script.txt`](script.txt) (Devanagari, female voice).
 
 ## Voice-over
 
-- Take 1: `output/female-nisha-almari-take1.mp3` (63.9 s) — approved: pending
+- Take 1: `output/female-nisha-almari-take1.mp3` (63.9 s) — approved: yes (2026-11-18)
 - Captions timed with `tools/caption_timing.py` (redo after every new take)
 
 ## Feedback rounds
 
 1. (round 0) Trimmed to ~55-60 s; female voice; "Ek kahani" tag; plain book.
+2. Video 1: 16 scenes, `output/2026-11-18-nisha-almari.mp4` (65 s).
 
 ## Caption
 
 ```
+₹2.5 lakh ke lehenge almari mein… aur kamaai zero. 😶
+Ek baar pehna, photo li, phir saalon tak band.
+Bechne gayi toh ₹25,000 ke lehenge ka offer aaya ₹3,000.
+Phir samajh aaya: jo jeb mein paisa daale woh asset, jo nikaale woh kharcha.
+Outfit purana nahi hota, bas band almari mein bekaar hota hai. 👗
+Apna outfit rent pe dena hai? Comment karo "RENT" 👇
+#AnokhiReet #LehengaOnRent #RentAndEarn #Homemakers #RentEarnRepeat
 ```
 
 ## Added to the library (at least two per reel)
 
-- (planned) Nisha in the cast; almirah with covered lehengas; pocket in/out (asset vs expense); plain book.
+- Props: `coveredLehengaSVG` (lehenga in a clear plastic cover), `lockSVG`, `plainBookSVG(lines)` (a plain book with
+  only a title), `pocketSVG` (coins going in = asset, out = expense).
+- New cast: Nisha (`NISHA`).
 
 ## Suggested default (for the owner)
 
@@ -79,4 +89,5 @@ Voice script: [`script.txt`](script.txt) (Devanagari, female voice).
 
 ## Lessons
 
--
+- Whisper matched well (140 of 191 words), but squeezed "nazariya tha" into 0.25 s; c19-c21 were set from the
+  voice's pauses. Check short chunks right after a long pause.

@@ -3,6 +3,14 @@
 Every reel adds at least one improvement to the engine or library and writes it here (newest first).
 See [GUIDE.md](GUIDE.md) section 8.
 
+## 2026-11-18: covered lehengas, lock, plain book, pocket, Nisha (₹2.5 lakh ki almari)
+
+- **New props:** `coveredLehengaSVG(c, d, sc)` (lehenga in a clear plastic cover with a zip line), `lockSVG()`,
+  `plainBookSVG(lines)` (a plain hardback with only a title, for "a line from a book" beats, never real cover art),
+  `pocketSVG(col)` (coins dropping in = asset, flying out = expense).
+- **New cast:** Nisha (`NISHA`), homemaker.
+- Reused: `almirahSVG` doors, `coinJarSVG`/`jarFill`, `splitSVG`, `ledgerSVG`, `toastSVG`, `IDEA`/`THINK`.
+
 ## 2026-11-18: coin jar, map spotlight, Anokhi Didi (Lehenga 2X)
 
 - **New props:** `coinJarSVG(id, n, label)` + `jarFill(id, n, t, t0, d)` (coins drop into a jar up to a dashed target

@@ -222,3 +222,27 @@ function mapSpotSVG(id) { return `<path id="${id}" fill="#5C554D" fill-opacity="
 function mapSpot(id, x, y, r) {
   $(id).setAttribute('d', `M-470,-560 H470 V560 H-470 Z M${x - r},${y} a${r},${r} 0 1,0 ${2 * r},0 a${r},${r} 0 1,0 ${-2 * r},0 Z`);
 }
+
+// ===== Nisha's almirah (2026-11-18): covered lehenga, lock, plain book, pocket =====
+// coveredLehengaSVG(c, d, sc): a lehenga on a hanger inside a clear plastic cover (zip line), centred on the hanger hook
+function coveredLehengaSVG(c = C.lehenga, d = C.lehengaDark, sc = 1) {
+  return `<g transform="scale(${sc})">${lehengaHangerSVG('', { c, d, dupatta: C.goldTan })}` +
+    `<path d="M-96,-60 L96,-60 L170,290 Q0,320 -170,290 Z" fill="#E9F4F8" fill-opacity=".45" stroke="#9FB7C2" stroke-width="5" stroke-linejoin="round"/>` +
+    `<path d="M0,-60 V300" stroke="#9FB7C2" stroke-width="4" stroke-dasharray="8 6"/><path d="M-60,-20 L-110,200" stroke="#fff" stroke-width="10" stroke-linecap="round" opacity=".7"/></g>`;
+}
+// lockSVG(): a padlock centred on (0,0)
+function lockSVG() {
+  return `<path d="M-34,-10 V-44 Q-34,-80 0,-80 Q34,-80 34,-44 V-10" fill="none" stroke="${OL}" stroke-width="16"/><path d="M-34,-10 V-44 Q-34,-80 0,-80 Q34,-80 34,-44 V-10" fill="none" stroke="#B9B2A8" stroke-width="8"/>` +
+    `<rect x="-56" y="-14" width="112" height="90" rx="14" fill="${C.gold}" stroke="${OL}" stroke-width="${OW}"/><circle cx="0" cy="22" r="10" fill="${OL}"/><path d="M0,26 V50" stroke="${OL}" stroke-width="8" stroke-linecap="round"/>`;
+}
+// plainBookSVG(lines): a plain hardback with a title only (no real cover art), centred on (0,0)
+function plainBookSVG(lines = ['BOOK']) {
+  return `<rect x="-150" y="-200" width="300" height="400" rx="14" fill="#2F5D57" stroke="${OL}" stroke-width="${OW}"/><rect x="-150" y="-200" width="34" height="400" rx="10" fill="#22605C" stroke="${OL}" stroke-width="4"/>` +
+    `<rect x="-100" y="-120" width="220" height="${lines.length * 52 + 40}" rx="10" fill="${C.cream}"/>` +
+    lines.map((l, i) => `<text x="10" y="${-72 + i * 52}" text-anchor="middle" font-family="Inter" font-weight="900" font-size="40" fill="#22605C">${l}</text>`).join('');
+}
+// pocketSVG(col): a trouser pocket shape (opening at the top, y = -60), centred on (0,0)
+function pocketSVG(col = '#5B6C8F') {
+  return `<path d="M-150,-60 L150,-60 L140,110 Q0,180 -140,110 Z" fill="${col}" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/>` +
+    `<path d="M-120,-60 Q0,30 120,-60" fill="#3E4A63" stroke="${OL}" stroke-width="4"/><path d="M-130,90 Q0,150 130,90" fill="none" stroke="#F4EFE3" stroke-width="4" stroke-dasharray="10 8"/>`;
+}

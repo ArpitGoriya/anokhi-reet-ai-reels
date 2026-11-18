@@ -79,3 +79,5 @@ const DIDI = { top: C.red, topD: C.redDark, pallu: C.gold, border: C.goldTan, ha
 // Hemaben (40s): rental shop owner, confident and practical; works out the numbers on a chalkboard. Glasses,
 // marigold kurta with maroon dupatta. (Ek lehenge ka hisaab, 2026-11-18)
 const HEMABEN = { hairStyle: 'bun', glasses: true, top: C.marigold, topD: '#C9821E', pallu: C.red, border: C.gold, sindoor: true, necklace: true, skin: '#B07150', skin2: '#9A6143', skirt: { c: C.red, d: C.redDark, b: C.gold, w: 205 } };
+// Nisha (30s): a homemaker in Surat with 12 lehengas in her almirah; learns to rent them out. Blue kurta, braid. (Nisha's almirah)
+const NISHA = { top: '#4F86C6', topD: '#3A6AA3', pallu: '#F2C14E', border: C.gold, hairStyle: 'braid', skin: '#D19A72', skin2: '#BD8460', sindoor: true, skirt: { c: '#3A6AA3', d: '#2C527F', b: C.gold, w: 205 } };
