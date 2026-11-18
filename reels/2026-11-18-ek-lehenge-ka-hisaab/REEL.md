@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-18
 - **Made by:** dhruvifewtone-wq
-- **Status:** brief
+- **Status:** script approved
 
 ## Brief
 
@@ -32,7 +32,7 @@ Everything here is applied in every round and never silently reverted.
 - **Brand-safe fees** (teammate chose it, 2026-11-18): no "Listing fee ₹0 (15 outfits tak)", "Commission 0%",
   "Setup fee ₹0" or "5 minute mein shop live" in our words. Costs: "apni shop ke hisaab se ghata lena".
 
-## Script and storyboard (approved: no)
+## Script and storyboard (approved: yes, 2026-11-18)
 
 | # | Voice line (caption) | On screen (scene, characters and what they do) | Label / title |
 |---|---|---|---|
