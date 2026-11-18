@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-18
 - **Made by:** teammate (script) + Claude
-- **Status:** script waiting for approval
+- **Status:** script approved; voice take 1 waiting for a listen
 
 ## Brief
 
@@ -30,7 +30,7 @@ Everything here is applied in every round and never silently reverted.
   "उन्हें पूरे शहर के customers तक पहुँचाना, हमारा काम है" → "उन्हें पूरे शहर के customers को दिखाना, हमारा काम है". (round 0)
 - **Length about 50 s** (the plan said ~38 s; all ideas kept). (round 0)
 
-## Script and storyboard (approved: no)
+## Script and storyboard (approved: yes)
 
 Voice script: [`script.txt`](script.txt) (Devanagari, female voice).
 
@@ -52,7 +52,7 @@ Voice script: [`script.txt`](script.txt) (Devanagari, female voice).
 
 ## Voice-over
 
-- File: — approved: no
+- Take 1: `output/female-lehenga-2x-take1.mp3` (46.5 s) — approved: pending
 - Captions timed with `tools/caption_timing.py` (redo after every new take)
 
 ## Feedback rounds
