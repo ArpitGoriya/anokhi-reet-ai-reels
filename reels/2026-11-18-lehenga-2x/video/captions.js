@@ -1,11 +1,74 @@
 // Caption chunks: [id, Roman Hinglish caption (*gold* words), number of script.txt words it covers]
-// tools/caption_timing.py fills STARTS / VOICE_END / DURATION from the voice (re-run after every voice take).
+// tools/caption_timing.py fills STARTS / WORDS / VOICE_END / DURATION from the voice (re-run after every voice take).
 const CHUNKS = [
-  ['c1', 'Ek *sawaal*:', 2],
-  ['c2', 'shaadi ka outfit *kitni baar* pehnte ho?', 6],
-  ['c3', 'Ye hain *Hetal ben*.', 4],
-  ['c4', 'Follow karo *Anokhi Reet.*', 4],
+  ['c1', 'Jitne mein ye lehenga khareeda tha...', 6],
+  ['c2', 'usse *doguna* kama sakta hai.', 5],
+  ['c3', 'Toh guys, ye hai ek *bridal lehenga.*', 7],
+  ['c4', 'Ye jo aap dekh rahe ho,', 6],
+  ['c5', 'ye shop waale ne *2023* mein', 8],
+  ['c6', '*₹25,000* mein khareeda tha.', 5],
+  ['c7', '*₹2,500* rent pe', 4],
+  ['c8', '*10 baar* gaya,', 3],
+  ['c9', 'toh *poora paisa wapas.*', 4],
+  ['c10', '*20 baar* gaya,', 3],
+  ['c11', 'toh *seedha doguna.*', 3],
+  ['c12', 'Par hua kya?', 3],
+  ['c13', 'Poore saal mein ye lehenga', 5],
+  ['c14', 'sirf *4 baar* bahar nikla.', 5],
+  ['c15', 'Kyon? Kyunki ise', 3],
+  ['c16', 'sirf *gali ke customers* dekh paate the.', 7],
+  ['c17', 'Baaki shehar ko pata hi nahi tha', 7],
+  ['c18', 'ki ye lehenga hai bhi.', 5],
+  ['c19', 'Isiliye bolte hain,', 3],
+  ['c20', 'ek *sahi platform* hona bahut zaroori hai...', 7],
+  ['c21', 'jo hai *Anokhi Reet.*', 4],
+  ['c22', 'Ek baar *list karke dekho...*', 5],
+  ['c23', 'phir aapka lehenga sirf gali nahi,', 6],
+  ['c24', '*poora shehar* dekh sakta hai.', 5],
+  ['c25', 'Aapko sirf apne outfits *list* karne hain.', 7],
+  ['c26', 'Unhe poore shehar ke customers ko dikhana,', 7],
+  ['c27', '*hamaara kaam* hai.', 3],
+  ['c28', 'Bas *bharosa* rakhna padega,', 4],
+  ['c29', 'aur thoda sa *time* dena padega.', 6],
+  ['c30', 'Apni shop, boutique ya studio', 5],
+  ['c31', 'aaj hi *Anokhi Reet* pe list karo!', 7],
 ];
-// Chunk start times (s): placeholder until a voice exists.
-const STARTS = [0.2, 1.6, 4.4, 6.6];
-const VOICE_END = 8.6, DURATION = 9.6;
+
+// Chunk start times (s): tools/caption_timing.py (faster-whisper, 116 of 158 words matched), voice female-lehenga-2x-take1.mp3.
+const STARTS = [
+  0.19, 1.47, 3.48, 5.90, 6.72, 8.76, 10.09, 11.40, 12.32, 13.73, 14.50, 15.97, 17.09, 18.32, 20.50, 20.94,
+  22.48, 24.22, 25.44, 26.54, 28.60, 30.04, 31.64, 33.00, 34.70, 36.68, 38.88, 39.60, 41.04, 42.50, 44.30];
+// When each script word of a chunk is spoken (drives the word-by-word highlight).
+const WORDS = [
+  [0.27, 0.64, 0.74, 0.82, 1.16, 1.28],
+  [1.55, 1.98, 2.57, 2.92, 3.2],
+  [3.56, 3.61, 4.14, 4.54, 4.74, 4.9, 5.36],
+  [5.98, 6.08, 6.18, 6.32, 6.44, 6.64],
+  [6.8, 7.12, 7.44, 7.66, 7.78, 7.98, 8.28, 8.64],
+  [8.84, 9.36, 9.62, 9.72, 9.84],
+  [10.17, 10.71, 10.96, 11.36],
+  [11.48, 11.76, 12.12],
+  [12.4, 12.6, 12.9, 13.16],
+  [13.81, 13.86, 14.28],
+  [14.58, 14.7, 15.16],
+  [16.05, 16.4, 16.6],
+  [17.17, 17.5, 17.8, 17.94, 18.06],
+  [18.4, 18.7, 19.04, 19.24, 19.36],
+  [20.58, 20.7, 20.91],
+  [21.02, 21.2, 21.52, 21.64, 22.0, 22.2, 22.4],
+  [22.56, 23.28, 23.5, 23.62, 23.83, 24.0, 24.2],
+  [24.3, 24.44, 24.52, 24.82, 24.94],
+  [25.52, 26.1, 26.4],
+  [26.62, 26.78, 27.14, 27.58, 27.82, 28.3, 28.56],
+  [28.68, 29.16, 29.34, 29.9],
+  [30.12, 30.54, 30.66, 30.95, 31.24],
+  [31.72, 31.84, 32.05, 32.37, 32.66, 32.96],
+  [33.08, 33.4, 33.66, 33.92, 34.23],
+  [34.78, 34.83, 35.5, 35.74, 36.24, 36.44, 36.68],
+  [36.76, 37.24, 37.66, 37.98, 38.1, 38.48, 38.62],
+  [38.96, 39.38, 39.58],
+  [39.68, 40.14, 40.56, 40.8],
+  [41.12, 41.36, 41.68, 41.78, 42.04, 42.24],
+  [42.58, 42.7, 43.06, 43.67, 43.9],
+  [44.38, 44.61, 44.84, 45.32, 45.68, 45.8, 46.04]];
+const VOICE_END = 46.2, DURATION = 47.69;

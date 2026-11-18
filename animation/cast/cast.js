@@ -71,3 +71,7 @@ const PAPA = {
   night: { male: true, mustache: true, glasses: true, hair: '#8F8A84', top: '#5B8A3A', topD: '#476F2D', skin: '#A86B48', skin2: '#93593A' },
 };
 const BETI = { hairStyle: 'pony', top: C.teal, topD: C.tealDark, pallu: '#F2C14E', border: C.gold, skin: '#B9784F', skin2: '#A0663F', bangles: false, skirt: { c: C.tealDark, d: '#174A47', b: C.gold, w: 200 } };
+
+// Anokhi Didi (30s): on-screen presenter who talks to camera ("Toh guys…"). Brand maroon kurta, gold dupatta.
+// (Lehenga 2X, 2026-11-18; owner to confirm the name and look before she becomes the channel's face.)
+const DIDI = { top: C.red, topD: C.redDark, pallu: C.gold, border: C.goldTan, hairStyle: 'long', skin: '#C98B62', skin2: '#B9784F', necklace: true, embroidery: true, skirt: { c: C.redDark, d: '#2b0001', b: C.gold, w: 210 } };

@@ -203,3 +203,22 @@ function cobwebSVG(sc = 1) {
   for (const R of [40, 80, 120]) { let d = ''; [0, 22, 45, 68, 90].forEach((a, i) => { const r = a * Math.PI / 180; d += `${i ? 'Q' + (Math.cos(r - .2) * R * .86).toFixed(0) + ',' + (Math.sin(r - .2) * R * .86).toFixed(0) + ' ' : 'M'}${(Math.cos(r) * R).toFixed(0)},${(Math.sin(r) * R).toFixed(0)} `; }); s += `<path d="${d}"/>`; }
   return s + `</g>`;
 }
+
+// ===== Lehenga 2X (2026-11-18): coin jar that fills to a line, city map spotlight =====
+// coinJarSVG(id, n, label): a glass jar with n coins `${id}-k${i}` (bottom first; show them with jarFill) and a dashed
+// target line with a label at the n-th coin. jarFill(id, n, t, t0, d) drops the coins in one by one over d seconds.
+function coinJarSVG(id, n = 10, label = '') {
+  const pos = [...Array(n)].map((_, i) => [-84 + (i % 4) * 56 + ((i / 4 | 0) % 2) * 28, 150 - (i / 4 | 0) * 30]);
+  const topY = pos[n - 1][1] - 30;
+  return `<g id="${id}">${jarSVG(0)}` + pos.map(([x, y], i) => `<g transform="translate(${x},${y})"><g id="${id}-k${i}" opacity="0">${coinSVG(0, 0, 26)}</g></g>`).join('') + jarSVG(1) +
+    (label ? `<path d="M-160,${topY} H160" stroke="${C.red}" stroke-width="6" stroke-dasharray="16 10"/><g transform="translate(0,${topY - 40})"><rect x="-110" y="-26" width="220" height="52" rx="26" fill="#fff" stroke="${OL}" stroke-width="3"/><text y="10" text-anchor="middle" font-family="Inter" font-weight="800" font-size="28" fill="${C.red}">${label}</text></g>` : '') + `</g>`;
+}
+function jarFill(id, n, t, t0, d) {
+  for (let i = 0; i < n; i++) { const el = $(`${id}-k${i}`); if (!el) continue; const k = clamp((t - t0 - i * d / n) / .25); op(el, k > 0 ? 1 : 0); tf(el, 0, (1 - E.back(k)) * -120, 1); }
+}
+// mapSpotSVG(id, x, y): a grey veil over a cityMapSVG (same centre) with a round lit hole at (x, y); mapSpot(id, x, y, r)
+// changes the hole's size (r 0 = all grey, r 1400 = all lit).
+function mapSpotSVG(id) { return `<path id="${id}" fill="#5C554D" fill-opacity=".55" fill-rule="evenodd" d=""/>`; }
+function mapSpot(id, x, y, r) {
+  $(id).setAttribute('d', `M-470,-560 H470 V560 H-470 Z M${x - r},${y} a${r},${r} 0 1,0 ${2 * r},0 a${r},${r} 0 1,0 ${-2 * r},0 Z`);
+}

@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-18
 - **Made by:** teammate (script) + Claude
-- **Status:** script approved; voice take 1 waiting for a listen
+- **Status:** video 1 rendered (2026-11-18); sent to the teammate
 
 ## Brief
 
@@ -52,21 +52,30 @@ Voice script: [`script.txt`](script.txt) (Devanagari, female voice).
 
 ## Voice-over
 
-- Take 1: `output/female-lehenga-2x-take1.mp3` (46.5 s) — approved: pending
+- Take 1: `output/female-lehenga-2x-take1.mp3` (46.5 s) — approved: yes (2026-11-18)
 - Captions timed with `tools/caption_timing.py` (redo after every new take)
 
 ## Feedback rounds
 
 1. (round 0) Two guarantee lines softened; numbers as words; length about 50 s.
+2. Video 1: 10 scenes, `output/2026-11-18-lehenga-2x.mp4` (48 s).
 
 ## Caption
 
 ```
+Jitne mein lehenga khareeda tha… usse doguna kama sakta hai. 2X 👗
+₹25,000 ka bridal lehenga, ₹2,500 rent: 10 baar = paisa wapas, 20 baar = doguna.
+Par saal mein sirf 4 baar bahar nikla… kyunki sirf gali ke customers use dekh paate the.
+Aap outfits list karo, poore shehar ko dikhana hamaara kaam hai.
+👉 Apni shop, boutique ya studio aaj hi Anokhi Reet pe list karo.
+#AnokhiReet #LehengaOnRent #RentalBusiness #BoutiqueBusiness #BusinessTips
 ```
 
 ## Added to the library (at least two per reel)
 
-- (planned) Anokhi Didi (presenter) in the cast; "2X" big-number pop; coin jar with a target line.
+- Props: `coinJarSVG` + `jarFill` (a jar that fills coin by coin to a target line), `mapSpotSVG` + `mapSpot` (a grey
+  veil over a city map with a lit circle that can grow).
+- New cast: Anokhi Didi (`DIDI`), presenter who talks to camera with lip sync.
 
 ## Suggested default (for the owner)
 
@@ -75,4 +84,5 @@ Voice script: [`script.txt`](script.txt) (Devanagari, female voice).
 
 ## Lessons
 
--
+- Whisper matched this take well (116 of 158 words); no hand timing needed.
+- An even-odd "hole" bigger than its veil fills the outside: grow the hole a little, then fade the veil.

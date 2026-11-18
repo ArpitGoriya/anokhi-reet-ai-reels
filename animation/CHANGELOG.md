@@ -3,6 +3,13 @@
 Every reel adds at least one improvement to the engine or library and writes it here (newest first).
 See [GUIDE.md](GUIDE.md) section 8.
 
+## 2026-11-18: coin jar, map spotlight, Anokhi Didi (Lehenga 2X)
+
+- **New props:** `coinJarSVG(id, n, label)` + `jarFill(id, n, t, t0, d)` (coins drop into a jar up to a dashed target
+  line, e.g. "paid back" / "2X"); `mapSpotSVG(id)` + `mapSpot(id, x, y, r)` (grey veil over `cityMapSVG` with a lit
+  circle around one shop; grow it and fade the veil to "show the whole city").
+- **New cast:** Anokhi Didi (`DIDI`), an on-screen presenter who talks to camera with lip sync (owner to confirm).
+
 ## 2026-11-17: shop front, split screen, Papa and beti (Papa aur beti)
 
 - **New sets** in `engine/sets.js`: `shopFrontBG(id, {cx, sign, since})` (a shop seen from the street: building,
