@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-18
 - **Made by:** dhruvifewtone-wq
-- **Status:** video sent
+- **Status:** final (2026-11-18)
 
 ## Brief
 
@@ -85,4 +85,11 @@ Apna hisaab khud lagao. Comment mein "LIST" likho 👇
 
 ## Lessons
 
-- (what worked, what to avoid next time)
+- Earnings reels work brand-safe as the character's own example ("Udaharan ke liye", "apne numbers lagao"), like
+  the owner's Lehenga 2X; Anokhi Reet's own fee lines (₹0, 0%, 5 minute) stay out unless the owner approves them.
+- Chalk drawings must read at a glance: a lehenga needs a separate short blouse, a visible gap at the waist and a
+  flared skirt, with no extra lines (the teammate found a dupatta line confusing). Keep shapes simple.
+- Board scenes: keep the camera still so HTML chalk text and SVG chalk drawings stay lined up; keep the presenter
+  high enough above the counter, and draw her chalk stick before the counter so it never floats.
+- Only one session should render a reel at a time: two renders to the same file broke a video before
+  (Last minute invitation).
