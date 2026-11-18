@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-18
 - **Made by:** teammate (script) + Claude
-- **Status:** script waiting for approval
+- **Status:** script approved; voice take 1 waiting for a listen
 
 ## Brief
 
@@ -31,7 +31,7 @@ Everything here is applied in every round and never silently reverted.
 - **The book** is shown as a plain book with its title only, not the real cover art. (round 0)
 - End CTA: "Comment karo RENT" + follow card + "Rent. Earn. Repeat." (round 0)
 
-## Script and storyboard (approved: no)
+## Script and storyboard (approved: yes)
 
 Voice script: [`script.txt`](script.txt) (Devanagari, female voice).
 
@@ -57,7 +57,7 @@ Voice script: [`script.txt`](script.txt) (Devanagari, female voice).
 
 ## Voice-over
 
-- File: — approved: no
+- Take 1: `output/female-nisha-almari-take1.mp3` (63.9 s) — approved: pending
 - Captions timed with `tools/caption_timing.py` (redo after every new take)
 
 ## Feedback rounds
