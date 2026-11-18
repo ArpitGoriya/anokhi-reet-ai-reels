@@ -75,3 +75,7 @@ const BETI = { hairStyle: 'pony', top: C.teal, topD: C.tealDark, pallu: '#F2C14E
 // Anokhi Didi (30s): on-screen presenter who talks to camera ("Toh guys…"). Brand maroon kurta, gold dupatta.
 // (Lehenga 2X, 2026-11-18; owner to confirm the name and look before she becomes the channel's face.)
 const DIDI = { top: C.red, topD: C.redDark, pallu: C.gold, border: C.goldTan, hairStyle: 'long', skin: '#C98B62', skin2: '#B9784F', necklace: true, embroidery: true, skirt: { c: C.redDark, d: '#2b0001', b: C.gold, w: 210 } };
+
+// Hemaben (40s): rental shop owner, confident and practical; works out the numbers on a chalkboard. Glasses,
+// marigold kurta with maroon dupatta. (Ek lehenge ka hisaab, 2026-11-18)
+const HEMABEN = { hairStyle: 'bun', glasses: true, top: C.marigold, topD: '#C9821E', pallu: C.red, border: C.gold, sindoor: true, necklace: true, skin: '#B07150', skin2: '#9A6143', skirt: { c: C.red, d: C.redDark, b: C.gold, w: 205 } };

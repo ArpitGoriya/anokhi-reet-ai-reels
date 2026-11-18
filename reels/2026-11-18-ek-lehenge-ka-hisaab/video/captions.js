@@ -1,11 +1,71 @@
 // Caption chunks: [id, Roman Hinglish caption (*gold* words), number of script.txt words it covers]
 // tools/caption_timing.py fills STARTS / VOICE_END / DURATION from the voice (re-run after every voice take).
 const CHUNKS = [
-  ['c1', 'Ek *sawaal*:', 2],
-  ['c2', 'shaadi ka outfit *kitni baar* pehnte ho?', 6],
-  ['c3', 'Ye hain *Hetal ben*.', 4],
-  ['c4', 'Follow karo *Anokhi Reet.*', 4],
+  ['c1', 'Ek lehenga aapko *season* mein', 5],
+  ['c2', '*kitna kamaake* de sakta hai?', 5],
+  ['c3', 'Chalo... *hisaab* lagate hain!', 4],
+  ['c4', 'Ye sirf ek *udaharan* hai...', 5],
+  ['c5', '*meri dukaan* ka.', 3],
+  ['c6', 'Aap apne hisaab se', 4],
+  ['c7', '*numbers badal* lena.', 3],
+  ['c8', 'Mere ek lehenge ka *rent* hai...', 6],
+  ['c9', '*do hazaar.*', 2],
+  ['c10', 'Ab agar *online* hone se,', 5],
+  ['c11', 'mahine mein sirf *ek extra* customer', 6],
+  ['c12', 'bhi mil jaaye...', 3],
+  ['c13', 'toh ek lehenge se mahine ke', 6],
+  ['c14', '*do hazaar extra.*', 3],
+  ['c15', 'Mere paas aise *pandrah* outfits hain...', 6],
+  ['c16', 'toh mahine ke *tees hazaar.*', 5],
+  ['c17', 'Teen mahine ke season mein...', 5],
+  ['c18', '*nabbe hazaar* extra!', 3],
+  ['c19', 'Aur *kharcha?* Wo apni shop', 5],
+  ['c20', 'ke hisaab se *ghata* lena...', 5],
+  ['c21', 'baaki sab *aapki kamaai.*', 4],
+  ['c22', 'Shuru kaise karein?', 3],
+  ['c23', 'Bas WhatsApp pe *photos*', 4],
+  ['c24', 'aur *rent price* bhejo...', 4],
+  ['c25', 'aur aapki shop *Anokhi Reet* pe online.', 7],
+  ['c26', 'Shuru karna bilkul *aasaan.*', 4],
+  ['c27', 'Ab *aapki baari.*', 3],
+  ['c28', 'Apna *hisaab khud* lagao...', 4],
+  ['c29', 'aur shop list karo.', 4],
+  ['c30', 'Comment mein *"LIST"* likho!', 4],
 ];
-// Chunk start times (s): placeholder until a voice exists.
-const STARTS = [0.2, 1.6, 4.4, 6.6];
-const VOICE_END = 8.6, DURATION = 9.6;
+// Chunk start times (s): tools/caption_timing.py (faster-whisper, 120 of 130 words matched), voice female-ek-lehenge-ka-hisaab-take1.mp3.
+const STARTS = [
+  0.21, 1.78, 3.04, 4.87, 6.20, 7.08, 8.00, 8.76, 10.76, 11.51, 13.00, 14.74, 15.44, 16.88, 17.64, 20.10,
+  21.72, 23.06, 24.67, 26.26, 27.48, 28.92, 30.36, 31.60, 32.66, 34.72, 36.40, 37.63, 38.78, 40.02];
+// When each script word of a chunk is spoken (drives the word-by-word highlight).
+const WORDS = [
+  [0.29, 0.34, 0.98, 1.2, 1.62],
+  [1.86, 1.98, 2.62, 2.74, 3.04],
+  [3.12, 3.96, 4.22, 4.56],
+  [4.95, 5.0, 5.52, 5.66, 5.96],
+  [6.28, 6.52, 6.84],
+  [7.16, 7.48, 7.68, 7.94],
+  [8.08, 8.34, 8.62],
+  [8.84, 9.7, 9.88, 10.18, 10.3, 10.58],
+  [10.84, 10.96],
+  [11.59, 11.9, 12.1, 12.58, 12.84],
+  [13.08, 13.48, 13.6, 13.74, 13.86, 14.25],
+  [14.82, 14.94, 15.06],
+  [15.52, 15.7, 16.04, 16.34, 16.48, 16.84],
+  [16.96, 17.11, 17.39],
+  [17.72, 18.56, 18.8, 19.0, 19.26, 19.72],
+  [20.18, 20.28, 20.68, 20.84, 21.18],
+  [21.8, 22.12, 22.5, 22.6, 22.92],
+  [23.14, 23.6, 24.0],
+  [24.75, 24.8, 25.42, 25.88, 26.12],
+  [26.34, 26.42, 26.64, 26.78, 27.0],
+  [27.56, 27.92, 28.26, 28.7],
+  [29.0, 29.72, 29.98],
+  [30.44, 30.49, 31.1, 31.26],
+  [31.68, 31.8, 32.04, 32.24],
+  [32.74, 32.88, 33.16, 33.38, 33.84, 34.0, 34.14],
+  [34.8, 35.14, 35.44, 35.82],
+  [36.48, 36.84, 37.2],
+  [37.71, 37.76, 38.34, 38.56],
+  [38.86, 39.14, 39.4, 39.62],
+  [40.1, 40.44, 40.98, 41.14]];
+const VOICE_END = 41.24, DURATION = 43.7;

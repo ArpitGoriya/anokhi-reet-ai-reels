@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-18
 - **Made by:** dhruvifewtone-wq
-- **Status:** script approved
+- **Status:** video sent
 
 ## Brief
 
@@ -47,7 +47,7 @@ Everything here is applied in every round and never silently reverted.
 
 ## Voice-over
 
-- File: `output/<name>.mp3` (on the maker's computer) — approved: no
+- File: `output/female-ek-lehenge-ka-hisaab-take1.mp3` (on the maker's computer) — approved: yes (2026-11-18)
 - Captions timed with `tools/caption_timing.py` (redo after every new take)
 
 ## Feedback rounds
@@ -57,13 +57,21 @@ Everything here is applied in every round and never silently reverted.
 ## Caption
 
 ```
+Ek lehenga season mein kitna kamaake de sakta hai? 🧮
+
+Hemaben ne apni dukaan ka hisaab lagaya (sirf udaharan): mahine mein sirf ek extra rental, 15 outfits, 3 mahine ka season.
+Aap apne numbers lagao, aur apna kharcha ghatao.
+Shuru karna aasaan: WhatsApp pe photos aur rent price bhejo, shop Anokhi Reet pe online.
+
+Apna hisaab khud lagao. Comment mein "LIST" likho 👇
+
+#RentalShop #LehengaOnRent #AnokhiReet #WeddingSeason #ShopOwner
 ```
 
 ## Added to the library (at least two per reel)
 
-- (planned) Chalkboard set (green board in a shop) with hand-written chalk text and chalk drawings.
-- (planned) Chalk props: chalk lehenga, phone, customer icons, coin; gold circle / double underline; chalk dust puff.
-- (planned) New cast: Hemaben (rental shop owner with chalk), talking to camera.
+- Chalkboard set (`chalkboardBG`) and hand-drawn chalk (`chalkSVG`/`chalkAuto`, `CHALK` shapes, `chalkAt`, `chalkDust`).
+- New cast: `HEMABEN`, talking to camera. All in `animation/CHANGELOG.md`.
 
 ## Suggested default (for the owner)
 

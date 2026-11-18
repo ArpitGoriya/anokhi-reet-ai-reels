@@ -29,6 +29,15 @@ See [GUIDE.md](GUIDE.md) section 8.
   `personIcon`, `calendarSVG` flying pages: the library is paying off.
 - **New cast:** Meena (`MEENA.shop`, `.night`) and her husband (`PATI`).
 
+## 2026-11-18: Ek lehenge ka hisaab (dhruvifewtone-wq)
+
+- **New set: chalkboard** (`chalkboardBG(id, {x0, y0, x1, y1})`): a big green board on a shop wall, wood frame,
+  chalk tray, faint smudges.
+- **Hand-drawn chalk** (`chalkSVG(d, {ct, cd, col, w})` + `chalkAuto(s, t)`): SVG paths draw themselves at a caption
+  time; ready shapes in `CHALK` (lehenga, phone, person, coin, box, ring, underline), moved with `chalkAt(d, x, y, sc)`;
+  `chalkDust(x, y, at)` for a tap. Chalk words: `.chalk nc` + `data-k="write"`. Keep the camera still
+  (`cam: [1, 1], noSettle: true`) so HTML chalk and SVG chalk stay lined up.
+- **New cast:** `HEMABEN` (rental shop owner, glasses, marigold kurta, maroon dupatta) talking to camera with lip sync.
 ## 2026-11-17: Last minute invitation (dhruvifewtone-wq)
 
 - **New set: street** (`streetBG(id, {sign, dress})`): office building on the main road, a side lane beside it, and a

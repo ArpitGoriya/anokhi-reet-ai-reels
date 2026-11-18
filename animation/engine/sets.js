@@ -342,3 +342,41 @@ function splitSVG(id, left, right) {
   return `<clipPath id="${id}L"><rect x="0" y="0" width="540" height="${H}"/></clipPath><clipPath id="${id}R"><rect x="540" y="0" width="540" height="${H}"/></clipPath>` +
     `<g clip-path="url(#${id}L)">${left}</g><g clip-path="url(#${id}R)">${right}</g><rect x="533" y="0" width="14" height="${H}" fill="#fff" stroke="${OL}" stroke-width="4"/>`;
 }
+
+// ===== Chalkboard (Ek lehenge ka hisaab, 2026-11-18) =====
+// chalkboardBG(id, {x0, y0, x1, y1}): a big green chalkboard on a shop wall, wood frame, chalk tray, faint smudges.
+// Chalk drawings: chalkSVG(d, {w, col, ct, cd}) draws path d (in scene coordinates) by hand from time ct over cd s;
+// call chalkAuto(s, t) in the scene's upd. CHALK has ready-made shapes (centred on 0,0): lehenga, phone, person,
+// coin, box(w,h), ring(rx,ry), underline(w). Chalk words: <div class="chalk nc" data-t=".." data-k="write">.
+const CHALK_W = '#F4EFE3';
+function chalkboardBG(id, o = {}) {
+  const x0 = o.x0 || 50, y0 = o.y0 || 300, x1 = o.x1 || 1030, y1 = o.y1 || 1150;
+  let s = wallSVG('#F3DCC0', '#EACBA8');
+  s += `<rect x="${x0}" y="${y0}" width="${x1 - x0}" height="${y1 - y0}" rx="22" fill="${C.woodDark}" stroke="${OL}" stroke-width="${OW}"/>`;
+  s += `<rect x="${x0 + 24}" y="${y0 + 24}" width="${x1 - x0 - 48}" height="${y1 - y0 - 48}" rx="10" fill="#2F4A3A"/>`;
+  [[x0 + 220, y0 + 260, 160, 60], [x1 - 260, y0 + 480, 200, 70], [x0 + 400, y1 - 180, 240, 50]].forEach(([x, y, rx, ry]) => { s += `<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="#FFFFFF" opacity=".05"/>`; });
+  s += `<rect x="${x0 + 10}" y="${y1 - 6}" width="${x1 - x0 - 20}" height="26" rx="8" fill="${C.wood}" stroke="${OL}" stroke-width="4"/>`;
+  s += `<rect x="${x0 + 120}" y="${y1 - 16}" width="60" height="14" rx="6" fill="${CHALK_W}" stroke="${OL}" stroke-width="2"/><rect x="${x0 + 200}" y="${y1 - 16}" width="44" height="14" rx="6" fill="${C.gold}" stroke="${OL}" stroke-width="2"/>`;
+  s += floorSVG('#A47648');
+  return s;
+}
+function chalkSVG(d, o = {}) {
+  return `<path d="${d}" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" fill="none" stroke="${o.col || CHALK_W}" stroke-width="${o.w || 7}" stroke-linecap="round" stroke-linejoin="round" opacity=".92" data-ct="${o.ct || 0}" data-cd="${o.cd || .6}"/>`;
+}
+function chalkAuto(s, t) {
+  if (!s._ch) s._ch = [...s.g.querySelectorAll('[data-ct]')].map(el => [el, T(el.dataset.ct), +el.dataset.cd]);
+  s._ch.forEach(([el, t0, d]) => el.setAttribute('stroke-dashoffset', (1 - E.io(clamp((t - t0) / d))).toFixed(3)));
+}
+// move a CHALK shape: chalkAt(shape, x, y, sc)
+const chalkAt = (d, x, y, sc = 1) => d.replace(/(-?\d+\.?\d*),(-?\d+\.?\d*)/g, (m, a, b) => `${(+a * sc + x).toFixed(1)},${(+b * sc + y).toFixed(1)}`).replace(/([hv])(-?\d+\.?\d*)/g, (m, c, v) => `${c}${(+v * sc).toFixed(1)}`);
+const CHALK = {
+  lehenga: 'M-36,-96 L36,-96 L44,-44 L-44,-44 Z M-44,-38 Q-84,40 -118,112 Q0,142 118,112 Q84,40 44,-38 M-90,80 Q0,104 90,80',
+  phone: 'M-46,-84 L46,-84 Q60,-84 60,-70 L60,70 Q60,84 46,84 L-46,84 Q-60,84 -60,70 L-60,-70 Q-60,-84 -46,-84 Z M-16,64 L16,64',
+  person: 'M-14,-32 Q-14,-46 0,-46 Q14,-46 14,-32 Q14,-18 0,-18 Q-14,-18 -14,-32 Z M-26,26 Q-26,-6 0,-6 Q26,-6 26,26',
+  coin: 'M-40,0 Q-40,-40 0,-40 Q40,-40 40,0 Q40,40 0,40 Q-40,40 -40,0 Z M-12,-14 L14,-14 M-12,0 L14,0 M-4,-14 Q16,-14 10,6 L-10,24',
+  box: (w, h) => `M${-w / 2},${-h / 2} L${w / 2},${-h / 2 + 4} L${w / 2 - 3},${h / 2} L${-w / 2 + 2},${h / 2 - 3} Z`,
+  ring: (rx, ry) => `M${-rx},0 Q${-rx},${-ry} 0,${-ry} Q${rx},${-ry} ${rx},0 Q${rx},${ry} 0,${ry} Q${-rx * 1.1},${ry} ${-rx * 1.05},${-ry * .15}`,
+  underline: w => `M${-w / 2},0 Q0,8 ${w / 2},-2 M${-w / 2 + 20},18 Q0,26 ${w / 2 - 10},16`,
+};
+// a puff of chalk dust at (x, y) from time `at`
+function chalkDust(x, y, at) { return [[-20, -10, 12], [14, -18, 9], [6, 12, 10], [-8, 20, 7]].map(([dx, dy, r]) => `<g transform="translate(${x + dx},${y + dy})"><g data-t="${at}" data-k="fade" data-d=".15" data-out="${at}+0.5"><circle r="${r}" fill="#FFFFFF" opacity=".55"/></g></g>`).join(''); }
