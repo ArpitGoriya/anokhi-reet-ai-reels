@@ -3,6 +3,11 @@
 Every reel adds at least one improvement to the engine or library and writes it here (newest first).
 See [GUIDE.md](GUIDE.md) section 8.
 
+## 2026-11-19: extra caption chunks (Dukaan-dukaan video 3)
+
+- A caption chunk can be added between two others without renumbering: name it `c2b` (a-d after the number).
+  `T('c2b+0.2')` and `tools/caption_timing.py` both accept it; `c8e` still means "end of c8".
+
 ## 2026-11-18: covered lehengas, lock, plain book, pocket, Nisha (₹2.5 lakh ki almari)
 
 - **New props:** `coveredLehengaSVG(c, d, sc)` (lehenga in a clear plastic cover with a zip line), `lockSVG()`,

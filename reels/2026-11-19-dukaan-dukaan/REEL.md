@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-19
 - **Made by:** dhruvifewtone-wq
-- **Status:** video 2 sent
+- **Status:** video 3 sent
 
 ## Brief
 
@@ -53,13 +53,15 @@ Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- File: `output/female-dukaan-dukaan-take3.mp3` (script v2; take 2 was video 1) — approved: yes, 2026-11-19
+- File: `output/female-dukaan-dukaan-take4.mp3` (script v3: "Ek baar rent pe outfit dhoondhne mein 4 ghante lage") — approved: yes, 2026-11-19
+- Earlier: take 3 (script v2, video 2), take 2 (video 1)
 - Captions timed with `tools/caption_timing.py` (c6, c17, c18 nudged by hand to the voice's pauses).
 
 ## Video
 
 - `output/2026-11-19-dukaan-dukaan.mp4` (36 s), video 1 sent 2026-11-19.
 - `output/2026-11-19-dukaan-dukaan-v2.mp4` (44 s, script v2, voice take 3), video 2 sent 2026-11-19.
+- `output/2026-11-19-dukaan-dukaan-v3.mp4` (41 s, voice take 4), video 3 sent 2026-11-19.
 
 ## Feedback rounds
 
@@ -70,11 +72,14 @@ Voice text: [`script.txt`](script.txt).
    until the shimmer, then "Ab Smart Komal ✨"; first-frame title overlapped the sun and was smaller than captions →
    bigger title, no sun behind it. Done in video 2: script v2 + voice take 3, hook title 96 px over a sun-free street,
    "? ? ?" app header until the reveal (c20), reveal + switch scene, comment end card with both Komals.
+3. Video 2 note (teammate, 2026-11-19): the hook should say what took 4 hours → "Ek hi Komal, ek hi reception. Ek baar
+   rent par outfit dhoondhne mein 4 ghante lage aur ek baar bas 15 minute"; voice take 4, new caption chunk c2b
+   ("4 ghante lage…"), the "4 ghante" timer pops on it.
 
 ## Caption
 
 ```
-Ek hi Komal… ek baar 4 ghante, ek baar 15 minute. Fark kya tha? 🤔
+Ek hi Komal… ek baar rent pe outfit dhoondhne mein 4 ghante, ek baar sirf 15 minute. Fark kya tha? 🤔
 
 Ghar baithe outfits, photos aur rent price dekho, compare karo, aur seedha ek dukaan jao 📱✅ (App ka naam? End tak dekho 👀)
 

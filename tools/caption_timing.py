@@ -189,7 +189,7 @@ def main():
     if not voice.is_file():
         raise SystemExit(f"Voice file not found: {voice}")
 
-    counts = [int(n) for n in re.findall(r"\['c\d+',\s*'(?:[^'\\]|\\.)*',\s*(\d+)\]", src)]
+    counts = [int(n) for n in re.findall(r"\['c\w+',\s*'(?:[^'\\]|\\.)*',\s*(\d+)\]", src)]
     words = (reel / "script.txt").read_text(encoding="utf-8").split()
     if sum(counts) != len(words):
         raise SystemExit(f"CHUNKS cover {sum(counts)} words but script.txt has {len(words)}: fix the counts first.")

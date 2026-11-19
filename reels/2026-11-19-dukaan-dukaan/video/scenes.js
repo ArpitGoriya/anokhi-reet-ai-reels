@@ -18,7 +18,7 @@ addScene(0, 'c5', {
   html: `<div class="title" style="top:410px;font-size:96px" data-t="-1" data-out="c4-0.1">Ek hi Komal…<br><span class="g">4 ghante</span> vs <span class="g">15 min</span></div>` +
     `<div class="title" style="top:410px;font-size:104px" data-t="c4">Fark kya tha? 🤔</div>` +
     pillH(270, 600, '-1', 'Purani <span class="hl">Komal</span>') + pillH(810, 600, '-1', 'Smart <span class="hl">Komal</span>', 'gold') +
-    pillH(270, 1250, 'c2+0.4', '⏱️ 4 ghante', 'big') + pillH(760, 1250, 'c3+0.9', '⏱️ 15 min', 'gold big'),
+    pillH(270, 1250, 'c2b+0.2', '⏱️ 4 ghante', 'big') + pillH(760, 1250, 'c3+0.9', '⏱️ 15 min', 'gold big'),
   cam: [1, 1.04], fy: 900,
   upd(t) {
     splitAt('s1', 540); bazaarScroll('s1Lbz', 0, t);
