@@ -10,7 +10,7 @@
   an Anokhi Reet team member answers each one and the bubble pops, until the screen is clear and he lists his shop.
 - **For:** Rental shop owners (lehengas, sherwanis) who are curious but unsure. Meant as a pinned post.
 - **One message:** Whatever your doubt, listing your shop is simple: ask us in the comments or write "LIST".
-- **Voice:** male (Sadachbia), as the narrator.
+- **Voice:** female (Vindemiatrix), as the narrator (switched from male after hearing male take 1, 2026-11-19).
 - **Characters:** New: **Hareshbhai** (50s, careful, slightly doubtful rental shop owner) and **Neha** (20s,
   friendly Anokhi Reet team member). Renters on phones in scene 5 (reuse `CUSTOMER_W`, `GUEST_W1`, `GUEST_M`).
 - **Length:** about 50-55 s (the voice decides).
@@ -46,7 +46,7 @@ Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- File: `output/male-sawal-bahut-hain-take1.mp3` (on the maker's computer) — approved: no
+- File: `output/female-sawal-bahut-hain-take1.mp3` (on the maker's computer) — approved: no
 - Captions timed with `tools/caption_timing.py` (redo after every new take)
 
 ## Feedback rounds
