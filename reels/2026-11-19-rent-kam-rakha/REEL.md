@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-19
 - **Made by:** dhruvifewtone-wq
-- **Status:** script approved, voice take 1
+- **Status:** script approved, voice take 2
 
 ## Brief
 
@@ -53,12 +53,13 @@ Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- File: `output/female-rent-kam-rakha-take1.mp3` (on the maker's computer) — approved: no
+- File: `output/female-rent-kam-rakha-take2.mp3` (on the maker's computer) — approved: no
 - Captions timed with `tools/caption_timing.py` (redo after every new take; check against the voice's pauses)
 
 ## Feedback rounds
 
-1. (none yet)
+1. Voice take 1: at about 35 s "teen kaam kiye" sounded like "teen kam kiye" → a short pause before "काम"
+   ("तीन... काम किए"); take 2 (the speech check now hears "तीन काम").
 
 ## Caption
 
