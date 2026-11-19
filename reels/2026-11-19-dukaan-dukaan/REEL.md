@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-19
 - **Made by:** dhruvifewtone-wq
-- **Status:** video 4 sent
+- **Status:** final (video 4 approved, 2026-11-19)
 
 ## Brief
 
