@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-19
 - **Made by:** dhruvifewtone-wq
-- **Status:** feedback round 2 (script v2 approved, voice take 3)
+- **Status:** video 2 sent
 
 ## Brief
 
@@ -53,12 +53,13 @@ Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- File: `output/female-dukaan-dukaan-take3.mp3` (script v2; take 2 was video 1) — approved: no
+- File: `output/female-dukaan-dukaan-take3.mp3` (script v2; take 2 was video 1) — approved: yes, 2026-11-19
 - Captions timed with `tools/caption_timing.py` (c6, c17, c18 nudged by hand to the voice's pauses).
 
 ## Video
 
 - `output/2026-11-19-dukaan-dukaan.mp4` (36 s), video 1 sent 2026-11-19.
+- `output/2026-11-19-dukaan-dukaan-v2.mp4` (44 s, script v2, voice take 3), video 2 sent 2026-11-19.
 
 ## Feedback rounds
 
@@ -67,7 +68,8 @@ Voice text: [`script.txt`](script.txt).
    15 minute… fark kya tha?" with the name revealed near the end; end card only said Download → add "Purani ya Smart?
    Comment karo 👇" (end card, voice, caption, pinned comment); both labels read "Smart Komal" at 30 s → "Purani Komal"
    until the shimmer, then "Ab Smart Komal ✨"; first-frame title overlapped the sun and was smaller than captions →
-   bigger title, no sun behind it. New script (version 2) and voice needed.
+   bigger title, no sun behind it. Done in video 2: script v2 + voice take 3, hook title 96 px over a sun-free street,
+   "? ? ?" app header until the reveal (c20), reveal + switch scene, comment end card with both Komals.
 
 ## Caption
 
@@ -89,6 +91,7 @@ Aap Purani Komal ho ya Smart Komal? Comment karo 👇
   (sun, heat haze), and `splitDynSVG` + `splitAt`: a split screen whose divider moves (both in `engine/sets.js`).
 - `sunSVG`, `autoSVG` (auto-rickshaw), `tumbleweedSVG` in `engine/props.js`.
 - New cast: Komal (`KOMAL.purani` / `KOMAL.smart`).
+- `bazaarBG` got a `noSun` option (keeps big hook titles clear).
 
 ## Suggested default (for the owner)
 
@@ -96,4 +99,8 @@ Aap Purani Komal ho ya Smart Komal? Comment karo 👇
 
 ## Lessons
 
-- (after the reel)
+- Don't name the app in the first third of a comparison reel: a "fark kya tha?" mystery with a late reveal keeps people
+  watching; hide the name on drawn app screens too (`mysteryHeader`).
+- If the reel asks a question ("Aap kaunsi Komal ho?"), the end card, the caption and a pinned comment should ask it too.
+- First-frame title: bigger than the captions (90-100 px) and nothing busy behind it.
+- During a switch, keep the old label on screen until the change happens, then swap it.

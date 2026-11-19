@@ -390,13 +390,13 @@ const CHALK = {
 // a puff of chalk dust at (x, y) from time `at`
 function chalkDust(x, y, at) { return [[-20, -10, 12], [14, -18, 9], [6, 12, 10], [-8, 20, 7]].map(([dx, dy, r]) => `<g transform="translate(${x + dx},${y + dy})"><g data-t="${at}" data-k="fade" data-d=".15" data-out="${at}+0.5"><circle r="${r}" fill="#FFFFFF" opacity=".55"/></g></g>`).join(''); }
 // ===== Dukaan-dukaan ki bhaag-daud (2026-11-19): hot bazaar street, moving split screen =====
-// bazaarBG(id, {n}): a hot market street: warm sky, sun (`${id}-sun`), a long row of n small rental shops "DUKAAN 1..n"
+// bazaarBG(id, {n, noSun, sunX, sunY}): a hot market street: warm sky, sun (`${id}-sun`), a long row of n small rental shops "DUKAAN 1..n"
 // (`${id}-row`, 300 px each: slide it left with bazaarScroll(id, x) so a walker seems to pass them), heat haze
 // (`${id}-haze`), footpath and road. Shop i is centred at x = 150 + i * 300 before scrolling.
 function bazaarBG(id, o = {}) {
   const n = o.n || 12, sw = 300;
   let s = `<rect width="${W}" height="${H}" fill="#F7D9A6"/><rect y="420" width="${W}" height="200" fill="#F5CF92" opacity=".6"/>`;
-  s += `<g transform="translate(${o.sunX || 170},${o.sunY || 330})"><g id="${id}-sun">${sunSVG()}</g></g>`;
+  if (!o.noSun) s += `<g transform="translate(${o.sunX || 170},${o.sunY || 330})"><g id="${id}-sun">${sunSVG()}</g></g>`;
   s += `<g id="${id}-row">`;
   for (let i = 0; i < n; i++) {
     const [c1, d1] = SHOP_LEH[i % 8], [c2, d2] = SHOP_LEH[(i + 3) % 8];

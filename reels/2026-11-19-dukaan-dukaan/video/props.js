@@ -18,10 +18,13 @@ function atHand(pid, who, h, dx = 0, dy = 0, r = 0) { const p = toScene(who, h);
 // The app's browse screen for phoneSVG(…, 560, 1000, inner): chips (`${id}-c0..2`, `-on` / `-t` to select), four
 // outfit cards from different shops (`${id}-k0..3`; card 1 is the blue one), "Rent" pills (`${id}-r0..3`, no amounts)
 // and a tick on the blue card (`${id}-sel`).
-function browseScreen(id) {
+// mysteryHeader(): the app header with its name hidden ("? ? ?") until the reveal
+function mysteryHeader(y = -430) { return `<rect x="-264" y="${y - 38}" width="528" height="84" fill="url(#mar)"/><circle cx="-200" cy="${y + 4}" r="26" fill="${C.cream}" stroke="${C.goldTan}" stroke-width="4"/><text x="-200" y="${y + 16}" text-anchor="middle" font-family="Inter" font-weight="900" font-size="32" fill="${C.red}">?</text><text x="-160" y="${y + 16}" font-family="Inter" font-weight="800" font-size="34" fill="${C.cream}" letter-spacing="6">? ? ?</text>`; }
+// browseScreen(id, mystery): mystery = true hides the app name; `${id}-real` (hidden) holds the real header to flip in
+function browseScreen(id, mystery = false) {
   const chips = ['City', 'Reception', 'Budget'];
   const looks = [{ c: C.pink, d: C.pinkDark, dupatta: '#F4B9C8' }, BLUE, { c: C.emerald, d: C.emeraldDark, dupatta: '#A6D3B0' }, { c: C.lehenga, d: C.lehengaDark, dupatta: '#E8C25E' }];
-  let s = arHeader();
+  let s = mystery ? mysteryHeader() + `<g id="${id}-real" opacity="0">${arHeader()}</g>` : arHeader();
   s += chips.map((c, i) => `<g transform="translate(${-170 + i * 170},-330)"><rect x="-80" y="-30" width="160" height="60" rx="30" fill="#F2EEE9" stroke="#E6E0D9" stroke-width="3"/><rect id="${id}-c${i}-on" x="-80" y="-30" width="160" height="60" rx="30" fill="#141110" opacity="0"/><text x="0" y="10" text-anchor="middle" font-family="Inter" font-weight="700" font-size="${c.length > 8 ? 24 : 28}" fill="#655C57">${c}</text><text id="${id}-c${i}-t" x="0" y="10" text-anchor="middle" font-family="Inter" font-weight="700" font-size="${c.length > 8 ? 24 : 28}" fill="#fff" opacity="0">${c}</text></g>`).join('');
   looks.forEach((lk, i) => {
     const x = i % 2 ? 125 : -125, y = i < 2 ? -90 : 260;
