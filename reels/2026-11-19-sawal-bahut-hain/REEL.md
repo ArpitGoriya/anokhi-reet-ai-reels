@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-19
 - **Made by:** dhruvifewtone-wq
-- **Status:** feedback round 1 (script v2 approved, voice take 2)
+- **Status:** video 2 sent
 
 ## Brief
 
@@ -43,7 +43,7 @@
 | 3 | Doosra sawal: / *"Rent price kaun tay karega?"* / Jawab: *aap!* / Aapke outfits, *aapka price*. | Bubble 2: "Rent price kaun tay karega?" Neha points straight at Hareshbhai; a big gold "AAP!" stamps onto the screen. His eyebrows jump up, he points at himself. A price tag on a lehenga on his rail flips to "Aapka price". Bubble pops. | Price? → **AAP tay karo ✅** |
 | 4 | Teesra sawal: *"Mujhe computer nahi aata."* / Jawab: *zaroorat hi nahi*. / Bas *WhatsApp* pe photos aur rent price bhejo… / aur *shop online*. | Bubble 3: "Mujhe computer nahi aata!" Hareshbhai shakes his head, hands up. A computer icon gets a soft cross. Phone fills the frame: a WhatsApp-style chat (flat, not the real logo). Three steps pop in: 💬 Message → 📸 Photos + rent price → ✅ Shop live. Bubble pops. | Computer? **Nahi chahiye ✅** · Bas WhatsApp 💬 |
 | 5 | Chautha sawal: *"Customer aayenge bhi?"* / Jawab: renters app pe *city, occasion* aur *budget* se / outfit dhoondhte hain… / aur *seedha aapki shop* tak aate hain. | Bubble 4: "Customer aayenge bhi?" Split screen of three renters on their phones (a young woman, an auntie, an uncle), each tapping a filter chip: City · Occasion · Budget. Dotted lines from their phones run to Hareshbhai's shop front. Bubble pops. | Customer? **City • Occasion • Budget 📱** |
-| 6 | Aur *5th, sabse important* sawal: *"Pasand na aaya toh?"* / Jawab: *chhote se* shuru karo… / kuch outfits list karo, / aur *khud dekho*. | Bubble 5 glows gold with a ⭐: "Pasand na aaya toh?" Neha holds up three lehengas on hangers (out of a full rail), smiles. Hareshbhai rubs his chin (thinking), then nods. Last bubble pops; the sky above his head is clear, he lets out a relieved breath (shoulders drop, eyes close). | 5/5 ⭐ Sabse important · Chhote se shuru karo ✅ · Khud dekho 👀 |
+| 6 | Aur *5th, sabse important* sawal: *"Pasand nahi aaya toh?"* / Jawab: *chhote se* shuru karo… / kuch outfits list karo, / aur *khud dekho*. | Bubble 5 glows gold with a ⭐: "Pasand nahi aaya toh?" Neha holds up three lehengas on hangers (out of a full rail), smiles. Hareshbhai rubs his chin (thinking), then nods. Last bubble pops; the sky above his head is clear, he lets out a relieved breath (shoulders drop, eyes close). | 5/5 ⭐ Sabse important · Chhote se shuru karo ✅ · Khud dekho 👀 |
 | 7 | *Saare sawal khatam…* / aur Hareshbhai ne *usi din* / apni shop *list* kar di. | Hareshbhai uncrosses his arms, grins, gives a thumbs up. He photographs a lehenga on his phone and sends it on WhatsApp; his shop card appears on a phone with a gold "Live ✅" badge that pops. | **Sawal khatam, shop online 🎉** |
 | 8 | Aapke mann mein bhi *koi sawal* hai? / *Comment* mein puchho, / ya *"LIST"* likho… / hum *help* karenge! | Hareshbhai faces us, waves us closer; one small empty "?" bubble pops up over our side. Maroon follow card: Anokhi Reet wordmark. | Sawal? **Comment karo 👇** · LIST likho · anokhireet.in |
 
@@ -51,13 +51,16 @@ Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- File: `output/female-sawal-bahut-hain-take2.mp3` (script v2; take 1 was video 1) — approved: no
+- File: `output/female-sawal-bahut-hain-take4.mp3` (script v2; take 1 was video 1) — approved: yes, 2026-11-19
+- Take 2: Q5 sounded like "Pasand aaya to" → take 3 "पसंद ना आया... तो?" (still soft) and take 4 "पसंद नहीं आया... तो?";
+  the teammate chose take 4, so Q5 now reads "Pasand nahi aaya toh?" everywhere.
 - Voice switched from male to female after hearing male take 1 (teammate, 2026-11-19).
 - Captions: whisper timed c1-c7 and c28-c31; it misheard 13-41 s, so c8-c27 were set by hand from the voice's pauses.
 
 ## Video
 
 - `output/2026-11-19-sawal-bahut-hain.mp4` (47 s), video 1 sent 2026-11-19.
+- `output/2026-11-19-sawal-bahut-hain-v2.mp4` (58 s, script v2, voice take 4), video 2 sent 2026-11-19.
 
 ## Feedback rounds
 
@@ -75,7 +78,7 @@ Online listing se pehle har rental shop owner ke 5 sawal… 5th sabse important 
 ❓ Kharcha? Plans app pe saaf likhe hain, aur sawal WhatsApp pe seedha pucho
 ❓ Rent price? Aap khud tay karo
 ❓ Computer nahi aata? Bas WhatsApp pe photos bhejo
-❓ Pasand na aaya toh? Chhote se shuru karo
+❓ Pasand nahi aaya toh? Chhote se shuru karo
 
 Aur koi sawal? Comment mein puchho, ya "LIST" likho 💬
 
@@ -100,4 +103,11 @@ Aur koi sawal? Comment mein puchho, ya "LIST" likho 💬
 
 ## Lessons
 
-- (after the reel)
+- The first line has to name the viewer and promise a payoff ("har rental shop owner ke 5 sawal… 5th sabse
+  important"); a generic "Sawal bahut hain?" is weaker.
+- Without the fee lines, a cost answer still needs an action: "WhatsApp pe seedha pucho" + a chat on screen.
+- Short Hindi negatives can get swallowed by the voice ("पसंद न आया" sounded like "पसंद आया"): use "नहीं", and check
+  key words with the speech recogniser before handing over.
+- Whisper often loses track of long middle stretches of this voice: check STARTS against the pauses
+  (ffmpeg silencedetect) and set those captions by hand.
+- Keep the shop sign out of shots with a big two-line title at the top.
