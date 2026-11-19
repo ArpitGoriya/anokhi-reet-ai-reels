@@ -79,6 +79,15 @@ See [GUIDE.md](GUIDE.md) section 8.
 - Caption timing: whisper's script matcher lost its place after 31 s on this take (only 59 of 145 words matched);
   the last 12 captions were set by hand from whisper's own word times. Worth making the matcher re-anchor.
 
+## 2026-11-19: two shops, restaurant row, study props (Rent kam rakha, Dukaan ka Funda)
+
+- **Sets** in `engine/sets.js`: `twoShopsBG(id, {left, right})` + `twoShopsFront(id)`: two rental shops side by side
+  (sign, lehenga rail, a tag under each lehenga `${id}-L-t0..3` / `-R-t0..3`, low counters in front);
+  `restaurantRowBG(id, {cheap})`: an empty cheap restaurant with a "Thali ₹49" board beside a full one.
+- **Props** in `engine/props.js`: `drinkGlassSVG(tag)` (plain glass of a red drink with a price tag, no bottle: fine for
+  Gujarat audiences), `brainSVG(id)` (with `${id}-glow`), `shopBoardSVG(text, 'sale' | 'premium')`, `starSVG(r)`.
+- **New cast**: Rekhaben and Jignaben.
+
 ## 2026-11-19: bazaar street, moving split screen, Komal (Dukaan-dukaan ki bhaag-daud)
 
 - **Bazaar street** in `engine/sets.js`: `bazaarBG(id, {n})` (hot sky, sun, a row of shops "DUKAAN 1..n", heat haze,

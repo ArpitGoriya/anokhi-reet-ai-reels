@@ -1,11 +1,73 @@
 // Caption chunks: [id, Roman Hinglish caption (*gold* words), number of script.txt words it covers]
 // tools/caption_timing.py fills STARTS / VOICE_END / DURATION from the voice (re-run after every voice take).
 const CHUNKS = [
-  ['c1', 'Ek *sawaal*:', 2],
-  ['c2', 'shaadi ka outfit *kitni baar* pehnte ho?', 6],
-  ['c3', 'Ye hain *Hetal ben*.', 4],
-  ['c4', 'Follow karo *Anokhi Reet.*', 4],
+  ['c1', '*Rent sabse kam* rakha…', 4],
+  ['c2', 'phir bhi *customer nahi?*', 4],
+  ['c3', 'Rekhaben ne socha,', 3],
+  ['c4', '*kam rent* yaani *zyada customer.*', 5],
+  ['c5', 'Par customer bolte,', 3],
+  ['c6', '*"Itna sasta? Kuch toh gadbad hogi…"*', 6],
+  ['c7', '*Same mehnat, same bookings.*', 4],
+  ['c8', 'Rekhaben ko *₹8,000…*', 4],
+  ['c9', 'Jignaben ko *₹20,000.*', 4],
+  ['c10', 'Fark: *₹12,000, har mahine.*', 5],
+  ['c11', 'Usi *Sunday*,', 2],
+  ['c12', 'Rekhaben ne khud *sabse sasti thali* wala restaurant chhod diya…', 10],
+  ['c13', '*"Pata nahi kaisi hogi."*', 4],
+  ['c14', '*Saal 2008* mein ek *research* hui.', 8],
+  ['c15', 'Logon ko *same wine*,', 4],
+  ['c16', 'alag *price tag* ke saath di gayi.', 7],
+  ['c17', '*Zyadatar* logon ne *mehenge tag* wali ko behtar bataya…', 9],
+  ['c18', 'aur unke *dimaag* ne sach mein *zyada khushi* mehsoos ki.', 10],
+  ['c19', 'Rekhaben ne *teen kaam* kiye.', 5],
+  ['c20', 'Ek: *sahi rent* rakha,', 4],
+  ['c21', 'aur *Anokhi Reet* pe *saaf photos* ke saath list kiya.', 10],
+  ['c22', 'Do: *quality dikhayi…*', 3],
+  ['c23', '*kapda, kaam, saaf-safai.*', 3],
+  ['c24', 'Teen: *"Sasta"* ka *board hataya.*', 5],
+  ['c25', 'Ab customer bhi *zyada*,', 4],
+  ['c26', 'aur rent bhi *poora.*', 4],
+  ['c27', '*Sasta rent nahi, sahi rent* bikta hai.', 7],
+  ['c28', 'Aap apne lehenge ka *rent kitna* rakhte ho?', 8],
+  ['c29', '*Comment* karo…', 2],
+  ['c30', 'aur shop online laane ke liye,', 6],
+  ['c31', 'comment mein *"ONLINE"* likho!', 4],
 ];
-// Chunk start times (s): placeholder until a voice exists.
-const STARTS = [0.2, 1.6, 4.4, 6.6];
-const VOICE_END = 8.6, DURATION = 9.6;
+
+// Chunk start times (s): set by hand from whisper word times + the voice pauses (whisper missed the first 3 s and shifted every chunk), voice female-rent-kam-rakha-take2.mp3.
+const STARTS = [
+  0.00, 2.05, 3.30, 4.45, 6.55, 7.58, 10.35, 12.02, 13.62, 15.28, 17.34, 18.48, 21.46, 22.70, 25.06, 26.38, 27.72, 30.62, 33.30, 35.24, 36.82, 39.34, 41.18, 42.64, 44.95, 46.00, 46.90, 49.28, 51.12, 51.88, 53.55];
+// When each script word of a chunk is spoken (drives the word-by-word highlight).
+const WORDS = [
+  [0.05, 0.5, 0.95, 1.4],
+  [2.1, 2.35, 2.6, 2.85],
+  [3.35, 3.65, 3.95],
+  [4.5, 4.87, 5.24, 5.61, 5.98],
+  [6.6, 6.86, 7.12],
+  [7.63, 8.05, 8.47, 8.89, 9.31, 9.73],
+  [10.4, 10.76, 11.11, 11.46],
+  [12.07, 12.41, 12.75, 13.08],
+  [13.67, 14.02, 14.38, 14.73],
+  [15.33, 15.69, 16.05, 16.42, 16.78],
+  [17.39, 17.84],
+  [18.53, 18.8, 19.08, 19.35, 19.62, 19.9, 20.17, 20.44, 20.71, 20.99],
+  [21.51, 21.76, 22.01, 22.25],
+  [22.75, 23.01, 23.28, 23.54, 23.8, 24.07, 24.33, 24.6],
+  [25.11, 25.38, 25.64, 25.91],
+  [26.43, 26.59, 26.74, 26.9, 27.05, 27.21, 27.36],
+  [27.77, 28.06, 28.36, 28.65, 28.95, 29.24, 29.54, 29.83, 30.13],
+  [30.67, 30.91, 31.16, 31.4, 31.64, 31.88, 32.13, 32.37, 32.61, 32.86],
+  [33.35, 33.69, 34.03, 34.36, 34.7],
+  [35.29, 35.62, 35.95, 36.29],
+  [36.87, 37.1, 37.32, 37.55, 37.78, 38.0, 38.23, 38.46, 38.69, 38.91],
+  [39.39, 39.92, 40.45],
+  [41.23, 41.63, 42.04],
+  [42.69, 43.1, 43.51, 43.93, 44.34],
+  [45.0, 45.2, 45.4, 45.6],
+  [46.05, 46.21, 46.37, 46.54],
+  [46.95, 47.25, 47.56, 47.86, 48.17, 48.47, 48.78],
+  [49.33, 49.53, 49.73, 49.93, 50.12, 50.32, 50.52, 50.72],
+  [51.17, 51.42],
+  [51.93, 52.17, 52.4, 52.64, 52.88, 53.11],
+  [53.6, 53.87, 54.15, 54.42]];
+const VOICE_END = 54.9, DURATION = 56.2;

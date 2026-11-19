@@ -93,3 +93,8 @@ const KOMAL = {
   purani: { hairStyle: 'long', top: C.marigold2, topD: '#D9A52E', pallu: '#E26A8A', border: C.red, skin: '#C98B62', skin2: '#B9784F', skirt: { c: '#D9A52E', d: '#B8862F', b: C.red, w: 190 } },
   smart: { hairStyle: 'long', top: C.pink, topD: C.pinkDark, pallu: '#F4B9C8', border: C.gold, necklace: true, skin: '#C98B62', skin2: '#B9784F', skirt: { c: C.pinkDark, d: '#8E2E4A', b: C.gold, w: 190 } },
 };
+
+// Rekhaben (40s): rental shop owner who priced everything cheap, then learned to set a fair rent. Green saree, yellow
+// pallu. Jignaben (40s): her confident neighbour across the street. Deep blue saree, gold pallu. (Rent kam rakha, 2026-11-19)
+const REKHA = { hairStyle: 'bun', top: '#5B8A3A', topD: '#476F2D', pallu: '#F2C14E', border: C.red, sindoor: true, skin: '#B9784F', skin2: '#A0663F', skirt: { c: '#476F2D', d: '#365622', b: C.gold, w: 205 } };
+const JIGNA = { hairStyle: 'bun', top: '#3A4E8C', topD: '#2C3C6E', pallu: C.gold, border: C.red, sindoor: true, necklace: true, skin: '#C98B62', skin2: '#B9784F', skirt: { c: '#2C3C6E', d: '#1F2B52', b: C.gold, w: 205 } };

@@ -432,3 +432,49 @@ function splitAt(id, x) {
   $(`${id}D`).setAttribute('x', (x - 7).toFixed(1));
   tf($(`${id}Lg`), dx, 0, 1); tf($(`${id}Rg`), dx, 0, 1);
 }
+
+// ===== Rent kam rakha (2026-11-19): two shops side by side, a restaurant row =====
+// twoShopsBG(id, {left: {sign, tag, tagCol, tagTxt}, right: {...}}): a street with two small rental shop fronts next
+// to each other (left centred on x = 270, right on x = 810): board, open front, a rail of lehengas with a hanging tag
+// under each (`${id}-L-t0..3`, `${id}-R-t0..3`). Draw the shopkeepers' busts after it, then twoShopsFront(id) for
+// the two low counters in front of them.
+function twoShopsBG(id, o = {}) {
+  const L = Object.assign({ sign: 'REKHA RENTALS', tag: 'SALE ₹800', tagCol: '#D9363E', tagTxt: '#FFFFFF' }, o.left || {});
+  const R = Object.assign({ sign: 'JIGNA RENTALS', tag: '₹2,000', tagCol: '#FFFFFF', tagTxt: C.red }, o.right || {});
+  let s = `<rect width="${W}" height="${H}" fill="${C.sky}"/><circle cx="930" cy="210" r="56" fill="${C.gold}" opacity=".9"/>`;
+  [[270, L, 'L', '#F3DCC0'], [810, R, 'R', '#EBD3B5']].forEach(([cx, S, k, wall]) => {
+    s += `<rect x="${cx - 255}" y="380" width="510" height="${FLOOR - 380}" fill="${wall}" stroke="${OL}" stroke-width="${OW}"/>`;
+    s += `<rect x="${cx - 225}" y="420" width="450" height="96" rx="14" fill="url(#mar)" stroke="${OL}" stroke-width="${OW}"/><text x="${cx}" y="482" text-anchor="middle" font-family="Inter" font-weight="900" font-size="40" fill="${C.gold}" letter-spacing="2">${S.sign}</text>`;
+    s += `<rect x="${cx - 220}" y="550" width="440" height="${FLOOR - 550}" fill="#4E3A1E" stroke="${OL}" stroke-width="4"/><path d="M${cx - 205},590 H${cx + 205}" stroke="${C.goldTan}" stroke-width="10"/>`;
+    for (let i = 0; i < 4; i++) {
+      const [c, d] = SHOP_LEH[(i + (k === 'R' ? 3 : 0)) % 8], x = cx - 165 + i * 110;
+      s += `<g transform="translate(${x},650)">${lehengaHangerSVG('', { c, d, dupatta: C.goldTan }, .38)}</g>`;
+      s += `<g id="${id}-${k}-t${i}" transform="translate(${x},800)"><path d="M0,-28 V-6" stroke="${OL}" stroke-width="3"/><rect x="-50" y="-6" width="100" height="40" rx="8" fill="${S.tagCol}" stroke="${OL}" stroke-width="3"/><text y="22" text-anchor="middle" font-family="Inter" font-weight="900" font-size="${S.tag.length > 7 ? 17 : 22}" fill="${S.tagTxt}">${S.tag}</text></g>`;
+    }
+  });
+  s += `<rect x="-10" y="${FLOOR}" width="${W + 20}" height="90" fill="#CFC6B8" stroke="${OL}" stroke-width="4"/><rect x="-10" y="${FLOOR + 90}" width="${W + 20}" height="${H - FLOOR - 90}" fill="#6E6A64"/>`;
+  return s;
+}
+function twoShopsFront(id) {
+  return [270, 810].map(cx => `<rect x="${cx - 200}" y="1020" width="400" height="${FLOOR - 1020}" fill="${C.wood}" stroke="${OL}" stroke-width="${OW}"/><rect x="${cx - 214}" y="1006" width="428" height="26" rx="6" fill="${C.woodLight}" stroke="${OL}" stroke-width="${OW}"/>`).join('');
+}
+// restaurantRowBG(id, {cheap}): an evening street with two restaurant fronts: left "BHOJAN" with a standing board
+// (cheap, e.g. "Thali ₹49") and empty tables; right "RASOI", full of people at tables.
+function restaurantRowBG(id, o = {}) {
+  let s = `<rect width="${W}" height="${H}" fill="#F2C9A0"/><rect y="0" width="${W}" height="380" fill="#E9A97E" opacity=".6"/>`;
+  [[270, 'BHOJAN', false], [810, 'RASOI', true]].forEach(([cx, name, full]) => {
+    s += `<rect x="${cx - 255}" y="380" width="510" height="${FLOOR - 380}" fill="${full ? '#F7E1C6' : '#E6D6BF'}" stroke="${OL}" stroke-width="${OW}"/>`;
+    s += `<rect x="${cx - 200}" y="420" width="400" height="90" rx="14" fill="${full ? 'url(#mar)' : '#8C7B6A'}" stroke="${OL}" stroke-width="${OW}"/><text x="${cx}" y="480" text-anchor="middle" font-family="Inter" font-weight="900" font-size="44" fill="${full ? C.gold : '#EDE4D8'}" letter-spacing="3">${name}</text>`;
+    s += `<rect x="${cx - 215}" y="550" width="430" height="440" rx="8" fill="${full ? '#FFF2DF' : '#D8CCBC'}" stroke="${OL}" stroke-width="4"/>`;
+    for (let i = 0; i < 2; i++) {
+      const tx = cx - 100 + i * 200;
+      s += `<rect x="${tx - 70}" y="880" width="140" height="20" rx="6" fill="${C.woodDark}" stroke="${OL}" stroke-width="3"/><path d="M${tx},900 V970" stroke="${OL}" stroke-width="8"/>`;
+      if (full) s += [-1, 1].map(sd => `<g transform="translate(${tx + sd * 52},${830})">${personIcon(SHOP_LEH[(i * 2 + (sd > 0 ? 1 : 0)) % 8][0])}</g>`).join('') + `<ellipse cx="${tx}" cy="876" rx="30" ry="9" fill="#fff" stroke="${OL}" stroke-width="3"/>`;
+    }
+    if (full) s += fairyLightsSVG(560, 0).replace(/cx="(\d+(\.\d+)?)"/g, (m, x) => `cx="${(+x * 430 / W + cx - 215).toFixed(1)}"`);
+  });
+  if (o.cheap !== false) s += `<g transform="translate(140,1060)"><path d="M-70,-90 L70,-90 L90,110 M-70,-90 L-90,110" fill="none" stroke="${C.woodDark}" stroke-width="10"/><rect x="-80" y="-110" width="160" height="130" rx="10" fill="#2E3B2E" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<text y="-60" text-anchor="middle" font-family="Inter" font-weight="800" font-size="30" fill="#F4EFE3">Thali</text><text y="-8" text-anchor="middle" font-family="Inter" font-weight="900" font-size="46" fill="${C.gold}">${o.cheap || '₹49'}</text></g>`;
+  s += `<rect x="-10" y="${FLOOR}" width="${W + 20}" height="90" fill="#CFC6B8" stroke="${OL}" stroke-width="4"/><rect x="-10" y="${FLOOR + 90}" width="${W + 20}" height="${H - FLOOR - 90}" fill="#6E6A64"/>`;
+  return s;
+}

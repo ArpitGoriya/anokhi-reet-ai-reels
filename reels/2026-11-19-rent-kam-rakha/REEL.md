@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-19
 - **Made by:** dhruvifewtone-wq
-- **Status:** script approved, voice take 2
+- **Status:** video sent
 
 ## Brief
 
@@ -53,8 +53,13 @@ Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- File: `output/female-rent-kam-rakha-take2.mp3` (on the maker's computer) — approved: no
-- Captions timed with `tools/caption_timing.py` (redo after every new take; check against the voice's pauses)
+- File: `output/female-rent-kam-rakha-take2.mp3` (on the maker's computer) — approved: yes, 2026-11-19
+- Captions: whisper missed the first 3 s and shifted every chunk, so all starts were set by hand from whisper's word
+  times and the voice's pauses.
+
+## Video
+
+- `output/2026-11-19-rent-kam-rakha.mp4` (56 s), video 1 sent 2026-11-19.
 
 ## Feedback rounds
 
@@ -76,8 +81,11 @@ Aapke best lehenge ka rent kitna hai? Comment karo 👇 Shop online laani hai? "
 
 ## Added to the library (at least two per reel)
 
-- (planned) Rekhaben and Jignaben in the cast; a facing-shops street (two shop fronts across a road); a restaurant
-  front with a menu board; drink glasses with price tags and a brain icon for "a study found" beats; a "SALE" tag.
+- `twoShopsBG` + `twoShopsFront` (two rental shops side by side, tags under every lehenga) and `restaurantRowBG`
+  (an empty cheap restaurant with a "Thali ₹49" board next to a full one) in `engine/sets.js`.
+- `drinkGlassSVG` (a plain glass with a price tag, no bottle), `brainSVG` (with a glow), `shopBoardSVG` ('sale' /
+  'premium') and `starSVG` in `engine/props.js`.
+- New cast: Rekhaben (`REKHA`) and Jignaben (`JIGNA`).
 
 ## Suggested default (for the owner)
 

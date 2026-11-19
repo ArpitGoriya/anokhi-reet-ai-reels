@@ -367,3 +367,28 @@ function tumbleweedSVG(r = 70) {
   for (let i = 0; i < 9; i++) { const a = i * 40, b = a + 150; s += `<path d="M${(Math.cos(a / 57.3) * r).toFixed(1)},${(Math.sin(a / 57.3) * r).toFixed(1)} Q${(Math.cos((a + 70) / 57.3) * r * .2).toFixed(1)},${(Math.sin((a + 70) / 57.3) * r * .2).toFixed(1)} ${(Math.cos(b / 57.3) * r * .9).toFixed(1)},${(Math.sin(b / 57.3) * r * .9).toFixed(1)}" fill="none" stroke="#9A6B3F" stroke-width="5" stroke-linecap="round"/>`; }
   return s + `<circle r="${r}" fill="none" stroke="#8C6239" stroke-width="4" stroke-dasharray="14 10"/>`;
 }
+
+// ===== Rent kam rakha (2026-11-19): drink glass with a price tag, brain, shop boards =====
+// drinkGlassSVG(tag): a plain glass of a red drink (no bottle) on (0,0) = its base, with a hanging price tag
+function drinkGlassSVG(tag = '₹') {
+  return `<ellipse cx="0" cy="6" rx="78" ry="14" fill="${OL}" opacity=".15"/><path d="M-70,-230 L70,-230 L54,0 L-54,0 Z" fill="#E9F4F8" fill-opacity=".55" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/>` +
+    `<path d="M-62,-150 L62,-150 L54,-6 L-54,-6 Z" fill="#B0303A"/><path d="M-62,-150 L62,-150" stroke="#D85A62" stroke-width="6"/><path d="M-44,-212 L-34,-30" stroke="#fff" stroke-width="10" stroke-linecap="round" opacity=".6"/>` +
+    `<path d="M60,-180 Q100,-170 104,-130" fill="none" stroke="${OL}" stroke-width="3"/><g transform="translate(104,-130)"><rect x="-60" y="0" width="120" height="58" rx="10" fill="#fff" stroke="${OL}" stroke-width="4"/><text y="42" text-anchor="middle" font-family="Inter" font-weight="900" font-size="38" fill="${C.red}">${tag}</text></g>`;
+}
+// brainSVG(id): a simple pink brain icon centred on (0,0); `${id}-glow` is a gold glow behind it (fade it up)
+function brainSVG(id) {
+  return `<circle id="${id}-glow" r="150" fill="url(#glow)" opacity="0"/><path d="M-90,10 Q-110,-40 -80,-70 Q-80,-110 -30,-110 Q0,-130 30,-110 Q80,-110 82,-70 Q112,-40 92,10 Q100,60 50,70 Q20,96 -20,80 Q-70,90 -84,50 Q-110,36 -90,10 Z" fill="#F4A6B8" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/>` +
+    `<path d="M0,-118 Q-12,-40 6,10 Q20,50 0,78 M-60,-60 Q-30,-50 -40,-10 M60,-60 Q30,-40 46,0 M-60,30 Q-30,20 -20,50 M60,30 Q36,30 30,56" fill="none" stroke="#C96A82" stroke-width="6" stroke-linecap="round"/>`;
+}
+// shopBoardSVG(text, kind): a shop board centred on (0,0): 'sale' = red with white letters, 'premium' = maroon + gold
+function shopBoardSVG(text, kind = 'sale', w = 520) {
+  const prem = kind === 'premium';
+  return `<rect x="${-w / 2}" y="-70" width="${w}" height="140" rx="16" fill="${prem ? 'url(#mar)' : '#D9363E'}" stroke="${OL}" stroke-width="${OW}"/>` +
+    (prem ? `<rect x="${-w / 2 + 16}" y="-54" width="${w - 32}" height="108" rx="10" fill="none" stroke="${C.gold}" stroke-width="5"/>` : '') +
+    `<text y="${prem ? 20 : 24}" text-anchor="middle" font-family="Inter" font-weight="900" font-size="${prem ? 50 : 64}" fill="${prem ? C.gold : '#FFFFFF'}" letter-spacing="${prem ? 4 : 2}">${text}</text>`;
+}
+// starSVG(r, col): a five-point rating star centred on (0,0)
+function starSVG(r = 30, col = C.gold) {
+  const p = [...Array(10)].map((_, i) => { const a = -Math.PI / 2 + i * Math.PI / 5, rr = i % 2 ? r * .45 : r; return `${(Math.cos(a) * rr).toFixed(1)},${(Math.sin(a) * rr).toFixed(1)}`; }).join(' ');
+  return `<polygon points="${p}" fill="${col}" stroke="${OL}" stroke-width="4" stroke-linejoin="round"/>`;
+}
