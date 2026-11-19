@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-19
 - **Made by:** dhruvifewtone-wq
-- **Status:** feedback round 2 (new script waiting for approval)
+- **Status:** feedback round 2 (script v2 approved, voice take 3)
 
 ## Brief
 
@@ -36,7 +36,7 @@
 - **Switch labels** (round 2): "Purani Komal" stays on her until the shimmer; after it she reads "Ab Smart Komal ✨".
 - **First frame** (round 2): the hook title is big (bigger than captions) and clear of the sun.
 
-## Script and storyboard (version 2, approved: no)
+## Script and storyboard (version 2, approved: yes, 2026-11-19)
 
 | # | Voice line (caption) | On screen (scene, characters and what they do) | Label / title |
 |---|---|---|---|
@@ -53,7 +53,7 @@ Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- File: `output/female-dukaan-dukaan-take2.mp3` (on the maker's computer) — approved: yes, 2026-11-19
+- File: `output/female-dukaan-dukaan-take3.mp3` (script v2; take 2 was video 1) — approved: no
 - Captions timed with `tools/caption_timing.py` (c6, c17, c18 nudged by hand to the voice's pauses).
 
 ## Video
