@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-19
 - **Made by:** dhruvifewtone-wq
-- **Status:** brief (script waiting for approval)
+- **Status:** script approved
 
 ## Brief
 
@@ -28,7 +28,7 @@
 - **No rupee amounts** on the drawn app screens (teammate chose it, 2026-11-19): outfit cards show a "Rent" label,
   not "₹1,800" (Never-say list: no prices in our words).
 
-## Script and storyboard (approved: no)
+## Script and storyboard (approved: yes, 2026-11-19)
 
 | # | Voice line (caption) | On screen (scene, characters and what they do) | Label / title |
 |---|---|---|---|
