@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-19
 - **Made by:** dhruvifewtone-wq
-- **Status:** video sent
+- **Status:** feedback round 1 (script v2 waiting for approval)
 
 ## Brief
 
@@ -28,17 +28,22 @@
 - **Brand-safe answers** (teammate chose it, 2026-11-19): no "15 outfits tak FREE", "setup fee zero",
   "0% commission", "₹10,000 = ₹10,000 aapke", "5 minute mein", "3 months free on paid plans" or "No lock-in" in
   our words (Never-say list). Q2 becomes "Rent price kaun tay karega?"; Q5's answer becomes "chhote se shuru karo".
+- **Sharper hook** (round 1): "Online listing se pehle, har rental shop owner ke 5 sawal… aur 5th sabse important."
+  The 5th stays "Pasand na aaya toh?" (teammate chose to keep the order), introduced as "sabse important".
+- **Stronger cost answer, still brand-safe** (round 1): "Saare plans app pe saaf likhe hain, apni shop ke hisaab se
+  chuno… aur koi bhi sawal ho, toh WhatsApp pe seedha pucho." No fee numbers until the owner approves them.
+- **Readability** (round 1): captions over the shop-front road scenes (about 26 s) get a clear, plain area behind them.
 
-## Script and storyboard (approved: yes, 2026-11-19)
+## Script and storyboard (version 2, approved: no; version 1 approved 2026-11-19)
 
 | # | Voice line (caption) | On screen (scene, characters and what they do) | Label / title |
 |---|---|---|---|
-| 1 | Hareshbhai ko *Anokhi Reet* ke baare mein pata chala… / par unke mann mein / *sawal hi sawal* the. | **Hook from frame 1:** Hareshbhai at his shop counter, arms crossed, one brow up. Neha beside the counter holds out a phone with the app. Five question bubbles pop up over his head one by one ("?" bubbles), crowding the top of the frame. | Big title from frame 1: **Sawal bahut hain? 🤔** |
-| 2 | Pehla sawal: *"Kitna kharcha hoga?"* / Jawab: shuru karna *aasaan* hai, / saare *plans app pe* saaf likhe hain. / Apni shop ke *hisaab* se chuno. | Bubble 1 grows big: "Kitna kharcha hoga?" Hareshbhai frowns (worry brows). Cut to a waist-up of Neha: she turns the phone to us, a simple flat plans screen (three plan cards, no prices) slides up. She points. Bubble 1 pops into gold confetti. | Kharcha? → **Plans app pe saaf ✅** · Apni shop ke hisaab se ✅ |
+| 1 | *Online listing* se pehle, / har rental shop owner ke *5 sawal…* / aur *5th sabse important.* / Hareshbhai ke mann mein bhi / *yahi sawal* the. | **Hook from frame 1:** Hareshbhai at his counter, arms crossed. A big gold counter "1 2 3 4 5" ticks up with five bubbles popping over his head; the 5th bubble glows gold with a ⭐. Neha beside him holds out the phone. | Big title from frame 1: **Listing se pehle 5 sawal… 5th sabse important ⭐** |
+| 2 | Pehla sawal: *"Kitna kharcha hoga?"* / Jawab: saare *plans app pe* saaf likhe hain, / apni shop ke *hisaab* se chuno… / aur koi bhi sawal ho, / toh *WhatsApp* pe *seedha pucho.* | Bubble 1 grows: "Kitna kharcha hoga?" Neha shows the plans screen (no prices), a plan gets picked. Then a WhatsApp-style chat pops: Hareshbhai types "Kharcha?" and Neha's reply arrives with a tick. Bubble 1 pops. | Plans app pe saaf ✅ · Sawal? **WhatsApp pe pucho 💬** |
 | 3 | Doosra sawal: / *"Rent price kaun tay karega?"* / Jawab: *aap!* / Aapke outfits, *aapka price*. | Bubble 2: "Rent price kaun tay karega?" Neha points straight at Hareshbhai; a big gold "AAP!" stamps onto the screen. His eyebrows jump up, he points at himself. A price tag on a lehenga on his rail flips to "Aapka price". Bubble pops. | Price? → **AAP tay karo ✅** |
 | 4 | Teesra sawal: *"Mujhe computer nahi aata."* / Jawab: *zaroorat hi nahi*. / Bas *WhatsApp* pe photos aur rent price bhejo… / aur *shop online*. | Bubble 3: "Mujhe computer nahi aata!" Hareshbhai shakes his head, hands up. A computer icon gets a soft cross. Phone fills the frame: a WhatsApp-style chat (flat, not the real logo). Three steps pop in: 💬 Message → 📸 Photos + rent price → ✅ Shop live. Bubble pops. | Computer? **Nahi chahiye ✅** · Bas WhatsApp 💬 |
 | 5 | Chautha sawal: *"Customer aayenge bhi?"* / Jawab: renters app pe *city, occasion* aur *budget* se / outfit dhoondhte hain… / aur *seedha aapki shop* tak aate hain. | Bubble 4: "Customer aayenge bhi?" Split screen of three renters on their phones (a young woman, an auntie, an uncle), each tapping a filter chip: City · Occasion · Budget. Dotted lines from their phones run to Hareshbhai's shop front. Bubble pops. | Customer? **City • Occasion • Budget 📱** |
-| 6 | Aur aakhri sawal: *"Pasand na aaya toh?"* / Jawab: *chhote se* shuru karo… / kuch outfits list karo, / aur *khud dekho*. | Bubble 5: "Pasand na aaya toh?" Neha holds up three lehengas on hangers (out of a full rail), smiles. Hareshbhai rubs his chin (thinking), then nods. Last bubble pops; the sky above his head is clear, he lets out a relieved breath (shoulders drop, eyes close). | Chhote se shuru karo ✅ · Khud dekho 👀 |
+| 6 | Aur *5th, sabse important* sawal: *"Pasand na aaya toh?"* / Jawab: *chhote se* shuru karo… / kuch outfits list karo, / aur *khud dekho*. | Bubble 5 glows gold with a ⭐: "Pasand na aaya toh?" Neha holds up three lehengas on hangers (out of a full rail), smiles. Hareshbhai rubs his chin (thinking), then nods. Last bubble pops; the sky above his head is clear, he lets out a relieved breath (shoulders drop, eyes close). | 5/5 ⭐ Sabse important · Chhote se shuru karo ✅ · Khud dekho 👀 |
 | 7 | *Saare sawal khatam…* / aur Hareshbhai ne *usi din* / apni shop *list* kar di. | Hareshbhai uncrosses his arms, grins, gives a thumbs up. He photographs a lehenga on his phone and sends it on WhatsApp; his shop card appears on a phone with a gold "Live ✅" badge that pops. | **Sawal khatam, shop online 🎉** |
 | 8 | Aapke mann mein bhi *koi sawal* hai? / *Comment* mein puchho, / ya *"LIST"* likho… / hum *help* karenge! | Hareshbhai faces us, waves us closer; one small empty "?" bubble pops up over our side. Maroon follow card: Anokhi Reet wordmark. | Sawal? **Comment karo 👇** · LIST likho · anokhireet.in |
 
@@ -56,14 +61,18 @@ Voice text: [`script.txt`](script.txt).
 
 ## Feedback rounds
 
-1. (none yet)
+1. Video 1 notes (teammate, 2026-11-19): cost answer too vague (asked for 15 free / 0% / no setup fee if still valid)
+   → kept brand-safe (Never-say list; owner to approve the fee lines), made stronger with "koi bhi sawal ho, toh
+   WhatsApp pe seedha pucho"; generic hook → "Online listing se pehle har rental shop owner ke 5 sawal… 5th sabse
+   important"; caption hard to read around 26 s over the busy road → plain area behind captions there. Post on
+   @anokhireet.products and also share it from @anokhireet.in (posting is the teammate's step). Script v2 + new voice.
 
 ## Caption
 
 ```
-Shop list karne se pehle sawal hain? Humne jawab de diye 👇
+Online listing se pehle har rental shop owner ke 5 sawal… 5th sabse important ⭐ Humne sabke jawab diye 👇
 
-❓ Kharcha? Plans app pe saaf likhe hain
+❓ Kharcha? Plans app pe saaf likhe hain, aur sawal WhatsApp pe seedha pucho
 ❓ Rent price? Aap khud tay karo
 ❓ Computer nahi aata? Bas WhatsApp pe photos bhejo
 ❓ Pasand na aaya toh? Chhote se shuru karo
@@ -87,6 +96,7 @@ Aur koi sawal? Comment mein puchho, ya "LIST" likho 💬
 - The fee lines again (free listing up to 15 outfits, 0% commission, zero setup fee, 5 minutes, no lock-in,
   3 months free on paid plans): this teammate's script asked for all of them. If they are true and current
   (Shop Partner Program page), the owner may want to allow them as approved facts for shop-owner reels.
+  Asked again in feedback round 1 (2026-11-19): a reviewer called the cost answer the weakest point without them.
 
 ## Lessons
 
