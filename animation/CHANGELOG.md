@@ -3,6 +3,13 @@
 Every reel adds at least one improvement to the engine or library and writes it here (newest first).
 See [GUIDE.md](GUIDE.md) section 8.
 
+## 2026-11-19: café, study bars, dust, Bhaveshbhai and Chintu (Mehenga lehenga)
+
+- **New props:** `coffeeCupSVG(k)`, `cafeMenuSVG(items, w, note)`, `planCardSVG(id, title, price, col)`,
+  `barSVG(id, col)` + `barSet(id, h, label)` (bars that grow and change for study results), `dustPuffsSVG(id, n, w, h)`,
+  `ribbonSVG(text)`.
+- **New cast:** Bhaveshbhai (`BHAVESH`), Chintu (`CHINTU`).
+
 ## 2026-11-19: extra caption chunks (Dukaan-dukaan video 3)
 
 - A caption chunk can be added between two others without renumbering: name it `c2b` (a-d after the number).

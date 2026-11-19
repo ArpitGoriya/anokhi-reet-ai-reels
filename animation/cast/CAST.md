@@ -33,6 +33,8 @@ characters are added here after their first reel (add them to `cast.js`, to the 
 | `KOMAL.purani` / `.smart` | **Komal**, 20s, shopping for a reception outfit; shown as two versions of herself (old way vs Anokhi Reet). | Long hair; marigold kurta with pink dupatta (Purani), pink kurta with necklace (Smart) | Dukaan-dukaan ki bhaag-daud (2026-11-19) |
 | `REKHA` | **Rekhaben**, 40s, rental shop owner who priced everything cheap, then learned to set a fair rent. | Bun, sindoor, green saree with yellow pallu | Rent kam rakha (2026-11-19) |
 | `JIGNA` | **Jignaben**, 40s, confident rental shop owner across the street. | Bun, sindoor, necklace, deep blue saree with gold pallu | Rent kam rakha |
+| `BHAVESH` | **Bhaveshbhai**, 40s-50s, calm and clever rental shop owner; keeps one premium lehenga on purpose. | Moustache, plum kurta with gold embroidery | Mehenga lehenga (2026-11-19) |
+| `CHINTU` | **Chintu**, late teens, Bhaveshbhai's quick, chatty helper. | Short hair, orange tee | Mehenga lehenga |
 
 Ideas for the cast's next members (make them when a story needs them): a young woman who rents for college
 functions, a groom or brother, a kid, a vendor on the Anokhi Reet app.

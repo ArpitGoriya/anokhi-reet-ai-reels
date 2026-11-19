@@ -98,3 +98,8 @@ const KOMAL = {
 // pallu. Jignaben (40s): her confident neighbour across the street. Deep blue saree, gold pallu. (Rent kam rakha, 2026-11-19)
 const REKHA = { hairStyle: 'bun', top: '#5B8A3A', topD: '#476F2D', pallu: '#F2C14E', border: C.red, sindoor: true, skin: '#B9784F', skin2: '#A0663F', skirt: { c: '#476F2D', d: '#365622', b: C.gold, w: 205 } };
 const JIGNA = { hairStyle: 'bun', top: '#3A4E8C', topD: '#2C3C6E', pallu: C.gold, border: C.red, sindoor: true, necklace: true, skin: '#C98B62', skin2: '#B9784F', skirt: { c: '#2C3C6E', d: '#1F2B52', b: C.gold, w: 205 } };
+
+// Bhaveshbhai (40s-50s): calm, clever rental shop owner who keeps one premium lehenga that rarely rents, on purpose.
+// Plum kurta with gold embroidery. Chintu (late teens): his quick, chatty helper. Orange tee. (Mehenga lehenga, 2026-11-19)
+const BHAVESH = { male: true, mustache: true, wide: true, hair: '#3A2A22', top: '#7A3B6B', topD: '#5E2C52', skin: '#A8704C', skin2: '#93603F', embroidery: true };
+const CHINTU = { male: true, hair: '#1E1410', top: '#E9772E', topD: '#C25E1E', skin: '#C98B62', skin2: '#B9784F' };

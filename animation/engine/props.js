@@ -392,3 +392,62 @@ function starSVG(r = 30, col = C.gold) {
   const p = [...Array(10)].map((_, i) => { const a = -Math.PI / 2 + i * Math.PI / 5, rr = i % 2 ? r * .45 : r; return `${(Math.cos(a) * rr).toFixed(1)},${(Math.sin(a) * rr).toFixed(1)}`; }).join(' ');
   return `<polygon points="${p}" fill="${col}" stroke="${OL}" stroke-width="4" stroke-linejoin="round"/>`;
 }
+
+// ===== Mehenga lehenga (2026-11-19): café menu + cups, plan cards with bars, dust puffs, a "Most loved" ribbon =====
+// coffeeCupSVG(k): a takeaway cup on (0,0) = its base; k = 'S' | 'M' | 'L' (size), lid and a maroon sleeve
+function coffeeCupSVG(k = 'M') {
+  const h = { S: 110, M: 150, L: 190 }[k] || 150, w = h * .42;
+  return `<ellipse cx="0" cy="4" rx="${w + 8}" ry="10" fill="${OL}" opacity=".15"/>` +
+    `<path d="M${-w},${-h} L${w},${-h} L${w * .78},0 L${-w * .78},0 Z" fill="#FFF8EC" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/>` +
+    `<path d="M${-w * .93},${-h * .66} L${w * .93},${-h * .66} L${w * .85},${-h * .3} L${-w * .85},${-h * .3} Z" fill="${C.red}" stroke="${OL}" stroke-width="4"/>` +
+    `<rect x="${-w - 8}" y="${-h - 22}" width="${2 * w + 16}" height="26" rx="10" fill="#5A3A28" stroke="${OL}" stroke-width="4"/>` +
+    `<text x="0" y="${-h * .42}" text-anchor="middle" font-family="Inter" font-weight="900" font-size="${h * .2}" fill="${C.cream}">${k}</text>`;
+}
+// cafeMenuSVG(items, w, note): a dark café menu (note = a small line under the title, e.g. '(Udaharan)') board centred on (0,0); items = [['Small', '₹120', 'S'], ...] (cup + name + price)
+function cafeMenuSVG(items, w = 820, note = '') {
+  const n = items.length, step = w / n;
+  let s = `<rect x="${-w / 2 - 30}" y="-250" width="${w + 60}" height="500" rx="24" fill="#3A2E28" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<rect x="${-w / 2 - 12}" y="-232" width="${w + 24}" height="464" rx="16" fill="none" stroke="${C.goldTan}" stroke-width="4"/>` +
+    `<text y="-170" text-anchor="middle" font-family="Inter" font-weight="900" font-size="54" fill="${C.cream}" letter-spacing="6">☕ COFFEE</text>` +
+    (note ? `<text y="-126" text-anchor="middle" font-family="Inter" font-weight="700" font-size="28" fill="${C.goldTan}">${note}</text>` : '');
+  items.forEach(([name, price, k], i) => {
+    const x = -w / 2 + step * (i + .5);
+    s += `<g id="menu-${i}" transform="translate(${x},0)"><g transform="translate(0,90) scale(.8)">${coffeeCupSVG(k)}</g>` +
+      `<text y="150" text-anchor="middle" font-family="Inter" font-weight="800" font-size="40" fill="${C.cream}">${name}</text>` +
+      `<text y="208" text-anchor="middle" font-family="Inter" font-weight="900" font-size="50" fill="${C.gold}">${price}</text></g>`;
+  });
+  return s;
+}
+// planCardSVG(id, title, price, col): a subscription-plan card centred on (0,0), 250 wide (for "3 plans" study beats)
+function planCardSVG(id, title, price, col = '#3A4E8C', w = 250) {
+  const lines = title.split('|');
+  return `<g id="${id}"><rect x="${-w / 2}" y="-120" width="${w}" height="240" rx="22" fill="#fff" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<rect x="${-w / 2}" y="-120" width="${w}" height="${40 + lines.length * 40}" rx="22" fill="${col}"/><rect x="${-w / 2}" y="${-100 + lines.length * 40}" width="${w}" height="20" fill="${col}"/>` +
+    lines.map((l, i) => `<text y="${-76 + i * 40}" text-anchor="middle" font-family="Inter" font-weight="900" font-size="34" fill="#fff">${l}</text>`).join('') +
+    `<text y="90" text-anchor="middle" font-family="Inter" font-weight="900" font-size="64" fill="${C.text}">${price}</text></g>`;
+}
+// barSVG(id, col, w): a bar that grows upward from (0,0); set its height with barSet(id, h, label)
+function barSVG(id, col = C.gold, w = 130) {
+  return `<g id="${id}"><rect id="${id}-r" x="${-w / 2}" y="0" width="${w}" height="0" rx="12" fill="${col}" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<text id="${id}-t" y="-20" text-anchor="middle" font-family="Inter" font-weight="900" font-size="56" fill="#fff"></text></g>`;
+}
+function barSet(id, h, label) {
+  const r = $(id + '-r'), t = $(id + '-t'); if (!r) return;
+  r.setAttribute('y', (-h).toFixed(1)); r.setAttribute('height', Math.max(0, h).toFixed(1));
+  t.setAttribute('y', (-h - 20).toFixed(1)); t.textContent = label;
+}
+// dustPuffsSVG(id, n, w, h): grey dust puffs scattered over a w×h box centred on (0,0) (an old, untouched thing)
+function dustPuffsSVG(id, n = 7, w = 260, h = 320) {
+  let s = `<g id="${id}">`;
+  for (let i = 0; i < n; i++) {
+    const x = (((i * 37) % 11) / 10 - .5) * w, y = (((i * 53) % 13) / 12 - .5) * h, r = 14 + (i % 3) * 6;
+    s += `<g transform="translate(${x.toFixed(0)},${y.toFixed(0)})" data-bob="4" data-ph="${i}"><circle r="${r}" fill="#B9B2A8" opacity=".75"/><circle cx="${r * .7}" cy="${-r * .3}" r="${r * .7}" fill="#CFC8BE" opacity=".75"/></g>`;
+  }
+  return s + `</g>`;
+}
+// ribbonSVG(text): a small red label with a notch, centred on (0,0) (e.g. "Most loved ❤️" on a photo)
+function ribbonSVG(text, fs = 30) {
+  const w = text.length * fs * .55 + 50;
+  return `<path d="M${-w / 2},-30 H${w / 2} L${w / 2 - 18},0 L${w / 2},30 H${-w / 2} L${-w / 2 + 18},0 Z" fill="${C.red}" stroke="${OL}" stroke-width="4" stroke-linejoin="round"/>` +
+    `<text y="${fs * .36}" text-anchor="middle" font-family="Inter" font-weight="900" font-size="${fs}" fill="#fff">${text}</text>`;
+}

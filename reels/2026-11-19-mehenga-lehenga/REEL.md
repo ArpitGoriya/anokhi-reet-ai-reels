@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-19
 - **Made by:** dhruvifewtone-wq
-- **Status:** script approved, making the voice
+- **Status:** video 1 sent
 
 ## Brief
 
@@ -57,11 +57,12 @@ Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- File: `output/female-mehenga-lehenga-take1.mp3` (on the maker's computer, 61 s) — approved: waiting
+- File: `output/female-mehenga-lehenga-take1.mp3` (on the maker's computer, 61 s) — approved: yes, 2026-11-19
+- Captions: whisper skipped 37-58 s, so all starts were set by hand from the voice's pauses and a separate speech check of that part.
 
 ## Video
 
-- (not made yet)
+- `output/2026-11-19-mehenga-lehenga.mp4` (62 s), video 1 sent 2026-11-19.
 
 ## Feedback rounds
 
@@ -82,7 +83,10 @@ Aapka sabse zyada rent hone wala outfit kaunsa hai? Comment karo 👇
 
 ## Added to the library (at least two per reel)
 
-- (to come)
+- `coffeeCupSVG(k)` (S/M/L takeaway cup) and `cafeMenuSVG(items, w, note)` (café menu board with cups and prices),
+  `planCardSVG` + `barSVG`/`barSet` (study plan cards with growing % bars), `dustPuffsSVG` (an old, untouched thing) and
+  `ribbonSVG(text)` (a small red label, e.g. "Most loved ❤️") in `engine/props.js`.
+- New cast: Bhaveshbhai (`BHAVESH`) and Chintu (`CHINTU`).
 
 ## Suggested default (for the owner)
 
@@ -90,4 +94,6 @@ Aapka sabse zyada rent hone wala outfit kaunsa hai? Comment karo 👇
 
 ## Lessons
 
-- (to come)
+- A salute with the short cartoon arms: elbow out and up, hand at the temple (`R: [168, 62]`); "hand on head"
+  angles read as scratching the head.
+- Keep price tags clear of decoration (dust, sparkles, bubbles): the tag is the point of the scene.
