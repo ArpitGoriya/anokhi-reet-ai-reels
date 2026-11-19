@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-19
 - **Made by:** dhruvifewtone-wq
-- **Status:** feedback round 1 (script v2 waiting for approval)
+- **Status:** feedback round 1 (script v2 approved, voice take 2)
 
 ## Brief
 
@@ -34,7 +34,7 @@
   chuno… aur koi bhi sawal ho, toh WhatsApp pe seedha pucho." No fee numbers until the owner approves them.
 - **Readability** (round 1): captions over the shop-front road scenes (about 26 s) get a clear, plain area behind them.
 
-## Script and storyboard (version 2, approved: no; version 1 approved 2026-11-19)
+## Script and storyboard (version 2, approved: yes, 2026-11-19)
 
 | # | Voice line (caption) | On screen (scene, characters and what they do) | Label / title |
 |---|---|---|---|
@@ -51,7 +51,7 @@ Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- File: `output/female-sawal-bahut-hain-take1.mp3` (on the maker's computer) — approved: yes, 2026-11-19
+- File: `output/female-sawal-bahut-hain-take2.mp3` (script v2; take 1 was video 1) — approved: no
 - Voice switched from male to female after hearing male take 1 (teammate, 2026-11-19).
 - Captions: whisper timed c1-c7 and c28-c31; it misheard 13-41 s, so c8-c27 were set by hand from the voice's pauses.
 
