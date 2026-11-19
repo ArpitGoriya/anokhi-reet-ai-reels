@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-19
 - **Made by:** dhruvifewtone-wq
-- **Status:** script written, waiting for approval
+- **Status:** script approved, making the voice
 
 ## Brief
 
@@ -10,7 +10,7 @@
   almost never rents, and because of it customers pick his middle one. A real study (Dan Ariely's magazine
   subscription example, *Predictably Irrational*, 2008) shows the same thing. He does it in three steps.
 - **For:** Rental shop owners (lehengas, sherwanis).
-- **One message:** Ek premium option rakho, beech wala "best value" lagega. List your shop: comment "LIST".
+- **One message:** Ek premium option rakho, beech wala "best value" lagega. Comment your best seller.
 - **Voice:** female (Vindemiatrix), as the narrator (teammate chose it, 2026-11-19).
 - **Characters:** New: **Bhaveshbhai** (40s-50s, rental shop owner, calm and clever) and **Chintu** (late teens,
   his helper, quick to complain). Customers (reuse `CUSTOMER_W`, `GUEST_W1`, `GUEST_W2`, `KOMAL.smart`); café
@@ -22,7 +22,8 @@
 ## Teammate changes (override the brand defaults for this reel only)
 
 - Key words on screen in yellow (gold) highlight boxes; on-screen emojis as in the script.
-- **Call to action: "LIST"**: voice, screen and caption all say comment "LIST".
+- **No "LIST" ask** (teammate, 2026-11-19): the only call to action is "Aapka best seller kaunsa? Comment karo 👇" in
+  voice, end card and caption.
 - **Study numbers shown with the source** (teammate chose it, 2026-11-19): $59 / $125 / $125 cards and the 84% and
   68% bars, with "Dan Ariely, Predictably Irrational (2008)" on screen. They are the study's numbers, never Anokhi
   Reet claims.
@@ -34,11 +35,10 @@
 - Voice only: the script's sounds (mystery music, pops, calculator beeps, coffee machine, ding, sparkle, ka-ching,
   laughter, jingle) are shown visually; no "whoosh" (brand rule).
 - "Most loved ❤️" is Bhaveshbhai's own label on his photo, not an app badge.
-- The voice adds the "LIST" ask at the end so voice, screen and caption match.
 - Hashtags: 5 (dropped #DukaanOnline, teammate chose it).
 - The app name is said in Devanagari ("अनोखी रीत") so the voice says it properly.
 
-## Script and storyboard (approved: no)
+## Script and storyboard (approved: yes, 2026-11-19, without the "LIST" ask)
 
 | # | Voice line (caption) | On screen (scene, characters and what they do) | Label / title |
 |---|---|---|---|
@@ -51,7 +51,7 @@
 | 7 | Do: *beech wale* ko / *sabse acchi photos* aur tag diya. | "STEP 2" card. Chintu takes photos of the ₹2,500 lehenga with a phone (flash sparkle); the middle tile in the app gets a bigger photo and a "Most loved ❤️" label with sparkles. | STEP 2: Beech wala chamkao ⭐ |
 | 8 | Teen: *dukaan mein bhi* teeno saath dikhaye… / *pehle premium.* | "STEP 3" card. In the shop, Bhaveshbhai shows a customer the three lehengas side by side; he gestures to the ₹6,000 first (her eyebrows go up), then to the ₹2,500 (she smiles). | STEP 3: Pehle premium, phir beech wala 👗 |
 | 9 | Ab *zyadatar customer* ₹2,500 wala lete hain. / Aur wo *mehenga lehenga?* / Wo *apna kaam* kar raha hai. | Customers point at ₹2,500: bubble "Ye best value hai!"; the cash drawer slides out with notes (drawn "ka-ching" sparkle). Then Chintu stands to attention in front of the dusty ₹6,000 lehenga and salutes it. | Beech wala = best seller 🎉 |
-| 10 | Har option *bikne ke liye* nahi hota… / kuch *dikhane* ke liye bhi hote hain. / Aapka sabse zyada rent hone wala outfit *kaunsa* hai? / *Comment* karo! / Aur shop list karni hai? / Toh *"LIST"* likho. | Bhaveshbhai faces us, Chintu next to him; then the maroon end card: wordmark, **Aapka best seller kaunsa? Comment karo 👇**, "Shop list karni hai? LIST likho", "Download the app" with the store badges, anokhireet.in. | Har option bikne ke liye nahi 💡 · Aapka best seller kaunsa? 👇 |
+| 10 | Har option *bikne ke liye* nahi hota… / kuch *dikhane* ke liye bhi hote hain. / Aapka sabse zyada rent hone wala outfit *kaunsa* hai? / *Comment* karo! | Bhaveshbhai faces us, Chintu next to him; then the maroon end card: wordmark, **Aapka best seller kaunsa? Comment karo 👇**, "Download the app" with the store badges, anokhireet.in. | Har option bikne ke liye nahi 💡 · Aapka best seller kaunsa? 👇 |
 
 Voice text: [`script.txt`](script.txt).
 
@@ -75,7 +75,7 @@ Jo lehenga kabhi rent nahi hota… wahi sabse zyada kamaata hai? 🤯
 Ek premium option rakhne se beech wala option "best value" lagta hai 🧠
 3 levels rakho, beech wale ko chamkao, aur Anokhi Reet pe saath mein list karo ✅
 
-Aapka sabse zyada rent hone wala outfit kaunsa hai? Comment karo 👇 Shop list karni hai? "LIST" likho.
+Aapka sabse zyada rent hone wala outfit kaunsa hai? Comment karo 👇
 
 #RentalShop #BusinessTips #PricingTips #LehengaOnRent #AnokhiReet
 ```
