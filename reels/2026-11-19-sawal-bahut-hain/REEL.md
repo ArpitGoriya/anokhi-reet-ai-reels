@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-19
 - **Made by:** dhruvifewtone-wq
-- **Status:** brief (script waiting for approval)
+- **Status:** script approved
 
 ## Brief
 
@@ -29,7 +29,7 @@
   "0% commission", "₹10,000 = ₹10,000 aapke", "5 minute mein", "3 months free on paid plans" or "No lock-in" in
   our words (Never-say list). Q2 becomes "Rent price kaun tay karega?"; Q5's answer becomes "chhote se shuru karo".
 
-## Script and storyboard (approved: no)
+## Script and storyboard (approved: yes, 2026-11-19)
 
 | # | Voice line (caption) | On screen (scene, characters and what they do) | Label / title |
 |---|---|---|---|
