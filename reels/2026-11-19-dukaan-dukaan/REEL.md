@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-19
 - **Made by:** dhruvifewtone-wq
-- **Status:** video 3 sent
+- **Status:** video 4 sent
 
 ## Brief
 
@@ -62,6 +62,7 @@ Voice text: [`script.txt`](script.txt).
 - `output/2026-11-19-dukaan-dukaan.mp4` (36 s), video 1 sent 2026-11-19.
 - `output/2026-11-19-dukaan-dukaan-v2.mp4` (44 s, script v2, voice take 3), video 2 sent 2026-11-19.
 - `output/2026-11-19-dukaan-dukaan-v3.mp4` (41 s, voice take 4), video 3 sent 2026-11-19.
+- `output/2026-11-19-dukaan-dukaan-v4.mp4` (41 s), video 4 sent 2026-11-19.
 
 ## Feedback rounds
 
@@ -75,6 +76,9 @@ Voice text: [`script.txt`](script.txt).
 3. Video 2 note (teammate, 2026-11-19): the hook should say what took 4 hours → "Ek hi Komal, ek hi reception. Ek baar
    rent par outfit dhoondhne mein 4 ghante lage aur ek baar bas 15 minute"; voice take 4, new caption chunk c2b
    ("4 ghante lage…"), the "4 ghante" timer pops on it.
+4. Video 3 note (teammate, 2026-11-19): Purani Komal's lehenga at about 29-32 s (Dukaan no. 10) looked weird (a
+   seated top half with a short lap skirt on the street) → she stands in her full lehenga, moved left so the
+   "DUKAAN 10" sign stays visible; the bag sits on the pavement.
 
 ## Caption
 
@@ -104,6 +108,7 @@ Aap Purani Komal ho ya Smart Komal? Comment karo 👇
 
 ## Lessons
 
+- A standing character on a street needs the full figure (`stand`), not `bust` + a lap skirt; keep the sign the line talks about clear of her head.
 - Don't name the app in the first third of a comparison reel: a "fark kya tha?" mystery with a late reveal keeps people
   watching; hide the name on drawn app screens too (`mysteryHeader`).
 - If the reel asks a question ("Aap kaunsi Komal ho?"), the end card, the caption and a pinned comment should ask it too.

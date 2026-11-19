@@ -153,8 +153,8 @@ addScene('c14', 'c17', {
 // ================= S6: Purani Komal at dukaan no. 10, tumbleweed rolls past =================
 addScene('c17', 'c19', {
   svg: bazaarBG('s9bz') + `<rect x="-10" y="${FLOOR - 40}" width="${W + 20}" height="60" fill="#BDB3A3" stroke="${OL}" stroke-width="4"/>` +
-    bust('s9k', KP, 540, FLOOR + 60, 1.0) + lapSVG(540, FLOOR + 60, KP.skirt, 1) +
-    `<g transform="translate(820,${FLOOR + 40}) rotate(-14)">${handBag('s9bag', .36)}</g>` + handCard('s9cd', .5) +
+    stand('s9k', KP, 330, FLOOR + 40 - 372 * .78, .78) +
+    `<g transform="translate(560,${FLOOR + 30}) rotate(-8)">${handBag('s9bag', .36)}</g>` + handCard('s9cd', .5) +
     `<g id="s9tw">${tumbleweedSVG(70)}</g>`,
   html: pillH(540, 352, 'c17+0.1', 'Aur <span class="hl">Purani Komal?</span>', '', 'c18-0.05') + pillH(540, 352, 'c18', 'Dukaan <span class="hl">no. 10…</span> 😮‍💨'),
   cam: [1, 1.05], fy: 1000,
