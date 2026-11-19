@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-19
 - **Made by:** dhruvifewtone-wq
-- **Status:** script approved
+- **Status:** voice approved
 
 ## Brief
 
@@ -46,7 +46,7 @@ Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- File: `output/female-sawal-bahut-hain-take1.mp3` (on the maker's computer) — approved: no
+- File: `output/female-sawal-bahut-hain-take1.mp3` (on the maker's computer) — approved: yes, 2026-11-19
 - Captions timed with `tools/caption_timing.py` (redo after every new take)
 
 ## Feedback rounds
