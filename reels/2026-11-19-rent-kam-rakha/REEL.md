@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-19
 - **Made by:** dhruvifewtone-wq
-- **Status:** video sent
+- **Status:** video 2 sent
 
 ## Brief
 
@@ -60,11 +60,15 @@ Voice text: [`script.txt`](script.txt).
 ## Video
 
 - `output/2026-11-19-rent-kam-rakha.mp4` (56 s), video 1 sent 2026-11-19.
+- `output/2026-11-19-rent-kam-rakha-v2.mp4` (56 s), video 2 sent 2026-11-19.
 
 ## Feedback rounds
 
 1. Voice take 1: at about 35 s "teen kaam kiye" sounded like "teen kam kiye" → a short pause before "काम"
    ("तीन... काम किए"); take 2 (the speech check now hears "तीन काम").
+2. Video 1 (teammate): the restaurant clip was cut short; you couldn't see Rekhaben going to the pricier restaurant
+   → the walk starts right after "Pata nahi kaisi hogi" (1.2 s), the scene runs 0.8 s longer (the study card starts a
+   beat later), RASOI gets a "Thali ₹249" board (story number) and a "Mehengi wali mein! 😄" pill; she points at it.
 
 ## Caption
 
@@ -82,7 +86,7 @@ Aapke best lehenge ka rent kitna hai? Comment karo 👇 Shop online laani hai? "
 ## Added to the library (at least two per reel)
 
 - `twoShopsBG` + `twoShopsFront` (two rental shops side by side, tags under every lehenga) and `restaurantRowBG`
-  (an empty cheap restaurant with a "Thali ₹49" board next to a full one) in `engine/sets.js`.
+  (an empty cheap restaurant with a "Thali ₹49" board next to a full one, `pricey` board option) in `engine/sets.js`.
 - `drinkGlassSVG` (a plain glass with a price tag, no bottle), `brainSVG` (with a glow), `shopBoardSVG` ('sale' /
   'premium') and `starSVG` in `engine/props.js`.
 - New cast: Rekhaben (`REKHA`) and Jignaben (`JIGNA`).
@@ -93,4 +97,6 @@ Aapke best lehenge ka rent kitna hai? Comment karo 👇 Shop online laani hai? "
 
 ## Lessons
 
-- (after the reel)
+- Give a character's move (walking to the other shop or restaurant) at least a second on screen after the line that
+  causes it, and keep the sign that explains it visible when they arrive.
+- Whisper can miss the first seconds of a voice and shift every caption: always compare STARTS with the pauses.

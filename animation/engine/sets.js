@@ -458,8 +458,8 @@ function twoShopsBG(id, o = {}) {
 function twoShopsFront(id) {
   return [270, 810].map(cx => `<rect x="${cx - 200}" y="1020" width="400" height="${FLOOR - 1020}" fill="${C.wood}" stroke="${OL}" stroke-width="${OW}"/><rect x="${cx - 214}" y="1006" width="428" height="26" rx="6" fill="${C.woodLight}" stroke="${OL}" stroke-width="${OW}"/>`).join('');
 }
-// restaurantRowBG(id, {cheap}): an evening street with two restaurant fronts: left "BHOJAN" with a standing board
-// (cheap, e.g. "Thali ₹49") and empty tables; right "RASOI", full of people at tables.
+// restaurantRowBG(id, {cheap, pricey}): an evening street with two restaurant fronts: left "BHOJAN" with a standing board
+// (cheap, e.g. "Thali ₹49") and empty tables; right "RASOI", full of people at tables (with its own board when pricey is given).
 function restaurantRowBG(id, o = {}) {
   let s = `<rect width="${W}" height="${H}" fill="#F2C9A0"/><rect y="0" width="${W}" height="380" fill="#E9A97E" opacity=".6"/>`;
   [[270, 'BHOJAN', false], [810, 'RASOI', true]].forEach(([cx, name, full]) => {
@@ -475,6 +475,8 @@ function restaurantRowBG(id, o = {}) {
   });
   if (o.cheap !== false) s += `<g transform="translate(140,1060)"><path d="M-70,-90 L70,-90 L90,110 M-70,-90 L-90,110" fill="none" stroke="${C.woodDark}" stroke-width="10"/><rect x="-80" y="-110" width="160" height="130" rx="10" fill="#2E3B2E" stroke="${OL}" stroke-width="${OW}"/>` +
     `<text y="-60" text-anchor="middle" font-family="Inter" font-weight="800" font-size="30" fill="#F4EFE3">Thali</text><text y="-8" text-anchor="middle" font-family="Inter" font-weight="900" font-size="46" fill="${C.gold}">${o.cheap || '₹49'}</text></g>`;
+  if (o.pricey) s += `<g transform="translate(810,612)"><path d="M-80,-50 L-60,-36 M80,-50 L60,-36" stroke="${OL}" stroke-width="4"/><rect x="-120" y="-36" width="240" height="76" rx="12" fill="url(#mar)" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<text y="16" text-anchor="middle" font-family="Inter" font-weight="900" font-size="40" fill="${C.gold}">Thali ${o.pricey}</text></g>`;
   s += `<rect x="-10" y="${FLOOR}" width="${W + 20}" height="90" fill="#CFC6B8" stroke="${OL}" stroke-width="4"/><rect x="-10" y="${FLOOR + 90}" width="${W + 20}" height="${H - FLOOR - 90}" fill="#6E6A64"/>`;
   return s;
 }

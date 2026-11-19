@@ -73,29 +73,31 @@ addScene('c7', 'c11', {
 });
 
 // ================= S4: Sunday — Rekhaben skips the cheapest thali herself =================
-addScene('c11', 'c14', {
-  svg: restaurantRowBG('s5') + `<g id="s5m">${bust('s5r', RK, 330, FLOOR + 40, .8)}${bust('s5p', PATI, 500, FLOOR + 40, .8)}</g>` + hedgeSVG(-20, W + 20, 1110),
+addScene('c11', 'c14+0.8', {
+  svg: restaurantRowBG('s5', { pricey: '₹249' }) + `<g id="s5m">${bust('s5r', RK, 330, FLOOR + 40, .8)}${bust('s5p', PATI, 500, FLOOR + 40, .8)}</g>` + hedgeSVG(-20, W + 20, 1110),
   html: pillH(540, 352, 'c11+0.05', 'Usi <span class="hl">Sunday</span>… 🍽️', '', 'c13+0.45') +
     `<div class="bubble" style="left:400px;top:740px" data-t="c13-0.05" data-out="c13+1.0">"Pata nahi <span class="hl">kaisi hogi…</span>" 🤨</div>` +
-    pillH(540, 352, 'c13+0.5', 'Rekhaben bhi <span class="hl">wahi customer</span> nikli 😄'),
+    pillH(540, 352, 'c13+0.5', 'Rekhaben bhi <span class="hl">wahi customer</span> nikli 😄') +
+    pillH(470, 700, 'c13+1.5', 'Mehengi wali mein! 😄', 'gold'),
   cam: [1, 1.04], fy: 900, capY: 1290,
   upd(t) {
-    const go = T('c13') + .9, mv = glide(t, go, .9, 0, 400);
+    const go = T('c13') + .35, mv = glide(t, go, 1.2, 0, 420);
     tf($('s5m'), mv[0], mv[1], 1); PL['s5r'].x = 330 + mv[0]; PL['s5p'].x = 500 + mv[0];
     const look = t > T('c12') + 1;
-    life('s5r', t, { pivot: 0, mouth: t > go ? 'grin' : (look ? 'worry' : 'smile'), brows: look && t < go ? 'worry' : 'up', look: look && t < go ? [-.8, .2] : [.6, 0], tilt: look ? -6 : 0,
-      R: t > go - .3 ? [90, -20] : (look ? THINK : [9, -14]), hR: t > go - .3 ? 'open' : 'fist', L: [9, -14] });
-    life('s5p', t, { pivot: 0, mouth: t > go ? 'big' : 'smile', brows: 'norm', look: [-.6, 0], seed: 6 });
+    const there = t > go + 1.2;
+    life('s5r', t, { pivot: 0, mouth: t > go ? 'grin' : (look ? 'worry' : 'smile'), brows: look && t < go ? 'worry' : 'up', look: look && t < go ? [-.8, .2] : [.6, -.3], tilt: look ? -6 : 0,
+      R: there ? [150, -30] : (t > go - .3 ? [90, -20] : (look ? THINK : [9, -14])), hR: there ? 'point' : (t > go - .3 ? 'open' : 'fist'), L: [9, -14], y: hop(t, go + 1.25, 12) });
+    life('s5p', t, { pivot: 0, mouth: t > go ? 'big' : 'smile', brows: 'norm', look: there ? [.6, -.3] : [-.6, 0], seed: 6 });
   }
 });
 
 // ================= S5a: the study — 2008, same drink, different price tags =================
-addScene('c14', 'c16', {
+addScene('c14+0.8', 'c16', {
   svg: `<rect width="${W}" height="${H}" fill="url(#mar)"/>` + rosettes('s6ro', 540, 800, .14, C.gold) +
-    `<g transform="translate(540,640) scale(.9)"><g data-t="c14+0.1" data-k="drop">${calendarSVG('s6cal', 'SAAL', '2008')}</g></g>` +
+    `<g transform="translate(540,640) scale(.9)"><g data-t="c14+0.85" data-k="drop">${calendarSVG('s6cal', 'SAAL', '2008')}</g></g>` +
     `<rect x="120" y="1060" width="840" height="30" rx="10" fill="${C.woodLight}" stroke="${OL}" stroke-width="${OW}"/>` +
     `<g transform="translate(360,1060)"><g data-t="c15+0.2" data-k="rise">${drinkGlassSVG('₹')}</g></g><g transform="translate(720,1060)"><g data-t="c15+0.5" data-k="rise">${drinkGlassSVG('₹₹₹')}</g></g>`,
-  html: pillH(540, 352, 'c14+0.3', 'Ek <span class="hl">research</span> 🔬', '', 'c15-0.05') + pillH(540, 352, 'c15', 'Same drink, <span class="hl">alag price tag</span> 🏷️'),
+  html: pillH(540, 352, 'c14+0.9', 'Ek <span class="hl">research</span> 🔬', '', 'c15-0.05') + pillH(540, 352, 'c15', 'Same drink, <span class="hl">alag price tag</span> 🏷️'),
   noWm: false, cam: [1, 1.04], fy: 820,
   upd(t) { tf($('s6ro'), 540, 800, 1, t * 5); }
 });
