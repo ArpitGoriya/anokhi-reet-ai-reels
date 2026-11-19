@@ -79,6 +79,19 @@ See [GUIDE.md](GUIDE.md) section 8.
 - Caption timing: whisper's script matcher lost its place after 31 s on this take (only 59 of 145 words matched);
   the last 12 captions were set by hand from whisper's own word times. Worth making the matcher re-anchor.
 
+## 2026-11-19: question bubbles, stamp and app screens (Sawal bahut hain)
+
+- **Question bubbles** in `engine/props.js`: `qBubbleSVG(id, text, {fs, tail})` (white pill, marigold "?" disc, tail
+  dots towards the head) and `bubblePop(id, t, tPop)` (wobble, swell, burst into confetti with a gold ring).
+- **Stamp**: `stampSVG(text)` + `stampIn(el, t, t0, x, y)` slams a gold word down. `computerSVG()`, `crossSVG(r)`.
+- **Flat app screens** for `phoneSVG(…, 560, 1000, inner)`: `arPlansScreen(id)` (plan cards, no prices),
+  `waChatScreen(ats)` (WhatsApp-style chat, generic colours, no logo), `arShopScreen(name, liveAt)` (shop page + Live badge).
+- **Three-way split**: `split3SVG(id, a, b, c)` in `engine/sets.js`.
+- **New poses**: `ARMS_X` (arms crossed), and a `thumb` hand (thumbs up: raise the forearm, e.g. `R: [80, 100]`).
+- **New cast**: Hareshbhai and Neha.
+- Lesson: with `bust()` behind `counterSVG()`, keep the waist about FLOOR + 80-100 (scale ~1) so shoulders and arms
+  show above the counter; at FLOOR + 190 or lower the arms are hidden.
+
 ## 2026-11-17: rental shop, mall and Kavita (Kavita aur Bargain)
 
 - **New sets** in `engine/sets.js`: `shopBG(id, {night, noRail, noSign, sign, lamp})`, a lehenga rental shop with a

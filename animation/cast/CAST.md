@@ -28,6 +28,8 @@ characters are added here after their first reel (add them to `cast.js`, to the 
 | `BETI` | **Beti**, 20s, his daughter. Puts the shop online. | Ponytail, teal kurti, yellow dupatta | Papa aur beti |
 | `DIDI` | **Anokhi Didi**, 30s, presenter who talks to camera ("Toh guys…"). Owner to confirm her name and look. | Long hair, maroon kurta, gold dupatta, necklace | Lehenga 2X (2026-11-18) |
 | `NISHA` | **Nisha**, 30s, homemaker in Surat with 12 lehengas in her almirah; learns to rent them out. | Braid, sindoor, blue kurta, yellow dupatta, blue skirt | ₹2.5 lakh ki almari (2026-11-18) |
+| `HARESH` | **Hareshbhai**, 50s, rental shop owner. Careful, a little doubtful; asks every question before he says yes. | Glasses, moustache, rust kurta | Sawal bahut hain (2026-11-19) |
+| `NEHA` | **Neha**, 20s, friendly Anokhi Reet team member who answers shop owners' questions. | Ponytail, cream kurta, maroon dupatta | Sawal bahut hain |
 
 Ideas for the cast's next members (make them when a story needs them): a young woman who rents for college
 functions, a groom or brother, a kid, a vendor on the Anokhi Reet app.

@@ -79,5 +79,10 @@ const DIDI = { top: C.red, topD: C.redDark, pallu: C.gold, border: C.goldTan, ha
 // Hemaben (40s): rental shop owner, confident and practical; works out the numbers on a chalkboard. Glasses,
 // marigold kurta with maroon dupatta. (Ek lehenge ka hisaab, 2026-11-18)
 const HEMABEN = { hairStyle: 'bun', glasses: true, top: C.marigold, topD: '#C9821E', pallu: C.red, border: C.gold, sindoor: true, necklace: true, skin: '#B07150', skin2: '#9A6143', skirt: { c: C.red, d: C.redDark, b: C.gold, w: 205 } };
+// Hareshbhai (50s): careful, slightly doubtful rental shop owner; asks every question before he says yes. Glasses,
+// moustache, rust kurta. Neha (20s): friendly Anokhi Reet team member who answers shop owners' questions. Ponytail,
+// cream kurta, maroon dupatta. (Sawal bahut hain, 2026-11-19)
+const HARESH = { male: true, mustache: true, glasses: true, wide: true, hair: '#4A3C34', top: '#B5532E', topD: '#8E3F22', skin: '#A8704C', skin2: '#93603F', embroidery: true };
+const NEHA = { hairStyle: 'pony', top: '#F3E3C0', topD: '#E0C99A', pallu: C.red, border: C.gold, skin: '#C98B62', skin2: '#B9784F', bindi: false, bangles: false, skirt: { c: C.redDark, d: '#2b0001', b: C.gold, w: 195 } };
 // Nisha (30s): a homemaker in Surat with 12 lehengas in her almirah; learns to rent them out. Blue kurta, braid. (Nisha's almirah)
 const NISHA = { top: '#4F86C6', topD: '#3A6AA3', pallu: '#F2C14E', border: C.gold, hairStyle: 'braid', skin: '#D19A72', skin2: '#BD8460', sindoor: true, skirt: { c: '#3A6AA3', d: '#2C527F', b: C.gold, w: 205 } };

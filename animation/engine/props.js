@@ -246,3 +246,102 @@ function pocketSVG(col = '#5B6C8F') {
   return `<path d="M-150,-60 L150,-60 L140,110 Q0,180 -140,110 Z" fill="${col}" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/>` +
     `<path d="M-120,-60 Q0,30 120,-60" fill="#3E4A63" stroke="${OL}" stroke-width="4"/><path d="M-130,90 Q0,150 130,90" fill="none" stroke="#F4EFE3" stroke-width="4" stroke-dasharray="10 8"/>`;
 }
+
+// ===== Sawal bahut hain (2026-11-19): question bubbles that pop, stamp, computer, plans / WhatsApp-style / shop screens =====
+// qBubbleSVG(id, text, {fs, tail: [dx, dy]}): a white question bubble (marigold "?" disc + text) centred on (0,0), with
+// two tail dots towards the thinker's head at tail. Ids: `${id}-b` (bubble), `${id}-bu` (confetti burst, hidden).
+// In upd: bubblePop(id, t, tPop) wobbles it, swells it just before tPop, then bursts it into confetti (tPop null = no pop).
+const BURST_COLS = [C.gold, C.red, C.pink, C.teal, C.marigold, C.emerald];
+function qBubbleSVG(id, text, o = {}) {
+  const fs = o.fs || 40, h = Math.round(fs * 2), w = Math.round(text.length * fs * .54 + h + 44);
+  const tl = o.tail || [0, h / 2 + 60];
+  let s = `<g id="${id}"><g id="${id}-b">`;
+  s += [[.42, 15], [.78, 10]].map(([k, r]) => `<circle cx="${(tl[0] * k).toFixed(1)}" cy="${(tl[1] * k).toFixed(1)}" r="${r}" fill="#fff" stroke="${OL}" stroke-width="4"/>`).join('');
+  s += `<rect x="${-w / 2}" y="${-h / 2 + 8}" width="${w}" height="${h}" rx="${h / 2}" fill="${OL}" opacity=".16"/>`;
+  s += `<rect x="${-w / 2}" y="${-h / 2}" width="${w}" height="${h}" rx="${h / 2}" fill="#fff" stroke="${OL}" stroke-width="${OW}"/>`;
+  s += `<circle cx="${-w / 2 + h / 2 + 4}" cy="0" r="${h * .32}" fill="${C.marigold2}" stroke="${OL}" stroke-width="4"/>`;
+  s += `<text x="${-w / 2 + h / 2 + 4}" y="${fs * .36}" text-anchor="middle" font-family="Inter" font-weight="900" font-size="${fs}" fill="${C.redDark}">?</text>`;
+  s += `<text x="${-w / 2 + h + 10}" y="${fs * .36}" font-family="Inter" font-weight="800" font-size="${fs}" fill="${C.text}">${text}</text></g>`;
+  s += `<g id="${id}-bu" opacity="0"><circle id="${id}-ring" r="40" fill="none" stroke="${C.gold}" stroke-width="10"/>`;
+  for (let i = 0; i < 12; i++) s += `<g id="${id}-p${i}">${i % 3 ? `<rect x="-11" y="-6" width="22" height="12" rx="4" fill="${BURST_COLS[i % 6]}" stroke="${OL}" stroke-width="3"/>` : `<circle r="10" fill="${BURST_COLS[i % 6]}" stroke="${OL}" stroke-width="3"/>`}</g>`;
+  return s + `</g></g>`;
+}
+function bubblePop(id, t, tp = null, R = 190) {
+  const b = $(`${id}-b`), bu = $(`${id}-bu`);
+  if (!b) return;
+  if (tp === null || t < tp) {
+    const sw = tp === null ? 0 : E.in(clamp((t - (tp - .18)) / .18));
+    tf(b, 0, Math.sin(t * 2.3 + id.length) * 4, 1 + Math.sin(t * 3.1 + id.length) * .012 + sw * .14);
+    op(b, 1); op(bu, 0); return;
+  }
+  op(b, 0);
+  const k = clamp((t - tp) / .55), e = E.out(k);
+  op(bu, 1 - k * k);
+  const ring = $(`${id}-ring`); if (ring) { ring.setAttribute('r', (40 + e * R * .8).toFixed(1)); ring.setAttribute('stroke-width', (10 * (1 - k)).toFixed(1)); }
+  for (let i = 0; i < 12; i++) { const a = i / 12 * Math.PI * 2 + .3, rr = R * e * (i % 2 ? .75 : 1); tf($(`${id}-p${i}`), Math.cos(a) * rr, Math.sin(a) * rr + k * k * 60, 1, i * 40 + k * 260); }
+}
+// stampSVG(text): a big gold rubber-stamp word with a maroon double border, centred on (0,0). stampIn(el, t, t0, x, y) slams it in.
+function stampSVG(text, fs = 150) {
+  const w = text.length * fs * .72 + 110, h = fs * 1.5;
+  return `<rect x="${-w / 2}" y="${-h / 2 + 12}" width="${w}" height="${h}" rx="30" fill="${OL}" opacity=".18"/><rect x="${-w / 2}" y="${-h / 2}" width="${w}" height="${h}" rx="30" fill="${C.gold}" stroke="${C.redDark}" stroke-width="12"/>` +
+    `<rect x="${-w / 2 + 20}" y="${-h / 2 + 20}" width="${w - 40}" height="${h - 40}" rx="18" fill="none" stroke="${C.red}" stroke-width="5"/>` +
+    `<text y="${fs * .36}" text-anchor="middle" font-family="Inter" font-weight="900" font-size="${fs}" fill="${C.red}" letter-spacing="4">${text}</text>`;
+}
+function stampIn(el, t, t0, x, y, rot = -8) {
+  if (t < t0) { op(el, 0); return; }
+  const k = clamp((t - t0) / .22), lt = t - t0 - .22;
+  const s = k < 1 ? lerp(2.2, 1, E.in(k)) : 1 + (lt < .3 ? Math.sin(lt / .3 * Math.PI) * .06 : 0);
+  tf(el, x, y, s, rot); op(el, clamp(k * 3));
+}
+// computerSVG(): a desktop computer (monitor, stand, keyboard), centred on the screen. crossSVG(r): a big red cross.
+function computerSVG() {
+  return `<rect x="-140" y="-110" width="280" height="190" rx="16" fill="#3A3330" stroke="${OL}" stroke-width="${OW}"/><rect x="-122" y="-92" width="244" height="150" rx="8" fill="${C.sky}"/>` +
+    `<path d="M-90,-60 H40 M-90,-30 H80 M-90,0 H20" stroke="#fff" stroke-width="12" stroke-linecap="round"/>` +
+    `<path d="M-24,80 L-34,120 H34 L24,80 Z" fill="#5A524D" stroke="${OL}" stroke-width="4"/><rect x="-150" y="130" width="300" height="40" rx="10" fill="#D8D2C8" stroke="${OL}" stroke-width="4"/>` +
+    [...Array(8)].map((_, i) => `<rect x="${-134 + i * 34}" y="139" width="26" height="9" rx="3" fill="#B9B2A8"/><rect x="${-134 + i * 34}" y="152" width="26" height="9" rx="3" fill="#B9B2A8"/>`).join('');
+}
+function crossSVG(r = 120) { return `<path d="M${-r},${-r} L${r},${r} M${r},${-r} L${-r},${r}" stroke="${OL}" stroke-width="40" stroke-linecap="round"/><path d="M${-r},${-r} L${r},${r} M${r},${-r} L${-r},${r}" stroke="#D9363E" stroke-width="26" stroke-linecap="round"/>`; }
+// Screens for phoneSVG(id, x, y, 560, 1000, inner), centred on the phone.
+// arPlansScreen(id): the Anokhi Reet plans page without prices: title, three plan cards (`${id}-k0..2`), a selection
+// ring on the middle one (`${id}-on`, starts hidden) and a "Shop list karo" button.
+function arPlansScreen(id) {
+  let s = arHeader() + `<text x="-236" y="-318" font-family="Inter" font-weight="900" font-size="46" fill="#141110">Plans</text>` +
+    `<text x="-236" y="-276" font-family="Inter" font-weight="600" font-size="27" fill="#655C57">Apni shop ke hisaab se chuno</text>`;
+  [-140, 60, 260].forEach((y, i) => {
+    s += `<g id="${id}-k${i}" transform="translate(0,${y})"><rect x="-240" y="-84" width="480" height="168" rx="20" fill="#fff" stroke="#E6E0D9" stroke-width="4"/>` +
+      `<circle cx="-166" cy="0" r="44" fill="${C.cream}" stroke="${C.goldTan}" stroke-width="5"/><circle cx="-166" cy="0" r="24" fill="none" stroke="${C.red}" stroke-width="4" stroke-dasharray="4 5"/>` +
+      `<rect x="-100" y="-46" width="${150 + i * 40}" height="24" rx="12" fill="#141110"/><rect x="-100" y="-6" width="250" height="16" rx="8" fill="#E6E0D9"/><rect x="-100" y="22" width="190" height="16" rx="8" fill="#E6E0D9"/>` +
+      `<path d="M196,-14 l14,14 -14,14" fill="none" stroke="#655C57" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></g>`;
+  });
+  s += `<g id="${id}-on" opacity="0"><rect x="-248" y="-32" width="496" height="184" rx="24" fill="none" stroke="#141110" stroke-width="8"/><circle cx="196" cy="60" r="30" fill="${C.emerald}" stroke="${OL}" stroke-width="4"/><path d="M182,60 l10,10 18,-18" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></g>`;
+  return s + `<rect x="-236" y="380" width="472" height="80" rx="40" fill="url(#mar)"/><text x="0" y="432" text-anchor="middle" font-family="Inter" font-weight="800" font-size="34" fill="${C.cream}">Shop list karo</text>`;
+}
+// waChatScreen(ats): a WhatsApp-style chat with Anokhi Reet (generic colours, no app logo): hello, photos + rent price,
+// and the "shop live" reply; message i pops at ats[i] (caption refs).
+function waChatScreen(ats = ['-1', '-1', '-1']) {
+  let s = `<rect x="-264" y="-484" width="528" height="968" rx="42" fill="#EFE7DA"/>` +
+    `<path d="M-264,-442 Q-264,-484 -222,-484 L222,-484 Q264,-484 264,-442 L264,-360 L-264,-360 Z" fill="${C.tealDark}"/>` +
+    `<circle cx="-196" cy="-410" r="32" fill="${C.cream}" stroke="${C.goldTan}" stroke-width="4"/><circle cx="-196" cy="-410" r="17" fill="none" stroke="${C.red}" stroke-width="4"/>` +
+    `<text x="-148" y="-404" font-family="Inter" font-weight="800" font-size="34" fill="#fff">Anokhi Reet</text><text x="-148" y="-374" font-family="Inter" font-weight="600" font-size="22" fill="#CFE6E0">online</text>`;
+  const tick = (x, y) => `<path d="M${x},${y} l7,7 13,-13 M${x + 11},${y} l7,7 13,-13" stroke="#3E9BD6" stroke-width="4" fill="none" stroke-linecap="round"/>`;
+  s += `<g transform="translate(90,-250)"><g data-t="${ats[0]}"><rect x="-160" y="-62" width="320" height="124" rx="22" fill="#D9F2C9" stroke="#B9D9A6" stroke-width="3"/>` +
+    `<text x="-136" y="-12" font-family="Inter" font-weight="800" font-size="32" fill="#141110">Namaste! 🙏</text><text x="-136" y="30" font-family="Inter" font-weight="600" font-size="28" fill="#141110">Shop list karni hai</text>${tick(100, 40)}</g></g>`;
+  const cols = [[C.lehenga, C.lehengaDark, '#E8C25E'], [C.pink, C.pinkDark, '#F4B9C8'], [C.emerald, C.emeraldDark, '#A6D3B0']];
+  s += `<g transform="translate(60,20)"><g data-t="${ats[1]}"><rect x="-190" y="-110" width="380" height="250" rx="22" fill="#D9F2C9" stroke="#B9D9A6" stroke-width="3"/>` +
+    cols.map(([c, d, p], i) => `<rect x="${-174 + i * 118}" y="-96" width="108" height="140" rx="12" fill="${C.cream}"/><g transform="translate(${-120 + i * 118},-20)">${lehengaHangerSVG('', { c, d, dupatta: p }, .27)}</g>`).join('') +
+    `<text x="-170" y="94" font-family="Inter" font-weight="800" font-size="28" fill="#141110">📸 Photos + rent price</text>${tick(140, 112)}</g></g>`;
+  s += `<g transform="translate(-60,260)"><g data-t="${ats[2]}"><rect x="-190" y="-56" width="380" height="112" rx="22" fill="#fff" stroke="#E6E0D9" stroke-width="3"/>` +
+    `<text x="-164" y="12" font-family="Inter" font-weight="900" font-size="34" fill="${C.emerald}">✅ Aapki shop live!</text></g></g>`;
+  return s + `<rect x="-244" y="400" width="400" height="64" rx="32" fill="#fff"/><circle cx="210" cy="432" r="34" fill="${C.tealDark}"/><path d="M196,416 L230,432 L196,448 L202,432 Z" fill="#fff"/>`;
+}
+// arShopScreen(name, liveAt): a shop's page in the app: banner with the shop name, a green "Live" badge that pops at
+// liveAt, and a 2x2 grid of outfits.
+function arShopScreen(name, liveAt = '-1') {
+  let s = arHeader() + `<rect x="-244" y="-372" width="488" height="190" rx="20" fill="${C.cream}" stroke="${C.goldTan}" stroke-width="4"/>` +
+    `<g transform="translate(-170,-300)"><path d="M-50,-30 H50 L60,0 H-60 Z" fill="${C.red}" stroke="${OL}" stroke-width="4"/>` + [0, 1, 2].map(i => `<path d="M${-60 + i * 40},0 q20,22 40,0" fill="${i % 2 ? C.cream : C.red}" stroke="${OL}" stroke-width="3"/>`).join('') + `<rect x="-44" y="10" width="88" height="56" fill="#fff" stroke="${OL}" stroke-width="4"/></g>` +
+    `<text x="-96" y="-296" font-family="Inter" font-weight="900" font-size="34" fill="${C.red}">${name}</text><text x="-96" y="-256" font-family="Inter" font-weight="600" font-size="25" fill="#655C57">Rental shop</text>` +
+    `<g transform="translate(150,-224)"><g data-t="${liveAt}"><rect x="-74" y="-30" width="148" height="60" rx="30" fill="${C.emerald}" stroke="${OL}" stroke-width="4"/><text y="11" text-anchor="middle" font-family="Inter" font-weight="900" font-size="30" fill="#fff">Live ✓</text></g></g>`;
+  const cards = [[C.marigold, '#C9821E', '#F7C548'], [C.lehenga, C.lehengaDark, '#E8C25E'], [C.teal, C.tealDark, '#9CC5B0'], ['#7A4FA0', '#5D3A7E', '#B28BD0']];
+  cards.forEach(([c, d, p], i) => { const x = i % 2 ? 122 : -122, y = i < 2 ? 0 : 300; s += `<g transform="translate(${x},${y})"><rect x="-112" y="-140" width="224" height="280" rx="16" fill="#fff" stroke="#E6E0D9" stroke-width="3"/><rect x="-100" y="-128" width="200" height="190" rx="10" fill="${C.cream}"/><g transform="translate(0,-40)">${lehengaHangerSVG('', { c, d, dupatta: p }, .32)}</g><rect x="-96" y="80" width="130" height="16" rx="8" fill="#E6E0D9"/><rect x="-96" y="106" width="84" height="16" rx="8" fill="#F2EEE9"/></g>`; });
+  return s;
+}

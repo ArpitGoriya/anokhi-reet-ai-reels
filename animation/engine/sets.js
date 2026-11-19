@@ -313,6 +313,14 @@ function sofaFrontSVG(x, y, w = 860, col = C.red) {
 // THINK: hand under the chin (life(..., {R: THINK, hR: 'fist'})); IDEA: one finger up beside the head ('point').
 const THINK = [-22, -150];
 const IDEA = [150, 30];
+// ARMS_X: arms crossed over the chest, a doubtful "convince me" pose (life(..., {L: ARMS_X, R: ARMS_X})) (Sawal bahut hain)
+const ARMS_X = [6, -128];
+// split3SVG(id, a, b, c): three vertical panels (360 px each) with white dividers; each drawn in full-frame coordinates,
+// so centre panel content on x = 180, 540 and 900 (Sawal bahut hain)
+function split3SVG(id, a, b, c) {
+  return [a, b, c].map((p, i) => `<clipPath id="${id}${i}"><rect x="${i * 360}" y="0" width="360" height="${H}"/></clipPath><g clip-path="url(#${id}${i})">${p}</g>`).join('') +
+    [360, 720].map(x => `<rect x="${x - 7}" y="0" width="14" height="${H}" fill="#fff" stroke="${OL}" stroke-width="4"/>`).join('');
+}
 
 // ===== Papa aur beti (2026-11-17): shop front on the street, old shop board, split screen =====
 // shopFrontBG(id, {cx, sign, since}): a shop seen from the street: sky, building, open shutter, lehengas inside,

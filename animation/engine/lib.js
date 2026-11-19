@@ -196,6 +196,8 @@ function arm(id, side, a1, a2, hand = 'open', o = {}) {
 function handSVG(kind, skin) {
   if (kind === 'point') return `<path d="M-18,-6 Q-22,18 -6,24 L22,26 Q30,24 24,16 L4,14 L4,48 Q4,58 -6,56 Q-14,54 -14,44 Z" fill="${skin}" stroke="${OL}" stroke-width="4.5" stroke-linejoin="round"/>`;
   if (kind === 'fist') return `<circle cx="0" cy="8" r="22" fill="${skin}" stroke="${OL}" stroke-width="${OW}"/>`;
+  // thumbs up: a fist with the thumb along the forearm's direction (raise the forearm so it points up) (Sawal bahut hain)
+  if (kind === 'thumb') return `<rect x="-14" y="14" width="22" height="46" rx="11" fill="${skin}" stroke="${OL}" stroke-width="4.5"/><circle cx="0" cy="8" r="22" fill="${skin}" stroke="${OL}" stroke-width="${OW}"/><path d="M-12,4 H14 M-12,14 H14" stroke="${OL}" stroke-width="3" opacity=".5"/>`;
   // open palm (waving)
   return `<path d="M-20,-4 Q-26,20 -16,34 L-18,52 Q-16,58 -10,54 L-6,38 L-4,58 Q0,64 6,58 L6,38 L12,56 Q18,60 20,54 L16,34 Q24,22 20,-4 Z" fill="${skin}" stroke="${OL}" stroke-width="4.5" stroke-linejoin="round"/>`;
 }

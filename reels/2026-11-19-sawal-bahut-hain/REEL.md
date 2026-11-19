@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-19
 - **Made by:** dhruvifewtone-wq
-- **Status:** voice approved
+- **Status:** video sent
 
 ## Brief
 
@@ -47,7 +47,12 @@ Voice text: [`script.txt`](script.txt).
 ## Voice-over
 
 - File: `output/female-sawal-bahut-hain-take1.mp3` (on the maker's computer) — approved: yes, 2026-11-19
-- Captions timed with `tools/caption_timing.py` (redo after every new take)
+- Voice switched from male to female after hearing male take 1 (teammate, 2026-11-19).
+- Captions: whisper timed c1-c7 and c28-c31; it misheard 13-41 s, so c8-c27 were set by hand from the voice's pauses.
+
+## Video
+
+- `output/2026-11-19-sawal-bahut-hain.mp4` (47 s), video 1 sent 2026-11-19.
 
 ## Feedback rounds
 
@@ -70,8 +75,12 @@ Aur koi sawal? Comment mein puchho, ya "LIST" likho 💬
 
 ## Added to the library (at least two per reel)
 
-- (planned) Question bubbles that pop up, grow and burst into confetti; Hareshbhai and Neha in the cast; an
-  arms-crossed pose; a flat WhatsApp-style chat screen.
+- Question bubbles that wobble, swell and burst into confetti (`qBubbleSVG` + `bubblePop`), a rubber stamp
+  (`stampSVG` + `stampIn`), `computerSVG` + `crossSVG`, flat app screens `arPlansScreen` (no prices), `waChatScreen`
+  (WhatsApp-style, no logo) and `arShopScreen` (with a Live badge), all in `engine/props.js`.
+- `split3SVG` (three-way split screen) and the `ARMS_X` crossed-arms pose in `engine/sets.js`; a `thumb` hand
+  (thumbs up) in `engine/lib.js`.
+- New cast: Hareshbhai (`HARESH`) and Neha (`NEHA`).
 
 ## Suggested default (for the owner)
 
