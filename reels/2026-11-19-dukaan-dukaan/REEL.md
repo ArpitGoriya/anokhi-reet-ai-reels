@@ -45,12 +45,12 @@ Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- File: `output/female-dukaan-dukaan-take1.mp3` (on the maker's computer) — approved: no
+- File: `output/female-dukaan-dukaan-take2.mp3` (on the maker's computer) — approved: no
 - Captions timed with `tools/caption_timing.py` (redo after every new take)
 
 ## Feedback rounds
 
-1. (none yet)
+1. Voice take 1: the last "Anokhi Reet" sounded different → written in Devanagari ("अनोखी रीत") with a short pause before it; take 2.
 
 ## Caption
 
