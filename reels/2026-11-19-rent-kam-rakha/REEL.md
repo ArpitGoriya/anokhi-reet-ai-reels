@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-19
 - **Made by:** dhruvifewtone-wq
-- **Status:** brief (script waiting for approval)
+- **Status:** script approved, voice take 1
 
 ## Brief
 
@@ -34,7 +34,7 @@
   bell, ka-ching, jingle) are shown visually; no "whoosh" (brand rule).
 - The app name is said in Devanagari ("अनोखी रीत") so the voice says it properly.
 
-## Script and storyboard (approved: no)
+## Script and storyboard (approved: yes, 2026-11-19)
 
 | # | Voice line (caption) | On screen (scene, characters and what they do) | Label / title |
 |---|---|---|---|
