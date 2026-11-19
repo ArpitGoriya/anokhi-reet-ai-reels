@@ -57,7 +57,7 @@ Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- (not made yet)
+- File: `output/female-mehenga-lehenga-take1.mp3` (on the maker's computer, 61 s) — approved: waiting
 
 ## Video
 
