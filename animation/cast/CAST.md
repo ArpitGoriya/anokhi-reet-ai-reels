@@ -30,6 +30,7 @@ characters are added here after their first reel (add them to `cast.js`, to the 
 | `NISHA` | **Nisha**, 30s, homemaker in Surat with 12 lehengas in her almirah; learns to rent them out. | Braid, sindoor, blue kurta, yellow dupatta, blue skirt | ₹2.5 lakh ki almari (2026-11-18) |
 | `HARESH` | **Hareshbhai**, 50s, rental shop owner. Careful, a little doubtful; asks every question before he says yes. | Glasses, moustache, rust kurta | Sawal bahut hain (2026-11-19) |
 | `NEHA` | **Neha**, 20s, friendly Anokhi Reet team member who answers shop owners' questions. | Ponytail, cream kurta, maroon dupatta | Sawal bahut hain |
+| `KOMAL.purani` / `.smart` | **Komal**, 20s, shopping for a reception outfit; shown as two versions of herself (old way vs Anokhi Reet). | Long hair; marigold kurta with pink dupatta (Purani), pink kurta with necklace (Smart) | Dukaan-dukaan ki bhaag-daud (2026-11-19) |
 
 Ideas for the cast's next members (make them when a story needs them): a young woman who rents for college
 functions, a groom or brother, a kid, a vendor on the Anokhi Reet app.

@@ -79,6 +79,15 @@ See [GUIDE.md](GUIDE.md) section 8.
 - Caption timing: whisper's script matcher lost its place after 31 s on this take (only 59 of 145 words matched);
   the last 12 captions were set by hand from whisper's own word times. Worth making the matcher re-anchor.
 
+## 2026-11-19: bazaar street, moving split screen, Komal (Dukaan-dukaan ki bhaag-daud)
+
+- **Bazaar street** in `engine/sets.js`: `bazaarBG(id, {n})` (hot sky, sun, a row of shops "DUKAAN 1..n", heat haze,
+  footpath and road) and `bazaarScroll(id, x, t)` to slide the shops past a walker who stays in place (walking feel).
+- **Moving split screen**: `splitDynSVG(id, left, right)` + `splitAt(id, x)`: the divider can move to widen one side;
+  each side stays centred in its half.
+- **Props**: `sunSVG(r)`, `autoSVG()` (auto-rickshaw), `tumbleweedSVG(r)` in `engine/props.js`.
+- **New cast**: Komal, two looks (`KOMAL.purani`, `KOMAL.smart`) for "old way vs smart way" comparisons.
+
 ## 2026-11-19: question bubbles, stamp and app screens (Sawal bahut hain)
 
 - **Question bubbles** in `engine/props.js`: `qBubbleSVG(id, text, {fs, tail})` (white pill, marigold "?" disc, tail

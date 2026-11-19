@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-19
 - **Made by:** dhruvifewtone-wq
-- **Status:** script approved
+- **Status:** video sent
 
 ## Brief
 
@@ -45,8 +45,12 @@ Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- File: `output/female-dukaan-dukaan-take2.mp3` (on the maker's computer) — approved: no
-- Captions timed with `tools/caption_timing.py` (redo after every new take)
+- File: `output/female-dukaan-dukaan-take2.mp3` (on the maker's computer) — approved: yes, 2026-11-19
+- Captions timed with `tools/caption_timing.py` (c6, c17, c18 nudged by hand to the voice's pauses).
+
+## Video
+
+- `output/2026-11-19-dukaan-dukaan.mp4` (36 s), video 1 sent 2026-11-19.
 
 ## Feedback rounds
 
@@ -66,8 +70,10 @@ Aap Purani Komal ho ya Smart Komal? Comment karo 👇
 
 ## Added to the library (at least two per reel)
 
-- (planned) Komal in the cast (two looks), a street with shop-hopping and heat waves, a tumbleweed, a
-  split-screen that widens one side and merges.
+- `bazaarBG` + `bazaarScroll`: a hot market street with a long row of numbered shops that slides past a walker
+  (sun, heat haze), and `splitDynSVG` + `splitAt`: a split screen whose divider moves (both in `engine/sets.js`).
+- `sunSVG`, `autoSVG` (auto-rickshaw), `tumbleweedSVG` in `engine/props.js`.
+- New cast: Komal (`KOMAL.purani` / `KOMAL.smart`).
 
 ## Suggested default (for the owner)
 

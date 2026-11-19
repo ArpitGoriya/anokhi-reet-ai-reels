@@ -389,3 +389,46 @@ const CHALK = {
 };
 // a puff of chalk dust at (x, y) from time `at`
 function chalkDust(x, y, at) { return [[-20, -10, 12], [14, -18, 9], [6, 12, 10], [-8, 20, 7]].map(([dx, dy, r]) => `<g transform="translate(${x + dx},${y + dy})"><g data-t="${at}" data-k="fade" data-d=".15" data-out="${at}+0.5"><circle r="${r}" fill="#FFFFFF" opacity=".55"/></g></g>`).join(''); }
+// ===== Dukaan-dukaan ki bhaag-daud (2026-11-19): hot bazaar street, moving split screen =====
+// bazaarBG(id, {n}): a hot market street: warm sky, sun (`${id}-sun`), a long row of n small rental shops "DUKAAN 1..n"
+// (`${id}-row`, 300 px each: slide it left with bazaarScroll(id, x) so a walker seems to pass them), heat haze
+// (`${id}-haze`), footpath and road. Shop i is centred at x = 150 + i * 300 before scrolling.
+function bazaarBG(id, o = {}) {
+  const n = o.n || 12, sw = 300;
+  let s = `<rect width="${W}" height="${H}" fill="#F7D9A6"/><rect y="420" width="${W}" height="200" fill="#F5CF92" opacity=".6"/>`;
+  s += `<g transform="translate(${o.sunX || 170},${o.sunY || 330})"><g id="${id}-sun">${sunSVG()}</g></g>`;
+  s += `<g id="${id}-row">`;
+  for (let i = 0; i < n; i++) {
+    const [c1, d1] = SHOP_LEH[i % 8], [c2, d2] = SHOP_LEH[(i + 3) % 8];
+    s += `<g transform="translate(${i * sw},0)"><rect x="6" y="560" width="${sw - 12}" height="${FLOOR - 560}" fill="${['#F3DCC0', '#EBD3B5', '#F7E1C6'][i % 3]}" stroke="${OL}" stroke-width="${OW}"/>` +
+      `<rect x="28" y="586" width="${sw - 56}" height="84" rx="12" fill="url(#mar)" stroke="${OL}" stroke-width="4"/>` +
+      `<text x="${sw / 2}" y="642" text-anchor="middle" font-family="Inter" font-weight="900" font-size="38" fill="${C.gold}" letter-spacing="2">DUKAAN ${i + 1}</text>` +
+      [0, 1, 2, 3, 4].map(k => `<path d="M${6 + k * 57.6},690 h57.6 l-5,56 q-23.8,20 -47.6,0 z" fill="${k % 2 ? C.cream : C.red}" stroke="${OL}" stroke-width="3.5" stroke-linejoin="round"/>`).join('') +
+      `<rect x="40" y="790" width="${sw - 80}" height="${FLOOR - 790}" fill="#4E3A1E" stroke="${OL}" stroke-width="4"/><path d="M52,830 H${sw - 52}" stroke="${C.goldTan}" stroke-width="8"/>` +
+      `<g transform="translate(108,890)">${lehengaHangerSVG('', { c: c1, d: d1, dupatta: C.goldTan }, .36)}</g><g transform="translate(196,890)">${lehengaHangerSVG('', { c: c2, d: d2, dupatta: C.goldTan }, .36)}</g></g>`;
+  }
+  s += `</g><g id="${id}-haze" opacity=".45">` + [0, 1, 2, 3].map(k => `<path d="M${90 + k * 270},${520 - (k % 2) * 30} q22,-20 0,-40 q-22,-20 0,-40 q22,-20 0,-40" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>`).join('') + `</g>`;
+  s += `<rect x="-10" y="${FLOOR}" width="${W + 20}" height="90" fill="#CFC6B8" stroke="${OL}" stroke-width="4"/>`;
+  for (let x = 0; x < W; x += 120) s += `<path d="M${x},${FLOOR} V${FLOOR + 90}" stroke="#B8AE9E" stroke-width="4"/>`;
+  s += `<rect x="-10" y="${FLOOR + 90}" width="${W + 20}" height="${H - FLOOR - 90}" fill="#6E6A64"/><path d="M0,${FLOOR + 330} H${W}" stroke="#F2EADF" stroke-width="12" stroke-dasharray="70 50"/>`;
+  return s;
+}
+// every frame: slide the shop row so x px have passed; sun turns slowly, heat haze shimmers
+function bazaarScroll(id, x, t) {
+  tf($(`${id}-row`), -x, 0, 1);
+  tf($(`${id}-sun`), 0, 0, 1 + Math.sin(t * 3) * .03, t * 12);
+  const hz = $(`${id}-haze`); if (hz) { hz.setAttribute('opacity', (.3 + .2 * Math.sin(t * 4)).toFixed(2)); tf(hz, Math.sin(t * 2.2) * 8, -((t * 30) % 40), 1); }
+}
+// splitDynSVG(id, left, right): a split screen whose divider can move. Draw each side in full-frame coordinates
+// centred on x = 270 (left) and 810 (right); splitAt(id, x) puts the divider at x and keeps each side centred in its half.
+function splitDynSVG(id, left, right) {
+  return `<clipPath id="${id}L"><rect id="${id}Lr" x="0" y="0" width="540" height="${H}"/></clipPath><clipPath id="${id}R"><rect id="${id}Rr" x="540" y="0" width="540" height="${H}"/></clipPath>` +
+    `<g clip-path="url(#${id}L)"><g id="${id}Lg">${left}</g></g><g clip-path="url(#${id}R)"><g id="${id}Rg">${right}</g></g>` +
+    `<rect id="${id}D" x="533" y="0" width="14" height="${H}" fill="#fff" stroke="${OL}" stroke-width="4"/>`;
+}
+function splitAt(id, x) {
+  const dx = (x - 540) / 2;
+  $(`${id}Lr`).setAttribute('width', x.toFixed(1)); $(`${id}Rr`).setAttribute('x', x.toFixed(1)); $(`${id}Rr`).setAttribute('width', (W - x).toFixed(1));
+  $(`${id}D`).setAttribute('x', (x - 7).toFixed(1));
+  tf($(`${id}Lg`), dx, 0, 1); tf($(`${id}Rg`), dx, 0, 1);
+}

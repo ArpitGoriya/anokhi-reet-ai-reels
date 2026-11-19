@@ -345,3 +345,25 @@ function arShopScreen(name, liveAt = '-1') {
   cards.forEach(([c, d, p], i) => { const x = i % 2 ? 122 : -122, y = i < 2 ? 0 : 300; s += `<g transform="translate(${x},${y})"><rect x="-112" y="-140" width="224" height="280" rx="16" fill="#fff" stroke="#E6E0D9" stroke-width="3"/><rect x="-100" y="-128" width="200" height="190" rx="10" fill="${C.cream}"/><g transform="translate(0,-40)">${lehengaHangerSVG('', { c, d, dupatta: p }, .32)}</g><rect x="-96" y="80" width="130" height="16" rx="8" fill="#E6E0D9"/><rect x="-96" y="106" width="84" height="16" rx="8" fill="#F2EEE9"/></g>`; });
   return s;
 }
+
+// ===== Dukaan-dukaan ki bhaag-daud (2026-11-19): sun, auto-rickshaw, tumbleweed =====
+// sunSVG(r): a hot sun with rays, centred on (0,0) (rotate it slowly)
+function sunSVG(r = 82) {
+  let s = '';
+  for (let i = 0; i < 12; i++) { const a = i * 30; s += `<path transform="rotate(${a})" d="M-14,${-r - 18} L0,${-r - 62} L14,${-r - 18} Z" fill="${C.marigold}" stroke="${OL}" stroke-width="4" stroke-linejoin="round"/>`; }
+  return s + `<circle r="${r}" fill="${C.marigold2}" stroke="${OL}" stroke-width="${OW}"/><circle r="${r * .7}" fill="#FBE08A" opacity=".7"/>`;
+}
+// autoSVG(): an auto-rickshaw seen from the side, facing left, wheels on y = 0
+function autoSVG() {
+  return `<path d="M-170,-30 L-176,-150 Q-170,-206 -110,-214 L120,-214 Q166,-206 168,-150 L176,-30 Z" fill="#2E8B57" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/>` +
+    `<path d="M-182,-216 Q-180,-262 -120,-266 L130,-266 Q178,-262 180,-216 Z" fill="${C.marigold2}" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/>` +
+    `<path d="M-150,-196 L-150,-120 L-40,-120 L-40,-196 Z" fill="#CFE6EE" stroke="${OL}" stroke-width="4"/><rect x="10" y="-196" width="130" height="90" rx="10" fill="#3A3330" stroke="${OL}" stroke-width="4"/>` +
+    `<circle cx="-168" cy="-80" r="14" fill="${C.gold}" stroke="${OL}" stroke-width="4"/><path d="M-176,-34 H176" stroke="${C.marigold2}" stroke-width="10"/>` +
+    [-110, 110].map(x => `<circle cx="${x}" cy="0" r="40" fill="#2A2420" stroke="${OL}" stroke-width="${OW}"/><circle cx="${x}" cy="0" r="15" fill="#B9B2A8"/>`).join('');
+}
+// tumbleweedSVG(r): a dry tumbleweed, centred on (0,0) (roll it: move x and rotate)
+function tumbleweedSVG(r = 70) {
+  let s = `<circle r="${r}" fill="#C9A46A" opacity=".25"/>`;
+  for (let i = 0; i < 9; i++) { const a = i * 40, b = a + 150; s += `<path d="M${(Math.cos(a / 57.3) * r).toFixed(1)},${(Math.sin(a / 57.3) * r).toFixed(1)} Q${(Math.cos((a + 70) / 57.3) * r * .2).toFixed(1)},${(Math.sin((a + 70) / 57.3) * r * .2).toFixed(1)} ${(Math.cos(b / 57.3) * r * .9).toFixed(1)},${(Math.sin(b / 57.3) * r * .9).toFixed(1)}" fill="none" stroke="#9A6B3F" stroke-width="5" stroke-linecap="round"/>`; }
+  return s + `<circle r="${r}" fill="none" stroke="#8C6239" stroke-width="4" stroke-dasharray="14 10"/>`;
+}

@@ -86,3 +86,10 @@ const HARESH = { male: true, mustache: true, glasses: true, wide: true, hair: '#
 const NEHA = { hairStyle: 'pony', top: '#F3E3C0', topD: '#E0C99A', pallu: C.red, border: C.gold, skin: '#C98B62', skin2: '#B9784F', bindi: false, bangles: false, skirt: { c: C.redDark, d: '#2b0001', b: C.gold, w: 195 } };
 // Nisha (30s): a homemaker in Surat with 12 lehengas in her almirah; learns to rent them out. Blue kurta, braid. (Nisha's almirah)
 const NISHA = { top: '#4F86C6', topD: '#3A6AA3', pallu: '#F2C14E', border: C.gold, hairStyle: 'braid', skin: '#D19A72', skin2: '#BD8460', sindoor: true, skirt: { c: '#3A6AA3', d: '#2C527F', b: C.gold, w: 205 } };
+
+// Komal (20s): a young woman shopping for a reception outfit, shown as two versions of herself: Purani Komal goes
+// shop to shop (marigold kurta), Smart Komal looks on Anokhi Reet first (pink kurta). (Dukaan-dukaan ki bhaag-daud, 2026-11-19)
+const KOMAL = {
+  purani: { hairStyle: 'long', top: C.marigold2, topD: '#D9A52E', pallu: '#E26A8A', border: C.red, skin: '#C98B62', skin2: '#B9784F', skirt: { c: '#D9A52E', d: '#B8862F', b: C.red, w: 190 } },
+  smart: { hairStyle: 'long', top: C.pink, topD: C.pinkDark, pallu: '#F4B9C8', border: C.gold, necklace: true, skin: '#C98B62', skin2: '#B9784F', skirt: { c: C.pinkDark, d: '#8E2E4A', b: C.gold, w: 190 } },
+};
