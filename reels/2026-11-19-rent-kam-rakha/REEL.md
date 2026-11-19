@@ -72,15 +72,24 @@ Voice text: [`script.txt`](script.txt).
 
 ## Caption
 
+Version 2 (teammate asked for 5 hashtags and a few lines about Anokhi Reet, 2026-11-19):
+
 ```
-Rent sabse kam rakha, phir bhi customer nahi? 🤔
+Rent sabse kam rakha… phir bhi customer nahi? 🤔
 
-Research kehti hai: log price ko quality samajhte hain 🧠
-Sahi rent rakho, quality dikhao, aur Anokhi Reet pe list karo ✅
+Rekhaben ne sabse sasta rent rakha, par customer bole "Itna sasta? Kuch toh gadbad hogi…" 😬
+Research kehti hai: log price ko quality ka signal samajhte hain 🧠
+Toh rent kam mat karo. Sahi rent rakho, quality dikhao, aur shop online lao ✅
 
-Aapke best lehenge ka rent kitna hai? Comment karo 👇 Shop online laani hai? "ONLINE" likho.
+✨ Anokhi Reet ek ethnic-wear rental aur shopping app hai. Shaadi aur tyohaar ke liye
+lehenge, sherwani aur outfits aapke sheher ki local rental shops se, ek hi app mein.
+Shop owners apni dukaan online list karke naye customers tak pahunch sakte hain.
+दिल से जुड़ी एक अनोखी रीत 💛
 
-#RentalShop #BusinessTips #PricingTips #LehengaOnRent #AnokhiReet
+Aapke best lehenge ka rent kitna hai? Comment karo 👇
+Shop online laani hai? "ONLINE" likho.
+
+#AnokhiReet #RentalShop #LehengaOnRent #DukaanKaFunda #BusinessTips
 ```
 
 ## Added to the library (at least two per reel)
