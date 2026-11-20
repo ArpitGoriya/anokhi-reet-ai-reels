@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-20
 - **Made by:** dhruvifewtone-wq
-- **Status:** script approved, voice take 1 made
+- **Status:** script v2 (curiosity) written, waiting for approval
 
 ## Brief
 
@@ -30,24 +30,30 @@
 - Hashtags: 5 (dropped #GujaratiWedding, teammate chose it).
 - The app name is said in Devanagari ("अनोखी रीत") so the voice says it properly.
 - Only clothes appear as products.
+- **Curiosity** (teammate, 2026-11-20): an open loop at the start ("aakhir mein Kavya ne jo kiya… mummy bhi chup"), the
+  trick kept secret ("na kharidna, na maangna", app header "? ? ?") until the reveal, and a payoff at the end (Mummy:
+  "Ye kahan se laayi?").
 
-## Script and storyboard (approved: yes, 2026-11-20)
+## Script and storyboard (version 2 with curiosity, approved: no)
 
 | # | Voice line (caption) | On screen | Label / title |
 |---|---|---|---|
 | 1 | *Cupboard poora bhara* hai… / phir bhi *pehenne ko kuch nahi?* | **Hook from frame 1:** Kavya flings open a stuffed cupboard; a few outfits tumble out (drawn "creak" and "thud" marks). | Big title from frame 1: **Pehenne ko kuch nahi 😩** |
-| 2 | Ye *Diwali* pe pehna tha… / ye *cousin ki shaadi* mein… / ye toh *sabne dekh liya…* / isme toh already *bohot photos* hain… | She pulls outfits out one by one and tosses them on the bed; a label pops on each: "Diwali 2026", "Cousin ki shaadi", "Office party", "📸 Photos ho gaye". The pile grows taller than her. | Pehna tha • Pehna tha • Pehna tha 😫 |
-| 3 | Aur *mummy* ka wahi dialogue: / *"Itne kapde hain, phir bhi?"* | Mummy peeks in at the door; bubble: "Itne saare kapde hain, phir bhi bolti rehti hai ke pehenne ko kuch nahi hai!" Kavya flops onto the pile (a drawn "boing"). | "Itne kapde hain, phir bhi?" 😂 |
-| 4 | *Naya kharidun?* / Ek function ke liye *itna kharcha,* / aur phir wo bhi *isi cupboard* mein… | Kavya thinks (thought bubble with a new lehenga); a big price tag "₹15,000" floats up, she winces (gulp sweat drop); the new lehenga flies into the stuffed cupboard. | Phir se ₹15,000? 💸 · Udaharan |
-| 5 | Phir Kavya ne kiya *smart kaam.* / *Anokhi Reet* pe *naya look* dhoondha… / *bina naya kharide.* | A light bulb. Her phone: Anokhi Reet, she picks City, Occasion, Budget; fresh outfits from listed shops scroll; she taps a peach lehenga (card: shop name + "Rent", no amount); "Booked ✅" pops. | Naya look, bina kharide ✨ |
-| 6 | Function mein *bilkul naya look…* / aur naya kharidne ke *paise bhi bache!* | Kavya at the wedding (marigold toran, fairy lights) in the peach lehenga, twirling; then her cupboard at home closes neatly, nothing new added (a drawn "click"). | Naya look ✅ · Paise bhi bach gaye ✅ |
-| 7 | *Cupboard full* hai? Koi baat nahi. / *Naya look,* bina naya kharide. / *Download* karo *Anokhi Reet!* | Kavya faces us with her phone; then the maroon end card: wordmark, **Download Anokhi Reet 👇**, the store badges, anokhireet.in. | Download Anokhi Reet 👇 |
-
+| 1b | Par *aakhir mein* Kavya ne jo kiya… / uske baad *mummy bhi chup* ho gayi. | **Open loop:** a quick peek of Mummy with her mouth open, then a "?" over her; a "🤐" pops. | Aakhir tak dekho 👀 |
+| 2 | Ye *Diwali* pe pehna tha… / ye *cousin ki shaadi* mein… / ye toh *sabne dekh liya…* / isme toh already *bohot photos* hain… | She tosses outfits on the bed; labels pop: "Diwali 2026", "Cousin ki shaadi", "Office party", "📸 Photos ho gaye". The pile grows taller than her. | Pehna tha • Pehna tha • Pehna tha 😫 |
+| 3 | Aur *mummy* ka wahi dialogue: / *"Itne kapde hain, phir bhi?"* | Mummy peeks in: "Itne saare kapde hain, phir bhi bolti rehti hai ke pehenne ko kuch nahi hai!" Kavya flops onto the pile. | "Itne kapde hain, phir bhi?" 😂 |
+| 4 | *Naya kharidun?* / Ek function ke liye *itna kharcha,* / aur phir wo bhi *isi cupboard* mein… | A "₹15,000" tag floats up, she winces; the new lehenga flies into the stuffed cupboard. | Phir se ₹15,000? 💸 · Udaharan |
+| 5 | Tabhi Kavya ko *ek tareeka* sujha… / na kuch *kharidna,* / na kisi se *maangna.* | A light bulb; two crossed-out icons pop: a shopping bag ❌, a "borrow" hand ❌. | Toh kya kiya? 🤔 |
+| 6 | Usne *phone* uthaya… / *city, occasion* aur *budget* chuna… / aur apna *look book* kar liya. | Her phone with a **mystery header "? ? ?"** (no app name yet): City / Occasion / Budget chips; outfits from listed shops; she taps a peach lehenga (shop + "Rent", no amount); "Booked ✅". | ? ? ? 📱 |
+| 7 | Tareeka tha… / *Anokhi Reet!* / *Naya look…* bina naya kharide. | **The reveal:** the "? ? ?" header flips to the Anokhi Reet seal and name, gold burst. | Naya look, bina kharide ✨ |
+| 8 | Function mein *bilkul naya look…* / aur naya kharidne ke *paise bhi bache!* | Kavya at the wedding in the peach lehenga, twirling; her cupboard at home closes neatly, nothing new added. | Naya look ✅ · Paise bhi bach gaye ✅ |
+| 9 | Aur mummy? / *Pehli baar* bas itna boli… / *"Ye kahan se laayi?"* | **Payoff:** Mummy sees Kavya in the peach lehenga, jaw drops, then asks with a smile; bubble "Ye kahan se laayi? 😍". | Mummy bhi chup 😄 |
+| 10 | *Cupboard full* hai? Koi baat nahi. / *Naya look,* bina naya kharide. / *Download* karo *Anokhi Reet!* | Kavya faces us with her phone; then the maroon end card: wordmark, **Download Anokhi Reet 👇**, the store badges, anokhireet.in. | Download Anokhi Reet 👇 |
 Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- Take 1: `output/female-cupboard-full-take1.mp3` (33 s) — approved: waiting
+- Take 1: `output/female-cupboard-full-take1.mp3` (33 s) (script v1) — not used: teammate asked for more curiosity (2026-11-20)
 
 ## Video
 
