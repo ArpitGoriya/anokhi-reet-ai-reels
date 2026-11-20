@@ -21,12 +21,13 @@ const CHUNKS = [
   ['c18', 'Outfit *bechne* se *ek baar* paisa milta hai.', 8],
   ['c19', 'Rent pe dene se *har season* kamaai ka mauka.', 9],
   ['c20', 'Aapka lehenga bhi *kamaa sakta* hai.', 6],
-  ['c21', 'Comment karo *RENT.*', 3],
+  ['c21', 'Agar aapko bhi apne *outfits rent* par dene hain…', 9],
+  ['c22', 'toh *comment* karo *RENT.*', 4],
 ];
 
-// Chunk start times (s): tools/caption_timing.py (faster-whisper, 80 of 116 words matched), voice female-nisha-part-2-take2.mp3; c3, c5, c9 nudged by hand to the pauses.
+// Chunk start times (s): tools/caption_timing.py (faster-whisper, 80 of 116 words matched), voice female-nisha-part-2-take3.mp3 (take 2 + the new CTA line joined at 36.5 s; c21-c22 set from the line's own word times); c3, c5, c9 nudged by hand to the pauses.
 const STARTS = [
-  0.23, 1.23, 3.45, 4.38, 5.45, 6.56, 7.74, 9.77, 11.80, 13.61, 15.80, 17.89, 20.00, 22.56, 25.43, 26.60, 28.46, 29.80, 32.13, 35.02, 36.42];
+  0.23, 1.23, 3.45, 4.38, 5.45, 6.56, 7.74, 9.77, 11.80, 13.61, 15.80, 17.89, 20.00, 22.56, 25.43, 26.60, 28.46, 29.80, 32.13, 35.02, 36.80, 39.12];
 // When each script word of a chunk is spoken (drives the word-by-word highlight).
 const WORDS = [
   [0.31, 0.36, 0.7],
@@ -49,5 +50,6 @@ const WORDS = [
   [29.88, 30.28, 30.64, 30.86, 31.12, 31.32, 31.56, 31.82],
   [32.21, 32.54, 32.66, 32.88, 33.1, 33.34, 33.82, 33.94, 34.24],
   [35.1, 35.36, 35.64, 35.76, 36.12, 36.36],
-  [36.5, 37.14, 37.34]];
-const VOICE_END = 37.86, DURATION = 39.33;
+  [36.82, 37.09, 37.37, 37.49, 37.73, 38.15, 38.41, 38.55, 38.81],
+  [39.17, 39.29, 39.65, 39.87]];
+const VOICE_END = 40.5, DURATION = 42.0;

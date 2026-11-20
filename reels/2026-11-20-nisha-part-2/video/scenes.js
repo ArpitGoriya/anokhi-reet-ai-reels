@@ -145,13 +145,14 @@ addScene('c18', 'c20', {
 addScene('c20', 9999, {
   svg: homeBG('n11', HOME) + rosettes('n11-r', 540, 780, .08, C.goldTan) + bust('ni11', NISHA, 540, FLOOR + 90, 1.1) + counterSVG(),
   html: `<div class="follow" style="left:540px;top:380px" data-t="c20+0.2"><img class="seal" src="${SEAL()}"><span class="nm">Anokhi Reet</span><span class="btn" id="n11-b"><span id="n11-f">Follow</span></span></div>` +
-    `<div class="pill big" style="left:540px;top:520px" data-t="c21">Comment <span class="hl">RENT</span> 👇</div>` +
-    `<div class="title" style="top:650px;font-size:62px" data-t="c21+0.6">Rent. <span class="g">Earn.</span> Repeat.</div>`,
-  noWm: true,
+    `<div class="pill big" style="left:540px;top:520px" data-t="c21" data-out="c22-0.05">Outfits <span class="hl">rent</span> par dene hain? 🤔</div>` +
+    `<div class="pill big" style="left:540px;top:520px" data-t="c22">Comment <span class="hl">RENT</span> 👇</div>` +
+    `<div class="title" style="top:650px;font-size:62px" data-t="c22+0.5">Rent. <span class="g">Earn.</span> Repeat.</div>`,
+  noWm: true, capY: 1240,
   upd(t) {
     tf($('n11-r'), 540, 780, 1, t * 5);
-    const pt = t > T('c21');
-    life('ni11', t, { pivot: 0, mouth: 'big', brows: 'up', tilt: 4, L: pt ? [40, -10] : [9, -14], hL: 'point', R: [9, -14], y: hop(t, T('c21'), 10) });
+    const pt = t > T('c22');
+    life('ni11', t, { pivot: 0, mouth: 'big', brows: 'up', tilt: 4, L: pt ? [40, -10] : [9, -14], hL: 'point', R: [9, -14], y: hop(t, T('c22'), 10) });
     const tp = T('c20') + 1.0, press = t > tp && t < tp + .25 ? .92 : 1;
     const b = $('n11-b'); b.style.transform = `scale(${press})`; b.style.display = 'inline-block';
     const done = t > tp + .12; $('n11-f').textContent = done ? 'Following ✓' : 'Follow'; b.style.background = done ? '#E3F3EA' : '#890304'; b.style.color = done ? '#1F7A4D' : '#FFF2DF';

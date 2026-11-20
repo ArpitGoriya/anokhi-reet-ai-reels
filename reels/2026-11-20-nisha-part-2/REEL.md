@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-20
 - **Made by:** dhruvifewtone-wq
-- **Status:** final (video 2 approved, 2026-11-20)
+- **Status:** video 3 sent (video 2 was approved; CTA changed after)
 
 ## Brief
 
@@ -48,7 +48,7 @@
 | 8 | Pati ne poocha, *"Ye… sab rent se?"* / Nisha boli, *"Haan. Tumne toh bola tha bech de."* | Husband walks in, sees the full coin jar, freezes, wide eyes. Bubble: "Ye… sab rent se?" Nisha, arms folded, smiling: "Haan. Tumne toh bola tha bech de." | — |
 | 9 | Aur ab pati bole… / *"Achha sun… meri sherwani bhi rent pe daal de na."* | Husband walks off and comes back with his sherwani on a hanger, sheepish smile. Bubble: "Achha sun… meri sherwani bhi rent pe daal de na." | Ab pati bhi rent pe dega 😂 |
 | 10 | Outfit *bechne* se *ek baar* paisa milta hai. / Rent pe dene se *har season* kamaai ka mauka. | Nisha faces us, confident. | Bechna = ek baar · Rent = har season mauka |
-| 11 | Aapka lehenga bhi *kamaa sakta* hai. / Comment karo *RENT.* | Nisha points down; the "Anokhi Reet · Following ✓" card pops above her. | Comment RENT 👇 |
+| 11 | Aapka lehenga bhi *kamaa sakta* hai. / Agar aapko bhi apne *outfits rent* par dene hain… / toh *comment* karo *RENT.* | Nisha points down; the "Anokhi Reet · Following ✓" card pops above her. | Comment RENT 👇 |
 
 Voice text: [`script.txt`](script.txt).
 
@@ -62,6 +62,7 @@ Voice text: [`script.txt`](script.txt).
 
 - `output/2026-11-20-nisha-part-2.mp4` (39 s), video 1 sent 2026-11-20.
 - `output/2026-11-20-nisha-part-2-v2.mp4` (39 s) + a 720×1280 copy `-v2-720.mp4` (Part 1 was posted at 720×1280), video 2 sent 2026-11-20.
+- `output/2026-11-20-nisha-part-2-v3.mp4` (42 s) + `-v3-720.mp4`, video 3 sent 2026-11-20.
 
 ## Feedback rounds
 
@@ -70,6 +71,9 @@ Voice text: [`script.txt`](script.txt).
    ₹25,000 was one lehenga's price, ₹30,000 the Part 1 sale value of all 12 ("₹2.5 lakh ka maal, ₹30,000 mein?"), so the
    numbers match; the ledgers now read like Part 1's ("Maal: ₹2,50,000", "12 lehenge bechke… Bikega: ₹30,000", "Rent:
    ₹30,800 ✓ sirf 1 season", "₹2,000–2,500 / rental"), and the end card adds Part 1's "Rent. Earn. Repeat."
+3. After approval (teammate, 2026-11-20): new CTA "Agar aapko bhi apne outfits rent par dene hai to comment karo RENT"
+   → only that line was voiced again and joined to take 2 at 36.5 s (take 3, the rest stays as approved); the end card
+   asks "Outfits rent par dene hain? 🤔", then "Comment RENT 👇" and "Rent. Earn. Repeat."
 
 ## Caption
 
@@ -79,7 +83,7 @@ Yaad hai Nisha? ₹2.5 lakh ke lehenge, kamaai zero… aur pati ne bola tha "Bec
 Ek season baad: 12 mein se 7 lehenge book hue, total ₹30,800 (udaharan).
 Jitna saare lehenge bechke milta, utna ek season ke rent mein… aur lehenge abhi bhi almari mein. 👗
 
-Aapka lehenga bhi kamaa sakta hai. Comment karo "RENT" 👇
+Aapka lehenga bhi kamaa sakta hai. Agar aapko bhi apne outfits rent par dene hain, toh comment karo "RENT" 👇
 
 #AnokhiReet #LehengaOnRent #RentAndEarn #Homemakers #RentEarnRepeat
 ```
