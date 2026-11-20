@@ -26,14 +26,14 @@ const CHUNKS = [
   ['c23', 'Aur *mummy?*', 2],
   ['c24', '*Pehli baar* bas itna boli…', 5],
   ['c25', '*"Ye kahan se laayi?"*', 4],
-  ['c26', '*Cupboard full* hai? Koi baat nahi.', 6],
+  ['c26', '*Cupboard full* hai? Koi baat *nahi!*', 6],
   ['c27', '*Naya look,* bina naya kharide.', 5],
   ['c28', '*Download* karo *Anokhi Reet!*', 4],
 ];
 
-// Chunk start times (s): tools/caption_timing.py (faster-whisper, 128 of 144 words matched), voice female-cupboard-full-take2.mp3; c8 nudged by hand to the pauses.
+// Chunk start times (s): tools/caption_timing.py (faster-whisper, 128 of 144 words matched), voice female-cupboard-full-take3.mp3 (take 2 + the last line made again, joined at 40.3 s; c26-c28 set from its pauses); c8 nudged by hand to the pauses.
 const STARTS = [
-  0.00, 1.69, 3.10, 5.20, 6.93, 8.52, 9.96, 11.55, 12.96, 14.67, 16.50, 17.48, 19.47, 21.25, 23.09, 25.16, 26.36, 28.24, 29.76, 31.48, 33.30, 34.84, 36.82, 37.32, 39.32, 40.64, 42.24, 43.98];
+  0.00, 1.69, 3.10, 5.20, 6.93, 8.52, 9.96, 11.55, 12.96, 14.67, 16.50, 17.48, 19.47, 21.25, 23.09, 25.16, 26.36, 28.24, 29.76, 31.48, 33.30, 34.84, 36.82, 37.32, 39.32, 40.56, 42.61, 44.69];
 // When each script word of a chunk is spoken (drives the word-by-word highlight).
 const WORDS = [
   [0.04, 0.6, 1.06, 1.34],
@@ -61,7 +61,7 @@ const WORDS = [
   [36.9, 36.95],
   [37.4, 38.06, 38.32, 38.48, 38.82],
   [39.4, 39.45, 39.96, 40.18],
-  [40.72, 40.77, 41.22, 41.38, 41.5, 41.73],
-  [42.32, 42.66, 42.88, 43.26, 43.5],
-  [44.06, 44.48, 44.72, 45.22]];
-const VOICE_END = 45.41, DURATION = 47.12;
+  [40.56, 40.86, 41.2, 41.74, 41.96, 42.22],
+  [42.66, 43.02, 43.54, 43.82, 44.1],
+  [44.69, 45.28, 45.85, 46.4]];
+const VOICE_END = 46.9, DURATION = 48.4;
