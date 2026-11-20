@@ -37,6 +37,8 @@ characters are added here after their first reel (add them to `cast.js`, to the 
 | `CHINTU` | **Chintu**, late teens, Bhaveshbhai's quick, chatty helper. | Short hair, orange tee | Mehenga lehenga |
 | `KAVYA` | **Kavya**, 25-30, cupboard full but "nothing to wear"; finds a new look on Anokhi Reet. | Long hair, lilac kurti (peach lehenga at the function) | Cupboard full (2026-11-20) |
 | `MUMMY` | **Mummy**, 50s, Kavya's mother; says the famous line. | Greying bun, sindoor, orange saree | Cupboard full |
+| `SHITAL` | **Shital**, late 20s, young rental shop owner; learns that fewer, better options sell. | Braid, teal kurti, coral dupatta | 3 options (2026-11-20) |
+| `KHUSHI` | **Khushi**, 20s, a customer who can't decide when shown too much. | Ponytail, yellow top, pink dupatta | 3 options |
 
 Ideas for the cast's next members (make them when a story needs them): a young woman who rents for college
 functions, a groom or brother, a kid, a vendor on the Anokhi Reet app.

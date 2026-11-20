@@ -532,3 +532,40 @@ function arPickScreen(id, o = {}) {
   return s;
 }
 function chipOnAR(id, i, k) { op($(`${id}-c${i}-on`), k); op($(`${id}-c${i}-t`), k); }
+
+// ===== 3 options (2026-11-20): jam jar, film grid screen, tally board, dizzy swirl =====
+// jamJarSVG(col, sc): a jam jar on (0,0) = its base: glass jar, coloured jam, cloth lid with a band
+function jamJarSVG(col = '#C8283A', sc = 1) {
+  return `<g transform="scale(${sc})"><ellipse cx="0" cy="4" rx="62" ry="10" fill="${OL}" opacity=".15"/>` +
+    `<path d="M-56,-150 Q-62,-150 -62,-140 L-62,-14 Q-62,0 -48,0 L48,0 Q62,0 62,-14 L62,-140 Q62,-150 56,-150 Z" fill="#EEF6F8" fill-opacity=".6" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<path d="M-54,-112 L54,-112 L54,-12 Q54,-6 46,-6 L-46,-6 Q-54,-6 -54,-12 Z" fill="${col}"/><path d="M-40,-132 L-40,-30" stroke="#fff" stroke-width="9" stroke-linecap="round" opacity=".55"/>` +
+    `<path d="M-70,-150 Q0,-190 70,-150 L64,-168 Q0,-200 -64,-168 Z" fill="#F4E3C8" stroke="${OL}" stroke-width="4" stroke-linejoin="round"/>` +
+    `<path d="M-64,-160 H64" stroke="${C.red}" stroke-width="8"/><rect x="-34" y="-90" width="68" height="44" rx="8" fill="#fff" stroke="${OL}" stroke-width="3"/></g>`;
+}
+// filmGridScreen(id): an endless grid of film tiles for phoneSVG(…, 560, 1000, inner); scroll it with
+// tf($(`${id}-sc`), 0, -offset) (tiles repeat every 1200 px). A made-up app: no real names or posters.
+function filmGridScreen(id) {
+  const cols = ['#3A4E8C', '#8C3A5A', '#2F6E6A', '#A3662A', '#5D3A7E', '#7A1B2A', '#3A6E8C', '#6B8C3A'];
+  let s = `<rect x="-264" y="-484" width="528" height="968" fill="#141414"/><clipPath id="${id}-cp"><rect x="-264" y="-400" width="528" height="884"/></clipPath>` +
+    `<rect x="-264" y="-468" width="528" height="68" fill="#1F1F1F"/><text x="-232" y="-422" font-family="Inter" font-weight="900" font-size="34" fill="#E8E2D9">Films</text>` +
+    `<g clip-path="url(#${id}-cp)"><g id="${id}-sc">`;
+  for (let r = 0; r < 14; r++) for (let c = 0; c < 3; c++) {
+    const x = -246 + c * 168, y = -390 + r * 200, col = cols[(r * 3 + c) % cols.length];
+    s += `<rect x="${x}" y="${y}" width="150" height="184" rx="12" fill="${col}"/><circle cx="${x + 75}" cy="${y + 80}" r="26" fill="#fff" opacity=".25"/><path d="M${x + 66},${y + 66} l24,14 -24,14 z" fill="#fff" opacity=".7"/>` +
+      `<rect x="${x + 14}" y="${y + 146}" width="${70 + (r * 13 + c * 7) % 50}" height="12" rx="6" fill="#fff" opacity=".35"/>`;
+  }
+  return s + `</g></g><rect id="${id}-off" x="-264" y="-484" width="528" height="968" fill="#000" opacity="0"/>`;
+}
+// tallyBoardSVG(id, w, h): a small shop whiteboard centred on (0,0); write lines with tallyLine(id, i, html-free text)
+// into `${id}-l0..3` (text elements)
+function tallyBoardSVG(id, w = 760, h = 420) {
+  let s = `<g id="${id}"><rect x="${-w / 2 - 16}" y="${-h / 2 - 16}" width="${w + 32}" height="${h + 32}" rx="18" fill="${C.woodDark}" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<rect x="${-w / 2}" y="${-h / 2}" width="${w}" height="${h}" rx="10" fill="#FBFAF6" stroke="${OL}" stroke-width="4"/>`;
+  for (let i = 0; i < 4; i++) s += `<text id="${id}-l${i}" x="0" y="${-h / 2 + 90 + i * 100}" text-anchor="middle" font-family="Inter" font-weight="${i === 0 ? 700 : 900}" font-size="${i === 0 ? 44 : 58}" fill="${i === 0 ? '#655C57' : C.text}"></text>`;
+  return s + `</g>`;
+}
+// dizzySVG(): a confusion swirl with little stars, centred on (0,0) (spin it with tf for a confused head)
+function dizzySVG(r = 60) {
+  return `<path d="M0,0 m${-r},0 a${r},${r * .45} 0 1,1 ${2 * r},0 a${r * .7},${r * .32} 0 1,1 ${-1.4 * r},0 a${r * .4},${r * .2} 0 1,1 ${.8 * r},0" fill="none" stroke="#7A4FA0" stroke-width="7" stroke-linecap="round"/>` +
+    [[-r, -10], [r * .9, 8], [0, -r * .45]].map(([x, y]) => `<g transform="translate(${x},${y})">${sparkleSVG(12, C.gold)}</g>`).join('');
+}

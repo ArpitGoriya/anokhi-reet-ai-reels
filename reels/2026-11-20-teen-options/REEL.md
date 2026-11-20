@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-20
 - **Made by:** dhruvifewtone-wq
-- **Status:** script approved, voice take 1 made
+- **Status:** video 1 sent
 
 ## Brief
 
@@ -58,11 +58,11 @@ Voice text: [`script.txt`](script.txt).
 ## Voice-over
 
 - Take 1: `output/female-teen-options-take1.mp3` (74 s); with a 1 s pause after "zyada kahaan bika?" (at 39.75 s):
-  `output/female-teen-options-take1-pause.mp3` (75 s) â€” approved: waiting
+  `output/female-teen-options-take1-pause.mp3` (75 s) â€” approved: yes, 2026-11-20
 
 ## Video
 
-- (not made yet)
+- `output/2026-11-20-teen-options.mp4` (77 s), video 1 sent 2026-11-20.
 
 ## Feedback rounds
 
@@ -86,7 +86,9 @@ Apni rental shop ke liye aise customer chahiye? Comment SHOP, details DM mein ðŸ
 
 ## Added to the library (at least two per reel)
 
-- (to come)
+- `jamJarSVG`, `filmGridScreen(id)` (a scrolling made-up film app for the phone), `tallyBoardSVG(id)` (a shop
+  whiteboard with 4 text lines) and `dizzySVG` (a confusion swirl) in `engine/props.js`.
+- New cast: Shital (`SHITAL`) and Khushi (`KHUSHI`).
 
 ## Suggested default (for the owner)
 
@@ -94,4 +96,5 @@ Apni rental shop ke liye aise customer chahiye? Comment SHOP, details DM mein ðŸ
 
 ## Lessons
 
-- (to come)
+- For a "guess" beat, splice a real 1 s silence into the voice and hold the question big on screen through it.
+- Night home scenes: pass `noClock: true` when the scene draws its own clock.

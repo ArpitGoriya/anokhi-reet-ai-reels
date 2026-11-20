@@ -108,3 +108,8 @@ const CHINTU = { male: true, hair: '#1E1410', top: '#E9772E', topD: '#C25E1E', s
 // kurti. Mummy (50s): her mother, says the famous line. Orange saree, greying bun. (Cupboard full, 2026-11-20)
 const KAVYA = { hairStyle: 'long', top: '#9B6FC4', topD: '#7D54A6', pallu: '#F2C14E', border: C.gold, skin: '#C98B62', skin2: '#B9784F', bindi: true, skirt: { c: '#7D54A6', d: '#5F3E82', b: C.gold, w: 190 } };
 const MUMMY = { hairStyle: 'greybun', top: '#D96C3B', topD: '#B5532E', pallu: C.gold, border: C.red, sindoor: true, skin: '#B9784F', skin2: '#A0663F', skirt: { c: '#B5532E', d: '#8E3F22', b: C.gold, w: 205 } };
+
+// Shital (late 20s): a young rental shop owner who learns that fewer, better options sell. Teal kurti, coral dupatta.
+// Khushi (20s): a customer who can't decide when shown too much. Yellow top. (3 options, 2026-11-20)
+const SHITAL = { hairStyle: 'braid', top: C.teal, topD: C.tealDark, pallu: '#F28C6B', border: C.gold, skin: '#C98B62', skin2: '#B9784F', earrings: true, skirt: { c: C.tealDark, d: '#174A47', b: C.gold, w: 195 } };
+const KHUSHI = { hairStyle: 'pony', top: '#F2C14E', topD: '#D9A52E', pallu: '#E26A8A', border: C.red, skin: '#D19A72', skin2: '#BD8460', bangles: false, skirt: { c: '#D9A52E', d: '#B8862F', b: C.red, w: 190 } };

@@ -3,6 +3,11 @@
 Every reel adds at least one improvement to the engine or library and writes it here (newest first).
 See [GUIDE.md](GUIDE.md) section 8.
 
+## 2026-11-20: jam jar, film grid, tally board, dizzy swirl, Shital and Khushi (3 options)
+
+- **New props:** `jamJarSVG`, `filmGridScreen`, `tallyBoardSVG`, `dizzySVG`.
+- **New cast:** Shital (`SHITAL`), Khushi (`KHUSHI`).
+
 ## 2026-11-20: bed, clothes pile, crammed almirah, hidden-name app screen, Kavya and Mummy (Cupboard full)
 
 - **New props:** `bedSVG`, `foldedClothSVG`, `clothesStackSVG`, `stuffedInside`, `arMysteryHeader`, `arPickScreen`,
