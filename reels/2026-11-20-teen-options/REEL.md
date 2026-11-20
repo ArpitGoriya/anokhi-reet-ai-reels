@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-20
 - **Made by:** dhruvifewtone-wq
-- **Status:** script written, waiting for approval
+- **Status:** script approved, voice take 1 made
 
 ## Brief
 
@@ -36,7 +36,7 @@
 - Hashtags: 5 (dropped #SalesTips, teammate chose it, 2026-11-20).
 - The app name is said in Devanagari ("अनोखी रीत") and appears only at the end (reveal).
 
-## Script and storyboard (approved: no)
+## Script and storyboard (approved: yes, 2026-11-20)
 
 | # | Voice line (caption) | On screen | Label / title |
 |---|---|---|---|
@@ -57,7 +57,8 @@ Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- (not made yet)
+- Take 1: `output/female-teen-options-take1.mp3` (74 s); with a 1 s pause after "zyada kahaan bika?" (at 39.75 s):
+  `output/female-teen-options-take1-pause.mp3` (75 s) — approved: waiting
 
 ## Video
 
