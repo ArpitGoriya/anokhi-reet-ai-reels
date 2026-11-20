@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-20
 - **Made by:** dhruvifewtone-wq
-- **Status:** script written, waiting for approval
+- **Status:** script approved, voice take 1 made
 
 ## Brief
 
@@ -31,7 +31,7 @@
 - The app name is said in Devanagari ("अनोखी रीत") so the voice says it properly.
 - Only clothes appear as products.
 
-## Script and storyboard (approved: no)
+## Script and storyboard (approved: yes, 2026-11-20)
 
 | # | Voice line (caption) | On screen | Label / title |
 |---|---|---|---|
@@ -47,7 +47,7 @@ Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- (not made yet)
+- Take 1: `output/female-cupboard-full-take1.mp3` (33 s) — approved: waiting
 
 ## Video
 
