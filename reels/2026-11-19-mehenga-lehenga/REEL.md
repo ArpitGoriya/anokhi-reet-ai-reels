@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-19
 - **Made by:** dhruvifewtone-wq
-- **Status:** video 1 sent
+- **Status:** video 2 sent
 
 ## Brief
 
@@ -63,10 +63,13 @@ Voice text: [`script.txt`](script.txt).
 ## Video
 
 - `output/2026-11-19-mehenga-lehenga.mp4` (62 s), video 1 sent 2026-11-19.
+- `output/2026-11-19-mehenga-lehenga-v2.mp4` (62 s), video 2 sent 2026-11-20 (opening shows it is a rental shop).
 
 ## Feedback rounds
 
-- (none yet)
+- Round 1 (2026-11-20): "In the start, indirectly tell viewers it is Bhaveshbhai's outfit rental shop." Done without new voice:
+  the "BHAVESH RENTALS" sign shows from frame 1, Chintu says "koi *rent pe* leta hi nahi!", and a RENT / RETURN
+  register lies on the counter in front of Bhaveshbhai. Title moved a little lower, caption lower in scene 1.
 
 ## Caption
 
@@ -96,4 +99,6 @@ Aapka sabse zyada rent hone wala outfit kaunsa hai? Comment karo 👇
 
 - A salute with the short cartoon arms: elbow out and up, hand at the temple (`R: [168, 62]`); "hand on head"
   angles read as scratching the head.
+- Say "what kind of shop" in the first frame with props (sign, rent/return register) and one word in a bubble,
+  not extra voice.
 - Keep price tags clear of decoration (dust, sparkles, bubbles): the tag is the point of the scene.

@@ -6,14 +6,17 @@ const SIGN = { sign: 'BHAVESH RENTALS' };
 
 // ================= S1 hook: the dusty ₹6,000 lehenga — "ise hata do!" / "ye hi toh kamaal karta hai" =================
 addScene(0, 'c3', {
-  svg: shopBG('s1', { noSign: true }) + quiet(.3) + `<circle cx="540" cy="820" r="380" fill="url(#glow)" opacity=".7"/>` +
+  svg: shopBG('s1', SIGN) + quiet(.3) + `<circle cx="540" cy="820" r="380" fill="url(#glow)" opacity=".7"/>` +
     displayStand('s1l', PREM, 540, 760, 1.15, '₹6,000') + `<g transform="translate(470,930)">${dustPuffsSVG('s1d', 8, 230, 300)}</g>` +
     `<g transform="translate(330,640) rotate(-90)">${cobwebSVG(.6)}</g>` +
-    bust('s1c', CH, 200, FLOOR + 90, .8) + bust('s1b', BV, 880, FLOOR + 90, .8) + counterSVG(FLOOR + 130),
-  html: `<div class="title" style="top:352px;font-size:70px" data-t="-1">Kabhi rent nahi hota…<br>phir bhi <span class="g">KAMAATA</span> hai? 🤯</div>` +
-    `<div class="bubble" style="left:260px;top:610px;width:400px;font-size:34px" data-t="0.3" data-out="c2-0.1">"Bhaveshbhai, ise <span class="hl">hata do</span>, koi leta hi nahi!" 😩</div>` +
+    bust('s1c', CH, 200, FLOOR + 90, .8) + bust('s1b', BV, 880, FLOOR + 90, .8) + counterSVG(FLOOR + 130) +
+    `<g transform="translate(860,1300) scale(.62)">${ledgerSVG()}` +
+    `<text x="-115" y="70" text-anchor="middle" font-family="Inter" font-weight="900" font-size="50" fill="${C.red}" transform="rotate(5 -115 70)">RENT</text>` +
+    `<text x="115" y="70" text-anchor="middle" font-family="Inter" font-weight="900" font-size="44" fill="${C.emeraldDark}" transform="rotate(-5 115 70)">RETURN</text></g>`,
+  html: `<div class="title" style="top:392px;font-size:64px" data-t="-1">Kabhi rent nahi hota…<br>phir bhi <span class="g">KAMAATA</span> hai? 🤯</div>` +
+    `<div class="bubble" style="left:260px;top:610px;width:400px;font-size:34px" data-t="0.3" data-out="c2-0.1">"Bhaveshbhai, ise <span class="hl">hata do</span>, koi <span class="hl">rent pe</span> leta hi nahi!" 😩</div>` +
     `<div class="bubble" style="left:800px;top:610px;width:380px;font-size:34px" data-t="c2">"Nahi Chintu, ye hi toh <span class="hl">kamaal</span> karta hai." 😏</div>`,
-  cam: [1, 1.04], fy: 880,
+  cam: [1, 1.04], fy: 880, capY: 1520,
   upd(t) {
     const ch = t < T('c2');
     life('s1c', t, { pivot: 0, mouth: ch ? talkMouth(t, true) : 'o', brows: ch ? 'worry' : 'up', look: ch ? [.6, -.2] : [.8, 0], R: [120, -40], hR: 'point', L: [9, -14], tilt: ch ? 6 : 0 });
