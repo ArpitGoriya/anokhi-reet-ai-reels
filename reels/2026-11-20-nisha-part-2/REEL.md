@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-20
 - **Made by:** dhruvifewtone-wq
-- **Status:** video 1 sent
+- **Status:** video 2 sent
 
 ## Brief
 
@@ -61,10 +61,15 @@ Voice text: [`script.txt`](script.txt).
 ## Video
 
 - `output/2026-11-20-nisha-part-2.mp4` (39 s), video 1 sent 2026-11-20.
+- `output/2026-11-20-nisha-part-2-v2.mp4` (39 s) + a 720×1280 copy `-v2-720.mp4` (Part 1 was posted at 720×1280), video 2 sent 2026-11-20.
 
 ## Feedback rounds
 
 1. Voice take 1: 20-31 s was silent (the planned pause for the bubble scenes) → the narrator reads the bubble lines; take 2.
+2. Video 1 note (teammate, 2026-11-20): numbers must match Part 1 ("₹25,000 in Part 1, ₹30,000 in Part 2"). Checked:
+   ₹25,000 was one lehenga's price, ₹30,000 the Part 1 sale value of all 12 ("₹2.5 lakh ka maal, ₹30,000 mein?"), so the
+   numbers match; the ledgers now read like Part 1's ("Maal: ₹2,50,000", "12 lehenge bechke… Bikega: ₹30,000", "Rent:
+   ₹30,800 ✓ sirf 1 season", "₹2,000–2,500 / rental"), and the end card adds Part 1's "Rent. Earn. Repeat."
 
 ## Caption
 
@@ -91,4 +96,5 @@ Aapka lehenga bhi kamaa sakta hai. Comment karo "RENT" 👇
 ## Lessons
 
 - A silent stretch for speech-bubble scenes sounds like the audio broke: have the narrator read the bubble lines.
+- For a Part 2, repeat Part 1's own on-screen wording for any number it reuses, so viewers see the same thing (e.g. "Maal" and "Bikega").
 - A prop a character carries (the sherwani) must be held up clear of the counter and other props.

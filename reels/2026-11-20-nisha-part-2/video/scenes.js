@@ -68,7 +68,7 @@ addScene('c7', 'c8', {
 addScene('c8', 'c10', {
   svg: homeBG('n5', Object.assign({ night: true, noPlant: true }, HOME)) + at(540, 860, ledgerSVG(), 2.0, -3) +
     `<g transform="translate(540,860) rotate(-3)"><g data-t="c8+0.2" data-k="fade"><text x="-430" y="-10" font-family="Inter" font-weight="800" font-size="40" fill="#3B2418">14 bookings</text>` +
-    `<text x="-430" y="50" font-family="Inter" font-weight="800" font-size="40" fill="#3B2418">× ₹2,200 avg</text></g>` +
+    `<text x="-430" y="50" font-family="Inter" font-weight="800" font-size="40" fill="#3B2418">× ₹2,200 avg</text><text x="-430" y="104" font-family="Inter" font-weight="700" font-size="28" fill="#7A5C2E">(₹2,000–2,500 / rental)</text></g>` +
     `<g data-t="c9+0.3" data-k="pop"><rect x="30" y="-20" width="380" height="110" rx="20" fill="${C.gold}" opacity=".85"/><text x="220" y="58" text-anchor="middle" font-family="Inter" font-weight="900" font-size="64" fill="${C.red}">₹30,800</text></g></g>`,
   html: pillH(540, 352, 'c8', '<span class="hl">Udaharan</span> 📝', 'big'),
   cam: [1, 1.05], fy: 860
@@ -77,12 +77,12 @@ addScene('c8', 'c10', {
 // ================= S6: the twist — "Bikega: ₹30,000" struck out, "Rent: ₹30,800 ✓" =================
 addScene('c10', 'c12', {
   svg: homeBG('n6', Object.assign({ night: true, noPlant: true }, HOME)) + at(540, 860, ledgerSVG(), 2.0, -3) +
-    `<g transform="translate(540,860) rotate(-3)"><text x="-430" y="20" font-family="Inter" font-weight="800" font-size="46" fill="#3B2418">Bikega:</text><text x="-430" y="84" font-family="Inter" font-weight="900" font-size="54" fill="#3B2418">₹30,000</text>` +
-    `<path id="n6-x" d="M-440,60 L-150,40" stroke="#D9363E" stroke-width="12" stroke-linecap="round"/>` +
-    `<g data-t="c11+0.2" data-k="pop"><text x="40" y="0" font-family="Inter" font-weight="800" font-size="46" fill="#1F7A4D">Rent:</text><text x="40" y="70" font-family="Inter" font-weight="900" font-size="60" fill="#1F7A4D">₹30,800 ✓</text></g></g>`,
+    `<g transform="translate(540,860) rotate(-3)"><text x="-430" y="-10" font-family="Inter" font-weight="800" font-size="40" fill="#3B2418">Maal: ₹2,50,000</text><text x="-430" y="40" font-family="Inter" font-weight="700" font-size="30" fill="#7A5C2E">12 lehenge bechke…</text><text x="-430" y="100" font-family="Inter" font-weight="900" font-size="44" fill="#3B2418">Bikega: ₹30,000</text>` +
+    `<path id="n6-x" d="M-440,86 L-80,62" stroke="#D9363E" stroke-width="12" stroke-linecap="round"/>` +
+    `<g data-t="c11+0.2" data-k="pop"><text x="40" y="0" font-family="Inter" font-weight="800" font-size="46" fill="#1F7A4D">Rent:</text><text x="40" y="70" font-family="Inter" font-weight="900" font-size="60" fill="#1F7A4D">₹30,800 ✓</text><text x="40" y="118" font-family="Inter" font-weight="700" font-size="30" fill="#1F7A4D">sirf 1 season</text></g></g>`,
   html: pillH(540, 352, 'c10', '<span class="hl">Twist</span> 🤯', 'big') + pillH(540, 440, 'c10+0.2', 'Udaharan 📝', 'gold'),
   cam: [1, 1.05], fy: 860,
-  upd(t) { const k = P(t, T('c10') + 1.2, .35, E.io); const x = $('n6-x'); x.setAttribute('stroke-dasharray', '300'); x.setAttribute('stroke-dashoffset', (300 * (1 - k)).toFixed(0)); }
+  upd(t) { const k = P(t, T('c10') + 1.2, .35, E.io); const x = $('n6-x'); x.setAttribute('stroke-dasharray', '380'); x.setAttribute('stroke-dashoffset', (380 * (1 - k)).toFixed(0)); }
 });
 
 // ================= S7: the almirah opens — all 12 still inside =================
@@ -143,9 +143,10 @@ addScene('c18', 'c20', {
 
 // ================= S11: Comment RENT + Anokhi Reet · Following ✓ =================
 addScene('c20', 9999, {
-  svg: homeBG('n11', HOME) + rosettes('n11-r', 540, 780, .08, C.goldTan) + bust('ni11', NISHA, 540, FLOOR + 10, 1.1) + counterSVG(),
+  svg: homeBG('n11', HOME) + rosettes('n11-r', 540, 780, .08, C.goldTan) + bust('ni11', NISHA, 540, FLOOR + 90, 1.1) + counterSVG(),
   html: `<div class="follow" style="left:540px;top:380px" data-t="c20+0.2"><img class="seal" src="${SEAL()}"><span class="nm">Anokhi Reet</span><span class="btn" id="n11-b"><span id="n11-f">Follow</span></span></div>` +
-    `<div class="pill big" style="left:540px;top:540px" data-t="c21">Comment <span class="hl">RENT</span> 👇</div>`,
+    `<div class="pill big" style="left:540px;top:520px" data-t="c21">Comment <span class="hl">RENT</span> 👇</div>` +
+    `<div class="title" style="top:650px;font-size:62px" data-t="c21+0.6">Rent. <span class="g">Earn.</span> Repeat.</div>`,
   noWm: true,
   upd(t) {
     tf($('n11-r'), 540, 780, 1, t * 5);
