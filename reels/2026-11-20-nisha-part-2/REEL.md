@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-20
 - **Made by:** dhruvifewtone-wq
-- **Status:** script approved, voice take 1 made
+- **Status:** voice take 2 made
 
 ## Brief
 
@@ -12,8 +12,9 @@
   his sherwani on rent too.
 - **For:** Individual outfit owners, homemakers.
 - **One message:** Bechne se ek baar, rent se har season kamaai ka mauka. Comment "RENT".
-- **Voice:** female (Vindemiatrix), same narrator as Part 1 (teammate chose it, 2026-11-20). Scenes 8-9 (the
-  husband and Nisha's speech bubbles) have no narration: a quiet pause in the audio.
+- **Voice:** female (Vindemiatrix), same narrator as Part 1 (teammate chose it, 2026-11-20). Scenes 8-9: the narrator
+  tells the husband's and Nisha's bubble lines word for word (teammate chose it, 2026-11-20; a silent pause sounded
+  like the audio stopped).
 - **Characters:** Nisha (`NISHA`, blue with yellow dupatta) and her husband (`PATI` in a purple kurta, as Part 1).
 - **Length:** about 45-55 s (the voice and the pause decide).
 - **Look:** exactly as Part 1: the same home set, almirah with covered lehengas, coin jar, ledger, calendar, white
@@ -44,8 +45,8 @@
 | 5 | *14 bookings,* ₹2,200 average. / Total *₹30,800.* | Open ledger: "14 bookings × ₹2,200 = ₹30,800" writes in, ₹30,800 highlighted. | Udaharan |
 | 6 | Jo poore 12 lehenge *bechke* milta… / utna *ek season ke rent* mein aa gaya. | Ledger: "Bikega: ₹30,000", a beat, red strike-through; "Rent: ₹30,800 ✓" appears in green. | Twist 🤯 |
 | 7 | Aur lehenge? / Abhi bhi *almari mein.* | Almirah doors swing open: all 12 still inside. | Lehenge abhi bhi apne |
-| 8 | (no voice) | Husband walks in, sees the full coin jar, freezes, wide eyes. Bubble: "Ye… sab rent se?" Nisha, arms folded, smiling: "Haan. Tumne toh bola tha bech de." | — |
-| 9 | (no voice) | Husband walks off and comes back with his sherwani on a hanger, sheepish smile. Bubble: "Achha sun… meri sherwani bhi rent pe daal de na." | Ab pati bhi rent pe dega 😂 |
+| 8 | Pati ne poocha, *"Ye… sab rent se?"* / Nisha boli, *"Haan. Tumne toh bola tha bech de."* | Husband walks in, sees the full coin jar, freezes, wide eyes. Bubble: "Ye… sab rent se?" Nisha, arms folded, smiling: "Haan. Tumne toh bola tha bech de." | — |
+| 9 | Aur ab pati bole… / *"Achha sun… meri sherwani bhi rent pe daal de na."* | Husband walks off and comes back with his sherwani on a hanger, sheepish smile. Bubble: "Achha sun… meri sherwani bhi rent pe daal de na." | Ab pati bhi rent pe dega 😂 |
 | 10 | Outfit *bechne* se *ek baar* paisa milta hai. / Rent pe dene se *har season* kamaai ka mauka. | Nisha faces us, confident. | Bechna = ek baar · Rent = har season mauka |
 | 11 | Aapka lehenga bhi *kamaa sakta* hai. / Comment karo *RENT.* | Nisha points down; the "Anokhi Reet · Following ✓" card pops above her. | Comment RENT 👇 |
 
@@ -54,7 +55,8 @@ Voice text: [`script.txt`](script.txt).
 ## Voice-over
 
 - Take 1: `output/female-nisha-part-2-take1.mp3` (28 s); with an 11 s pause after "Abhi bhi almari mein" for
-  scenes 8-9: `output/female-nisha-part-2-take1-pause.mp3` (39 s) — approved: waiting
+  scenes 8-9: `output/female-nisha-part-2-take1-pause.mp3` (39 s) — not used: the 11 s silence sounded like the audio stopped (teammate, 2026-11-20)
+- Take 2: `output/female-nisha-part-2-take2.mp3` (38 s): the narrator now tells scenes 8-9 with the bubble lines word for word — approved: waiting
 
 ## Video
 
@@ -62,7 +64,7 @@ Voice text: [`script.txt`](script.txt).
 
 ## Feedback rounds
 
-- (none yet)
+1. Voice take 1: 20-31 s was silent (the planned pause for the bubble scenes) → the narrator reads the bubble lines; take 2.
 
 ## Caption
 
