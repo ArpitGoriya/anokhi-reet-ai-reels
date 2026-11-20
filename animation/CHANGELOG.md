@@ -3,6 +3,10 @@
 Every reel adds at least one improvement to the engine or library and writes it here (newest first).
 See [GUIDE.md](GUIDE.md) section 8.
 
+## 2026-11-20: calendar page, Booked tag, full almirah (Nisha Part 2)
+
+- **New props:** `monthPageSVG(month, circled)`, `bookedTagSVG()`, `almirahFill(n)`.
+
 ## 2026-11-19: café, study bars, dust, Bhaveshbhai and Chintu (Mehenga lehenga)
 
 - **New props:** `coffeeCupSVG(k)`, `cafeMenuSVG(items, w, note)`, `planCardSVG(id, title, price, col)`,

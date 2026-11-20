@@ -451,3 +451,30 @@ function ribbonSVG(text, fs = 30) {
   return `<path d="M${-w / 2},-30 H${w / 2} L${w / 2 - 18},0 L${w / 2},30 H${-w / 2} L${-w / 2 + 18},0 Z" fill="${C.red}" stroke="${OL}" stroke-width="4" stroke-linejoin="round"/>` +
     `<text y="${fs * .36}" text-anchor="middle" font-family="Inter" font-weight="900" font-size="${fs}" fill="#fff">${text}</text>`;
 }
+
+// ===== Nisha Part 2 (2026-11-20): a month page with circled dates, a "Booked ✓" tag, a full almirah =====
+// monthPageSVG(month, circled): a wall-calendar page centred on (0,0) (420×460): month name on a red band, a 7×5 date
+// grid, the days in `circled` ringed in red (wedding dates)
+function monthPageSVG(month, circled = []) {
+  let s = `<rect x="-210" y="-230" width="420" height="460" rx="20" fill="#fff" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<path d="M-210,-210 Q-210,-230 -190,-230 L190,-230 Q210,-230 210,-210 L210,-140 L-210,-140 Z" fill="${C.red}" stroke="${OL}" stroke-width="${OW}"/>` +
+    [-120, 120].map(x => `<circle cx="${x}" cy="-238" r="12" fill="#fff" stroke="${OL}" stroke-width="4"/>`).join('') +
+    `<text y="-168" text-anchor="middle" font-family="Inter" font-weight="900" font-size="46" fill="#FFF2DF" letter-spacing="4">${month}</text>`;
+  for (let d = 1; d <= 30; d++) {
+    const c = (d - 1) % 7, r = (d - 1) / 7 | 0, x = -168 + c * 56, y = -96 + r * 64;
+    s += `<text x="${x}" y="${y + 12}" text-anchor="middle" font-family="Inter" font-weight="700" font-size="30" fill="${C.text}">${d}</text>`;
+    if (circled.includes(d)) s += `<circle cx="${x}" cy="${y}" r="26" fill="none" stroke="#D9363E" stroke-width="6"/>`;
+  }
+  return s;
+}
+// bookedTagSVG(): a small green "Booked ✓" tag centred on (0,0)
+function bookedTagSVG(fs = 26) {
+  return `<rect x="-78" y="-22" width="156" height="44" rx="22" fill="${C.emerald}" stroke="${OL}" stroke-width="4"/>` +
+    `<text y="${fs * .36}" text-anchor="middle" font-family="Inter" font-weight="900" font-size="${fs}" fill="#fff">Booked ✓</text>`;
+}
+// almirahFill(n): n covered lehengas packed inside an almirahSVG (rows of 4), for "all 12 still inside" shots;
+// set it with $(id + '-inside').innerHTML = almirahFill(12)
+function almirahFill(n = 12) {
+  const cols = [[C.lehenga, C.lehengaDark], [C.pink, C.pinkDark], [C.emerald, C.emeraldDark], [C.marigold, '#C9821E'], [C.teal, C.tealDark], ['#7A4FA0', '#5D3A7E']];
+  return [...Array(n)].map((_, i) => `<g transform="translate(${-105 + (i % 4) * 70},${-440 + (i / 4 | 0) * 165}) scale(.24)">${coveredLehengaSVG(...cols[i % cols.length], 1)}</g>`).join('');
+}

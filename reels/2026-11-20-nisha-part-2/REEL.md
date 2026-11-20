@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-20
 - **Made by:** dhruvifewtone-wq
-- **Status:** voice take 2 made
+- **Status:** video 1 sent
 
 ## Brief
 
@@ -56,11 +56,11 @@ Voice text: [`script.txt`](script.txt).
 
 - Take 1: `output/female-nisha-part-2-take1.mp3` (28 s); with an 11 s pause after "Abhi bhi almari mein" for
   scenes 8-9: `output/female-nisha-part-2-take1-pause.mp3` (39 s) — not used: the 11 s silence sounded like the audio stopped (teammate, 2026-11-20)
-- Take 2: `output/female-nisha-part-2-take2.mp3` (38 s): the narrator now tells scenes 8-9 with the bubble lines word for word — approved: waiting
+- Take 2: `output/female-nisha-part-2-take2.mp3` (38 s): the narrator now tells scenes 8-9 with the bubble lines word for word — approved: yes, 2026-11-20
 
 ## Video
 
-- (not made yet)
+- `output/2026-11-20-nisha-part-2.mp4` (39 s), video 1 sent 2026-11-20.
 
 ## Feedback rounds
 
@@ -81,7 +81,8 @@ Aapka lehenga bhi kamaa sakta hai. Comment karo "RENT" 👇
 
 ## Added to the library (at least two per reel)
 
-- (to come)
+- `monthPageSVG(month, circled)` (a wall-calendar page with wedding dates circled), `bookedTagSVG()` (green
+  "Booked ✓") and `almirahFill(n)` (up to 12 covered lehengas packed in `almirahSVG`) in `engine/props.js`.
 
 ## Suggested default (for the owner)
 
@@ -89,4 +90,5 @@ Aapka lehenga bhi kamaa sakta hai. Comment karo "RENT" 👇
 
 ## Lessons
 
-- (to come)
+- A silent stretch for speech-bubble scenes sounds like the audio broke: have the narrator read the bubble lines.
+- A prop a character carries (the sherwani) must be held up clear of the counter and other props.
