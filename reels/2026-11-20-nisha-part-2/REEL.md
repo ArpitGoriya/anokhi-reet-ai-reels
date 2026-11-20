@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-20
 - **Made by:** dhruvifewtone-wq
-- **Status:** script written, waiting for approval
+- **Status:** script approved, voice take 1 made
 
 ## Brief
 
@@ -33,7 +33,7 @@
 - End: "Comment RENT 👇" and the "Anokhi Reet · Following ✓" card, as in Part 1.
 - Only clothes appear (lehengas, a sherwani); no jewellery or footwear shown as products.
 
-## Script and storyboard (approved: no)
+## Script and storyboard (approved: yes, 2026-11-20)
 
 | # | Voice line (caption) | On screen | Top label |
 |---|---|---|---|
@@ -53,7 +53,8 @@ Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- (not made yet)
+- Take 1: `output/female-nisha-part-2-take1.mp3` (28 s); with an 11 s pause after "Abhi bhi almari mein" for
+  scenes 8-9: `output/female-nisha-part-2-take1-pause.mp3` (39 s) — approved: waiting
 
 ## Video
 
