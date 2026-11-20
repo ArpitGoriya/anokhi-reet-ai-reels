@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-20
 - **Made by:** dhruvifewtone-wq
-- **Status:** script v2 approved, voice take 2 made
+- **Status:** video 1 sent
 
 ## Brief
 
@@ -54,11 +54,11 @@ Voice text: [`script.txt`](script.txt).
 ## Voice-over
 
 - Take 1: `output/female-cupboard-full-take1.mp3` (33 s) (script v1) — not used: teammate asked for more curiosity (2026-11-20)
-- Take 2: `output/female-cupboard-full-take2.mp3` (46 s, script v2) — approved: waiting
+- Take 2: `output/female-cupboard-full-take2.mp3` (46 s, script v2) — approved: yes, 2026-11-20
 
 ## Video
 
-- (not made yet)
+- `output/2026-11-20-cupboard-full.mp4` (47 s), video 1 sent 2026-11-20.
 
 ## Feedback rounds
 
@@ -79,7 +79,11 @@ Tag karo us dost ko jiska cupboard full hai par kapde kabhi nahi hote 👇
 
 ## Added to the library (at least two per reel)
 
-- (to come)
+- `bedSVG`, `foldedClothSVG`, `clothesStackSVG(id, n)` (a pile that grows one by one), `stuffedInside()` (a crammed
+  almirah) in `engine/props.js`.
+- The app's hidden-name browse screen moved from Dukaan-dukaan into the library: `arMysteryHeader()`,
+  `arPickScreen(id, {mystery, chips, looks, pick})` (no rent amounts, a "Booked ✓" badge) and `chipOnAR`.
+- New cast: Kavya (`KAVYA`) and Mummy (`MUMMY`).
 
 ## Suggested default (for the owner)
 
@@ -87,4 +91,6 @@ Tag karo us dost ko jiska cupboard full hai par kapde kabhi nahi hote 👇
 
 ## Lessons
 
-- (to come)
+- Curiosity recipe for customer stories: promise a payoff right after the hook, keep the trick secret ("? ? ?"
+  header) until about two-thirds in, then close the promise near the end.
+- A growing pile must stop below the top label.

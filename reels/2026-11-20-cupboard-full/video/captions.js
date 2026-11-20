@@ -1,0 +1,67 @@
+// Caption chunks: [id, Roman Hinglish caption (*gold* words), number of script.txt words it covers]
+// tools/caption_timing.py fills STARTS / VOICE_END / DURATION from the voice (re-run after every voice take).
+const CHUNKS = [
+  ['c1', '*Cupboard poora bhara* hai…', 4],
+  ['c2', 'phir bhi *pehenne ko kuch nahi?*', 6],
+  ['c3', 'Par *aakhir mein* Kavya ne jo kiya…', 7],
+  ['c4', 'uske baad *mummy bhi chup* ho gayi.', 7],
+  ['c5', 'Ye *Diwali* pe pehna tha…', 5],
+  ['c6', 'ye *cousin ki shaadi* mein…', 5],
+  ['c7', 'ye toh *sabne dekh liya…*', 5],
+  ['c8', 'isme toh already *bohot photos* hain…', 6],
+  ['c9', 'Aur *mummy* ka wahi dialogue:', 5],
+  ['c10', '*"Itne kapde hain, phir bhi?"*', 5],
+  ['c11', '*Naya kharidun?*', 2],
+  ['c12', 'Ek function ke liye *itna kharcha,*', 6],
+  ['c13', 'aur phir wo bhi *isi cupboard* mein…', 7],
+  ['c14', 'Tabhi Kavya ko *ek tareeka* sujha…', 6],
+  ['c15', 'na kuch *kharidna,* na kisi se *maangna.*', 7],
+  ['c16', 'Usne *phone* uthaya…', 3],
+  ['c17', '*city, occasion* aur *budget* chuna…', 5],
+  ['c18', 'aur apna *look book* kar liya.', 6],
+  ['c19', 'Tareeka tha… *Anokhi Reet!*', 4],
+  ['c20', '*Naya look…* bina naya kharide.', 5],
+  ['c21', 'Function mein *bilkul naya look…*', 5],
+  ['c22', 'aur naya kharidne ke *paise bhi bache!*', 7],
+  ['c23', 'Aur *mummy?*', 2],
+  ['c24', '*Pehli baar* bas itna boli…', 5],
+  ['c25', '*"Ye kahan se laayi?"*', 4],
+  ['c26', '*Cupboard full* hai? Koi baat nahi.', 6],
+  ['c27', '*Naya look,* bina naya kharide.', 5],
+  ['c28', '*Download* karo *Anokhi Reet!*', 4],
+];
+
+// Chunk start times (s): tools/caption_timing.py (faster-whisper, 128 of 144 words matched), voice female-cupboard-full-take2.mp3; c8 nudged by hand to the pauses.
+const STARTS = [
+  0.00, 1.69, 3.10, 5.20, 6.93, 8.52, 9.96, 11.55, 12.96, 14.67, 16.50, 17.48, 19.47, 21.25, 23.09, 25.16, 26.36, 28.24, 29.76, 31.48, 33.30, 34.84, 36.82, 37.32, 39.32, 40.64, 42.24, 43.98];
+// When each script word of a chunk is spoken (drives the word-by-word highlight).
+const WORDS = [
+  [0.04, 0.6, 1.06, 1.34],
+  [1.77, 1.82, 2.08, 2.4, 2.52, 2.68],
+  [3.18, 3.5, 3.9, 4.1, 4.46, 4.56, 4.68],
+  [5.28, 5.48, 5.66, 6.0, 6.12, 6.27, 6.38],
+  [7.01, 7.06, 7.56, 7.7, 8.0],
+  [8.6, 8.72, 9.0, 9.16, 9.44],
+  [10.04, 10.24, 10.38, 10.82, 11.04],
+  [11.63, 12.27, 12.39, 12.79, 12.91, 12.91],
+  [13.04, 13.44, 13.82, 13.96, 14.14],
+  [14.75, 15.14, 15.5, 15.6, 15.96],
+  [16.58, 17.08],
+  [17.56, 17.87, 18.28, 18.43, 18.62, 19.0],
+  [19.55, 19.6, 19.86, 20.02, 20.18, 20.34, 20.62],
+  [21.33, 21.38, 21.79, 22.01, 22.22, 22.58],
+  [23.17, 23.22, 23.58, 24.1, 24.4, 24.6, 24.72],
+  [25.24, 25.64, 25.84],
+  [26.44, 27.0, 27.36, 27.48, 27.8],
+  [28.32, 28.37, 28.72, 28.92, 29.08, 29.24],
+  [29.84, 30.2, 30.32, 30.89],
+  [31.56, 31.92, 32.12, 32.6, 32.86],
+  [33.38, 33.88, 34.12, 34.52, 34.78],
+  [34.92, 35.26, 35.54, 35.92, 35.97, 36.18, 36.3],
+  [36.9, 36.95],
+  [37.4, 38.06, 38.32, 38.48, 38.82],
+  [39.4, 39.45, 39.96, 40.18],
+  [40.72, 40.77, 41.22, 41.38, 41.5, 41.73],
+  [42.32, 42.66, 42.88, 43.26, 43.5],
+  [44.06, 44.48, 44.72, 45.22]];
+const VOICE_END = 45.41, DURATION = 47.12;

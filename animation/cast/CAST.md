@@ -35,6 +35,8 @@ characters are added here after their first reel (add them to `cast.js`, to the 
 | `JIGNA` | **Jignaben**, 40s, confident rental shop owner across the street. | Bun, sindoor, necklace, deep blue saree with gold pallu | Rent kam rakha |
 | `BHAVESH` | **Bhaveshbhai**, 40s-50s, calm and clever rental shop owner; keeps one premium lehenga on purpose. | Moustache, plum kurta with gold embroidery | Mehenga lehenga (2026-11-19) |
 | `CHINTU` | **Chintu**, late teens, Bhaveshbhai's quick, chatty helper. | Short hair, orange tee | Mehenga lehenga |
+| `KAVYA` | **Kavya**, 25-30, cupboard full but "nothing to wear"; finds a new look on Anokhi Reet. | Long hair, lilac kurti (peach lehenga at the function) | Cupboard full (2026-11-20) |
+| `MUMMY` | **Mummy**, 50s, Kavya's mother; says the famous line. | Greying bun, sindoor, orange saree | Cupboard full |
 
 Ideas for the cast's next members (make them when a story needs them): a young woman who rents for college
 functions, a groom or brother, a kid, a vendor on the Anokhi Reet app.

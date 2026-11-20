@@ -103,3 +103,8 @@ const JIGNA = { hairStyle: 'bun', top: '#3A4E8C', topD: '#2C3C6E', pallu: C.gold
 // Plum kurta with gold embroidery. Chintu (late teens): his quick, chatty helper. Orange tee. (Mehenga lehenga, 2026-11-19)
 const BHAVESH = { male: true, mustache: true, wide: true, hair: '#3A2A22', top: '#7A3B6B', topD: '#5E2C52', skin: '#A8704C', skin2: '#93603F', embroidery: true };
 const CHINTU = { male: true, hair: '#1E1410', top: '#E9772E', topD: '#C25E1E', skin: '#C98B62', skin2: '#B9784F' };
+
+// Kavya (25-30): a young woman whose cupboard is full but has "nothing to wear"; finds a new look on Anokhi Reet. Lilac
+// kurti. Mummy (50s): her mother, says the famous line. Orange saree, greying bun. (Cupboard full, 2026-11-20)
+const KAVYA = { hairStyle: 'long', top: '#9B6FC4', topD: '#7D54A6', pallu: '#F2C14E', border: C.gold, skin: '#C98B62', skin2: '#B9784F', bindi: true, skirt: { c: '#7D54A6', d: '#5F3E82', b: C.gold, w: 190 } };
+const MUMMY = { hairStyle: 'greybun', top: '#D96C3B', topD: '#B5532E', pallu: C.gold, border: C.red, sindoor: true, skin: '#B9784F', skin2: '#A0663F', skirt: { c: '#B5532E', d: '#8E3F22', b: C.gold, w: 205 } };

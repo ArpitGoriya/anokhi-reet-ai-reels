@@ -478,3 +478,57 @@ function almirahFill(n = 12) {
   const cols = [[C.lehenga, C.lehengaDark], [C.pink, C.pinkDark], [C.emerald, C.emeraldDark], [C.marigold, '#C9821E'], [C.teal, C.tealDark], ['#7A4FA0', '#5D3A7E']];
   return [...Array(n)].map((_, i) => `<g transform="translate(${-105 + (i % 4) * 70},${-440 + (i / 4 | 0) * 165}) scale(.24)">${coveredLehengaSVG(...cols[i % cols.length], 1)}</g>`).join('');
 }
+
+// ===== Cupboard full (2026-11-20): bed, clothes stack, stuffed cupboard, the app's pick screen (with a hidden name) =====
+// bedSVG(x, y, w): a simple bed whose mattress top is at y (headboard on the left side of a room)
+function bedSVG(x, y, w = 560, col = '#B5532E') {
+  return `<g transform="translate(${x},${y})"><rect x="${-w / 2 - 20}" y="-180" width="60" height="320" rx="20" fill="${C.woodDark}" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<rect x="${-w / 2}" y="0" width="${w}" height="110" rx="16" fill="${C.wood}" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<rect x="${-w / 2}" y="-40" width="${w}" height="70" rx="24" fill="#FFF8EC" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<path d="M${-w / 2 + 160},-40 H${w / 2} V20 Q${w / 2},30 ${w / 2 - 20},30 H${-w / 2 + 160} Z" fill="${col}" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<rect x="${-w / 2 + 20}" y="-80" width="120" height="60" rx="26" fill="#fff" stroke="${OL}" stroke-width="4"/></g>`;
+}
+const CLOTH_COLS = [[C.pink, C.pinkDark], [C.emerald, C.emeraldDark], [C.marigold, '#C9821E'], ['#7A4FA0', '#5D3A7E'], [C.teal, C.tealDark], [C.lehenga, C.lehengaDark], ['#4F86C6', '#3A6AA3']];
+// foldedClothSVG(c, d, w): one folded garment centred on (0,0), 40 tall
+function foldedClothSVG(c, d, w = 170) {
+  return `<rect x="${-w / 2}" y="-20" width="${w}" height="40" rx="10" fill="${c}" stroke="${OL}" stroke-width="4"/><path d="M${-w / 2 + 14},4 H${w / 2 - 14}" stroke="${d}" stroke-width="6" stroke-linecap="round"/>`;
+}
+// clothesStackSVG(id, n): n folded clothes stacked upward from (0,0), each `${id}-i${k}` (pop them in one by one)
+function clothesStackSVG(id, n = 12) {
+  let s = `<g id="${id}">`;
+  for (let k = 0; k < n; k++) { const [c, d] = CLOTH_COLS[k % CLOTH_COLS.length]; s += `<g transform="translate(${((k * 37) % 7 - 3) * 6},${-k * 34}) rotate(${((k * 53) % 9 - 4) * 1.5})"><g id="${id}-i${k}">${foldedClothSVG(c, d, 150 + (k % 3) * 20)}</g></g>`; }
+  return s + `</g>`;
+}
+// stuffedInside(): an almirahSVG's inside crammed with folded clothes (put in `${id}-inside`)
+function stuffedInside() {
+  let s = '';
+  for (let r = 0; r < 4; r++) for (let k = 0; k < 3; k++) { const [c, d] = CLOTH_COLS[(r * 3 + k) % CLOTH_COLS.length]; s += `<g transform="translate(${-70 + (r % 2) * 140},${-90 - r * 120 - k * 34})">${foldedClothSVG(c, d, 130)}</g><g transform="translate(${70 - (r % 2) * 140},${-90 - r * 120 - k * 34})">${foldedClothSVG(...CLOTH_COLS[(r * 3 + k + 3) % CLOTH_COLS.length], 130)}</g>`; }
+  return s;
+}
+// arMysteryHeader(): the Anokhi Reet app header with its name hidden ("? ? ?") until a reveal (from Dukaan-dukaan)
+function arMysteryHeader(y = -430) {
+  return `<rect x="-264" y="${y - 38}" width="528" height="84" fill="url(#mar)"/><circle cx="-200" cy="${y + 4}" r="26" fill="${C.cream}" stroke="${C.goldTan}" stroke-width="4"/>` +
+    `<text x="-200" y="${y + 16}" text-anchor="middle" font-family="Inter" font-weight="900" font-size="32" fill="${C.red}">?</text><text x="-160" y="${y + 16}" font-family="Inter" font-weight="900" font-size="34" fill="${C.cream}" letter-spacing="6">? ? ?</text>`;
+}
+// arPickScreen(id, o): the app's browse screen for phoneSVG(…, 560, 1000, inner): chips (o.chips; `${id}-c0..2-on`/`-t`
+// to select with chipOnAR), four outfit cards from different shops, "Rent" pills with no amounts (`${id}-r0..3`), the picked
+// card o.pick framed with a tick (`${id}-sel`) and a "Booked ✓" badge (`${id}-bk`). o.mystery hides the app name; then
+// `${id}-real` (hidden) holds the real header to flip in.
+function arPickScreen(id, o = {}) {
+  const chips = o.chips || ['City', 'Occasion', 'Budget'], pick = o.pick == null ? 1 : o.pick;
+  const looks = o.looks || [{ c: C.pink, d: C.pinkDark, dupatta: '#F4B9C8' }, { c: '#F6A98E', d: '#E08A6F', dupatta: '#F8D8C8' }, { c: C.emerald, d: C.emeraldDark, dupatta: '#A6D3B0' }, { c: C.lehenga, d: C.lehengaDark, dupatta: '#E8C25E' }];
+  let s = o.mystery ? arMysteryHeader() + `<g id="${id}-real" opacity="0">${arHeader()}</g>` : arHeader();
+  s += chips.map((c, i) => `<g transform="translate(${-170 + i * 170},-330)"><rect x="-80" y="-30" width="160" height="60" rx="30" fill="#F2EEE9" stroke="#E6E0D9" stroke-width="3"/><rect id="${id}-c${i}-on" x="-80" y="-30" width="160" height="60" rx="30" fill="#141110" opacity="0"/><text x="0" y="10" text-anchor="middle" font-family="Inter" font-weight="700" font-size="${c.length > 8 ? 24 : 28}" fill="#141110">${c}</text><text id="${id}-c${i}-t" x="0" y="10" text-anchor="middle" font-family="Inter" font-weight="700" font-size="${c.length > 8 ? 24 : 28}" fill="#fff" opacity="0">${c}</text></g>`).join('');
+  looks.forEach((lk, i) => {
+    const x = i % 2 ? 125 : -125, y = i < 2 ? -90 : 260;
+    s += `<g transform="translate(${x},${y})"><rect x="-112" y="-160" width="224" height="320" rx="16" fill="#fff" stroke="#E6E0D9" stroke-width="3"/><rect x="-100" y="-148" width="200" height="200" rx="10" fill="${C.cream}"/>` +
+      `<g transform="translate(0,-90)">${lehengaHangerSVG('', lk, .36)}</g>` +
+      `<path d="M-96,76 h44 l6,16 h-56 z" fill="${C.red}" stroke="${OL}" stroke-width="2.5"/><rect x="-92" y="92" width="36" height="22" fill="#fff" stroke="${OL}" stroke-width="2.5"/><text x="-40" y="110" font-family="Inter" font-weight="700" font-size="22" fill="#655C57">Shop ${i + 1}</text>` +
+      `<g transform="translate(-40,136)"><g id="${id}-r${i}" opacity="0"><rect x="-56" y="-18" width="112" height="36" rx="18" fill="${C.cream}" stroke="${C.goldTan}" stroke-width="3"/><text y="9" text-anchor="middle" font-family="Inter" font-weight="800" font-size="22" fill="${C.red}">Rent</text></g></g>` +
+      (i === pick ? `<g id="${id}-sel" opacity="0"><rect x="-118" y="-166" width="236" height="332" rx="20" fill="none" stroke="#141110" stroke-width="7"/><circle cx="84" cy="-126" r="28" fill="${C.emerald}" stroke="${OL}" stroke-width="4"/><path d="M71,-126 l9,9 17,-17" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></g>` : '') +
+      `</g>`;
+  });
+  s += `<g transform="translate(0,440)"><g id="${id}-bk" opacity="0"><rect x="-150" y="-40" width="300" height="80" rx="40" fill="${C.emerald}" stroke="${OL}" stroke-width="4"/><text y="14" text-anchor="middle" font-family="Inter" font-weight="900" font-size="40" fill="#fff">Booked ✓</text></g></g>`;
+  return s;
+}
+function chipOnAR(id, i, k) { op($(`${id}-c${i}-on`), k); op($(`${id}-c${i}-t`), k); }

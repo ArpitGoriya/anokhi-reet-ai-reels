@@ -3,6 +3,12 @@
 Every reel adds at least one improvement to the engine or library and writes it here (newest first).
 See [GUIDE.md](GUIDE.md) section 8.
 
+## 2026-11-20: bed, clothes pile, crammed almirah, hidden-name app screen, Kavya and Mummy (Cupboard full)
+
+- **New props:** `bedSVG`, `foldedClothSVG`, `clothesStackSVG`, `stuffedInside`, `arMysteryHeader`, `arPickScreen`,
+  `chipOnAR` (the last three generalise Dukaan-dukaan's reel-only mystery screen).
+- **New cast:** Kavya (`KAVYA`), Mummy (`MUMMY`).
+
 ## 2026-11-20: calendar page, Booked tag, full almirah (Nisha Part 2)
 
 - **New props:** `monthPageSVG(month, circled)`, `bookedTagSVG()`, `almirahFill(n)`.
