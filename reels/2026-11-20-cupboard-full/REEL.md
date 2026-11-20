@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-20
 - **Made by:** dhruvifewtone-wq
-- **Status:** final (video 2 approved, 2026-11-20)
+- **Status:** video 3 sent
 
 ## Brief
 
@@ -57,17 +57,24 @@ Voice text: [`script.txt`](script.txt).
 - Take 2: `output/female-cupboard-full-take2.mp3` (46 s, script v2) — approved: yes, 2026-11-20
 - Take 3: `output/female-cupboard-full-take3.mp3` = take 2 with the last line made again ("Koi baat nahi!",
   "Download karo... Anokhi... Reet!") and joined at 40.3 s
+- Take 4: `output/female-cupboard-full-take4.mp3` = take 2 with the new last line (rent CTA, `end-d`) joined at 40.3 s (50 s)
 
 ## Video
 
 - `output/2026-11-20-cupboard-full.mp4` (47 s), video 1 sent 2026-11-20.
 - `output/2026-11-20-cupboard-full-v2.mp4` (48 s), video 2 sent 2026-11-20.
+- `output/2026-11-20-cupboard-full-v3.mp4` (51 s), video 3 sent 2026-11-20.
 
 ## Feedback rounds
 
 1. Script v1 → v2: more curiosity (open loop, hidden trick, Mummy payoff).
 2. Video 1 (teammate, 2026-11-20): at 41 s "koi baat nahi" sounded like "koi baat no", and the last "Anokhi Reet" like
    "Anokhi Ret" → only the last line voiced again with "nahi!" and pauses ("Download karo... Anokhi... Reet!"); take 3.
+
+- Round 3 (2026-11-20): "At 12 s and 37 s Mummy's body is not complete" → Mummy now stands as a full figure in both
+  scenes (bubbles moved up off her head). New CTA (teammate): "Agar aapko bhi functions ke liye rent par outfits
+  chahiye, toh download karo Anokhi Reet" → last line voiced again (take 4); end card asks "Functions ke liye rent pe
+  outfits? 👗", then "Download Anokhi Reet 👇".
 
 ## Caption
 
@@ -95,6 +102,8 @@ Tag karo us dost ko jiska cupboard full hai par kapde kabhi nahi hote 👇
 - (none yet)
 
 ## Lessons
+
+- A character standing on the floor with no counter in front: use `stand()`, never `bust()` (a bust ends at the waist).
 
 - Curiosity recipe for customer stories: promise a payoff right after the hook, keep the trick secret ("? ? ?"
 - "Anokhi Reet" at the very end of a take can come out as "Ret": write it with pauses ("करो... अनोखी... रीत!").

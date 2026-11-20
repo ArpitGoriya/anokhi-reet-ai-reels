@@ -53,8 +53,8 @@ addScene('c5', 'c9', {
 // ================= S3: Mummy's dialogue — Kavya flops onto the pile =================
 addScene('c9', 'c11', {
   svg: homeBG('k4', ROOM) + doorSVG(180) + bedSVG(700, FLOOR - 90, 600) + at(730, FLOOR - 150, clothesStackSVG('k4s', 16)) +
-    bust('mm4', MUMMY, 180, FLOOR + 60, .85) + `<g id="k4kv">${stand('kv4', KAVYA, 0, 0, .7)}</g>`,
-  html: `<div class="bubble" style="left:440px;top:560px;width:560px;font-size:34px" data-t="c9+0.2" data-out="c10+1.2">"Itne saare kapde hain, phir bhi bolti rehti hai ke <span class="hl">pehenne ko kuch nahi</span> hai!" 🙄</div>` +
+    stand('mm4', MUMMY, 190, 960, .78) + `<g id="k4kv">${stand('kv4', KAVYA, 0, 0, .7)}</g>`,
+  html: `<div class="bubble" style="left:440px;top:470px;width:680px;font-size:34px" data-t="c9+0.2" data-out="c10+1.2">"Itne saare kapde hain, phir bhi bolti rehti hai ke <span class="hl">pehenne ko kuch nahi</span> hai!" 🙄</div>` +
     pillH(540, 352, 'c10', '"Itne kapde hain, <span class="hl">phir bhi?</span>" 😂') + fx(760, 820, 'c10+0.6', 'BOING!', -10),
   init() { for (let k = 0; k < 16; k++) op($(`k4s-i${k}`), 1); },
   cam: [1, 1.03], fy: 860,
@@ -149,10 +149,10 @@ addScene('c22', 'c23', {
 
 // ================= S9 payoff: Mummy — "Ye kahan se laayi?" =================
 addScene('c23', 'c26', {
-  svg: homeBG('k11', ROOM) + doorSVG(180) + bust('mm11', MUMMY, 220, FLOOR + 60, .85) + stand('kv11', KP, 700, 960, .78) +
+  svg: homeBG('k11', ROOM) + doorSVG(180) + stand('mm11', MUMMY, 230, 960, .78) + stand('kv11', KP, 700, 960, .78) +
     [[560, 620], [880, 700]].map(([x, y], i) => `<g transform="translate(${x},${y})"><g data-t="c24+${(.2 + i * .2).toFixed(1)}" data-bob="6" data-ph="${i}">${sparkleSVG(26, C.gold)}</g></g>`).join(''),
   html: pillH(540, 352, 'c23', 'Aur <span class="hl">mummy?</span> 👀', '', 'c25-0.05') + pillH(540, 352, 'c25', 'Mummy bhi <span class="hl">chup</span> 😄') +
-    `<div class="bubble" style="left:330px;top:540px" data-t="c25">"Ye <span class="hl">kahan se laayi?</span>" 😍</div>`,
+    `<div class="bubble" style="left:330px;top:450px" data-t="c25">"Ye <span class="hl">kahan se laayi?</span>" 😍</div>`,
   cam: [1, 1.03], fy: 860,
   upd(t) {
     const wow = t > T('c24'), ask = t > T('c25');
@@ -177,14 +177,15 @@ addScene('c26', 'c28', {
 addScene('c28', 9999, {
   svg: `<rect width="${W}" height="${H}" fill="url(#mar)"/>` + rosettes('k13r', 540, 760, .16, C.gold) + bust('kv13', KP, 540, FLOOR + 330, .95) + counterSVG(FLOOR + 280, '#5D0000'),
   html: `<img id="k13wm" style="position:absolute;left:290px;top:250px;width:500px" src="">` +
-    `<div class="title" style="top:520px;font-size:84px">Download<br><span class="g">Anokhi Reet</span> 👇</div>` +
+    `<div class="title" style="top:520px;font-size:72px" data-t="c28" data-out="c29-0.05">Functions ke liye<br><span class="g">rent pe outfits?</span> 👗</div>` +
+    `<div class="title" style="top:520px;font-size:84px" data-t="c29">Download<br><span class="g">Anokhi Reet</span> 👇</div>` +
     `<div style="position:absolute;left:540px;top:730px;transform:translate(-50%,-50%);font-weight:700;font-size:34px;color:#FFF2DF">Naya look, bina naya kharide</div>` +
-    `<div style="position:absolute;left:540px;top:810px;transform:translate(-50%,-50%);display:flex;gap:24px" data-t="c28+0.3"><img id="k13as" style="height:92px" src=""><img id="k13gp" style="height:92px" src=""></div>` +
-    pillH(540, 925, 'c28+0.45', 'anokhireet.in', 'gold'),
+    `<div style="position:absolute;left:540px;top:810px;transform:translate(-50%,-50%);display:flex;gap:24px" data-t="c29+0.3"><img id="k13as" style="height:92px" src=""><img id="k13gp" style="height:92px" src=""></div>` +
+    pillH(540, 925, 'c29+0.45', 'anokhireet.in', 'gold'),
   noWm: true, tin: .3, trans: 'rise', cam: [1, 1.03],
   init() { const b = SEAL(); [['k13wm', 'logo-text.svg'], ['k13as', 'app-store-badge.svg'], ['k13gp', 'google-play-badge.svg']].forEach(([id, f]) => { const im = $(id); if (im) im.src = b.replace('seal-on-maroon.svg', f); }); },
   upd(t) {
     tf($('k13r'), 540, 760, 1, t * 5);
-    life('kv13', t, { pivot: 0, mouth: 'grin', brows: 'up', look: [0, 0], R: t > T('c28') + .3 ? WAVE(t, T('c28') + .3) : [9, -14], hR: 'open', L: [9, -14] });
+    life('kv13', t, { pivot: 0, mouth: 'grin', brows: 'up', look: [0, 0], R: t > T('c29') + .3 ? WAVE(t, T('c29') + .3) : [9, -14], hR: 'open', L: [9, -14] });
   }
 });
