@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-20
 - **Made by:** dhruvifewtone-wq
-- **Status:** script v2 (curiosity) written, waiting for approval
+- **Status:** script v2 approved, voice take 2 made
 
 ## Brief
 
@@ -34,7 +34,7 @@
   trick kept secret ("na kharidna, na maangna", app header "? ? ?") until the reveal, and a payoff at the end (Mummy:
   "Ye kahan se laayi?").
 
-## Script and storyboard (version 2 with curiosity, approved: no)
+## Script and storyboard (version 2 with curiosity, approved: yes, 2026-11-20)
 
 | # | Voice line (caption) | On screen | Label / title |
 |---|---|---|---|
@@ -54,6 +54,7 @@ Voice text: [`script.txt`](script.txt).
 ## Voice-over
 
 - Take 1: `output/female-cupboard-full-take1.mp3` (33 s) (script v1) — not used: teammate asked for more curiosity (2026-11-20)
+- Take 2: `output/female-cupboard-full-take2.mp3` (46 s, script v2) — approved: waiting
 
 ## Video
 
