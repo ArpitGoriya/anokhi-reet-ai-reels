@@ -2,7 +2,7 @@
 
 एक customer को तीस photos। फिर दूसरे को... फिर तीसरे को। हर दिन यही काम।
 
-और end में customer बोलता है, "Price क्या है?" ... "और कोई design है?" हर customer को photos भेजते भेजते थक गए?
+और end में customer बोलता है, "Price क्या है? और कोई design है?" हर customer को photos भेजते भेजते थक गए?
 
 फिर मीनाबेन ने अपनी shop एक app पे list की। एक बार photos और rent price डाले... और पूरी दुकान एक page पे।
 

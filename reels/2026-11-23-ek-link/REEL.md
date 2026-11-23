@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-23
 - **Made by:** dhruvifewtone-wq
-- **Status:** script approved
+- **Status:** voice approved
 
 ## Brief
 
@@ -26,7 +26,8 @@
   SHOP" in voice; "Comment SHOP 👇" on the end card and in the caption.
 - **App name held back** (teammate, 2026-11-23): scene 4 says "ek app pe list ki"; the app shows a "? ? ?" header until
   "Vo app ka naam tha… Anokhi Reet!", placed after the bonus line and before the CTA.
-- **"Price kya hai?" … "Aur koi design hai?"**: a real 1-second gap between the two questions (spliced into the voice).
+- "Price kya hai?" and "Aur koi design hai?" follow each other with no extra gap (teammate tried a 1 s gap, then
+  asked to remove it, 2026-11-23).
 - "message" is written "मैसेज" in the voice text so it is not said "messhage".
 - **Scene 7 brand-safe version** (teammate chose it, 2026-11-23): no "FREE listing (15 outfits tak)", "0% commission",
   "no setup fee" or "5 minute" in our words (Never-say list). Voice: "Aur bonus? Naye customer bhi app pe unki dukaan
@@ -38,13 +39,13 @@
 - Hashtags: 5 (dropped #GujaratBusiness, teammate chose it).
 - The app name is said in Devanagari ("अनोखी रीत") so the voice says it properly.
 
-## Script and storyboard (v2 with the teammate's changes, 2026-11-23)
+## Script and storyboard (v2 with the teammate's changes; approved with voice take 2, 2026-11-23)
 
 | # | Voice line (caption) | On screen (scene, characters and what they do) | Label / title |
 |---|---|---|---|
 | 1 | Ye hain *Meenaben.* / Aur inka din shuru hota hai / is *ek message* se… | **Hook from frame 1:** Meenaben at her shop counter, rails of lehengas behind. Her phone buzzes (ping rings); a big chat bubble pops out of it: "Hi, lehenga ke photos bhejo na 🙏". She looks at it, eyebrows up. | Big title from frame 1: **Roz 30 photos × har customer? 😩** · "Photos bhejo na 🙏" |
 | 2 | Ek customer ko *30 photos.* / Phir *doosre* ko… / phir *teesre* ko. / *Har din* yahi kaam. | Meenaben runs rail to rail with her phone: camera flashes (drawn "click" bursts), a camera counter in the corner climbs 5 → 12 → 20 → 30. New "Photos bhejo 🙏" banners keep dropping in from the top and stack up. Her bun comes loose, sweat drops fly. | 30 photos × har customer 📸😩 |
-| 3 | Aur end mein customer bolta hai, / *"Price kya hai?* / *Aur koi design hai?"* / Har customer ko photos *bhejte bhejte thak gaye?* | Close-up of the chat: 30 photo tiles, then the reply "Price kya hai? 🤔"; a typing "…" holds through the 1 s gap; then "Aur koi design hai? 🤷‍♀️". Cut: Meenaben drops into her chair, phone hanging from her hand, a long sigh cloud; she looks at us. | Thak gaye? 😮‍💨 |
+| 3 | Aur end mein customer bolta hai, / *"Price kya hai?* / *Aur koi design hai?"* / Har customer ko photos *bhejte bhejte thak gaye?* | Close-up of the chat: 30 photo tiles, then the reply "Price kya hai? 🤔"; then "Aur koi design hai? 🤷‍♀️". Cut: Meenaben drops into her chair, phone hanging from her hand, a long sigh cloud; she looks at us. | Thak gaye? 😮‍💨 |
 | 4 | Phir Meenaben ne apni shop / *ek app* pe list ki. / Ek baar *photos aur rent price* daale… / aur *poori dukaan ek page* pe. | An idea bulb lights over her head ("ding"). Big phone, the app header shows a mystery "? ? ?": steps pop one by one: 💬 Message → 📸 Photos + rent price → ✅ Shop live. Then her shop page appears: "Meenaben's shop", a neat grid of her outfits with "Rent" labels (three pops). A small "Kaunsa app? 🤔" sticker. | Poori dukaan, ek page pe 📱 |
 | 5 | Ab koi bhi *photos maange,* / toh Meenaben bas *ek link* bhejti hain. | Same chat: the new "Hi, lehenga ke photos bhejo na 🙏" arrives. Meenaben, calm, taps once: one message with a link card (shop name + outfit grid) slides in: "Ye lo, saare outfits aur price yahan hain 😊". | 30 photos ❌ → Ek link ✅ |
 | 6 | Customer *saare outfits aur price* ek saath dekhta hai, / *pasand* karta hai… / aur *decide karke* dukaan aata hai. | The customer's phone (her hand): she taps the link, the shop page scrolls, she taps one lehenga (heart pops): "Ye wala pasand aaya! Kal aati hoon 😍". Cut to the shop: the customer walks in holding her phone; Meenaben smiles. | Customer decide karke aata hai ✅ |
@@ -58,7 +59,8 @@ Voice text: [`script.txt`](script.txt).
 
 - Take 1: `output/female-ek-link-take1.mp3` (42 s) — not used (teammate changes, 2026-11-23)
 - Take 2: `output/female-ek-link-take2.mp3` (47 s, script v2); with 0.85 s of silence added at 13.83 s (a 1 s gap
-  between the two questions): `output/female-ek-link-take2-gap.mp3` (48 s) — approved: not yet
+  between the two questions): `output/female-ek-link-take2-gap.mp3` (48 s) — not used (gap removed)
+- **Approved: take 2 without the gap** (`output/female-ek-link-take2.mp3`, 47 s), 2026-11-23
 
 ## Video
 
