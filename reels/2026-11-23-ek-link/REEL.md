@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-23
 - **Made by:** dhruvifewtone-wq
-- **Status:** video 1 sent
+- **Status:** video 2 sent
 
 ## Brief
 
@@ -65,11 +65,15 @@ Voice text: [`script.txt`](script.txt).
 ## Video
 
 - `output/2026-11-23-ek-link.mp4` (48 s), video 1 sent 2026-11-23.
+- `output/2026-11-23-ek-link-v2.mp4` (48 s), video 2 sent 2026-11-23.
 
 ## Feedback rounds
 
 - Voice take 1 (2026-11-23): CTA → "comment karo SHOP"; "messhage" → proper "message"; 1 s gap between the two
   questions; "Anokhi Reet pe list ki" → "ek app pe list ki", with "Vo app ka naam tha… Anokhi Reet!" before the CTA.
+
+- Video 1 (2026-11-23): "At 33 s the lower body of the customer is missing" → the customer now wears a blue lehenga
+  skirt (`CUSTOMER_W` has none), and in that scene she and Meenaben stand full height on the shop floor.
 
 ## Caption
 
@@ -100,5 +104,6 @@ Apni rental shop bhi online lana chahte ho? Comment karo "SHOP" 👇
 
 ## Lessons
 
+- `CUSTOMER_W` has no skirt: give her one with `dress(CUSTOMER_W, { skirt: … })` before using `stand()`.
 - A walking `stand()` character holding a prop: set `PL[id].y` too (not only `.x`), or `atHand` puts the prop off screen.
 - A long sign name: shrink the sign font (`shopBG(...).replace('font-size="50" fill', 'font-size="40" fill')`).

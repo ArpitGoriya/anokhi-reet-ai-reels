@@ -1,7 +1,7 @@
 // ===== Ek link, poori dukaan: Meenaben stops sending 30 photos to every customer and sends one link =====
 // Open loop: she lists her shop on "ek app"; the app's name stays "? ? ?" until "Vo app ka naam tha… Anokhi Reet!".
 const quiet = (o = .45) => `<rect width="${W}" height="${H}" fill="${C.cream}" opacity="${o}"/>`;
-const MB = MEENABEN, CU = dress(CUSTOMER_W, {});
+const MB = MEENABEN, CU = dress(CUSTOMER_W, { skirt: { c: '#3A6AA3', d: '#2C5283', b: C.gold, w: 190 } });
 const LOOKS = [[C.lehenga, C.lehengaDark], [C.pink, C.pinkDark], [C.emerald, C.emeraldDark], [C.marigold, '#C9821E'], [C.teal, C.tealDark], ['#7A4FA0', '#5D3A7E'], ['#4F86C6', '#3A6AA3'], ['#F6A98E', '#E08A6F']];
 const SIGN = { sign: 'MEENABEN RENTALS' };
 const shopM = id => shopBG(id, SIGN).replace('font-size="50" fill', 'font-size="40" fill');
@@ -133,14 +133,14 @@ addScene('c17', 'c20', {
 
 // ================= S6b she walks into the shop, knowing what she wants =================
 addScene('c20', 'c21', {
-  svg: shopM('s6b') + bust('s6bm', MB, 820, FLOOR + 110, .8) + counterSVG(FLOOR + 140) + `<g id="s6bcw">${stand('s6bc', CU, 0, 0, .78)}</g>` + handPhone('s6bph', .9, 'app'),
+  svg: shopM('s6b') + stand('s6bm', MB, 800, 940, .78) + `<g id="s6bcw">${stand('s6bc', CU, 0, 0, .78)}</g>` + handPhone('s6bph', .9, 'app'),
   html: pillH(540, 352, 'c20', 'Customer <span class="hl">decide karke</span> aata hai ✅'),
   cam: [1, 1.03], fy: 880,
   upd(t) {
-    const g = glide(t, T('c20'), 1.1, -200, 420); tf($('s6bcw'), g[0], 960 + g[1], 1); PL['s6bc'].x = g[0]; PL['s6bc'].y = 960 + g[1];
+    const g = glide(t, T('c20') - .3, 1.1, -200, 400); tf($('s6bcw'), g[0], 940 + g[1], 1); PL['s6bc'].x = g[0]; PL['s6bc'].y = 940 + g[1];
     const A = life('s6bc', t, { mouth: 'grin', brows: 'up', look: [.8, 0], R: [150, -60], hR: 'fist', L: [9, -14], seed: 4 });
     atHand('s6bph', 's6bc', A.hr, 0, -60, 0);
-    life('s6bm', t, { pivot: 0, mouth: 'grin', brows: 'up', look: [-.8, 0], tilt: -4, L: [100 + Math.sin(t * 8) * 10, -60], hL: 'open', R: [9, -14], seed: 2 });
+    life('s6bm', t, { mouth: 'grin', brows: 'up', look: [-.8, 0], tilt: -4, L: [100 + Math.sin(t * 8) * 10, -60], hL: 'open', R: [9, -14], seed: 2 });
   }
 });
 
