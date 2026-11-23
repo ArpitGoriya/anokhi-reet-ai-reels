@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-23
 - **Made by:** dhruvifewtone-wq
-- **Status:** script approved
+- **Status:** video 1 sent
 
 ## Brief
 
@@ -57,11 +57,11 @@ Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- Take 1: `output/female-do-dukaan-take1.mp3` (60 s) â€” approved: not yet
+- Take 1: `output/female-do-dukaan-take1.mp3` (60 s) â€” approved: yes, 2026-11-23
 
 ## Video
 
-- (not made yet)
+- `output/2026-11-23-do-dukaan.mp4` (61 s), video 1 sent 2026-11-23.
 
 ## Feedback rounds
 
@@ -88,8 +88,8 @@ Aapke 10 mein se kitne customer price poochke chale jaate hain? Comment karo ðŸ‘
 
 ## Added to the library (at least two per reel)
 
-- (planned) A half-open shutter shop front, a wall clock showing 9:55, cross-out thought bubbles, and the new cast
-  Maheshbhai and Kiranben.
+- `halfShutterSVG` and `crossThoughtSVG` in `engine/props.js`.
+- New cast: Maheshbhai (`MAHESH`) and Kiranben (`KIRAN`).
 
 ## Suggested default (for the owner)
 
@@ -97,4 +97,5 @@ Aapke 10 mein se kitne customer price poochke chale jaate hain? Comment karo ðŸ‘
 
 ## Lessons
 
-- (later)
+- Scene 4 has only 4.5 s of voice, so the chai talk is two bubbles (his question, her clue), not all four lines.
+- On `twoShopsBG`, put the owners' busts higher (`FLOOR - 110`) or only their heads show over the counters.

@@ -116,3 +116,8 @@ const KHUSHI = { hairStyle: 'pony', top: '#F2C14E', topD: '#D9A52E', pallu: '#E2
 // Meenaben (40s): a busy rental shop owner who used to send 30 photos to every customer; now she sends one link.
 // Plum kurta, marigold dupatta, bun with gajra. (Ek link, poori dukaan, 2026-11-23)
 const MEENABEN = { hairStyle: 'bun', gajra: true, top: '#7A3E6E', topD: '#5E2D55', pallu: C.marigold, border: C.gold, skin: '#B97A55', skin2: '#A0663F', sindoor: true, earrings: true, necklace: true, skirt: { c: '#5E2D55', d: '#45203F', b: C.gold, w: 210 } };
+// Maheshbhai (40s-50s): rental shop owner, not online; customers find him only by his board. Teal kurta, glasses.
+// Kiranben (30s-40s): rental shop owner next door, listed on Anokhi Reet; calm, smiling. Marigold kurti, red dupatta.
+// (Do dukaan, do kahaniyan, 2026-11-23)
+const MAHESH = { male: true, mustache: true, glasses: true, hair: '#4A3A30', top: '#2F7A6B', topD: '#235C51', skin: '#A86B48', skin2: '#93593A', embroidery: true };
+const KIRAN = { hairStyle: 'braid', top: C.marigold, topD: '#C9821E', pallu: '#C0262D', border: C.gold, skin: '#C08460', skin2: '#A86E4E', sindoor: true, earrings: true, skirt: { c: '#A3262A', d: '#7A1B2A', b: C.gold, w: 205 } };

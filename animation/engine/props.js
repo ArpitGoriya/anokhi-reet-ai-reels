@@ -608,3 +608,21 @@ function flashSVG(r = 90) {
   for (let i = 0; i < 8; i++) s += `<path transform="rotate(${i * 45})" d="M-10,${-r * .35} L0,${-r * 1.1} L10,${-r * .35} Z" fill="#FFF6C8" stroke="${OL}" stroke-width="3" stroke-linejoin="round"/>`;
   return s + `<circle r="${r * .38}" fill="#FFF6C8" stroke="${OL}" stroke-width="4"/>`;
 }
+
+// ===== Do dukaan, do kahaniyan (2026-11-23): half-closed shutter, crossed-out thought =====
+// halfShutterSVG(cx, w, y0, h): a rolling shutter pulled half down over a shop opening (e.g. twoShopsBG's fronts:
+// cx 270 or 810, w 440, y0 550); a handle at the bottom edge
+function halfShutterSVG(cx, w = 440, y0 = 550, h = 280) {
+  let s = `<rect x="${cx - w / 2}" y="${y0}" width="${w}" height="${h}" fill="#A7A39C" stroke="${OL}" stroke-width="${OW}"/>`;
+  for (let y = y0 + 30; y < y0 + h; y += 30) s += `<path d="M${cx - w / 2},${y} H${cx + w / 2}" stroke="#8C8880" stroke-width="5"/>`;
+  return s + `<rect x="${cx - 60}" y="${y0 + h - 26}" width="120" height="20" rx="8" fill="#6E6A64" stroke="${OL}" stroke-width="3"/>`;
+}
+// crossThoughtSVG(id, text, w): a thought cloud with a guess, centred on (0,0); `${id}-x` is a big red cross to fade in
+// when the guess is wrong (tail bubbles go down-left)
+function crossThoughtSVG(id, text, w = 460) {
+  const h = 110;
+  return `<rect x="${-w / 2}" y="${-h / 2}" width="${w}" height="${h}" rx="${h / 2}" fill="#fff" stroke="${OL}" stroke-width="4"/>` +
+    `<circle cx="${-w / 2 + 40}" cy="${h / 2 + 22}" r="14" fill="#fff" stroke="${OL}" stroke-width="4"/><circle cx="${-w / 2 + 20}" cy="${h / 2 + 50}" r="8" fill="#fff" stroke="${OL}" stroke-width="3"/>` +
+    `<text y="12" text-anchor="middle" font-family="Inter" font-weight="800" font-size="34" fill="${C.text}">${text}</text>` +
+    `<g id="${id}-x" opacity="0"><path d="M${-w / 2 + 20},${-h / 2 + 10} L${w / 2 - 20},${h / 2 - 10} M${w / 2 - 20},${-h / 2 + 10} L${-w / 2 + 20},${h / 2 - 10}" stroke="#D9363E" stroke-width="12" stroke-linecap="round" opacity=".85"/></g>`;
+}

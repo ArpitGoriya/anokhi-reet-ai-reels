@@ -3,6 +3,12 @@
 Every reel adds at least one improvement to the engine or library and writes it here (newest first).
 See [GUIDE.md](GUIDE.md) section 8.
 
+## 2026-11-23: half-closed shutter, crossed-out thought, Maheshbhai and Kiranben (Do dukaan, do kahaniyan)
+
+- **New props:** `halfShutterSVG(cx, w, y0, h)` (a shutter pulled half down over a shop opening, e.g. on `twoShopsBG`),
+  `crossThoughtSVG(id, text, w)` (a thought cloud with a guess; fade in `${id}-x` to cross it out).
+- **New cast:** Maheshbhai (`MAHESH`), Kiranben (`KIRAN`).
+
 ## 2026-11-23: notification banner, link message, sigh cloud, camera flash, Meenaben (Ek link, poori dukaan)
 
 - **New props:** `notifSVG(name, text)` (phone notification banner), `linkMsgSVG(id, shop, lines)` (chat message with a

@@ -40,6 +40,8 @@ characters are added here after their first reel (add them to `cast.js`, to the 
 | `SHITAL` | **Shital**, late 20s, young rental shop owner; learns that fewer, better options sell. | Braid, teal kurti, coral dupatta | 3 options (2026-11-20) |
 | `KHUSHI` | **Khushi**, 20s, a customer who can't decide when shown too much. | Ponytail, yellow top, pink dupatta | 3 options |
 | `MEENABEN` | **Meenaben**, 40s, busy rental shop owner; stops sending 30 photos and sends one shop link. | Bun with gajra, plum kurta, marigold dupatta, sindoor | Ek link, poori dukaan (2026-11-23) |
+| `MAHESH` | **Maheshbhai**, 40s-50s, rental shop owner, not online; customers find him only by his board. | Teal kurta, glasses, moustache | Do dukaan, do kahaniyan (2026-11-23) |
+| `KIRAN` | **Kiranben**, 30s-40s, rental shop owner next door, on Anokhi Reet; calm and smiling. | Braid, marigold kurti, red dupatta, maroon skirt | Do dukaan, do kahaniyan |
 
 Ideas for the cast's next members (make them when a story needs them): a young woman who rents for college
 functions, a groom or brother, a kid, a vendor on the Anokhi Reet app.
