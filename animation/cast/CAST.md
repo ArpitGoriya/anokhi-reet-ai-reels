@@ -39,6 +39,7 @@ characters are added here after their first reel (add them to `cast.js`, to the 
 | `MUMMY` | **Mummy**, 50s, Kavya's mother; says the famous line. | Greying bun, sindoor, orange saree | Cupboard full |
 | `SHITAL` | **Shital**, late 20s, young rental shop owner; learns that fewer, better options sell. | Braid, teal kurti, coral dupatta | 3 options (2026-11-20) |
 | `KHUSHI` | **Khushi**, 20s, a customer who can't decide when shown too much. | Ponytail, yellow top, pink dupatta | 3 options |
+| `MEENABEN` | **Meenaben**, 40s, busy rental shop owner; stops sending 30 photos and sends one shop link. | Bun with gajra, plum kurta, marigold dupatta, sindoor | Ek link, poori dukaan (2026-11-23) |
 
 Ideas for the cast's next members (make them when a story needs them): a young woman who rents for college
 functions, a groom or brother, a kid, a vendor on the Anokhi Reet app.

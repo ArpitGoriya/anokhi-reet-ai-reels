@@ -3,6 +3,13 @@
 Every reel adds at least one improvement to the engine or library and writes it here (newest first).
 See [GUIDE.md](GUIDE.md) section 8.
 
+## 2026-11-23: notification banner, link message, sigh cloud, camera flash, Meenaben (Ek link, poori dukaan)
+
+- **New props:** `notifSVG(name, text)` (phone notification banner), `linkMsgSVG(id, shop, lines)` (chat message with a
+  shop link preview; hidden app name with `${id}-real` to flip in), `sighCloudSVG`, `flashSVG` (camera flash burst).
+- `waChatScreen(ats, name)`: new `name` for the chat title ("? ? ?" keeps the app a secret).
+- **New cast:** Meenaben (`MEENABEN`).
+
 ## 2026-11-20: jam jar, film grid, tally board, dizzy swirl, Shital and Khushi (3 options)
 
 - **New props:** `jamJarSVG`, `filmGridScreen`, `tallyBoardSVG`, `dizzySVG`.

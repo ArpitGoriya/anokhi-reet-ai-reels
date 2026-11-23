@@ -113,3 +113,6 @@ const MUMMY = { hairStyle: 'greybun', top: '#D96C3B', topD: '#B5532E', pallu: C.
 // Khushi (20s): a customer who can't decide when shown too much. Yellow top. (3 options, 2026-11-20)
 const SHITAL = { hairStyle: 'braid', top: C.teal, topD: C.tealDark, pallu: '#F28C6B', border: C.gold, skin: '#C98B62', skin2: '#B9784F', earrings: true, skirt: { c: C.tealDark, d: '#174A47', b: C.gold, w: 195 } };
 const KHUSHI = { hairStyle: 'pony', top: '#F2C14E', topD: '#D9A52E', pallu: '#E26A8A', border: C.red, skin: '#D19A72', skin2: '#BD8460', bangles: false, skirt: { c: '#D9A52E', d: '#B8862F', b: C.red, w: 190 } };
+// Meenaben (40s): a busy rental shop owner who used to send 30 photos to every customer; now she sends one link.
+// Plum kurta, marigold dupatta, bun with gajra. (Ek link, poori dukaan, 2026-11-23)
+const MEENABEN = { hairStyle: 'bun', gajra: true, top: '#7A3E6E', topD: '#5E2D55', pallu: C.marigold, border: C.gold, skin: '#B97A55', skin2: '#A0663F', sindoor: true, earrings: true, necklace: true, skirt: { c: '#5E2D55', d: '#45203F', b: C.gold, w: 210 } };

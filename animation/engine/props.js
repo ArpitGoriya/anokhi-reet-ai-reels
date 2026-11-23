@@ -317,12 +317,12 @@ function arPlansScreen(id) {
   return s + `<rect x="-236" y="380" width="472" height="80" rx="40" fill="url(#mar)"/><text x="0" y="432" text-anchor="middle" font-family="Inter" font-weight="800" font-size="34" fill="${C.cream}">Shop list karo</text>`;
 }
 // waChatScreen(ats): a WhatsApp-style chat with Anokhi Reet (generic colours, no app logo): hello, photos + rent price,
-// and the "shop live" reply; message i pops at ats[i] (caption refs).
-function waChatScreen(ats = ['-1', '-1', '-1']) {
+// and the "shop live" reply; message i pops at ats[i] (caption refs). name: the chat's title ("? ? ?" to keep the app a secret).
+function waChatScreen(ats = ['-1', '-1', '-1'], name = 'Anokhi Reet') {
   let s = `<rect x="-264" y="-484" width="528" height="968" rx="42" fill="#EFE7DA"/>` +
     `<path d="M-264,-442 Q-264,-484 -222,-484 L222,-484 Q264,-484 264,-442 L264,-360 L-264,-360 Z" fill="${C.tealDark}"/>` +
     `<circle cx="-196" cy="-410" r="32" fill="${C.cream}" stroke="${C.goldTan}" stroke-width="4"/><circle cx="-196" cy="-410" r="17" fill="none" stroke="${C.red}" stroke-width="4"/>` +
-    `<text x="-148" y="-404" font-family="Inter" font-weight="800" font-size="34" fill="#fff">Anokhi Reet</text><text x="-148" y="-374" font-family="Inter" font-weight="600" font-size="22" fill="#CFE6E0">online</text>`;
+    `<text x="-148" y="-404" font-family="Inter" font-weight="800" font-size="34" fill="#fff">${name}</text><text x="-148" y="-374" font-family="Inter" font-weight="600" font-size="22" fill="#CFE6E0">online</text>`;
   const tick = (x, y) => `<path d="M${x},${y} l7,7 13,-13 M${x + 11},${y} l7,7 13,-13" stroke="#3E9BD6" stroke-width="4" fill="none" stroke-linecap="round"/>`;
   s += `<g transform="translate(90,-250)"><g data-t="${ats[0]}"><rect x="-160" y="-62" width="320" height="124" rx="22" fill="#D9F2C9" stroke="#B9D9A6" stroke-width="3"/>` +
     `<text x="-136" y="-12" font-family="Inter" font-weight="800" font-size="32" fill="#141110">Namaste! 🙏</text><text x="-136" y="30" font-family="Inter" font-weight="600" font-size="28" fill="#141110">Shop list karni hai</text>${tick(100, 40)}</g></g>`;
@@ -568,4 +568,43 @@ function tallyBoardSVG(id, w = 760, h = 420) {
 function dizzySVG(r = 60) {
   return `<path d="M0,0 m${-r},0 a${r},${r * .45} 0 1,1 ${2 * r},0 a${r * .7},${r * .32} 0 1,1 ${-1.4 * r},0 a${r * .4},${r * .2} 0 1,1 ${.8 * r},0" fill="none" stroke="#7A4FA0" stroke-width="7" stroke-linecap="round"/>` +
     [[-r, -10], [r * .9, 8], [0, -r * .45]].map(([x, y]) => `<g transform="translate(${x},${y})">${sparkleSVG(12, C.gold)}</g>`).join('');
+}
+
+// ===== Ek link, poori dukaan (2026-11-23): notification banner, link-preview message, sigh cloud, camera flash =====
+// notifSVG(name, text, w): a phone notification banner centred on (0,0): green chat icon, sender name and the message
+function notifSVG(name, text, w = 600) {
+  return `<rect x="${-w / 2}" y="-58" width="${w}" height="116" rx="28" fill="#fff" stroke="${OL}" stroke-width="4"/>` +
+    `<circle cx="${-w / 2 + 60}" cy="0" r="34" fill="#25A45A" stroke="${OL}" stroke-width="3"/>` +
+    `<path d="M${-w / 2 + 46},-14 h28 q8,0 8,8 v14 q0,8 -8,8 h-14 l-12,10 v-10 h-2 q-8,0 -8,-8 v-14 q0,-8 8,-8 z" fill="#fff"/>` +
+    `<text x="${-w / 2 + 112}" y="-10" font-family="Inter" font-weight="700" font-size="26" fill="#655C57">${name}</text>` +
+    `<text x="${-w / 2 + 112}" y="30" font-family="Inter" font-weight="800" font-size="31" fill="${C.text}">${text}</text>`;
+}
+// linkMsgSVG(id, shop, lines): an outgoing chat message (green) with a shop link preview, centred on (0,0), 420 wide:
+// a preview card (`${id}-q` "? ? ?" header; `${id}-real` hidden real Anokhi Reet header to flip in), three outfits, the
+// shop name, "Saare outfits + rent", then the message lines.
+function linkMsgSVG(id, shop, lines = []) {
+  const looks = [[C.lehenga, C.lehengaDark, '#E8C25E'], [C.pink, C.pinkDark, '#F4B9C8'], [C.emerald, C.emeraldDark, '#A6D3B0']];
+  const h2 = 70 + lines.length * 34;
+  let s = `<rect x="-210" y="-176" width="420" height="${246 + h2}" rx="24" fill="#D9F2C9" stroke="#B9D9A6" stroke-width="3"/>` +
+    `<rect x="-196" y="-162" width="392" height="232" rx="16" fill="${C.cream}" stroke="#E6E0D9" stroke-width="3"/>` +
+    `<path d="M-196,-146 q0,-16 16,-16 h360 q16,0 16,16 v38 h-392 z" fill="url(#mar)"/>` +
+    `<g id="${id}-q"><circle cx="-168" cy="-135" r="16" fill="${C.cream}"/><text x="-168" y="-127" text-anchor="middle" font-family="Inter" font-weight="900" font-size="22" fill="${C.red}">?</text><text x="-140" y="-125" font-family="Inter" font-weight="900" font-size="26" fill="${C.cream}" letter-spacing="5">? ? ?</text></g>` +
+    `<g id="${id}-real" opacity="0"><circle cx="-168" cy="-135" r="16" fill="${C.cream}" stroke="${C.goldTan}" stroke-width="3"/><circle cx="-168" cy="-135" r="8" fill="none" stroke="${C.red}" stroke-width="3"/><text x="-140" y="-125" font-family="Inter" font-weight="800" font-size="26" fill="${C.cream}">Anokhi Reet</text></g>` +
+    looks.map(([c, d, p], i) => `<g transform="translate(${-120 + i * 120},-66)">${lehengaHangerSVG('', { c, d, dupatta: p }, .24)}</g>`).join('') +
+    `<text x="-180" y="46" font-family="Inter" font-weight="900" font-size="28" fill="${C.red}">${shop}</text>` +
+    `<text x="-188" y="110" font-family="Inter" font-weight="700" font-size="25" fill="#2E6FB0">🔗 Saare outfits + rent</text>`;
+  lines.forEach((l, i) => { s += `<text x="-188" y="${150 + i * 34}" font-family="Inter" font-weight="700" font-size="27" fill="${C.text}">${l}</text>`; });
+  return s + `<path d="M${150},${50 + h2} l7,7 13,-13 M${161},${50 + h2} l7,7 13,-13" stroke="#3E9BD6" stroke-width="4" fill="none" stroke-linecap="round"/>`;
+}
+// sighCloudSVG(text): a tired sigh puff centred on (0,0) ("Haaah…")
+function sighCloudSVG(text = 'Haaah…') {
+  return `<path d="M-150,30 Q-190,30 -186,-6 Q-200,-60 -140,-64 Q-130,-110 -70,-100 Q-30,-140 30,-110 Q90,-130 120,-80 Q190,-80 180,-20 Q200,34 140,40 Z" fill="#F4F1EC" stroke="${OL}" stroke-width="4" stroke-linejoin="round"/>` +
+    `<circle cx="-176" cy="66" r="18" fill="#F4F1EC" stroke="${OL}" stroke-width="4"/><circle cx="-206" cy="98" r="10" fill="#F4F1EC" stroke="${OL}" stroke-width="3"/>` +
+    `<text x="0" y="-18" text-anchor="middle" font-family="Inter" font-weight="900" font-size="46" fill="#7A6E62" font-style="italic">${text}</text>`;
+}
+// flashSVG(r): a camera flash burst centred on (0,0) (pop it at each "click")
+function flashSVG(r = 90) {
+  let s = `<circle r="${r * .9}" fill="#fff" opacity=".55"/>`;
+  for (let i = 0; i < 8; i++) s += `<path transform="rotate(${i * 45})" d="M-10,${-r * .35} L0,${-r * 1.1} L10,${-r * .35} Z" fill="#FFF6C8" stroke="${OL}" stroke-width="3" stroke-linejoin="round"/>`;
+  return s + `<circle r="${r * .38}" fill="#FFF6C8" stroke="${OL}" stroke-width="4"/>`;
 }
