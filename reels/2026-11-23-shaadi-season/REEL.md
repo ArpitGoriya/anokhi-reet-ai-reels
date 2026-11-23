@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-23
 - **Made by:** dhruvifewtone-wq
-- **Status:** video 1 sent
+- **Status:** video 2 sent
 
 ## Brief
 
@@ -23,6 +23,7 @@
 
 ## Teammate changes (override the brand defaults for this reel only)
 
+- Logos only as the official files (lockups), never a home-made seal + rays (teammate, 2026-11-23).
 - Key words in yellow (gold) highlight boxes; on-screen emojis as in the script.
 - **Market numbers with the source** on screen: "~52,00,000 shaadiyan" and "~₹90,000 crore" with "*Source: CAIT
   estimate, Nov 2026" (checked: CAIT, published about 19 Nov 2026; these are CAIT's projections, not our claims).
@@ -67,10 +68,14 @@ Voice text: [`script.txt`](script.txt).
 ## Video
 
 - `output/2026-11-23-shaadi-season.mp4` (45 s), video 1 sent 2026-11-23.
+- `output/2026-11-23-shaadi-season-v2.mp4` (45 s), video 2 sent 2026-11-23.
 
 ## Feedback rounds
 
-- (none yet)
+- Video 1 (2026-11-23): "At 32 seconds the Anokhi Reet logo is not proper" (a seal disc with gold rays and the
+  wordmark below, sparkles next to it) → the reveal now shows the official shop lockup (`Anokhireet_shop_logo.svg`,
+  ANOKHI REET SHOPS, made for maroon) with nothing on it; the cream end card uses the official maroon lockup
+  (`AnokhiReet_logo_maroon.svg`) with space around it.
 
 ## Caption
 
@@ -104,4 +109,5 @@ Anokhi Reet pe apni dukaan list karo: WhatsApp se shuru, apni city ke customers,
 
 - Captions longer than two lines fall into the bottom zone: split the chunk (`c10b`) and its WORDS.
 - An `<img>` with `data-t` is centred on its left/top; give the centre point, not the corner.
-- Keep decoration (rays, sparkles) off the wordmark (logo rules).
+- Keep decoration (rays, sparkles) off the logo, and use an official lockup for the reveal (for shop owners:
+  `Anokhireet_shop_logo.svg` on maroon; `AnokhiReet_logo_maroon.svg` on cream).

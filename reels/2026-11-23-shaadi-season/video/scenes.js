@@ -163,15 +163,13 @@ addScene('c16', 'c18', {
 
 // ================= S9 the reveal: Anokhi Reet — brand-safe badges =================
 addScene('c18', 'c20', {
-  svg: MAR + rosettes('s9ro', 540, 820, .16, C.gold) + `<circle cx="540" cy="760" r="420" fill="url(#glow)" opacity=".8"/>` +
-    [...Array(12)].map((_, i) => `<path transform="translate(540,640) rotate(${i * 30})" d="M-12,-118 L0,-200 L12,-118 Z" fill="${C.gold}" opacity=".7"/>`).join('') +
-    [[250, 560], [830, 600], [240, 900], [850, 880]].map(([x, y], i) => `<g transform="translate(${x},${y})"><g data-t="c18+${(.1 + i * .08).toFixed(2)}" data-k="pop" data-bob="6" data-ph="${i}">${sparkleSVG(34, C.gold)}</g></g>`).join(''),
-  html: `<img id="s9seal" style="position:absolute;left:540px;top:640px;width:200px" src="" data-t="c18">` +
-    `<img id="s9wm" style="position:absolute;left:540px;top:880px;width:500px" src="" data-t="c18+0.2">` +
+  svg: MAR + rosettes('s9ro', 540, 760, .16, C.gold) + `<circle cx="540" cy="760" r="440" fill="url(#glow)" opacity=".55"/>` +
+    [[180, 520], [900, 540], [170, 960], [910, 980]].map(([x, y], i) => `<g transform="translate(${x},${y})"><g data-t="c18+${(.1 + i * .08).toFixed(2)}" data-k="pop" data-bob="6" data-ph="${i}">${sparkleSVG(30, C.gold)}</g></g>`).join(''),
+  html: `<img id="s9lk" style="position:absolute;left:540px;top:760px;width:640px" src="" data-t="c18">` +
     ['WhatsApp se shuru 💬', 'Apni city ke customers 📍', 'Aasaan setup ✅'].map((b, i) => pillH(540, 1060 + i * 86, `c19+${(i * .35).toFixed(2)}`, '✅ ' + b, i === 1 ? 'gold' : '')).join(''),
   noWm: true, cam: [1, 1.03], fy: 800,
-  init() { const s = SEAL(); $('s9seal').src = s; $('s9wm').src = s.replace('seal-on-maroon.svg', 'logo-text.svg'); },
-  upd(t) { tf($('s9ro'), 540, 820, 1, t * 6); }
+  init() { $('s9lk').src = SEAL().replace('seal-on-maroon.svg', 'Anokhireet_shop_logo.svg'); },
+  upd(t) { tf($('s9ro'), 540, 760, 1, t * 6); }
 });
 
 // ================= S10 quick demo: the listing's "WhatsApp karo" button → his phone pings =================
@@ -220,11 +218,11 @@ addScene('c21', 'c25', {
 addScene('c25', 9999, {
   svg: `<rect width="${W}" height="${H}" fill="${C.cream}"/>` + rosettes('s12r', 540, 760, .16, C.goldTan) + toranSVG(W, 0) +
     bust('s12m', MAHESH, 330, FLOOR + 330, .8) + bust('s12k', KAVYA, 750, FLOOR + 330, .8) + counterSVG(FLOOR + 280),
-  html: `<img id="s12seal" style="position:absolute;left:460px;top:250px;width:160px" src="">` +
-    `<div class="title" style="top:470px;font-size:70px">Rental shop owners:<br><span class="g">Comment SHOP</span> 👇</div>` +
-    pillH(540, 700, 'c25+0.3', 'anokhireet.in', 'gold') + pillH(540, 790, 'c25+0.5', 'Shaadi season 2026 💍'),
+  html: `<img id="s12seal" style="position:absolute;left:410px;top:270px;width:260px" src="">` +
+    `<div class="title" style="top:560px;font-size:66px">Rental shop owners:<br><span class="g">Comment SHOP</span> 👇</div>` +
+    pillH(540, 790, 'c25+0.3', 'anokhireet.in', 'gold') + pillH(540, 880, 'c25+0.5', 'Shaadi season 2026 💍'),
   noWm: true, tin: .3, trans: 'rise', cam: [1, 1.03],
-  init() { $('s12seal').src = SEAL(); },
+  init() { $('s12seal').src = SEAL().replace('seal-on-maroon.svg', 'AnokhiReet_logo_maroon.svg'); },
   upd(t) {
     tf($('s12r'), 540, 760, 1, t * 5);
     life('s12m', t, { pivot: 0, mouth: 'grin', brows: 'up', look: [0, 0], R: WAVE(t, T('c25')), hR: 'open', L: [9, -14], tilt: 4, seed: 1 });
