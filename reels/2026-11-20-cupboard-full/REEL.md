@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-20
 - **Made by:** dhruvifewtone-wq
-- **Status:** video 3 sent
+- **Status:** final (video 3 approved, 2026-11-23)
 
 ## Brief
 
@@ -57,7 +57,7 @@ Voice text: [`script.txt`](script.txt).
 - Take 2: `output/female-cupboard-full-take2.mp3` (46 s, script v2) — approved: yes, 2026-11-20
 - Take 3: `output/female-cupboard-full-take3.mp3` = take 2 with the last line made again ("Koi baat nahi!",
   "Download karo... Anokhi... Reet!") and joined at 40.3 s
-- Take 4: `output/female-cupboard-full-take4.mp3` = take 2 with the new last line (rent CTA, `end-d`) joined at 40.3 s (50 s)
+- Take 4: `output/female-cupboard-full-take4.mp3` = take 2 with the new last line (rent CTA, `end-d`) joined at 40.3 s (50 s) — approved: yes, 2026-11-23
 
 ## Video
 
