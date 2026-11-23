@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-23
 - **Made by:** dhruvifewtone-wq
-- **Status:** brief
+- **Status:** script approved
 
 ## Brief
 
@@ -41,7 +41,7 @@
 - CTA: "Comment karo SHOP" in voice, end card and caption. Pinned comment as written.
 - Hashtags: 5 (dropped #GujaratBusiness, as in the other reels).
 
-## Script and storyboard (approved: no)
+## Script and storyboard (approved: yes, 2026-11-23)
 
 | # | Voice line (caption) | On screen (scene, characters and what they do) | Label / title |
 |---|---|---|---|
@@ -62,7 +62,7 @@ Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- (not made yet)
+- Take 1: `output/female-shaadi-season-take1.mp3` (44 s) — approved: not yet
 
 ## Video
 
