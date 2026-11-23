@@ -3,8 +3,9 @@
 const quiet = (o = .45) => `<rect width="${W}" height="${H}" fill="${C.cream}" opacity="${o}"/>`;
 const MH = MAHESH, KR = KIRAN;
 const SKIRTS = [{ c: '#3A6AA3', d: '#2C5283', b: C.gold, w: 190 }, { c: '#2E8B57', d: '#1F6B42', b: C.gold, w: 190 }, { c: '#7A1B2A', d: '#5E1420', b: C.gold, w: 190 }];
-const CUS = [dress(CUSTOMER_W, { skirt: SKIRTS[2] }), dress(GUEST_W1, { skirt: SKIRTS[0] }), dress(GUEST_W2, { skirt: SKIRTS[1] }), GUEST_M];
-const STREET = id => twoShopsBG(id, { left: { sign: 'MAHESH RENTALS', tag: 'Rent', tagCol: '#FFFFFF', tagTxt: C.red }, right: { sign: 'KIRAN RENTALS', tag: 'Rent', tagCol: '#FFFFFF', tagTxt: C.red } });
+const CUS = [dress(CUSTOMER_W, { skirt: SKIRTS[2] }), dress(GUEST_W1, { skirt: SKIRTS[0] }), dress(GUEST_W2, { skirt: SKIRTS[1] }), dress(GUEST_M, { pants: {} })];
+const STREET = id => twoShopsBG(id, { left: { sign: 'MAHESH RENTALS', tag: 'Rent', tagCol: '#FFFFFF', tagTxt: C.red }, right: { sign: 'KIRAN RENTALS', tag: 'Rent', tagCol: '#FFFFFF', tagTxt: C.red } }) +
+  `<g transform="translate(105,655)">${sherwaniHangerSVG('', '#E8D3A5', '#C9AE6A', .5)}</g><g transform="translate(975,655)">${sherwaniHangerSVG('', '#2F5E8C', '#22476B', .5)}</g>`;
 const UDA = (x = 540, y = 440, at = '-1') => pillH(x, y, at, 'Udaharan 📝', 'gold');
 const OWN_Y = FLOOR - 110, OWN_S = .66;
 const feet = sc => FLOOR + 50 - 372 * sc;   // stand() y for feet on the pavement

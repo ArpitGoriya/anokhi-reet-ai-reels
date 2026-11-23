@@ -8,6 +8,8 @@ See [GUIDE.md](GUIDE.md) section 8.
 - **New props:** `halfShutterSVG(cx, w, y0, h)` (a shutter pulled half down over a shop opening, e.g. on `twoShopsBG`),
   `crossThoughtSVG(id, text, w)` (a thought cloud with a guess; fade in `${id}-x` to cross it out).
 - **New cast:** Maheshbhai (`MAHESH`), Kiranben (`KIRAN`).
+- **Engine:** `pants: { c, d }` on a man's look draws kurta-pajama legs and shoes for `stand()` (men had no lower body);
+  `NOSKIRT` drops it for busts.
 
 ## 2026-11-23: notification banner, link message, sigh cloud, camera flash, Meenaben (Ek link, poori dukaan)
 

@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-23
 - **Made by:** dhruvifewtone-wq
-- **Status:** final (video 1 approved, 2026-11-23)
+- **Status:** video 2 sent
 
 ## Brief
 
@@ -22,6 +22,7 @@
 
 ## Teammate changes (override the brand defaults for this reel only)
 
+- Both shop displays show a sherwani too (teammate, 2026-11-23).
 - Key words in yellow (gold) highlight boxes; on-screen emojis as in the script.
 - **App name held back:** "ek online rental marketplace" until "Aur platform ka naam? Anokhi Reet!" (scene 9); app
   screens before that show "? ? ?".
@@ -62,10 +63,13 @@ Voice text: [`script.txt`](script.txt).
 ## Video
 
 - `output/2026-11-23-do-dukaan.mp4` (61 s), video 1 sent 2026-11-23.
+- `output/2026-11-23-do-dukaan-v2.mp4` (61 s), video 2 sent 2026-11-23.
 
 ## Feedback rounds
 
-- (none yet)
+- Video 1 (2026-11-23): "At 15 s the lower half of one male customer is missing; add 1 sherwani on both shops'
+  display" â†’ the man now wears kurta-pajama with shoes (new `pants` option), and each shop rail shows a sherwani
+  (cream at Maheshbhai's, blue at Kiranben's) in every street scene.
 
 ## Caption
 
@@ -97,5 +101,6 @@ Aapke 10 mein se kitne customer price poochke chale jaate hain? Comment karo ðŸ‘
 
 ## Lessons
 
+- Standing men had no lower body: use `dress(MAN, { pants: {} })` (kurta-pajama) with `stand()`.
 - Scene 4 has only 4.5 s of voice, so the chai talk is two bubbles (his question, her clue), not all four lines.
 - On `twoShopsBG`, put the owners' busts higher (`FLOOR - 110`) or only their heads show over the counters.

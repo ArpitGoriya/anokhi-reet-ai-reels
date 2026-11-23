@@ -45,7 +45,7 @@ const DIMPLE = {
 const HETALBEN = { hairStyle: 'bun', top: '#7A1F3D', topD: '#5C1730', pallu: '#E8C25E', border: C.gold, sindoor: true, necklace: true, wide: true, skin: '#B97A55', skin2: '#A66A47', skirt: { c: '#7A1F3D', d: '#5C1730', b: C.gold, w: 215 } };
 
 // helpers
-const NOSKIRT = o => Object.assign({}, o, { skirt: null });                 // waist-up version of a look
+const NOSKIRT = o => Object.assign({}, o, { skirt: null, pants: null });    // waist-up version of a look
 const dress = (look, change) => Object.assign({}, look, change);             // same person, new outfit or detail
 
 // Kavita (30s): owns a lehenga rental shop. Busy, soft-hearted, said yes to every bargain until she learned. (Kavita reel)

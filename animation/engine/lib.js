@@ -88,6 +88,8 @@ function person(id, o = {}) {
   s += `<g id="${id}-body">`;
   // full lehenga skirt (standing figure)
   if (o.skirt) s += skirtSVG(o.skirt, 0, 0, 1);
+  // kurta-pajama for a standing man: o.pants = { c, d } (pajama colours); the kurta hem uses o.top
+  if (o.pants) s += pantsSVG(o.pants, o.top || C.teal, o.topD || C.tealDark);
   // back hair
   if (style === 'long' || style === 'braid') s += `<path d="M-92,-420 Q-120,-300 -96,-215 L96,-215 Q120,-300 92,-420 Z" fill="${hair}" stroke="${OL}" stroke-width="${OW}"/>`;
   if (style === 'braid') s += `<path d="M70,-300 Q96,-200 80,-120" fill="none" stroke="${OL}" stroke-width="34" stroke-linecap="round"/><path d="M70,-300 Q96,-200 80,-120" fill="none" stroke="${hair}" stroke-width="24" stroke-linecap="round"/>`;
@@ -154,6 +156,14 @@ function person(id, o = {}) {
   return s;
 }
 
+// kurta-pajama legs for a standing man (feet at y = 372, like the lehenga skirt): pajama legs, shoes, the kurta hem
+function pantsSVG(p, top, topD) {
+  const c = p.c || '#F2EADF', d = p.d || '#D8CDBE';
+  return `<path d="M-84,0 L-80,346 L-16,346 L-4,90 L4,90 L16,346 L80,346 L84,0 Z" fill="${c}" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/>` +
+    `<path d="M-48,180 V340 M48,180 V340" stroke="${d}" stroke-width="5" opacity=".7"/>` +
+    `<ellipse cx="-50" cy="356" rx="46" ry="18" fill="#5A3A28" stroke="${OL}" stroke-width="4"/><ellipse cx="50" cy="356" rx="46" ry="18" fill="#5A3A28" stroke="${OL}" stroke-width="4"/>` +
+    `<path d="M-96,-6 L-104,150 Q0,166 104,150 L96,-6 Z" fill="${top}" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/><path d="M0,0 V150" stroke="${topD}" stroke-width="5" opacity=".6"/>`;
+}
 // lehenga skirt shape (used on the character and on hangers)
 function skirtSVG(sk, x, y, sc) {
   const c = sk.c || C.lehenga, d = sk.d || C.lehengaDark, b = sk.b || C.gold, h = sk.h || 330, w = sk.w || 235;
