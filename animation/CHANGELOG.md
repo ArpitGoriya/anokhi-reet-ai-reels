@@ -3,6 +3,13 @@
 Every reel adds at least one improvement to the engine or library and writes it here (newest first).
 See [GUIDE.md](GUIDE.md) section 8.
 
+## 2026-11-23: toran, BUSY stamp, wedding cake, magnifier, rupee note, ghodi (Shaadi season 2026)
+
+- **New props:** `toranSVG(w, y)` (marigold and mango-leaf toran), `busyStampSVG(text)`, `weddingCakeSVG(id, labels, tiny)`
+  (three labelled tiers and a tiny slice `${id}-tiny`), `magnifierSVG(r)`, `rupeeNoteSVG()`, `ghodiSVG(groom)` (a
+  wedding horse with a small groom).
+- Note: html elements with `data-t` are centred on their left/top (use the centre point, e.g. `left:540px`).
+
 ## 2026-11-23: half-closed shutter, crossed-out thought, Maheshbhai and Kiranben (Do dukaan, do kahaniyan)
 
 - **New props:** `halfShutterSVG(cx, w, y0, h)` (a shutter pulled half down over a shop opening, e.g. on `twoShopsBG`),

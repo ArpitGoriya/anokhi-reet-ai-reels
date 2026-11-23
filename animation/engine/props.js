@@ -626,3 +626,58 @@ function crossThoughtSVG(id, text, w = 460) {
     `<text y="12" text-anchor="middle" font-family="Inter" font-weight="800" font-size="34" fill="${C.text}">${text}</text>` +
     `<g id="${id}-x" opacity="0"><path d="M${-w / 2 + 20},${-h / 2 + 10} L${w / 2 - 20},${h / 2 - 10} M${w / 2 - 20},${-h / 2 + 10} L${-w / 2 + 20},${h / 2 - 10}" stroke="#D9363E" stroke-width="12" stroke-linecap="round" opacity=".85"/></g>`;
 }
+
+// ===== Shaadi season 2026 (2026-11-23): toran, BUSY stamp, wedding cake, magnifier, rupee note, ghodi =====
+// toranSVG(w, y): a marigold-and-mango-leaf toran hanging across the top, from x 0 to w at height y
+function toranSVG(w = W, y = 0) {
+  let s = `<path d="M0,${y + 18} Q${w / 2},${y + 70} ${w},${y + 18}" fill="none" stroke="${C.goldTan}" stroke-width="8"/>`;
+  for (let i = 0; i <= 18; i++) {
+    const x = i * w / 18, yy = y + 18 + Math.sin(i / 18 * Math.PI) * 26;
+    if (i % 2) s += `<path d="M${x},${yy} q-18,40 0,74 q18,-34 0,-74 z" fill="#3E8E4A" stroke="${OL}" stroke-width="3"/>`;
+    else s += `<circle cx="${x}" cy="${yy + 14}" r="17" fill="${i % 4 ? C.marigold : '#E8962E'}" stroke="${OL}" stroke-width="3"/><circle cx="${x}" cy="${yy + 14}" r="7" fill="${C.marigold2}"/>` +
+      `<circle cx="${x}" cy="${yy + 46}" r="13" fill="${i % 4 ? '#E8962E' : C.marigold}" stroke="${OL}" stroke-width="3"/>`;
+  }
+  return s;
+}
+// busyStampSVG(text): a red rubber stamp centred on (0,0), tilted
+function busyStampSVG(text = 'BUSY', w = 260) {
+  return `<g transform="rotate(-12)"><rect x="${-w / 2}" y="-50" width="${w}" height="100" rx="14" fill="none" stroke="#D9363E" stroke-width="10"/>` +
+    `<rect x="${-w / 2 + 12}" y="-38" width="${w - 24}" height="76" rx="8" fill="none" stroke="#D9363E" stroke-width="3"/>` +
+    `<text y="22" text-anchor="middle" font-family="Inter" font-weight="900" font-size="62" fill="#D9363E" letter-spacing="6">${text}</text></g>`;
+}
+// weddingCakeSVG(id, labels, tiny): a three-tier cake on a stand (base at y = 0), a label on each tier, and a tiny
+// separate slice `${id}-tiny` (with its label) beside it on the right
+function weddingCakeSVG(id, labels = ['DESIGNERS', 'MALLS', 'BADI APPS'], tiny = 'RENTAL DUKAAN?') {
+  let s = `<g id="${id}"><rect x="-300" y="-20" width="600" height="24" rx="12" fill="${C.goldTan}" stroke="${OL}" stroke-width="${OW}"/><path d="M-40,4 L-60,60 H60 L40,4 Z" fill="${C.goldTan}" stroke="${OL}" stroke-width="4"/>`;
+  [[520, 150, '#FFF4E2'], [400, 140, '#FBE8EE'], [280, 130, '#FFF4E2']].forEach(([w, h, c], i) => {
+    const y = -20 - [150, 290, 420][i];
+    s += `<rect x="${-w / 2}" y="${y}" width="${w}" height="${h}" rx="18" fill="${c}" stroke="${OL}" stroke-width="${OW}"/>` +
+      `<path d="M${-w / 2},${y + 26} q${w / 12},28 ${w / 6},0 q${w / 12},28 ${w / 6},0 q${w / 12},28 ${w / 6},0 q${w / 12},28 ${w / 6},0 q${w / 12},28 ${w / 6},0 q${w / 12},28 ${w / 6},0" fill="none" stroke="${C.pink}" stroke-width="8"/>` +
+      `<text y="${y + h / 2 + 28}" text-anchor="middle" font-family="Inter" font-weight="900" font-size="${i === 2 ? 34 : 40}" fill="${C.red}">${labels[2 - i] || ''}</text>`;
+  });
+  s += `<circle cx="0" cy="-470" r="22" fill="#D9363E" stroke="${OL}" stroke-width="4"/>`;
+  return s + `<g id="${id}-tiny" transform="translate(380,-30)"><path d="M-30,0 L30,0 L30,-36 L-30,-46 Z" fill="#FBE8EE" stroke="${OL}" stroke-width="4"/>` +
+    `<text x="0" y="40" text-anchor="middle" font-family="Inter" font-weight="900" font-size="24" fill="${C.text}">${tiny}</text></g></g>`;
+}
+// magnifierSVG(r): a magnifying glass, lens centred on (0,0), handle down-right
+function magnifierSVG(r = 70) {
+  return `<path d="M${r * .7},${r * .7} L${r * 1.7},${r * 1.7}" stroke="${C.woodDark}" stroke-width="${r * .32}" stroke-linecap="round"/><path d="M${r * .7},${r * .7} L${r * 1.7},${r * 1.7}" stroke="${OL}" stroke-width="4" stroke-linecap="round" opacity=".3"/>` +
+    `<circle r="${r}" fill="#DFF0F6" fill-opacity=".45" stroke="${OL}" stroke-width="${r * .16}"/><path d="M${-r * .5},${-r * .2} A${r * .55},${r * .55} 0 0,1 ${-r * .1},${-r * .55}" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round"/>`;
+}
+// rupeeNoteSVG(): a green banknote centred on (0,0)
+function rupeeNoteSVG() {
+  return `<rect x="-70" y="-34" width="140" height="68" rx="8" fill="#7DBE8A" stroke="${OL}" stroke-width="4"/><rect x="-60" y="-24" width="120" height="48" rx="6" fill="none" stroke="#3E8E4A" stroke-width="3"/>` +
+    `<circle r="18" fill="#A8D8B0" stroke="#3E8E4A" stroke-width="3"/><text y="9" text-anchor="middle" font-family="Inter" font-weight="900" font-size="26" fill="#2E6B3A">₹</text>`;
+}
+// ghodiSVG(groom): a white wedding horse facing right (hooves at y = 0) with a red-and-gold cloth; with groom = a
+// person look, a small groom (bust) rides it. Bob it while it walks.
+function ghodiSVG(groom) {
+  let s = `<path d="M-130,-150 Q-140,-230 -60,-236 L80,-236 Q130,-236 140,-200 L190,-300 Q205,-330 236,-316 L262,-280 Q272,-262 252,-252 L214,-238 L176,-150 Z" fill="#FBF8F2" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/>` +
+    `<path d="M196,-318 L210,-352 L222,-318 Z" fill="#FBF8F2" stroke="${OL}" stroke-width="4"/><circle cx="232" cy="-292" r="6" fill="${OL}"/>` +
+    [-100, -60, 100, 140].map(x => `<rect x="${x - 12}" y="-160" width="24" height="160" rx="10" fill="#FBF8F2" stroke="${OL}" stroke-width="4"/><rect x="${x - 14}" y="-14" width="28" height="16" rx="4" fill="${OL}"/>`).join('') +
+    `<path d="M-120,-236 L120,-236 L110,-130 Q0,-110 -110,-130 Z" fill="#C0262D" stroke="${OL}" stroke-width="4"/><path d="M-112,-140 Q0,-120 112,-140" stroke="${C.gold}" stroke-width="10" fill="none"/>` +
+    [-80, -40, 0, 40, 80].map(x => `<circle cx="${x}" cy="-126" r="7" fill="${C.gold}" stroke="${OL}" stroke-width="2"/>`).join('') +
+    `<path d="M-140,-210 Q-190,-190 -170,-120" fill="none" stroke="#E6E0D9" stroke-width="16" stroke-linecap="round"/>`;
+  if (groom) s += `<g transform="translate(0,-160) scale(.42)">${person('ghodi-groom', NOSKIRT(groom))}</g>`;
+  return s;
+}

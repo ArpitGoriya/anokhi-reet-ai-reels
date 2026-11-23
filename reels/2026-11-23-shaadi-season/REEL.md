@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-23
 - **Made by:** dhruvifewtone-wq
-- **Status:** script approved
+- **Status:** video 1 sent
 
 ## Brief
 
@@ -62,11 +62,11 @@ Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- Take 1: `output/female-shaadi-season-take1.mp3` (44 s) — approved: not yet
+- Take 1: `output/female-shaadi-season-take1.mp3` (44 s) — approved: yes, 2026-11-23
 
 ## Video
 
-- (not made yet)
+- `output/2026-11-23-shaadi-season.mp4` (45 s), video 1 sent 2026-11-23.
 
 ## Feedback rounds
 
@@ -93,8 +93,8 @@ Anokhi Reet pe apni dukaan list karo: WhatsApp se shuru, apni city ke customers,
 
 ## Added to the library (at least two per reel)
 
-- (planned) A toran garland, a number counter roll, a "BUSY" stamp, a wedding cake with labelled slices, a baraat
-  parade with a ghodi.
+- `toranSVG`, `busyStampSVG`, `weddingCakeSVG`, `magnifierSVG`, `rupeeNoteSVG`, `ghodiSVG` in `engine/props.js`.
+- Kavya's Papa (white kurta-pajama, glasses) as a new outfit on the cast's Papa.
 
 ## Suggested default (for the owner)
 
@@ -102,4 +102,6 @@ Anokhi Reet pe apni dukaan list karo: WhatsApp se shuru, apni city ke customers,
 
 ## Lessons
 
-- (later)
+- Captions longer than two lines fall into the bottom zone: split the chunk (`c10b`) and its WORDS.
+- An `<img>` with `data-t` is centred on its left/top; give the centre point, not the corner.
+- Keep decoration (rays, sparkles) off the wordmark (logo rules).
