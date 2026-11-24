@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-24
 - **Made by:** dhruvifewtone-wq
-- **Status:** script approved
+- **Status:** voice approved
 
 ## Brief
 
@@ -63,7 +63,7 @@ Voice text: [`script.txt`](script.txt).
 - Take 2: `output/female-shaadi-scam-take2.mp3` (52 s) = take 1 up to "Anokhi Reet." (48.5 s) + the new CTA "Kya aap bhi
   outfits rent par lena chahte ho? Toh comment karo RENT." — not used (teammate change, 2026-11-24)
 - Take 3: `output/female-shaadi-scam-take3.mp3` (52 s) = take 2 with "aur almari mein pade kapde rent pe do" (40.7 s)
-  voiced again and joined — sent, waiting for approval
+  voiced again and joined — approved: yes, 2026-11-24
 
 ## Feedback rounds
 
