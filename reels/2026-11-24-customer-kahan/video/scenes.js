@@ -124,16 +124,16 @@ addScene('c15', 'c17', {
 
 // ================= S6 end card: "Customer dhoondhna humara kaam. Outfit dena aapka." — Comment SHOP =================
 addScene('c17', 9999, {
-  svg: `<rect width="${W}" height="${H}" fill="url(#mar)"/>` + rosettes('s6ro', 540, 760, .16, C.gold) + bust('s6r', RIYA, 540, FLOOR + 330, .95) + counterSVG(FLOOR + 280, '#5D0000'),
+  svg: `<rect width="${W}" height="${H}" fill="url(#mar)"/>` + rosettes('s6ro', 540, 760, .16, C.gold) + bust('s6r', RIYA, 540, FLOOR + 400, .95) + counterSVG(FLOOR + 280, '#5D0000'),
   html: `<img id="s6lk" style="position:absolute;left:290px;top:200px;width:500px" src="">` +
     `<div class="title" style="top:600px;font-size:62px" data-t="c17">Customer dhoondhna =<br><span class="g">humara kaam</span> 🙌</div>` +
-    pillH(540, 770, 'c18', 'Outfit dena = <span class="hl">aapka</span> 👗') + pillH(540, 885, 'c19', 'Comment <span class="hl">SHOP</span> 👇', 'big') + pillH(540, 990, 'c19+0.4', 'anokhireet.in', 'gold'),
+    pillH(540, 770, 'c18', 'Outfit dena = <span class="hl">aapka</span> 👗') + pillH(540, 885, 'c19', 'Shop online list karni hai? 📲') + pillH(540, 995, 'c19c', 'Comment <span class="hl">LIST</span> 👇', 'big') + pillH(540, 1100, 'c19c+0.4', 'anokhireet.in', 'gold'),
   noWm: true, tin: .3, trans: 'rise', cam: [1, 1.03],
   init() { $('s6lk').src = SEAL().replace('seal-on-maroon.svg', 'Anokhireet_shop_logo.svg'); },
   upd(t) {
     tf($('s6ro'), 540, 760, 1, t * 5);
-    const down = t > T('c19');
-    life('s6r', t, { pivot: 0, mouth: t > T('c19') + 1.2 ? 'grin' : talkMouth(t, true), brows: 'up', look: down ? [.2, .6] : [0, 0], tilt: 4,
+    const down = t > T('c19c');
+    life('s6r', t, { pivot: 0, mouth: t > T('c19c') + 1.2 ? 'grin' : talkMouth(t, true), brows: 'up', look: down ? [.2, .6] : [0, 0], tilt: 4,
       R: down ? [25, -5] : (t > T('c18') ? [100, -60] : [9, -14]), hR: down ? 'point' : 'open', L: [9, -14], seed: 3 });
   }
 });

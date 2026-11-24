@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-24
 - **Made by:** dhruvifewtone-wq
-- **Status:** video 1 sent
+- **Status:** video 2 sent
 
 ## Brief
 
@@ -28,7 +28,8 @@
 - **Presenter:** a new Anokhi Reet team member talks to the camera ("humare paas" = the team) (teammate, 2026-11-24).
 - No user numbers ("lakhs of customers") anywhere (teammate's note, and the brand rule).
 - Key words in yellow (gold) highlight boxes; on-screen emojis as in the script.
-- CTA: "Comment karo SHOP" in voice, end card and caption. Pinned comment as written.
+- **CTA: "LIST"** (teammate, 2026-11-24, replacing "SHOP"): "Agar aapko bhi apni shop online list karni hai… toh
+  comment karo LIST." in voice, end card and caption. Pinned comment as written.
 - Hashtags: 5, #GujaratBusiness dropped (teammate chose it, as in the recent reels).
 - Voice only; no "whoosh" (brand rule). End card: the official shop lockup on maroon (`Anokhireet_shop_logo.svg`).
 
@@ -41,7 +42,7 @@
 | 3 | Par *sach* yeh hai… / aaj customer *dukaan-dukaan* nahi ghoomta. / Woh *phone pe outfit* dhoondhta hai. | The presenter holds up her phone; cut to Khushi on a sofa at home, scrolling her phone with outfits flying past on the screen; a street of shops behind her fades away. | Customer phone pe dhoondh raha hai 📱 |
 | 4 | Aur woh customer… / *Anokhi Reet* pe hai. / *Customer humare paas* hai. / Aapko bas *apni dukaan list* karni hai. | **App "screen recording":** a phone fills the frame, the Anokhi Reet app scrolls through shops and outfits. Then the presenter points at herself on "humare paas", then at the camera on "aapko", with a confident smile. | Customer humare paas hai 🤝 · Aap bas dukaan list karo |
 | 5 | Listing seedha *WhatsApp* se. / Aur setup? / *Bilkul aasaan.* | The presenter counts on her fingers (1, 2); each count stamps a badge in beside her. | ✅ WhatsApp se shuru · ✅ Aasaan setup |
-| 6 | Customer dhoondhna *humara kaam.* / Outfit dena *aapka.* / *Comment* karo *SHOP.* | Maroon end card: the official ANOKHI REET SHOPS lockup, the presenter smiles and points down to the comments; anokhireet.in. | Customer dhoondhna = humara kaam 🙌 · Comment SHOP 👇 |
+| 6 | Customer dhoondhna *humara kaam.* / Outfit dena *aapka.* / Agar aapko bhi apni / *shop online list* karni hai… / toh *comment* karo *LIST.* | Maroon end card: the official ANOKHI REET SHOPS lockup, the presenter smiles and points down to the comments; anokhireet.in. | Customer dhoondhna = humara kaam 🙌 · Comment LIST 👇 |
 
 Voice text: [`script.txt`](script.txt).
 
@@ -49,15 +50,20 @@ Voice text: [`script.txt`](script.txt).
 
 - Take 1: `output/female-customer-kahan-take1.mp3` (31 s) — not used (teammate change, 2026-11-24)
 - Take 2: `output/female-customer-kahan-take2.mp3` (30 s) = take 1 with "Apni city ke customers" (23.5–25.0 s) cut out — approved: yes, 2026-11-24
+- Take 3: `output/female-customer-kahan-take3.mp3` (33 s) = take 2 up to "Outfit dena aapka." + the new ending "Agar aapko
+  bhi apni shop online list karni hai… toh comment karo LIST." (teammate, 2026-11-24)
 
 ## Video
 
 - `output/2026-11-24-customer-kahan.mp4` (31 s), video 1 sent 2026-11-24.
+- `output/2026-11-24-customer-kahan-v2.mp4` (34 s), video 2 sent 2026-11-24.
 
 ## Feedback rounds
 
 - Voice take 1 (2026-11-24): at 24 s remove "Apni city ke customers" → cut from the voice (take 2), the script, the
   badges and the caption.
+- Video 1 (2026-11-24): last CTA → "Agar aapko bhi apni shop online list karni hai toh comment karo LIST" → voiced and
+  joined (take 3); end card "Shop online list karni hai? 📲 · Comment LIST 👇"; caption updated.
 
 ## Caption
 
@@ -66,7 +72,7 @@ Rental dukaan hai, maal bhi hai… par customer kahan hain? 🤔
 Customer aaj phone pe outfit dhoondhta hai, aur woh Anokhi Reet pe hai 📱
 Customer humare paas hai 🤝 Aap bas apni dukaan list karo.
 ✅ WhatsApp se shuru · ✅ Aasaan setup
-Comment SHOP, steps DM mein 💌
+Apni shop online list karni hai? Comment LIST, steps DM mein 💌
 
 #RentalShop #DukaanOnline #LehengaOnRent #SmallBusinessIndia #AnokhiReet
 ```
