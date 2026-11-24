@@ -37,14 +37,14 @@
 
 | # | Voice line (caption) | On screen (scene, characters and what they do) | Label / title |
 |---|---|---|---|
-| 1 | Shaadi mein sab poochh rahe the, / *"Lehenga kitne ka hai?"…* / *asli price* sunke / *Mausi baith gayi.* | **Hook from frame 1:** a wedding hall (marigold drapes, fairy lights). Mausi drops onto a chair, hand on her chest, eyes wide; little "?" and "₹" fly around. | Big title from frame 1: **Asli price sunke Mausi baith gayi 😳** |
+| 1 | Shaadi mein sab poochh rahe the, / *"Lehenga kitne ka hai?"…* / *asli price* sunke / *Mausi chaunk gayi.* | **Hook from frame 1:** a wedding hall (marigold drapes, fairy lights). Mausi drops onto a chair, hand on her chest, eyes wide; little "?" and "₹" fly around. | Big title from frame 1: **Asli price sunke Mausi chaunk gayi 😳** |
 | 2 | Ishita ne *entry* li… / aur *poora hall ruk gaya.* | Ishita walks in slowly down the middle in a heavy embroidered maroon lehenga; guests' heads turn, a camera flashes, sparkles. | Entry 🔥 |
 | 3 | Cousin boli, *"Pakka ₹40,000 ka hoga."* / Doosri boli, *"Pagal hai? Designer hai,* / *₹60,000 se kam nahi."* / Aur Bhabhi toh boli, *"Pakka Ahmedabad se liya hoga,* / *₹50,000 toh hoga hi."* | Relatives at a round table; speech bubbles pop one by one over Cousin 1, Cousin 2 and Bhabhi; the guesses stack at the top. | ₹40,000? ₹50,000? ₹60,000? 🤔 |
 | 4 | Price video ke *end* mein… / pehle *comment* mein batao, / *aapka guess* kya hai? | Freeze frame (a white flash, picture stops); a big price tag swings on Ishita's lehenga, blurred with "₹ ??". | Aapka guess? 👇 · Price end mein… |
 | 5 | *Ek hafte pehle…* / Ishita ke account mein *sirf ₹8,000* the. / Aur use bhi ek aisa look chahiye tha / jo *yaad rahe.* | Flashback (soft sepia edge, "Ek hafte pehle…" tag): Ishita on her bed with her phone showing a plain bank screen "Balance ₹8,000"; a wedding invite on the table; she sighs. "Udaharan". | Budget: ₹8,000 😬 · Udaharan |
 | 6 | Usne apne *sheher ki dukaano* ke outfits / *phone pe dekhe…* / *budget* daala… / aur ek dukaan pe jaake *trial* kiya. | Ishita's phone seen **from the back** (city, occasion, budget chips light up as icons beside it); then she walks into a nearby rental shop, tries the maroon lehenga and smiles in the mirror. Steps pop: Dekha → Trial kiya → Final ✅ | Dekha → Trial kiya → Final ✅ |
 | 7 | *Asli price?* / *₹3,500.* / *Rent pe.* | Back at the wedding: the blurred tag spins and reveals **"₹3,500 RENT"**; Mausi falls back into her chair again, cousins' jaws drop. "Udaharan". | ₹3,500 RENT 😳💸 |
-| 8 | *Anokhi Reet.* / Aapka guess *kitna tha?* / *Comment* mein batao… / aur agar aapko bhi / *outfits rent* par chahiye, / toh comment karo *RENT.* | Ishita winks; her phone turns around to show the Anokhi Reet app. Then the maroon end card: official logo, **Aapka guess? Comment karo 👇 · Outfits rent pe chahiye? Comment RENT 👇**, anokhireet.in. | Anokhi Reet ✨ · Comment RENT 👇 |
+| 8 | App ka naam tha… / *Anokhi Reet!* / Aapka guess *kitna tha?* / *Comment* mein batao… / aur agar aapko bhi / *outfits rent* par chahiye, / toh comment karo *RENT.* | Ishita winks; her phone turns around to show the Anokhi Reet app. Then the maroon end card: official logo, **Aapka guess? Comment karo 👇 · Outfits rent pe chahiye? Comment RENT 👇**, anokhireet.in. | Anokhi Reet ✨ · Comment RENT 👇 |
 
 Voice text: [`script.txt`](script.txt).
 
@@ -54,7 +54,9 @@ Voice text: [`script.txt`](script.txt).
   for ₹3,500 (same amount as the script's "paintees sau").
 - Take 2: `output/female-asli-price-take2.mp3` (46 s) = take 1 up to "Rent pe." (37.6 s) + the new ending (`end-a`:
   "Anokhi… Reet. … comment karo RENT") — not used (teammate changes, 2026-11-24)
-- Take 3: `output/female-asli-price-take3.mp3` (44 s, whole script again with the 4 changes) — approved: not yet
+- Take 3: `output/female-asli-price-take3.mp3` (44 s, whole script again with the 4 changes) — kept except 2 lines
+- Take 4: `output/female-asli-price-take4.mp3` (46 s) = new first line (`start-b`, "…Mausi chaunk gayi") + take 3
+  from 5.45 s to 37.05 s + new ending (`end-b`, "App ka naam tha… Anokhi Reet! …comment karo RENT") — approved: not yet
 
 ## Video
 
@@ -68,12 +70,14 @@ Voice text: [`script.txt`](script.txt).
   Bhabhi toh boli, pakka Ahmedabad se liya hoga, 50,000 toh hoga hi"; 22 s → "pehle comment mein batao aapka guess kya
   hai" → whole script voiced again (take 3), "अनोखी रीत!" without the pause; scene 4's first "Aapka guess kya hai?"
   dropped so the question isn't said twice.
+- Voice take 3 (2026-11-24): 5 s → "Asli price sunke Mausi chaunk gayi"; 38 s → "App ka naam tha Anokhi Reet"; "everything
+  else is perfect" → only those two lines voiced again and joined (take 4).
 
 ## Caption
 
 ```
 Sabne guess kiya ₹50,000 😳
-Asli price sunke Mausi baith gayi 😂
+Asli price sunke Mausi chaunk gayi 😂
 
 Aapka guess kya tha? Comment karo 👇
 Aapko bhi outfits rent par chahiye? Comment RENT 💌
