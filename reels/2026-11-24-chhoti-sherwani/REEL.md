@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-24
 - **Made by:** dhruvifewtone-wq
-- **Status:** video 1 sent
+- **Status:** video 2 sent
 
 ## Brief
 
@@ -59,10 +59,14 @@ Voice text: [`script.txt`](script.txt).
 ## Video
 
 - `output/2026-11-24-chhoti-sherwani.mp4` (52 s), video 1 sent 2026-11-24.
+- `output/2026-11-24-chhoti-sherwani-v2.mp4` (52 s), video 2 sent 2026-11-24.
 
 ## Feedback rounds
 
 - Voice take 1 (2026-11-24): say at the start that it's Riddhi's son's sherwani; new CTA "Agar aapko bhi apne bachchon ke outfits rent par dene hain, toh comment karo OUTFIT" → only those two lines voiced again and joined (take 2).
+- Video 1 (2026-11-24): "At 5 s the lower half of Riddhi's body is missing" → Riddhi now stands in full beside the drawers; the
+  same fix for every other waist-up shot that showed a cut-off body (Krupa in the split screen, Mausi and Krupa at the
+  wedding, Riddhi at the booking); the rest now have a table edge in front. The booking banner moved off Riddhi's face.
 
 ## Caption
 
@@ -93,4 +97,6 @@ Bachchon ke outfits rent pe dene hain? Comment OUTFIT, listing ke steps DM mein 
 
 - The sherwani Vihaan outgrew is the one Krupa's son needs, so the tags say "Age 4–5" (Vihaan is 5, Krupa's son 4).
 - A scene's `init(s)` gets its own scene: use `s`, not `SC[SC.length - 1]` (that is the last scene by the time init runs).
+- Waist-up (`bust`) people need something in front of their waist (a table, counter or drawers) or the frame's bottom;
+  otherwise use `stand()`.
 - Check the page for console errors too (`scale(NaN)` showed the camera zoom had never worked).

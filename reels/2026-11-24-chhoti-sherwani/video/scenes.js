@@ -41,7 +41,7 @@ addScene(0, 'c3', {
 
 // ================= S2 the drawer: four outfits, four weddings, all too small =================
 addScene('c3', 'c7', {
-  svg: homeBG('s2', { noWindow: true, noClock: true, shelfX: 760 }) + bust('s2r', RIDDHI, 820, 900, .85) + `<g transform="translate(440,1230)">${dresserSVG('s2d')}</g>` +
+  svg: homeBG('s2', { noWindow: true, noClock: true, shelfX: 760 }) + stand('s2r', RIDDHI, 830, feet(.8), .8) + `<g transform="translate(420,1230)">${dresserSVG('s2d')}</g>` +
     `<g id="s2hold" opacity="0"><g transform="scale(.9)">${SHER()}</g></g>`,
   html: pillH(540, 352, 'c3+0.3', 'Riddhi ka <span class="hl">drawer</span> 🗄️', '', 'c4-0.05') + pillH(540, 352, 'c4', '<span class="hl">4 outfits</span> 📦', '', 'c5-0.05') +
     pillH(540, 352, 'c5', '4 outfits · <span class="hl">4 shaadi</span> 💍', '', 'c6-0.05') + pillH(540, 352, 'c6', '<span class="hl">Sab chhote</span> 😩'),
@@ -54,7 +54,7 @@ addScene('c3', 'c7', {
   upd(t) {
     dresserOpen('s2d', P(t, T('c3') + .3, .5));
     const hold = t > T('c6');
-    const A = life('s2r', t, { pivot: 0, mouth: hold ? 'sad' : (t > T('c4') ? 'flat' : 'smile'), brows: hold ? 'worry' : 'norm', look: hold ? [-.4, 0] : [-.7, .7], tilt: hold ? -6 : -3,
+    const A = life('s2r', t, { mouth: hold ? 'sad' : (t > T('c4') ? 'flat' : 'smile'), brows: hold ? 'worry' : 'norm', look: hold ? [-.4, 0] : [-.7, .7], tilt: hold ? -6 : -3,
       R: [9, -14], L: hold ? [120, -70] : (t > T('c4') ? [70, -30] : [40, -20]), hL: hold ? 'fist' : 'point', seed: 1 });
     op($('s2hold'), hold ? 1 : 0); if (hold) atHand('s2hold', 's2r', A.hl, 0, 90, 0, 1 + .04 * Math.sin(t * 3));
   }
@@ -121,7 +121,7 @@ const DOTS = [...Array(13)].map((_, i) => { const k = i / 12; return [lerp(330, 
 addScene('c14', 'c17', {
   svg: `<rect width="540" height="${H}" fill="${C.wall}"/><rect x="540" width="540" height="${H}" fill="#C9C3D9"/><rect y="${FLOOR}" width="${W}" height="${H - FLOOR}" fill="#A47648"/>` +
     bust('s5r', RIDDHI, 250, 950, .62) + `<g transform="translate(270,1230) scale(.8)">${dresserSVG('s5d')}</g>` +
-    bust('s5k', KRUPA, 830, 1150, .78) + `<g id="s5ph"><g transform="scale(.42)">${phoneSVG('s5p', 0, 0, 560, 1000, searchScreen())}</g></g>` +
+    stand('s5k', KRUPA, 830, feet(.7), .7) + `<g id="s5ph"><g transform="scale(.42)">${phoneSVG('s5p', 0, 0, 560, 1000, searchScreen())}</g></g>` +
     `<rect x="534" y="0" width="12" height="${H}" fill="${C.redDark}"/>` +
     DOTS.map(([x, y], i) => `<g transform="translate(${x.toFixed(0)},${y.toFixed(0)})"><g data-t="c14+${(.4 + i * .08).toFixed(2)}" data-k="pop" ${i >= 4 && i <= 8 ? 'data-out="c16+0.2"' : ''}><circle r="13" fill="${C.gold}" stroke="${OL}" stroke-width="3"/></g></g>`).join('') +
     `<g transform="translate(545,700)"><g data-t="c16+0.3" data-k="pop" data-swing="10"><circle r="74" fill="#fff" stroke="${OL}" stroke-width="${OW}"/><text y="34" text-anchor="middle" font-family="Inter" font-weight="900" font-size="100" fill="${C.red}">?</text></g></g>`,
@@ -132,7 +132,7 @@ addScene('c14', 'c17', {
   upd(t) {
     dresserOpen('s5d', 1);
     life('s5r', t, { pivot: 0, mouth: 'smile', brows: 'norm', look: [0, .7], R: [9, -14], L: [9, -14], seed: 1 });
-    const A = life('s5k', t, { pivot: 0, mouth: t > T('c16') ? 'sad' : 'worry', brows: 'worry', look: [-.4, .5], sweat: .8, R: [9, -14], L: [100, -90], hL: 'fist', seed: 2 });
+    const A = life('s5k', t, { mouth: t > T('c16') ? 'sad' : 'worry', brows: 'worry', look: [-.4, .5], sweat: .8, R: [9, -14], L: [100, -90], hL: 'fist', seed: 2 });
     atHand('s5ph', 's5k', A.hl, 10, -130, -4);
   }
 });
@@ -177,7 +177,7 @@ addScene('c19', 'c22', {
 
 // ================= S7b listed: Riddhi's phone shows her listing (the app's name still hidden) =================
 addScene('c22', 'c23', {
-  svg: homeBG('s7b', { noShelf: true, noClock: true }) + `<circle cx="540" cy="860" r="420" fill="url(#glow)" opacity=".8"/>` + bust('s7r', RIDDHI, 330, FLOOR + 230, 1.0) +
+  svg: homeBG('s7b', { noShelf: true, noClock: true }) + `<circle cx="540" cy="860" r="420" fill="url(#glow)" opacity=".8"/>` + bust('s7r', RIDDHI, 330, FLOOR + 230, 1.0) + counterSVG(FLOOR + 170) +
     `<g id="s7ph"><g transform="scale(.5)">${phoneSVG('s7p', 0, 0, 560, 1000, listingScreen(false, true))}</g></g>` + checkBadge(900, 600, 'c22+0.5', 50),
   html: pillH(540, 352, 'c22', '<span class="step">3</span> ✅ <span class="hl">Rent pe list</span>'),
   cam: [1, 1.03], fy: 860,
@@ -190,7 +190,7 @@ addScene('c22', 'c23', {
 // ================= S8a the reveal: Krupa finds it on Anokhi Reet (her phone turns around) =================
 addScene('c23', 'c24', {
   svg: `<rect width="${W}" height="${H}" fill="url(#mar)"/>` + rosettes('s8ro', 540, 860, .14, C.gold) + `<circle cx="540" cy="860" r="440" fill="url(#glow)" opacity=".6"/>` +
-    bust('s8k', KRUPA, 300, FLOOR + 200, .9) + `<g id="s8back">${phoneBackSVG(2.3)}</g>` +
+    bust('s8k', KRUPA, 300, FLOOR + 200, .9) + counterSVG(FLOOR + 150, '#5D0000') + `<g id="s8back">${phoneBackSVG(2.3)}</g>` +
     `<g id="s8front"><g transform="scale(.52)">${phoneSVG('s8p', 0, 0, 560, 1000, listingScreen(true, false))}</g></g>` + sparks([[960, 620], [980, 1120], [560, 600]], 'c23+0.5'),
   html: `<img id="s8wm" style="position:absolute;left:540px;top:400px;width:460px" data-t="c23+0.3" src="">`,
   noWm: true, cam: [1, 1.03], fy: 860,
@@ -206,30 +206,30 @@ addScene('c23', 'c24', {
 
 // ================= S8b the wedding: Krupa's son in the sherwani, like a little raja =================
 addScene('c24', 'c25', {
-  svg: weddingHallBG('s8b') + bust('s8bm', MAUSI, 180, FLOOR + 230, .66) + bust('s8bk', KRUPA, 880, FLOOR + 200, .74) +
+  svg: weddingHallBG('s8b') + stand('s8bm', MAUSI, 170, feet(.66), .66) + stand('s8bk', KRUPA, 900, feet(.7), .7) +
     `<circle cx="540" cy="900" r="300" fill="url(#glow)" opacity=".8"/>` + stand('s8bb', KRUPA_BETA.sherwani, 540, feet(.6), .6) + sparks([[360, 760], [720, 740], [380, 1060], [710, 1080]], 'c24+0.2') +
     `<g transform="translate(540,620)"><g data-t="c24+0.4" data-k="drop" data-bob="5"><text text-anchor="middle" font-size="110">👑</text></g></g>`,
   html: pillH(540, 352, 'c24', 'Beta <span class="hl">raja jaisa</span> 👑'),
   cam: [1, 1.05], fy: 900,
   upd(t) {
     life('s8bb', t, { mouth: 'grin', brows: 'sure', look: [0, -.2], tilt: -5, L: [40, -120], R: [40, -120], hL: 'fist', hR: 'fist', y: hop(t, T('c24') + .2, 18), seed: 7 });
-    life('s8bk', t, { pivot: 0, mouth: 'grin', brows: 'up', look: [-.9, .2], tilt: -6, R: CLASP, L: CLASP, seed: 2 });
-    life('s8bm', t, { pivot: 0, mouth: 'o', brows: 'up', look: [.9, .2], tilt: 6, seed: 1 });
+    life('s8bk', t, { mouth: 'grin', brows: 'up', look: [-.9, .2], tilt: -6, R: CLASP, L: CLASP, seed: 2 });
+    life('s8bm', t, { mouth: 'o', brows: 'up', look: [.9, .2], tilt: 6, seed: 1 });
   }
 });
 
 // ================= S8c Riddhi's drawer starts earning: "Booking ✓" =================
 addScene('c25', 'c27', {
-  svg: homeBG('s8c', { noWindow: true, noClock: true, shelfX: 760 }) + bust('s8cr', RIDDHI, 790, FLOOR + 140, .85) + `<g transform="translate(300,1230) scale(.8)">${dresserSVG('s8cd')}</g>` +
+  svg: homeBG('s8c', { noWindow: true, noClock: true, shelfX: 760 }) + stand('s8cr', RIDDHI, 810, feet(.8), .8) + `<g transform="translate(300,1230) scale(.8)">${dresserSVG('s8cd')}</g>` +
     `<g id="s8cph"><g transform="scale(.9)">${phoneBackSVG(1)}</g></g>` +
-    `<g transform="translate(540,590)"><g data-t="c25+0.2" data-k="drop">${notifSVG('Anokhi Reet', 'Booking ✓ Kids sherwani (Age 4–5)', 800)}</g></g>`,
+    `<g transform="translate(370,760)"><g data-t="c25+0.2" data-k="drop">${notifSVG('Anokhi Reet', 'Booking ✓ Sherwani (Age 4–5)', 660)}</g></g>`,
   html: pillH(540, 352, 'c26', 'Ek maa ki <span class="hl">kamaai</span> 💰') + pillH(540, 450, 'c26+0.35', 'Doosri maa ki <span class="hl">bachat</span> 🙌', 'gold'),
   cam: [1, 1.04], fy: 900,
   init() { $('s8cd-in').innerHTML = OUTFITS.slice(1).map(([k, c, d], i) => `<g transform="translate(${-60 + i * 120},-292) scale(.5)">${kidOutfitSVG(k, c, d)}</g>`).join('') + `<g transform="translate(-180,-292)"><rect x="-50" y="-60" width="100" height="120" rx="12" fill="none" stroke="${C.goldTan}" stroke-width="5" stroke-dasharray="10 8"/></g>`; },
   upd(t) {
     dresserOpen('s8cd', 1);
     const ping = t > T('c25') + .2;
-    const A = life('s8cr', t, { pivot: 0, mouth: ping ? 'grin' : 'smile', brows: 'up', look: ping ? [-.4, -.6] : [0, .5], tilt: ping ? 5 : 0, R: [100, -90], hR: 'fist', L: [9, -14], y: hop(t, T('c25') + .3, 14), seed: 1 });
+    const A = life('s8cr', t, { mouth: ping ? 'grin' : 'smile', brows: 'up', look: ping ? [-.4, -.6] : [0, .5], tilt: ping ? 5 : 0, R: [100, -90], hR: 'fist', L: [9, -14], y: hop(t, T('c25') + .3, 14), seed: 1 });
     atHand('s8cph', 's8cr', A.hr, -10, -90, Math.sin(t * 20) * (t > T('c25') + .2 && t < T('c25') + .7 ? 6 : 0));
   }
 });
