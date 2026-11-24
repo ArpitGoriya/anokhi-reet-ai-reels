@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-24
 - **Made by:** dhruvifewtone-wq
-- **Status:** video 1 sent
+- **Status:** video 2 sent
 
 ## Brief
 
@@ -61,11 +61,14 @@ Voice text: [`script.txt`](script.txt).
 ## Video
 
 - `output/2026-11-24-nayi-sherwani.mp4` (50 s), video 1 sent 2026-11-24.
+- `output/2026-11-24-nayi-sherwani-v2.mp4` (50 s), video 2 sent 2026-11-24.
 
 ## Feedback rounds
 
 - Voice take 1 (2026-11-24): CTA → "Agar aapko bhi apni sherwani rent par deni hai toh comment karo OUTFIT" → only
   that line voiced and joined (take 2); end card and caption updated.
+- Video 1 (2026-11-24): "At 15 s the text bubbles are covering the characters' faces" → at the chai tapri (both scenes)
+  the friends are a little smaller and every bubble sits above their heads ("Loan liya hai kya?" under them).
 
 ## Caption
 
@@ -96,4 +99,6 @@ Apni sherwani rent pe deni hai? Comment OUTFIT 👇 Us dost ko tag karo jo har s
 ## Lessons
 
 - The male voice speaks faster: the 55 s script came out at 46 s (48 s with the new CTA).
+- Speech bubbles go above the heads (characters at about `.65` leave room under the label at the top), never at face
+  height.
 - Keep comic bursts off faces: put them in the empty corner of the panel.

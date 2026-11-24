@@ -52,11 +52,11 @@ addScene('c7', 'c11', {
 
 // ================= S4 the chai tapri: "teri salary kitni hai?" — "Guess karo." — the guesses =================
 addScene('c11', 'c17', {
-  svg: chaiTapriBG('s4') + stand('s4h', HARSH, 170, feet(.74), .74) + stand('s4m', MITESH, 400, feet(.74), .74) + stand('s4j', JAY.casual, 780, feet(.74), .74) +
+  svg: chaiTapriBG('s4') + stand('s4h', HARSH, 170, feet(.64), .64) + stand('s4m', MITESH, 400, feet(.64), .64) + stand('s4j', JAY.casual, 780, feet(.64), .64) +
     `<g id="s4cup">${chaiSVG ? chaiSVG() : ''}</g>`,
-  html: bub(380, 640, 560, 'c11', 'c14-0.05', '"Bhai sach bata… teri <span class="hl">salary</span> kitni hai? Har shaadi naya!"') +
-    bub(780, 650, 360, 'c14', 'c15-0.05', '"<span class="hl">Guess</span> karo." ☕') +
-    bub(220, 600, 300, 'c15', '', '"<span class="hl">₹2 lakh?</span>"') + bub(470, 760, 300, 'c16', '', '"<span class="hl">₹3 lakh?!</span>"') + bub(300, 920, 420, 'c16+0.6', '', '"Loan liya hai kya? 😅"', 34) +
+  html: bub(400, 500, 600, 'c11', 'c14-0.05', '"Bhai sach bata… teri <span class="hl">salary</span> kitni hai? Har shaadi naya!"') +
+    bub(780, 520, 360, 'c14', 'c15-0.05', '"<span class="hl">Guess</span> karo." ☕') +
+    bub(210, 500, 300, 'c15', '', '"<span class="hl">₹2 lakh?</span>"') + bub(520, 540, 300, 'c16', '', '"<span class="hl">₹3 lakh?!</span>"') + bub(330, 1230, 440, 'c16+0.6', '', '"Loan liya hai kya? 😅"', 34) +
     pillH(540, 352, 'c13', 'Jay ne kitne kharche? <span class="hl">₹ ???</span>', '', 'c15-0.05') + pillH(540, 352, 'c15', 'Aapka <span class="hl">guess?</span> 👇'),
   cam: [1, 1.04], fy: 900,
   init() { $('s4cup').innerHTML = `<g transform="scale(.55)">${chaiSVG()}</g>`; },
@@ -90,9 +90,9 @@ addScene('c17', 'c20', {
 
 // ================= S6 "Par kharcha toh kharcha hai na?" — "Kharcha? Ruk…" =================
 addScene('c20', 'c23', {
-  svg: chaiTapriBG('s6') + stand('s6m', MITESH, 300, feet(.8), .8) + stand('s6j', JAY.casual, 760, feet(.8), .8),
-  html: bub(330, 620, 520, 'c20', 'c22-0.05', '"Theek hai… kam hai. Par <span class="hl">kharcha toh kharcha</span> hai na?"') +
-    bub(760, 640, 380, 'c22', '', '"Kharcha? <span class="hl">Ruk…</span>" ☝️') + pillH(540, 352, 'c22+0.3', 'Asli <span class="hl">TWIST</span> abhi baaki hai 👀'),
+  svg: chaiTapriBG('s6') + stand('s6m', MITESH, 300, feet(.66), .66) + stand('s6j', JAY.casual, 760, feet(.66), .66),
+  html: bub(340, 480, 560, 'c20', 'c22-0.05', '"Theek hai… kam hai. Par <span class="hl">kharcha toh kharcha</span> hai na?"') +
+    bub(760, 500, 380, 'c22', '', '"Kharcha? <span class="hl">Ruk…</span>" ☝️') + pillH(540, 352, 'c22+0.3', 'Asli <span class="hl">TWIST</span> abhi baaki hai 👀'),
   cam: [1, 1.05], fy: 900,
   upd(t) {
     const j = t > T('c22');
