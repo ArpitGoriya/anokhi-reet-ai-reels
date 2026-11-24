@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-24
 - **Made by:** dhruvifewtone-wq
-- **Status:** script approved
+- **Status:** voice approved
 
 ## Brief
 
@@ -56,7 +56,7 @@ Voice text: [`script.txt`](script.txt).
 
 - Take 1: `output/male-nayi-sherwani-take1.mp3` (46 s) — not used (teammate change, 2026-11-24)
 - Take 2: `output/male-nayi-sherwani-take2.mp3` (48 s) = take 1 up to "…ya apni rent pe do." (44.2 s) + the new CTA "Agar
-  aapko bhi apni sherwani rent par deni hai… toh comment karo OUTFIT." — sent, waiting for approval
+  aapko bhi apni sherwani rent par deni hai… toh comment karo OUTFIT." — approved: yes, 2026-11-24
 
 ## Feedback rounds
 
