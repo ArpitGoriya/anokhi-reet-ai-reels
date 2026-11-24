@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-24
 - **Made by:** dhruvifewtone-wq
-- **Status:** video 2 sent
+- **Status:** video 3 sent
 
 ## Brief
 
@@ -12,7 +12,7 @@
   spent ₹6,000, earned ₹9,000). "Shaadi attend karke bhi profit mein hoon." Then Anokhi Reet: rent a sherwani, or
   put yours on rent. Comment OUTFIT.
 - **For:** Young men (18-30).
-- **One message:** Rent a new look for every wedding, and put your own sherwani on rent. Comment "OUTFIT".
+- **One message:** Rent a new look for every wedding, and put your own sherwani on rent. Comment "RENT".
 - **Voice:** male (Sadachbia, the approved male voice) as Harsh, the narrator; he also reads Jay's and Mitesh's lines
   (speech bubbles show who speaks). Male Hindi grammar.
 - **Characters:** New: **Jay** (the smart one), **Harsh** (narrator, Jay's friend), **Mitesh** (friend). All 20s.
@@ -31,8 +31,8 @@
 - The script's sounds (whoosh, dhol, "dun dun", camera clicks, slurp, ticking, buzzer, record scratch, riser, cash
   register, coins, "ding", laughter) are shown visually; no sound effects, no "whoosh" (brand rule).
 - Key words in yellow (gold) highlight boxes; on-screen emojis as in the script.
-- **CTA** (teammate, 2026-11-24): "Agar aapko bhi apni sherwani rent par deni hai… toh comment karo OUTFIT." in voice;
-  end card "Apni sherwani rent pe deni hai? Comment OUTFIT 👇"; caption to match. Pinned comment as written.
+- **CTA** (teammate, 2026-11-24): "Agar aapko bhi apni sherwani rent par deni hai… toh comment karo RENT." in voice
+  (RENT replaced OUTFIT, 2026-11-24); end card "Apni sherwani rent pe deni hai? Comment RENT 👇"; caption to match. Pinned comment as written.
   Hashtags: 5, as given.
 
 ## Script and storyboard (approved: yes, 2026-11-24)
@@ -48,7 +48,7 @@
 | 7 | "Theek hai… *kam hai.* / Par *kharcha toh kharcha* hai na?" / "Kharcha? *Ruk…*" | Mitesh shrugs; Jay grins and raises a finger. | Asli TWIST abhi baaki hai 👀 |
 | 8 | "Aur meri apni *shaadi wali sherwani?* / Woh *almari mein band nahi…* / *rent pe chalti* hai. / Jitna main *kharch* karta hoon, / usse zyada woh *kama leti* hai." | Flashback panel: Jay's cream-and-gold wedding sherwani with a ₹50,000 tag, locked in an almari; it comes out, gets photographed and listed; a calendar fills with booking ticks and "KA-CHING!" bursts; a ledger slides in: Kharcha (rent liya) ₹6,000 · Kamaai (rent pe diya) ₹9,000 · PROFIT ₹3,000 ✅ (Udaharan). | Kharcha ₹6,000 · Kamaai ₹9,000 · PROFIT 😎 |
 | 9 | "Shaadi attend karke bhi… / *profit mein hoon.*" / *"Guru!"* | Jay winks; Harsh and Mitesh bow down dramatically ("GURU! 🙇‍♂️"); a comic "DING!". | Shaadi attend karke bhi PROFIT 😎 |
-| 10 | *Anokhi Reet.* / *Sherwani rent* karo… / ya *apni rent pe do.* / Agar aapko bhi apni *sherwani* / *rent par deni* hai… / toh *comment* karo *OUTFIT.* | The phone faces the camera: the Anokhi Reet app; two buttons pop: "Sherwani rent karo 🤵" and "Apni rent pe do 💰"; then the maroon end card: official logo, **Apni sherwani rent pe deni hai? Comment OUTFIT 👇**, anokhireet.in. | Comment OUTFIT 👇 |
+| 10 | *Anokhi Reet.* / *Sherwani rent* karo… / ya *apni rent pe do.* / Agar aapko bhi apni *sherwani* / *rent par deni* hai… / toh *comment* karo *RENT.* | The phone faces the camera: the Anokhi Reet app; two buttons pop: "Sherwani rent karo 🤵" and "Apni rent pe do 💰"; then the maroon end card: official logo, **Apni sherwani rent pe deni hai? Comment RENT 👇**, anokhireet.in. | Comment RENT 👇 |
 
 Voice text: [`script.txt`](script.txt).
 
@@ -57,11 +57,14 @@ Voice text: [`script.txt`](script.txt).
 - Take 1: `output/male-nayi-sherwani-take1.mp3` (46 s) — not used (teammate change, 2026-11-24)
 - Take 2: `output/male-nayi-sherwani-take2.mp3` (48 s) = take 1 up to "…ya apni rent pe do." (44.2 s) + the new CTA "Agar
   aapko bhi apni sherwani rent par deni hai… toh comment karo OUTFIT." — approved: yes, 2026-11-24
+- Take 3: `output/male-nayi-sherwani-take3.mp3` (48 s) = take 1 up to "…ya apni rent pe do." + "Agar aapko bhi apni sherwani
+  rent par deni hai… toh comment karo RENT." (teammate, 2026-11-24)
 
 ## Video
 
 - `output/2026-11-24-nayi-sherwani.mp4` (50 s), video 1 sent 2026-11-24.
 - `output/2026-11-24-nayi-sherwani-v2.mp4` (50 s), video 2 sent 2026-11-24.
+- `output/2026-11-24-nayi-sherwani-v3.mp4` (49 s), video 3 sent 2026-11-24.
 
 ## Feedback rounds
 
@@ -69,6 +72,8 @@ Voice text: [`script.txt`](script.txt).
   that line voiced and joined (take 2); end card and caption updated.
 - Video 1 (2026-11-24): "At 15 s the text bubbles are covering the characters' faces" → at the chai tapri (both scenes)
   the friends are a little smaller and every bubble sits above their heads ("Loan liya hai kya?" under them).
+- Video 2 (2026-11-24): CTA keyword RENT instead of OUTFIT → last line voiced again (take 3); caption, end card and post
+  caption say RENT.
 
 ## Caption
 
@@ -80,7 +85,7 @@ Sab sochte the ameer hai… 🤑
 Aur uski apni shaadi wali sherwani rent pe chal ke ₹9,000 kama chuki hai 😎 (udaharan)
 
 Shaadi attend karke bhi profit mein hai bhai 😂
-Apni sherwani rent pe deni hai? Comment OUTFIT 👇 Us dost ko tag karo jo har shaadi mein same kurta pehenta hai
+Apni sherwani rent pe deni hai? Comment RENT 👇 Us dost ko tag karo jo har shaadi mein same kurta pehenta hai
 
 #SherwaniOnRent #GroomSquad #ShaadiSeason #MensWeddingLook #AnokhiReet
 ```

@@ -161,7 +161,7 @@ addScene('c32', 9999, {
       `<circle cx="0" cy="-150" r="170" fill="url(#glow)"/><g transform="translate(0,-130) scale(1.5)">${kidOutfitSVG('sherwani', '#7A1B2A', '#5E1420')}</g>` +
       btn(160, 'Sherwani rent karo 🤵', 'c33', C.red) + btn(310, 'Apni rent pe do 💰', 'c34', C.gold))}</g>`,
   html: `<img id="s10wm" style="position:absolute;left:310px;top:170px;width:460px" src="">` + pillH(540, 300, 'c32+0.3', 'anokhireet.in', 'gold') +
-    pillH(540, 1150, 'c35', 'Apni sherwani <span class="hl">rent pe deni hai?</span>') + pillH(540, 1255, 'c37', 'Comment <span class="hl">OUTFIT</span> 👇', 'big'),
+    pillH(540, 1150, 'c35', 'Apni sherwani <span class="hl">rent pe deni hai?</span>') + pillH(540, 1255, 'c37', 'Comment <span class="hl">RENT</span> 👇', 'big'),
   noWm: true, tin: .3, trans: 'rise', cam: [1, 1.03], fy: 800, capY: 1400,
   init() { $('s10wm').src = SEAL().replace('seal-on-maroon.svg', 'logo-text.svg'); },
   upd(t) { tf($('s10r'), 540, 800, 1, t * 5); }
