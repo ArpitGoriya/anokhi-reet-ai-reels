@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-24
 - **Made by:** dhruvifewtone-wq
-- **Status:** voice approved
+- **Status:** video 1 sent
 
 ## Brief
 
@@ -50,6 +50,10 @@ Voice text: [`script.txt`](script.txt).
 - Take 1: `output/female-customer-kahan-take1.mp3` (31 s) — not used (teammate change, 2026-11-24)
 - Take 2: `output/female-customer-kahan-take2.mp3` (30 s) = take 1 with "Apni city ke customers" (23.5–25.0 s) cut out — approved: yes, 2026-11-24
 
+## Video
+
+- `output/2026-11-24-customer-kahan.mp4` (31 s), video 1 sent 2026-11-24.
+
 ## Feedback rounds
 
 - Voice take 1 (2026-11-24): at 24 s remove "Apni city ke customers" → cut from the voice (take 2), the script, the
@@ -71,8 +75,9 @@ Comment SHOP, steps DM mein 💌
 
 ## Added to the library (at least two per reel)
 
-- (planned) the presenter (a new team member), a studio backdrop, a day-to-night window, a pamphlet stack and a
-  phone "status" circle.
+- `studioBG`, `dayNightWindowSVG` + `dayNight`, `pamphletSVG`, `statusPhoneSVG`, `arFeedScreen` in `engine/props.js`.
+- Engine: a two-finger hand (`'two'`).
+- New cast: Riya (`RIYA`), the presenter from the Anokhi Reet team.
 
 ## Suggested default (for the owner)
 
@@ -80,4 +85,6 @@ Comment SHOP, steps DM mein 💌
 
 ## Lessons
 
-- (later)
+- A maroon-dressed presenter disappears on a maroon backdrop: keep the studio backdrop light (beige).
+- A talking-to-camera presenter needs to be big (`bust` scale about 1.45) with a desk in front, not small at the bottom.
+- Long captions (more than about 30 letters) wrap to three lines and fall into the bottom zone: split them (`c9b`).

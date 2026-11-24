@@ -141,3 +141,6 @@ const KRUPA_BETA = {
   vest: { male: true, top: '#FFFFFF', topD: '#E8E2D8', skin: '#B07150', skin2: '#9A6143', hair: '#3A2418', pants: { c: '#7FA893', d: '#5E8C74', hem: 30 } },
   sherwani: { male: true, top: '#F2E2C4', topD: '#D9C39A', buttons: true, sleeveTo: .95, skin: '#B07150', skin2: '#9A6143', hair: '#3A2418', pants: { c: '#FFF8EC', hem: 190 } }, // Riddhi's sherwani, his size
 };
+// Riya (20s): a friendly presenter from the Anokhi Reet team who talks straight to the camera (to shop owners).
+// Brand-maroon kurti, gold dupatta, open long hair. (Rental dukaan hai? Customer kahan hain?, 2026-11-24)
+const RIYA = { hairStyle: 'long', top: C.red, topD: C.redDark, pallu: C.gold, border: '#B8862F', earrings: true, skin: '#D19A72', skin2: '#BD8460', bangles: true, skirt: { c: C.redDark, d: C.maroonDeep, b: C.gold, w: 195 } };

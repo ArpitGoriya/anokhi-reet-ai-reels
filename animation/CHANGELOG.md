@@ -3,6 +3,16 @@
 Every reel adds at least one improvement to the engine or library and writes it here (newest first).
 See [GUIDE.md](GUIDE.md) section 8.
 
+## 2026-11-24: presenter studio, day-to-night window, pamphlets, status phone, scrolling app feed, Riya (Customer kahan hain?)
+
+- **New props:** `studioBG(id)` (a presenter studio: beige backdrop with gold rings `${id}-ring`, ring light, plant),
+  `dayNightWindowSVG(id, x, y)` + `dayNight(id, k)` (the sky goes from noon to night), `pamphletSVG()` (a stack of
+  shop flyers), `statusPhoneSVG()` (a chat "status" with very few views), `arFeedScreen(id)` (the app scrolling
+  through shops and outfits: scroll `${id}-feed`, swap `${id}-q` for `${id}-real` to reveal the name).
+- **Engine:** a two-finger hand `hR: 'two'` (counting "2").
+- **New cast:** Riya (`RIYA`), a presenter from the Anokhi Reet team. For a talking-to-camera presenter: `bust(…, 1.45)`
+  at `FLOOR + 260` behind a desk (`counterSVG(FLOOR + 170)`), so the waist is hidden.
+
 ## 2026-11-24: the first kids, long sleeves, chest of drawers, kids' outfits, age tag, two houses at night (₹6,000 ki sherwani)
 
 - **Engine fix:** a scene's `cam` option (the slow push-in, or a zoom) was being overwritten by its camera group, so

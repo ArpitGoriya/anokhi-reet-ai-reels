@@ -779,3 +779,57 @@ function nightHousesSVG(id) {
   }
   return s;
 }
+
+// ===== Rental dukaan hai? Customer kahan hain? (2026-11-24): presenter studio, day-to-night window, pamphlets, status, app feed =====
+// studioBG(id): a bright studio for a presenter talking to the camera: cream wall, a warm beige backdrop panel with gold
+// rings (`${id}-ring` turns slowly if you rotate it), a ring light on the left, a plant on the right, a floor
+function studioBG(id) {
+  return `<rect width="${W}" height="${H}" fill="${C.cream}"/><rect x="120" y="330" width="840" height="${FLOOR - 330}" rx="40" fill="#F3DCC0" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<g id="${id}-ring" transform="translate(540,760)" opacity=".5">` + [...Array(18)].map((_, i) => { const a = i * Math.PI / 9; return `<circle cx="${(Math.cos(a) * 300).toFixed(0)}" cy="${(Math.sin(a) * 300).toFixed(0)}" r="26" fill="none" stroke="${C.gold}" stroke-width="5"/>`; }).join('') + `<circle r="360" fill="none" stroke="${C.gold}" stroke-width="5" stroke-dasharray="2 16" stroke-linecap="round"/></g>` +
+    `<g transform="translate(70,640)"><path d="M0,60 V560" stroke="${OL}" stroke-width="10"/><circle r="70" fill="none" stroke="${OL}" stroke-width="34"/><circle r="70" fill="none" stroke="#FFF8EC" stroke-width="22"/></g>` +
+    floorSVG('#B58457') + plantSVG(1010, FLOOR + 40, 1.1);
+}
+// dayNightWindowSVG(id, x, y, w, h): a window whose sky turns from day to night with dayNight(id, k) (k 0 = noon, 1 = night)
+function dayNightWindowSVG(id, x, y, w = 260, h = 220) {
+  return `<g transform="translate(${x - w / 2},${y - h / 2})"><clipPath id="${id}-cp"><rect width="${w}" height="${h}" rx="6"/></clipPath>` +
+    `<rect id="${id}-sky" width="${w}" height="${h}" rx="6" fill="${C.sky}"/><g clip-path="url(#${id}-cp)"><g id="${id}-sun"><circle r="30" fill="${C.gold}" stroke="${OL}" stroke-width="3"/></g>` +
+    `<g id="${id}-moon"><path d="M0,-28 a28,28 0 1,0 20,48 a22,22 0 1,1 -20,-48 Z" fill="#FFF6C8"/></g></g>` +
+    `<rect width="${w}" height="${h}" rx="6" fill="none" stroke="${OL}" stroke-width="${OW}"/><path d="M${w / 2},0 V${h} M0,${h / 2} H${w}" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<rect x="-14" y="${h - 4}" width="${w + 28}" height="16" rx="4" fill="${C.woodLight}" stroke="${OL}" stroke-width="4"/></g>`;
+}
+function dayNight(id, k, w = 260, h = 220) {
+  const sky = k < .5 ? `rgb(${Math.round(lerp(207, 242, k * 2))},${Math.round(lerp(230, 160, k * 2))},${Math.round(lerp(238, 110, k * 2))})` : `rgb(${Math.round(lerp(242, 46, k * 2 - 1))},${Math.round(lerp(160, 61, k * 2 - 1))},${Math.round(lerp(110, 99, k * 2 - 1))})`;
+  $(id + '-sky').setAttribute('fill', sky);
+  tf($(id + '-sun'), lerp(w * .2, w * .85, clamp(k * 1.6)), h * .3 + clamp(k * 1.6) * h * .9, 1);
+  tf($(id + '-moon'), lerp(w * .1, w * .4, clamp(k * 2 - 1)), lerp(h * 1.2, h * .32, clamp(k * 2 - 1)), 1);
+}
+// pamphletSVG(): a small stack of shop flyers ("RENT PE OUTFITS"), centred on (0,0)
+function pamphletSVG() {
+  return [[-14, 10, -8], [8, 4, 6], [0, 0, -2]].map(([x, y, r]) => `<g transform="translate(${x},${y}) rotate(${r})"><rect x="-110" y="-150" width="220" height="300" rx="8" fill="#FFF8EC" stroke="${OL}" stroke-width="4"/>` +
+    `<rect x="-110" y="-150" width="220" height="70" rx="8" fill="${C.red}" stroke="${OL}" stroke-width="4"/><text y="-104" text-anchor="middle" font-family="Inter" font-weight="900" font-size="26" fill="${C.cream}">RENT PE</text>` +
+    `<text y="-40" text-anchor="middle" font-family="Inter" font-weight="900" font-size="30" fill="${C.red}">OUTFITS</text><g transform="translate(0,40) scale(.55)">${kidOutfitSVG('kurta', C.pink, C.pinkDark)}</g></g>`).join('');
+}
+// statusPhoneSVG(): a phone showing a chat-app "status" ring with a lehenga photo and very few views ("👁 2"), centred on (0,0)
+function statusPhoneSVG() {
+  return `<rect x="-120" y="-220" width="240" height="440" rx="34" fill="#1E1715" stroke="${OL}" stroke-width="${OW}"/><rect x="-106" y="-206" width="212" height="412" rx="24" fill="#fff"/>` +
+    `<text x="0" y="-160" text-anchor="middle" font-family="Inter" font-weight="800" font-size="26" fill="#655C57">Status</text>` +
+    `<circle cx="0" cy="-30" r="80" fill="none" stroke="#25A45A" stroke-width="8" stroke-dasharray="40 10"/><circle cx="0" cy="-30" r="68" fill="${C.cream}"/>` +
+    `<g transform="translate(0,-30)">${lehengaHangerSVG('', { c: C.lehenga, d: C.lehengaDark }, .32)}</g>` +
+    `<text x="0" y="110" text-anchor="middle" font-family="Inter" font-weight="900" font-size="40" fill="${C.text}">👁 2</text>`;
+}
+// arFeedScreen(id): for phoneSVG(…, 560, 1000): the Anokhi Reet app scrolling through shops and outfits. `${id}-feed`
+// scrolls (translate it up); `${id}-q` is a hidden-name header ("? ? ?"), `${id}-real` the real header (show it to reveal)
+function arFeedScreen(id) {
+  const shops = ['Kiranben Rentals', 'Shital Rentals', 'Bhavesh Rentals', 'Meenaben Rentals', 'Kiranben Rentals', 'Shital Rentals'];
+  const cols = [[C.lehenga, C.lehengaDark, '#E8C25E'], [C.pink, C.pinkDark, '#F4B9C8'], [C.emerald, C.emeraldDark, '#A6D3B0'], [C.marigold, '#C77F22', '#F7C548'], ['#7A4FA0', '#5D3A7E', '#B28BD0'], [C.teal, C.tealDark, '#9FD3CE']];
+  let f = '';
+  shops.forEach((n, i) => {
+    const y = -330 + i * 300;
+    f += `<g transform="translate(0,${y})"><rect x="-240" y="0" width="480" height="276" rx="22" fill="#fff" stroke="${C.goldTan}" stroke-width="4"/>` +
+      `<circle cx="-196" cy="42" r="24" fill="${C.red}" stroke="${OL}" stroke-width="3"/><text x="-160" y="52" font-family="Inter" font-weight="900" font-size="28" fill="${C.text}">${n}</text>` +
+      [0, 1, 2].map(k => { const [c, d, pp] = cols[(i + k) % 6]; return `<g transform="translate(${-150 + k * 150},140)"><rect x="-66" y="-64" width="132" height="150" rx="14" fill="${C.cream}"/>${lehengaHangerSVG('', { c, d, dupatta: pp }, .36)}</g>`; }).join('') + `</g>`;
+  });
+  return `<rect x="-264" y="-484" width="528" height="968" rx="42" fill="${C.cream}"/><clipPath id="${id}-cp"><rect x="-264" y="-392" width="528" height="876" rx="0"/></clipPath>` +
+    `<g clip-path="url(#${id}-cp)"><g id="${id}-feed">${f}</g></g>` +
+    `<g id="${id}-q">${arMysteryHeader()}</g><g id="${id}-real" opacity="0">${arHeader()}</g>`;
+}

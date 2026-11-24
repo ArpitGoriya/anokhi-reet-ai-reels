@@ -213,6 +213,8 @@ function handSVG(kind, skin) {
   if (kind === 'fist') return `<circle cx="0" cy="8" r="22" fill="${skin}" stroke="${OL}" stroke-width="${OW}"/>`;
   // thumbs up: a fist with the thumb along the forearm's direction (raise the forearm so it points up) (Sawal bahut hain)
   if (kind === 'thumb') return `<rect x="-14" y="14" width="22" height="46" rx="11" fill="${skin}" stroke="${OL}" stroke-width="4.5"/><circle cx="0" cy="8" r="22" fill="${skin}" stroke="${OL}" stroke-width="${OW}"/><path d="M-12,4 H14 M-12,14 H14" stroke="${OL}" stroke-width="3" opacity=".5"/>`;
+  // two fingers up (counting "2", or a V): raise the forearm so the fingers point up (Customer kahan)
+  if (kind === 'two') return `<path d="M-14,30 L-22,74 Q-22,84 -12,84 Q-4,84 -2,74 L2,40 M10,30 L16,74 Q18,84 26,82 Q34,80 32,70 L22,30" fill="${skin}" stroke="${OL}" stroke-width="4.5" stroke-linejoin="round"/><circle cx="0" cy="12" r="24" fill="${skin}" stroke="${OL}" stroke-width="${OW}"/><path d="M-12,4 H14" stroke="${OL}" stroke-width="3" opacity=".5"/>`;
   // open palm (waving)
   return `<path d="M-20,-4 Q-26,20 -16,34 L-18,52 Q-16,58 -10,54 L-6,38 L-4,58 Q0,64 6,58 L6,38 L12,56 Q18,60 20,54 L16,34 Q24,22 20,-4 Z" fill="${skin}" stroke="${OL}" stroke-width="4.5" stroke-linejoin="round"/>`;
 }

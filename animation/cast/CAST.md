@@ -48,6 +48,7 @@ characters are added here after their first reel (add them to `cast.js`, to the 
 | `KRUPA` | **Krupa**, 30s, another mother in the same city, panicking before a wedding next week. | Long hair, green top, yellow dupatta | ₹6,000 ki sherwani |
 | `VIHAAN.tight` / `.home` | **Vihaan**, 5, Riddhi's son (the cast's first kid). | Outgrown cream sherwani (short sleeves and hem) / orange tee, blue pants | ₹6,000 ki sherwani |
 | `KRUPA_BETA.vest` / `.sherwani` | **Krupa's son**, 4, jumps on the bed; looks like a little raja in Riddhi's sherwani. | White vest / cream sherwani with long sleeves | ₹6,000 ki sherwani |
+| `RIYA` | **Riya**, 20s, a friendly presenter from the Anokhi Reet team who talks straight to the camera. | Long open hair, brand-maroon kurti, gold dupatta | Customer kahan hain? (2026-11-24) |
 
 Ideas for the cast's next members (make them when a story needs them): a young woman who rents for college
 functions, a groom or brother, a vendor on the Anokhi Reet app.
