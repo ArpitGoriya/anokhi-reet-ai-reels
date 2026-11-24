@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-24
 - **Made by:** dhruvifewtone-wq
-- **Status:** video 3 sent
+- **Status:** video 4 sent
 
 ## Brief
 
@@ -26,6 +26,7 @@
 - **Comic-book style** for this reel: panel frames, halftone dots, comic bursts; brand maroon and gold stay for the
   reveal and end card.
 - **Male voice** (teammate chose it, 2026-11-24): Sadachbia as Harsh.
+- **Snappier pace** (teammate, 2026-11-24): pauses between lines kept to about 0.3 s (the voice speed stays 1.15).
 - **Story numbers** (₹2 lakh / ₹3 lakh guesses, ₹1,500 per booking, ₹6,000 total, ₹50,000 sherwani tag, ₹9,000 earned,
   ₹3,000 profit) are Jay's story, with "Udaharan" on screen; never shown as Anokhi Reet's prices or a promise.
 - The script's sounds (whoosh, dhol, "dun dun", camera clicks, slurp, ticking, buzzer, record scratch, riser, cash
@@ -59,12 +60,15 @@ Voice text: [`script.txt`](script.txt).
   aapko bhi apni sherwani rent par deni hai… toh comment karo OUTFIT." — approved: yes, 2026-11-24
 - Take 3: `output/male-nayi-sherwani-take3.mp3` (48 s) = take 1 up to "…ya apni rent pe do." + "Agar aapko bhi apni sherwani
   rent par deni hai… toh comment karo RENT." (teammate, 2026-11-24)
+- Take 4: `output/male-nayi-sherwani-take4.mp3` (45 s) = take 3 with 18 long pauses shortened to 0.3 s (3 s quicker); the
+  voice itself (speed 1.15) unchanged
 
 ## Video
 
 - `output/2026-11-24-nayi-sherwani.mp4` (50 s), video 1 sent 2026-11-24.
 - `output/2026-11-24-nayi-sherwani-v2.mp4` (50 s), video 2 sent 2026-11-24.
 - `output/2026-11-24-nayi-sherwani-v3.mp4` (49 s), video 3 sent 2026-11-24.
+- `output/2026-11-24-nayi-sherwani-v4.mp4` (46 s), video 4 sent 2026-11-24.
 
 ## Feedback rounds
 
@@ -74,6 +78,9 @@ Voice text: [`script.txt`](script.txt).
   the friends are a little smaller and every bubble sits above their heads ("Loan liya hai kya?" under them).
 - Video 2 (2026-11-24): CTA keyword RENT instead of OUTFIT → last line voiced again (take 3); caption, end card and post
   caption say RENT.
+- Video 3 (2026-11-24): "The overall speed is a little slow, increase it just a little" → the voice speed is locked by the
+  owner, so the long pauses were shortened instead (take 4, about 3 s quicker; teammate chose it); captions shifted to
+  match. Also the friends' bow is smaller and the GURU/DING bursts moved off their faces.
 
 ## Caption
 
@@ -103,6 +110,8 @@ Apni sherwani rent pe deni hai? Comment RENT 👇 Us dost ko tag karo jo har sha
 
 ## Lessons
 
+- When a teammate wants a reel faster, shorten the pauses (scratchpad tool: cut each silence longer than 0.3 s to
+  0.3 s and shift STARTS/WORDS by the same map); never change the voice speed.
 - The male voice speaks faster: the 55 s script came out at 46 s (48 s with the new CTA).
 - Speech bubbles go above the heads (characters at about `.65` leave room under the label at the top), never at face
   height.

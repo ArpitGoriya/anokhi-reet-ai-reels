@@ -141,15 +141,15 @@ addScene('c26', 'c29', {
 
 // ================= S8 the punchline: "Shaadi attend karke bhi… profit mein hoon" — "GURU!" =================
 addScene('c29', 'c32', {
-  svg: weddingHallBG('s9') + `<circle cx="540" cy="860" r="340" fill="url(#glow)" opacity=".8"/>` + stand('s9h', HARSH, 190, feet(.74), .74) + stand('s9m', MITESH, 890, feet(.74), .74) +
-    stand('s9j', JAY.maroon, 540, feet(.72), .72) + burst(820, 600, 'c30+0.4', 'DING!', '#fff', 100, 46, 10) + burst(280, 620, 'c31', 'GURU! 🙇‍♂️', '#F7D23A', 150, 52, -8),
+  svg: weddingHallBG('s9') + `<circle cx="540" cy="860" r="340" fill="url(#glow)" opacity=".8"/>` + stand('s9h', HARSH, 160, feet(.72), .72) + stand('s9m', MITESH, 920, feet(.72), .72) +
+    stand('s9j', JAY.maroon, 540, feet(.72), .72) + burst(830, 490, 'c30+0.4', 'DING!', '#fff', 85, 40, 10) + burst(290, 480, 'c31', 'GURU! 🙇‍♂️', '#F7D23A', 115, 42, -8),
   html: pillH(540, 352, 'c29', 'Shaadi attend karke bhi <span class="hl">PROFIT</span> 😎'),
   cam: [1, 1.05], fy: 900,
   upd(t) {
     life('s9j', t, { mouth: t < T('c31') ? talkMouth(t, true) : 'grin', brows: 'sure', look: [0, 0], wink: t > T('c30') + .3 && t < T('c30') + .9, tilt: 4, R: [40, -120], L: [40, -120], hR: 'fist', hL: 'fist', seed: 4 });
-    const bow = P(t, T('c31') - .1, .4, E.out) * 28;
-    life('s9h', t, { mouth: t > T('c31') ? talkMouth(t, true) : 'o', brows: 'up', look: [.9, .4], lean: bow, L: CLASP, R: CLASP, seed: 1 });
-    life('s9m', t, { mouth: t > T('c31') ? talkMouth(t, true) : 'o', brows: 'up', look: [-.9, .4], lean: -bow, L: CLASP, R: CLASP, seed: 2 });
+    const bow = P(t, T('c31') - .1, .4, E.out) * 13;
+    life('s9h', t, { mouth: t > T('c31') ? talkMouth(t, true) : 'o', brows: 'up', look: [.9, .4], lean: bow, nod: bow * 1.2, L: CLASP, R: CLASP, seed: 1 });
+    life('s9m', t, { mouth: t > T('c31') ? talkMouth(t, true) : 'o', brows: 'up', look: [-.9, .4], lean: -bow, nod: bow * 1.2, L: CLASP, R: CLASP, seed: 2 });
   }
 });
 
