@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-24
 - **Made by:** dhruvifewtone-wq
-- **Status:** script written (waiting for approval)
+- **Status:** script approved
 
 ## Brief
 
@@ -31,7 +31,7 @@
 - Hashtags: 5, #GujaratBusiness dropped (teammate chose it, as in the recent reels).
 - Voice only; no "whoosh" (brand rule). End card: the official shop lockup on maroon (`Anokhireet_shop_logo.svg`).
 
-## Script and storyboard (approved: no)
+## Script and storyboard (approved: yes, 2026-11-24)
 
 | # | Voice line (caption) | On screen (scene, characters and what they do) | Label / title |
 |---|---|---|---|
@@ -46,7 +46,7 @@ Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- (none yet)
+- Take 1: `output/female-customer-kahan-take1.mp3` (31 s) — sent, waiting for approval
 
 ## Feedback rounds
 
