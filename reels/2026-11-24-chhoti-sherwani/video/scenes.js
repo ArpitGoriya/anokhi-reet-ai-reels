@@ -188,11 +188,11 @@ addScene('c22', 'c23', {
 });
 
 // ================= S8a the reveal: Krupa finds it on Anokhi Reet (her phone turns around) =================
-addScene('c23', 'c24', {
+addScene('c23', 'c25', {
   svg: `<rect width="${W}" height="${H}" fill="url(#mar)"/>` + rosettes('s8ro', 540, 860, .14, C.gold) + `<circle cx="540" cy="860" r="440" fill="url(#glow)" opacity=".6"/>` +
     bust('s8k', KRUPA, 300, FLOOR + 200, .9) + counterSVG(FLOOR + 150, '#5D0000') + `<g id="s8back">${phoneBackSVG(2.3)}</g>` +
     `<g id="s8front"><g transform="scale(.52)">${phoneSVG('s8p', 0, 0, 560, 1000, listingScreen(true, false))}</g></g>` + sparks([[960, 620], [980, 1120], [560, 600]], 'c23+0.5'),
-  html: `<img id="s8wm" style="position:absolute;left:540px;top:400px;width:460px" data-t="c23+0.3" src="">`,
+  html: `<img id="s8wm" style="position:absolute;left:540px;top:400px;width:460px" data-t="c23+0.3" src="">` + pillH(540, 525, 'c24', 'Sherwani <span class="hl">rent kar li</span> ✅', 'big'),
   noWm: true, cam: [1, 1.03], fy: 860,
   init() { $('s8wm').src = SEAL().replace('seal-on-maroon.svg', 'logo-text.svg'); },
   upd(t) {
@@ -205,39 +205,39 @@ addScene('c23', 'c24', {
 });
 
 // ================= S8b the wedding: Krupa's son in the sherwani, like a little raja =================
-addScene('c24', 'c25', {
+addScene('c25', 'c26', {
   svg: weddingHallBG('s8b') + stand('s8bm', MAUSI, 170, feet(.66), .66) + stand('s8bk', KRUPA, 900, feet(.7), .7) +
-    `<circle cx="540" cy="900" r="300" fill="url(#glow)" opacity=".8"/>` + stand('s8bb', KRUPA_BETA.sherwani, 540, feet(.6), .6) + sparks([[360, 760], [720, 740], [380, 1060], [710, 1080]], 'c24+0.2') +
-    `<g transform="translate(540,620)"><g data-t="c24+0.4" data-k="drop" data-bob="5"><text text-anchor="middle" font-size="110">👑</text></g></g>`,
-  html: pillH(540, 352, 'c24', 'Beta <span class="hl">raja jaisa</span> 👑'),
+    `<circle cx="540" cy="900" r="300" fill="url(#glow)" opacity=".8"/>` + stand('s8bb', KRUPA_BETA.sherwani, 540, feet(.6), .6) + sparks([[360, 760], [720, 740], [380, 1060], [710, 1080]], 'c25+0.2') +
+    `<g transform="translate(540,620)"><g data-t="c25+0.4" data-k="drop" data-bob="5"><text text-anchor="middle" font-size="110">👑</text></g></g>`,
+  html: pillH(540, 352, 'c25', 'Beta <span class="hl">raja jaisa</span> 👑'),
   cam: [1, 1.05], fy: 900,
   upd(t) {
-    life('s8bb', t, { mouth: 'grin', brows: 'sure', look: [0, -.2], tilt: -5, L: [40, -120], R: [40, -120], hL: 'fist', hR: 'fist', y: hop(t, T('c24') + .2, 18), seed: 7 });
+    life('s8bb', t, { mouth: 'grin', brows: 'sure', look: [0, -.2], tilt: -5, L: [40, -120], R: [40, -120], hL: 'fist', hR: 'fist', y: hop(t, T('c25') + .2, 18), seed: 7 });
     life('s8bk', t, { mouth: 'grin', brows: 'up', look: [-.9, .2], tilt: -6, R: CLASP, L: CLASP, seed: 2 });
     life('s8bm', t, { mouth: 'o', brows: 'up', look: [.9, .2], tilt: 6, seed: 1 });
   }
 });
 
 // ================= S8c Riddhi's drawer starts earning: "Booking ✓" =================
-addScene('c25', 'c27', {
+addScene('c26', 'c28', {
   svg: homeBG('s8c', { noWindow: true, noClock: true, shelfX: 760 }) + stand('s8cr', RIDDHI, 810, feet(.8), .8) + `<g transform="translate(300,1230) scale(.8)">${dresserSVG('s8cd')}</g>` +
     `<g id="s8cph"><g transform="scale(.9)">${phoneBackSVG(1)}</g></g>` +
-    `<g transform="translate(370,760)"><g data-t="c25+0.2" data-k="drop">${notifSVG('Anokhi Reet', 'Booking ✓ Sherwani (Age 4–5)', 660)}</g></g>`,
-  html: pillH(540, 352, 'c26', 'Ek maa ki <span class="hl">kamaai</span> 💰') + pillH(540, 450, 'c26+0.35', 'Doosri maa ki <span class="hl">bachat</span> 🙌', 'gold'),
+    `<g transform="translate(370,760)"><g data-t="c26+0.2" data-k="drop">${notifSVG('Anokhi Reet', 'Booking ✓ Sherwani (Age 4–5)', 660)}</g></g>`,
+  html: pillH(540, 352, 'c27', 'Ek maa ki <span class="hl">kamaai</span> 💰') + pillH(540, 450, 'c27+0.35', 'Doosri maa ki <span class="hl">bachat</span> 🙌', 'gold'),
   cam: [1, 1.04], fy: 900,
   init() { $('s8cd-in').innerHTML = OUTFITS.slice(1).map(([k, c, d], i) => `<g transform="translate(${-60 + i * 120},-292) scale(.5)">${kidOutfitSVG(k, c, d)}</g>`).join('') + `<g transform="translate(-180,-292)"><rect x="-50" y="-60" width="100" height="120" rx="12" fill="none" stroke="${C.goldTan}" stroke-width="5" stroke-dasharray="10 8"/></g>`; },
   upd(t) {
     dresserOpen('s8cd', 1);
-    const ping = t > T('c25') + .2;
-    const A = life('s8cr', t, { mouth: ping ? 'grin' : 'smile', brows: 'up', look: ping ? [-.4, -.6] : [0, .5], tilt: ping ? 5 : 0, R: [100, -90], hR: 'fist', L: [9, -14], y: hop(t, T('c25') + .3, 14), seed: 1 });
-    atHand('s8cph', 's8cr', A.hr, -10, -90, Math.sin(t * 20) * (t > T('c25') + .2 && t < T('c25') + .7 ? 6 : 0));
+    const ping = t > T('c26') + .2;
+    const A = life('s8cr', t, { mouth: ping ? 'grin' : 'smile', brows: 'up', look: ping ? [-.4, -.6] : [0, .5], tilt: ping ? 5 : 0, R: [100, -90], hR: 'fist', L: [9, -14], y: hop(t, T('c26') + .3, 14), seed: 1 });
+    atHand('s8cph', 's8cr', A.hr, -10, -90, Math.sin(t * 20) * (t > T('c26') + .2 && t < T('c26') + .7 ? 6 : 0));
   }
 });
 
 // ================= S9a the ask: Riddhi holds up the tiny sherwani, Vihaan peeks =================
-addScene('c27', 'c28', {
+addScene('c28', 'c29', {
   svg: homeBG('s9', { noClock: true }) + stand('s9v', VIHAAN.home, 300, feet(.5), .5) + stand('s9r', RIDDHI, 500, feet(.8), .8) + `<g id="s9hold"><g transform="scale(1.05)">${SHER()}</g></g>`,
-  html: pillH(540, 352, 'c27', 'Bachchon ke outfits <span class="hl">rent pe do</span> 👗'),
+  html: pillH(540, 352, 'c28', 'Bachchon ke outfits <span class="hl">rent pe do</span> 👗'),
   cam: [1, 1.04], fy: 900,
   upd(t) {
     const A = life('s9r', t, { speak: true, brows: 'up', look: [0, 0], tilt: 4, R: [120, -60], hR: 'fist', L: [9, -14], seed: 1 });
@@ -247,19 +247,19 @@ addScene('c27', 'c28', {
 });
 
 // ================= S9b end card: Comment OUTFIT =================
-addScene('c28', 9999, {
+addScene('c29', 9999, {
   svg: `<rect width="${W}" height="${H}" fill="url(#mar)"/>` + rosettes('s9r2', 540, 760, .16, C.gold) + bust('s9bv', VIHAAN.home, 230, FLOOR + 330, .62) + bust('s9br', RIDDHI, 560, FLOOR + 330, .9) +
     `<g id="s9bh"><g transform="scale(.9)">${SHER()}</g></g>` + counterSVG(FLOOR + 280, '#5D0000'),
   html: `<img id="s9wm" style="position:absolute;left:290px;top:250px;width:500px" src="">` +
     `<div class="title" style="top:520px;font-size:66px">Bachchon ke outfits<br><span class="g">rent pe dene hain?</span></div>` +
-    pillH(540, 730, 'c29', 'Comment <span class="hl">OUTFIT</span> 👇', 'big') + pillH(540, 850, 'c28+0.5', 'anokhireet.in', 'gold'),
+    pillH(540, 730, 'c30', 'Comment <span class="hl">OUTFIT</span> 👇', 'big') + pillH(540, 850, 'c29+0.5', 'anokhireet.in', 'gold'),
   noWm: true, tin: .3, trans: 'rise', cam: [1, 1.03],
   init() { $('s9wm').src = SEAL().replace('seal-on-maroon.svg', 'logo-text.svg'); },
   upd(t) {
     tf($('s9r2'), 540, 760, 1, t * 5);
-    const end = t > T('c29') + .6;
+    const end = t > T('c30') + .6;
     const A = life('s9br', t, { pivot: 0, mouth: end ? 'grin' : talkMouth(t, true), brows: 'up', look: [0, 0], tilt: 4, R: [120, -60], hR: 'fist', L: [9, -14], seed: 1 });
     atHand('s9bh', 's9br', A.hr, 10, 100, 0, 1);
-    life('s9bv', t, { pivot: 0, mouth: 'grin', brows: 'up', look: [.4, 0], tilt: 6, R: [9, -14], L: end ? WAVE(t, T('c29') + .6) : [9, -14], hL: 'open', seed: 5 });
+    life('s9bv', t, { pivot: 0, mouth: 'grin', brows: 'up', look: [.4, 0], tilt: 6, R: [9, -14], L: end ? WAVE(t, T('c30') + .6) : [9, -14], hL: 'open', seed: 5 });
   }
 });

@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-24
 - **Made by:** dhruvifewtone-wq
-- **Status:** video 2 sent
+- **Status:** video 3 sent
 
 ## Brief
 
@@ -30,6 +30,7 @@
 - Key words in yellow (gold) highlight boxes; on-screen emojis as in the script.
 - **CTA: "OUTFIT"** (teammate, 2026-11-24, replacing "RENT"): voice "Agar aapko bhi apne bachchon ke outfits rent par
   dene hain… toh comment karo OUTFIT."; end card and caption "Comment OUTFIT 👇". Pinned comment as written.
+- **Krupa rents it** (teammate, 2026-11-24): "Krupa ne Anokhi Reet par dekha… aur wo sherwani rent kar li."
 - **Opening says it's Riddhi's son's sherwani** (teammate, 2026-11-24): "Riddhi ke bete ki ₹6,000 ki sherwani…".
 - Hashtags: 5, as given.
 - Voice only; no "whoosh" (brand rule).
@@ -45,7 +46,7 @@
 | 5 | Riddhi ke drawer mein / *bilkul wahi size* thi… / jo Krupa *dhoondh rahi* thi. / Par dono ko *ek doosre ka* / *pata hi nahi* tha. | Split screen: left, Riddhi's drawer with a glowing "Age 5–6" sherwani; right, Krupa searching on her phone. A dotted gold line runs between the two houses, then breaks with a "?" in the middle. | Ek ke paas hai… doosre ko chahiye 🤝 |
 | 6 | Aur Riddhi? / *Pichhle saal* / wahi Krupa thi. | Flashback with a sepia edge ("Pichhle saal ⏪"): Riddhi rushing out of a shop with shopping bags and Vihaan by the hand, a big bill fluttering behind her. | Pichhle saal Riddhi bhi yahi thi 😅 |
 | 7 | Toh Riddhi ne *teen kaam* kiye. / Har outfit ki *photo li.* / *Age aur size* likha. / Aur *rent pe list* kar diya. | Riddhi lays each outfit on a plain cream sheet and takes a phone photo (camera flash); age tags stick on: "Age 3–4", "Age 5–6"; a "Listed ✓" tick. Steps pop one by one. | 📸 Photo · 📏 Age + size · ✅ List |
-| 8 | Krupa ne *Anokhi Reet* pe dekha… / beta shaadi mein *raja jaisa* dikha. / Aur Riddhi ka drawer? / *Kamaane laga.* | Krupa's phone turns around: the official Anokhi Reet logo on top and Riddhi's listing (the sherwani, "Age 5–6", "Rent"). Then a wedding: Krupa's son in the sherwani, chin up, beaming, with sparkles. Then Riddhi's phone pings: "Booking ✓", and she smiles at the open drawer. | Anokhi Reet ✨ · Ek maa ki kamaai · Doosri maa ki bachat |
+| 8 | Krupa ne *Anokhi Reet* par dekha… / aur wo *sherwani rent* kar li. / beta shaadi mein *raja jaisa* dikha. / Aur Riddhi ka drawer? / *Kamaane laga.* | Krupa's phone turns around: the official Anokhi Reet logo on top and Riddhi's listing (the sherwani, "Age 5–6", "Rent"). Then a wedding: Krupa's son in the sherwani, chin up, beaming, with sparkles. Then Riddhi's phone pings: "Booking ✓", and she smiles at the open drawer. | Anokhi Reet ✨ · Ek maa ki kamaai · Doosri maa ki bachat |
 | 9 | Agar aapko bhi apne *bachchon ke outfits* / *rent par dene* hain… / toh *comment* karo *OUTFIT.* | Riddhi faces us holding up the tiny sherwani, Vihaan peeking from behind her; then the maroon end card: official logo, **Bachchon ke outfits rent pe do? Comment OUTFIT 👇**, anokhireet.in. | Comment OUTFIT 👇 |
 
 Voice text: [`script.txt`](script.txt).
@@ -55,11 +56,14 @@ Voice text: [`script.txt`](script.txt).
 - Take 1: `output/female-chhoti-sherwani-take1.mp3` (49 s) — not used (teammate changes, 2026-11-24)
 - Captions timed to take 2 (`tools/caption_timing.py`, starts nudged to the pauses).
 - Take 2: `output/female-chhoti-sherwani-take2.mp3` (51 s) = new first line + take 1 from 4.25 s to 45.47 s + new CTA — approved: yes, 2026-11-24
+- Take 3: `output/female-chhoti-sherwani-take3.mp3` (52 s) = take 2 with the line at 40 s voiced again: "Krupa ne Anokhi
+  Reet par dekha… aur wo sherwani rent kar li." (teammate, 2026-11-24)
 
 ## Video
 
 - `output/2026-11-24-chhoti-sherwani.mp4` (52 s), video 1 sent 2026-11-24.
 - `output/2026-11-24-chhoti-sherwani-v2.mp4` (52 s), video 2 sent 2026-11-24.
+- `output/2026-11-24-chhoti-sherwani-v3.mp4` (54 s), video 3 sent 2026-11-24.
 
 ## Feedback rounds
 
@@ -67,6 +71,8 @@ Voice text: [`script.txt`](script.txt).
 - Video 1 (2026-11-24): "At 5 s the lower half of Riddhi's body is missing" → Riddhi now stands in full beside the drawers; the
   same fix for every other waist-up shot that showed a cut-off body (Krupa in the split screen, Mausi and Krupa at the
   wedding, Riddhi at the booking); the rest now have a table edge in front. The booking banner moved off Riddhi's face.
+- Video 2 (2026-11-24): at 41 s add "Krupa ne Anokhi Reet par dekha aur wo sherwani rent kar li" → that line voiced again
+  and joined (take 3), a new caption, and the label "Sherwani rent kar li ✅" on the reveal.
 
 ## Caption
 
