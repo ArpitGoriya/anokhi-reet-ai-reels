@@ -11,7 +11,7 @@
   on in a shop. The real price: ₹3,500, on rent; Mausi sits down in shock. The app (Anokhi Reet) is shown only at the
   end.
 - **For:** Young women, wedding guests.
-- **One message:** A look everyone remembers doesn't need a big budget: rent it. Comment your guess, and "PRICE".
+- **One message:** A look everyone remembers doesn't need a big budget: rent it. Comment your guess, and "RENT".
 - **Voice:** female (Vindemiatrix), as the narrator (as in all recent reels); she also reads the relatives' guesses so
   scene 3 isn't silent.
 - **Characters:** New: **Ishita** (20s, the guest who rents) and **Mausi** (50s, her aunt). Cousins and Bhabhi from the
@@ -27,7 +27,8 @@
 - **Story prices** (₹40,000 / ₹50,000 / ₹60,000 guesses, ₹8,000 balance, ₹3,500 rent) are Ishita's story, allowed in
   story reels (DECISIONS.md); "Udaharan" on screen for ₹8,000 and ₹3,500, and the caption note "*Price udaharan hai.
   Har outfit ka rent alag hota hai." They are never shown as Anokhi Reet's own prices or savings.
-- **CTA: "PRICE"** (comment your guess + PRICE for your city's rent prices in DM), in voice, end card and caption.
+- **CTA: "RENT"** (teammate, 2026-11-24, replacing "PRICE"): "Aapka guess kitna tha? Comment mein batao… aur agar
+  aapko bhi outfits rent par chahiye, toh comment karo RENT." in voice; "Comment RENT 👇" on the end card and caption.
 - **App hidden** until scene 8: the phone is seen from the back in scene 6; the name is said only at the end.
 - Voice only: the script's sounds are shown visually; no "whoosh" (brand rule).
 - Hashtags: 5, as given.
@@ -43,14 +44,16 @@
 | 5 | *Ek hafte pehle…* / Ishita ke account mein *sirf ₹8,000* the. / Aur use bhi ek aisa look chahiye tha / jo *yaad rahe.* | Flashback (soft sepia edge, "Ek hafte pehle…" tag): Ishita on her bed with her phone showing a plain bank screen "Balance ₹8,000"; a wedding invite on the table; she sighs. "Udaharan". | Budget: ₹8,000 😬 · Udaharan |
 | 6 | Usne apne *sheher ki dukaano* ke outfits / *phone pe dekhe…* / *budget* daala… / aur ek dukaan pe jaake *trial* kiya. | Ishita's phone seen **from the back** (city, occasion, budget chips light up as icons beside it); then she walks into a nearby rental shop, tries the maroon lehenga and smiles in the mirror. Steps pop: Dekha → Trial kiya → Final ✅ | Dekha → Trial kiya → Final ✅ |
 | 7 | *Asli price?* / *₹3,500.* / *Rent pe.* | Back at the wedding: the blurred tag spins and reveals **"₹3,500 RENT"**; Mausi falls back into her chair again, cousins' jaws drop. "Udaharan". | ₹3,500 RENT 😳💸 |
-| 8 | *Anokhi Reet.* / Aapka guess *kitna tha?* / *Comment* karo… / aur *PRICE* likho, / apne sheher ke *rent price DM* mein. | Ishita winks; her phone turns around to show the Anokhi Reet app. Then the maroon end card: official logo, **Aapka guess? Comment karo 👇 · Comment PRICE 💌**, anokhireet.in. | Anokhi Reet ✨ · Comment PRICE 👇 |
+| 8 | *Anokhi Reet.* / Aapka guess *kitna tha?* / *Comment* mein batao… / aur agar aapko bhi / *outfits rent* par chahiye, / toh comment karo *RENT.* | Ishita winks; her phone turns around to show the Anokhi Reet app. Then the maroon end card: official logo, **Aapka guess? Comment karo 👇 · Outfits rent pe chahiye? Comment RENT 👇**, anokhireet.in. | Anokhi Reet ✨ · Comment RENT 👇 |
 
 Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- Take 1: `output/female-asli-price-take1.mp3` (44 s) — approved: not yet. The voice says "saadhe teen hazaar"
+- Take 1: `output/female-asli-price-take1.mp3` (44 s) — not used: the last line was unclear (teammate, 2026-11-24). The voice says "saadhe teen hazaar"
   for ₹3,500 (same amount as the script's "paintees sau").
+- Take 2: `output/female-asli-price-take2.mp3` (46 s) = take 1 up to "Rent pe." (37.6 s) + the new ending (`end-a`:
+  "Anokhi… Reet. … comment karo RENT") — approved: not yet
 
 ## Video
 
@@ -58,7 +61,8 @@ Voice text: [`script.txt`](script.txt).
 
 ## Feedback rounds
 
-- (none yet)
+- Voice take 1 (2026-11-24): the last line ("PRICE likho, apne sheher ke rent price DM mein") was unclear → new CTA
+  from the teammate: "agar aapko bhi outfits rent par chahiye toh comment karo RENT"; only the ending voiced again.
 
 ## Caption
 
@@ -67,7 +71,7 @@ Sabne guess kiya ₹50,000 😳
 Asli price sunke Mausi baith gayi 😂
 
 Aapka guess kya tha? Comment karo 👇
-Apne sheher ke rent price jaanne hain? Comment PRICE 💌
+Aapko bhi outfits rent par chahiye? Comment RENT 💌
 *Price udaharan hai. Har outfit ka rent alag hota hai.
 
 #LehengaOnRent #WeddingLook #GujaratiWedding #BudgetWedding #AnokhiReet
