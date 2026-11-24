@@ -2,16 +2,16 @@
 
 - **Date started:** 2026-11-24
 - **Made by:** dhruvifewtone-wq
-- **Status:** video 1 sent
+- **Status:** video 2 sent
 
 ## Brief
 
 - **About:** Her sister's wedding is in 6 hours and the darzi's phone is off. For 15 days he said "kal pakka"; now his
   shop's board says "Shaadi mein gaye hain". With 3 hours left, Prachi looks at her area's shops' outfits on her phone,
   tries one in a shop and is ready in an hour; the emergency outfit looks even better than the planned one. Two days
-  later the darzi arrives proudly with the blouse… two sizes too small. Backup: Anokhi Reet. Comment OUTFIT.
+  later the darzi arrives proudly with the blouse… two sizes too small. Anokhi Reet: outfits on rent. Comment RENT.
 - **For:** Young women, brides' sisters, wedding guests.
-- **One message:** When the darzi's "kal pakka" fails, your backup is a nearby shop's outfit. Comment "OUTFIT".
+- **One message:** When the darzi's "kal pakka" fails, a nearby shop's outfit on rent saves the day. Comment "RENT".
 - **Voice:** female (Vindemiatrix) as Prachi, the narrator; she also reads Mummy's and Rameshbhai's lines (speech
   bubbles show who speaks). Female Hindi grammar.
 - **Characters:** New: **Prachi** (20s, the bride's sister), **Rameshbhai** (the darzi, measuring tape round his neck).
@@ -31,7 +31,9 @@
 - The script's sounds (beep-beep, panic music, boing, dings, shutter rattle, ticking, ta-da, camera clicks, crowd,
   riser, doorbell, "FAIL" trombone, dhol) are shown visually; no sound effects, no "whoosh" (brand rule).
 - Key words in yellow (gold) highlight boxes; on-screen emojis as in the script.
-- CTA: "Comment karo OUTFIT" in voice, end card and caption. Pinned comment as written.
+- **Never call Anokhi Reet a "backup"** (teammate, 2026-11-24: it's our main brand). The ending just names it.
+- **CTA** (teammate, 2026-11-24): "Anokhi Reet. Agar aapko bhi outfits rent par chahiye… toh comment karo RENT." in
+  voice; end card "Outfits rent pe chahiye? Comment RENT 👇"; caption to match. Pinned comment as written.
 - Hashtags: 5, #GujaratiWedding dropped (teammate chose it, 2026-11-24).
 
 ## Script and storyboard (approved: yes, 2026-11-24)
@@ -47,21 +49,25 @@
 | 7 | Aur jo outfit *emergency* mein liya tha… / woh *plan wale se bhi* / *zyada accha* laga. | The wedding: Prachi in the peach lehenga beside the bride; a photographer's flash; relatives: "Prachi, ye toh plan wale se bhi accha hai!" | Emergency outfit > Plan wala outfit 😍 |
 | 8 | *Kahani khatam?* / Nahi… / *darzi abhi baaki* tha. | After the wedding: Prachi at home, feet up on a stool, relaxed. | Darzi abhi baaki hai 👀 |
 | 9 | *"Beta, blouse ready hai!* / Bola tha na… *pakka!"* | A "2 DIN BAAD" chip; the doorbell; Rameshbhai at the door, beaming, holding up a blouse; Prachi holds it against herself: it's tiny (two sizes too small); a big comic "FAIL" burst. | Shaadi ke 2 din BAAD… aur size bhi galat 😂 |
-| 10 | Darzi ka *"kal pakka"…* / *kabhi pakka* nahi hota. / Isliye backup: / *Anokhi Reet.* / *Comment* karo *OUTFIT.* | Prachi faces us holding up the tiny blouse; her phone turns around: Anokhi Reet; then the maroon end card: official logo, **Comment OUTFIT 👇**, anokhireet.in. | Darzi ka "kal" ≠ pakka 😂 · Anokhi Reet ✨ · Comment OUTFIT 👇 |
+| 10 | Darzi ka *"kal pakka"…* / *kabhi pakka* nahi hota. / *Anokhi Reet.* / Agar aapko bhi *outfits* / *rent par* chahiye… / toh *comment* karo *RENT.* | Prachi faces us holding up the tiny blouse; her phone turns around: Anokhi Reet; then the maroon end card: official logo, **Outfits rent pe chahiye? Comment RENT 👇**, anokhireet.in. | Darzi ka "kal" ≠ pakka 😂 · Anokhi Reet ✨ · Comment RENT 👇 |
 
 Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
 - Take 1: `output/female-kal-pakka-take1.mp3` (48 s) — approved: yes, 2026-11-24
+- Take 2: `output/female-kal-pakka-take2.mp3` (50 s) = take 1 up to "…kabhi pakka nahi hota." (44.55 s) + "Anokhi Reet. Agar
+  aapko bhi outfits rent par chahiye… toh comment karo RENT." (teammate, 2026-11-24)
 
 ## Video
 
 - `output/2026-11-24-kal-pakka.mp4` (51 s), video 1 sent 2026-11-24.
+- `output/2026-11-24-kal-pakka-v2.mp4` (51 s), video 2 sent 2026-11-24.
 
 ## Feedback rounds
 
-- (none yet)
+- Video 1 (2026-11-24): don't call Anokhi Reet a "backup" (it's the main brand); CTA → "Agar aapko bhi outfits rent
+  par chahiye toh comment karo RENT" → the ending voiced again and joined (take 2), end card and caption updated.
 
 ## Caption
 
@@ -72,7 +78,7 @@ Behen ki shaadi 6 ghante baad… aur darzi ka phone band 😭
 Prachi ko area ki dukaan se 1 ghante mein outfit mil gaya ✅
 Aur darzi? Shaadi ke 2 din baad aaya… galat size ke saath 😂
 
-Comment OUTFIT, apne area ke outfits DM mein 👇
+Outfits rent pe chahiye? Comment RENT, apne area ke outfits DM mein 👇
 Apne darzi ko tag karo 😂
 
 #DarziProblems #KalPakka #LehengaOnRent #WeddingSeason #AnokhiReet

@@ -142,29 +142,29 @@ addScene('c27', 'c29', {
 });
 
 // ================= S10a the punchline: "kal pakka… kabhi pakka nahi hota" — backup: =================
-addScene('c29', 'c32', {
+addScene('c29', 'c31', {
   svg: `<rect width="${W}" height="${H}" fill="#1A1A1A"/>` + comicPanel('s10p', 40, 420, 1000, 880, '#F4A0B8', bust('s10pr', PH, 540, 1360, 1.0)) +
     `<g id="s10bl"><g transform="scale(.5)">${blouseIcon()}</g></g><g id="s10ph">${phoneBackSVG(1.1)}</g>`,
   html: pillH(540, 352, 'c29', 'Darzi ka "kal" <span class="hl">≠ pakka</span> 😂'),
   noWm: true, cam: [1, 1.04], fy: 860,
   upd(t) {
-    const A = life('s10pr', t, { pivot: 0, mouth: talkMouth(t, true), brows: 'up', look: [0, 0], tilt: 4, L: [120, -60], hL: 'fist', R: t > T('c31') ? [120, -70] : [9, -14], hR: 'fist', seed: 2 });
-    atHand('s10bl', 's10pr', A.hl, -20, -60, -8); atHand('s10ph', 's10pr', A.hr, 20, -110, 6); op($('s10ph'), t > T('c31') ? 1 : 0);
+    const A = life('s10pr', t, { pivot: 0, mouth: talkMouth(t, true), brows: 'up', look: [0, 0], tilt: 4, L: [120, -60], hL: 'fist', R: t > T('c30') + .6 ? [120, -70] : [9, -14], hR: 'fist', seed: 2 });
+    atHand('s10bl', 's10pr', A.hl, -20, -60, -8); atHand('s10ph', 's10pr', A.hr, 20, -110, 6); op($('s10ph'), t > T('c30') + .6 ? 1 : 0);
   }
 });
 
 // ================= S10b the reveal + CTA: Anokhi Reet — Comment OUTFIT =================
-addScene('c32', 9999, {
+addScene('c31', 9999, {
   svg: `<rect width="${W}" height="${H}" fill="url(#mar)"/>` + rosettes('s11r', 540, 800, .16, C.gold) + `<circle cx="540" cy="780" r="420" fill="url(#glow)" opacity=".5"/>` +
     bust('s11p', PL_, 300, 1940, 1.15) + `<g id="s11ph"><g transform="scale(.46)">${phoneSVG('s11pp', 0, 0, 560, 1000, arFeedScreen('s11f'))}</g></g>` +
-    [[760, 560], [960, 900], [620, 1000]].map(([x, y], i) => `<g transform="translate(${x},${y})"><g data-t="c32+${(i * .12).toFixed(2)}" data-k="pop" data-bob="6" data-ph="${i}">${sparkleSVG(28, C.gold)}</g></g>`).join(''),
-  html: `<img id="s11wm" style="position:absolute;left:310px;top:190px;width:460px" src="">` + pillH(540, 330, 'c32+0.3', 'anokhireet.in', 'gold') +
-    pillH(540, 450, 'c32', '<span class="hl">Anokhi Reet</span> ✨', 'big') + pillH(540, 570, 'c33', 'Comment <span class="hl">OUTFIT</span> 👇', 'big'),
+    [[760, 560], [960, 900], [620, 1000]].map(([x, y], i) => `<g transform="translate(${x},${y})"><g data-t="c31+${(i * .12).toFixed(2)}" data-k="pop" data-bob="6" data-ph="${i}">${sparkleSVG(28, C.gold)}</g></g>`).join(''),
+  html: `<img id="s11wm" style="position:absolute;left:310px;top:190px;width:460px" src="">` + pillH(540, 330, 'c31+0.3', 'anokhireet.in', 'gold') +
+    pillH(540, 450, 'c31', '<span class="hl">Anokhi Reet</span> ✨', 'big') + pillH(540, 570, 'c32', 'Outfits <span class="hl">rent pe chahiye?</span>') + pillH(540, 680, 'c33b', 'Comment <span class="hl">RENT</span> 👇', 'big'),
   noWm: true, tin: .3, trans: 'rise', cam: [1, 1.03], fy: 820, capY: 1000,
   init() { $('s11wm').src = SEAL().replace('seal-on-maroon.svg', 'logo-text.svg'); },
   upd(t) {
     tf($('s11r'), 540, 800, 1, t * 5); op($('s11f-q'), 0); op($('s11f-real'), 1); tf($('s11f-feed'), 0, -((t * 200) % 1200));
-    const A = life('s11p', t, { pivot: 0, mouth: t > T('c33') + 1 ? 'grin' : talkMouth(t, true), brows: 'up', look: [.6, -.3], tilt: 4, R: [130, -70], hR: 'fist', L: [9, -14], wink: t > T('c33') + 1 && t < T('c33') + 1.5, seed: 2 });
+    const A = life('s11p', t, { pivot: 0, mouth: t > T('c33b') + 1 ? 'grin' : talkMouth(t, true), brows: 'up', look: [.6, -.3], tilt: 4, R: [130, -70], hR: 'fist', L: [9, -14], wink: t > T('c33b') + 1 && t < T('c33b') + 1.5, seed: 2 });
     atHand('s11ph', 's11p', A.hr, 50, -180, 6);
   }
 });
