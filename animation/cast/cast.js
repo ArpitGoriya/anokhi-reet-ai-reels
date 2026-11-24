@@ -121,3 +121,9 @@ const MEENABEN = { hairStyle: 'bun', gajra: true, top: '#7A3E6E', topD: '#5E2D55
 // (Do dukaan, do kahaniyan, 2026-11-23)
 const MAHESH = { male: true, mustache: true, glasses: true, hair: '#4A3A30', top: '#2F7A6B', topD: '#235C51', skin: '#A86B48', skin2: '#93593A', embroidery: true };
 const KIRAN = { hairStyle: 'braid', top: C.marigold, topD: '#C9821E', pallu: '#C0262D', border: C.gold, skin: '#C08460', skin2: '#A86E4E', sindoor: true, earrings: true, skirt: { c: '#A3262A', d: '#7A1B2A', b: C.gold, w: 205 } };
+// Ishita (20s): a wedding guest who rents a heavy maroon lehenga on a small budget; everyone guesses it cost a fortune.
+// (Mausi is the cast's MAUSI.) (Asli price, 2026-11-24)
+const ISHITA = {
+  wedding: { hairStyle: 'long', top: '#7A1B2A', topD: '#5E1420', pallu: C.gold, border: C.gold, skin: '#C98B62', skin2: '#B9784F', earrings: true, necklace: true, bindi: true, skirt: { c: '#7A1B2A', d: '#5E1420', b: C.gold, w: 225 } },
+  home: { hairStyle: 'pony', top: '#4F86C6', topD: '#3A6AA3', skin: '#C98B62', skin2: '#B9784F', earrings: true, bindi: true, skirt: { c: '#F2EADF', d: '#D8CDBE', b: '#D8CDBE', w: 170 } },
+};

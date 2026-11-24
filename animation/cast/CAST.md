@@ -43,6 +43,7 @@ characters are added here after their first reel (add them to `cast.js`, to the 
 | `MAHESH` | **Maheshbhai**, 40s-50s, rental shop owner, not online; customers find him only by his board. | Teal kurta, glasses, moustache | Do dukaan, do kahaniyan (2026-11-23) |
 | `KIRAN` | **Kiranben**, 30s-40s, rental shop owner next door, on Anokhi Reet; calm and smiling. | Braid, marigold kurti, red dupatta, maroon skirt | Do dukaan, do kahaniyan |
 | `dress(PAPA.shop, {…})` | **Kavya's Papa** (Shaadi season): the cast's Papa in a white kurta-pajama with glasses. | White kurta-pajama, glasses | Shaadi season 2026 (2026-11-23) |
+| `ISHITA.wedding` / `.home` | **Ishita**, 20s, a wedding guest who rents a heavy maroon lehenga on a small budget. | Long hair; maroon lehenga with gold dupatta / blue top at home | Asli price (2026-11-24) |
 
 Ideas for the cast's next members (make them when a story needs them): a young woman who rents for college
 functions, a groom or brother, a kid, a vendor on the Anokhi Reet app.

@@ -681,3 +681,47 @@ function ghodiSVG(groom) {
   if (groom) s += `<g transform="translate(0,-160) scale(.42)">${person('ghodi-groom', NOSKIRT(groom))}</g>`;
   return s;
 }
+
+// ===== Asli price (2026-11-24): wedding hall, chair, round table, bank screen, wedding invite =====
+// weddingHallBG(id): a wedding hall: marigold drapes, fairy lights (class twinkle), a flower arch at the back, floor
+function weddingHallBG(id) {
+  let s = `<rect width="${W}" height="${H}" fill="#F6E3CF"/><rect y="${FLOOR - 300}" width="${W}" height="300" fill="#EFD3B6"/>`;
+  s += `<g transform="translate(540,${FLOOR - 60})"><path d="M-300,0 V-520 Q-300,-760 0,-780 Q300,-760 300,-520 V0" fill="none" stroke="#C0262D" stroke-width="40"/>` +
+    [...Array(22)].map((_, i) => { const a = Math.PI * (i / 21), x = -Math.cos(a) * 300, y = -520 - Math.sin(a) * 250; return `<circle cx="${x.toFixed(0)}" cy="${y.toFixed(0)}" r="20" fill="${i % 2 ? C.marigold : '#E8962E'}" stroke="${OL}" stroke-width="3"/>`; }).join('') +
+    [-300, 300].map(x => [...Array(9)].map((_, k) => `<circle cx="${x}" cy="${-500 + k * 56}" r="18" fill="${k % 2 ? C.marigold : '#F4F1EC'}" stroke="${OL}" stroke-width="3"/>`).join('')).join('') + `</g>`;
+  for (const x of [0, W]) s += `<path d="M${x},0 Q${x ? x - 200 : 200},500 ${x},${FLOOR - 200}" fill="#E8962E" opacity=".85" stroke="${OL}" stroke-width="4"/><path d="M${x},0 Q${x ? x - 120 : 120},420 ${x},900" fill="${C.marigold}" stroke="${OL}" stroke-width="4"/>`;
+  s += `<path d="M0,40 Q${W / 2},160 ${W},40" fill="none" stroke="#6E6A64" stroke-width="3"/>`;
+  for (let i = 1; i < 18; i++) { const x = i * W / 18, y = 40 + Math.sin(i / 18 * Math.PI) * 120; s += `<circle class="twinkle" data-i="${i}" cx="${x}" cy="${y + 8}" r="9" fill="#FFE9A8" stroke="${OL}" stroke-width="2"/>`; }
+  s += `<rect y="${FLOOR}" width="${W}" height="${H - FLOOR}" fill="#B98A5E"/>`;
+  for (let x = 0; x < W; x += 180) s += `<path d="M${x},${FLOOR} L${x - 120},${H}" stroke="#A47648" stroke-width="5"/>`;
+  return s;
+}
+// chairBackSVG / chairFrontSVG (x, y): a banquet chair a bust sits IN (y = the character's waist): back before bust(),
+// front (seat + legs) after it
+function chairBackSVG(x, y, col = '#C0262D') {
+  return `<g transform="translate(${x},${y})"><rect x="-150" y="-330" width="300" height="360" rx="60" fill="${col}" stroke="${OL}" stroke-width="${OW}"/><rect x="-120" y="-300" width="240" height="300" rx="44" fill="none" stroke="${C.gold}" stroke-width="8"/></g>`;
+}
+function chairFrontSVG(x, y, col = '#C0262D') {
+  return `<g transform="translate(${x},${y})"><rect x="-170" y="0" width="340" height="80" rx="24" fill="${col}" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<path d="M-150,80 L-160,260 M150,80 L160,260" stroke="${C.gold}" stroke-width="16" stroke-linecap="round"/></g>`;
+}
+// roundTableSVG(x, y, w, cloth): a round banquet table with a cloth (white by default) and a flower centrepiece (top at y)
+function roundTableSVG(x, y, w = 760, cloth = '#FFFFFF') {
+  return `<g transform="translate(${x},${y})"><ellipse cx="0" cy="0" rx="${w / 2}" ry="70" fill="${cloth}" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<path d="M${-w / 2},0 L${-w / 2 + 30},260 Q0,300 ${w / 2 - 30},260 L${w / 2},0" fill="${cloth}" stroke="${OL}" stroke-width="${OW}"/><path d="M${-w / 2 + 20},120 Q0,160 ${w / 2 - 20},120" stroke="${C.gold}" stroke-width="10" fill="none"/>` +
+    `<rect x="-20" y="-70" width="40" height="60" rx="8" fill="#DFF0F6" stroke="${OL}" stroke-width="3"/>` + [[-30, -90], [0, -110], [30, -90], [-12, -76], [14, -78]].map(([a, b], i) => `<circle cx="${a}" cy="${b}" r="18" fill="${i % 2 ? '#E26A8A' : C.marigold}" stroke="${OL}" stroke-width="3"/>`).join('') + `</g>`;
+}
+// bankScreen(balance): a plain, made-up bank app screen for phoneSVG(…, 560, 1000) (no real bank): "Balance" + amount
+function bankScreen(balance = '₹8,000') {
+  return `<rect x="-264" y="-484" width="528" height="968" rx="42" fill="#F4F6FA"/><path d="M-264,-442 Q-264,-484 -222,-484 L222,-484 Q264,-484 264,-442 L264,-330 L-264,-330 Z" fill="#2E4A7A"/>` +
+    `<text x="-220" y="-392" font-family="Inter" font-weight="800" font-size="34" fill="#fff">My Bank</text>` +
+    `<rect x="-224" y="-280" width="448" height="240" rx="24" fill="#fff" stroke="#D8DEE8" stroke-width="3"/><text x="-190" y="-215" font-family="Inter" font-weight="700" font-size="30" fill="#6B7280">Balance</text>` +
+    `<text x="-190" y="-120" font-family="Inter" font-weight="900" font-size="84" fill="${C.text}">${balance}</text>` +
+    [0, 1, 2].map(i => `<rect x="-224" y="${0 + i * 110}" width="448" height="90" rx="18" fill="#fff" stroke="#D8DEE8" stroke-width="3"/><rect x="-196" y="${28 + i * 110}" width="${180 - i * 30}" height="16" rx="8" fill="#E6E9EF"/>`).join('');
+}
+// inviteCardSVG(): a wedding invitation card (maroon with gold border, a kalash), centred on (0,0)
+function inviteCardSVG() {
+  return `<g transform="rotate(-8)"><rect x="-110" y="-150" width="220" height="300" rx="14" fill="#7A1B2A" stroke="${OL}" stroke-width="${OW}"/><rect x="-94" y="-134" width="188" height="268" rx="10" fill="none" stroke="${C.gold}" stroke-width="5"/>` +
+    `<path d="M-30,-30 Q-40,30 0,40 Q40,30 30,-30 Z" fill="${C.gold}" stroke="${OL}" stroke-width="3"/><path d="M-16,-30 Q0,-70 16,-30" fill="#3E8E4A" stroke="${OL}" stroke-width="3"/>` +
+    `<text y="90" text-anchor="middle" font-family="Inter" font-weight="900" font-size="26" fill="${C.gold}">SHUBH VIVAH</text></g>`;
+}

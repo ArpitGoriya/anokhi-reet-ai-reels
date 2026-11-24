@@ -3,6 +3,13 @@
 Every reel adds at least one improvement to the engine or library and writes it here (newest first).
 See [GUIDE.md](GUIDE.md) section 8.
 
+## 2026-11-24: wedding hall, banquet chair, round table, bank screen, invite card, Ishita (Asli price)
+
+- **New props:** `weddingHallBG(id)` (marigold drapes, fairy lights, flower arch), `chairBackSVG`/`chairFrontSVG` (a
+  banquet chair a bust sits in), `roundTableSVG(x, y, w, cloth)`, `bankScreen(balance)` (a plain made-up bank app),
+  `inviteCardSVG()`.
+- **New cast:** Ishita (`ISHITA.wedding`, `ISHITA.home`). Mausi reuses the cast's `MAUSI`.
+
 ## 2026-11-23: toran, BUSY stamp, wedding cake, magnifier, rupee note, ghodi (Shaadi season 2026)
 
 - **New props:** `toranSVG(w, y)` (marigold and mango-leaf toran), `busyStampSVG(text)`, `weddingCakeSVG(id, labels, tiny)`

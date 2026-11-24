@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-24
 - **Made by:** dhruvifewtone-wq
-- **Status:** script approved
+- **Status:** video 1 sent
 
 ## Brief
 
@@ -14,8 +14,8 @@
 - **One message:** A look everyone remembers doesn't need a big budget: rent it. Comment your guess, and "RENT".
 - **Voice:** female (Vindemiatrix), as the narrator (as in all recent reels); she also reads the relatives' guesses so
   scene 3 isn't silent.
-- **Characters:** New: **Ishita** (20s, the guest who rents) and **Mausi** (50s, her aunt). Cousins and Bhabhi from the
-  cast (`KHUSHI`, `GUEST_W1`, `GUEST_W2`).
+- **Characters:** New: **Ishita** (20s, the guest who rents). From the cast: **Mausi** (`MAUSI`, from "Hetal's
+  lehenga"), cousins and Bhabhi (`KHUSHI`, `GUEST_W1`, `GUEST_W2`), a shop owner (`SHITAL`).
 - **Length:** about 50 s (the voice decides).
 - **Music:** none (voice only).
 - **Special wishes:** open loop: the price tag stays "₹ ??" until scene 7; the app stays hidden (phone from the back)
@@ -56,11 +56,11 @@ Voice text: [`script.txt`](script.txt).
   "Anokhi… Reet. … comment karo RENT") — not used (teammate changes, 2026-11-24)
 - Take 3: `output/female-asli-price-take3.mp3` (44 s, whole script again with the 4 changes) — kept except 2 lines
 - Take 4: `output/female-asli-price-take4.mp3` (46 s) = new first line (`start-b`, "…Mausi chaunk gayi") + take 3
-  from 5.45 s to 37.05 s + new ending (`end-b`, "App ka naam tha… Anokhi Reet! …comment karo RENT") — approved: not yet
+  from 5.45 s to 37.05 s + new ending (`end-b`, "App ka naam tha… Anokhi Reet! …comment karo RENT") — approved: yes, 2026-11-24
 
 ## Video
 
-- (not made yet)
+- `output/2026-11-24-asli-price.mp4` (47 s), video 1 sent 2026-11-24.
 
 ## Feedback rounds
 
@@ -90,8 +90,8 @@ Aapko bhi outfits rent par chahiye? Comment RENT 💌
 
 ## Added to the library (at least two per reel)
 
-- (planned) A wedding hall set, a swinging price tag that unblurs, a plain bank-balance screen, and the new cast Ishita
-  and Mausi.
+- `weddingHallBG`, `chairBackSVG`/`chairFrontSVG`, `roundTableSVG`, `bankScreen`, `inviteCardSVG` in `engine/props.js`.
+- New cast: Ishita (`ISHITA`).
 
 ## Suggested default (for the owner)
 
@@ -99,4 +99,5 @@ Aapko bhi outfits rent par chahiye? Comment RENT 💌
 
 ## Lessons
 
-- (later)
+- Check `cast.js` for a name before adding a character (MAUSI already existed; a duplicate `const` stops the preview).
+- White cloth behind captions makes them hard to read: use a darker cloth there.
