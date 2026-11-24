@@ -140,7 +140,7 @@ addScene('c28', 'c34', {
   upd(t) {
     life('s8h', t, { mouth: 'grin', brows: 'up', look: [.5, -.2], tilt: 4, R: [9, -14], L: [100, -40], hL: 'open', sway: 2, seed: 2 });
     const k = P(t, T('c31'), 1.0, E.io); tf($('s8out'), k * 160, -k * 40, 1); op($('s8out'), 1 - clamp((k - .7) / .3));
-    jarFill('s8j', 8, t, T('c32'), 1.6);
+    jarFill('s8j', 8, t, T('c33b'), 1.4);
   }
 });
 

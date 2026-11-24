@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-24
 - **Made by:** dhruvifewtone-wq
-- **Status:** video 1 sent
+- **Status:** video 2 sent
 
 ## Brief
 
@@ -28,7 +28,8 @@
 - **Story prices** (₹40,000, ₹25,000, ₹18,000, total ₹83,000) are Hetal's story, with "Udaharan" on screen; ₹40,000
   kept (teammate, 2026-11-24) as a new lehenga for a new wedding (her first reel's lehenga was ₹38,000).
 - **"Scam" is a playful hook:** scene 3 shows "Scam = aadat, fraud nahi 😉" so nobody feels misled.
-- **"Ab woh band nahi… kamaate hain"** kept as the story's line, with no numbers (as in "₹6,000 ki sherwani").
+- **"Ab almari mein kapde band nahi pade rahenge… aur aapko kama ke denge"** (teammate, 2026-11-24), the story's line,
+  with no numbers.
 - **"Almari mein pade kapde rent pe do"** (teammate, 2026-11-24) instead of "almari mein pade sabooth? Unhe rent pe do".
 - **"Download the Anokhi Reet app now"** on screen at the reveal (about 47 s), with the official App Store and Google
   Play badges (`brand/logos/app-store-badge.svg`, `google-play-badge.svg`) (teammate, 2026-11-24).
@@ -51,7 +52,7 @@
 | 5 | *"Mujhe sabooth chahiye.* / *Chalo aapke ghar."* | The inspector stands up, clicks on her torch (a beam lights up), and walks out; footprints. | Sabooth dhoondhne chalo 🔦 |
 | 6 | Aur ye raha *sabooth.* / *₹83,000* ke outfits… / sirf *ek-ek baar* pehne… / *almari mein band.* | Hetal's dark bedroom; the torch beam finds the almari, the doors open slowly: lehengas in plastic covers, each with a yellow EVIDENCE tag: "₹40,000 · 1 baar", "₹25,000 · 1 baar", "₹18,000 · 1 baar"; a total "₹83,000 · almari mein BAND 🔒". "Udaharan". | SCAM = Ek din ke liye mehenga outfit khareedna 🚨 |
 | 7 | *"Matlab…* / scam karne wali *koi aur nahi…* / *main khud thi?!"* / "Har saal. *Har ghar mein.*" | Hetal stares at her almari, jaw drops, hands on cheeks (a drawn record-scratch zigzag); the inspector nods slowly. | "Scammer… main khud thi?!" 😱 |
-| 8 | Case solve karne ke *do tareeke.* / Agli shaadi ka *outfit rent* karo… / aur almari mein pade *kapde* / *rent pe do.* / Ab woh *band nahi…* / *kamaate* hain. | A second file opens, stamped "SOLUTION ✅" (app name hidden): left panel, Hetal in a new look with a small "RENT" tag; right panel, the evidence lehengas leave the almari and coins drop into a jar. | ✅ Naya outfit RENT karo · ✅ Purane RENT pe do 💰 |
+| 8 | Case solve karne ke *do tareeke.* / Agli shaadi ka *outfit rent* karo… / aur almari mein pade *kapde* / *rent pe do.* / Ab *almari mein kapde* / *band nahi* pade rahenge… / aur aapko *kama ke denge.* | A second file opens, stamped "SOLUTION ✅" (app name hidden): left panel, Hetal in a new look with a small "RENT" tag; right panel, the evidence lehengas leave the almari and coins drop into a jar. | ✅ Naya outfit RENT karo · ✅ Purane RENT pe do 💰 |
 | 9 | *"Case closed."* | A big red stamp thumps on the file: "CASE CLOSED ✅"; Hetal smiles and salutes, the inspector tips her hat. | CASE CLOSED ✅ |
 | 10 | *Anokhi Reet.* / Kya aap bhi *outfits rent* par / lena chahte ho? / Toh *comment* karo *RENT.* | The inspector holds up her phone: the Anokhi Reet app, with **"Download the Anokhi Reet app now"** and the official App Store and Google Play badges; then the maroon end card: official logo, **Outfits rent pe chahiye? Comment RENT 👇**, anokhireet.in. | Anokhi Reet ✨ · Outfits rent pe chahiye? Comment RENT 👇 |
 
@@ -64,10 +65,13 @@ Voice text: [`script.txt`](script.txt).
   outfits rent par lena chahte ho? Toh comment karo RENT." — not used (teammate change, 2026-11-24)
 - Take 3: `output/female-shaadi-scam-take3.mp3` (52 s) = take 2 with "aur almari mein pade kapde rent pe do" (40.7 s)
   voiced again and joined — approved: yes, 2026-11-24
+- Take 4: `output/female-shaadi-scam-take4.mp3` (54 s) = take 3 with "Ab almari mein kapde band nahi pade rahenge… aur
+  aapko kama ke denge" (43.3 s) voiced again and joined (teammate, 2026-11-24)
 
 ## Video
 
 - `output/2026-11-24-shaadi-scam.mp4` (54 s), video 1 sent 2026-11-24.
+- `output/2026-11-24-shaadi-scam-v2.mp4` (55 s), video 2 sent 2026-11-24.
 
 ## Feedback rounds
 
@@ -75,6 +79,8 @@ Voice text: [`script.txt`](script.txt).
   last line voiced again and joined (take 2); end card and caption updated.
 - Voice take 2 (2026-11-24): "almari mein pade sabooth, unhe rent pe do" → "almari mein pade kapde rent pe do" (take 3);
   at 47 s write "Download the Anokhi Reet app now" → on the reveal, with the official App Store and Google Play badges.
+- Video 1 (2026-11-24): at 45 s → "Ab almari mein kapde band nahi pade rahenge aur aapko kama ke denge" → voiced and
+  joined (take 4), captions re-timed, the coins now drop into the jar on "kama ke denge".
 
 ## Caption
 
