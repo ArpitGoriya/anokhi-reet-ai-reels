@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-24
 - **Made by:** dhruvifewtone-wq
-- **Status:** script approved
+- **Status:** voice approved
 
 ## Brief
 
@@ -53,7 +53,7 @@ Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- Take 1: `output/female-kal-pakka-take1.mp3` (48 s) — sent, waiting for approval
+- Take 1: `output/female-kal-pakka-take1.mp3` (48 s) — approved: yes, 2026-11-24
 
 ## Feedback rounds
 
