@@ -1,11 +1,69 @@
 // Caption chunks: [id, Roman Hinglish caption (*gold* words), number of script.txt words it covers]
 // tools/caption_timing.py fills STARTS / VOICE_END / DURATION from the voice (re-run after every voice take).
 const CHUNKS = [
-  ['c1', 'Ek *sawaal*:', 2],
-  ['c2', 'shaadi ka outfit *kitni baar* pehnte ho?', 6],
-  ['c3', 'Ye hain *Hetal ben*.', 4],
-  ['c4', 'Follow karo *Anokhi Reet.*', 4],
+  ['c1', 'Riddhi ke bete ki *₹6,000 ki sherwani…*', 8],
+  ['c2', 'ek baar pehni… aur *chhoti ho gayi.*', 7],
+  ['c3', 'Riddhi ne *drawer khola…* aur gina.', 6],
+  ['c4', '*Chaar outfits.*', 2],
+  ['c5', 'Har ek, *ek shaadi* mein pehna…', 6],
+  ['c6', 'aur ab *sab chhote.*', 4],
+  ['c7', '*Total?* *Unees hazaar.*', 3],
+  ['c8', 'Ek-ek baar pehne *kapdon* mein.', 5],
+  ['c9', '*Usi shehar* mein, usi raat…', 5],
+  ['c10', 'ek aur *maa pareshaan* thi.', 5],
+  ['c11', 'Krupa boli, *"Shaadi agle hafte hai…*', 6],
+  ['c12', 'aur iske liye *₹6,000 ki sherwani?*', 7],
+  ['c13', '*Do mahine* mein chhoti ho jayegi!"', 6],
+  ['c14', 'Riddhi ke drawer mein *bilkul wahi size* thi…', 8],
+  ['c15', 'jo Krupa *dhoondh rahi* thi.', 5],
+  ['c16', 'Par dono ko ek doosre ka *pata hi nahi* tha.', 10],
+  ['c17', 'Aur *Riddhi?*', 2],
+  ['c18', '*Pichhle saal* wahi Krupa thi.', 5],
+  ['c19', 'Toh Riddhi ne *teen kaam* kiye.', 6],
+  ['c20', 'Har outfit ki *photo li.*', 5],
+  ['c21', '*Age aur size* likha.', 4],
+  ['c22', 'Aur *rent pe list* kar diya.', 6],
+  ['c23', 'Krupa ne *Anokhi Reet* pe dekha…', 6],
+  ['c24', 'beta shaadi mein *raja jaisa* dikha.', 6],
+  ['c25', 'Aur Riddhi ka drawer?', 4],
+  ['c26', '*Kamaane laga.*', 2],
+  ['c27', 'Agar aapko bhi apne *bachchon ke outfits*', 7],
+  ['c28', '*rent par dene* hain…', 4],
+  ['c29', 'toh *comment* karo *OUTFIT.*', 4],
 ];
-// Chunk start times (s): placeholder until a voice exists.
-const STARTS = [0.2, 1.6, 4.4, 6.6];
-const VOICE_END = 8.6, DURATION = 9.6;
+
+// Chunk start times (s): tools/caption_timing.py (faster-whisper, 129 of 154 words matched), voice female-chhoti-sherwani-take2.mp3; c2, c3, c4, c5, c7, c8, c16, c18, c22, c24, c26 nudged by hand to the pauses.
+const STARTS = [
+  0.20, 3.00, 5.05, 7.20, 8.25, 10.26, 11.80, 13.85, 15.72, 17.45, 19.03, 21.08, 23.31, 25.15, 27.54, 28.90, 31.33, 32.25, 34.24, 35.98, 37.41, 38.60, 40.17, 42.05, 44.13, 45.25, 46.29, 48.26, 49.32];
+// When each script word of a chunk is spoken (drives the word-by-word highlight).
+const WORDS = [
+  [0.28, 0.68, 0.86, 1.18, 1.38, 1.7, 2.02, 2.2],
+  [3.08, 3.48, 3.88, 4.2, 4.32, 4.61, 4.79],
+  [5.13, 5.62, 6.02, 6.34, 6.94, 6.99],
+  [7.28, 8.1],
+  [8.33, 8.87, 9.21, 9.53, 9.83, 9.97],
+  [10.34, 10.39, 10.66, 10.78],
+  [11.88, 12.54, 13.68],
+  [13.93, 14.64, 14.84, 15.06, 15.3],
+  [15.8, 15.85, 16.3, 16.72, 16.96],
+  [17.53, 17.58, 17.9, 18.06, 18.44],
+  [19.11, 19.16, 19.96, 20.28, 20.56, 20.84],
+  [21.16, 21.3, 21.52, 21.64, 21.93, 22.48, 22.6],
+  [23.39, 23.44, 23.86, 23.96, 24.22, 24.34],
+  [25.23, 25.28, 25.68, 25.98, 26.28, 26.72, 26.94, 27.24],
+  [27.62, 27.67, 27.92, 28.2, 28.36],
+  [28.98, 29.46, 29.98, 30.14, 30.36, 30.64, 30.76, 30.91, 31.02, 31.28],
+  [31.41, 31.46],
+  [32.33, 33.11, 33.41, 33.79, 34.13],
+  [34.32, 34.37, 34.7, 34.94, 35.22, 35.34],
+  [36.06, 36.11, 36.54, 36.66, 36.96],
+  [37.49, 37.54, 37.86, 38.16],
+  [38.68, 39.04, 39.24, 39.36, 39.6, 39.72],
+  [40.25, 40.69, 40.86, 41.19, 41.42, 41.56],
+  [42.13, 42.81, 43.15, 43.41, 43.67, 43.97],
+  [44.21, 44.26, 44.56, 44.69],
+  [45.33, 46.05],
+  [46.37, 46.82, 47.22, 47.36, 47.58, 47.9, 47.98],
+  [48.34, 48.64, 48.78, 49.02],
+  [49.4, 49.46, 49.82, 50.02]];
+const VOICE_END = 50.54, DURATION = 52.03;

@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-24
 - **Made by:** dhruvifewtone-wq
-- **Status:** script approved
+- **Status:** voice approved
 
 ## Brief
 
@@ -53,7 +53,8 @@ Voice text: [`script.txt`](script.txt).
 ## Voice-over
 
 - Take 1: `output/female-chhoti-sherwani-take1.mp3` (49 s) — not used (teammate changes, 2026-11-24)
-- Take 2: `output/female-chhoti-sherwani-take2.mp3` (51 s) = new first line + take 1 from 4.25 s to 45.47 s + new CTA — sent, waiting for approval
+- Captions timed to take 2 (`tools/caption_timing.py`, starts nudged to the pauses).
+- Take 2: `output/female-chhoti-sherwani-take2.mp3` (51 s) = new first line + take 1 from 4.25 s to 45.47 s + new CTA — approved: yes, 2026-11-24
 
 ## Feedback rounds
 
