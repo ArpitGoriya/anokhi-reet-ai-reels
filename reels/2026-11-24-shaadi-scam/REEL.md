@@ -33,7 +33,8 @@
 - The script's sounds (siren, bass, file slam, typewriter, lamp hum, "dun", footsteps, creak, record scratch, chime,
   stamp "THUNK", jingle) are shown visually; no sound effects, no "whoosh" (brand rule).
 - Key words in yellow (gold) highlight boxes; on-screen emojis as in the script.
-- CTA: "Comment karo RENT" in voice, end card and caption. Pinned comment as written.
+- **CTA** (teammate, 2026-11-24): "Kya aap bhi outfits rent par lena chahte ho? Toh comment karo RENT." in voice; end
+  card "Outfits rent pe chahiye? Comment RENT 👇"; caption to match. Pinned comment as written.
 - Hashtags: 5, #GujaratiWedding dropped (teammate chose it, 2026-11-24).
 
 ## Script and storyboard (approved: yes, 2026-11-24)
@@ -49,17 +50,20 @@
 | 7 | *"Matlab…* / scam karne wali *koi aur nahi…* / *main khud thi?!"* / "Har saal. *Har ghar mein.*" | Hetal stares at her almari, jaw drops, hands on cheeks (a drawn record-scratch zigzag); the inspector nods slowly. | "Scammer… main khud thi?!" 😱 |
 | 8 | Case solve karne ke *do tareeke.* / Agli shaadi ka *outfit rent* karo… / aur almari mein pade sabooth? / Unhe *rent pe do.* / Ab woh *band nahi…* / *kamaate* hain. | A second file opens, stamped "SOLUTION ✅" (app name hidden): left panel, Hetal in a new look with a small "RENT" tag; right panel, the evidence lehengas leave the almari and coins drop into a jar. | ✅ Naya outfit RENT karo · ✅ Purane RENT pe do 💰 |
 | 9 | *"Case closed."* | A big red stamp thumps on the file: "CASE CLOSED ✅"; Hetal smiles and salutes, the inspector tips her hat. | CASE CLOSED ✅ |
-| 10 | *Anokhi Reet.* / Kya aap bhi is scam ke *victim* ho? / *Comment* karo *RENT.* | The inspector holds up her phone: the Anokhi Reet app; then the maroon end card: official logo, **Victim ho? Comment RENT 👇**, anokhireet.in. | Anokhi Reet ✨ · Victim ho? Comment RENT 👇 |
+| 10 | *Anokhi Reet.* / Kya aap bhi *outfits rent* par / lena chahte ho? / Toh *comment* karo *RENT.* | The inspector holds up her phone: the Anokhi Reet app; then the maroon end card: official logo, **Outfits rent pe chahiye? Comment RENT 👇**, anokhireet.in. | Anokhi Reet ✨ · Outfits rent pe chahiye? Comment RENT 👇 |
 
 Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- Take 1: `output/female-shaadi-scam-take1.mp3` (52 s) — sent, waiting for approval
+- Take 1: `output/female-shaadi-scam-take1.mp3` (52 s) — not used (teammate change, 2026-11-24)
+- Take 2: `output/female-shaadi-scam-take2.mp3` (52 s) = take 1 up to "Anokhi Reet." (48.5 s) + the new CTA "Kya aap bhi
+  outfits rent par lena chahte ho? Toh comment karo RENT." — sent, waiting for approval
 
 ## Feedback rounds
 
-- (none yet)
+- Voice take 1 (2026-11-24): CTA → "Kya aap bhi outfits rent par lena chahte ho toh comment karo RENT" → only the
+  last line voiced again and joined (take 2); end card and caption updated.
 
 ## Caption
 
@@ -73,7 +77,7 @@ Sabooth: almari mein band ₹83,000 ke outfits 🔒 (udaharan)
 Solution ✅ Agli shaadi ka outfit rent karo · Almari wale rent pe do 💰
 Case closed 🕵️‍♀️
 
-Victim ho? Comment RENT 👇 Us dost ko tag karo jo har shaadi mein naya khareedti hai 😂
+Outfits rent pe chahiye? Comment RENT 👇 Us dost ko tag karo jo har shaadi mein naya khareedti hai 😂
 
 #ShaadiScam #WeddingSeason #LehengaOnRent #RentAndEarn #AnokhiReet
 ```
