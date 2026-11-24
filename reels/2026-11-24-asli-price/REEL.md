@@ -37,10 +37,10 @@
 
 | # | Voice line (caption) | On screen (scene, characters and what they do) | Label / title |
 |---|---|---|---|
-| 1 | Shaadi mein sab poochh rahe the, / *"Kitne ka hai?"…* / *asli price* sunke / *Mausi baith gayi.* | **Hook from frame 1:** a wedding hall (marigold drapes, fairy lights). Mausi drops onto a chair, hand on her chest, eyes wide; little "?" and "₹" fly around. | Big title from frame 1: **Asli price sunke Mausi baith gayi 😳** |
+| 1 | Shaadi mein sab poochh rahe the, / *"Lehenga kitne ka hai?"…* / *asli price* sunke / *Mausi baith gayi.* | **Hook from frame 1:** a wedding hall (marigold drapes, fairy lights). Mausi drops onto a chair, hand on her chest, eyes wide; little "?" and "₹" fly around. | Big title from frame 1: **Asli price sunke Mausi baith gayi 😳** |
 | 2 | Ishita ne *entry* li… / aur *poora hall ruk gaya.* | Ishita walks in slowly down the middle in a heavy embroidered maroon lehenga; guests' heads turn, a camera flashes, sparkles. | Entry 🔥 |
-| 3 | Cousin boli, *"Pakka ₹40,000 ka hoga."* / Doosri boli, *"Pagal hai? Designer hai,* / *₹60,000 se kam nahi."* / Aur Bhabhi, *"Ahmedabad se liya hoga,* / *₹50,000 toh hoga hi."* | Relatives at a round table; speech bubbles pop one by one over Cousin 1, Cousin 2 and Bhabhi; the guesses stack at the top. | ₹40,000? ₹50,000? ₹60,000? 🤔 |
-| 4 | *Aapka guess* kya hai? / Price video ke *end* mein… / pehle *comment* mein guess likho. | Freeze frame (a white flash, picture stops); a big price tag swings on Ishita's lehenga, blurred with "₹ ??". | Aapka guess? 👇 · Price end mein… |
+| 3 | Cousin boli, *"Pakka ₹40,000 ka hoga."* / Doosri boli, *"Pagal hai? Designer hai,* / *₹60,000 se kam nahi."* / Aur Bhabhi toh boli, *"Pakka Ahmedabad se liya hoga,* / *₹50,000 toh hoga hi."* | Relatives at a round table; speech bubbles pop one by one over Cousin 1, Cousin 2 and Bhabhi; the guesses stack at the top. | ₹40,000? ₹50,000? ₹60,000? 🤔 |
+| 4 | Price video ke *end* mein… / pehle *comment* mein batao, / *aapka guess* kya hai? | Freeze frame (a white flash, picture stops); a big price tag swings on Ishita's lehenga, blurred with "₹ ??". | Aapka guess? 👇 · Price end mein… |
 | 5 | *Ek hafte pehle…* / Ishita ke account mein *sirf ₹8,000* the. / Aur use bhi ek aisa look chahiye tha / jo *yaad rahe.* | Flashback (soft sepia edge, "Ek hafte pehle…" tag): Ishita on her bed with her phone showing a plain bank screen "Balance ₹8,000"; a wedding invite on the table; she sighs. "Udaharan". | Budget: ₹8,000 😬 · Udaharan |
 | 6 | Usne apne *sheher ki dukaano* ke outfits / *phone pe dekhe…* / *budget* daala… / aur ek dukaan pe jaake *trial* kiya. | Ishita's phone seen **from the back** (city, occasion, budget chips light up as icons beside it); then she walks into a nearby rental shop, tries the maroon lehenga and smiles in the mirror. Steps pop: Dekha → Trial kiya → Final ✅ | Dekha → Trial kiya → Final ✅ |
 | 7 | *Asli price?* / *₹3,500.* / *Rent pe.* | Back at the wedding: the blurred tag spins and reveals **"₹3,500 RENT"**; Mausi falls back into her chair again, cousins' jaws drop. "Udaharan". | ₹3,500 RENT 😳💸 |
@@ -53,7 +53,8 @@ Voice text: [`script.txt`](script.txt).
 - Take 1: `output/female-asli-price-take1.mp3` (44 s) — not used: the last line was unclear (teammate, 2026-11-24). The voice says "saadhe teen hazaar"
   for ₹3,500 (same amount as the script's "paintees sau").
 - Take 2: `output/female-asli-price-take2.mp3` (46 s) = take 1 up to "Rent pe." (37.6 s) + the new ending (`end-a`:
-  "Anokhi… Reet. … comment karo RENT") — approved: not yet
+  "Anokhi… Reet. … comment karo RENT") — not used (teammate changes, 2026-11-24)
+- Take 3: `output/female-asli-price-take3.mp3` (44 s, whole script again with the 4 changes) — approved: not yet
 
 ## Video
 
@@ -63,6 +64,10 @@ Voice text: [`script.txt`](script.txt).
 
 - Voice take 1 (2026-11-24): the last line ("PRICE likho, apne sheher ke rent price DM mein") was unclear → new CTA
   from the teammate: "agar aapko bhi outfits rent par chahiye toh comment karo RENT"; only the ending voiced again.
+- Voice take 2 (2026-11-24): "Anokhi Reet" at 38 s sounded weird; opening → "lehenga kitne ka hai"; 14-15 s → "aur
+  Bhabhi toh boli, pakka Ahmedabad se liya hoga, 50,000 toh hoga hi"; 22 s → "pehle comment mein batao aapka guess kya
+  hai" → whole script voiced again (take 3), "अनोखी रीत!" without the pause; scene 4's first "Aapka guess kya hai?"
+  dropped so the question isn't said twice.
 
 ## Caption
 
