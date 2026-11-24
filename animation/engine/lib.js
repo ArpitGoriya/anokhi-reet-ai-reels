@@ -80,7 +80,7 @@ const BROWS = {
 
 const PERS = {};
 function person(id, o = {}) {
-  PERS[id] = { tw: (o.wide ? 135 : (o.male ? 118 : 108)) - 8, skin: o.skin || C.skin };
+  PERS[id] = { tw: (o.wide ? 135 : (o.male ? 118 : 108)) - 8, skin: o.skin || C.skin, sleeveTo: o.sleeveTo };
   const skin = o.skin || C.skin, skin2 = o.skin2 || C.skin2, hair = o.hair || C.hair;
   const top = o.top || C.teal, topD = o.topD || C.tealDark, border = o.border || C.gold;
   const style = o.hairStyle || (o.male ? 'crop' : 'bun'); // men: short crop (no bun) unless told otherwise
@@ -105,6 +105,8 @@ function person(id, o = {}) {
     s += `<path d="M-30,-262 L${tw - 20},-20" stroke="${border}" stroke-width="12" fill="none"/>`;
     if (o.embroidery) for (let i = 0; i < 6; i++) s += `<circle cx="${-40 + i * 22}" cy="${-205 + i * 34}" r="5" fill="${C.gold}"/>`;
   }
+  // a sherwani / bandhgala front: gold buttons down the middle (look option buttons: true)
+  if (o.buttons) for (let i = 0; i < 5; i++) s += `<circle cx="0" cy="${-215 + i * 46}" r="8" fill="${C.gold}" stroke="${OL}" stroke-width="3"/>`;
   if (o.embroidery && !o.pallu) for (let i = 0; i < 5; i++) s += `<circle cx="${-60 + i * 30}" cy="-150" r="5" fill="${C.gold}"/>`;
   if (male) s += `<path d="M-26,-262 L0,-226 L26,-262" fill="none" stroke="${OL}" stroke-width="${OW}"/>`;
   // neck
@@ -148,7 +150,7 @@ function person(id, o = {}) {
   for (const side of ['L', 'R']) {
     s += `<g id="${id}-arm${side}"><path id="${id}-a${side}o" fill="none" stroke="${OL}" stroke-width="48" stroke-linecap="round" stroke-linejoin="round"/>`;
     s += `<path id="${id}-a${side}s" fill="none" stroke="${skin}" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>`;
-    s += `<path id="${id}-a${side}c" fill="none" stroke="${o.sleeve || top}" stroke-width="42" stroke-linecap="round"/>`;
+    s += `<path id="${id}-a${side}c" fill="none" stroke="${o.sleeve || top}" stroke-width="42" stroke-linecap="round" stroke-linejoin="round"/>`;
     if (o.bangles !== false && !male) s += `<path id="${id}-a${side}b" fill="none" stroke="${C.gold}" stroke-width="40" stroke-dasharray="4 6"/>`;
     s += `<g id="${id}-h${side}"></g></g>`;
   }
@@ -157,12 +159,13 @@ function person(id, o = {}) {
 }
 
 // kurta-pajama legs for a standing man (feet at y = 372, like the lehenga skirt): pajama legs, shoes, the kurta hem
+// (p.hem = how far the kurta/sherwani hangs below the waist, default 150; small = an outgrown sherwani)
 function pantsSVG(p, top, topD) {
-  const c = p.c || '#F2EADF', d = p.d || '#D8CDBE';
+  const c = p.c || '#F2EADF', d = p.d || '#D8CDBE', hm = p.hem || 150;
   return `<path d="M-84,0 L-80,346 L-16,346 L-4,90 L4,90 L16,346 L80,346 L84,0 Z" fill="${c}" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/>` +
     `<path d="M-48,180 V340 M48,180 V340" stroke="${d}" stroke-width="5" opacity=".7"/>` +
     `<ellipse cx="-50" cy="356" rx="46" ry="18" fill="#5A3A28" stroke="${OL}" stroke-width="4"/><ellipse cx="50" cy="356" rx="46" ry="18" fill="#5A3A28" stroke="${OL}" stroke-width="4"/>` +
-    `<path d="M-96,-6 L-104,150 Q0,166 104,150 L96,-6 Z" fill="${top}" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/><path d="M0,0 V150" stroke="${topD}" stroke-width="5" opacity=".6"/>`;
+    `<path d="M-96,-6 L-104,${hm} Q0,${hm + 16} 104,${hm} L96,-6 Z" fill="${top}" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/><path d="M0,0 V${hm}" stroke="${topD}" stroke-width="5" opacity=".6"/>`;
 }
 // lehenga skirt shape (used on the character and on hangers)
 function skirtSVG(sk, x, y, sc) {
@@ -194,7 +197,9 @@ function arm(id, side, a1, a2, hand = 'open', o = {}) {
   $(`${id}-a${side}s`).setAttribute('d', d);
   const k = o.sleeve === undefined ? .55 : o.sleeve;
   const sx = lerp(S[0], Eb[0], k), sy = lerp(S[1], Eb[1], k);
-  $(`${id}-a${side}c`).setAttribute('d', `M${S[0]},${S[1]} L${sx.toFixed(1)},${sy.toFixed(1)}`);
+  // long sleeves (look option sleeveTo: 0 = to the elbow, 1 = to the wrist), e.g. a sherwani; else a short sleeve
+  if (pr.sleeveTo !== undefined) { const fx = lerp(Eb[0], Hd[0], pr.sleeveTo * .82), fy = lerp(Eb[1], Hd[1], pr.sleeveTo * .82); $(`${id}-a${side}c`).setAttribute('d', `M${S[0]},${S[1]} L${Eb[0].toFixed(1)},${Eb[1].toFixed(1)} L${fx.toFixed(1)},${fy.toFixed(1)}`); }
+  else $(`${id}-a${side}c`).setAttribute('d', `M${S[0]},${S[1]} L${sx.toFixed(1)},${sy.toFixed(1)}`);
   const bg = $(`${id}-a${side}b`);
   if (bg) { const bx = lerp(Eb[0], Hd[0], .78), by = lerp(Eb[1], Hd[1], .78), bx2 = lerp(Eb[0], Hd[0], .9), by2 = lerp(Eb[1], Hd[1], .9); bg.setAttribute('d', `M${bx.toFixed(1)},${by.toFixed(1)} L${bx2.toFixed(1)},${by2.toFixed(1)}`); }
   const hg = $(`${id}-h${side}`);

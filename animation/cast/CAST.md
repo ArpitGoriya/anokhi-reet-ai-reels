@@ -44,6 +44,10 @@ characters are added here after their first reel (add them to `cast.js`, to the 
 | `KIRAN` | **Kiranben**, 30s-40s, rental shop owner next door, on Anokhi Reet; calm and smiling. | Braid, marigold kurti, red dupatta, maroon skirt | Do dukaan, do kahaniyan |
 | `dress(PAPA.shop, {…})` | **Kavya's Papa** (Shaadi season): the cast's Papa in a white kurta-pajama with glasses. | White kurta-pajama, glasses | Shaadi season 2026 (2026-11-23) |
 | `ISHITA.wedding` / `.home` | **Ishita**, 20s, a wedding guest who rents a heavy maroon lehenga on a small budget. | Long hair; maroon lehenga with gold dupatta / blue top at home | Asli price (2026-11-24) |
+| `RIDDHI` | **Riddhi**, 30s, a mother whose son outgrows every wedding outfit after one wear; lists them for rent from home. | Bun, rani-pink top, pink dupatta, sindoor | ₹6,000 ki sherwani (2026-11-24) |
+| `KRUPA` | **Krupa**, 30s, another mother in the same city, panicking before a wedding next week. | Long hair, green top, yellow dupatta | ₹6,000 ki sherwani |
+| `VIHAAN.tight` / `.home` | **Vihaan**, 5, Riddhi's son (the cast's first kid). | Outgrown cream sherwani (short sleeves and hem) / orange tee, blue pants | ₹6,000 ki sherwani |
+| `KRUPA_BETA.vest` / `.sherwani` | **Krupa's son**, 4, jumps on the bed; looks like a little raja in Riddhi's sherwani. | White vest / cream sherwani with long sleeves | ₹6,000 ki sherwani |
 
 Ideas for the cast's next members (make them when a story needs them): a young woman who rents for college
-functions, a groom or brother, a kid, a vendor on the Anokhi Reet app.
+functions, a groom or brother, a vendor on the Anokhi Reet app.

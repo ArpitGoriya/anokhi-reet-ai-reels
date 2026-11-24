@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-24
 - **Made by:** dhruvifewtone-wq
-- **Status:** voice approved
+- **Status:** video 1 sent
 
 ## Brief
 
@@ -56,6 +56,10 @@ Voice text: [`script.txt`](script.txt).
 - Captions timed to take 2 (`tools/caption_timing.py`, starts nudged to the pauses).
 - Take 2: `output/female-chhoti-sherwani-take2.mp3` (51 s) = new first line + take 1 from 4.25 s to 45.47 s + new CTA — approved: yes, 2026-11-24
 
+## Video
+
+- `output/2026-11-24-chhoti-sherwani.mp4` (52 s), video 1 sent 2026-11-24.
+
 ## Feedback rounds
 
 - Voice take 1 (2026-11-24): say at the start that it's Riddhi's son's sherwani; new CTA "Agar aapko bhi apne bachchon ke outfits rent par dene hain, toh comment karo OUTFIT" → only those two lines voiced again and joined (take 2).
@@ -77,8 +81,9 @@ Bachchon ke outfits rent pe dene hain? Comment OUTFIT, listing ke steps DM mein 
 
 ## Added to the library (at least two per reel)
 
-- (planned) kid figures (Vihaan, Krupa's son), a dresser drawer with tiny folded outfits, age tags, a night view of
-  two houses.
+- `kidOutfitSVG`, `dresserSVG` + `dresserOpen`, `ageTagSVG`, `nightHousesSVG` in `engine/props.js`.
+- Engine: `sleeveTo`, `buttons`, `pants.hem` look options; fixed the scene zoom (`cam`) that never worked.
+- New cast: Riddhi, Krupa, and the first kids, Vihaan and Krupa's son.
 
 ## Suggested default (for the owner)
 
@@ -86,4 +91,6 @@ Bachchon ke outfits rent pe dene hain? Comment OUTFIT, listing ke steps DM mein 
 
 ## Lessons
 
-- (later)
+- The sherwani Vihaan outgrew is the one Krupa's son needs, so the tags say "Age 4–5" (Vihaan is 5, Krupa's son 4).
+- A scene's `init(s)` gets its own scene: use `s`, not `SC[SC.length - 1]` (that is the last scene by the time init runs).
+- Check the page for console errors too (`scale(NaN)` showed the camera zoom had never worked).

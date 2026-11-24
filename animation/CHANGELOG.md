@@ -3,6 +3,19 @@
 Every reel adds at least one improvement to the engine or library and writes it here (newest first).
 See [GUIDE.md](GUIDE.md) section 8.
 
+## 2026-11-24: the first kids, long sleeves, chest of drawers, kids' outfits, age tag, two houses at night (₹6,000 ki sherwani)
+
+- **Engine fix:** a scene's `cam` option (the slow push-in, or a zoom) was being overwritten by its camera group, so
+  no scene zoomed (the browser got `scale(NaN)`). Now kept as `s.zoom`; every scene pushes in gently again, and `cam`
+  can also be a function `(t, lt) => zoom` (used to zoom into a window).
+- **Engine:** look options `sleeveTo` (long sleeves: 0 = to the elbow, 1 = to the wrist), `buttons: true` (gold
+  buttons down a sherwani or bandhgala), and `pants.hem` (how long the kurta/sherwani hangs; small = outgrown).
+- **New props:** `kidOutfitSVG(kind, c, d)` (sherwani, kurta, bandhgala or jodhpuri laid flat), `dresserSVG(id)` +
+  `dresserOpen(id, k)` (a chest of drawers whose top drawer slides out; fill `${id}-in`), `ageTagSVG(text)`,
+  `nightHousesSVG(id)` (two houses at night with lit windows `${id}-wL` / `${id}-wR`).
+- **New cast:** Riddhi (`RIDDHI`), Krupa (`KRUPA`), and the first kids: Vihaan (`VIHAAN.tight`, `.home`) and Krupa's
+  son (`KRUPA_BETA.vest`, `.sherwani`). Kids: `stand(…, .5)` next to adults at `.8`.
+
 ## 2026-11-24: wedding hall, banquet chair, round table, bank screen, invite card, Ishita (Asli price)
 
 - **New props:** `weddingHallBG(id)` (marigold drapes, fairy lights, flower arch), `chairBackSVG`/`chairFrontSVG` (a

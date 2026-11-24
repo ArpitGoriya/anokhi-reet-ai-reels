@@ -85,7 +85,7 @@ function build() {
   SC.forEach((s, i) => {
     const g = document.createElementNS(NS, 'g'); g.setAttribute('id', 'S' + i);
     g.innerHTML = `<g class="cam">${s.svg || ''}</g>`; root.appendChild(g);
-    s.g = g; s.cam = g.firstChild;
+    s.g = g; s.zoom = s.cam; s.cam = g.firstChild; // keep the scene's cam option (zoom) apart from its camera group
     const d = document.createElement('div'); d.className = 'sui'; d.innerHTML = s.html || ''; ui.insertBefore(d, $('cap'));
     s.d = d;
     s.popsS = [...g.querySelectorAll('[data-t]')];
@@ -122,7 +122,7 @@ function render(t) {
     if (tin) transIn(s, clamp((t - (s.a - tin)) / tin));
     if (t >= s.a) cur = s;
     const lt = t - s.a, dur = s.b - s.a;
-    const cz = s.cam || [1, 1.035];
+    const cz = s.zoom || [1, 1.035];
     const settle = s.noSettle ? 1 : 1 + .02 * (1 - E.out(clamp(lt / .7)));
     const z = (typeof cz === 'function' ? cz(t, lt) : lerp(cz[0], cz[1], E.io(clamp(lt / dur)))) * settle;
     const fx = s.fx || 540, fy = s.fy || 900;

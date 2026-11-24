@@ -725,3 +725,57 @@ function inviteCardSVG() {
     `<path d="M-30,-30 Q-40,30 0,40 Q40,30 30,-30 Z" fill="${C.gold}" stroke="${OL}" stroke-width="3"/><path d="M-16,-30 Q0,-70 16,-30" fill="#3E8E4A" stroke="${OL}" stroke-width="3"/>` +
     `<text y="90" text-anchor="middle" font-family="Inter" font-weight="900" font-size="26" fill="${C.gold}">SHUBH VIVAH</text></g>`;
 }
+
+// ===== ₹6,000 ki sherwani (2026-11-24): kids' outfits laid flat, a chest of drawers, an age tag, two houses at night =====
+// kidOutfitSVG(kind, c, d): a small kid's outfit laid flat, centred on (0,0), about 180 wide x 230 tall.
+// kind: 'sherwani' (long coat, buttons) | 'kurta' (kurta + pajama) | 'bandhgala' (short jacket, high collar) | 'jodhpuri' (jacket + breeches)
+function kidOutfitSVG(kind = 'sherwani', c = '#F2E2C4', d = '#D9C39A') {
+  const coatH = kind === 'sherwani' ? 200 : (kind === 'kurta' ? 150 : 110);
+  let s = '';
+  if (kind !== 'sherwani') { // trousers under the top
+    const pc = kind === 'kurta' ? '#FFF8EC' : (kind === 'jodhpuri' ? '#E8D3A5' : '#3B3A48');
+    s += `<path d="M-50,${coatH - 120} L-58,110 L-8,110 L0,${coatH - 80} L8,110 L58,110 L50,${coatH - 120} Z" fill="${pc}" stroke="${OL}" stroke-width="4" stroke-linejoin="round"/>`;
+    if (kind === 'jodhpuri') s += `<path d="M-50,${coatH - 110} Q-80,${coatH - 70} -56,${coatH - 40} M50,${coatH - 110} Q80,${coatH - 70} 56,${coatH - 40}" fill="none" stroke="${OL}" stroke-width="4"/>`;
+  }
+  const top = -120, bot = top + coatH;
+  s += `<path d="M-34,${top} L-90,${top + 20} L-118,${top + 110} L-90,${top + 118} L-66,${top + 60} L-70,${bot} L70,${bot} L66,${top + 60} L90,${top + 118} L118,${top + 110} L90,${top + 20} L34,${top} Q0,${top + 18} -34,${top} Z" fill="${c}" stroke="${OL}" stroke-width="4" stroke-linejoin="round"/>`;
+  s += kind === 'kurta' ? `<path d="M0,${top + 8} V${top + 60}" stroke="${d}" stroke-width="5"/>` : `<path d="M0,${top + 10} V${bot - 6}" stroke="${d}" stroke-width="5"/>`;
+  if (kind !== 'kurta') for (let i = 0; i < 4; i++) s += `<circle cx="0" cy="${top + 30 + i * (coatH - 50) / 4}" r="6" fill="${C.gold}" stroke="${OL}" stroke-width="2.5"/>`;
+  if (kind === 'bandhgala' || kind === 'sherwani') s += `<rect x="-30" y="${top - 12}" width="60" height="18" rx="6" fill="${d}" stroke="${OL}" stroke-width="3"/>`;
+  if (kind === 'sherwani') s += `<path d="M-66,${bot - 30} H66" stroke="${C.gold}" stroke-width="8"/><path d="M-64,${top + 70} Q-40,${top + 90} -20,${top + 70}" stroke="${C.gold}" stroke-width="5" fill="none"/>`;
+  return s;
+}
+// dresserSVG(id): a chest of drawers, 560 wide, standing on (0,0). Open the top drawer with dresserOpen(id, k):
+// `${id}-dc` (closed front) and `${id}-do` (the pulled-out drawer with its tray). Put things in it into `${id}-in`
+// (tray floor from y -390 to -190, x -240..240).
+function dresserSVG(id) {
+  const knob = (y, w = 280) => `<rect x="-36" y="${y}" width="72" height="16" rx="8" fill="${C.gold}" stroke="${OL}" stroke-width="3"/>`;
+  return `<g id="${id}"><rect x="-280" y="-420" width="560" height="420" rx="14" fill="${C.woodDark}" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<rect x="-300" y="-446" width="600" height="34" rx="10" fill="${C.woodLight}" stroke="${OL}" stroke-width="${OW}"/>` +
+    [-270, -140].map(y => `<rect x="-256" y="${y}" width="512" height="116" rx="10" fill="${C.wood}" stroke="${OL}" stroke-width="4"/>` + knob(y + 50)).join('') +
+    `<g id="${id}-dc"><rect x="-256" y="-400" width="512" height="116" rx="10" fill="${C.wood}" stroke="${OL}" stroke-width="4"/>${knob(-350)}</g>` +
+    `<g id="${id}-do" opacity="0"><path d="M-246,-404 L246,-404 L300,-180 L-300,-180 Z" fill="#5C4126" stroke="${OL}" stroke-width="4" stroke-linejoin="round"/>` +
+    `<path d="M-232,-396 L232,-396 L282,-190 L-282,-190 Z" fill="${C.beige}"/><g id="${id}-in"></g>` +
+    `<rect x="-306" y="-190" width="612" height="130" rx="12" fill="${C.wood}" stroke="${OL}" stroke-width="${OW}"/>${knob(-134)}</g></g>`;
+}
+function dresserOpen(id, k) { op($(id + '-dc'), k > .02 ? 0 : 1); op($(id + '-do'), clamp(k * 3)); tf($(id + '-do'), 0, (1 - E.out(k)) * -90, lerp(.92, 1, E.out(k)), 0, 0, -290); }
+// ageTagSVG(text): a small hanging size tag ("Age 4–5"), centred on its string's top (0,0)
+function ageTagSVG(text) {
+  const w = text.length * 19 + 50;
+  return `<path d="M0,0 L0,26" stroke="${OL}" stroke-width="3"/><rect x="${-w / 2}" y="24" width="${w}" height="60" rx="14" fill="${C.gold}" stroke="${OL}" stroke-width="4"/>` +
+    `<circle cx="0" cy="38" r="5" fill="#fff" stroke="${OL}" stroke-width="2"/><text y="72" text-anchor="middle" font-family="Inter" font-weight="900" font-size="32" fill="${C.redDark}">${text}</text>`;
+}
+// nightHousesSVG(id): night sky (moon, stars) over two small houses, left (x 270) and right (x 810), on the ground at
+// y 1180; each house's lit window is `${id}-wL` / `${id}-wR` (x 270 / 810, y 900, 120 x 110)
+function nightHousesSVG(id) {
+  let s = `<rect width="${W}" height="${H}" fill="#1F2A4A"/><rect y="1180" width="${W}" height="${H - 1180}" fill="#2B3524"/>` +
+    `<path d="M880,330 a60,60 0 1,0 40,92 a46,46 0 1,1 -40,-92 Z" fill="${C.gold}"/>`;
+  [[120, 300], [300, 420], [520, 280], [660, 460], [980, 560], [420, 600], [160, 640], [760, 640]].forEach(([x, y], i) => { s += `<circle class="twinkle" data-i="${i}" cx="${x}" cy="${y}" r="${i % 3 ? 4 : 7}" fill="#FFF6C8"/>`; });
+  for (const [x, side, wall, roof] of [[270, 'L', '#E6C9A2', '#A3262A'], [810, 'R', '#D8C1A8', '#7A3E6E']]) {
+    s += `<g transform="translate(${x},1180)"><rect x="-200" y="-420" width="400" height="420" fill="${wall}" stroke="${OL}" stroke-width="${OW}"/>` +
+      `<path d="M-240,-410 L0,-600 L240,-410 Z" fill="${roof}" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/>` +
+      `<rect x="40" y="-170" width="110" height="170" rx="8" fill="${C.woodDark}" stroke="${OL}" stroke-width="4"/></g>` +
+      `<g id="${id}-w${side}"><circle cx="${x}" cy="900" r="120" fill="url(#glow)" opacity=".8"/><rect x="${x - 60}" y="845" width="120" height="110" rx="6" fill="#FFD978" stroke="${OL}" stroke-width="${OW}"/><path d="M${x},845 V955 M${x - 60},900 H${x + 60}" stroke="${OL}" stroke-width="4"/></g>`;
+  }
+  return s;
+}

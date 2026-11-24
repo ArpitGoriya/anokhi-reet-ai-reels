@@ -127,3 +127,17 @@ const ISHITA = {
   wedding: { hairStyle: 'long', top: '#7A1B2A', topD: '#5E1420', pallu: C.gold, border: C.gold, skin: '#C98B62', skin2: '#B9784F', earrings: true, necklace: true, bindi: true, skirt: { c: '#7A1B2A', d: '#5E1420', b: C.gold, w: 225 } },
   home: { hairStyle: 'pony', top: '#4F86C6', topD: '#3A6AA3', skin: '#C98B62', skin2: '#B9784F', earrings: true, bindi: true, skirt: { c: '#F2EADF', d: '#D8CDBE', b: '#D8CDBE', w: 170 } },
 };
+// Riddhi (30s): a mother whose son outgrows every wedding outfit after one wear; she lists them for rent from home.
+// Krupa (30s): another mother in the same city, panicking before a wedding next week. (₹6,000 ki sherwani, 2026-11-24)
+const RIDDHI = { hairStyle: 'bun', top: '#B83A6B', topD: '#922B53', pallu: '#F2B8C6', border: C.gold, sindoor: true, earrings: true, skin: '#C08460', skin2: '#A86E4E', skirt: { c: '#922B53', d: '#6E1F3E', b: C.gold, w: 200 } };
+const KRUPA = { hairStyle: 'long', top: '#4E8F6A', topD: '#3A6E50', pallu: '#F2C14E', border: C.red, sindoor: true, earrings: true, skin: '#B07150', skin2: '#9A6143', skirt: { c: '#3A6E50', d: '#2B5440', b: C.gold, w: 195 } };
+// The cast's first kids (use stand(…, .5) next to adults at .8): Vihaan (5), Riddhi's son, and Krupa's son (4).
+// Kids are men's looks with no moustache: a sherwani = buttons + sleeveTo (long sleeves) + pants (hem = its length).
+const VIHAAN = {
+  tight: { male: true, top: '#F2E2C4', topD: '#D9C39A', buttons: true, sleeveTo: 0, skin: '#C98B62', skin2: '#B9784F', pants: { c: '#FFF8EC', hem: 55 } }, // the outgrown sherwani
+  home: { male: true, top: '#F2A33A', topD: '#D9862A', skin: '#C98B62', skin2: '#B9784F', pants: { c: '#3E6FA8', d: '#2E5A8C', hem: 40 } },
+};
+const KRUPA_BETA = {
+  vest: { male: true, top: '#FFFFFF', topD: '#E8E2D8', skin: '#B07150', skin2: '#9A6143', hair: '#3A2418', pants: { c: '#7FA893', d: '#5E8C74', hem: 30 } },
+  sherwani: { male: true, top: '#F2E2C4', topD: '#D9C39A', buttons: true, sleeveTo: .95, skin: '#B07150', skin2: '#9A6143', hair: '#3A2418', pants: { c: '#FFF8EC', hem: 190 } }, // Riddhi's sherwani, his size
+};
