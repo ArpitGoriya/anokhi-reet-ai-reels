@@ -50,6 +50,9 @@ characters are added here after their first reel (add them to `cast.js`, to the 
 | `KRUPA_BETA.vest` / `.sherwani` | **Krupa's son**, 4, jumps on the bed; looks like a little raja in Riddhi's sherwani. | White vest / cream sherwani with long sleeves | ₹6,000 ki sherwani |
 | `RIYA` | **Riya**, 20s, a friendly presenter from the Anokhi Reet team who talks straight to the camera. | Long open hair, brand-maroon kurti, gold dupatta | Customer kahan hain? (2026-11-24) |
 | `BINDIYA` | **Inspector Bindiya**, 30s, a playful crime-show detective who "investigates" shopping habits. | Beige trench coat, brown fedora, short hair | Shaadi season ka sabse bada scam (2026-11-24) |
+| `JAY.maroon` / `.ivory` / `.bandhgala` / `.jodhpuri` / `.casual` | **Jay**, 20s, wears a new (rented) sherwani to every wedding and rents out his own. | Four sherwanis / blue tee and jeans | Har shaadi mein nayi sherwani (2026-11-24) |
+| `HARSH` | **Harsh**, 20s, Jay's friend and the narrator. | Glasses, orange kurta | Har shaadi mein nayi sherwani |
+| `MITESH` | **Mitesh**, 20s, Jay's broad, moustached friend who asks about money. | Green kurta | Har shaadi mein nayi sherwani |
 
 Ideas for the cast's next members (make them when a story needs them): a young woman who rents for college
-functions, a groom or brother, a vendor on the Anokhi Reet app.
+functions, a vendor on the Anokhi Reet app.

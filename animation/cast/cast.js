@@ -147,3 +147,16 @@ const RIYA = { hairStyle: 'long', top: C.red, topD: C.redDark, pallu: C.gold, bo
 // Inspector Bindiya (30s): a playful crime-show detective who "investigates" shopping habits. Beige trench coat,
 // brown fedora, short hair, big bindi. (Shaadi season ka sabse bada scam, 2026-11-24)
 const BINDIYA = { hairStyle: 'short', top: '#C9A46A', topD: '#A8844E', lapels: '#A8844E', hat: '#6B4A2A', skin: '#C08460', skin2: '#A86E4E', earrings: true, bangles: false, pants: { c: '#3B3A48', d: '#2B2A36', hem: 240 } };
+// Jay (20s): the smart friend who wears a new sherwani at every wedding (all rented) and rents out his own wedding
+// sherwani. Harsh (20s, glasses): his friend, the narrator. Mitesh (20s, broad, moustache): his other friend.
+// (Har shaadi mein nayi sherwani, 2026-11-24)
+const JAY_BASE = { male: true, skin: '#C98B62', skin2: '#B9784F', hair: '#1E140F', buttons: true, sleeveTo: .95 };
+const JAY = {
+  maroon: dress(JAY_BASE, { top: '#7A1B2A', topD: '#5E1420', embroidery: true, pants: { c: '#FFF8EC', d: '#E8DCC8', hem: 260 } }),
+  ivory: dress(JAY_BASE, { top: '#F2E7D0', topD: '#D9C9A6', embroidery: true, pants: { c: '#E8D3A5', d: '#C9AE6A', hem: 260 } }),
+  bandhgala: dress(JAY_BASE, { top: '#24242B', topD: '#16161A', pants: { c: '#24242B', d: '#16161A', hem: 120 } }),
+  jodhpuri: dress(JAY_BASE, { top: '#2F4F9A', topD: '#233C78', pants: { c: '#E8D3A5', d: '#C9AE6A', hem: 120 } }),
+  casual: { male: true, skin: '#C98B62', skin2: '#B9784F', hair: '#1E140F', top: '#4F86C6', topD: '#3A6AA3', pants: { c: '#3E5C8A', d: '#2E4A72', hem: 40 } },
+};
+const HARSH = { male: true, glasses: true, top: '#E07B39', topD: '#B95F25', skin: '#B97A55', skin2: '#A66A47', hair: '#2A1A14', pants: { c: '#F2EADF', hem: 150 } };
+const MITESH = { male: true, wide: true, mustache: true, top: '#3A8F6E', topD: '#2B6E54', skin: '#A86B48', skin2: '#93593A', hair: '#1E140F', pants: { c: '#F2EADF', hem: 150 } };

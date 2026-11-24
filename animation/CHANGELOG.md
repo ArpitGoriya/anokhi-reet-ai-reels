@@ -3,6 +3,15 @@
 Every reel adds at least one improvement to the engine or library and writes it here (newest first).
 See [GUIDE.md](GUIDE.md) section 8.
 
+## 2026-11-24: comic-book kit, chai tapri, booking calendar, Jay, Harsh and Mitesh (Har shaadi mein nayi sherwani)
+
+- **New props:** `comicPanel(id, x, y, w, h, bg, inner)` (a comic panel with halftone dots; its contents are clipped,
+  so a bust can sit with its waist below the panel edge), `burstSVG(text, fill)` (spiky "WOW!" / "KA-CHING!" bursts),
+  `chaiTapriBG(id)` (a roadside chai stall at night), `bookingCalendarSVG(id, month, n)` (ticks `${id}-t0..` to pop in).
+- **New cast:** Jay (`JAY.maroon`, `.ivory`, `.bandhgala`, `.jodhpuri`, `.casual`), Harsh (`HARSH`), Mitesh (`MITESH`).
+  Grown-up sherwanis use the kids' options: `buttons`, `sleeveTo`, `pants.hem`.
+- First reel with the approved male voice in this 2D series.
+
 ## 2026-11-24: crime-show kit, fedora and lapels, Inspector Bindiya (Shaadi season ka sabse bada scam)
 
 - **New props:** `sirenLightsSVG(id)` + `sirenUpd(id, t)` (red and blue alert beams), `caseFileSVG(label)`,

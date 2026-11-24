@@ -881,3 +881,41 @@ function hangingLampSVG(id, len = 420) {
 // torchSVG(): a hand torch pointing right, centred on its grip (0,0); torchBeamSVG(len): its light beam going right
 function torchSVG() { return `<rect x="-40" y="-16" width="90" height="32" rx="10" fill="#3E4A52" stroke="${OL}" stroke-width="4"/><path d="M50,-26 L84,-34 L84,34 L50,26 Z" fill="#59656E" stroke="${OL}" stroke-width="4" stroke-linejoin="round"/>`; }
 function torchBeamSVG(len = 700) { return `<path d="M84,-30 L${len},-200 Q${len + 60},0 ${len},200 L84,30 Z" fill="#FFF2B0" opacity=".45"/>`; }
+
+// ===== Har shaadi mein nayi sherwani (2026-11-24): comic-book kit, chai tapri, booking calendar =====
+// comicPanel(id, x, y, w, h, bg, inner): a comic panel (thick black frame, halftone dots on a coloured ground); `inner`
+// (SVG in scene coordinates) is clipped to the panel. Busts can stand with their waist below the panel's bottom edge.
+function comicPanel(id, x, y, w, h, bg = '#F7D23A', inner = '', dot = 'rgba(0,0,0,.12)') {
+  return `<defs><pattern id="${id}-ht" width="22" height="22" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><circle cx="11" cy="11" r="4.2" fill="${dot}"/></pattern>` +
+    `<clipPath id="${id}-cp"><rect x="${x}" y="${y}" width="${w}" height="${h}"/></clipPath></defs>` +
+    `<g id="${id}"><rect x="${x + 10}" y="${y + 12}" width="${w}" height="${h}" fill="#1A1A1A" opacity=".35"/><rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${bg}"/><rect x="${x}" y="${y}" width="${w}" height="${h}" fill="url(#${id}-ht)"/>` +
+    `<g clip-path="url(#${id}-cp)">${inner}</g><rect x="${x}" y="${y}" width="${w}" height="${h}" fill="none" stroke="#1A1A1A" stroke-width="10"/></g>`;
+}
+// burstSVG(text, fill, r, fs): a spiky comic burst ("WOW!", "KA-CHING!") centred on (0,0)
+function burstSVG(text, fill = '#F7D23A', r = 150, fs = 60, col = '#D9363E') {
+  const n = 14; let d = '';
+  for (let i = 0; i < n * 2; i++) { const a = i * Math.PI / n, rr = i % 2 ? r * .66 : r * (1 + (i % 4 === 0 ? .08 : 0)); d += `${i ? 'L' : 'M'}${(Math.cos(a) * rr * 1.25).toFixed(1)},${(Math.sin(a) * rr * .8).toFixed(1)} `; }
+  return `<path d="${d}Z" fill="${fill}" stroke="#1A1A1A" stroke-width="7" stroke-linejoin="round"/>` +
+    `<text y="${fs * .36}" text-anchor="middle" font-family="Inter" font-weight="900" font-style="italic" font-size="${fs}" fill="${col}" stroke="#1A1A1A" stroke-width="3" paint-order="stroke">${text}</text>`;
+}
+// chaiTapriBG(id): a roadside chai stall at night: dark sky, string lights, the stall (CHAI board, kettle on a stove,
+// glass jars), a bench, a street lamp
+function chaiTapriBG(id) {
+  return `<rect width="${W}" height="${H}" fill="#1F2A4A"/>` + fairyLightsSVG(320) + `<rect y="${FLOOR}" width="${W}" height="${H - FLOOR}" fill="#3A3A44"/><path d="M0,${FLOOR} H${W}" stroke="#2A2A30" stroke-width="10"/>` +
+    `<g transform="translate(770,${FLOOR})"><rect x="-260" y="-520" width="520" height="520" fill="#8C5A3A" stroke="${OL}" stroke-width="${OW}"/><rect x="-290" y="-600" width="580" height="90" rx="10" fill="${C.marigold}" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<text x="0" y="-540" text-anchor="middle" font-family="Inter" font-weight="900" font-size="58" fill="${C.redDark}" letter-spacing="6">CHAI ☕</text>` +
+    `<rect x="-280" y="-300" width="560" height="40" rx="8" fill="${C.woodLight}" stroke="${OL}" stroke-width="${OW}"/>` +
+    [-200, -130, -60].map(x => `<rect x="${x}" y="-380" width="56" height="80" rx="10" fill="#DDEFF2" fill-opacity=".8" stroke="${OL}" stroke-width="3"/><rect x="${x + 6}" y="-340" width="44" height="34" rx="6" fill="${C.marigold2}"/>`).join('') +
+    `<rect x="60" y="-340" width="140" height="40" rx="6" fill="#3E4A52" stroke="${OL}" stroke-width="4"/><path d="M90,-345 Q90,-420 140,-420 Q190,-420 190,-345 Z" fill="#B9B2A8" stroke="${OL}" stroke-width="4"/><path d="M190,-385 L230,-405" stroke="${OL}" stroke-width="8" stroke-linecap="round"/>` +
+    `<path d="M120,-440 q-14,-30 4,-60 M150,-440 q14,-30 -4,-60" fill="none" stroke="#fff" stroke-width="5" opacity=".6" stroke-linecap="round"/></g>` +
+    `<g transform="translate(110,${FLOOR})"><path d="M0,0 V-760" stroke="#2A2A30" stroke-width="14"/><path d="M0,-760 Q40,-800 90,-770" fill="none" stroke="#2A2A30" stroke-width="12"/><circle cx="96" cy="-740" r="26" fill="#FFE9A8"/><circle cx="96" cy="-740" r="130" fill="url(#glow)" opacity=".8"/></g>`;
+}
+// bookingCalendarSVG(id, n): a month page (7 x 5 days) where `${id}-t0..n-1` booking ticks can be popped in
+function bookingCalendarSVG(id, month = 'BOOKINGS', n = 9) {
+  let s = `<rect x="-300" y="-300" width="600" height="600" rx="24" fill="#fff" stroke="${OL}" stroke-width="${OW}"/><path d="M-300,-276 Q-300,-300 -276,-300 L276,-300 Q300,-300 300,-276 L300,-200 L-300,-200 Z" fill="${C.red}" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<text y="-232" text-anchor="middle" font-family="Inter" font-weight="900" font-size="46" fill="${C.cream}" letter-spacing="4">${month}</text>`;
+  const days = [2, 5, 9, 13, 16, 20, 23, 27, 30, 11, 18, 25];
+  for (let i = 0; i < 35; i++) { const x = -255 + (i % 7) * 85, y = -150 + (i / 7 | 0) * 92; s += `<rect x="${x - 34}" y="${y - 34}" width="68" height="68" rx="10" fill="#F6F1EA"/><text x="${x}" y="${y + 10}" text-anchor="middle" font-family="Inter" font-weight="700" font-size="26" fill="#8A8178">${i + 1 <= 31 ? i + 1 : ''}</text>`; }
+  for (let k = 0; k < n; k++) { const i = days[k % days.length] - 1, x = -255 + (i % 7) * 85, y = -150 + (i / 7 | 0) * 92; s += `<g transform="translate(${x},${y})"><g id="${id}-t${k}" opacity="0"><circle r="32" fill="${C.emerald}" stroke="${OL}" stroke-width="4"/><path d="M-14,0 L-4,11 L15,-11" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></g></g>`; }
+  return s;
+}

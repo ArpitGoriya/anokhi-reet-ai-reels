@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-24
 - **Made by:** dhruvifewtone-wq
-- **Status:** voice approved
+- **Status:** video 1 sent
 
 ## Brief
 
@@ -58,6 +58,10 @@ Voice text: [`script.txt`](script.txt).
 - Take 2: `output/male-nayi-sherwani-take2.mp3` (48 s) = take 1 up to "…ya apni rent pe do." (44.2 s) + the new CTA "Agar
   aapko bhi apni sherwani rent par deni hai… toh comment karo OUTFIT." — approved: yes, 2026-11-24
 
+## Video
+
+- `output/2026-11-24-nayi-sherwani.mp4` (50 s), video 1 sent 2026-11-24.
+
 ## Feedback rounds
 
 - Voice take 1 (2026-11-24): CTA → "Agar aapko bhi apni sherwani rent par deni hai toh comment karo OUTFIT" → only
@@ -82,8 +86,8 @@ Apni sherwani rent pe deni hai? Comment OUTFIT 👇 Us dost ko tag karo jo har s
 
 ## Added to the library (at least two per reel)
 
-- (planned) Jay, Harsh and Mitesh; comic panel frames with halftone dots and comic bursts; a chai tapri at night; a
-  booking calendar that fills with ticks.
+- `comicPanel`, `burstSVG`, `chaiTapriBG`, `bookingCalendarSVG` in `engine/props.js`.
+- New cast: Jay (five looks), Harsh, Mitesh.
 
 ## Suggested default (for the owner)
 
@@ -91,4 +95,5 @@ Apni sherwani rent pe deni hai? Comment OUTFIT 👇 Us dost ko tag karo jo har s
 
 ## Lessons
 
-- (later)
+- The male voice speaks faster: the 55 s script came out at 46 s (48 s with the new CTA).
+- Keep comic bursts off faces: put them in the empty corner of the panel.
