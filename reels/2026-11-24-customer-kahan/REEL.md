@@ -22,8 +22,9 @@
 ## Teammate changes (override the brand defaults for this reel only)
 
 - **Scene 5 brand-safe** (teammate chose it, 2026-11-24): no "5 minute", "15 outfits tak free" or "0% commission"
-  (Never-say list). Voice: "Listing seedha WhatsApp se. Apni city ke customers. Aur setup? Bilkul aasaan." Badges:
-  ✅ WhatsApp se shuru · ✅ Apni city ke customers · ✅ Aasaan setup. Same in the caption.
+  (Never-say list). Voice: "Listing seedha WhatsApp se. Aur setup? Bilkul aasaan." Badges: ✅ WhatsApp se shuru · ✅ Aasaan
+  setup. Same in the caption.
+- **No "Apni city ke customers"** (teammate, 2026-11-24): removed from the voice, badges and caption.
 - **Presenter:** a new Anokhi Reet team member talks to the camera ("humare paas" = the team) (teammate, 2026-11-24).
 - No user numbers ("lakhs of customers") anywhere (teammate's note, and the brand rule).
 - Key words in yellow (gold) highlight boxes; on-screen emojis as in the script.
@@ -39,18 +40,20 @@
 | 2 | Dukaan mein *maal bhara* hai… / par customer ka *wait karte-karte* / *din nikal* jaata hai. / *Pamphlet, status,* / sab try kar liya. | Maheshbhai behind his counter, racks full of lehengas and sherwanis; the window outside goes from sun to moon fast, a clock spins, he yawns and rests his chin on his hand. Then a pamphlet stack and a phone "status" circle pop beside him, each gets a cross. | Maal hai ✅ · Customer ka wait ⏳ · Pamphlet ❌ Status ❌ |
 | 3 | Par *sach* yeh hai… / aaj customer *dukaan-dukaan* nahi ghoomta. / Woh *phone pe outfit* dhoondhta hai. | The presenter holds up her phone; cut to Khushi on a sofa at home, scrolling her phone with outfits flying past on the screen; a street of shops behind her fades away. | Customer phone pe dhoondh raha hai 📱 |
 | 4 | Aur woh customer… / *Anokhi Reet* pe hai. / *Customer humare paas* hai. / Aapko bas *apni dukaan list* karni hai. | **App "screen recording":** a phone fills the frame, the Anokhi Reet app scrolls through shops and outfits. Then the presenter points at herself on "humare paas", then at the camera on "aapko", with a confident smile. | Customer humare paas hai 🤝 · Aap bas dukaan list karo |
-| 5 | Listing seedha *WhatsApp* se. / Apni *city ke customers.* / Aur setup? / *Bilkul aasaan.* | The presenter counts on her fingers (1, 2, 3); each count stamps a badge in beside her. | ✅ WhatsApp se shuru · ✅ Apni city ke customers · ✅ Aasaan setup |
+| 5 | Listing seedha *WhatsApp* se. / Aur setup? / *Bilkul aasaan.* | The presenter counts on her fingers (1, 2); each count stamps a badge in beside her. | ✅ WhatsApp se shuru · ✅ Aasaan setup |
 | 6 | Customer dhoondhna *humara kaam.* / Outfit dena *aapka.* / *Comment* karo *SHOP.* | Maroon end card: the official ANOKHI REET SHOPS lockup, the presenter smiles and points down to the comments; anokhireet.in. | Customer dhoondhna = humara kaam 🙌 · Comment SHOP 👇 |
 
 Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- Take 1: `output/female-customer-kahan-take1.mp3` (31 s) — sent, waiting for approval
+- Take 1: `output/female-customer-kahan-take1.mp3` (31 s) — not used (teammate change, 2026-11-24)
+- Take 2: `output/female-customer-kahan-take2.mp3` (30 s) = take 1 with "Apni city ke customers" (23.5–25.0 s) cut out — sent, waiting for approval
 
 ## Feedback rounds
 
-- (none yet)
+- Voice take 1 (2026-11-24): at 24 s remove "Apni city ke customers" → cut from the voice (take 2), the script, the
+  badges and the caption.
 
 ## Caption
 
@@ -58,7 +61,7 @@ Voice text: [`script.txt`](script.txt).
 Rental dukaan hai, maal bhi hai… par customer kahan hain? 🤔
 Customer aaj phone pe outfit dhoondhta hai, aur woh Anokhi Reet pe hai 📱
 Customer humare paas hai 🤝 Aap bas apni dukaan list karo.
-✅ WhatsApp se shuru · ✅ Apni city ke customers · ✅ Aasaan setup
+✅ WhatsApp se shuru · ✅ Aasaan setup
 Comment SHOP, steps DM mein 💌
 
 #RentalShop #DukaanOnline #LehengaOnRent #SmallBusinessIndia #AnokhiReet
