@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-24
 - **Made by:** dhruvifewtone-wq
-- **Status:** brief
+- **Status:** script approved
 
 ## Brief
 
@@ -32,7 +32,7 @@
 - Voice only: the script's sounds are shown visually; no "whoosh" (brand rule).
 - Hashtags: 5, as given.
 
-## Script and storyboard (approved: no)
+## Script and storyboard (approved: yes, 2026-11-24)
 
 | # | Voice line (caption) | On screen (scene, characters and what they do) | Label / title |
 |---|---|---|---|
@@ -49,7 +49,8 @@ Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- (not made yet)
+- Take 1: `output/female-asli-price-take1.mp3` (44 s) — approved: not yet. The voice says "saadhe teen hazaar"
+  for ₹3,500 (same amount as the script's "paintees sau").
 
 ## Video
 
