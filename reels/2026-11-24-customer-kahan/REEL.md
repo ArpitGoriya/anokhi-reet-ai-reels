@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-24
 - **Made by:** dhruvifewtone-wq
-- **Status:** script approved
+- **Status:** voice approved
 
 ## Brief
 
@@ -48,7 +48,7 @@ Voice text: [`script.txt`](script.txt).
 ## Voice-over
 
 - Take 1: `output/female-customer-kahan-take1.mp3` (31 s) — not used (teammate change, 2026-11-24)
-- Take 2: `output/female-customer-kahan-take2.mp3` (30 s) = take 1 with "Apni city ke customers" (23.5–25.0 s) cut out — sent, waiting for approval
+- Take 2: `output/female-customer-kahan-take2.mp3` (30 s) = take 1 with "Apni city ke customers" (23.5–25.0 s) cut out — approved: yes, 2026-11-24
 
 ## Feedback rounds
 
