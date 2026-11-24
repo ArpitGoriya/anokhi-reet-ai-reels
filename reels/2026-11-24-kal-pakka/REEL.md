@@ -26,7 +26,7 @@
 - **Comic-book style** with a ticking countdown clock (6 ghante → 3 ghante → 1 ghanta).
 - **"1 ghante mein ready" is Prachi's story only** (teammate chose it, 2026-11-24); the caption says "Prachi ko area ki
   dukaan se 1 ghante mein outfit mil gaya ✅", not a promise from us.
-- The app stays hidden (phone from the back) until "Isliye backup: Anokhi Reet".
+- The app stays hidden (phone from the back) until "Anokhi Reet" at the end.
 - The darzi is drawn warm and funny (proud smile, tape round his neck), never mocked.
 - The script's sounds (beep-beep, panic music, boing, dings, shutter rattle, ticking, ta-da, camera clicks, crowd,
   riser, doorbell, "FAIL" trombone, dhol) are shown visually; no sound effects, no "whoosh" (brand rule).
