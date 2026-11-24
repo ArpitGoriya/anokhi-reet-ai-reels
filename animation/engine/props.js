@@ -833,3 +833,51 @@ function arFeedScreen(id) {
     `<g clip-path="url(#${id}-cp)"><g id="${id}-feed">${f}</g></g>` +
     `<g id="${id}-q">${arMysteryHeader()}</g><g id="${id}-real" opacity="0">${arHeader()}</g>`;
 }
+
+// ===== Shaadi season ka sabse bada scam (2026-11-24): crime-show kit: alert lights, case file, rubber stamp, crime board,
+// evidence tag, interrogation lamp, torch beam =====
+// sirenLightsSVG(id): full-frame dark-scene alert lights: a red and a blue beam sweeping from the top corners; move them
+// with sirenUpd(id, t) every frame
+function sirenLightsSVG(id) {
+  const beam = (c) => `<path d="M0,0 L-260,1500 Q0,1600 260,1500 Z" fill="${c}" opacity=".32"/><circle r="70" fill="${c}" opacity=".9"/><circle r="140" fill="${c}" opacity=".25"/>`;
+  return `<g id="${id}"><g transform="translate(120,40)"><g id="${id}-r">${beam('#FF2B2B')}</g></g><g transform="translate(960,40)"><g id="${id}-b">${beam('#2B6BFF')}</g></g></g>`;
+}
+function sirenUpd(id, t) { tf($(id + '-r'), 0, 0, 1, Math.sin(t * 3.2) * 32); tf($(id + '-b'), 0, 0, 1, -Math.sin(t * 3.2 + 1) * 32); op($(id + '-r'), .55 + .45 * Math.max(0, Math.sin(t * 9))); op($(id + '-b'), .55 + .45 * Math.max(0, Math.sin(t * 9 + Math.PI))); }
+// caseFileSVG(label): a closed manila case file (600 x 440) centred on (0,0) with a tab and a typed label
+function caseFileSVG(label = 'CASE NO. 2026') {
+  return `<path d="M-300,-200 L-120,-200 L-90,-236 L60,-236 L90,-200 L300,-200 L300,220 L-300,220 Z" fill="#E2B866" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/>` +
+    `<rect x="-300" y="-170" width="600" height="390" rx="8" fill="#EDC97A" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<rect x="-230" y="-130" width="300" height="56" fill="#FFF8EC" stroke="${OL}" stroke-width="3"/><text x="-80" y="-92" text-anchor="middle" font-family="Courier New, monospace" font-weight="900" font-size="30" fill="${C.text}">${label}</text>` +
+    [0, 1, 2].map(i => `<path d="M-230,${-20 + i * 50} H${140 - i * 60}" stroke="#B58F48" stroke-width="8" stroke-linecap="round"/>`).join('');
+}
+// rubberStampSVG(text, col): a slanted rubber-stamp mark (double outline + text) centred on (0,0); col red by default
+function rubberStampSVG(text, col = '#D9363E', fs = 64) {
+  const w = text.length * fs * .66 + 70, h = fs * 1.6;
+  return `<g transform="rotate(-10)"><rect x="${-w / 2}" y="${-h / 2}" width="${w}" height="${h}" rx="14" fill="none" stroke="${col}" stroke-width="10"/><rect x="${-w / 2 + 12}" y="${-h / 2 + 12}" width="${w - 24}" height="${h - 24}" rx="8" fill="none" stroke="${col}" stroke-width="4"/>` +
+    `<text y="${fs * .35}" text-anchor="middle" font-family="Inter" font-weight="900" font-size="${fs}" fill="${col}" letter-spacing="4">${text}</text></g>`;
+}
+// crimeBoardSVG(x, y, w, h): a cork board in a wooden frame (pin cards and red strings on it)
+function crimeBoardSVG(x, y, w = 960, h = 860) {
+  let s = `<g transform="translate(${x},${y})"><rect x="${-w / 2 - 22}" y="${-h / 2 - 22}" width="${w + 44}" height="${h + 44}" rx="16" fill="${C.woodDark}" stroke="${OL}" stroke-width="${OW}"/><rect x="${-w / 2}" y="${-h / 2}" width="${w}" height="${h}" fill="#C69A64" stroke="${OL}" stroke-width="4"/>`;
+  for (let i = 0; i < 40; i++) s += `<circle cx="${((i * 97) % w) - w / 2}" cy="${((i * 151) % h) - h / 2}" r="${3 + i % 3}" fill="#A77E4E" opacity=".6"/>`;
+  return s + `</g>`;
+}
+// boardCardSVG(text, fs): a pinned paper card (white, red pin) centred on (0,0)
+function boardCardSVG(text, fs = 48, w = 250) {
+  return `<g transform="rotate(${(text.length % 5) - 2})"><rect x="${-w / 2 + 6}" y="-60" width="${w}" height="132" fill="#3B2418" opacity=".18"/><rect x="${-w / 2}" y="-66" width="${w}" height="132" fill="#FFF8EC" stroke="${OL}" stroke-width="4"/>` +
+    `<text y="${fs * .36}" text-anchor="middle" font-family="Inter" font-weight="900" font-size="${fs}" fill="${C.text}">${text}</text><circle cy="-56" r="13" fill="#D9363E" stroke="${OL}" stroke-width="3"/></g>`;
+}
+// evidenceTagSVG(text): a yellow EVIDENCE tag on a string, hanging from (0,0)
+function evidenceTagSVG(text) {
+  const w = Math.max(220, text.length * 20 + 40);
+  return `<path d="M0,0 L0,30" stroke="${OL}" stroke-width="3"/><rect x="${-w / 2}" y="28" width="${w}" height="92" rx="10" fill="#F7D23A" stroke="${OL}" stroke-width="4"/>` +
+    `<text y="62" text-anchor="middle" font-family="Inter" font-weight="900" font-size="24" fill="${C.text}" letter-spacing="3">EVIDENCE</text><text y="100" text-anchor="middle" font-family="Inter" font-weight="800" font-size="28" fill="${C.redDark}">${text}</text>`;
+}
+// hangingLampSVG(id, len): an interrogation lamp hanging from the top (0,0) with a light cone `${id}-cone`; swing `${id}`
+function hangingLampSVG(id, len = 420) {
+  return `<g id="${id}"><path d="M0,0 V${len}" stroke="${OL}" stroke-width="5"/><path id="${id}-cone" d="M-70,${len + 60} L-420,${len + 900} Q0,${len + 980} 420,${len + 900} L70,${len + 60} Z" fill="#FFF2B0" opacity=".28"/>` +
+    `<path d="M-80,${len + 70} Q-70,${len} 0,${len} Q70,${len} 80,${len + 70} Z" fill="#3E4A52" stroke="${OL}" stroke-width="${OW}"/><ellipse cx="0" cy="${len + 72}" rx="40" ry="12" fill="#FFF6C8" stroke="${OL}" stroke-width="3"/></g>`;
+}
+// torchSVG(): a hand torch pointing right, centred on its grip (0,0); torchBeamSVG(len): its light beam going right
+function torchSVG() { return `<rect x="-40" y="-16" width="90" height="32" rx="10" fill="#3E4A52" stroke="${OL}" stroke-width="4"/><path d="M50,-26 L84,-34 L84,34 L50,26 Z" fill="#59656E" stroke="${OL}" stroke-width="4" stroke-linejoin="round"/>`; }
+function torchBeamSVG(len = 700) { return `<path d="M84,-30 L${len},-200 Q${len + 60},0 ${len},200 L84,30 Z" fill="#FFF2B0" opacity=".45"/>`; }

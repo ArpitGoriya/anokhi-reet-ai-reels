@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-24
 - **Made by:** dhruvifewtone-wq
-- **Status:** voice approved
+- **Status:** video 1 sent
 
 ## Brief
 
@@ -65,6 +65,10 @@ Voice text: [`script.txt`](script.txt).
 - Take 3: `output/female-shaadi-scam-take3.mp3` (52 s) = take 2 with "aur almari mein pade kapde rent pe do" (40.7 s)
   voiced again and joined — approved: yes, 2026-11-24
 
+## Video
+
+- `output/2026-11-24-shaadi-scam.mp4` (54 s), video 1 sent 2026-11-24.
+
 ## Feedback rounds
 
 - Voice take 1 (2026-11-24): CTA → "Kya aap bhi outfits rent par lena chahte ho toh comment karo RENT" → only the
@@ -93,8 +97,10 @@ Outfits rent pe chahiye? Comment RENT 👇 Us dost ko tag karo jo har shaadi mei
 
 ## Added to the library (at least two per reel)
 
-- (planned) Inspector Bindiya (coat and hat), a crime board with red strings, a case file with stamps, an
-  interrogation lamp, a torch with a beam, evidence tags, alert lights.
+- `sirenLightsSVG`, `caseFileSVG`, `rubberStampSVG`, `crimeBoardSVG` + `boardCardSVG`, `evidenceTagSVG`, `hangingLampSVG`,
+  `torchSVG` + `torchBeamSVG` in `engine/props.js`.
+- Engine: `hat` (fedora) and `lapels` look options.
+- New cast: Inspector Bindiya (`BINDIYA`).
 
 ## Suggested default (for the owner)
 
@@ -102,4 +108,6 @@ Outfits rent pe chahiye? Comment RENT 👇 Us dost ko tag karo jo har shaadi mei
 
 ## Lessons
 
-- (later)
+- Hang evidence tags in a row above the almari, not on each lehenga: inside the almari they overlap.
+- With several caption chunks per sentence, check the pauses with short Whisper pieces: the automatic timing drifted
+  by one chunk in the middle.

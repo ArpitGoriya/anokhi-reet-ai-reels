@@ -144,3 +144,6 @@ const KRUPA_BETA = {
 // Riya (20s): a friendly presenter from the Anokhi Reet team who talks straight to the camera (to shop owners).
 // Brand-maroon kurti, gold dupatta, open long hair. (Rental dukaan hai? Customer kahan hain?, 2026-11-24)
 const RIYA = { hairStyle: 'long', top: C.red, topD: C.redDark, pallu: C.gold, border: '#B8862F', earrings: true, skin: '#D19A72', skin2: '#BD8460', bangles: true, skirt: { c: C.redDark, d: C.maroonDeep, b: C.gold, w: 195 } };
+// Inspector Bindiya (30s): a playful crime-show detective who "investigates" shopping habits. Beige trench coat,
+// brown fedora, short hair, big bindi. (Shaadi season ka sabse bada scam, 2026-11-24)
+const BINDIYA = { hairStyle: 'short', top: '#C9A46A', topD: '#A8844E', lapels: '#A8844E', hat: '#6B4A2A', skin: '#C08460', skin2: '#A86E4E', earrings: true, bangles: false, pants: { c: '#3B3A48', d: '#2B2A36', hem: 240 } };

@@ -105,6 +105,8 @@ function person(id, o = {}) {
     s += `<path d="M-30,-262 L${tw - 20},-20" stroke="${border}" stroke-width="12" fill="none"/>`;
     if (o.embroidery) for (let i = 0; i < 6; i++) s += `<circle cx="${-40 + i * 22}" cy="${-205 + i * 34}" r="5" fill="${C.gold}"/>`;
   }
+  // a coat's lapels (look option lapels: colour), e.g. a detective's trench coat (Shaadi scam)
+  if (o.lapels) s += `<path d="M-60,-262 L-8,-150 L-40,-120 L-92,-230 Z M60,-262 L8,-150 L40,-120 L92,-230 Z" fill="${o.lapels}" stroke="${OL}" stroke-width="4" stroke-linejoin="round"/><path d="M-${tw - 18},-96 H${tw - 18}" stroke="${o.lapels}" stroke-width="22"/>`;
   // a sherwani / bandhgala front: gold buttons down the middle (look option buttons: true)
   if (o.buttons) for (let i = 0; i < 5; i++) s += `<circle cx="0" cy="${-215 + i * 46}" r="8" fill="${C.gold}" stroke="${OL}" stroke-width="3"/>`;
   if (o.embroidery && !o.pallu) for (let i = 0; i < 5; i++) s += `<circle cx="${-60 + i * 30}" cy="-150" r="5" fill="${C.gold}"/>`;
@@ -145,6 +147,8 @@ function person(id, o = {}) {
   if (o.bindi !== false && !male) s += `<circle cx="0" cy="-418" r="7" fill="${C.red}"/>`;
   if (o.glasses) s += `<g fill="none" stroke="${OL}" stroke-width="5"><circle cx="-38" cy="-378" r="27"/><circle cx="38" cy="-378" r="27"/><path d="M-11,-380 Q0,-388 11,-380"/></g>`;
   s += `<g id="${id}-sweat" opacity="0"><path d="M86,-452 Q100,-428 96,-414 Q88,-402 78,-414 Q74,-428 86,-452 Z" fill="#9BD3EA" stroke="${OL}" stroke-width="3.5"/></g>`;
+  // a fedora hat (look option hat: colour); `${id}-hat` can be lifted to tip it (Shaadi scam)
+  if (o.hat) s += `<g id="${id}-hat"><path d="M-80,-470 Q-86,-560 0,-566 Q86,-560 80,-470 Z" fill="${o.hat}" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/><path d="M-80,-500 Q0,-488 80,-500 L80,-476 Q0,-464 -80,-476 Z" fill="${C.redDark}"/><ellipse cx="0" cy="-468" rx="148" ry="24" fill="${o.hat}" stroke="${OL}" stroke-width="${OW}"/></g>`;
   s += `</g>`; // head
   // arms (paths updated each frame)
   for (const side of ['L', 'R']) {

@@ -3,6 +3,16 @@
 Every reel adds at least one improvement to the engine or library and writes it here (newest first).
 See [GUIDE.md](GUIDE.md) section 8.
 
+## 2026-11-24: crime-show kit, fedora and lapels, Inspector Bindiya (Shaadi season ka sabse bada scam)
+
+- **New props:** `sirenLightsSVG(id)` + `sirenUpd(id, t)` (red and blue alert beams), `caseFileSVG(label)`,
+  `rubberStampSVG(text, col)` (a slanted stamp mark, e.g. CONFIDENTIAL, SOLUTION, CASE CLOSED), `crimeBoardSVG(x, y)`
+  + `boardCardSVG(text)` (cork board with pinned cards; red strings drawn with `pathLength="1"`), `evidenceTagSVG(text)`,
+  `hangingLampSVG(id)` (an interrogation lamp with a light cone), `torchSVG()` + `torchBeamSVG(len)`.
+- **Engine:** look options `hat` (a fedora; lift `${id}-hat` to tip it) and `lapels` (a coat's lapels and belt).
+- **New cast:** Inspector Bindiya (`BINDIYA`). Hetal ben (`HETAL.home`, `.pink`) back from the first reel.
+- Tip: a bust whose waist is below the frame (`bust(…, y ≈ 1940)`) needs no table in front.
+
 ## 2026-11-24: presenter studio, day-to-night window, pamphlets, status phone, scrolling app feed, Riya (Customer kahan hain?)
 
 - **New props:** `studioBG(id)` (a presenter studio: beige backdrop with gold rings `${id}-ring`, ring light, plant),

@@ -49,6 +49,7 @@ characters are added here after their first reel (add them to `cast.js`, to the 
 | `VIHAAN.tight` / `.home` | **Vihaan**, 5, Riddhi's son (the cast's first kid). | Outgrown cream sherwani (short sleeves and hem) / orange tee, blue pants | ₹6,000 ki sherwani |
 | `KRUPA_BETA.vest` / `.sherwani` | **Krupa's son**, 4, jumps on the bed; looks like a little raja in Riddhi's sherwani. | White vest / cream sherwani with long sleeves | ₹6,000 ki sherwani |
 | `RIYA` | **Riya**, 20s, a friendly presenter from the Anokhi Reet team who talks straight to the camera. | Long open hair, brand-maroon kurti, gold dupatta | Customer kahan hain? (2026-11-24) |
+| `BINDIYA` | **Inspector Bindiya**, 30s, a playful crime-show detective who "investigates" shopping habits. | Beige trench coat, brown fedora, short hair | Shaadi season ka sabse bada scam (2026-11-24) |
 
 Ideas for the cast's next members (make them when a story needs them): a young woman who rents for college
 functions, a groom or brother, a vendor on the Anokhi Reet app.
