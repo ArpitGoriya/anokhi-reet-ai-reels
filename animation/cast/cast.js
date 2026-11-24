@@ -160,3 +160,12 @@ const JAY = {
 };
 const HARSH = { male: true, glasses: true, top: '#E07B39', topD: '#B95F25', skin: '#B97A55', skin2: '#A66A47', hair: '#2A1A14', pants: { c: '#F2EADF', hem: 150 } };
 const MITESH = { male: true, wide: true, mustache: true, top: '#3A8F6E', topD: '#2B6E54', skin: '#A86B48', skin2: '#93593A', hair: '#1E140F', pants: { c: '#F2EADF', hem: 150 } };
+// Prachi (20s): the bride's sister and narrator; her darzi's "kal pakka" never comes. Morning (towel on her hair),
+// the peach lehenga she found nearby, and home. Rameshbhai (50s): the darzi, measuring tape round his neck, always
+// smiling, always "kal pakka". (Darzi ne kaha: "Kal pakka!", 2026-11-24)
+const PRACHI = {
+  morning: { hairStyle: 'long', towel: '#FFFFFF', top: '#9CC5B0', topD: '#7FA893', skin: '#D19A72', skin2: '#BD8460', bangles: false, earrings: false, pants: { c: '#F4B9C8', d: '#E09AAE', hem: 60 } },
+  lehenga: { hairStyle: 'long', top: '#F6B48F', topD: '#E0956C', pallu: '#FFE3CF', border: C.gold, necklace: true, earrings: true, skin: '#D19A72', skin2: '#BD8460', skirt: { c: '#F6B48F', d: '#E0956C', b: C.gold } },
+  home: { hairStyle: 'pony', top: '#7A4FA0', topD: '#5D3A7E', skin: '#D19A72', skin2: '#BD8460', bangles: false, skirt: { c: '#F2EADF', d: '#D8CDBE', b: '#D8CDBE', w: 170 } },
+};
+const RAMESH = { male: true, glasses: true, mustache: true, hair: '#6E6A66', top: '#F2EADF', topD: '#D8CDBE', tape: true, skin: '#A86B48', skin2: '#93593A', pants: { c: '#B9B2A8', d: '#9E978D', hem: 150 } };

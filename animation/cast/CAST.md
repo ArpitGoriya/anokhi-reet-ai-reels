@@ -53,6 +53,8 @@ characters are added here after their first reel (add them to `cast.js`, to the 
 | `JAY.maroon` / `.ivory` / `.bandhgala` / `.jodhpuri` / `.casual` | **Jay**, 20s, wears a new (rented) sherwani to every wedding and rents out his own. | Four sherwanis / blue tee and jeans | Har shaadi mein nayi sherwani (2026-11-24) |
 | `HARSH` | **Harsh**, 20s, Jay's friend and the narrator. | Glasses, orange kurta | Har shaadi mein nayi sherwani |
 | `MITESH` | **Mitesh**, 20s, Jay's broad, moustached friend who asks about money. | Green kurta | Har shaadi mein nayi sherwani |
+| `PRACHI.morning` / `.lehenga` / `.home` | **Prachi**, 20s, the bride's sister; her darzi's "kal pakka" never comes, so she finds a nearby shop's outfit. | Towel on her hair / peach lehenga / purple kurti | Darzi ne kaha: "Kal pakka!" (2026-11-24) |
+| `RAMESH` | **Rameshbhai**, 50s, a warm, always-smiling darzi who always says "kal pakka". | Glasses, moustache, white kurta, measuring tape round his neck | Darzi ne kaha: "Kal pakka!" |
 
 Ideas for the cast's next members (make them when a story needs them): a young woman who rents for college
 functions, a vendor on the Anokhi Reet app.

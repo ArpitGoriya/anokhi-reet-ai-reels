@@ -105,6 +105,9 @@ function person(id, o = {}) {
     s += `<path d="M-30,-262 L${tw - 20},-20" stroke="${border}" stroke-width="12" fill="none"/>`;
     if (o.embroidery) for (let i = 0; i < 6; i++) s += `<circle cx="${-40 + i * 22}" cy="${-205 + i * 34}" r="5" fill="${C.gold}"/>`;
   }
+  // a tailor's measuring tape round the neck (look option tape: true) (Kal pakka)
+  if (o.tape) s += `<path d="M-44,-262 Q-60,-200 -52,-110" fill="none" stroke="${OL}" stroke-width="22" stroke-linecap="round"/><path d="M-44,-262 Q-60,-200 -52,-110" fill="none" stroke="#F2D23A" stroke-width="14" stroke-linecap="round" stroke-dasharray="3 9"/><path d="M-44,-262 Q-60,-200 -52,-110" fill="none" stroke="#F2D23A" stroke-width="12" stroke-linecap="round" opacity=".7"/>` +
+    `<path d="M44,-262 Q66,-190 56,-80" fill="none" stroke="${OL}" stroke-width="22" stroke-linecap="round"/><path d="M44,-262 Q66,-190 56,-80" fill="none" stroke="#F2D23A" stroke-width="12" stroke-linecap="round" opacity=".85"/><path d="M44,-262 Q66,-190 56,-80" fill="none" stroke="#3B2418" stroke-width="12" stroke-dasharray="2 12" opacity=".6"/>`;
   // a coat's lapels (look option lapels: colour), e.g. a detective's trench coat (Shaadi scam)
   if (o.lapels) s += `<path d="M-60,-262 L-8,-150 L-40,-120 L-92,-230 Z M60,-262 L8,-150 L40,-120 L92,-230 Z" fill="${o.lapels}" stroke="${OL}" stroke-width="4" stroke-linejoin="round"/><path d="M-${tw - 18},-96 H${tw - 18}" stroke="${o.lapels}" stroke-width="22"/>`;
   // a sherwani / bandhgala front: gold buttons down the middle (look option buttons: true)
@@ -147,6 +150,8 @@ function person(id, o = {}) {
   if (o.bindi !== false && !male) s += `<circle cx="0" cy="-418" r="7" fill="${C.red}"/>`;
   if (o.glasses) s += `<g fill="none" stroke="${OL}" stroke-width="5"><circle cx="-38" cy="-378" r="27"/><circle cx="38" cy="-378" r="27"/><path d="M-11,-380 Q0,-388 11,-380"/></g>`;
   s += `<g id="${id}-sweat" opacity="0"><path d="M86,-452 Q100,-428 96,-414 Q88,-402 78,-414 Q74,-428 86,-452 Z" fill="#9BD3EA" stroke="${OL}" stroke-width="3.5"/></g>`;
+  // a towel wrapped round the hair after a bath (look option towel: colour) (Kal pakka)
+  if (o.towel) s += `<path d="M-106,-392 Q-116,-520 0,-530 Q116,-520 106,-392 Q70,-452 0,-450 Q-70,-452 -106,-392 Z" fill="${o.towel}" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/><path d="M-70,-470 Q0,-500 70,-470 M-50,-505 Q10,-520 60,-500" fill="none" stroke="#D8D2CA" stroke-width="5" stroke-linecap="round"/><ellipse cx="40" cy="-548" rx="62" ry="40" fill="${o.towel}" stroke="${OL}" stroke-width="${OW}"/><path d="M10,-556 Q40,-572 70,-552" fill="none" stroke="#D8D2CA" stroke-width="5"/>`;
   // a fedora hat (look option hat: colour); `${id}-hat` can be lifted to tip it (Shaadi scam)
   if (o.hat) s += `<g id="${id}-hat"><path d="M-80,-470 Q-86,-560 0,-566 Q86,-560 80,-470 Z" fill="${o.hat}" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/><path d="M-80,-500 Q0,-488 80,-500 L80,-476 Q0,-464 -80,-476 Z" fill="${C.redDark}"/><ellipse cx="0" cy="-468" rx="148" ry="24" fill="${o.hat}" stroke="${OL}" stroke-width="${OW}"/></g>`;
   s += `</g>`; // head

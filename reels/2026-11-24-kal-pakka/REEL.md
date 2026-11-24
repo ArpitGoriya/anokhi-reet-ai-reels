@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-24
 - **Made by:** dhruvifewtone-wq
-- **Status:** voice approved
+- **Status:** video 1 sent
 
 ## Brief
 
@@ -55,6 +55,10 @@ Voice text: [`script.txt`](script.txt).
 
 - Take 1: `output/female-kal-pakka-take1.mp3` (48 s) — approved: yes, 2026-11-24
 
+## Video
+
+- `output/2026-11-24-kal-pakka.mp4` (51 s), video 1 sent 2026-11-24.
+
 ## Feedback rounds
 
 - (none yet)
@@ -78,7 +82,9 @@ Apne darzi ko tag karo 😂
 
 ## Added to the library (at least two per reel)
 
-- (planned) Prachi and Rameshbhai (with a measuring tape); a tailor's shop; a big countdown clock; a towel hair-wrap.
+- `countdownClockSVG`, `tailorShopFrontSVG`, `handBoardSVG` in `engine/props.js`.
+- Engine: `towel` and `tape` look options.
+- New cast: Prachi (three looks) and Rameshbhai (`RAMESH`).
 
 ## Suggested default (for the owner)
 
@@ -86,4 +92,5 @@ Apne darzi ko tag karo 😂
 
 ## Lessons
 
-- (later)
+- Speech bubbles at face height covered faces again (Mummy's call): put them on an empty wall or shutter area.
+- On a busy end card, move the captions up (`capY`) when a bust sits at the bottom of the frame.

@@ -3,6 +3,14 @@
 Every reel adds at least one improvement to the engine or library and writes it here (newest first).
 See [GUIDE.md](GUIDE.md) section 8.
 
+## 2026-11-24: countdown clock, tailor's shop front, handwritten board, towel wrap, measuring tape, Prachi and Rameshbhai (Kal pakka)
+
+- **New props:** `countdownClockSVG(id, label, r)` (a big alarm clock with a red label plate; turn `${id}-m` / `${id}-h`),
+  `tailorShopFrontSVG(id, name)` (a tailor's shop with its shutter down and steps), `handBoardSVG(lines)` (a taped,
+  handwritten cardboard sign).
+- **Engine:** look options `towel` (a towel wrapped round the hair) and `tape` (a tailor's measuring tape round the neck).
+- **New cast:** Prachi (`PRACHI.morning`, `.lehenga`, `.home`) and Rameshbhai the darzi (`RAMESH`).
+
 ## 2026-11-24: comic-book kit, chai tapri, booking calendar, Jay, Harsh and Mitesh (Har shaadi mein nayi sherwani)
 
 - **New props:** `comicPanel(id, x, y, w, h, bg, inner)` (a comic panel with halftone dots; its contents are clipped,

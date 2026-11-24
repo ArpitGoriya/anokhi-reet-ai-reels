@@ -919,3 +919,34 @@ function bookingCalendarSVG(id, month = 'BOOKINGS', n = 9) {
   for (let k = 0; k < n; k++) { const i = days[k % days.length] - 1, x = -255 + (i % 7) * 85, y = -150 + (i / 7 | 0) * 92; s += `<g transform="translate(${x},${y})"><g id="${id}-t${k}" opacity="0"><circle r="32" fill="${C.emerald}" stroke="${OL}" stroke-width="4"/><path d="M-14,0 L-4,11 L15,-11" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></g></g>`; }
   return s;
 }
+
+// ===== Darzi ne kaha: "Kal pakka!" (2026-11-24): countdown clock, tailor's shop front, handwritten board =====
+// countdownClockSVG(id, label, r): a big alarm clock (hands `${id}-m` / `${id}-h`, tick them with clockTick-style tf)
+// with a red label plate under it ("6 GHANTE BAAKI"); centred on the clock face
+function countdownClockSVG(id, label, r = 140) {
+  let s = `<g id="${id}"><path d="M${-r * .7},${-r * .78} L${-r * .95},${-r * 1.05} M${r * .7},${-r * .78} L${r * .95},${-r * 1.05}" stroke="${OL}" stroke-width="14" stroke-linecap="round"/>` +
+    `<circle cx="${-r * .62}" cy="${-r * .9}" r="${r * .3}" fill="${C.red}" stroke="${OL}" stroke-width="${OW}"/><circle cx="${r * .62}" cy="${-r * .9}" r="${r * .3}" fill="${C.red}" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<circle r="${r}" fill="${C.red}" stroke="${OL}" stroke-width="${OW}"/><circle r="${r * .84}" fill="#fff" stroke="${OL}" stroke-width="4"/>`;
+  for (let i = 0; i < 12; i++) { const a = i * Math.PI / 6; s += `<path d="M${Math.sin(a) * r * .66},${-Math.cos(a) * r * .66} L${Math.sin(a) * r * .78},${-Math.cos(a) * r * .78}" stroke="${OL}" stroke-width="6"/>`; }
+  s += `<path id="${id}-m" d="M0,0 V${-r * .6}" stroke="${OL}" stroke-width="9" stroke-linecap="round"/><path id="${id}-h" d="M0,0 V${-r * .38}" stroke="${OL}" stroke-width="12" stroke-linecap="round"/><circle r="10" fill="${C.red}"/>`;
+  const w = label.length * 26 + 60;
+  return s + `<g id="${id}-lab"><rect x="${-w / 2}" y="${r + 24}" width="${w}" height="76" rx="16" fill="#D9363E" stroke="${OL}" stroke-width="${OW}"/><text id="${id}-t" y="${r + 76}" text-anchor="middle" font-family="Inter" font-weight="900" font-size="44" fill="#fff">${label}</text></g></g>`;
+}
+// tailorShopFrontSVG(id, name): a small tailor's shop front (full width): sign board, a shutter pulled down
+// (`${id}-sh`), steps in front; put a handBoardSVG on the shutter
+function tailorShopFrontSVG(id, name = 'RAMESH TAILORS 🧵') {
+  let s = `<rect width="${W}" height="${H}" fill="#E8D9C0"/><rect x="90" y="380" width="900" height="${FLOOR - 380}" fill="#C9A77A" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<rect x="120" y="400" width="840" height="120" rx="14" fill="${C.teal}" stroke="${OL}" stroke-width="${OW}"/><text x="540" y="482" text-anchor="middle" font-family="Inter" font-weight="900" font-size="60" fill="#fff" letter-spacing="3">${name}</text>` +
+    `<g id="${id}-sh"><rect x="150" y="540" width="780" height="${FLOOR - 560}" fill="#A7A39C" stroke="${OL}" stroke-width="${OW}"/>`;
+  for (let y = 580; y < FLOOR - 30; y += 40) s += `<path d="M150,${y} H930" stroke="#8C8880" stroke-width="5"/>`;
+  s += `<rect x="500" y="${FLOOR - 60}" width="80" height="22" rx="8" fill="#6F6B64" stroke="${OL}" stroke-width="3"/></g>`;
+  s += floorSVG('#A49E94') + `<rect x="120" y="${FLOOR - 10}" width="840" height="50" fill="#BDB7AD" stroke="${OL}" stroke-width="4"/><rect x="80" y="${FLOOR + 40}" width="920" height="50" fill="#B0AAA0" stroke="${OL}" stroke-width="4"/>`;
+  return s;
+}
+// handBoardSVG(lines): a handwritten cardboard sign (taped corners), centred on (0,0)
+function handBoardSVG(lines = ['Shaadi mein gaye hain.', 'Kal aana. 🙃']) {
+  const w = 600, h = 80 + lines.length * 64;
+  return `<g transform="rotate(-4)"><rect x="${-w / 2}" y="${-h / 2}" width="${w}" height="${h}" rx="8" fill="#D9B98A" stroke="${OL}" stroke-width="${OW}"/>` +
+    [[-w / 2, -h / 2], [w / 2, -h / 2]].map(([x, y]) => `<rect x="${x - 30}" y="${y - 14}" width="60" height="28" fill="#F4F1EC" opacity=".85" transform="rotate(${x < 0 ? -30 : 30},${x},${y})"/>`).join('') +
+    lines.map((l, i) => `<text y="${-h / 2 + 76 + i * 64}" text-anchor="middle" font-family="Comic Sans MS, Segoe Print, cursive" font-weight="700" font-size="46" fill="#2A1A14">${l}</text>`).join('') + `</g>`;
+}
