@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-24
 - **Made by:** dhruvifewtone-wq
-- **Status:** script written (waiting for approval)
+- **Status:** script approved
 
 ## Brief
 
@@ -33,7 +33,7 @@
 - Key words in yellow (gold) highlight boxes; on-screen emojis as in the script.
 - CTA: "Comment karo OUTFIT" in voice, end card and caption. Pinned comment as written. Hashtags: 5, as given.
 
-## Script and storyboard (approved: no)
+## Script and storyboard (approved: yes, 2026-11-24)
 
 | # | Voice line (caption) | On screen (scene, characters and what they do) | Label / title |
 |---|---|---|---|
@@ -52,7 +52,7 @@ Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- (none yet)
+- Take 1: `output/male-nayi-sherwani-take1.mp3` (46 s) — sent, waiting for approval
 
 ## Feedback rounds
 
