@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-24
 - **Made by:** dhruvifewtone-wq
-- **Status:** video 2 sent
+- **Status:** final (video 3, 2026-11-24)
 
 ## Brief
 
@@ -63,11 +63,14 @@ Voice text: [`script.txt`](script.txt).
 
 - `output/2026-11-24-kal-pakka.mp4` (51 s), video 1 sent 2026-11-24.
 - `output/2026-11-24-kal-pakka-v2.mp4` (51 s), video 2 sent 2026-11-24.
+- `output/2026-11-24-kal-pakka-v3.mp4` (51 s), video 3, final (teammate: "then video is final", 2026-11-24).
 
 ## Feedback rounds
 
 - Video 1 (2026-11-24): don't call Anokhi Reet a "backup" (it's the main brand); CTA → "Agar aapko bhi outfits rent
   par chahiye toh comment karo RENT" → the ending voiced again and joined (take 2), end card and caption updated.
+- Video 2 (2026-11-24): "the blouse looks too small when the darzi hands it over" → the blouse is bigger (in his hand,
+  against Prachi and in the punchline panel); still clearly too small for her.
 
 ## Caption
 

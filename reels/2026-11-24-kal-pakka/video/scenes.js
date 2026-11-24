@@ -128,7 +128,7 @@ addScene('c25', 'c27', {
 // ================= S9 two days later: the darzi at the door, proudly — the blouse is two sizes too small =================
 addScene('c27', 'c29', {
   svg: homeBG('s9', { noWindow: true, noShelf: true, noClock: true }) + `<rect x="620" y="420" width="380" height="${FLOOR - 420}" fill="#F7EBD7" stroke="${OL}" stroke-width="${OW}"/><rect x="620" y="420" width="380" height="${FLOOR - 420}" fill="none" stroke="${C.woodDark}" stroke-width="22"/>` +
-    stand('s9r', RAMESH, 810, feet(.72), .72) + stand('s9p', PH, 300, feet(.74), .74) + `<g id="s9bl"><g transform="scale(.42)">${blouseIcon()}</g></g>` +
+    stand('s9r', RAMESH, 810, feet(.72), .72) + stand('s9p', PH, 300, feet(.74), .74) + `<g id="s9bl"><g transform="scale(.68)">${blouseIcon()}</g></g>` +
     burst(300, 560, 'c28+0.6', 'FAIL 😂', '#F7D23A', 120, 48, -8),
   html: pillH(540, 352, 'c27', '<span class="hl">2 din BAAD</span> 🔔', 'gold', 'c28-0.05') + pillH(540, 352, 'c28', 'Shaadi ke 2 din BAAD… aur <span class="hl">size bhi galat</span> 😂') +
     bub(780, 560, 460, 'c27', 'c28+0.5', '"Beta, blouse ready hai! Bola tha na… <span class="hl">pakka!</span>"', 34),
@@ -144,7 +144,7 @@ addScene('c27', 'c29', {
 // ================= S10a the punchline: "kal pakka… kabhi pakka nahi hota" — backup: =================
 addScene('c29', 'c31', {
   svg: `<rect width="${W}" height="${H}" fill="#1A1A1A"/>` + comicPanel('s10p', 40, 420, 1000, 880, '#F4A0B8', bust('s10pr', PH, 540, 1360, 1.0)) +
-    `<g id="s10bl"><g transform="scale(.5)">${blouseIcon()}</g></g><g id="s10ph">${phoneBackSVG(1.1)}</g>`,
+    `<g id="s10bl"><g transform="scale(.68)">${blouseIcon()}</g></g><g id="s10ph">${phoneBackSVG(1.1)}</g>`,
   html: pillH(540, 352, 'c29', 'Darzi ka "kal" <span class="hl">≠ pakka</span> 😂'),
   noWm: true, cam: [1, 1.04], fy: 860,
   upd(t) {
