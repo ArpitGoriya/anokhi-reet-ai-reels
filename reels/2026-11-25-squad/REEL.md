@@ -25,7 +25,10 @@
 ## Teammate changes (override the brand defaults for this reel only)
 
 - **Colour filter shown** (teammate confirmed the app has one, 2026-11-25): Location · Occasion · Colour · Budget.
-- **The app is named only in the flashback** (scene 9) and at the end.
+- **The app is named only when the bridesmaids ask** (teammate, 2026-11-25): "Konse app se rent par mila?" "Haan haan,
+  humko bhi app ka naam bata!" → "Anokhi Reet!" (about 51 s), and at the end. In the flashback it's "ek app" with the
+  name hidden on the phone.
+- **The dress-code message ends with "Please sab dress code follow karna 🙏"** (teammate, 2026-11-25).
 - Maya is drawn with dignity: no sad-music jokes, no pity labels; just her quiet face and the almari.
 - The script's sounds (tings, pings, piano, sad note, ringing, riser, camera clicks, sparkle, laughter, beat) are shown
   visually; no sound effects, no "whoosh" (brand rule).
@@ -39,27 +42,33 @@
 
 | # | Voice line (caption) | On screen (scene, characters and what they do) | Label / title |
 |---|---|---|---|
-| 1 | *Dulhan ne group mein* / *dress code* bheja… | **Hook from frame 1:** a WhatsApp-style group "Jhalak ki Shaadi 💍👯‍♀️ (8 members)"; Jhalak's message pops: "Dress code for my bridesmaids 💅 · Haldi: Peela 💛 · Mehendi: Hara 💚 · Sangeet: Purple 💜 · Shaadi: Pink 🩷"; "ting". | Big title from frame 1: **Dulhan ka DRESS CODE aa gaya 💌** |
+| 1 | *Dulhan ne group mein* / *dress code* bheja… | **Hook from frame 1:** a WhatsApp-style group "Jhalak ki Shaadi 💍👯‍♀️ (8 members)"; Jhalak's message pops: "Dress code for my bridesmaids 💅 · Haldi: Peela 💛 · Mehendi: Hara 💚 · Sangeet: Purple 💜 · Shaadi: Pink 🩷 · Please sab dress code follow karna 🙏"; "ting". | Big title from frame 1: **Dulhan ka DRESS CODE aa gaya 💌** |
 | 2 | *Chhe saheliyan* khush… / sabke paas *pehle se* outfits ready. | Replies flood the chat: Hetvi "Yesss! Mere paas peela wala hai 😍", Palak "Purple toh mera favourite hai 💜", Saloni "Pink lehenga ready hai 💃", Vrunda, Meera, Disha "😍😍🔥🔥"; six small faces light up around the phone. | 6 saheliyan: "READY HAI!" 😍 |
 | 3 | Par *ek saheli…* / *chup* thi. | Maya alone on her bed, phone in hand; she opens her almari: two old suits, none of the four colours; "typing…" appears and disappears. | Par Maya… chup thi 😶 |
-| 4 | *Chaar function,* / *chaar naye outfit…* / *budget nahi* tha. / Toh usne bas *itna likha.* | Her message lands in the group: "Sorry Jhalak… main shaadi mein nahi aa paungi 😔"; the chat goes quiet; a "typing…" bubble appears and disappears. | "Main nahi aa paungi…" 💔 |
+| 4 | *Chaar function,* / *chaar naye outfit…* / *budget nahi* tha. / Toh usne bas likha… / *"Sorry Jhalak…* / *main nahi aa paungi."* | Her message lands in the group: "Sorry Jhalak… main shaadi mein nahi aa paungi 😔"; the chat goes quiet; a "typing…" bubble appears and disappears. | "Main nahi aa paungi…" 💔 |
 | 5 | *"Pagal hai kya?* / Tere bina *meri shaadi?* / Mujhe pata hai *kya baat* hai. / Tension mat le… / *sab mujh pe chhod de."* / "Par Jhalak…" / *"Bas. Tu aa rahi hai.* / Baaki *main dekh lungi."* | Maya's phone rings "Jhalak 💍 calling"; split screen: Jhalak in bridal-prep chaos with mehendi cones around her, Maya with teary eyes who slowly smiles. Bubbles for each line. | "Sab mujh pe chhod de" 🤝 |
 | 6 | Jhalak ne *kya plan* kiya tha? / Maya ko bhi *nahi pata* tha… | Maya puts the phone down, confused but smiling a little; a "?" floats. | Jhalak ka plan kya tha? 🤔 |
 | 7 | Aur *har function* mein… / *sabse zyada chamak* rahi thi *Maya.* | Four quick panels with function chips: HALDI 💛 yellow sharara, haldi on her cheeks · MEHENDI 💚 emerald anarkali, showing her mehendi · SANGEET 💜 sparkly purple lehenga, dancing · SHAADI 🩷 rose-pink lehenga beside the bride; camera flashes; relatives whisper "Ye kaun hai? Sabse sundar toh yahi lag rahi hai!" | Har function mein SABSE SUNDAR = Maya ✨ |
 | 8 | *"Maya!* Tune itne sundar outfits / *kahan se manage* kiye?!" / "Haan, *humse bhi acche* hain!" | The six bridesmaids surround Maya; she looks across the mandap at Jhalak, who catches her eye and **winks** (held a full second, with a sparkle). | "Kaise manage kiya?!" · 😉 |
-| 9 | *Do hafte pehle,* / shaadi ki saari *bhaag-daud* ke beech… / Jhalak ne *Anokhi Reet* pe / har function ka *colour aur budget* select kiya… / aur Maya ke liye / *chaaron outfits rent pe* book kar diye. | Sepia flashback "2 hafte pehle…": late at night Jhalak on her bed among to-do lists, phone in hand; the Anokhi Reet app: 📍 Location · 🎉 Occasion: Haldi · 🎨 Colour: Yellow · 💰 Budget; she saves a yellow sharara, then green, purple, pink; four saved cards "Maya ke liye 💛💚💜🩷"; she smiles and books them. | Anokhi Reet 📲 · Colour ✅ Budget ✅ 4 outfits RENT pe ✅ |
-| 10 | *"Sab rent pe hain…* / Jhalak ne kiya." / *"Rent pe?!* / Aur hum log *khareed-khareed* ke pagal ho gaye!" / *"Agli baar* humein bhi batana!" | Back at the wedding: Maya, a little shy, tells them; the six are stunned for a second, then burst out laughing and group-hug Maya and Jhalak. | "Sab RENT pe hain!" 😳 → 😂🤗 |
+| 9 | *Do hafte pehle,* / shaadi ki saari *bhaag-daud* ke beech… / Jhalak ne *ek app* pe / har function ka *colour aur budget* select kiya… / aur Maya ke liye / *chaaron outfits rent pe* book kar diye. | Sepia flashback "2 hafte pehle…": late at night Jhalak on her bed among to-do lists, phone in hand; the app (name hidden): 📍 Location · 🎉 Occasion: Haldi · 🎨 Colour: Yellow · 💰 Budget; she saves a yellow sharara, then green, purple, pink; four saved cards "Maya ke liye 💛💚💜🩷"; she smiles and books them. | Colour ✅ Budget ✅ 4 outfits RENT pe ✅ |
+| 10 | *"Sab rent pe hain…* / Jhalak ne kiya." / "Rent pe? *Konse app* se / rent par mila?" / "Haan haan, humko bhi / *app ka naam* bata!" / *"Anokhi Reet!"* / "Aur hum log *khareed-khareed* / ke pagal ho gaye!" / *"Agli baar* humein bhi batana!" | Back at the wedding: Maya, a little shy, tells them; the six lean in ("Konse app?"), Maya shows her phone: the Anokhi Reet app (the name revealed with sparkles); then they burst out laughing and group-hug Maya and Jhalak. | "Sab RENT pe hain!" 😳 → Anokhi Reet ✨ → 😂🤗 |
 | 11 | Kyunki *asli dosti* mein… / *koi peeche nahi* chhootta. / *Anokhi Reet.* / Apni *squad* ke saath share karo… / aur *comment* karo *SQUAD.* | A group photo: the bride with all seven bridesmaids, Maya in the middle; it freezes into a Polaroid "Squad complete 💕"; then the maroon end card: Anokhi Reet logo, **Comment SQUAD 👇 · Apni squad ko tag karo 👯‍♀️**, anokhireet.in. | Squad complete 💕 · Anokhi Reet ✨ · Comment SQUAD 👇 |
 
 Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- Take 1: `output/female-squad-take1.mp3` (62 s) — sent, waiting for approval
+- Take 1: `output/female-squad-take1.mp3` (62 s) — kept except three lines (teammate changes, 2026-11-25)
+- Take 2 (in progress): take 1 with three lines voiced again and joined. Ready: "Jhalak ne ek app pe…" and "Rent pe?
+  Konse app se rent par mila?" "Haan haan, humko bhi app ka naam bata!" "Anokhi Reet!". Waiting: "Toh usne bas likha…
+  'Sorry Jhalak… main nahi aa paungi.'" (the main voice model's free daily limit ran out on 2026-11-25).
 
 ## Feedback rounds
 
-- (none yet)
+- Voice take 1 (2026-11-25): (1) 13 s → "Toh usne bas likha… 'Sorry Jhalak… main nahi aa paungi.'" (2) the dress-code
+  message also says "Please sab dress code follow karna 🙏" (screen only) (3) 41 s → don't name the app yet: "Jhalak ne ek
+  app pe…" (4) before "khareed-khareed ke pagal ho gaye": "Rent pe? Konse app se rent par mila?" "Haan haan, humko bhi
+  app ka naam bata!" "Anokhi Reet!" (the name revealed here).
 
 ## Caption
 
