@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-25
 - **Made by:** dhruvifewtone-wq
-- **Status:** script written (waiting for approval)
+- **Status:** script approved; voice waiting for the main voice model (2026-11-26)
 
 ## Brief
 
@@ -35,7 +35,7 @@
 - CTA: "Comment karo SQUAD" in voice, end card and caption. Pinned comment as written.
 - Hashtags: 5, #DulheKeDost dropped (teammate chose it, 2026-11-25).
 
-## Script and storyboard (approved: no)
+## Script and storyboard (approved: yes, 2026-11-25)
 
 | # | Voice line (caption) | On screen (scene, characters and what they do) | Label / title |
 |---|---|---|---|
