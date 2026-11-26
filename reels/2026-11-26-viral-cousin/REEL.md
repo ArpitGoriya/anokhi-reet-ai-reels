@@ -25,7 +25,8 @@
 ## Teammate changes (override the brand defaults for this reel only)
 
 - **Comic-book + Instagram-style frames** (likes, hearts, comment bubbles); brand maroon and gold for the reveal and end.
-- **CTA: OUTFIT kept** (teammate chose it, 2026-11-26): "…ya purane looks rent pe do. Comment karo OUTFIT."
+- **CTA: OUTFIT** (teammate, 2026-11-26): "…ya purane looks rent pe do. Agar aapko bhi aise hi har function mein naye
+  outfits rent par lene hain… toh comment karo OUTFIT."
 - **Story numbers** (like counts, ₹1-2 lakh guesses, ₹1,200 per look, ₹4,800, ₹8,000 earned, ₹3,200 profit) are the
   story's, with "Udaharan" on screen for the money; never Anokhi Reet's prices or a promise.
 - **Chat lines voiced:** the family group's messages (Badi Mummy, Mama) and Badi Mummy's last message are read by the
@@ -48,17 +49,20 @@
 | 7 | "Toh ye *almari bhar ke kapde* kiske hain?" / "Woh toh *aur bhi mazedaar* hai…" | Nidhi points at the open almari behind Ishani, full of outfits; Ishani grins. | Asli TWIST abhi baaki hai 👀 |
 | 8 | "Jo outfits main *pehle khareed chuki* thi, / aur sab *Instagram pe dekh* chuke the… / woh ab meri *followers rent pe* leti hain." | Old posts with comments popping: "Ye outfit kahan milega? 😍", "Mujhe bhi chahiye!"; Ishani lists them; a calendar fills with booking ticks and "KA-CHING!"; a ledger slides in: Kharcha (rent liya) ₹4,800 · Kamaai (purane outfits rent pe diye) ₹8,000 · PROFIT ₹3,200 ✅ (Udaharan). | Purane outfits = Followers ki WISHLIST 😍 · PROFIT 😎 |
 | 9 | *"Influencer bhi…* / *aur investor bhi."* / "Beta, meri *saree bhi* daal de na." | Ishani strikes a selfie pose in sunglasses; the family chat pops again: Badi Mummy "Beta, meri saree bhi daal de na 🙏"; a comic "DING!". | Influencer bhi · Investor bhi 😎 |
-| 10 | *Anokhi Reet.* / Har shaadi *naya look* rent karo… / ya *purane looks* rent pe do. / *Comment* karo *OUTFIT.* | Ishani's phone faces us: the Anokhi Reet app; two buttons pop: "Outfit rent karo 👗" and "Apna rent pe do 💰"; then the maroon end card: logo, **Comment OUTFIT 👇 · Apni stylish cousin ko tag karo 📸**, anokhireet.in. | Comment OUTFIT 👇 |
+| 10 | *Anokhi Reet.* / Har shaadi *naya look* rent karo… / ya *purane looks* rent pe do. / Agar aapko bhi aise hi / *har function* mein naye outfits / *rent par* lene hain… / toh *comment* karo *OUTFIT.* | Ishani's phone faces us: the Anokhi Reet app; two buttons pop: "Outfit rent karo 👗" and "Apna rent pe do 💰"; then the maroon end card: logo, **Har function naya look? Comment OUTFIT 👇 · Apni stylish cousin ko tag karo 📸**, anokhireet.in. | Comment OUTFIT 👇 |
 
 Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- Take 1: `output/female-viral-cousin-take1.mp3` (49 s) — sent, waiting for approval
+- Take 1: `output/female-viral-cousin-take1.mp3` (49 s) — kept except the last line (teammate change, 2026-11-26)
+- Take 2: `output/female-viral-cousin-take2.mp3` (53 s) = take 1 up to "…ya purane looks rent pe do." (47.15 s) + "Agar aapko
+  bhi aise hi har function mein naye outfits rent par lene hain… toh comment karo OUTFIT." — sent, waiting for approval
 
 ## Feedback rounds
 
-- (none yet)
+- Voice take 1 (2026-11-26): last CTA → "Agar aapko bhi aise hi har function mein naye outfits rent par lene hain toh
+  comment karo OUTFIT" → voiced and joined (take 2); end card and caption updated.
 
 ## Caption
 
@@ -70,7 +74,8 @@ Sach? 4 look = ₹4,800, rent par 😎
 Aur jo outfits pehle khareede the? Ab followers unhe rent pe leti hain, ₹8,000 ki kamaai 💰 (udaharan)
 
 Influencer bhi… aur investor bhi 😂
-Comment OUTFIT 👇 Apni stylish cousin ko tag karo
+Har function mein naye outfits rent par chahiye? Comment OUTFIT 👇
+Apni stylish cousin ko tag karo 📸
 
 #WeddingLook #OutfitOnRent #InstaWorthy #LehengaOnRent #AnokhiReet
 ```
