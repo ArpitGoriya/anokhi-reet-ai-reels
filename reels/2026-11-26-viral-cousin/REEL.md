@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-26
 - **Made by:** dhruvifewtone-wq
-- **Status:** voice approved
+- **Status:** video 1 sent
 
 ## Brief
 
@@ -59,6 +59,10 @@ Voice text: [`script.txt`](script.txt).
 - Take 2: `output/female-viral-cousin-take2.mp3` (53 s) = take 1 up to "…ya purane looks rent pe do." (47.15 s) + "Agar aapko
   bhi aise hi har function mein naye outfits rent par lene hain… toh comment karo OUTFIT." — approved: yes, 2026-11-26
 
+## Video
+
+- `output/2026-11-26-viral-cousin.mp4` (55 s), video 1 sent 2026-11-26.
+
 ## Feedback rounds
 
 - Voice take 1 (2026-11-26): last CTA → "Agar aapko bhi aise hi har function mein naye outfits rent par lene hain toh
@@ -84,8 +88,8 @@ Apni stylish cousin ko tag karo 📸
 
 ## Added to the library (at least two per reel)
 
-- (planned) Ishani, Nidhi, Badi Mummy; an Instagram-style post frame (likes, hearts, comments); a photo-booth set;
-  sunglasses.
+- `instaPostSVG`, `floatHeartsSVG` + `floatHearts`, `photoBoothBG` in `engine/props.js`; `shades` look option.
+- New cast: Ishani (five looks), Nidhi, Badi Mummy.
 
 ## Suggested default (for the owner)
 
@@ -93,4 +97,4 @@ Apni stylish cousin ko tag karo 📸
 
 ## Lessons
 
-- (later)
+- Social-post cards are taller than wide (header + photo + footer): size a 2×2 grid by the card's full height.

@@ -999,3 +999,29 @@ function ledgerCardSVG(rows, total, w = 860) {
   if (total) { s += `<path d="M${-w / 2 + 40},${y - 40} H${w / 2 - 40}" stroke="#1A1A1A" stroke-width="5"/><text x="${-w / 2 + 40}" y="${y + 24}" font-family="Inter" font-weight="900" font-size="44" fill="${C.text}">${total[0]}</text><text x="${w / 2 - 40}" y="${y + 24}" text-anchor="end" font-family="Inter" font-weight="900" font-size="48" fill="${total[2] || '#1F7A4D'}">${total[1]}</text>`; }
   return s;
 }
+
+// ===== Cousin har shaadi ki photo mein viral (2026-11-26): Instagram-style post frame, photo booth =====
+// instaPostSVG(id, x, y, w, inner, likes, handle): a social-media post card with its top-left at (x, y), w wide: a header
+// (avatar + handle + ···), a square photo window (`inner` drawn in scene coordinates, clipped to it), then a row of
+// heart / comment / share icons and the like count (`${id}-likes`, a <text> you can update). Returns the card's SVG.
+function instaPostSVG(id, x, y, w, inner = '', likes = '❤️ 2.4K', handle = 'ishani.styles') {
+  const hh = w * .14, ph = w, fh = w * .2, H2 = hh + ph + fh, fs = Math.max(18, w * .045);
+  return `<defs><clipPath id="${id}-cp"><rect x="${x}" y="${y + hh}" width="${w}" height="${ph}"/></clipPath></defs><g id="${id}">` +
+    `<rect x="${x + 8}" y="${y + 10}" width="${w}" height="${H2}" rx="18" fill="#1A1A1A" opacity=".25"/><rect x="${x}" y="${y}" width="${w}" height="${H2}" rx="18" fill="#fff" stroke="${OL}" stroke-width="4"/>` +
+    `<circle cx="${x + hh * .55}" cy="${y + hh / 2}" r="${hh * .32}" fill="${C.pink}" stroke="#F2A33A" stroke-width="4"/><text x="${x + hh * 1.05}" y="${y + hh / 2 + fs * .36}" font-family="Inter" font-weight="800" font-size="${fs}" fill="${C.text}">${handle}</text>` +
+    `<text x="${x + w - 20}" y="${y + hh / 2 + fs * .36}" text-anchor="end" font-family="Inter" font-weight="900" font-size="${fs}" fill="${C.text}">···</text>` +
+    `<rect x="${x}" y="${y + hh}" width="${w}" height="${ph}" fill="#F6E3CF"/><g clip-path="url(#${id}-cp)">${inner}</g>` +
+    `<text x="${x + 18}" y="${y + hh + ph + fh * .45}" font-size="${fs * 1.2}">🤍 💬 ➤</text>` +
+    `<text id="${id}-likes" x="${x + 18}" y="${y + hh + ph + fh * .88}" font-family="Inter" font-weight="900" font-size="${fs * 1.05}" fill="${C.text}">${likes}</text></g>`;
+}
+// floatHeartsSVG(id, n, x, y): n small hearts at (x, y) (`${id}-h0..`); move them with floatHearts(id, n, t, t0)
+function floatHeartsSVG(id, n = 8, x = 540, y = 1200) { return [...Array(n)].map((_, i) => `<g transform="translate(${x},${y})"><g id="${id}-h${i}" opacity="0"><text text-anchor="middle" font-size="${46 + (i % 3) * 14}">${['❤️', '💖', '😍'][i % 3]}</text></g></g>`).join(''); }
+function floatHearts(id, n, t, t0) { for (let i = 0; i < n; i++) { const k = (t - t0 - i * .18) / 1.6; const el = $(`${id}-h${i}`); if (!el) continue; const kk = k - Math.floor(Math.max(0, k)); op(el, k > 0 ? 1 - kk : 0); tf(el, Math.sin(i * 2.3 + kk * 6) * 60 + (i - n / 2) * 30, -kk * 520, .8 + kk * .4); } }
+// photoBoothBG(id): a wedding photo booth: a floral frame, fairy lights, a "#ShaadiVibes" sign, a ring light
+function photoBoothBG(id) {
+  return `<rect width="${W}" height="${H}" fill="#F6E3CF"/><rect y="${FLOOR}" width="${W}" height="${H - FLOOR}" fill="#C9A77A"/>` + fairyLightsSVG(300) +
+    `<rect x="160" y="400" width="760" height="${FLOOR - 400}" rx="30" fill="#FBEFF3" stroke="${C.pink}" stroke-width="14"/>` +
+    [...Array(14)].map((_, i) => { const a = i / 13; return `<circle cx="${160 + a * 760}" cy="400" r="${26 + (i % 2) * 8}" fill="${i % 3 ? C.pink : C.marigold}" stroke="${OL}" stroke-width="3"/>`; }).join('') +
+    `<g transform="translate(540,480)"><rect x="-190" y="-34" width="380" height="68" rx="34" fill="#fff" stroke="${OL}" stroke-width="4"/><text y="12" text-anchor="middle" font-family="Comic Sans MS, Segoe Print, cursive" font-weight="700" font-size="34" fill="${C.pinkDark}">#ShaadiVibes 📸</text></g>` +
+    `<g transform="translate(990,700)"><path d="M0,70 V520" stroke="${OL}" stroke-width="10"/><circle r="70" fill="none" stroke="${OL}" stroke-width="34"/><circle r="70" fill="none" stroke="#FFF8EC" stroke-width="22"/></g>`;
+}

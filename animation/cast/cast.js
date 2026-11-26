@@ -196,3 +196,16 @@ const GROOM_SQUAD = [['Kunal', '#7A1B2A', '#B97A55', {}], ['Meet', '#F2E7D0', '#
   .map(([name, c, skin, extra]) => ({ name, look: Object.assign({ male: true, skin, skin2: skin, hair: '#1E140F', top: c, topD: c, buttons: true, sleeveTo: .95, pants: { c: '#FFF8EC', d: '#E8DCC8', hem: 240 } }, extra) }));
 const MAMAJI = { male: true, wide: true, mustache: true, glasses: true, hair: '#8F8A84', top: '#B5532E', topD: '#8E3F22', skin: '#A86B48', skin2: '#93593A', pants: { c: '#F2EADF', hem: 150 } };
 const FUAJI = { male: true, mustache: true, hair: '#5A5550', top: '#3D5A80', topD: '#2E4663', skin: '#C08460', skin2: '#A86E4E', pants: { c: '#F2EADF', hem: 150 } };
+// Ishani (20s): the stylish cousin who goes viral at every wedding (all looks rented; she rents out her old ones).
+// Nidhi (20s): her cousin and the narrator. Badi Mummy (50s): the aunt who's sure it's all sponsored.
+// (Cousin har shaadi ki photo mein viral, 2026-11-26)
+const ISHANI_BASE = { hairStyle: 'long', skin: '#D9A07A', skin2: '#C48A66', earrings: true, necklace: true };
+const ISHANI = {
+  pastel: dress(ISHANI_BASE, { top: '#F4C6D6', topD: '#E3A3B8', pallu: '#FFF0F5', border: '#E8C25E', embroidery: true, skirt: { c: '#F4C6D6', d: '#E3A3B8', b: '#E8C25E' } }),
+  mint: dress(ISHANI_BASE, { top: '#A8E0C8', topD: '#7FC4A6', pallu: '#F2FBF6', border: C.gold, skirt: { c: '#A8E0C8', d: '#7FC4A6', b: C.gold, w: 200 } }),
+  gown: dress(ISHANI_BASE, { top: '#2E3A6E', topD: '#1F2852', embroidery: true, skirt: { c: '#2E3A6E', d: '#1F2852', b: '#C9CDE8' } }),
+  saree: dress(ISHANI_BASE, { hairStyle: 'bun', top: '#C8CCD4', topD: '#A4A9B4', pallu: '#E6E8EE', border: '#9AA0AC', skirt: { c: '#C8CCD4', d: '#A4A9B4', b: '#9AA0AC' } }),
+  home: dress(ISHANI_BASE, { top: '#E26A8A', topD: '#C24E70', necklace: false, skirt: { c: '#F2EADF', d: '#D8CDBE', b: '#D8CDBE', w: 170 } }),
+};
+const NIDHI = { hairStyle: 'pony', glasses: true, top: '#4F86C6', topD: '#3A6AA3', skin: '#C08460', skin2: '#A86E4E', earrings: true, bangles: false, skirt: { c: '#3A6AA3', d: '#2E5A8C', b: '#D8CDBE', w: 180 } };
+const BADI_MUMMY = { hairStyle: 'greybun', top: '#7A3E6E', topD: '#5E2D55', pallu: C.marigold, border: C.gold, sindoor: true, glasses: true, wide: true, skin: '#B97A55', skin2: '#A0663F', skirt: { c: '#5E2D55', d: '#45203F', b: C.gold, w: 210 } };

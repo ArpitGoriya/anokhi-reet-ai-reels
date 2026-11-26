@@ -61,6 +61,9 @@ characters are added here after their first reel (add them to `cast.js`, to the 
 | `AARAV` | **Aarav**, late 20s, a groom whose squad wears rented sherwanis; his own gets booked before the wedding ends. | Cream-gold sherwani, red safa | Dulhe ke 7 dost (2026-11-26) |
 | `GROOM_SQUAD[0..6]` | **Kunal, Meet, Dhruv, Yash, Neel, Rohan, Parth**, Aarav's friends. | Maroon, ivory, navy, black, emerald, mustard, wine sherwanis | Dulhe ke 7 dost |
 | `MAMAJI` / `FUAJI` | **Mama ji** and **Fua ji**, the uncles who do the maths (and want to list their own sherwanis). | Rust kurta, glasses / blue kurta | Dulhe ke 7 dost |
+| `ISHANI.pastel` / `.mint` / `.gown` / `.saree` / `.home` | **Ishani**, 20s, the stylish cousin who goes viral at every wedding (all rented). | Pastel lehenga, mint sharara, navy gown, silver saree / pink top | Cousin har shaadi ki photo mein viral (2026-11-26) |
+| `NIDHI` | **Nidhi**, 20s, Ishani's cousin and the narrator. | Ponytail, glasses, blue kurti | Cousin… viral |
+| `BADI_MUMMY` | **Badi Mummy**, 50s, the aunt who's sure it's all sponsored (and wants her saree listed). | Grey bun, glasses, plum saree | Cousin… viral |
 
 Ideas for the cast's next members (make them when a story needs them): a young woman who rents for college
 functions, a vendor on the Anokhi Reet app.

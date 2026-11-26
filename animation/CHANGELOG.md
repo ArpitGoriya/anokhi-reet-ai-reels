@@ -3,6 +3,14 @@
 Every reel adds at least one improvement to the engine or library and writes it here (newest first).
 See [GUIDE.md](GUIDE.md) section 8.
 
+## 2026-11-26: Instagram-style post, floating hearts, photo booth, sunglasses, Ishani, Nidhi and Badi Mummy (Viral cousin)
+
+- **New props:** `instaPostSVG(id, x, y, w, inner, likes, handle)` (a social post card: header, a clipped square photo,
+  icons and a like count `${id}-likes`), `floatHeartsSVG(id, n, x, y)` + `floatHearts(id, n, t, t0)` (hearts drifting
+  up), `photoBoothBG(id)` (a floral booth with "#ShaadiVibes" and a ring light).
+- **Engine:** look option `shades` (sunglasses), e.g. `dress(ISHANI.pastel, { shades: true })`.
+- **New cast:** Ishani (`ISHANI.pastel`, `.mint`, `.gown`, `.saree`, `.home`), Nidhi (`NIDHI`), Badi Mummy (`BADI_MUMMY`).
+
 ## 2026-11-26: groom's safa, ledger card, Aarav, his squad of seven, Mama ji and Fua ji (Dulhe ke 7 dost)
 
 - **Engine:** look option `safa` (a groom's turban with a gold band and kalgi).
