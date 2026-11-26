@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-26
 - **Made by:** dhruvifewtone-wq
-- **Status:** script approved
+- **Status:** voice approved
 
 ## Brief
 
@@ -57,7 +57,7 @@ Voice text: [`script.txt`](script.txt).
 
 - Take 1: `output/female-viral-cousin-take1.mp3` (49 s) — kept except the last line (teammate change, 2026-11-26)
 - Take 2: `output/female-viral-cousin-take2.mp3` (53 s) = take 1 up to "…ya purane looks rent pe do." (47.15 s) + "Agar aapko
-  bhi aise hi har function mein naye outfits rent par lene hain… toh comment karo OUTFIT." — sent, waiting for approval
+  bhi aise hi har function mein naye outfits rent par lene hain… toh comment karo OUTFIT." — approved: yes, 2026-11-26
 
 ## Feedback rounds
 
