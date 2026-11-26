@@ -2,11 +2,11 @@
 
 Step one. अनोखी रीत app open कीजिए, और Add Product पे click कीजिए। अपने outfit की photos select कीजिए... एक outfit की maximum छह photos upload कर सकते हो। फिर Continue पे click कीजिए।
 
-Step two. Rent price, original price और security deposit add कीजिए। फिर Continue पे click कीजिए।
+Step two. Rent price, original price और security deposit add कीजिए। और outfit की condition select कीजिए। फिर Continue पे click कीजिए।
 
 Step three. Gender select कीजिए।
 
-Step four. Size, occasion, colour और city जैसी ज़रूरी details भरिए। फिर Next Step पे click कीजिए।
+Step four. Size, outfit type, occasion और colour भरिए। अगर sure नहीं हो कि fabric type क्या है... तो आप इस question को skip भी कर सकते हैं। फिर Next Step पे click कीजिए।
 
 Step five. Outfit का title और description लिखिए... या template की मदद से draft बना लीजिए।
 
