@@ -987,3 +987,15 @@ function todoListSVG(title = 'Shaadi to-do', lines = ['Caterer âœ“', 'Mehendi âœ
 }
 // mehendiConeSVG(): a mehendi cone, centred on (0,0), tip down-left
 function mehendiConeSVG() { return `<g transform="rotate(-35)"><path d="M-16,-70 L16,-70 L4,60 L0,74 L-4,60 Z" fill="#E9DCC0" stroke="${OL}" stroke-width="4" stroke-linejoin="round"/><path d="M-16,-70 L16,-70 L14,-40 L-14,-40 Z" fill="#6B8E3A" stroke="${OL}" stroke-width="3"/></g>`; }
+
+// ===== Dulhe ke 7 dost (2026-11-26): ledger card =====
+// ledgerCardSVG(rows, total, w): a comic ledger card centred on (0,0): rows [[label, value, colour]], a rule, then a
+// bold total row [label, value, colour] (e.g. PROFIT). Slide it in by moving its group.
+function ledgerCardSVG(rows, total, w = 860) {
+  const h = 70 + rows.length * 70 + (total ? 90 : 0);
+  let s = `<rect x="${-w / 2}" y="${-h / 2}" width="${w}" height="${h}" rx="24" fill="#FFF8EC" stroke="#1A1A1A" stroke-width="8"/>`;
+  let y = -h / 2 + 70;
+  rows.forEach(([l, v, c]) => { s += `<text x="${-w / 2 + 40}" y="${y}" font-family="Inter" font-weight="800" font-size="36" fill="${C.text}">${l}</text><text x="${w / 2 - 40}" y="${y}" text-anchor="end" font-family="Inter" font-weight="900" font-size="40" fill="${c || C.text}">${v}</text>`; y += 70; });
+  if (total) { s += `<path d="M${-w / 2 + 40},${y - 40} H${w / 2 - 40}" stroke="#1A1A1A" stroke-width="5"/><text x="${-w / 2 + 40}" y="${y + 24}" font-family="Inter" font-weight="900" font-size="44" fill="${C.text}">${total[0]}</text><text x="${w / 2 - 40}" y="${y + 24}" text-anchor="end" font-family="Inter" font-weight="900" font-size="48" fill="${total[2] || '#1F7A4D'}">${total[1]}</text>`; }
+  return s;
+}

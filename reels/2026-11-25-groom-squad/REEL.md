@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-25
 - **Made by:** dhruvifewtone-wq
-- **Status:** script approved; voice waiting for the main voice model (2026-11-26)
+- **Status:** video 1 sent (with voice take 1)
 
 ## Brief
 
@@ -54,7 +54,11 @@ Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- (none yet; the main voice model's free daily limit is used up today, 2026-11-25)
+- Take 1: `output/male-groom-squad-take1.mp3` (49 s) — sent with video 1 (teammate asked for the video, 2026-11-26)
+
+## Video
+
+- `output/2026-11-25-groom-squad.mp4` (51 s), video 1 sent 2026-11-26.
 
 ## Feedback rounds
 
@@ -79,7 +83,8 @@ Apni squad ko tag karo 🤵🤵🤵
 
 ## Added to the library (at least two per reel)
 
-- (planned) Aarav and the squad of seven, Mama ji and Fua ji; a baraat line-up; a phone calculator.
+- `ledgerCardSVG` in `engine/props.js`; `safa` look option in the engine.
+- New cast: Aarav, his squad of seven (`GROOM_SQUAD`), Mama ji and Fua ji.
 
 ## Suggested default (for the owner)
 
@@ -87,4 +92,5 @@ Apni squad ko tag karo 🤵🤵🤵
 
 ## Lessons
 
-- (later)
+- Keep labels short ("7 sherwani = ₹10,500 😎"): long pills run off the screen.
+- Phones held by talking characters go at chest height, not face height.

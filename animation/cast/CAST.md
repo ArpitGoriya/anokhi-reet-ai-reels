@@ -58,6 +58,9 @@ characters are added here after their first reel (add them to `cast.js`, to the 
 | `JHALAK.prep` / `.bride` | **Jhalak**, 20s, a bride who quietly books her friend's outfits on rent so nobody is left out. | Pink kurti with gajra / red bridal lehenga | Dulhan ka dress code (2026-11-26) |
 | `MAYA.home` / `.haldi` / `.mehendi` / `.sangeet` / `.shaadi` | **Maya**, 20s, the quiet bridesmaid who shines at every function. | Braid; old grey suit / yellow, emerald, purple, rose-pink | Dulhan ka dress code |
 | `BRIDESMAIDS[0..5]` | **Hetvi, Palak, Saloni, Vrunda, Meera, Disha**, the bride's squad. | Pink lehengas (the dress code) | Dulhan ka dress code |
+| `AARAV` | **Aarav**, late 20s, a groom whose squad wears rented sherwanis; his own gets booked before the wedding ends. | Cream-gold sherwani, red safa | Dulhe ke 7 dost (2026-11-26) |
+| `GROOM_SQUAD[0..6]` | **Kunal, Meet, Dhruv, Yash, Neel, Rohan, Parth**, Aarav's friends. | Maroon, ivory, navy, black, emerald, mustard, wine sherwanis | Dulhe ke 7 dost |
+| `MAMAJI` / `FUAJI` | **Mama ji** and **Fua ji**, the uncles who do the maths (and want to list their own sherwanis). | Rust kurta, glasses / blue kurta | Dulhe ke 7 dost |
 
 Ideas for the cast's next members (make them when a story needs them): a young woman who rents for college
 functions, a vendor on the Anokhi Reet app.

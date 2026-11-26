@@ -3,6 +3,13 @@
 Every reel adds at least one improvement to the engine or library and writes it here (newest first).
 See [GUIDE.md](GUIDE.md) section 8.
 
+## 2026-11-26: groom's safa, ledger card, Aarav, his squad of seven, Mama ji and Fua ji (Dulhe ke 7 dost)
+
+- **Engine:** look option `safa` (a groom's turban with a gold band and kalgi).
+- **New props:** `ledgerCardSVG(rows, total, w)` (a comic ledger: rows of label + value, an optional bold total).
+- **New cast:** Aarav the groom (`AARAV`), his seven friends (`GROOM_SQUAD`, `{ name, look }` in seven sherwani colours),
+  Mama ji (`MAMAJI`) and Fua ji (`FUAJI`). `ghodiSVG(AARAV)` puts the groom on the ghodi (animate `ghodi-groom`).
+
 ## 2026-11-26: group chat, polaroid, to-do list, mehendi cone, Jhalak, Maya and six bridesmaids (Dulhan ka dress code)
 
 - **New props:** `groupChatScreen(title, sub, msgs)` (a chat-app group for `phoneSVG`; each bubble pops at its own time,

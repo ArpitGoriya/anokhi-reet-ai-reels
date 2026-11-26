@@ -187,3 +187,12 @@ const MAYA = {
 // the six bridesmaids at the wedding (pink dress code), name → look
 const BRIDESMAIDS = [['Hetvi', '#F49AB8', 'long', '#D19A72'], ['Palak', '#D9577A', 'pony', '#C98B62'], ['Saloni', '#F6B4C8', 'bun', '#E2B08A'], ['Vrunda', '#C2456D', 'braid', '#B97A55'], ['Meera', '#FF8FA3', 'short', '#D9A07A'], ['Disha', '#E26A8A', 'long', '#C08460']]
   .map(([name, c, hs, skin]) => ({ name, look: { hairStyle: hs, top: c, topD: c, pallu: '#FFE3EC', border: C.gold, skin, earrings: true, skirt: { c, d: c, b: C.gold, w: 190 } } }));
+// Aarav (late 20s): a groom whose seven friends all wear rented sherwanis, and whose own sherwani gets booked before
+// the wedding ends. His squad: Kunal, Meet, Dhruv, Yash, Neel, Rohan, Parth (seven sherwani colours). Mama ji and
+// Fua ji: the uncles who do the maths. (Dulhe ke 7 dost, 7 alag sherwani, 2026-11-26)
+const AARAV = { male: true, skin: '#C08460', skin2: '#A86E4E', hair: '#1E140F', safa: '#C0262D', top: '#F2E2C4', topD: '#C9A24A', buttons: true, sleeveTo: .95, embroidery: true, necklace: true, pants: { c: '#FFF8EC', d: '#E8DCC8', hem: 260 } };
+const GROOM_SQUAD = [['Kunal', '#7A1B2A', '#B97A55', {}], ['Meet', '#F2E7D0', '#D19A72', { glasses: true }], ['Dhruv', '#24365E', '#A86B48', { mustache: true }], ['Yash', '#24242B', '#C98B62', {}],
+  ['Neel', C.emerald, '#B07150', { glasses: true }], ['Rohan', '#D9A52E', '#D9A07A', { mustache: true }], ['Parth', '#6E1F3E', '#C08460', {}]]
+  .map(([name, c, skin, extra]) => ({ name, look: Object.assign({ male: true, skin, skin2: skin, hair: '#1E140F', top: c, topD: c, buttons: true, sleeveTo: .95, pants: { c: '#FFF8EC', d: '#E8DCC8', hem: 240 } }, extra) }));
+const MAMAJI = { male: true, wide: true, mustache: true, glasses: true, hair: '#8F8A84', top: '#B5532E', topD: '#8E3F22', skin: '#A86B48', skin2: '#93593A', pants: { c: '#F2EADF', hem: 150 } };
+const FUAJI = { male: true, mustache: true, hair: '#5A5550', top: '#3D5A80', topD: '#2E4663', skin: '#C08460', skin2: '#A86E4E', pants: { c: '#F2EADF', hem: 150 } };
