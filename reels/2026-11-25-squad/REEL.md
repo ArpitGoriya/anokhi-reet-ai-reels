@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-25
 - **Made by:** dhruvifewtone-wq
-- **Status:** voice take 2 made; animating
+- **Status:** video 1 sent (with voice take 2)
 
 ## Brief
 
@@ -64,6 +64,10 @@ Voice text: [`script.txt`](script.txt).
   bridesmaids' "Rent pe? Konse app se rent par mila?" "Haan haan, humko bhi app ka naam bata!" "Anokhi Reet!" — sent with
   video 1 (teammate asked for the video, 2026-11-26)
 
+## Video
+
+- `output/2026-11-25-squad.mp4` (73 s), video 1 sent 2026-11-26.
+
 ## Feedback rounds
 
 - Voice take 1 (2026-11-25): (1) 13 s → "Toh usne bas likha… 'Sorry Jhalak… main nahi aa paungi.'" (2) the dress-code
@@ -94,8 +98,8 @@ Apni squad ko tag karo 👯‍♀️ · Comment SQUAD 👇
 
 ## Added to the library (at least two per reel)
 
-- (planned) Jhalak, Maya and six bridesmaids; a group-chat screen with incoming bubbles; an incoming-call screen; a
-  Polaroid freeze frame; a sepia flashback look.
+- `groupChatScreen`, `polaroidSVG`, `todoListSVG`, `mehendiConeSVG` in `engine/props.js`.
+- New cast: Jhalak, Maya (five looks) and the six bridesmaids (`BRIDESMAIDS`).
 
 ## Suggested default (for the owner)
 
@@ -103,4 +107,6 @@ Apni squad ko tag karo 👯‍♀️ · Comment SQUAD 👇
 
 ## Lessons
 
-- (later)
+- When the main voice model's daily limit runs out, the backup model can read its instructions aloud: check its length
+  before using it, and prefer waiting for the main model.
+- Long quoted lines (more than about 35 letters) need their own split caption chunk (`c27b`, `c34b`).

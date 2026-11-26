@@ -3,6 +3,16 @@
 Every reel adds at least one improvement to the engine or library and writes it here (newest first).
 See [GUIDE.md](GUIDE.md) section 8.
 
+## 2026-11-26: group chat, polaroid, to-do list, mehendi cone, Jhalak, Maya and six bridesmaids (Dulhan ka dress code)
+
+- **New props:** `groupChatScreen(title, sub, msgs)` (a chat-app group for `phoneSVG`; each bubble pops at its own time,
+  `me` bubbles are green, `typing` bubbles come and go), `polaroidSVG(w, h, caption)` (a photo frame with a hole for the
+  picture), `todoListSVG(title, lines)`, `mehendiConeSVG()`.
+- **New cast:** Jhalak (`JHALAK.prep`, `.bride`), Maya (`MAYA.home`, `.haldi`, `.mehendi`, `.sangeet`, `.shaadi`) and
+  six bridesmaids (`BRIDESMAIDS`, an array of `{ name, look }` in pink).
+- A freeze-frame: keep calling `life()` with a fixed time after the flash, then show a polaroid frame and zoom out with
+  `cam: (t, lt) => …`.
+
 ## 2026-11-24: countdown clock, tailor's shop front, handwritten board, towel wrap, measuring tape, Prachi and Rameshbhai (Kal pakka)
 
 - **New props:** `countdownClockSVG(id, label, r)` (a big alarm clock with a red label plate; turn `${id}-m` / `${id}-h`),

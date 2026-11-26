@@ -950,3 +950,40 @@ function handBoardSVG(lines = ['Shaadi mein gaye hain.', 'Kal aana. 🙃']) {
     [[-w / 2, -h / 2], [w / 2, -h / 2]].map(([x, y]) => `<rect x="${x - 30}" y="${y - 14}" width="60" height="28" fill="#F4F1EC" opacity=".85" transform="rotate(${x < 0 ? -30 : 30},${x},${y})"/>`).join('') +
     lines.map((l, i) => `<text y="${-h / 2 + 76 + i * 64}" text-anchor="middle" font-family="Comic Sans MS, Segoe Print, cursive" font-weight="700" font-size="46" fill="#2A1A14">${l}</text>`).join('') + `</g>`;
 }
+
+// ===== Dulhan ka dress code (2026-11-26): group chat, polaroid, to-do list, mehendi cone =====
+// groupChatScreen(title, sub, msgs, y0): for phoneSVG(…, 560, 1000): a chat-app group (header with a group icon) and
+// message bubbles stacked from y0. msgs: [{ who, col, lines: [..], me, at, out, fs }] (`at` pops the bubble; `me` = green,
+// right-aligned, no name). A typing bubble: { typing: true, at, out }.
+function groupChatScreen(title, sub, msgs, y0 = -320) {
+  let s = `<rect x="-264" y="-484" width="528" height="968" rx="42" fill="#EFE7DA"/>` +
+    `<path d="M-264,-442 Q-264,-484 -222,-484 L222,-484 Q264,-484 264,-442 L264,-360 L-264,-360 Z" fill="${C.tealDark}"/>` +
+    `<circle cx="-200" cy="-410" r="32" fill="${C.pink}" stroke="#fff" stroke-width="3"/><text x="-200" y="-398" text-anchor="middle" font-size="34">💍</text>` +
+    `<text x="-152" y="-410" font-family="Inter" font-weight="800" font-size="30" fill="#fff">${title}</text><text x="-152" y="-378" font-family="Inter" font-weight="600" font-size="22" fill="#CFE6E0">${sub}</text>`;
+  let y = y0;
+  msgs.forEach(m => {
+    if (m.typing) { s += `<g transform="translate(-150,${y + 30})"><g data-t="${m.at}"${m.out ? ` data-out="${m.out}"` : ''}><rect x="-90" y="-30" width="180" height="60" rx="30" fill="#fff"/><text y="10" text-anchor="middle" font-family="Inter" font-weight="700" font-size="24" fill="#8A8178">typing…</text></g></g>`; y += 80; return; }
+    const fs = m.fs || 27, lh = fs * 1.3, h = 24 + (m.who && !m.me ? lh : 0) + m.lines.length * lh, w = 430;
+    const x = m.me ? 230 - w : -238;
+    s += `<g data-t="${m.at || '-1'}"${m.out ? ` data-out="${m.out}"` : ''}><g transform="translate(0,0)"><rect x="${x}" y="${y}" width="${w}" height="${h}" rx="20" fill="${m.me ? '#D9F2C9' : '#fff'}" stroke="${m.me ? '#B9D9A6' : '#E6E0D9'}" stroke-width="3"/>`;
+    let ty = y + 12 + fs;
+    if (m.who && !m.me) { s += `<text x="${x + 18}" y="${ty}" font-family="Inter" font-weight="800" font-size="${fs - 2}" fill="${m.col || C.teal}">${m.who}</text>`; ty += lh; }
+    m.lines.forEach(l => { s += `<text x="${x + 18}" y="${ty}" font-family="Inter" font-weight="600" font-size="${fs}" fill="#141110">${l}</text>`; ty += lh; });
+    s += `</g></g>`; y += h + 14;
+  });
+  return s;
+}
+// polaroidSVG(w, h, caption): a polaroid photo frame centred on (0,0) (a white frame with a thick bottom and a caption);
+// put the photo underneath, inside the window x -w/2+24 … w/2-24, y -h/2+24 … h/2-120
+function polaroidSVG(w = 860, h = 980, caption = 'Squad complete 💕') {
+  const iw = w - 48, ih = h - 144;
+  return `<path fill-rule="evenodd" d="M${-w / 2},${-h / 2} H${w / 2} V${h / 2} H${-w / 2} Z M${-iw / 2},${-h / 2 + 24} V${-h / 2 + 24 + ih} H${iw / 2} V${-h / 2 + 24} Z" fill="#FFFDF7" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<text y="${h / 2 - 44}" text-anchor="middle" font-family="Comic Sans MS, Segoe Print, cursive" font-weight="700" font-size="58" fill="${C.redDark}">${caption}</text>`;
+}
+// todoListSVG(title, lines): a small paper list with ticks, centred on (0,0)
+function todoListSVG(title = 'Shaadi to-do', lines = ['Caterer ✓', 'Mehendi ✓', 'Photographer', 'Dress code…']) {
+  return `<g transform="rotate(-6)"><rect x="-130" y="-150" width="260" height="300" rx="10" fill="#FFFDF7" stroke="${OL}" stroke-width="4"/><text x="-110" y="-104" font-family="Inter" font-weight="900" font-size="28" fill="${C.red}">${title}</text>` +
+    lines.map((l, i) => `<text x="-110" y="${-56 + i * 52}" font-family="Comic Sans MS, Segoe Print, cursive" font-weight="700" font-size="26" fill="#2A1A14">${l}</text>`).join('') + `</g>`;
+}
+// mehendiConeSVG(): a mehendi cone, centred on (0,0), tip down-left
+function mehendiConeSVG() { return `<g transform="rotate(-35)"><path d="M-16,-70 L16,-70 L4,60 L0,74 L-4,60 Z" fill="#E9DCC0" stroke="${OL}" stroke-width="4" stroke-linejoin="round"/><path d="M-16,-70 L16,-70 L14,-40 L-14,-40 Z" fill="#6B8E3A" stroke="${OL}" stroke-width="3"/></g>`; }

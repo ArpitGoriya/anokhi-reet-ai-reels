@@ -169,3 +169,21 @@ const PRACHI = {
   home: { hairStyle: 'pony', top: '#7A4FA0', topD: '#5D3A7E', skin: '#D19A72', skin2: '#BD8460', bangles: false, skirt: { c: '#F2EADF', d: '#D8CDBE', b: '#D8CDBE', w: 170 } },
 };
 const RAMESH = { male: true, glasses: true, mustache: true, hair: '#6E6A66', top: '#F2EADF', topD: '#D8CDBE', tape: true, skin: '#A86B48', skin2: '#93593A', pants: { c: '#B9B2A8', d: '#9E978D', hem: 150 } };
+// Jhalak (20s): a bride who quietly books her friend's outfits on rent so nobody is left out. Maya (20s): the quiet
+// bridesmaid who couldn't afford four new outfits; she shines at every function. The six bridesmaids (Hetvi, Palak,
+// Saloni, Vrunda, Meera, Disha) wear pink at the wedding (the dress code). (Dulhan ka dress code, 2026-11-26)
+const JHALAK = {
+  prep: { hairStyle: 'bun', gajra: true, top: '#E26A8A', topD: '#C24E70', pallu: '#F7C548', border: C.red, skin: '#D19A72', skin2: '#BD8460', earrings: true, skirt: { c: '#C24E70', d: '#9E3A58', b: C.gold, w: 195 } },
+  bride: { hairStyle: 'bun', gajra: true, top: '#B3122E', topD: '#8A0E24', pallu: '#F2A08F', border: C.gold, necklace: true, embroidery: true, skin: '#D19A72', skin2: '#BD8460', earrings: true, skirt: { c: '#B3122E', d: '#8A0E24', b: C.gold } },
+};
+const MAYA_BASE = { hairStyle: 'braid', skin: '#B97A55', skin2: '#A66A47', earrings: true };
+const MAYA = {
+  home: dress(MAYA_BASE, { top: '#A89A86', topD: '#8E8170', bangles: false, skirt: { c: '#8E8170', d: '#76695A', b: '#A89A86', w: 180 } }),
+  haldi: dress(MAYA_BASE, { top: '#F7C548', topD: '#D9A52E', pallu: '#F2A33A', border: C.red, skirt: { c: '#F7C548', d: '#D9A52E', b: C.red, w: 200 } }),
+  mehendi: dress(MAYA_BASE, { top: C.emerald, topD: C.emeraldDark, pallu: '#A6D3B0', border: C.gold, necklace: true, skirt: { c: C.emerald, d: C.emeraldDark, b: C.gold } }),
+  sangeet: dress(MAYA_BASE, { top: '#7A4FA0', topD: '#5D3A7E', pallu: '#C9A6E8', border: C.gold, embroidery: true, necklace: true, skirt: { c: '#7A4FA0', d: '#5D3A7E', b: C.gold } }),
+  shaadi: dress(MAYA_BASE, { top: '#E8708F', topD: '#C9556F', pallu: '#FFD3DE', border: C.gold, embroidery: true, necklace: true, gajra: true, hairStyle: 'bun', skirt: { c: '#E8708F', d: '#C9556F', b: C.gold } }),
+};
+// the six bridesmaids at the wedding (pink dress code), name → look
+const BRIDESMAIDS = [['Hetvi', '#F49AB8', 'long', '#D19A72'], ['Palak', '#D9577A', 'pony', '#C98B62'], ['Saloni', '#F6B4C8', 'bun', '#E2B08A'], ['Vrunda', '#C2456D', 'braid', '#B97A55'], ['Meera', '#FF8FA3', 'short', '#D9A07A'], ['Disha', '#E26A8A', 'long', '#C08460']]
+  .map(([name, c, hs, skin]) => ({ name, look: { hairStyle: hs, top: c, topD: c, pallu: '#FFE3EC', border: C.gold, skin, earrings: true, skirt: { c, d: c, b: C.gold, w: 190 } } }));
