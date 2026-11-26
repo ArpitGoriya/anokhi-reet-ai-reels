@@ -34,12 +34,14 @@ const CHUNKS = [
   ['c31', 'Poori *squad ke liye*', 4],
   ['c32', '*sherwani rent* karo…', 3],
   ['c33', 'ya *apni rent pe do.*', 5],
-  ['c34', '*Comment* karo *SQUAD.*', 3],
+  ['c34', 'Agar aapko bhi *sherwani*', 4],
+  ['c35', '*rent par* chahiye…', 3],
+  ['c36', 'toh *comment* karo *RENT.*', 4],
 ];
 
 // Chunk start times (s): tools/caption_timing.py (faster-whisper, 109 of 148 words matched), voice male-groom-squad-take1.mp3.
 const STARTS = [
-  0.20, 1.90, 3.85, 4.96, 6.62, 9.02, 10.60, 11.62, 13.33, 14.90, 16.52, 18.30, 19.24, 20.46, 21.39, 23.17, 24.83, 25.95, 27.50, 29.48, 31.06, 32.22, 33.40, 34.60, 35.47, 37.05, 38.57, 40.50, 42.50, 43.50, 44.65, 45.50, 46.65, 48.05];
+  0.20, 1.90, 3.85, 4.96, 6.62, 9.02, 10.60, 11.62, 13.33, 14.90, 16.52, 18.30, 19.24, 20.46, 21.39, 23.17, 24.83, 25.95, 27.50, 29.48, 31.06, 32.22, 33.40, 34.60, 35.47, 37.05, 38.57, 40.50, 42.50, 43.50, 44.65, 45.50, 46.65, 47.93, 49.00, 50.15];
 // When each script word of a chunk is spoken (drives the word-by-word highlight).
 const WORDS = [
   [0.24, 0.88, 1.0, 1.27, 1.67],
@@ -75,5 +77,7 @@ const WORDS = [
   [44.73, 45.04, 45.34, 45.45],
   [45.58, 46.04, 46.32],
   [46.73, 47.11, 47.37, 47.59, 47.71],
-  [48.13, 48.45, 48.67]];
-const VOICE_END = 49.13, DURATION = 50.64;
+  [47.97, 48.2, 48.45, 48.65],
+  [49.05, 49.35, 49.6],
+  [50.2, 50.5, 50.8, 51.05]];
+const VOICE_END = 51.30, DURATION = 52.80;

@@ -143,8 +143,8 @@ addScene('c30', 9999, {
       btn(160, 'Sherwani rent karo 🤵', 'c31', C.red) + btn(310, 'Apni rent pe do 💰', 'c33', C.gold))}</g>` +
     `<rect x="0" y="1700" width="${W}" height="${H - 1700}" fill="#5D0000"/>` + SQ.map((f, i) => stand('s10q' + i, f.look, 80 + i * 150, 1740 - 372 * .42, .42)).join(''),
   html: `<img id="s10wm" style="position:absolute;left:310px;top:250px;width:460px" src="">` + pillH(540, 380, 'c30+0.3', 'anokhireet.in', 'gold') +
-    pillH(540, 1060, 'c34', 'Comment <span class="hl">SQUAD</span> 👇', 'big') + pillH(540, 1160, 'c34+0.4', 'Apni squad ko tag karo 🤵🤵🤵'),
+    pillH(540, 1060, 'c34', 'Sherwani <span class="hl">rent pe chahiye?</span>') + pillH(540, 1160, 'c36', 'Comment <span class="hl">RENT</span> 👇', 'big'),
   noWm: true, tin: .3, trans: 'rise', cam: [1, 1.03], fy: 760, capY: 1260,
   init() { $('s10wm').src = SEAL().replace('seal-on-maroon.svg', 'logo-text.svg'); },
-  upd(t) { tf($('s10r'), 540, 760, 1, t * 5); SQ.forEach((_, i) => life('s10q' + i, t, { mouth: 'grin', brows: 'up', look: [0, 0], R: t > T('c34') && i % 2 ? WAVE(t, T('c34')) : [9, -14], hR: 'open', y: hop(t, T('c30') + i * .08, 12), seed: i + 1 })); }
+  upd(t) { tf($('s10r'), 540, 760, 1, t * 5); SQ.forEach((_, i) => life('s10q' + i, t, { mouth: 'grin', brows: 'up', look: [0, 0], R: t > T('c36') && i % 2 ? WAVE(t, T('c36')) : [9, -14], hR: 'open', y: hop(t, T('c30') + i * .08, 12), seed: i + 1 })); }
 });

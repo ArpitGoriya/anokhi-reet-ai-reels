@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-25
 - **Made by:** dhruvifewtone-wq
-- **Status:** video 1 sent (with voice take 1)
+- **Status:** video 2 sent
 
 ## Brief
 
@@ -10,9 +10,9 @@
   it out: 7 × ₹40,000 = ₹2.8 lakh, "ladka pagal ho gaya hai!" Aarav asks them to guess; twist 1: all seven are rented,
   ₹1,500 each, ₹10,500 in all, less than one bought sherwani. Twist 2: Aarav's own sherwani got its next booking before
   the wedding even ended. Mama ji: "meri 2010 wali sherwani bhi daal de na?" Anokhi Reet: rent for the whole squad,
-  or put yours on rent. Comment SQUAD.
+  or put yours on rent. Comment RENT.
 - **For:** Young men, groom squads, 22-32.
-- **One message:** Rent the whole squad's sherwanis, and put your own on rent. Comment "SQUAD".
+- **One message:** Rent the whole squad's sherwanis, and put your own on rent. Comment "RENT".
 - **Voice:** male (Sadachbia, the approved male voice) as the narrator; he also reads Mama ji's, Fua ji's, Aarav's and
   Kunal's lines (speech bubbles show who speaks). Male Hindi grammar.
 - **Characters:** All new (teammate chose it): **Aarav** (the groom), his squad **Kunal, Meet, Dhruv, Yash, Neel,
@@ -32,7 +32,8 @@
 - Sounds (dhol, whoosh, "dun dun", calculator beeps, gasp, ticking, buzzer, record scratch, riser, notification,
   cash register, "ding", laughter) are shown visually; no sound effects, no "whoosh" (brand rule).
 - Key words in yellow (gold) highlight boxes; on-screen emojis as in the script.
-- CTA: "Comment karo SQUAD" in voice, end card and caption. Pinned comment as written.
+- **CTA: RENT** (teammate, 2026-11-26, replacing SQUAD): "Agar aapko bhi sherwani rent par chahiye… toh comment karo
+  RENT." in voice, end card and caption. Pinned comment as written.
 - Hashtags: 5, #DulheKeDost dropped (teammate chose it, 2026-11-25).
 
 ## Script and storyboard (approved: yes, 2026-11-25)
@@ -48,21 +49,25 @@
 | 7 | "Theek hai dosto ka *sasta…* / par dulhe ki *apni sherwani* toh mehengi hogi!" / "Woh bhi *dekhiye…*" | Fua ji, arms crossed, not convinced; Aarav grins and pulls out his phone. | Asli TWIST abhi baaki hai 👀 |
 | 8 | "Meri sherwani? / Shaadi *khatam hone se pehle hi…* / *agle hafte ki booking* aa gayi. / Almari mein *band nahi* rahegi." | Aarav's phone: a notification "New booking ✓ Cream-gold sherwani · 2 Dec"; a ledger slides in: Aarav ki sherwani ₹55,000 · Agli 3 bookings ₹3,000 × 3 = ₹9,000 (Udaharan); "KA-CHING!". | Shaadi khatam bhi nahi hui… agli BOOKING aa gayi 😂 |
 | 9 | "Beta… meri *2010 wali sherwani* / bhi daal de na?" | Mama ji and Fua ji look at each other, then pull out their phones; the whole squad bursts out laughing; a comic "DING!". | Ab Mama ji bhi list karenge 😂 |
-| 10 | *Anokhi Reet.* / Poori *squad ke liye sherwani* rent karo… / ya *apni rent pe do.* / *Comment* karo *SQUAD.* | The squad of seven poses with Aarav; the phone in front turns: Anokhi Reet; then the maroon end card: official logo, **Comment SQUAD 👇 · Apni squad ko tag karo 🤵🤵🤵**, anokhireet.in. | Comment SQUAD 👇 |
+| 10 | *Anokhi Reet.* / Poori *squad ke liye sherwani* rent karo… / ya *apni rent pe do.* / Agar aapko bhi *sherwani* / *rent par* chahiye… / toh *comment* karo *RENT.* | The squad of seven poses with Aarav; the phone in front turns: Anokhi Reet; then the maroon end card: official logo, **Sherwani rent pe chahiye? Comment RENT 👇**, anokhireet.in. | Comment RENT 👇 |
 
 Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
 - Take 1: `output/male-groom-squad-take1.mp3` (49 s) — sent with video 1 (teammate asked for the video, 2026-11-26)
+- Take 2: `output/male-groom-squad-take2.mp3` (52 s) = take 1 up to "…ya apni rent pe do." (47.85 s) + "Agar aapko bhi
+  sherwani rent par chahiye… toh comment karo RENT." (teammate, 2026-11-26)
 
 ## Video
 
 - `output/2026-11-25-groom-squad.mp4` (51 s), video 1 sent 2026-11-26.
+- `output/2026-11-25-groom-squad-v2.mp4` (53 s), video 2 sent 2026-11-26.
 
 ## Feedback rounds
 
-- (none yet)
+- Video 1 (2026-11-26): last CTA → "Agar aapko bhi sherwani rent par chahiye toh comment karo RENT" → voiced and joined
+  (take 2); end card "Sherwani rent pe chahiye? · Comment RENT 👇"; caption updated.
 
 ## Caption
 
@@ -73,7 +78,7 @@ Mama ji ne hisaab lagaya: 7 × ₹40,000 = ₹2.8 lakh 😱
 Asli kharcha? 7 sherwani = ₹10,500, rent par 😎 (udaharan)
 Aur dulhe ki sherwani? Shaadi khatam hone se pehle hi agli booking aa gayi 😂
 
-Squad ke liye sherwani chahiye? Comment SQUAD 👇
+Sherwani rent pe chahiye? Comment RENT 👇
 Apni squad ko tag karo 🤵🤵🤵
 
 #GroomSquad #SherwaniOnRent #BaraatVibes #ShaadiSeason #AnokhiReet
