@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-26
 - **Made by:** dhruvifewtone-wq
-- **Status:** script written (waiting for approval)
+- **Status:** script approved
 
 ## Brief
 
@@ -29,7 +29,7 @@
 - **End: "Download the app now"** with the official App Store and Google Play badges and the logo.
 - Key words in yellow (gold) highlight boxes; voice only, no sound effects.
 
-## Script and storyboard (approved: no)
+## Script and storyboard (approved: yes, 2026-11-26)
 
 | # | Voice line (caption) | On screen (scene, characters and what they do) | Label / title |
 |---|---|---|---|
@@ -47,7 +47,7 @@ Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- (none yet)
+- Take 1: `output/female-list-6-steps-take1.mp3` (53 s) — sent, waiting for approval
 
 ## Feedback rounds
 
