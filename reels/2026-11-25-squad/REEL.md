@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-25
 - **Made by:** dhruvifewtone-wq
-- **Status:** video 1 sent (with voice take 2)
+- **Status:** video 2 sent
 
 ## Brief
 
@@ -12,7 +12,7 @@
   winks. Flashback: two weeks earlier Jhalak chose colour and budget for each function on Anokhi Reet and booked all
   four outfits on rent for Maya. "Sab rent pe hain!" Group hug. "Asli dosti mein koi peeche nahi chhootta."
 - **For:** Young women, brides, bridesmaids, friend groups.
-- **One message:** Real friends make sure nobody is left out; outfits on rent make it possible. Comment "SQUAD".
+- **One message:** Real friends make sure nobody is left out; outfits on rent make it possible. Comment "RENT".
 - **Voice:** female (Vindemiatrix) as the narrator; she also reads Jhalak's, Maya's and the friends' lines (speech
   bubbles and chat screens show who speaks).
 - **Characters:** New: **Jhalak** (the bride), **Maya** (the quiet bridesmaid), and the six bridesmaids **Hetvi,
@@ -33,10 +33,11 @@
 - The script's sounds (tings, pings, piano, sad note, ringing, riser, camera clicks, sparkle, laughter, beat) are shown
   visually; no sound effects, no "whoosh" (brand rule).
 - Key words in yellow (gold) highlight boxes; on-screen emojis as in the script.
-- CTA: "Apni squad ke saath share karo… aur comment karo SQUAD" in voice; end card "Squad complete 💕 · Comment SQUAD
-  👇 · Apni squad ko tag karo 👯‍♀️"; caption as written. Pinned comment as written.
+- **CTA: RENT** (teammate, 2026-11-26, replacing SQUAD): "Anokhi Reet. Agar aapko bhi outfits rent par chahiye… toh
+  comment karo RENT." in voice; end card "Outfits rent pe chahiye? · Comment RENT 👇" with the "Squad complete 💕"
+  polaroid; caption to match. Pinned comment as written.
 - Hashtags: 5, #FriendshipGoals and #GujaratiWedding dropped (teammate chose it, 2026-11-25).
-- The auto-DM for SQUAD (browse-outfits link) is set up outside the reel.
+- The auto-DM for RENT (browse-outfits link) is set up outside the reel.
 
 ## Script and storyboard (approved: yes, 2026-11-25)
 
@@ -52,7 +53,7 @@
 | 8 | *"Maya!* Tune itne sundar outfits / *kahan se manage* kiye?!" / "Haan, *humse bhi acche* hain!" | The six bridesmaids surround Maya; she looks across the mandap at Jhalak, who catches her eye and **winks** (held a full second, with a sparkle). | "Kaise manage kiya?!" · 😉 |
 | 9 | *Do hafte pehle,* / shaadi ki saari *bhaag-daud* ke beech… / Jhalak ne *ek app* pe / har function ka *colour aur budget* select kiya… / aur Maya ke liye / *chaaron outfits rent pe* book kar diye. | Sepia flashback "2 hafte pehle…": late at night Jhalak on her bed among to-do lists, phone in hand; the app (name hidden): 📍 Location · 🎉 Occasion: Haldi · 🎨 Colour: Yellow · 💰 Budget; she saves a yellow sharara, then green, purple, pink; four saved cards "Maya ke liye 💛💚💜🩷"; she smiles and books them. | Colour ✅ Budget ✅ 4 outfits RENT pe ✅ |
 | 10 | *"Sab rent pe hain…* / Jhalak ne kiya." / "Rent pe? *Konse app* se / rent par mila?" / "Haan haan, humko bhi / *app ka naam* bata!" / *"Anokhi Reet!"* / "Aur hum log *khareed-khareed* / ke pagal ho gaye!" / *"Agli baar* humein bhi batana!" | Back at the wedding: Maya, a little shy, tells them; the six lean in ("Konse app?"), Maya shows her phone: the Anokhi Reet app (the name revealed with sparkles); then they burst out laughing and group-hug Maya and Jhalak. | "Sab RENT pe hain!" 😳 → Anokhi Reet ✨ → 😂🤗 |
-| 11 | Kyunki *asli dosti* mein… / *koi peeche nahi* chhootta. / *Anokhi Reet.* / Apni *squad* ke saath share karo… / aur *comment* karo *SQUAD.* | A group photo: the bride with all seven bridesmaids, Maya in the middle; it freezes into a Polaroid "Squad complete 💕"; then the maroon end card: Anokhi Reet logo, **Comment SQUAD 👇 · Apni squad ko tag karo 👯‍♀️**, anokhireet.in. | Squad complete 💕 · Anokhi Reet ✨ · Comment SQUAD 👇 |
+| 11 | Kyunki *asli dosti* mein… / *koi peeche nahi* chhootta. / *Anokhi Reet.* / Agar aapko bhi *outfits* / *rent par* chahiye… / toh *comment* karo *RENT.* | A group photo: the bride with all seven bridesmaids, Maya in the middle; it freezes into a Polaroid "Squad complete 💕"; then the maroon end card: Anokhi Reet logo, **Outfits rent pe chahiye? Comment RENT 👇**, anokhireet.in. | Squad complete 💕 · Anokhi Reet ✨ · Comment RENT 👇 |
 
 Voice text: [`script.txt`](script.txt).
 
@@ -63,10 +64,13 @@ Voice text: [`script.txt`](script.txt).
   `output/squad-parts/`): "Toh usne bas likha… 'Sorry Jhalak… main nahi aa paungi.'", "Jhalak ne ek app pe…", and the
   bridesmaids' "Rent pe? Konse app se rent par mila?" "Haan haan, humko bhi app ka naam bata!" "Anokhi Reet!" — sent with
   video 1 (teammate asked for the video, 2026-11-26)
+- Take 3: `output/female-squad-take3.mp3` (71 s) = take 2 up to "…Anokhi Reet." (67.6 s) + "Agar aapko bhi outfits rent par
+  chahiye… toh comment karo RENT." (teammate, 2026-11-26)
 
 ## Video
 
 - `output/2026-11-25-squad.mp4` (73 s), video 1 sent 2026-11-26.
+- `output/2026-11-25-squad-v2.mp4` (73 s), video 2 sent 2026-11-26.
 
 ## Feedback rounds
 
@@ -74,6 +78,8 @@ Voice text: [`script.txt`](script.txt).
   message also says "Please sab dress code follow karna 🙏" (screen only) (3) 41 s → don't name the app yet: "Jhalak ne ek
   app pe…" (4) before "khareed-khareed ke pagal ho gaye": "Rent pe? Konse app se rent par mila?" "Haan haan, humko bhi
   app ka naam bata!" "Anokhi Reet!" (the name revealed here).
+- Video 1 (2026-11-26): last CTA → "Agar aapko bhi outfits rent par chahiye toh comment karo RENT" → voiced and joined
+  (take 3); end card "Outfits rent pe chahiye? · Comment RENT 👇"; caption updated.
 
 ## Caption
 
@@ -89,7 +95,7 @@ Aur shaadi mein sabse sundar wahi lag rahi thi ✨
 Kaise? Anokhi Reet pe har function ka outfit, colour aur budget ke hisaab se, rent par 😉
 Asli dosti mein koi peeche nahi chhootta 💕
 
-Apni squad ko tag karo 👯‍♀️ · Comment SQUAD 👇
+Outfits rent pe chahiye? Comment RENT 👇 · Apni squad ko tag karo 👯‍♀️
 
 #BridesmaidGoals #BrideSquad #DressCode #OutfitOnRent #AnokhiReet
 ```

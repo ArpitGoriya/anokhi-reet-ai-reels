@@ -200,7 +200,7 @@ addScene('c38', 9999, {
     `<g transform="translate(540,1260) rotate(-4) scale(.5)"><rect x="-476" y="-596" width="952" height="1096" fill="#F6E3CF"/>${[...Array(8)].map((_, i) => `<g transform="translate(${-330 + (i % 4) * 220},${i < 4 ? -200 : 150}) scale(1.9)">${personIcon([...BM.map(b => b.look.top), '#E8708F', '#B3122E'][i])}</g>`).join('')}</g>` +
     `<g transform="translate(540,1260) rotate(-4) scale(.5)">${polaroidSVG(1000, 1240, 'Squad complete 💕')}</g>`,
   html: `<img id="s14wm" style="position:absolute;left:310px;top:190px;width:460px" src="">` + pillH(540, 330, 'c38+0.3', 'anokhireet.in', 'gold') +
-    pillH(540, 450, 'c38', '<span class="hl">Anokhi Reet</span> ✨', 'big') + pillH(540, 570, 'c39', 'Apni squad ko tag karo 👯‍♀️') + pillH(540, 680, 'c40', 'Comment <span class="hl">SQUAD</span> 👇', 'big'),
+    pillH(540, 450, 'c38', '<span class="hl">Anokhi Reet</span> ✨', 'big') + pillH(540, 570, 'c39', 'Outfits <span class="hl">rent pe chahiye?</span>') + pillH(540, 680, 'c40b', 'Comment <span class="hl">RENT</span> 👇', 'big'),
   noWm: true, tin: .3, trans: 'rise', cam: [1, 1.03], fy: 820, capY: 820,
   init() { $('s14wm').src = SEAL().replace('seal-on-maroon.svg', 'logo-text.svg'); },
   upd(t) { tf($('s14r'), 540, 800, 1, t * 5); }
