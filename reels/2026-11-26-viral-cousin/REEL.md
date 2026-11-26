@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-26
 - **Made by:** dhruvifewtone-wq
-- **Status:** video 2 sent
+- **Status:** video 3 sent
 
 ## Brief
 
@@ -28,6 +28,8 @@
 - **Ishani's reply** (teammate, 2026-11-26): under "Ye outfit kahan milega?" → "↳ ishani.styles: Anokhi Reet pe! 💖 App
   download karo aur outfit rent pe lo" (the name shows on screen here, before the spoken reveal).
 - **Full outfits in the posts** (teammate, 2026-11-26): full-length figures, not busts.
+- **Outfits from the teammate's references** (2026-11-26): lehenga (maroon + beige), sharara (olive + pink floral),
+  gown (white + pink), saree (teal + gold border); the hook, selfie and end card use the maroon lehenga.
 - **CTA: OUTFIT** (teammate, 2026-11-26): "…ya purane looks rent pe do. Agar aapko bhi aise hi har function mein naye
   outfits rent par lene hain… toh comment karo OUTFIT."
 - **Story numbers** (like counts, ₹1-2 lakh guesses, ₹1,200 per look, ₹4,800, ₹8,000 earned, ₹3,200 profit) are the
@@ -66,6 +68,7 @@ Voice text: [`script.txt`](script.txt).
 
 - `output/2026-11-26-viral-cousin.mp4` (55 s), video 1 sent 2026-11-26.
 - `output/2026-11-26-viral-cousin-v2.mp4` (55 s), video 2 sent 2026-11-26.
+- `output/2026-11-26-viral-cousin-v3.mp4` (55 s), video 3 sent 2026-11-26.
 
 ## Feedback rounds
 
@@ -74,6 +77,9 @@ Voice text: [`script.txt`](script.txt).
 - Video 1 (2026-11-26): show the whole outfits in the four posts (sharara, gown, lehenga, saree) → full-length Ishani in
   each post (and in the old post); add a reply to "Ye outfit kahan milega?": "Anokhi Reet pe! App download karo aur
   outfit rent pe lo" → Ishani's reply pops under the comment (the app name now appears there, about 35 s).
+- Video 2 (2026-11-26): use the teammate's four outfit pictures as reference → Ishani's looks redrawn in our style:
+  Shaadi maroon lehenga with beige blouse and dupatta, Mehendi olive kurti with a pink floral sharara and pink dupatta,
+  Sangeet white-and-pink flared gown, Reception teal saree with a gold border and a long pallu.
 
 ## Caption
 

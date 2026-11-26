@@ -90,6 +90,8 @@ function person(id, o = {}) {
   if (o.skirt) s += skirtSVG(o.skirt, 0, 0, 1);
   // kurta-pajama for a standing man: o.pants = { c, d } (pajama colours); the kurta hem uses o.top
   if (o.pants) s += pantsSVG(o.pants, o.top || C.teal, o.topD || C.tealDark);
+  // a saree's long pallu hanging behind from the shoulder to the floor (look option drape: { c, b }) (Viral cousin)
+  if (o.drape) s += `<path d="M70,-250 Q150,-60 170,372 L80,380 Q90,60 40,-250 Z" fill="${o.drape.c}" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/><path d="M70,-250 Q150,-60 168,366" fill="none" stroke="${o.drape.b || C.gold}" stroke-width="9"/>`;
   // back hair
   if (style === 'long' || style === 'braid') s += `<path d="M-92,-420 Q-120,-300 -96,-215 L96,-215 Q120,-300 92,-420 Z" fill="${hair}" stroke="${OL}" stroke-width="${OW}"/>`;
   if (style === 'braid') s += `<path d="M70,-300 Q96,-200 80,-120" fill="none" stroke="${OL}" stroke-width="34" stroke-linecap="round"/><path d="M70,-300 Q96,-200 80,-120" fill="none" stroke="${hair}" stroke-width="24" stroke-linecap="round"/>`;
@@ -175,6 +177,13 @@ function person(id, o = {}) {
 // (p.hem = how far the kurta/sherwani hangs below the waist, default 150; small = an outgrown sherwani)
 function pantsSVG(p, top, topD) {
   const c = p.c || '#F2EADF', d = p.d || '#D8CDBE', hm = p.hem || 150;
+  // a sharara (p.flare: true): two wide flared legs with a small print (p.print colour) (Viral cousin)
+  if (p.flare) {
+    let f = `<path d="M-84,0 L-170,360 Q-90,384 -6,360 L0,120 L6,360 Q90,384 170,360 L84,0 Z" fill="${c}" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/><path d="M0,120 V360" stroke="${d}" stroke-width="5"/>`;
+    for (let i = 0; i < 14; i++) { const x = ((i * 53) % 300) - 150, y = 150 + ((i * 71) % 200); f += `<circle cx="${x}" cy="${y}" r="9" fill="${p.print || C.gold}" opacity=".85"/><circle cx="${x + 14}" cy="${y + 10}" r="5" fill="${C.leaf}" opacity=".8"/>`; }
+    f += `<path d="M-166,350 Q-90,374 -10,350 M10,350 Q90,374 166,350" fill="none" stroke="${p.print || C.gold}" stroke-width="8"/>`;
+    return f + `<path d="M-96,-6 L-104,${hm} Q0,${hm + 16} 104,${hm} L96,-6 Z" fill="${top}" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/>`;
+  }
   return `<path d="M-84,0 L-80,346 L-16,346 L-4,90 L4,90 L16,346 L80,346 L84,0 Z" fill="${c}" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/>` +
     `<path d="M-48,180 V340 M48,180 V340" stroke="${d}" stroke-width="5" opacity=".7"/>` +
     `<ellipse cx="-50" cy="356" rx="46" ry="18" fill="#5A3A28" stroke="${OL}" stroke-width="4"/><ellipse cx="50" cy="356" rx="46" ry="18" fill="#5A3A28" stroke="${OL}" stroke-width="4"/>` +

@@ -201,10 +201,12 @@ const FUAJI = { male: true, mustache: true, hair: '#5A5550', top: '#3D5A80', top
 // (Cousin har shaadi ki photo mein viral, 2026-11-26)
 const ISHANI_BASE = { hairStyle: 'long', skin: '#D9A07A', skin2: '#C48A66', earrings: true, necklace: true };
 const ISHANI = {
-  pastel: dress(ISHANI_BASE, { top: '#F4C6D6', topD: '#E3A3B8', pallu: '#FFF0F5', border: '#E8C25E', embroidery: true, skirt: { c: '#F4C6D6', d: '#E3A3B8', b: '#E8C25E' } }),
-  mint: dress(ISHANI_BASE, { top: '#A8E0C8', topD: '#7FC4A6', pallu: '#F2FBF6', border: C.gold, skirt: { c: '#A8E0C8', d: '#7FC4A6', b: C.gold, w: 200 } }),
-  gown: dress(ISHANI_BASE, { top: '#2E3A6E', topD: '#1F2852', embroidery: true, skirt: { c: '#2E3A6E', d: '#1F2852', b: '#C9CDE8' } }),
-  saree: dress(ISHANI_BASE, { hairStyle: 'bun', top: '#C8CCD4', topD: '#A4A9B4', pallu: '#E6E8EE', border: '#9AA0AC', skirt: { c: '#C8CCD4', d: '#A4A9B4', b: '#9AA0AC' } }),
+  // the four wedding looks, drawn from the teammate's references (2026-11-26): Shaadi lehenga, Mehendi sharara,
+  // Sangeet gown, Reception saree
+  pastel: dress(ISHANI_BASE, { top: '#E8D3A5', topD: '#CDB585', pallu: '#EADBB8', border: C.gold, embroidery: true, skirt: { c: '#8E2A3E', d: '#6E1F30', b: C.gold, w: 225 } }), // maroon lehenga, beige blouse and dupatta
+  mint: dress(ISHANI_BASE, { top: '#B5B74E', topD: '#999B3A', pallu: '#D6336C', border: '#F2C14E', bangles: true, pants: { c: '#D6336C', d: '#B02556', flare: true, print: '#F2C14E', hem: 130 } }), // olive kurti, pink floral sharara, pink dupatta
+  gown: dress(ISHANI_BASE, { top: '#F4A0B8', topD: '#E3839F', pallu: '#F4A0B8', border: '#E8C25E', embroidery: true, skirt: { c: '#FFF6F2', d: '#F2D4DC', b: '#E8708F', w: 240 } }), // white-and-pink flared gown
+  saree: dress(ISHANI_BASE, { top: '#12596B', topD: '#0D4655', pallu: '#12596B', border: '#C9B27A', necklace: false, drape: { c: '#156A80', b: '#C9B27A' }, skirt: { c: '#12596B', d: '#0D4655', b: '#C9B27A', w: 150 } }), // teal saree, gold border
   home: dress(ISHANI_BASE, { top: '#E26A8A', topD: '#C24E70', necklace: false, skirt: { c: '#F2EADF', d: '#D8CDBE', b: '#D8CDBE', w: 170 } }),
 };
 const NIDHI = { hairStyle: 'pony', glasses: true, top: '#4F86C6', topD: '#3A6AA3', skin: '#C08460', skin2: '#A86E4E', earrings: true, bangles: false, skirt: { c: '#3A6AA3', d: '#2E5A8C', b: '#D8CDBE', w: 180 } };
