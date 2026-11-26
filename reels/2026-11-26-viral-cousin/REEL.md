@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-26
 - **Made by:** dhruvifewtone-wq
-- **Status:** video 1 sent
+- **Status:** video 2 sent
 
 ## Brief
 
@@ -25,6 +25,9 @@
 ## Teammate changes (override the brand defaults for this reel only)
 
 - **Comic-book + Instagram-style frames** (likes, hearts, comment bubbles); brand maroon and gold for the reveal and end.
+- **Ishani's reply** (teammate, 2026-11-26): under "Ye outfit kahan milega?" → "↳ ishani.styles: Anokhi Reet pe! 💖 App
+  download karo aur outfit rent pe lo" (the name shows on screen here, before the spoken reveal).
+- **Full outfits in the posts** (teammate, 2026-11-26): full-length figures, not busts.
 - **CTA: OUTFIT** (teammate, 2026-11-26): "…ya purane looks rent pe do. Agar aapko bhi aise hi har function mein naye
   outfits rent par lene hain… toh comment karo OUTFIT."
 - **Story numbers** (like counts, ₹1-2 lakh guesses, ₹1,200 per look, ₹4,800, ₹8,000 earned, ₹3,200 profit) are the
@@ -62,11 +65,15 @@ Voice text: [`script.txt`](script.txt).
 ## Video
 
 - `output/2026-11-26-viral-cousin.mp4` (55 s), video 1 sent 2026-11-26.
+- `output/2026-11-26-viral-cousin-v2.mp4` (55 s), video 2 sent 2026-11-26.
 
 ## Feedback rounds
 
 - Voice take 1 (2026-11-26): last CTA → "Agar aapko bhi aise hi har function mein naye outfits rent par lene hain toh
   comment karo OUTFIT" → voiced and joined (take 2); end card and caption updated.
+- Video 1 (2026-11-26): show the whole outfits in the four posts (sharara, gown, lehenga, saree) → full-length Ishani in
+  each post (and in the old post); add a reply to "Ye outfit kahan milega?": "Anokhi Reet pe! App download karo aur
+  outfit rent pe lo" → Ishani's reply pops under the comment (the app name now appears there, about 35 s).
 
 ## Caption
 

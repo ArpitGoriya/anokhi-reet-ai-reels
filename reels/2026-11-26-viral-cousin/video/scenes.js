@@ -41,12 +41,12 @@ addScene('c4', 'c7', {
 const FEED = [['MEHENDI', ISHANI.mint, '❤️ 1.8K', 150, 400, 'c7'], ['SANGEET', ISHANI.gown, '❤️ 3.1K', 570, 400, 'c8'], ['SHAADI', ISHANI.pastel, '❤️ 2.4K', 150, 900, 'c9'], ['RECEPTION', ISHANI.saree, '❤️ 4.2K', 570, 900, 'c10']];
 addScene('c7', 'c12', {
   svg: `<rect width="${W}" height="${H}" fill="#F4F1EC"/>` +
-    FEED.map(([chip, look, lk, x, y, at], i) => `<g data-t="${at}" data-k="pop">${instaPostSVG('s3p' + i, x, y, 360, bust('s3i' + i, look, x + 180, y + 50 + 410, .5), lk)}` +
+    FEED.map(([chip, look, lk, x, y, at], i) => `<g data-t="${at}" data-k="pop">${instaPostSVG('s3p' + i, x, y, 360, stand('s3i' + i, look, x + 180, y + 262, .36), lk)}` +
       `<g transform="translate(${x + 270},${y + 86})"><rect x="-88" y="-24" width="176" height="48" rx="12" fill="${C.redDark}"/><text y="9" text-anchor="middle" font-family="Inter" font-weight="900" font-size="24" fill="#fff">${chip}</text></g></g>`).join('') +
     floatHeartsSVG('s3h', 10, 540, 1300),
   html: pillH(540, 352, 'c10+0.6', '4 shaadi · 4 <span class="hl">VIRAL</span> look 😳'),
   noWm: true, cam: [1, 1.02], fy: 860, capY: 1415,
-  upd(t) { floatHearts('s3h', 10, t, T('c11')); FEED.forEach((_, i) => life('s3i' + i, t, { pivot: 0, mouth: 'grin', brows: 'up', look: [i % 2 ? -.3 : .3, 0], tilt: i % 2 ? -6 : 6, wink: i === 3 && t > T('c11'), R: [9, -14], L: [9, -14], seed: i + 2 })); }
+  upd(t) { floatHearts('s3h', 10, t, T('c11')); FEED.forEach((_, i) => life('s3i' + i, t, { mouth: 'grin', brows: 'up', look: [i % 2 ? -.3 : .3, 0], tilt: i % 2 ? -6 : 6, wink: i === 3 && t > T('c11'), R: i === 1 ? [150, -40] : [9, -14], hR: 'open', L: i === 2 ? [40, -120] : [9, -14], sway: 2, seed: i + 2 })); }
 });
 
 // ================= S4 the family chat: "Brands paise dete honge!" "Sponsored hoga sab." — Nidhi whispers =================
@@ -111,11 +111,14 @@ addScene('c23', 'c26', {
 
 // ================= S8a old posts: followers ask "Ye outfit kahan milega?" — her old outfits = their wishlist =================
 addScene('c26', 'c28', {
-  svg: `<rect width="${W}" height="${H}" fill="#F4F1EC"/>` + instaPostSVG('s8p', 210, 400, 660, bust('s8i', ISHANI.mint, 540, 400 + 92 + 740, .9), '❤️ 1.8K') +
-    comment(560, 1080, 'c26+0.4', 'Ye outfit kahan milega? 😍') + comment(600, 1170, 'c27', 'Mujhe bhi chahiye! 🙋‍♀️') + comment(560, 1260, 'c27+0.5', 'Rent pe milega? 👀'),
+  svg: `<rect width="${W}" height="${H}" fill="#F4F1EC"/>` + instaPostSVG('s8p', 210, 400, 660, stand('s8i', ISHANI.mint, 540, 850, .62), '❤️ 1.8K') +
+    comment(520, 1030, 'c26+0.4', 'Ye outfit kahan milega? 😍') +
+    `<g transform="translate(600,1140)"><g data-t="c26+1.2" data-k="slideR"><rect x="-330" y="-52" width="660" height="104" rx="30" fill="#FFF0F5" stroke="${C.pink}" stroke-width="4"/><circle cx="-294" cy="-16" r="20" fill="${C.pink}" stroke="#F2A33A" stroke-width="3"/>` +
+    `<text x="-262" y="-10" font-family="Inter" font-weight="800" font-size="24" fill="${C.text}">↳ ishani.styles: <tspan fill="${C.red}">Anokhi Reet pe! 💖</tspan></text><text x="-262" y="30" font-family="Inter" font-weight="700" font-size="24" fill="${C.text}">App download karo aur outfit rent pe lo</text></g></g>` +
+    comment(540, 1255, 'c27+0.4', 'Mujhe bhi chahiye! 🙋‍♀️'),
   html: pillH(540, 352, 'c26', 'Purane outfits = Followers ki <span class="hl">WISHLIST</span> 😍'),
   noWm: true, cam: [1, 1.03], fy: 860, capY: 1420,
-  upd(t) { life('s8i', t, { pivot: 0, mouth: 'grin', brows: 'up', look: [0, 0], tilt: 5, R: [9, -14], L: [9, -14], seed: 3 }); }
+  upd(t) { life('s8i', t, { mouth: 'grin', brows: 'up', look: [0, 0], tilt: 5, R: [150, -40], hR: 'open', L: [9, -14], sway: 2, seed: 3 }); }
 });
 
 // ================= S8b on rent: bookings fill up — KA-CHING! — the ledger: profit (Udaharan) =================
