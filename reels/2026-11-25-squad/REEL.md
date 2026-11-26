@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-25
 - **Made by:** dhruvifewtone-wq
-- **Status:** script approved; voice take 2 waiting for the main voice model (2026-11-26)
+- **Status:** voice take 2 made; animating
 
 ## Brief
 
@@ -59,12 +59,10 @@ Voice text: [`script.txt`](script.txt).
 ## Voice-over
 
 - Take 1: `output/female-squad-take1.mp3` (62 s) — kept except three lines (teammate changes, 2026-11-25)
-- Take 2 (in progress): take 1 with three lines voiced again and joined. Ready: "Jhalak ne ek app pe…" and "Rent pe?
-  Konse app se rent par mila?" "Haan haan, humko bhi app ka naam bata!" "Anokhi Reet!". Waiting: "Toh usne bas likha…
-  'Sorry Jhalak… main nahi aa paungi.'" (the main voice model's free daily limit ran out on 2026-11-25). Teammate chose to wait for the main model (2026-11-26), not
-  the backup model. Ready parts: `output/squad-parts/line-ek-app.mp3`, `output/squad-parts/line-konse-app.mp3`. Join
-  points in take 1: line 1 replaces 12.29–14.35 s ("Toh usne bas itna likha"), "ek app pe" replaces 40.45–41.99 s,
-  the bridesmaids' lines go in at 49.95 s and take 1 resumes at 50.89 s ("Aur hum log…").
+- Take 2: `output/female-squad-take2.mp3` (71 s) = take 1 with three lines voiced again and joined (parts in
+  `output/squad-parts/`): "Toh usne bas likha… 'Sorry Jhalak… main nahi aa paungi.'", "Jhalak ne ek app pe…", and the
+  bridesmaids' "Rent pe? Konse app se rent par mila?" "Haan haan, humko bhi app ka naam bata!" "Anokhi Reet!" — sent with
+  video 1 (teammate asked for the video, 2026-11-26)
 
 ## Feedback rounds
 
