@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-27
 - **Made by:** dhruvifewtone-wq
-- **Status:** script written (waiting for approval)
+- **Status:** voice take 1 made (waiting for a listen)
 
 ## Brief
 
@@ -36,7 +36,7 @@
 - Sounds (camera click etc.) are shown visually; no sound effects, no "whoosh" (brand rule).
 - Hashtags: 5, the suggested set (teammate chose it, 2026-11-27).
 
-## Script and storyboard (approved: no)
+## Script and storyboard (approved: yes, 2026-11-27)
 
 | # | Voice line (caption) | On screen (scene, characters and what they do) | Label / title |
 |---|---|---|---|
@@ -59,7 +59,9 @@ Voice text: [`script.txt`](script.txt) (all lines in order) · [`voice-parts.txt
 
 ## Voice-over
 
-- (not made yet)
+- Take 1: `output/duo-repeat-wala-ladka-take1.mp3` (58 s) = the ladka's lines (male, one recording:
+  `output/repeatladka-parts/ladka-all.mp3`) and the crush's two lines (female, `output/repeatladka-parts/crush-all.mp3`),
+  cut at the pauses and joined in script order — waiting for the teammate's listen
 
 ## Video
 
