@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-27
 - **Made by:** dhruvifewtone-wq
-- **Status:** voice take 1 made (waiting for a listen)
+- **Status:** voice approved (2026-11-27), animating
 
 ## Brief
 
@@ -61,7 +61,7 @@ Voice text: [`script.txt`](script.txt) (all lines in order) · [`voice-parts.txt
 
 - Take 1: `output/duo-repeat-wala-ladka-take1.mp3` (58 s) = the ladka's lines (male, one recording:
   `output/repeatladka-parts/ladka-all.mp3`) and the crush's two lines (female, `output/repeatladka-parts/crush-all.mp3`),
-  cut at the pauses and joined in script order — waiting for the teammate's listen
+  cut at the pauses and joined in script order — approved: yes, 2026-11-27
 
 ## Video
 
