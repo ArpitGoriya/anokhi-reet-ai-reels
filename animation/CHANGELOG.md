@@ -3,6 +3,16 @@
 Every reel adds at least one improvement to the engine or library and writes it here (newest first).
 See [GUIDE.md](GUIDE.md) section 8.
 
+## 2026-11-27: wedding arch stage, camera, scissors crop, comment box typing, Kabir and friends (Repeat wala ladka)
+
+- **New props:** `archStageBG(id, {x, w, top, wall})` (peach wedding stage: double marigold toran, a red-and-gold arch
+  with marigold strings, a red carpet), `cameraSVG()` (a photographer's DSLR), `scissorsSVG(id)` + `scissorsSnip(id, t)`
+  (snipping scissors, used to crop someone out of a group photo), `commentBoxSVG(id, w)` + `commentType(id, t, t0, word)`
+  (an Instagram-style comment box that types a word, then "Post" turns blue).
+- Reel helper `banner()` (a tilted ribbon banner, red or gold) and a dashed cross-out line drawn with `stroke-dashoffset`.
+- **New cast:** Kabir (`KABIR.maroon`, `.blue`, `.home`), his friends `KABIR_DOST` (Sahil, Manav, Jigar), Tanvi (`TANVI`,
+  pink suit) and a `PHOTOGRAPHER`.
+
 ## 2026-11-27: app walkthrough kit (Meena Rentals walkthrough)
 
 - **For feature walkthrough reels:** `bokehBG(id)` + `bokehUpd(id, t)` (dark maroon-brown ground, drifting gold bokeh),

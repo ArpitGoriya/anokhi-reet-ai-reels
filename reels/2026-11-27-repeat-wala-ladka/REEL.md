@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-27
 - **Made by:** dhruvifewtone-wq
-- **Status:** voice approved (2026-11-27), animating
+- **Status:** video 1 sent (2026-11-27)
 
 ## Brief
 
@@ -16,8 +16,8 @@
 - **Voice:** **both approved voices** (teammate chose it, 2026-11-27): the ladka (narrator, and his friends' quoted
   lines) in the male voice (Sadachbia); the crush's two lines in the female voice (Vindemiatrix); each unchanged,
   joined into one track. Who says what: [`voice-parts.txt`](voice-parts.txt) (L = ladka, C = crush).
-- **Characters:** New: **the ladka** (maroon sherwani → royal blue sherwani), **3 dost** (orange, green, purple
-  kurtas), **the crush** (pink suit), **a photographer**.
+- **Characters:** New: **Kabir, the ladka** (maroon sherwani → royal blue sherwani), **3 dost** (orange, green, purple
+  kurtas), **Tanvi, the crush** (pink suit), **a photographer**.
 - **Length:** about 60-66 s (the voice decides).
 - **Music:** none (voice only).
 - **Special wishes:** peach background, a marigold toran and a red-gold wedding arch; captions word by word, key words
@@ -65,7 +65,7 @@ Voice text: [`script.txt`](script.txt) (all lines in order) · [`voice-parts.txt
 
 ## Video
 
-- (not made yet)
+- `output/2026-11-27-repeat-wala-ladka.mp4` (61 s), video 1 sent 2026-11-27.
 
 ## Feedback rounds
 
@@ -93,7 +93,8 @@ Us dost ko tag karo jo har shaadi mein same outfit pehenta hai 😂
 
 ## Added to the library (at least two per reel)
 
-- (to come: wedding arch + marigold toran set, scissors-crop photo, comment box typing)
+- `archStageBG`, `cameraSVG`, `scissorsSVG` + `scissorsSnip`, `commentBoxSVG` + `commentType` in `engine/props.js`.
+- New cast: Kabir (three looks), his three friends, Tanvi, a photographer.
 
 ## Suggested default (for the owner)
 

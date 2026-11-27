@@ -66,6 +66,10 @@ characters are added here after their first reel (add them to `cast.js`, to the 
 | `BADI_MUMMY` | **Badi Mummy**, 50s, the aunt who's sure it's all sponsored (and wants her saree listed). | Grey bun, glasses, plum saree | Cousin… viral |
 | `KINJAL.home` / `.yellow` / `.purple` / `.red` | **Kinjal**, late 20s, a modern young wife who rents a new outfit for every function. | Long open hair, hoops, mangalsutra, coral kurti with jeans / yellow lehenga, purple saree, red sharara | Pati-patni dono ka ek secret (2026-11-27) |
 | `NIRAV.home` / `.sherwani` | **Nirav**, around 30, her husband who rents out his wedding sherwani. | Trimmed beard, styled hair, blue collared shirt with chinos / cream-gold sherwani | Pati-patni dono ka ek secret |
+| `KABIR.maroon` / `.blue` / `.home` | **Kabir**, mid 20s, "Repeat wala ladka" who wore one sherwani to three weddings, then rented a new look. | Styled hair; maroon sherwani / royal blue sherwani / green shirt with jeans | Repeat wala ladka (2026-11-27) |
+| `KABIR_DOST[0..2]` | **Sahil, Manav, Jigar**, Kabir's teasing friends. | Orange, green, purple kurtas (moustache, glasses, beard) | Repeat wala ladka |
+| `TANVI` | **Tanvi**, 20s, Kabir's crush. | Long hair, pink suit with a light-pink dupatta | Repeat wala ladka |
+| `PHOTOGRAPHER` | A wedding photographer. | Black fedora, black clothes, a camera | Repeat wala ladka |
 
 Ideas for the cast's next members (make them when a story needs them): a young woman who rents for college
 functions, a vendor on the Anokhi Reet app.

@@ -1096,3 +1096,44 @@ function doorstepSVG() {
     `<path d="M-160,240 L160,240 L190,290 L-190,290 Z" fill="${C.red}" stroke="${OL}" stroke-width="4"/>` +
     `<g transform="translate(120,180)"><path d="M-90,-60 L90,-60 L100,70 L-100,70 Z" fill="#C9A36B" stroke="${OL}" stroke-width="${OW}"/><path d="M-90,-60 L-60,-100 L60,-100 L90,-60" fill="#D9B98A" stroke="${OL}" stroke-width="4"/><path d="M-40,-60 Q0,-130 40,-60" fill="${C.lehenga}" stroke="${OL}" stroke-width="4"/><rect x="-60" y="-10" width="120" height="40" rx="8" fill="#fff" stroke="${OL}" stroke-width="3"/><text y="18" text-anchor="middle" font-family="Inter" font-weight="800" font-size="20" fill="${C.red}">Anokhi Reet</text></g>`;
 }
+
+// ===== Repeat wala ladka (2026-11-27) =====
+// a peach wedding stage: marigold toran on top, a red-and-gold arch with marigold strings, a red carpet
+function archStageBG(id, o = {}) {
+  const wall = o.wall || '#F9D9C2', ax = o.x || 540, aw = o.w || 330, top = o.top || 380;
+  let s = `<rect width="${W}" height="${H}" fill="${wall}"/><rect y="${FLOOR - 260}" width="${W}" height="260" fill="${o.low || '#F4C9AE'}"/>`;
+  s += `<g transform="translate(${ax},${FLOOR})"><path d="M${-aw},0 V${-(FLOOR - top) + aw * .9} Q${-aw},${-(FLOOR - top) - aw * .05} 0,${-(FLOOR - top)} Q${aw},${-(FLOOR - top) - aw * .05} ${aw},${-(FLOOR - top) + aw * .9} V0" fill="none" stroke="${OL}" stroke-width="64"/>` +
+    `<path d="M${-aw},0 V${-(FLOOR - top) + aw * .9} Q${-aw},${-(FLOOR - top) - aw * .05} 0,${-(FLOOR - top)} Q${aw},${-(FLOOR - top) - aw * .05} ${aw},${-(FLOOR - top) + aw * .9} V0" fill="none" stroke="#B3202A" stroke-width="54"/>` +
+    `<path d="M${-aw},0 V${-(FLOOR - top) + aw * .9} Q${-aw},${-(FLOOR - top) - aw * .05} 0,${-(FLOOR - top)} Q${aw},${-(FLOOR - top) - aw * .05} ${aw},${-(FLOOR - top) + aw * .9} V0" fill="none" stroke="${C.gold}" stroke-width="10" stroke-dasharray="26 18"/>`;
+  for (const x of [-aw + 60, aw - 60]) for (let k = 0; k < 11; k++) s += `<circle cx="${x}" cy="${-(FLOOR - top) + 170 + k * 52}" r="${k % 3 === 2 ? 12 : 17}" fill="${k % 2 ? C.marigold : '#E8962E'}" stroke="${OL}" stroke-width="3"/>`;
+  s += `</g>`;
+  s += toranSVG(W, 0) + `<g transform="translate(0,70)">${toranSVG(W, 0)}</g>`;
+  s += `<rect y="${FLOOR}" width="${W}" height="${H - FLOOR}" fill="#E8B48F"/><path d="M${ax - 230},${FLOOR} L${ax + 230},${FLOOR} L${ax + 420},${H} L${ax - 420},${H} Z" fill="#B3202A" stroke="${OL}" stroke-width="4"/>` +
+    `<path d="M${ax - 200},${FLOOR} L${ax - 380},${H} M${ax + 200},${FLOOR} L${ax + 380},${H}" stroke="${C.gold}" stroke-width="8"/>`;
+  return s;
+}
+// a photographer's camera (DSLR), held at the face
+function cameraSVG() {
+  return `<rect x="-70" y="-44" width="140" height="92" rx="16" fill="#2E2E33" stroke="${OL}" stroke-width="4"/><rect x="-46" y="-62" width="44" height="22" rx="6" fill="#2E2E33" stroke="${OL}" stroke-width="4"/>` +
+    `<circle cx="8" cy="4" r="34" fill="#4A4A52" stroke="${OL}" stroke-width="4"/><circle cx="8" cy="4" r="20" fill="#7FA6C9" stroke="${OL}" stroke-width="3"/><circle cx="14" cy="-2" r="6" fill="#fff" opacity=".8"/><rect x="40" y="-36" width="18" height="10" rx="3" fill="#F8D36A"/>`;
+}
+// scissors (open/close with o = 0…1)
+function scissorsSVG(id) {
+  const blade = sd => `<g id="${id}-${sd > 0 ? 'a' : 'b'}"><path d="M0,0 L130,${-8 * sd} L134,${6 * sd} L0,${12 * sd} Z" fill="#D8DEE4" stroke="${OL}" stroke-width="4"/><ellipse cx="-46" cy="${22 * sd}" rx="30" ry="20" fill="none" stroke="#D9363E" stroke-width="12"/><ellipse cx="-46" cy="${22 * sd}" rx="30" ry="20" fill="none" stroke="${OL}" stroke-width="3" opacity=".6"/></g>`;
+  return blade(1) + blade(-1) + `<circle r="7" fill="${OL}"/>`;
+}
+function scissorsSnip(id, t, f = 4) { const a = (Math.sin(t * f * Math.PI * 2) * .5 + .5) * 16; tf($(id + '-a'), 0, 0, 1, -a); tf($(id + '-b'), 0, 0, 1, a); }
+// an Instagram-style comment box that types a word, then the Post button lights up
+function commentBoxSVG(id, w = 720) {
+  return `<rect x="${-w / 2 + 8}" y="-38" width="${w}" height="96" rx="48" fill="#1A1A1A" opacity=".25"/><rect x="${-w / 2}" y="-48" width="${w}" height="96" rx="48" fill="#fff" stroke="${OL}" stroke-width="5"/>` +
+    `<circle cx="${-w / 2 + 52}" cy="0" r="30" fill="${C.gold}" stroke="${OL}" stroke-width="3"/><text x="${-w / 2 + 52}" y="12" text-anchor="middle" font-size="32">😎</text>` +
+    `<text id="${id}-ph" x="${-w / 2 + 100}" y="13" font-family="Inter" font-weight="700" font-size="36" fill="#9A9288">Add a comment…</text>` +
+    `<text id="${id}-tx" x="${-w / 2 + 100}" y="14" font-family="Inter" font-weight="900" font-size="42" fill="${C.text}"></text><rect id="${id}-cur" x="0" y="-24" width="4" height="46" fill="${C.text}"/>` +
+    `<text id="${id}-post" x="${w / 2 - 40}" y="12" text-anchor="end" font-family="Inter" font-weight="900" font-size="36" fill="#9DC4F0">Post</text>`;
+}
+function commentType(id, t, t0, word, w = 720, cps = 6) {
+  const n = clamp(Math.floor((t - t0) * cps), 0, word.length), txt = word.slice(0, n), el = $(id + '-tx');
+  el.textContent = txt; op($(id + '-ph'), n ? 0 : 1);
+  const tw = n ? el.getBBox().width : 0; $(id + '-cur').setAttribute('x', -w / 2 + 104 + tw); op($(id + '-cur'), t > t0 - 1 && Math.floor(t * 2.4) % 2 ? 1 : 0);
+  $(id + '-post').setAttribute('fill', n === word.length ? '#1877F2' : '#9DC4F0');
+}

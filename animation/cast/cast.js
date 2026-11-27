@@ -225,3 +225,16 @@ const NIRAV = {
   home: dress(NIRAV_BASE, { top: '#4F7CAC', topD: '#3B6390', collar: '#E8EEF4', pants: { c: '#C9B79C', d: '#B09D80', hem: 30 } }), // collared shirt, chinos
   sherwani: dress(NIRAV_BASE, { top: '#F2E2C4', topD: '#C9A24A', buttons: true, sleeveTo: .95, embroidery: true, pants: { c: '#FFF8EC', d: '#E8DCC8', hem: 260 } }),
 };
+// Kabir (mid 20s): "Repeat wala ladka" who wore one maroon sherwani to three weddings, then rented a royal blue one.
+// His three friends (orange, green, purple kurtas), Tanvi (his crush, pink suit) and a wedding photographer.
+// (Repeat wala ladka, 2026-11-27)
+const KABIR_BASE = { male: true, hairStyle: 'quiff', skin: '#C98B62', skin2: '#B9784F', hair: '#1E140F' };
+const KABIR = {
+  maroon: dress(KABIR_BASE, { top: '#7A1B2A', topD: '#5C1220', buttons: true, sleeveTo: .95, embroidery: true, pants: { c: '#FFF8EC', d: '#E8DCC8', hem: 260 } }),
+  blue: dress(KABIR_BASE, { top: '#2F4FB0', topD: '#22398A', buttons: true, sleeveTo: .95, embroidery: true, necklace: true, pants: { c: '#FFF8EC', d: '#E8DCC8', hem: 260 } }),
+  home: dress(KABIR_BASE, { top: '#5E8C4A', topD: '#476F37', collar: '#E8EEF4', pants: { c: '#3E5C8A', d: '#2E4A72', hem: 30 } }),
+};
+const KABIR_DOST = [['Sahil', '#E8822E', '#D9A07A', { mustache: true }], ['Manav', '#3E8E4A', '#B97A55', { glasses: true }], ['Jigar', '#7A4FA0', '#C08460', { beard: true }]]
+  .map(([name, c, skin, extra]) => ({ name, look: Object.assign({ male: true, skin, skin2: skin, hair: '#1E140F', top: c, topD: c, buttons: true, sleeveTo: .9, pants: { c: '#FFF8EC', d: '#E8DCC8', hem: 220 } }, extra) }));
+const TANVI = { hairStyle: 'long', top: '#F08AAE', topD: '#D9668E', pallu: '#FFD3E2', border: C.gold, earrings: true, bangles: true, skin: '#D19A72', skin2: '#BD8460', pants: { c: '#F6B4C8', d: '#E89AB2', hem: 150 } };
+const PHOTOGRAPHER = { male: true, hat: '#2E2E33', skin: '#A86B48', skin2: '#93593A', hair: '#1E140F', top: '#2E2E33', topD: '#1F1F24', pants: { c: '#3B3A48', d: '#2B2A36', hem: 30 } };
