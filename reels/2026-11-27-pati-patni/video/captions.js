@@ -1,11 +1,71 @@
 // Caption chunks: [id, Roman Hinglish caption (*gold* words), number of script.txt words it covers]
 // tools/caption_timing.py fills STARTS / VOICE_END / DURATION from the voice (re-run after every voice take).
 const CHUNKS = [
-  ['c1', 'Ek *sawaal*:', 2],
-  ['c2', 'shaadi ka outfit *kitni baar* pehnte ho?', 6],
-  ['c3', 'Ye hain *Hetal ben*.', 4],
-  ['c4', 'Follow karo *Anokhi Reet.*', 4],
+  ['c1', 'Shaadi ke baad mujhe laga', 5],
+  ['c2', '*mere pati kuch chhupa* rahe hain…', 6],
+  ['c3', '…aur mujhe laga *meri patni!*', 5],
+  ['c4', '*End mein* jo nikla…', 4],
+  ['c5', 'woh sunke aap apne *partner ko tag* karoge.', 8],
+  ['c6', '*Har mahine sherwani* bag mein jaati hai…', 7],
+  ['c7', 'aur phone pe *"payment received"?*', 5],
+  ['c8', '*Kuch toh gadbad* hai!', 4],
+  ['c9', '*Har function* mein naya outfit…', 5],
+  ['c10', 'ek baar bhi *repeat nahi!*', 5],
+  ['c11', '*Credit card ka bill* dekh ke toh', 7],
+  ['c12', 'main *behosh* ho jaunga!', 4],
+  ['c13', '*Sach batao,* sherwani kahan jaati hai?', 6],
+  ['c14', '*Pehle tum batao,*', 3],
+  ['c15', 'itne outfits *kahan se* aate hain?', 6],
+  ['c16', 'Main outfits *rent pe leti* hoon!', 6],
+  ['c17', 'Aur main apni sherwani *rent pe deta* hoon!', 8],
+  ['c18', 'Par *asli twist* toh tab aaya…', 6],
+  ['c19', 'jab dono ne *hisaab milaya.*', 5],
+  ['c20', '*Matlab…* tumhari sherwani ki *kamaai* se…', 6],
+  ['c21', '*meri shopping* ho rahi thi?!', 5],
+  ['c22', 'Aur mujhe laga', 3],
+  ['c23', 'tum mera *bank khaali* kar rahi ho!', 7],
+  ['c24', 'Shaadi mein *saath phere* liye…', 5],
+  ['c25', '…aur *business* mein bhi *partner* nikle!', 6],
+  ['c26', '*Anokhi Reet.*', 2],
+  ['c27', 'Outfit *rent karo…*', 3],
+  ['c28', 'ya *apna rent pe do.*', 5],
+  ['c29', '*Comment* karo *OUTFIT…*', 3],
+  ['c30', 'aur apne *partner ko tag* karo.', 6],
 ];
-// Chunk start times (s): placeholder until a voice exists.
-const STARTS = [0.2, 1.6, 4.4, 6.6];
-const VOICE_END = 8.6, DURATION = 9.6;
+
+// Chunk start times (s): set by hand from the two recordings' line timings (two voices confuse the auto timing); (faster-whisper, 62 of 156 words matched), voice duo-pati-patni-take1.mp3.
+const STARTS = [
+  0.30, 1.48, 3.35, 5.50, 6.41, 8.55, 11.09, 13.10, 14.26, 16.17, 17.55, 18.95, 20.23, 22.25, 23.20, 25.25, 27.35, 29.88, 31.80, 33.62, 36.00, 37.51, 38.40, 40.34, 42.49, 44.46, 45.36, 46.48, 47.96, 49.04];
+// When each script word of a chunk is spoken (drives the word-by-word highlight).
+const WORDS = [
+  [0.3, 0.51, 0.71, 0.92, 1.12],
+  [1.48, 1.77, 2.05, 2.34, 2.63, 2.91],
+  [3.35, 3.75, 4.15, 4.55, 4.95],
+  [5.5, 5.69, 5.88, 6.07],
+  [6.41, 6.66, 6.91, 7.16, 7.41, 7.65, 7.9, 8.15],
+  [8.55, 8.89, 9.23, 9.57, 9.92, 10.26, 10.6],
+  [11.09, 11.46, 11.83, 12.21, 12.58],
+  [13.1, 13.35, 13.61, 13.86],
+  [14.26, 14.61, 14.96, 15.32, 15.67],
+  [16.17, 16.42, 16.66, 16.91, 17.15],
+  [17.55, 17.73, 17.91, 18.09, 18.26, 18.44, 18.62],
+  [18.95, 19.23, 19.52, 19.8],
+  [20.23, 20.54, 20.85, 21.16, 21.48, 21.79],
+  [22.25, 22.52, 22.78],
+  [23.2, 23.52, 23.83, 24.15, 24.47, 24.78],
+  [25.25, 25.57, 25.9, 26.23, 26.55, 26.88],
+  [27.35, 27.65, 27.95, 28.24, 28.54, 28.84, 29.14, 29.43],
+  [29.88, 30.18, 30.47, 30.77, 31.06, 31.36],
+  [31.8, 32.13, 32.47, 32.8, 33.14],
+  [33.62, 33.99, 34.36, 34.73, 35.11, 35.48],
+  [36.0, 36.27, 36.54, 36.82, 37.09],
+  [37.51, 37.76, 38.0],
+  [38.4, 38.66, 38.91, 39.17, 39.42, 39.68, 39.93],
+  [40.34, 40.74, 41.14, 41.54, 41.94],
+  [42.49, 42.79, 43.1, 43.4, 43.7, 44.01],
+  [44.46, 44.84],
+  [45.36, 45.68, 46.01],
+  [46.48, 46.75, 47.01, 47.28, 47.54],
+  [47.96, 48.27, 48.58],
+  [49.04, 49.31, 49.58, 49.84, 50.11, 50.38]];
+const VOICE_END = 50.80, DURATION = 52.30;

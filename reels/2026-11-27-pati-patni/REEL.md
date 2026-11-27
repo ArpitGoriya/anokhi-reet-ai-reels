@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-27
 - **Made by:** dhruvifewtone-wq
-- **Status:** script approved
+- **Status:** voice approved
 
 ## Brief
 
@@ -24,6 +24,9 @@
 
 ## Teammate changes (override the brand defaults for this reel only)
 
+- **Modern looks** (teammate chose them, 2026-11-27): Kinjal: long open wavy hair, small bindi, mangalsutra, hoop
+  earrings, a coral kurti with jeans (wedding looks: yellow lehenga, purple saree, red sharara). Nirav: a short trimmed
+  beard, styled hair, a casual collared shirt with chinos (wedding sherwani: cream and gold).
 - **Two voices in one reel** (teammate, 2026-11-27): female for Kinjal and the narration, male for Nirav; both are
   the approved voices with their usual settings.
 - **"Payment received ₹1,200"** (teammate chose it, 2026-11-27, instead of ₹3,000) so it matches the ledger.
@@ -56,7 +59,7 @@ Voice text: [`script.txt`](script.txt) (all lines in order) · [`voice-parts.txt
 
 - Take 1: `output/duo-pati-patni-take1.mp3` (51 s) = Kinjal's lines (female, one recording:
   `output/patipatni-parts/kinjal-all.mp3`) and Nirav's lines (male, `output/patipatni-parts/nirav-all.mp3`), cut at the
-  pauses and joined in script order — sent, waiting for approval
+  pauses and joined in script order — approved: yes, 2026-11-27
 
 ## Feedback rounds
 
