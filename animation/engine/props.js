@@ -1064,3 +1064,35 @@ function rotationBoardSVG(id, rows) {
 function saveIconSVG() {
   return `<circle r="70" fill="#fff" stroke="${OL}" stroke-width="${OW}"/><path d="M-26,-38 H26 V40 L0,20 L-26,40 Z" fill="${C.red}" stroke="${OL}" stroke-width="5" stroke-linejoin="round"/>`;
 }
+
+// ===== App walkthrough kit (Meena Rentals walkthrough, 2026-11-27): bokeh ground, cream app cards, app widgets =====
+// bokehBG(id): dark maroon-brown ground with soft gold bokeh circles (`${id}-b<i>` drift with bokehUpd)
+const BOKEH = [[140, 300, 90], [920, 420, 120], [300, 1500, 140], [860, 1350, 80], [560, 200, 60], [120, 980, 70], [980, 900, 100], [640, 1700, 110]];
+function bokehBG(id) {
+  return `<rect width="${W}" height="${H}" fill="#2E0F0B"/><rect width="${W}" height="${H}" fill="url(#mar)" opacity=".55"/>` +
+    BOKEH.map(([x, y, r], i) => `<circle id="${id}-b${i}" cx="${x}" cy="${y}" r="${r}" fill="url(#glow)" opacity="${.35 + (i % 3) * .15}"/>`).join('');
+}
+function bokehUpd(id, t) { BOKEH.forEach(([x, y], i) => tf($(`${id}-b${i}`), Math.sin(t * .3 + i) * 18, Math.cos(t * .25 + i * 2) * 14, 1)); }
+// uiCard(w, h): a cream app card centred on (0,0) with a soft maroon-tinted shadow
+function uiCard(w, h, fill = C.cream) { return `<rect x="${-w / 2 + 8}" y="${-h / 2 + 16}" width="${w}" height="${h}" rx="34" fill="#1A0402" opacity=".35"/><rect x="${-w / 2}" y="${-h / 2}" width="${w}" height="${h}" rx="34" fill="${fill}" stroke="#E8D3A5" stroke-width="3"/>`; }
+// outfitTile(c, d, s): a small outfit photo tile (lehenga on a cream square), centred, side s
+function outfitTile(c, d, s = 150) { return `<rect x="${-s / 2}" y="${-s / 2}" width="${s}" height="${s}" rx="16" fill="#fff" stroke="#E6E0D9" stroke-width="3"/><g transform="translate(0,${-s * .12}) scale(${s / 520})">${lehengaHangerSVG('', { c, d, dupatta: C.goldTan })}</g>`; }
+// sizeChips(id, sizes): pill chips in a row centred on (0,0); chip `${id}-<size>` has a dark fill rect `${id}-<size>-on` (opacity 0/1)
+function sizeChips(id, sizes = ['S', 'M', 'L']) {
+  return sizes.map((z, i) => { const x = (i - (sizes.length - 1) / 2) * 120; return `<g transform="translate(${x},0)"><rect x="-48" y="-32" width="96" height="64" rx="32" fill="#F2EEE9" stroke="#E6E0D9" stroke-width="3"/><rect id="${id}-${z}-on" x="-48" y="-32" width="96" height="64" rx="32" fill="#141110" opacity="0"/><text id="${id}-${z}-t" y="11" text-anchor="middle" font-family="Inter" font-weight="800" font-size="30" fill="#141110">${z}</text></g>`; }).join('');
+}
+function chipOn(id, z, on) { op($(`${id}-${z}-on`), on ? 1 : 0); $(`${id}-${z}-t`).setAttribute('fill', on ? '#fff' : '#141110'); }
+// availCal(id, booked, days): a month grid (7 columns); booked days greyed; day cells `${id}-d<n>`
+function availCal(id, booked = [], days = 28) {
+  return [...Array(days)].map((_, i) => { const d = i + 1, x = -195 + (i % 7) * 65, y = ((i / 7) | 0) * 64, b = booked.includes(d); return `<g transform="translate(${x},${y})"><rect id="${id}-d${d}" x="-28" y="-28" width="56" height="56" rx="14" fill="${b ? '#D8D2CA' : '#E3F3EA'}" stroke="${b ? '#C9C2B8' : '#1F7A4D'}" stroke-width="2"/><text y="9" text-anchor="middle" font-family="Inter" font-weight="700" font-size="24" fill="${b ? '#9C928A' : '#1F7A4D'}" ${b ? 'text-decoration="line-through"' : ''}>${d}</text></g>`; }).join('');
+}
+// rangeSlider(id, w): a two-knob slider track centred on (0,0); move knobs with rangeSet(id, w, a, b) (0..1)
+function rangeSlider(id, w = 440) { return `<rect x="${-w / 2}" y="-8" width="${w}" height="16" rx="8" fill="#E6E0D9"/><rect id="${id}-fill" x="0" y="-8" width="0" height="16" rx="8" fill="url(#mar)"/><circle id="${id}-a" r="26" fill="#fff" stroke="${C.red}" stroke-width="6"/><circle id="${id}-b" r="26" fill="#fff" stroke="${C.red}" stroke-width="6"/>`; }
+function rangeSet(id, w, a, b) { const xa = -w / 2 + a * w, xb = -w / 2 + b * w; $(`${id}-a`).setAttribute('cx', xa); $(`${id}-b`).setAttribute('cx', xb); $(`${id}-fill`).setAttribute('x', xa); $(`${id}-fill`).setAttribute('width', Math.max(0, xb - xa)); }
+// doorstepSVG(): a front door with a doormat and a delivery box with a lehenga peeking out, centred on (0,0)
+function doorstepSVG() {
+  return `<rect x="-170" y="-330" width="340" height="560" rx="10" fill="${C.wall}" stroke="${OL}" stroke-width="${OW}"/><rect x="-120" y="-290" width="240" height="500" rx="8" fill="${C.wood}" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<rect x="-90" y="-250" width="180" height="180" rx="8" fill="none" stroke="${C.woodDark}" stroke-width="5"/><circle cx="80" cy="-20" r="10" fill="${C.gold}" stroke="${OL}" stroke-width="3"/>` +
+    `<path d="M-160,240 L160,240 L190,290 L-190,290 Z" fill="${C.red}" stroke="${OL}" stroke-width="4"/>` +
+    `<g transform="translate(120,180)"><path d="M-90,-60 L90,-60 L100,70 L-100,70 Z" fill="#C9A36B" stroke="${OL}" stroke-width="${OW}"/><path d="M-90,-60 L-60,-100 L60,-100 L90,-60" fill="#D9B98A" stroke="${OL}" stroke-width="4"/><path d="M-40,-60 Q0,-130 40,-60" fill="${C.lehenga}" stroke="${OL}" stroke-width="4"/><rect x="-60" y="-10" width="120" height="40" rx="8" fill="#fff" stroke="${OL}" stroke-width="3"/><text y="18" text-anchor="middle" font-family="Inter" font-weight="800" font-size="20" fill="${C.red}">Anokhi Reet</text></g>`;
+}

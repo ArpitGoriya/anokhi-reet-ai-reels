@@ -1,11 +1,74 @@
 // Caption chunks: [id, Roman Hinglish caption (*gold* words), number of script.txt words it covers]
-// tools/caption_timing.py fills STARTS / VOICE_END / DURATION from the voice (re-run after every voice take).
+// tools/caption_timing.py fills STARTS / WORDS / VOICE_END / DURATION from the voice (re-run after every voice take).
 const CHUNKS = [
-  ['c1', 'Ek *sawaal*:', 2],
-  ['c2', 'shaadi ka outfit *kitni baar* pehnte ho?', 6],
-  ['c3', 'Ye hain *Hetal ben*.', 4],
-  ['c4', 'Follow karo *Anokhi Reet.*', 4],
+  ['c1', 'Poori rental shop ka business...', 5],
+  ['c2', 'bas ek *app* pe.', 4],
+  ['c3', 'Dekho, ye hai Meena Rentals...', 5],
+  ['c4', '*Anokhi Reet* pe.', 3],
+  ['c5', 'Sabse pehle, aapki *shop.*', 4],
+  ['c6', 'Naam, location, aur poora collection...', 5],
+  ['c7', 'ek nazar mein.', 3],
+  ['c8', 'Customer ko lehenga chahiye?', 4],
+  ['c9', 'Woh *nearby* search karta hai...', 5],
+  ['c10', 'aur aapki shop seedha uske saamne.', 6],
+  ['c11', '*Budget filter* lagaya...', 3],
+  ['c12', 'toh sirf woh customers,', 4],
+  ['c13', 'jinke *budget* mein aapke kapde hain.', 6],
+  ['c14', 'Har outfit ki poori detail...', 5],
+  ['c15', '*size, price,*', 2],
+  ['c16', 'aur kaunsi date pe *available* hai.', 7],
+  ['c17', 'Customer ne date chuni...', 4],
+  ['c18', 'aur *booking* seedha aapke paas.', 5],
+  ['c19', 'Na phone, na register.', 4],
+  ['c20', 'Customer shop pe aake *try*', 5],
+  ['c21', 'kar sakta hai...', 3],
+  ['c22', 'ya ghar baithe *doorstep* pe.', 5],
+  ['c23', 'Register, WhatsApp, aur', 3],
+  ['c24', '"available hai kya?" wale calls...', 5],
+  ['c25', 'ab *sab ek jagah.*', 4],
+  ['c26', 'Aur woh customers bhi...', 4],
+  ['c27', 'jo aapki dukaan tak', 4],
+  ['c28', 'kabhi *pahunche hi nahi* the.', 5],
+  ['c29', 'Aapki rental shop ya boutique', 5],
+  ['c30', 'ke liye bhi aisa *platform* chahiye?', 6],
+  ['c31', 'Comment karo *SHOP.*', 3],
 ];
-// Chunk start times (s): placeholder until a voice exists.
-const STARTS = [0.2, 1.6, 4.4, 6.6];
-const VOICE_END = 8.6, DURATION = 9.6;
+
+// Chunk start times (s): tools/caption_timing.py (faster-whisper, 112 of 136 words matched), voice male-meena-rentals-walkthrough-take1.mp3.
+const STARTS = [
+  0.00, 1.70, 3.19, 4.79, 5.90, 7.41, 9.49, 10.36, 11.77, 12.90, 14.91, 15.74, 16.98, 18.48, 20.33, 21.18,
+  22.83, 23.84, 25.54, 26.93, 28.04, 28.56, 30.08, 31.72, 33.02, 34.12, 35.32, 36.38, 37.49, 38.80, 40.32];
+// When each script word of a chunk is spoken (drives the word-by-word highlight).
+const WORDS = [
+  [0.0, 0.62, 1.02, 1.3, 1.42],
+  [1.78, 2.26, 2.38, 2.62],
+  [3.27, 3.86, 3.98, 4.1, 4.43],
+  [4.87, 5.25, 5.53],
+  [5.98, 6.32, 6.61, 6.89],
+  [7.49, 7.96, 8.36, 8.6, 8.96],
+  [9.57, 9.62, 10.0],
+  [10.44, 10.86, 10.98, 11.28],
+  [11.85, 11.9, 12.42, 12.66, 12.9],
+  [12.98, 13.28, 13.58, 13.86, 14.26, 14.5],
+  [14.99, 15.42, 15.64],
+  [15.82, 16.24, 16.46, 16.62],
+  [17.06, 17.34, 17.66, 17.82, 17.98, 18.22],
+  [18.56, 18.9, 19.3, 19.46, 19.84],
+  [20.41, 20.96],
+  [21.26, 21.38, 21.6, 21.77, 22.04, 22.18, 22.56],
+  [22.91, 23.38, 23.5, 23.71],
+  [23.92, 24.24, 24.54, 25.02, 25.2],
+  [25.62, 25.86, 26.06, 26.42],
+  [27.01, 27.44, 27.66, 27.8, 27.96],
+  [28.12, 28.22, 28.42],
+  [28.64, 28.76, 28.96, 29.28, 29.83],
+  [30.16, 30.93, 31.48],
+  [31.8, 32.3, 32.5, 32.64, 32.84],
+  [33.1, 33.42, 33.76, 34.0],
+  [34.2, 34.53, 34.86, 35.22],
+  [35.4, 35.72, 36.04, 36.32],
+  [36.46, 36.58, 36.85, 36.98, 37.2],
+  [37.57, 38.04, 38.36, 38.58, 38.66],
+  [38.88, 39.08, 39.22, 39.28, 39.58, 39.92],
+  [40.4, 40.7, 40.88]];
+const VOICE_END = 41.44, DURATION = 44.6; // DURATION held 2 s longer for the end card (re-set after re-timing)

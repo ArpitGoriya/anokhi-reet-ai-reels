@@ -3,6 +3,14 @@
 Every reel adds at least one improvement to the engine or library and writes it here (newest first).
 See [GUIDE.md](GUIDE.md) section 8.
 
+## 2026-11-27: app walkthrough kit (Meena Rentals walkthrough)
+
+- **For feature walkthrough reels:** `bokehBG(id)` + `bokehUpd(id, t)` (dark maroon-brown ground, drifting gold bokeh),
+  `uiCard(w, h)` (cream card, soft maroon shadow), `outfitTile(c, d, s)`, `sizeChips(id)` + `chipOn(id, size, on)`,
+  `availCal(id, booked)` (dates `${id}-d<n>`), `rangeSlider(id, w)` + `rangeSet(id, w, a, b)`, `doorstepSVG()`.
+- Section tags: a green `.pill` with the number in a dark-green highlight (see the reel's `tag()` helper).
+- Per-reel caption colours (karaoke grey → white): a `<style>` tag in a scene's html.
+
 ## 2026-11-27: beard, shirt collar, styled hair, mangalsutra, hoops, a two-voice reel, Kinjal and Nirav (Pati-patni)
 
 - **Engine:** look options `beard` (a short trimmed beard), `collar` (a shirt collar with buttons), `hairStyle: 'quiff'`

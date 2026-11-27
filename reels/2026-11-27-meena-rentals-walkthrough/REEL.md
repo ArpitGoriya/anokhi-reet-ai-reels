@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-27
 - **Made by:** teammate (script, from `Anokhireet_Rental_Shop_Walkthrough_Script.pdf`) + Claude
-- **Status:** script approved; voice take 1 waiting for a listen
+- **Status:** video 1 rendered (2026-11-27); sent to the teammate
 
 ## Brief
 
@@ -52,12 +52,13 @@ Voice script: [`script.txt`](script.txt) (Devanagari, male voice).
 
 ## Voice-over
 
-- Take 1: `output/male-meena-rentals-walkthrough-take1.mp3` (41.4 s) — approved: pending
+- Take 1: `output/male-meena-rentals-walkthrough-take1.mp3` (41.4 s) — approved: yes (2026-11-27)
 - Captions timed with `tools/caption_timing.py` (redo after every new take)
 
 ## Feedback rounds
 
 1. (round 0) PDF converted to Devanagari; male voice; flat app cards; "Comment karo SHOP" kept.
+2. Video 1: 11 scenes, `output/2026-11-27-meena-rentals-walkthrough.mp4` (44.6 s; end card held 2 s after the voice).
 
 ## Caption
 
@@ -70,8 +71,10 @@ Comment karo SHOP aur hum details bhejenge. 👇
 
 ## Added to the library (at least two per reel)
 
-- (planned) Bokeh background, green numbered section tag, app cards: shop profile, budget slider, outfit detail with
-  size chips and availability calendar, booking card, doorstep delivery card.
+- **App walkthrough kit** in `engine/props.js`: `bokehBG` + `bokehUpd` (dark maroon-brown ground with drifting gold
+  bokeh), `uiCard` (cream app card with a soft maroon shadow), `outfitTile`, `sizeChips` + `chipOn`, `availCal`
+  (month grid with booked dates greyed), `rangeSlider` + `rangeSet` (two-knob budget slider), `doorstepSVG`.
+- Karaoke caption colours for one reel: a `<style>` tag in the scene html (`#cap .w.dim{color:...}`).
 
 ## Suggested default (for the owner)
 
@@ -79,4 +82,5 @@ Comment karo SHOP aur hum details bhejenge. 👇
 
 ## Lessons
 
--
+- Whisper matched well (112 of 136 words); no hand timing.
+- `DURATION` in captions.js was raised by hand to hold the end card 2 s; `caption_timing.py` resets it after a new take.
