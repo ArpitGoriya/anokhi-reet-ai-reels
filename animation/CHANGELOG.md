@@ -144,6 +144,14 @@ See [GUIDE.md](GUIDE.md) section 8.
 - A caption chunk can be added between two others without renumbering: name it `c2b` (a-d after the number).
   `T('c2b+0.2')` and `tools/caption_timing.py` both accept it; `c8e` still means "end of c8".
 
+## 2026-11-27: trial room, visit notebook, mood faces, rotation board, Save icon (Sab pehle se PATA hai)
+
+- **New set:** `trialRoomBG(id)` (two curtained trial cubicles with a mirror between).
+- **New props:** `notebookVisitsSVG(id, rows, marks)` (customer visit notebook; X marks `${id}-x<r>-<c>` start hidden),
+  `moodFaceSVG('happy'|'okay'|'bored')`, `rotationBoardSVG(id, [[label, colour], ...])` (weekly collection board,
+  rows `${id}-r<i>`), `saveIconSVG()` (Instagram-style save bookmark for "Save karo" end cards).
+- Meena (`MEENA`) reused for a second reel; she's becoming a recurring rental-shop character.
+
 ## 2026-11-18: covered lehengas, lock, plain book, pocket, Nisha (₹2.5 lakh ki almari)
 
 - **New props:** `coveredLehengaSVG(c, d, sc)` (lehenga in a clear plastic cover with a zip line), `lockSVG()`,

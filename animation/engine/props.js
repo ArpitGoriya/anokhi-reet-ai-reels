@@ -1025,3 +1025,42 @@ function photoBoothBG(id) {
     `<g transform="translate(540,480)"><rect x="-190" y="-34" width="380" height="68" rx="34" fill="#fff" stroke="${OL}" stroke-width="4"/><text y="12" text-anchor="middle" font-family="Comic Sans MS, Segoe Print, cursive" font-weight="700" font-size="34" fill="${C.pinkDark}">#ShaadiVibes 📸</text></g>` +
     `<g transform="translate(990,700)"><path d="M0,70 V520" stroke="${OL}" stroke-width="10"/><circle r="70" fill="none" stroke="${OL}" stroke-width="34"/><circle r="70" fill="none" stroke="#FFF8EC" stroke-width="22"/></g>`;
 }
+
+// ===== Sab pehle se pata hai (2026-11-27): trial room, visit notebook, mood face, SAME stamp, rotation board, Save icon =====
+// trialRoomBG(id): two curtained trial cubicles with a mirror strip between, cream wall and floor
+function trialRoomBG(id) {
+  let s = wallSVG('#F3DCC0', '#EACBA8');
+  for (const cx of [270, 810]) {
+    s += `<rect x="${cx - 220}" y="330" width="440" height="${FLOOR - 330}" fill="#E8D3B0" stroke="${OL}" stroke-width="${OW}"/>`;
+    s += `<rect x="${cx - 236}" y="316" width="472" height="22" rx="10" fill="${C.goldTan}" stroke="${OL}" stroke-width="4"/>`;
+    for (const sd of [-1, 1]) { const x0 = cx + sd * 220, x1 = cx + sd * 110; s += `<path d="M${x0},338 L${x1},338 Q${x1 - sd * 20},${(338 + FLOOR) / 2} ${x1 + sd * 10},${FLOOR} L${x0},${FLOOR} Z" fill="${C.red}" stroke="${OL}" stroke-width="${OW}"/>` + [1, 2].map(k => `<path d="M${lerp(x0, x1, k / 3)},344 V${FLOOR - 8}" stroke="${C.redDark}" stroke-width="5" opacity=".6"/>`).join(''); }
+  }
+  s += `<g transform="translate(540,760)"><rect x="-40" y="-260" width="80" height="520" rx="30" fill="${C.goldTan}" stroke="${OL}" stroke-width="${OW}"/><rect x="-26" y="-244" width="52" height="488" rx="20" fill="${C.sky}"/></g>`;
+  return s + floorSVG('#A47648');
+}
+// notebookVisitsSVG(id, rows): open notebook "Customer kab gaya?" with columns Visit 1-4; X marks `${id}-x${r}-${c}` start hidden
+function notebookVisitsSVG(id, rows = 6, marks = []) {
+  let s = `<g id="${id}"><rect x="-380" y="-300" width="760" height="600" rx="18" fill="#FFFDF7" stroke="${OL}" stroke-width="${OW}"/><path d="M0,-300 V300" stroke="#C9B9A0" stroke-width="4"/>`;
+  s += `<text x="-350" y="-236" font-family="Inter" font-weight="900" font-size="40" fill="${C.red}">Customer kab gaya?</text>`;
+  for (let c = 0; c < 4; c++) s += `<text x="${-230 + c * 165}" y="-160" text-anchor="middle" font-family="Inter" font-weight="800" font-size="28" fill="#3B2418">Visit ${c + 1}</text>`;
+  for (let r = 0; r < rows; r++) { const y = -110 + r * 64; s += `<path d="M-350,${y + 28} H350" stroke="#E2D6C2" stroke-width="3"/><circle cx="-330" cy="${y}" r="8" fill="#9C928A"/>`; for (let c = 0; c < 4; c++) s += `<path d="M${-238 + c * 165},${y} h16" stroke="#C9B9A0" stroke-width="4"/>`; }
+  marks.forEach(([r, c]) => { const x = -230 + c * 165, y = -110 + r * 64; s += `<g id="${id}-x${r}-${c}" opacity="0"><path d="M${x - 18},${y - 18} L${x + 18},${y + 18} M${x + 18},${y - 18} L${x - 18},${y + 18}" stroke="${C.red}" stroke-width="9" stroke-linecap="round"/></g>`; });
+  return s + `</g>`;
+}
+// moodFaceSVG(kind): a round face, 'happy' | 'okay' | 'bored', r 70
+function moodFaceSVG(kind = 'happy') {
+  const col = { happy: '#F7C548', okay: '#F2D58A', bored: '#E2D6C2' }[kind];
+  const mouth = { happy: 'M-30,14 Q0,44 30,14', okay: 'M-26,22 H26', bored: 'M-26,28 Q0,14 26,28' }[kind];
+  const eyes = kind === 'bored' ? `<path d="M-34,-12 h22 M12,-12 h22" stroke="${OL}" stroke-width="7" stroke-linecap="round"/>` : `<circle cx="-24" cy="-12" r="8" fill="${OL}"/><circle cx="24" cy="-12" r="8" fill="${OL}"/>`;
+  return `<circle r="70" fill="${col}" stroke="${OL}" stroke-width="${OW}"/>${eyes}<path d="${mouth}" fill="none" stroke="${OL}" stroke-width="7" stroke-linecap="round"/>`;
+}
+// rotationBoardSVG(id, rows): a cork board listing [label, colour] per week; row groups `${id}-r${i}`
+function rotationBoardSVG(id, rows) {
+  let s = `<g id="${id}"><rect x="-330" y="-260" width="660" height="${rows.length * 110 + 120}" rx="20" fill="#C9A36B" stroke="${OL}" stroke-width="${OW}"/><rect x="-310" y="-240" width="620" height="${rows.length * 110 + 80}" rx="12" fill="#D9B98A"/>`;
+  rows.forEach(([lbl, col], i) => { const y = -170 + i * 110; s += `<g id="${id}-r${i}"><rect x="-280" y="${y - 40}" width="560" height="84" rx="14" fill="#fff" stroke="${OL}" stroke-width="4"/><rect x="-268" y="${y - 28}" width="60" height="60" rx="10" fill="${col}" stroke="${OL}" stroke-width="3"/><text x="-190" y="${y + 12}" font-family="Inter" font-weight="800" font-size="34" fill="#141110">Hafta ${i + 1}: ${lbl}</text><circle cx="0" cy="${y - 46}" r="9" fill="${C.red}" stroke="${OL}" stroke-width="3"/></g>`; });
+  return s + `</g>`;
+}
+// saveIconSVG(): Instagram-style save bookmark in a white circle, centred on (0,0)
+function saveIconSVG() {
+  return `<circle r="70" fill="#fff" stroke="${OL}" stroke-width="${OW}"/><path d="M-26,-38 H26 V40 L0,20 L-26,40 Z" fill="${C.red}" stroke="${OL}" stroke-width="5" stroke-linejoin="round"/>`;
+}

@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-27
 - **Made by:** teammate (script, from `Anokhireet_Rental_Shop_Reel_Script.pdf`) + Claude
-- **Status:** script approved; voice take 1 waiting for a listen
+- **Status:** video 1 rendered (2026-11-27); sent to the teammate
 
 ## Brief
 
@@ -59,12 +59,13 @@ Voice script: [`script.txt`](script.txt) (Devanagari, female voice).
 
 ## Voice-over
 
-- Take 1: `output/female-meena-ben-take1.mp3` (64.9 s) — approved: pending
+- Take 1: `output/female-meena-ben-take1.mp3` (64.9 s) — approved: yes (2026-11-27)
 - Captions timed with `tools/caption_timing.py` (redo after every new take)
 
 ## Feedback rounds
 
 1. (round 0) Converted the PDF script to Devanagari; female voice; Anokhi Reet follow card; 2-4 word captions.
+2. Video 1: 15 scenes, `output/2026-11-27-meena-ben-sab-pata-hai.mp4` (66 s).
 
 ## Caption
 
@@ -78,7 +79,10 @@ Rental shops, boutiques aur designers: Anokhi Reet ke saath naye customers tak p
 
 ## Added to the library (at least two per reel)
 
-- (planned) Notebook with visit columns and X marks; emoji mood ring; SAME stamp; weekly rotation board; trial room.
+- Set `trialRoomBG` (two curtained trial cubicles and a mirror).
+- Props: `notebookVisitsSVG` ("Customer kab gaya?" with Visit 1-4 columns and X marks that appear), `moodFaceSVG`
+  (happy / okay / bored), `rotationBoardSVG` (weekly collection board), `saveIconSVG` (Instagram-style save).
+- Reused the teammates' `rubberStampSVG` (SAME, ROTATING) and `phoneBackSVG`.
 
 ## Suggested default (for the owner)
 
@@ -86,4 +90,5 @@ Rental shops, boutiques aur designers: Anokhi Reet ke saath naye customers tak p
 
 ## Lessons
 
--
+- Whisper skipped 26-36 s (the "hedonic adaptation" part); c22-c32 were set from the voice's pauses.
+- A teammate had already added `stampSVG` and `rubberStampSVG`: always grep the library for a name before adding one.
