@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-27
 - **Made by:** teammate (script, from `Anokhireet_Rental_Shop_Reel_Script.pdf`) + Claude
-- **Status:** script waiting for approval
+- **Status:** script approved; voice take 1 waiting for a listen
 
 ## Brief
 
@@ -33,7 +33,7 @@ Everything here is applied in every round and never silently reverted.
 - **End card:** our usual Anokhi Reet follow card (no @handle), plus a Save icon. (round 0)
 - **Post caption hashtags** cut to 5 (brand rule; the PDF has 8). (round 0)
 
-## Script and storyboard (approved: no)
+## Script and storyboard (approved: yes)
 
 Voice script: [`script.txt`](script.txt) (Devanagari, female voice).
 
@@ -59,7 +59,7 @@ Voice script: [`script.txt`](script.txt) (Devanagari, female voice).
 
 ## Voice-over
 
-- File: — approved: no
+- Take 1: `output/female-meena-ben-take1.mp3` (64.9 s) — approved: pending
 - Captions timed with `tools/caption_timing.py` (redo after every new take)
 
 ## Feedback rounds
