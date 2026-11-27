@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-27
 - **Made by:** dhruvifewtone-wq
-- **Status:** voice approved
+- **Status:** video 1 sent
 
 ## Brief
 
@@ -61,9 +61,14 @@ Voice text: [`script.txt`](script.txt) (all lines in order) · [`voice-parts.txt
   `output/patipatni-parts/kinjal-all.mp3`) and Nirav's lines (male, `output/patipatni-parts/nirav-all.mp3`), cut at the
   pauses and joined in script order — approved: yes, 2026-11-27
 
+## Video
+
+- `output/2026-11-27-pati-patni.mp4` (52 s), video 1 sent 2026-11-27.
+
 ## Feedback rounds
 
-- (none yet)
+- Voice take 1 (2026-11-27): sounds good; the characters should look modern (outfit, face, hairstyle) → Kinjal and
+  Nirav drawn in the modern looks the teammate chose (see Teammate changes).
 
 ## Caption
 
@@ -86,8 +91,9 @@ Comment OUTFIT 👇 Apne partner ko tag karo
 
 ## Added to the library (at least two per reel)
 
-- (planned) Kinjal and Nirav; a split-screen "peek" (door and curtain); a sherwani bag; a showdown at night; a
-  two-voice reel (joining the female and male voices by line).
+- Engine: `beard`, `collar`, `hairStyle: 'quiff'`, `mangalsutra`, `hoops` look options.
+- The first two-voice reel (female + male joined line by line).
+- New cast: Kinjal and Nirav.
 
 ## Suggested default (for the owner)
 
@@ -95,4 +101,6 @@ Comment OUTFIT 👇 Apne partner ko tag karo
 
 ## Lessons
 
-- (later)
+- Two voices: record each voice's lines in one request (saves the daily limit), find the line breaks with Whisper
+  word times, and set the caption times by hand.
+- Ledger labels need room: put the sum in the label and only the total in the value column.

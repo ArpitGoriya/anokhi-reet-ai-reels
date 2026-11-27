@@ -211,3 +211,17 @@ const ISHANI = {
 };
 const NIDHI = { hairStyle: 'pony', glasses: true, top: '#4F86C6', topD: '#3A6AA3', skin: '#C08460', skin2: '#A86E4E', earrings: true, bangles: false, skirt: { c: '#3A6AA3', d: '#2E5A8C', b: '#D8CDBE', w: 180 } };
 const BADI_MUMMY = { hairStyle: 'greybun', top: '#7A3E6E', topD: '#5E2D55', pallu: C.marigold, border: C.gold, sindoor: true, glasses: true, wide: true, skin: '#B97A55', skin2: '#A0663F', skirt: { c: '#5E2D55', d: '#45203F', b: C.gold, w: 210 } };
+// Kinjal (late 20s): a modern young wife who rents a new outfit for every function. Nirav (around 30): her husband
+// who rents out his wedding sherwani. Each suspects the other. (Pati-patni dono ka ek secret, 2026-11-27)
+const KINJAL_BASE = { hairStyle: 'long', skin: '#D19A72', skin2: '#BD8460', earrings: true, hoops: true, mangalsutra: true, sindoor: true };
+const KINJAL = {
+  home: dress(KINJAL_BASE, { top: '#F08A6C', topD: '#D46E52', bangles: false, pants: { c: '#3E5C8A', d: '#2E4A72', hem: 150 } }), // coral kurti, jeans
+  yellow: dress(KINJAL_BASE, { top: '#F7C548', topD: '#D9A52E', pallu: '#F2A33A', border: C.red, embroidery: true, skirt: { c: '#F7C548', d: '#D9A52E', b: C.red } }),
+  purple: dress(KINJAL_BASE, { top: '#6E3FA0', topD: '#55307E', pallu: '#6E3FA0', border: C.gold, drape: { c: '#7A4FA0', b: C.gold }, skirt: { c: '#6E3FA0', d: '#55307E', b: C.gold, w: 160 } }),
+  red: dress(KINJAL_BASE, { top: '#C0262D', topD: '#97151B', pallu: '#F7C548', border: C.gold, pants: { c: '#C0262D', d: '#97151B', flare: true, print: C.gold, hem: 130 } }),
+};
+const NIRAV_BASE = { male: true, hairStyle: 'quiff', beard: true, skin: '#C08460', skin2: '#A86E4E', hair: '#1E140F' };
+const NIRAV = {
+  home: dress(NIRAV_BASE, { top: '#4F7CAC', topD: '#3B6390', collar: '#E8EEF4', pants: { c: '#C9B79C', d: '#B09D80', hem: 30 } }), // collared shirt, chinos
+  sherwani: dress(NIRAV_BASE, { top: '#F2E2C4', topD: '#C9A24A', buttons: true, sleeveTo: .95, embroidery: true, pants: { c: '#FFF8EC', d: '#E8DCC8', hem: 260 } }),
+};

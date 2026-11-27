@@ -64,6 +64,8 @@ characters are added here after their first reel (add them to `cast.js`, to the 
 | `ISHANI.pastel` / `.mint` / `.gown` / `.saree` / `.home` | **Ishani**, 20s, the stylish cousin who goes viral at every wedding (all rented). | Maroon lehenga, olive-and-pink sharara, white-and-pink gown, teal saree / pink top | Cousin har shaadi ki photo mein viral (2026-11-26) |
 | `NIDHI` | **Nidhi**, 20s, Ishani's cousin and the narrator. | Ponytail, glasses, blue kurti | Cousin… viral |
 | `BADI_MUMMY` | **Badi Mummy**, 50s, the aunt who's sure it's all sponsored (and wants her saree listed). | Grey bun, glasses, plum saree | Cousin… viral |
+| `KINJAL.home` / `.yellow` / `.purple` / `.red` | **Kinjal**, late 20s, a modern young wife who rents a new outfit for every function. | Long open hair, hoops, mangalsutra, coral kurti with jeans / yellow lehenga, purple saree, red sharara | Pati-patni dono ka ek secret (2026-11-27) |
+| `NIRAV.home` / `.sherwani` | **Nirav**, around 30, her husband who rents out his wedding sherwani. | Trimmed beard, styled hair, blue collared shirt with chinos / cream-gold sherwani | Pati-patni dono ka ek secret |
 
 Ideas for the cast's next members (make them when a story needs them): a young woman who rents for college
 functions, a vendor on the Anokhi Reet app.

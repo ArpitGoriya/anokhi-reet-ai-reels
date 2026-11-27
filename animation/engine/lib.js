@@ -118,6 +118,9 @@ function person(id, o = {}) {
   if (male) s += `<path d="M-26,-262 L0,-226 L26,-262" fill="none" stroke="${OL}" stroke-width="${OW}"/>`;
   // neck
   s += `<path d="M-24,-300 L-24,-258 Q0,-244 24,-258 L24,-300 Z" fill="${skin2}" stroke="${OL}" stroke-width="${OW}"/>`;
+  // a shirt collar (look option collar: colour) and a mangalsutra (look option mangalsutra: true) (Pati-patni)
+  if (o.collar) s += `<path d="M-34,-266 L-70,-236 L-20,-214 L0,-250 Z M34,-266 L70,-236 L20,-214 L0,-250 Z" fill="${o.collar}" stroke="${OL}" stroke-width="4" stroke-linejoin="round"/><path d="M0,-250 V-60" stroke="${OL}" stroke-width="3" opacity=".5"/>` + [-200, -150, -100].map(y => `<circle cx="8" cy="${y}" r="5" fill="#fff" stroke="${OL}" stroke-width="2"/>`).join('');
+  if (o.mangalsutra) s += `<path d="M-30,-262 Q0,-200 30,-262" fill="none" stroke="#1A1A1A" stroke-width="5" stroke-dasharray="4 4"/><path d="M-8,-224 L8,-224 L0,-206 Z" fill="${C.gold}" stroke="${OL}" stroke-width="2"/>`;
   if (o.necklace) s += `<path d="M-30,-262 Q0,-226 30,-262" fill="none" stroke="${C.gold}" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-238" r="8" fill="${C.gold}" stroke="${OL}" stroke-width="3"/>`;
   // head
   s += `<g id="${id}-head">`;
@@ -127,12 +130,15 @@ function person(id, o = {}) {
   // ears
   for (const sx of [-1, 1]) {
     s += `<ellipse cx="${sx * 97}" cy="-378" rx="17" ry="22" fill="${skin}" stroke="${OL}" stroke-width="${OW}"/>`;
-    if (!male && o.earrings !== false) s += `<circle cx="${sx * 99}" cy="-350" r="8" fill="${C.gold}" stroke="${OL}" stroke-width="3"/>`;
+    if (!male && o.earrings !== false) s += o.hoops ? `<circle cx="${sx * 99}" cy="-336" r="18" fill="none" stroke="${C.gold}" stroke-width="6"/>` : `<circle cx="${sx * 99}" cy="-350" r="8" fill="${C.gold}" stroke="${OL}" stroke-width="3"/>`;
   }
   s += `<ellipse cx="0" cy="-385" rx="98" ry="106" fill="${skin}" stroke="${OL}" stroke-width="${OW}"/>`;
   // hair front
   const hc = style === 'greybun' ? '#8F8A84' : hair;
-  if (male) {
+  if (male && style === 'quiff') {
+    // styled hair: a swept-up quiff (look option hairStyle: 'quiff') (Pati-patni)
+    s += `<path d="M-98,-388 Q-108,-470 -60,-500 Q-10,-560 70,-530 Q110,-505 100,-450 Q104,-420 98,-388 Q86,-440 40,-454 Q-6,-446 -40,-462 Q-80,-440 -98,-388 Z" fill="${hc}" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/><path d="M-30,-500 Q20,-530 70,-516" fill="none" stroke="#4A3A30" stroke-width="5" opacity=".7"/>`;
+  } else if (male) {
     s += `<path d="M-98,-392 Q-104,-500 -20,-505 Q60,-512 92,-470 Q104,-430 98,-392 Q80,-440 40,-452 Q-10,-430 -60,-450 Q-90,-430 -98,-392 Z" fill="${hc}" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round"/>`;
   } else if (style === 'short') {
     s += `<path d="M-100,-360 Q-112,-500 0,-500 Q112,-500 100,-360 Q92,-430 50,-450 Q0,-440 -50,-450 Q-92,-430 -100,-360 Z" fill="${hc}" stroke="${OL}" stroke-width="${OW}"/>`;
@@ -145,6 +151,8 @@ function person(id, o = {}) {
   s += `<g id="${id}-eyes"><g id="${id}-eyeL"><ellipse cx="-38" cy="-378" rx="13" ry="17" fill="#2A1A14"/><circle cx="-34" cy="-384" r="5" fill="#fff"/></g><g id="${id}-eyeR"><ellipse cx="38" cy="-378" rx="13" ry="17" fill="#2A1A14"/><circle cx="42" cy="-384" r="5" fill="#fff"/></g></g>`;
   s += `<path id="${id}-lids" d="" fill="${skin}" stroke="${OL}" stroke-width="4"/>`;
   s += `<path d="M-4,-360 Q4,-346 -6,-340" fill="none" stroke="${skin2}" stroke-width="5" stroke-linecap="round"/>`;
+  // a short trimmed beard along the jaw (look option beard: true) (Pati-patni)
+  if (o.beard) s += `<path d="M-96,-380 Q-98,-300 -50,-286 Q0,-270 50,-286 Q98,-300 96,-380 Q90,-330 60,-320 Q30,-306 0,-306 Q-30,-306 -60,-320 Q-90,-330 -96,-380 Z" fill="${hair}" opacity=".92"/><path d="M-30,-334 Q-14,-346 0,-338 Q14,-346 30,-334 Q14,-330 0,-334 Q-14,-330 -30,-334 Z" fill="${hair}"/>`;
   if (o.mustache) s += `<path d="M-30,-334 Q-14,-346 0,-338 Q14,-346 30,-334 Q14,-330 0,-334 Q-14,-330 -30,-334 Z" fill="${hair}"/>`;
   s += `<path id="${id}-mouth" d="${MOUTH.smile}" fill="#6E2A22" stroke="${OL}" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>`;
   s += `<ellipse cx="-60" cy="-340" rx="16" ry="9" fill="${C.blush}" opacity=".35"/><ellipse cx="60" cy="-340" rx="16" ry="9" fill="${C.blush}" opacity=".35"/>`;

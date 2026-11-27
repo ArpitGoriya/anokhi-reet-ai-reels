@@ -3,6 +3,15 @@
 Every reel adds at least one improvement to the engine or library and writes it here (newest first).
 See [GUIDE.md](GUIDE.md) section 8.
 
+## 2026-11-27: beard, shirt collar, styled hair, mangalsutra, hoops, a two-voice reel, Kinjal and Nirav (Pati-patni)
+
+- **Engine:** look options `beard` (a short trimmed beard), `collar` (a shirt collar with buttons), `hairStyle: 'quiff'`
+  for men (styled hair), `mangalsutra`, `hoops` (hoop earrings).
+- **Two voices in one reel:** record each character's lines in one go per voice (female, male), cut at the pauses and
+  join them in script order (see the reel's `voice-parts.txt`); set the caption times by hand, since the automatic
+  timing gets confused by two voices.
+- **New cast:** Kinjal (`KINJAL.home`, `.yellow`, `.purple`, `.red`) and Nirav (`NIRAV.home`, `.sherwani`).
+
 ## 2026-11-26: Instagram-style post, floating hearts, photo booth, sunglasses, Ishani, Nidhi and Badi Mummy (Viral cousin)
 
 - **New props:** `instaPostSVG(id, x, y, w, inner, likes, handle)` (a social post card: header, a clipped square photo,
