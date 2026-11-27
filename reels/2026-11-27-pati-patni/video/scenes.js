@@ -16,21 +16,19 @@ const listScreen = (real, title, rows) => `<rect x="-264" y="-484" width="528" h
     `<text x="-100" y="-8" font-family="Inter" font-weight="900" font-size="30" fill="${C.text}">${l}</text><text x="-100" y="34" font-family="Inter" font-weight="800" font-size="28" fill="#1F7A4D">${sub}</text>` +
     `<circle cx="190" cy="0" r="28" fill="${C.emerald}" stroke="${OL}" stroke-width="3"/><path d="M177,0 L186,10 L203,-10" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/></g>`).join('');
 
-// ================= S1 hook: split screen — she peeks from a door, he peeks from a curtain; a big "?" =================
+// ================= S1 hook: a horizontal split — Kinjal (top) and Nirav (bottom), finger on chin, both suspicious =================
+const qm = (x, y, at, i) => `<g transform="translate(${x},${y})"><g data-t="${at}" data-k="pop" data-bob="8" data-ph="${i}"><text text-anchor="middle" font-family="Inter" font-weight="900" font-size="84" fill="${C.red}" stroke="${OL}" stroke-width="3">?</text></g></g>`;
 addScene(0, 'c6', {
-  svg: `<rect width="540" height="${H}" fill="#F3DCC0"/><rect x="540" width="540" height="${H}" fill="#D9E4EE"/><rect y="${FLOOR}" width="${W}" height="${H - FLOOR}" fill="#A47648"/>` +
-    stand('s1k', KH, 270, feet(.72), .72) + `<rect x="330" y="420" width="190" height="${FLOOR - 420}" fill="${C.wood}" stroke="${OL}" stroke-width="${OW}"/><circle cx="350" cy="860" r="12" fill="${C.gold}" stroke="${OL}" stroke-width="3"/>` +
-    stand('s1n', NH, 860, feet(.72), .72) + `<path d="M560,400 Q600,700 580,${FLOOR} L790,${FLOOR} Q760,700 800,400 Z" fill="#B5532E" stroke="${OL}" stroke-width="${OW}"/><path d="M620,400 Q650,700 640,${FLOOR} M700,400 Q720,700 710,${FLOOR}" stroke="#8E3F22" stroke-width="6" fill="none"/>` +
-    `<rect x="534" width="12" height="${H}" fill="${C.redDark}"/>` + `<g id="s1m1"><g transform="scale(.7)">${magnifierSVG()}</g></g><g id="s1m2"><g transform="scale(.7)">${magnifierSVG()}</g></g>` +
-    `<g transform="translate(540,800)"><g data-t="c4" data-k="pop" data-bob="10"><circle r="90" fill="#fff" stroke="${OL}" stroke-width="${OW}"/><text y="44" text-anchor="middle" font-family="Inter" font-weight="900" font-size="130" fill="${C.red}">?</text></g></g>`,
-  html: `<div class="title" style="top:420px;font-size:80px" data-t="-1">Dono ka ek <span class="g">SECRET</span> 🤫</div>` + pillH(540, 1100, 'c4+0.3', 'Twist <span class="hl">end mein</span> 👀', 'gold'),
-  cam: [1, 1.04], fy: 900,
+  svg: `<rect width="${W}" height="960" fill="#F3DCC0"/><rect y="960" width="${W}" height="960" fill="#D9E4EE"/>` +
+    `<g transform="translate(0,0)">${homeBG('s1a', { noWindow: true, noClock: true, noPlant: true, shelfX: 760 }).replace(/<rect x="0" y="0" width="1080" height="1920" fill="[^"]+"\/>/, '')}</g>` +
+    `<rect y="960" width="${W}" height="960" fill="#D9E4EE"/>` + windowSVG(820, 1080, 180, 200, { curtain: '#3A6AA3' }) + bust('s1k', KH, 540, 960, .95) + `<rect y="940" width="${W}" height="40" fill="${C.redDark}"/>` + bust('s1n', NH, 540, 1920, .95) +
+    qm(250, 560, '0.4', 0) + qm(870, 470, 'c1+0.9', 1) + qm(260, 1480, 'c3', 2) + qm(830, 1530, 'c3+0.4', 3) +
+    `<g transform="translate(540,960)"><g data-t="c4" data-k="pop"><circle r="80" fill="#fff" stroke="${OL}" stroke-width="${OW}"/><text y="40" text-anchor="middle" font-family="Inter" font-weight="900" font-size="120" fill="${C.red}">?</text></g></g>`,
+  html: `<div class="title" style="top:330px;font-size:72px" data-t="-1">Dono ka ek <span class="g">SECRET</span> 🤫</div>` + pillH(540, 1080, 'c4+0.3', 'Twist <span class="hl">end mein</span> 👀', 'gold'),
+  noWm: true, cam: [1, 1.03], fy: 960, capY: 1240,
   upd(t) {
-    const fr = t > T('c4');
-    const A = life('s1k', t, { mouth: !fr && t < T('c3') ? talkMouth(t, true) : 'o', brows: 'angry', look: [.9, 0], tilt: 8, lean: 6, L: [9, -14], R: [100, -60], hR: 'fist', seed: 2 });
-    atHand('s1m1', 's1k', A.hr, 30, -40, -20);
-    const B = life('s1n', t, { mouth: !fr && t > T('c3') ? talkMouth(t, true) : 'o', brows: 'angry', look: [-.9, 0], tilt: -8, lean: -6, R: [9, -14], L: [100, -60], hL: 'fist', sweat: t > T('c3') ? .6 : 0, seed: 3 });
-    atHand('s1m2', 's1n', B.hl, -30, -40, 200);
+    life('s1k', t, { pivot: 0, mouth: t < T('c3') ? talkMouth(t, true) : 'flat', brows: 'worry', look: [.8, -.4], tilt: -8, R: [50, 160], hR: 'point', L: CLASP, seed: 2 });
+    life('s1n', t, { pivot: 0, mouth: t > T('c3') && t < T('c4') ? talkMouth(t, true) : 'flat', brows: 'worry', look: [-.8, -.4], tilt: 8, L: [50, 160], hL: 'point', R: CLASP, sweat: t > T('c3') ? .5 : 0, seed: 3 });
   }
 });
 
@@ -132,11 +130,11 @@ addScene('c24', 'c26', {
 
 // ================= S8 reveal + CTA: both phones turn — Anokhi Reet; Comment OUTFIT, tag your partner =================
 const btn = (y, txt, at, fill) => `<g transform="translate(0,${y})"><g data-t="${at}" data-k="pop"><rect x="-220" y="-50" width="440" height="100" rx="50" fill="${fill}" stroke="${OL}" stroke-width="5"/><text y="14" text-anchor="middle" font-family="Inter" font-weight="900" font-size="36" fill="${fill === C.red ? C.cream : C.redDark}">${txt}</text></g></g>`;
-const appScr = () => `<rect x="-264" y="-484" width="528" height="968" rx="42" fill="${C.cream}"/>` + arHeader() + `<circle cx="0" cy="-170" r="170" fill="url(#glow)"/><g transform="translate(0,-150)">${lehengaHangerSVG('', { c: '#F7C548', d: '#D9A52E', dupatta: '#F2A33A' }, .85)}</g>` +
+const appScr = sher => `<rect x="-264" y="-484" width="528" height="968" rx="42" fill="${C.cream}"/>` + arHeader() + `<circle cx="0" cy="-170" r="170" fill="url(#glow)"/><g transform="translate(0,-150)">${sher ? `<g transform="scale(1.5)">${kidOutfitSVG('sherwani', '#F2E2C4', '#C9A24A')}</g>` : lehengaHangerSVG('', { c: '#F7C548', d: '#D9A52E', dupatta: '#F2A33A' }, .85)}</g>` +
   btn(160, '👗 Outfit rent karo', 'c27', C.red) + btn(310, '💰 Apna rent pe do', 'c28', C.gold);
 addScene('c26', 9999, {
   svg: `<rect width="${W}" height="${H}" fill="url(#mar)"/>` + rosettes('s8r', 540, 740, .16, C.gold) + `<circle cx="540" cy="740" r="420" fill="url(#glow)" opacity=".5"/>` +
-    `<g transform="translate(330,730) scale(.4)">${phoneSVG('s8a', 0, 0, 560, 1000, appScr())}</g><g transform="translate(750,730) scale(.4)">${phoneSVG('s8b', 0, 0, 560, 1000, appScr())}</g>` +
+    `<g transform="translate(330,730) scale(.4)">${phoneSVG('s8a', 0, 0, 560, 1000, appScr(false))}</g><g transform="translate(750,730) scale(.4)">${phoneSVG('s8b', 0, 0, 560, 1000, appScr(true))}</g>` +
     sparks([[160, 560], [920, 560], [540, 520]], 'c26') + bust('s8k', KH, 230, 1960, .95) + bust('s8n', NH, 850, 1960, .95),
   html: `<img id="s8wm" style="position:absolute;left:310px;top:250px;width:460px" src="">` + pillH(540, 380, 'c26+0.3', 'anokhireet.in', 'gold') +
     pillH(540, 1010, 'c29', 'Comment <span class="hl">OUTFIT</span> 👇', 'big') + pillH(540, 1115, 'c30', 'Partner ko tag karo 💑'),

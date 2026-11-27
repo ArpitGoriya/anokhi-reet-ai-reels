@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-27
 - **Made by:** dhruvifewtone-wq
-- **Status:** video 1 sent
+- **Status:** video 2 sent
 
 ## Brief
 
@@ -43,7 +43,7 @@
 
 | # | Voice line (caption) | On screen (scene, characters and what they do) | Label / title |
 |---|---|---|---|
-| 1 | **K:** Shaadi ke baad mujhe laga / *mere pati kuch chhupa* rahe hain… / **N:** …aur mujhe laga *meri patni!* | **Hook from frame 1:** split screen: left, Kinjal peeks from behind a door; right, Nirav peeks from behind a curtain; both hold magnifying glasses. | Big title from frame 1: **Dono ka ek SECRET 🤫** |
+| 1 | **K:** Shaadi ke baad mujhe laga / *mere pati kuch chhupa* rahe hain… / **N:** …aur mujhe laga *meri patni!* | **Hook from frame 1:** a horizontal split: Kinjal on top, Nirav below, each with a finger on the chin, confused and suspicious, "?" around them. | Big title from frame 1: **Dono ka ek SECRET 🤫** |
 | 2 | **K:** *End mein* jo nikla… / woh sunke aap apne *partner ko tag* karoge. | Both freeze; a big "?" pops between them. | Twist end mein 👀 |
 | 3 | **K:** *Har mahine sherwani* bag mein jaati hai… / aur phone pe *"payment received"?* / *Kuch toh gadbad* hai! | Kinjal's view, three quick panels: Nirav packs his wedding sherwani into a bag · he leaves whistling · his phone buzzes "Payment received ₹1,200" and he hides it. | Sherwani 👜 + "Payment received" 📱 = ??? 🤨 |
 | 4 | **N:** *Har function* mein naya outfit… / ek baar bhi *repeat nahi!* / *Credit card ka bill* dekh ke toh / main *behosh* ho jaunga! | Nirav's view, three quick panels: Kinjal back from a wedding in a yellow lehenga · a purple saree · a red sharara; Nirav sweats. | Har function NAYA outfit 😳 = Credit card 💳😱? |
@@ -64,11 +64,15 @@ Voice text: [`script.txt`](script.txt) (all lines in order) · [`voice-parts.txt
 ## Video
 
 - `output/2026-11-27-pati-patni.mp4` (52 s), video 1 sent 2026-11-27.
+- `output/2026-11-27-pati-patni-v2.mp4` (52 s), video 2 sent 2026-11-27.
 
 ## Feedback rounds
 
 - Voice take 1 (2026-11-27): sounds good; the characters should look modern (outfit, face, hairstyle) → Kinjal and
   Nirav drawn in the modern looks the teammate chose (see Teammate changes).
+- Video 1 (2026-11-27): the opening (0-8 s) wasn't clear → no door or curtain: a horizontal split, Kinjal on top and
+  Nirav below, each with a finger on the chin, confused, with "?" around; the end card's phones now show a lehenga
+  (Kinjal's) and a sherwani (Nirav's).
 
 ## Caption
 
