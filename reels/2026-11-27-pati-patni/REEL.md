@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-27
 - **Made by:** dhruvifewtone-wq
-- **Status:** script written (waiting for approval)
+- **Status:** script approved
 
 ## Brief
 
@@ -36,7 +36,7 @@
   (The two-button DM for OUTFIT is set up outside the reel.)
 - Hashtags: 5, #PatiPatni dropped (teammate chose it, 2026-11-27).
 
-## Script and storyboard (approved: no)
+## Script and storyboard (approved: yes, 2026-11-27)
 
 | # | Voice line (caption) | On screen (scene, characters and what they do) | Label / title |
 |---|---|---|---|
@@ -54,7 +54,9 @@ Voice text: [`script.txt`](script.txt) (all lines in order) · [`voice-parts.txt
 
 ## Voice-over
 
-- (none yet)
+- Take 1: `output/duo-pati-patni-take1.mp3` (51 s) = Kinjal's lines (female, one recording:
+  `output/patipatni-parts/kinjal-all.mp3`) and Nirav's lines (male, `output/patipatni-parts/nirav-all.mp3`), cut at the
+  pauses and joined in script order — sent, waiting for approval
 
 ## Feedback rounds
 
