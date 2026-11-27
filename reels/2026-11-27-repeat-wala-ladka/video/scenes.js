@@ -32,17 +32,30 @@ addScene(0, 'c6', {
   }
 });
 
-// ================= S2 shaadi 1 and 2: "Bhai, mast sherwani!" 👍 … "Bhai, ye wahi hai na?" 🤨 =================
-addScene('c6', 'c10', {
-  svg: archStageBG('s2') + stand('s2d1', D1, 200, feet(.7), .7) + stand('s2d2', D2, 880, feet(.7), .7) + stand('s2k', KM, 540, feet(.8), .8),
-  html: pillH(540, 320, 'c6', '<span class="hl">SHAADI 1</span> 💍', '', 'c8-0.05') + pillH(540, 320, 'c8', '<span class="hl">SHAADI 2</span> 💍💍') +
-    bub(300, 490, 420, 'c7', 'c8-0.05', '"Bhai, <span class="hl">mast sherwani!</span>" 👍') + bub(780, 490, 420, 'c9', '', '"Bhai, <span class="hl">ye wahi hai na?</span>" 🤨'),
+// ================= S2a shaadi 1 (day, pink drapes and fairy lights): "Bhai, mast sherwani!" 👍 =================
+addScene('c6', 'c8', {
+  svg: weddingBG({ wall: '#FCE6EE', low: '#F6D3DF', drape: '#E59AA5', carpet: '#B3202A' }) + stand('s2d1', D1, 200, feet(.7), .7) + stand('s2d2', D2, 880, feet(.7), .7) + stand('s2k', KM, 540, feet(.8), .8),
+  html: pillH(540, 320, 'c6', '<span class="hl">SHAADI 1</span> 💍') + bub(300, 490, 420, 'c7', '', '"Bhai, <span class="hl">mast sherwani!</span>" 👍'),
   noWm: true, cam: [1, 1.03], fy: 820,
   upd(t) {
-    const two = t > T('c8');
-    life('s2k', t, { mouth: two ? (t > T('c9') + .6 ? 'worry' : 'flat') : 'big', brows: two ? 'worry' : 'up', look: two ? [.7, 0] : [-.7, 0], sweat: t > T('c9') + .6 ? .8 : 0, R: [9, -14], L: two ? [9, -14] : [40, -20], seed: 1 });
-    life('s2d1', t, { mouth: two ? 'flat' : 'big', brows: 'up', look: [.8, 0], R: two ? [9, -14] : [130, -70], hR: 'thumb', L: [9, -14], seed: 2 });
-    life('s2d2', t, { mouth: two ? (t > T('c9') ? talkMouth(t, true) : 'flat') : 'smile', brows: two ? 'angry' : 'up', look: [-.8, 0], tilt: two ? -6 : 0, L: two ? THINK : [9, -14], hL: 'point', R: [9, -14], seed: 3 });
+    life('s2k', t, { mouth: 'big', brows: 'up', look: [-.7, 0], R: [9, -14], L: [40, -20], seed: 1 });
+    life('s2d1', t, { mouth: t > T('c7') ? talkMouth(t, true) : 'big', brows: 'up', look: [.8, 0], R: [130, -70], hR: 'thumb', L: [9, -14], seed: 2 });
+    life('s2d2', t, { mouth: 'smile', brows: 'up', look: [-.8, 0], R: [9, -14], L: [9, -14], seed: 3 });
+  }
+});
+
+// ================= S2b shaadi 2 (evening hall, new kurtas for the friends — same maroon sherwani): "Bhai, ye wahi hai na?" 🤨 =================
+const D1b = dress(D1, { top: C.teal, topD: C.tealDark }), D2b = dress(D2, { top: '#F2C14E', topD: '#D9A52E' });
+addScene('c8', 'c10', {
+  svg: weddingHallBG('s2b') + fairyLightsSVG(300) +
+    stand('s2e1', D1b, 200, feet(.7), .7) + stand('s2e2', D2b, 880, feet(.7), .7) + stand('s2f', KM, 540, feet(.8), .8),
+  html: pillH(540, 320, 'c8', '<span class="hl">SHAADI 2</span> 💍💍') + bub(780, 490, 420, 'c9', '', '"Bhai, <span class="hl">ye wahi hai na?</span>" 🤨'),
+  noWm: true, cam: [1, 1.03], fy: 820,
+  upd(t) {
+    const w = t > T('c9') + .6;
+    life('s2f', t, { mouth: w ? 'worry' : 'flat', brows: 'worry', look: [.7, 0], sweat: w ? .8 : 0, R: [9, -14], L: [9, -14], seed: 1 });
+    life('s2e1', t, { mouth: 'flat', brows: 'up', look: [.8, 0], R: [9, -14], L: [9, -14], seed: 2 });
+    life('s2e2', t, { mouth: t > T('c9') ? talkMouth(t, true) : 'flat', brows: 'angry', look: [-.8, 0], tilt: -6, L: THINK, hL: 'point', R: [9, -14], seed: 3 });
   }
 });
 

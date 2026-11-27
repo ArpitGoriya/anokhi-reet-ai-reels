@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-27
 - **Made by:** dhruvifewtone-wq
-- **Status:** video 1 sent (2026-11-27)
+- **Status:** video 2 sent (2026-11-27)
 
 ## Brief
 
@@ -33,6 +33,9 @@
 - **Two asks in the reel**, as written: "Comment mein number likho!" (mid-reel engagement) and "comment karo LOOK" (end).
 - On-screen labels, bubbles, emojis and the end card (logo, "LOOK WALA LADKA 😎", chips Lehenga · Saree · Chaniya
   choli · Sherwani, a comment box typing "LOOK" → Post) as in the teammate's scene list.
+- **Different weddings** (teammate, 2026-11-27): shaadi 1 has its own background (pink drapes, fairy lights) and
+  shaadi 2 another (an evening hall with a marigold arch); in shaadi 2 the friends wear new kurtas (teal, mustard)
+  while Kabir is still in the same maroon sherwani.
 - Sounds (camera click etc.) are shown visually; no sound effects, no "whoosh" (brand rule).
 - Hashtags: 5, the suggested set (teammate chose it, 2026-11-27).
 
@@ -66,10 +69,13 @@ Voice text: [`script.txt`](script.txt) (all lines in order) · [`voice-parts.txt
 ## Video
 
 - `output/2026-11-27-repeat-wala-ladka.mp4` (61 s), video 1 sent 2026-11-27.
+- `output/2026-11-27-repeat-wala-ladka-v2.mp4` (61 s), video 2 sent 2026-11-27.
 
 ## Feedback rounds
 
-- (none yet)
+- Video 1 (2026-11-27): change the shaadi 1 and shaadi 2 backgrounds, and the friends' outfits in shaadi 2 → shaadi 1
+  in a pink-drape hall with fairy lights, shaadi 2 in an evening hall with a marigold arch; friends in teal and mustard
+  kurtas in shaadi 2.
 
 ## Caption
 
