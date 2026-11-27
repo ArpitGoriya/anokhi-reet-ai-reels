@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-27
 - **Made by:** teammate (script, from `Anokhireet_Rental_Shop_Walkthrough_Script.pdf`) + Claude
-- **Status:** script waiting for approval
+- **Status:** script approved; voice take 1 waiting for a listen
 
 ## Brief
 
@@ -32,7 +32,7 @@ Everything here is applied in every round and never silently reverted.
 - **CTA kept:** "Comment karo SHOP" + anokhireet.in (teammate confirms someone replies to comments). (round 0)
 - **Brand name** "Anokhi Reet"; post-caption hashtags cut to 5. (round 0)
 
-## Script and storyboard (approved: no)
+## Script and storyboard (approved: yes)
 
 Voice script: [`script.txt`](script.txt) (Devanagari, male voice).
 
@@ -52,7 +52,7 @@ Voice script: [`script.txt`](script.txt) (Devanagari, male voice).
 
 ## Voice-over
 
-- File: — approved: no
+- Take 1: `output/male-meena-rentals-walkthrough-take1.mp3` (41.4 s) — approved: pending
 - Captions timed with `tools/caption_timing.py` (redo after every new take)
 
 ## Feedback rounds
