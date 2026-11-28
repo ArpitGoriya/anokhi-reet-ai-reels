@@ -1170,3 +1170,35 @@ function newspaperBundleSVG() {
   return [0, 1, 2, 3].map(i => `<rect x="-110" y="${-i * 26}" width="220" height="30" rx="4" fill="${i % 2 ? '#EDE6D6' : '#F7F2E6'}" stroke="${OL}" stroke-width="4"/><path d="M-90,${-i * 26 + 12} H60" stroke="#B7AE9C" stroke-width="4"/>`).join('') +
     `<path d="M-20,-84 V30 M-40,-84 Q-20,-110 0,-84" fill="none" stroke="#B5532E" stroke-width="7"/>`;
 }
+// ===== Dukaan ka secret (2026-11-28): sepia flashback, tearing board, AC showroom, Gujarat map, chalkboard =====
+// SEPIA_DEF: put once in a scene's svg, then wrap the scene in <g filter="url(#sepia)"> for a flashback look
+const SEPIA_DEF = `<filter id="sepia"><feColorMatrix type="matrix" values="0.36 0.70 0.18 0 0.04  0.32 0.64 0.16 0 0.03  0.25 0.50 0.12 0 0.01  0 0 0 1 0"/></filter>`;
+// tearBoardSVG(id, lines): a cardboard sign with handwritten lines; halves `${id}-L` / `${id}-R` can fly apart (tear)
+function tearBoardSVG(id, lines = ['DUKAAN', 'BECHNI HAI']) {
+  const body = `<rect x="-260" y="-150" width="520" height="300" rx="10" fill="#D9B98A" stroke="${OL}" stroke-width="${OW}"/>` +
+    lines.map((l, i) => `<text y="${-30 + i * 86}" text-anchor="middle" font-family="Inter" font-weight="900" font-size="72" fill="${C.redDark}" font-style="italic">${l}</text>`).join('');
+  const zig = 'L-14,-110 L12,-60 L-10,-10 L14,40 L-12,90 L10,160';
+  return `<clipPath id="${id}-cl"><path d="M-300,-170 L0,-170 ${zig} L0,170 L-300,170 Z"/></clipPath><clipPath id="${id}-cr"><path d="M300,-170 L0,-170 ${zig} L0,170 L300,170 Z"/></clipPath>` +
+    `<g id="${id}-L"><g clip-path="url(#${id}-cl)">${body}</g></g><g id="${id}-R"><g clip-path="url(#${id}-cr)">${body}</g></g>`;
+}
+// showroomBG(id): a shiny AC showroom front: glass windows with mannequins, "AC SHOWROOM" sign, spotlights, footpath
+function showroomBG(id) {
+  let s = `<rect width="${W}" height="${H}" fill="${C.sky}"/><rect x="40" y="300" width="1000" height="${FLOOR - 300}" fill="#E8E5EA" stroke="${OL}" stroke-width="${OW}"/>`;
+  s += `<g transform="translate(540,390)"><rect x="-380" y="-60" width="760" height="120" rx="14" fill="#1E2A44" stroke="${OL}" stroke-width="${OW}"/><text y="22" text-anchor="middle" font-family="Inter" font-weight="900" font-size="62" fill="${C.gold}" letter-spacing="6">AC SHOWROOM</text></g>`;
+  for (const x of [110, 580]) s += `<rect x="${x}" y="500" width="390" height="${FLOOR - 540}" rx="8" fill="#CFE6EE" stroke="${OL}" stroke-width="${OW}"/><path d="M${x + 30},520 L${x + 120},${FLOOR - 60}" stroke="#fff" stroke-width="16" opacity=".6"/>`;
+  [[200, C.pink], [400, C.emerald], [680, C.lehenga], [880, C.marigold]].forEach(([x, c]) => { s += `<g transform="translate(${x},760)"><circle cy="-120" r="34" fill="#F4EFE3" stroke="${OL}" stroke-width="4"/>${skirtSVG({ c, d: OL, b: C.gold, w: 120, h: 280 }, 0, -40, .9)}<rect x="-40" y="-90" width="80" height="60" rx="12" fill="${c}" stroke="${OL}" stroke-width="4"/></g>`; });
+  [[180, 470], [540, 470], [900, 470]].forEach(([x, y]) => { s += `<circle cx="${x}" cy="${y}" r="10" fill="${C.gold}"/><path d="M${x},${y} L${x - 70},${y + 220} L${x + 70},${y + 220} Z" fill="${C.gold}" opacity=".12"/>`; });
+  return s + `<rect x="0" y="${FLOOR}" width="${W}" height="90" fill="#CFC6B8" stroke="${OL}" stroke-width="4"/><rect x="0" y="${FLOOR + 90}" width="${W}" height="${H - FLOOR - 90}" fill="#6E6A64"/>`;
+}
+// gujaratMapSVG(id, cities): a simple stylised Gujarat outline with city dots and names [[name, x, y], ...] (centred on 0,0)
+function gujaratMapSVG(id, cities = []) {
+  const shape = 'M-330,-260 L-120,-330 L80,-300 L240,-330 L330,-200 L300,-40 L330,120 L250,300 L120,360 L60,250 L-20,200 L-70,90 L-200,70 L-340,0 L-380,-120 Z M-420,10 L-300,60 L-210,140 L-280,200 L-400,150 Z';
+  return `<g id="${id}"><path d="${shape}" fill="#F4EDE1" stroke="${OL}" stroke-width="${OW}" stroke-linejoin="round" fill-rule="nonzero"/>` +
+    `<text x="40" y="-200" text-anchor="middle" font-family="Inter" font-weight="900" font-size="44" fill="#C9AE6A" letter-spacing="8">GUJARAT</text>` +
+    cities.map(([n, x, y]) => `<circle cx="${x}" cy="${y}" r="8" fill="#7A6E62"/><text x="${x + 18}" y="${y + 9}" font-family="Inter" font-weight="800" font-size="28" fill="#3B2418">${n}</text>`).join('') + `</g>`;
+}
+// chalkboardSVG(w, h): a wooden-framed green chalkboard centred on (0,0) (write on it with .chalk html or SVG text)
+function chalkboardSVG(w = 820, h = 560) {
+  return `<rect x="${-w / 2 - 22}" y="${-h / 2 - 22}" width="${w + 44}" height="${h + 44}" rx="14" fill="${C.wood}" stroke="${OL}" stroke-width="${OW}"/><rect x="${-w / 2}" y="${-h / 2}" width="${w}" height="${h}" rx="6" fill="#2F4F3E" stroke="${OL}" stroke-width="4"/>` +
+    `<path d="M${-w / 2 + 40},${h / 2 - 40} q120,-30 240,0" stroke="#F4EFE3" stroke-width="6" opacity=".15" fill="none"/><rect x="${-w / 2 + 60}" y="${h / 2 + 4}" width="90" height="14" rx="5" fill="#F4EFE3"/>`;
+}

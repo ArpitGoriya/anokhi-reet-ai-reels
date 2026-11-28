@@ -3,6 +3,14 @@
 Every reel adds at least one improvement to the engine or library and writes it here (newest first).
 See [GUIDE.md](GUIDE.md) section 8.
 
+## 2026-11-28: sepia flashback, tearing board, AC showroom, Gujarat map, chalkboard (Dukaan ka secret)
+
+- **New props:** `SEPIA_DEF` + `<g filter="url(#sepia)">` (flashback), `tearBoardSVG(id, lines)` (halves `${id}-L/-R`
+  fly apart), `showroomBG(id)`, `gujaratMapSVG(id, cities)`, `chalkboardSVG(w, h)`.
+- **New cast:** Jigneshbhai (`JIGNESH`), `COLLEGE_GIRL`, `SHOWROOM_SETH`.
+- **Secret-reveal format:** corner tags and a "SECRET" lock badge in a scene-0 overlay; the brand pill stays hidden
+  (`noWm` on every scene) until the lock cracks open into "Anokhi Reet".
+
 ## 2026-11-28: high-quality render (`--hq`)
 
 - `PY tools/render_reel.py reels/<reel> --hq` → `output/<reel>-HQ.mp4`: lossless PNG frames (no JPEG step, so outlines

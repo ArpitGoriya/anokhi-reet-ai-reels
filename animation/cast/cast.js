@@ -248,3 +248,10 @@ const PRIYA = {
 // to sell it, then brings her own fifteen sarees to list. (Beta, inki bhi photo achhi kheechna, 2026-11-28)
 const SHREYA = { hairStyle: 'pony', top: '#F49AB8', topD: '#D9779A', pallu: '#FFE3EC', border: C.gold, earrings: true, bangles: true, skin: '#C98B62', skin2: '#B9784F', pants: { c: '#FFE3EC', d: '#F2C8D6', hem: 150 } };
 const SUDHA = { hairStyle: 'bun', top: '#E8822E', topD: '#C9661E', pallu: '#F2A33A', border: C.red, sindoor: true, earrings: true, bangles: true, wide: true, skin: '#B97A55', skin2: '#A0663F', hair: '#3A2A22', drape: { c: '#E8822E', b: C.red }, skirt: { c: '#E8822E', d: '#C9661E', b: C.red, w: 200 } };
+
+// Jigneshbhai (40s): a small rental shop owner in Surat ("Jalaram Rental"). Patient, tired, then quietly proud. (Dukaan ka secret)
+const JIGNESH = { male: true, mustache: true, top: '#4E7F6B', topD: '#3B6353', skin: '#A86B48', skin2: '#93593A', hair: C.hair, embroidery: true };
+// A college girl (20s) who checks shops on her phone first. Ponytail, blue kurti, cream skirt for standing shots.
+const COLLEGE_GIRL = { hairStyle: 'pony', top: '#3E8EC4', topD: '#2F6E99', pallu: '#F2C14E', border: C.gold, skin: '#D19A72', skin2: '#BD8460', bindi: false, bangles: false, skirt: { c: '#E8D3A5', d: '#C9AE6A', b: C.gold, w: 170 } };
+// The showroom owner across the road (50s): glasses, dark blazer.
+const SHOWROOM_SETH = { male: true, glasses: true, wide: true, top: '#2E2E3A', topD: '#1E1E28', skin: '#C08460', skin2: '#A86E4E', hair: '#3B2418' };

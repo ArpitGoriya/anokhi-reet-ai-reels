@@ -3,7 +3,7 @@
 - **Date started:** 2026-11-28
 - **Made by:** teammate (script, from `Anokhireet_Secret_Reel_Script.pdf`; style reference: a 2D story reel sent on
   WhatsApp) + Claude
-- **Status:** script approved; voice take 1 waiting for a listen
+- **Status:** video 1 (high quality) rendered (2026-11-28); sent to the teammate
 
 ## Brief
 
@@ -69,12 +69,13 @@ Voice script: [`script.txt`](script.txt) (Devanagari, male voice).
 
 ## Voice-over
 
-- Take 1: `output/male-dukaan-ka-secret-take1.mp3` (85.1 s) — approved: pending
+- Take 1: `output/male-dukaan-ka-secret-take1.mp3` (85.1 s) — approved: yes (2026-11-28)
 - Captions timed with `tools/caption_timing.py` (redo after every new take)
 
 ## Feedback rounds
 
 1. (round 0) PDF converted; male voice; "0% commission" left out; call-back promise kept; "Ek kahani" in the corner tag.
+2. Video 1: 23 scenes, rendered with `--hq` → `output/2026-11-28-dukaan-ka-secret-HQ.mp4` (88.6 s; end card held ~4 s).
 
 ## Caption
 
@@ -90,8 +91,10 @@ live karwayegi." Auto-reply on "SECRET": "Shop ka naam, city aur WhatsApp number
 
 ## Added to the library (at least two per reel)
 
-- (planned) Jigneshbhai, college girl, showroom owner in the cast; SECRET lock badge that cracks open; sepia filter;
-  "Dukaan bechni hai" board that tears; AC showroom front; Gujarat map with city pins.
+- Props: `SEPIA_DEF` (sepia flashback filter), `tearBoardSVG` (a sign that tears in two), `showroomBG` (AC showroom
+  front), `gujaratMapSVG` (stylised Gujarat with city names), `chalkboardSVG`.
+- New cast: Jigneshbhai (`JIGNESH`), a college girl (`COLLEGE_GIRL`), the showroom owner (`SHOWROOM_SETH`).
+- Corner tags + a lock badge that cracks open into the brand (scene-0 overlay, like the fixed counter).
 
 ## Suggested default (for the owner)
 
@@ -99,4 +102,5 @@ live karwayegi." Auto-reply on "SECRET": "Shop ka naam, city aur WhatsApp number
 
 ## Lessons
 
--
+- Whisper matched well (209 of 270 words).
+- Men have no legs in `person()`: keep them as busts behind a counter or a footpath wall when they "walk".
