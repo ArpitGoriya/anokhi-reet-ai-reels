@@ -5,6 +5,7 @@ Usage:
   PY tools/render_reel.py reels/<reel> --at 3.2,14,40    those moments, full size, in one picture
   PY tools/render_reel.py reels/<reel> --draft           quick video: half size, 15 fps (to judge timing and motion)
   PY tools/render_reel.py reels/<reel>                   final video: 1080x1920, 30 fps, voice levelled to -14 LUFS
+  PY tools/render_reel.py reels/<reel> --hq              high-quality final: lossless frames, ~10+ Mbps (slower; for posting)
   PY tools/render_reel.py reels/<reel> --cover           the cover picture (needs video/cover.js)
 Options: --out FILE, --fps N, --voice output/<file>.mp3 (else reel.json's voice), --no-voice
 Files land in output/ (named after the reel). The layout check also runs before every video.
@@ -133,21 +134,24 @@ def loudnorm_filter(voice, target=-14.0):
         return base
 
 
-def encode(stage, out, fps, voice, scale):
+def encode(stage, out, fps, voice, scale, hq=False):
     ff = imageio_ffmpeg.get_ffmpeg_exe()
     dur = stage.duration
     n = int(round(dur * fps))
-    cmd = [ff, "-y", "-v", "error", "-f", "image2pipe", "-c:v", "mjpeg", "-framerate", str(fps), "-i", "-"]
+    cmd = [ff, "-y", "-v", "error", "-f", "image2pipe", "-c:v", "png" if hq else "mjpeg", "-framerate", str(fps), "-i", "-"]
     if voice:
         cmd += ["-i", str(voice), "-map", "0:v", "-map", "1:a", "-af", loudnorm_filter(voice),
                 "-ar", "48000", "-c:a", "aac", "-b:a", "192k"]
-    cmd += ["-vf", "scale=in_range=pc:out_range=tv,format=yuv420p", "-color_range", "tv", "-c:v", "libx264", "-preset", "medium" if scale == 1 else "veryfast", "-crf", "18" if scale == 1 else "24",
+    cmd += (["-vf", "scale=in_range=pc:out_range=tv:out_color_matrix=bt709,format=yuv420p", "-color_range", "tv",
+             "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709"] if hq else
+            ["-vf", "scale=in_range=pc:out_range=tv,format=yuv420p", "-color_range", "tv"]) + [ "-c:v", "libx264", "-preset", "slow" if hq else ("medium" if scale == 1 else "veryfast"),
+            "-crf", "12" if hq else ("18" if scale == 1 else "24")] + (["-tune", "animation", "-profile:v", "high"] if hq else []) + [
             "-pix_fmt", "yuv420p", "-movflags", "+faststart", "-t", f"{dur:.3f}", str(out)]
     proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
     t0 = time.time()
     for i in range(n):
         stage.seek(i / fps)
-        proc.stdin.write(stage.shot("jpeg", 94 if scale == 1 else 85))
+        proc.stdin.write(stage.shot("png") if hq else stage.shot("jpeg", 94 if scale == 1 else 85))
         if i % (fps * 10) == 0 and i:
             el = time.time() - t0
             print(f"  {i / n:.0%} ({i}/{n} frames, about {el / i * (n - i) / 60:.1f} min left)", flush=True)
@@ -164,6 +168,7 @@ def main():
     ap.add_argument("--sheet", action="store_true")
     ap.add_argument("--at")
     ap.add_argument("--draft", action="store_true")
+    ap.add_argument("--hq", action="store_true")
     ap.add_argument("--cover", action="store_true")
     ap.add_argument("--out")
     ap.add_argument("--fps", type=int)
@@ -217,9 +222,9 @@ def main():
                 voice = ROOT / v
             elif v:
                 print(f"Voice file {v} isn't on this computer: the video will be silent.")
-        out = pathlib.Path(a.out) if a.out else OUT / f"{name}{'-draft' if a.draft else ''}.mp4"
-        print(f"Rendering {stage.duration:.1f} s at {fps} fps{' (draft)' if a.draft else ''}...", flush=True)
-        encode(stage, out, fps, voice, scale)
+        out = pathlib.Path(a.out) if a.out else OUT / f"{name}{'-draft' if a.draft else ('-HQ' if a.hq else '')}.mp4"
+        print(f"Rendering {stage.duration:.1f} s at {fps} fps{' (draft)' if a.draft else (' (high quality)' if a.hq else '')}...", flush=True)
+        encode(stage, out, fps, voice, scale, hq=a.hq and not a.draft)
         print(f"Video: {out}")
 
 

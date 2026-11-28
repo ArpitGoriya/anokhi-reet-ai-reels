@@ -3,6 +3,13 @@
 Every reel adds at least one improvement to the engine or library and writes it here (newest first).
 See [GUIDE.md](GUIDE.md) section 8.
 
+## 2026-11-28: high-quality render (`--hq`)
+
+- `PY tools/render_reel.py reels/<reel> --hq` → `output/<reel>-HQ.mp4`: lossless PNG frames (no JPEG step, so outlines
+  and flat colours stay crisp, no banding), x264 `-crf 12 -preset slow -tune animation`, same 1080x1920 30 fps and
+  -14 LUFS voice, colours converted and tagged as HD (bt709, TV range). Slower (several minutes per minute of video) and a bigger file; use it for the version you post.
+  The normal render is unchanged.
+
 ## 2026-11-28: thought cloud, labelled jars, fixed counter, Priya (Lehenga aaya… phir almirah mein)
 
 - **New props:** `thoughtCloudSVG(w, h)`, `labelJarSVG(id, label, col, n)`.

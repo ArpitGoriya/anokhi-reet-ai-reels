@@ -64,6 +64,7 @@ Voice script: [`script.txt`](script.txt) (Devanagari, female voice). Counter = t
 
 1. (round 0) PDF converted; female voice; ₹2,500 told as Priya's story; only "Verified profiles" tick.
 2. Video 1: 11 scenes + fixed counter, `output/2026-11-27-lehenga-almirah.mp4` (56 s; end card held ~3 s).
+3. Teammate: "looks good, give me high quality video" → `output/2026-11-27-lehenga-almirah-HQ.mp4` (new `--hq` render: lossless frames, crf 12, HD colours).
 
 ## Caption
 
