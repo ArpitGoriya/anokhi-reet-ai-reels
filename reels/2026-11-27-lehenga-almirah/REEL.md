@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-27
 - **Made by:** teammate (script, from `Anokhireet_Reel_Script_Lehenga_Almirah.pdf`) + Claude
-- **Status:** script waiting for approval
+- **Status:** script approved; voice take 1 waiting for a listen
 
 ## Brief
 
@@ -36,7 +36,7 @@ Everything here is applied in every round and never silently reverted.
   delivery and try-at-shop are left out until confirmed). (round 0)
 - **Brand name** "Anokhi Reet"; end card: [Link in bio] + Anokhi Reet follow card. (round 0)
 
-## Script and storyboard (approved: no)
+## Script and storyboard (approved: yes)
 
 Voice script: [`script.txt`](script.txt) (Devanagari, female voice). Counter = top-left box, all reel.
 
@@ -57,7 +57,7 @@ Voice script: [`script.txt`](script.txt) (Devanagari, female voice). Counter = t
 
 ## Voice-over
 
-- File: — approved: no
+- Take 1: `output/female-lehenga-almirah-take1.mp3` (52.9 s) — approved: pending
 - Captions timed with `tools/caption_timing.py` (redo after every new take)
 
 ## Feedback rounds
