@@ -1137,3 +1137,17 @@ function commentType(id, t, t0, word, w = 720, cps = 6) {
   const tw = n ? el.getBBox().width : 0; $(id + '-cur').setAttribute('x', -w / 2 + 104 + tw); op($(id + '-cur'), t > t0 - 1 && Math.floor(t * 2.4) % 2 ? 1 : 0);
   $(id + '-post').setAttribute('fill', n === word.length ? '#1877F2' : '#9DC4F0');
 }
+
+// ===== Lehenga almirah (2026-11-28): thought cloud, labelled money jar =====
+// thoughtCloudSVG(w, h): a puffy white thought cloud centred on (0,0) with two small tail puffs at bottom-left
+function thoughtCloudSVG(w = 760, h = 300) {
+  const n = 9, rx = w / 2, ry = h / 2;
+  let puffs = '';
+  for (let i = 0; i < n; i++) { const a = i / n * Math.PI * 2; puffs += `<circle cx="${(Math.cos(a) * rx * .82).toFixed(0)}" cy="${(Math.sin(a) * ry * .78).toFixed(0)}" r="${(Math.min(rx, ry) * .55).toFixed(0)}"/>`; }
+  return `<g fill="#fff" stroke="${OL}" stroke-width="${OW}">${puffs}</g><g fill="#fff">${puffs.replace(/r="(\d+)"/g, (m, r) => `r="${r - 5}"`)}<ellipse rx="${rx * .86}" ry="${ry * .8}"/></g>` +
+    `<circle cx="${-rx * .55}" cy="${ry + 40}" r="26" fill="#fff" stroke="${OL}" stroke-width="${OW}"/><circle cx="${-rx * .7}" cy="${ry + 90}" r="15" fill="#fff" stroke="${OL}" stroke-width="${OW}"/>`;
+}
+// labelJarSVG(id, label, col, n): a money jar with a label strip; n coins `${id}-k<i>` inside (show with jarFill)
+function labelJarSVG(id, label, col = C.goldTan, n = 6) {
+  return `<g id="${id}">${coinJarSVG(id + 'j', n, '')}<g transform="translate(0,40)"><rect x="-120" y="-34" width="240" height="68" rx="12" fill="${col}" stroke="${OL}" stroke-width="4"/><text y="12" text-anchor="middle" font-family="Inter" font-weight="900" font-size="34" fill="#fff">${label}</text></g></g>`;
+}

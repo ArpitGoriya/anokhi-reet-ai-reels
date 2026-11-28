@@ -238,3 +238,9 @@ const KABIR_DOST = [['Sahil', '#E8822E', '#D9A07A', { mustache: true }], ['Manav
   .map(([name, c, skin, extra]) => ({ name, look: Object.assign({ male: true, skin, skin2: skin, hair: '#1E140F', top: c, topD: c, buttons: true, sleeveTo: .9, pants: { c: '#FFF8EC', d: '#E8DCC8', hem: 220 } }, extra) }));
 const TANVI = { hairStyle: 'long', top: '#F08AAE', topD: '#D9668E', pallu: '#FFD3E2', border: C.gold, earrings: true, bangles: true, skin: '#D19A72', skin2: '#BD8460', pants: { c: '#F6B4C8', d: '#E89AB2', hem: 150 } };
 const PHOTOGRAPHER = { male: true, hat: '#2E2E33', skin: '#A86B48', skin2: '#93593A', hair: '#1E140F', top: '#2E2E33', topD: '#1F1F24', pants: { c: '#3B3A48', d: '#2B2A36', hem: 30 } };
+
+// Priya (20s): buys a new lehenga for every wedding, until she starts renting. Long hair, rose kurti. (Lehenga almirah)
+const PRIYA = {
+  home: { top: '#E26A8A', topD: '#B94D6D', pallu: '#F7C548', border: C.gold, hairStyle: 'long', skin: '#C98B62', skin2: '#B9784F', bangles: true, skirt: { c: '#B94D6D', d: '#93394F', b: C.gold, w: 200 } },
+  lehenga: { top: C.lehenga, topD: C.lehengaDark, pallu: '#E8C25E', border: '#B8862F', embroidery: true, necklace: true, hairStyle: 'long', skin: '#C98B62', skin2: '#B9784F', skirt: {} },
+};

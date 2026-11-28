@@ -3,6 +3,13 @@
 Every reel adds at least one improvement to the engine or library and writes it here (newest first).
 See [GUIDE.md](GUIDE.md) section 8.
 
+## 2026-11-28: thought cloud, labelled jars, fixed counter, Priya (Lehenga aaya… phir almirah mein)
+
+- **New props:** `thoughtCloudSVG(w, h)`, `labelJarSVG(id, label, col, n)`.
+- **Fixed on-screen counter** pattern (a box that stays for the whole reel and updates): add a scene FIRST with
+  `addScene(0, 9999, {html, upd})` so every later scene is still the "current" one.
+- **New cast:** Priya (`PRIYA.home`, `.lehenga`).
+
 ## 2026-11-27: wedding arch stage, camera, scissors crop, comment box typing, Kabir and friends (Repeat wala ladka)
 
 - **New props:** `archStageBG(id, {x, w, top, wall})` (peach wedding stage: double marigold toran, a red-and-gold arch

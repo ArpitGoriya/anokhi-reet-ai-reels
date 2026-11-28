@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-27
 - **Made by:** teammate (script, from `Anokhireet_Reel_Script_Lehenga_Almirah.pdf`) + Claude
-- **Status:** script approved; voice take 1 waiting for a listen
+- **Status:** video 1 rendered (2026-11-28); sent to the teammate
 
 ## Brief
 
@@ -57,12 +57,13 @@ Voice script: [`script.txt`](script.txt) (Devanagari, female voice). Counter = t
 
 ## Voice-over
 
-- Take 1: `output/female-lehenga-almirah-take1.mp3` (52.9 s) — approved: pending
+- Take 1: `output/female-lehenga-almirah-take1.mp3` (52.9 s) — approved: yes (2026-11-28)
 - Captions timed with `tools/caption_timing.py` (redo after every new take)
 
 ## Feedback rounds
 
 1. (round 0) PDF converted; female voice; ₹2,500 told as Priya's story; only "Verified profiles" tick.
+2. Video 1: 11 scenes + fixed counter, `output/2026-11-27-lehenga-almirah.mp4` (56 s; end card held ~3 s).
 
 ## Caption
 
@@ -74,7 +75,10 @@ Ye shaadi season, smart bano. Comment "LEHENGA", app link DM karenge.
 
 ## Added to the library (at least two per reel)
 
-- (planned) Priya in the cast; money jars with labels; a fixed counter overlay; thought cloud; 4-look grid.
+- Props: `thoughtCloudSVG(w, h)`, `labelJarSVG(id, label, col, n)` (money jar with a label strip, coins via `jarFill`).
+- New cast: Priya (`PRIYA.home`, `.lehenga`).
+- A fixed on-screen counter for the whole reel: a scene added FIRST with `addScene(0, 9999, {html, upd})`, so later
+  scenes still count as the current one (watermark, caption position).
 
 ## Suggested default (for the owner)
 
@@ -82,4 +86,6 @@ Ye shaadi season, smart bano. Comment "LEHENGA", app link DM karenge.
 
 ## Lessons
 
--
+- Whisper matched very well (147 of 157 words).
+- Don't name reel constants `PL` (the engine's placement map); a clash stops the whole page ("window.__seek is not a
+  function"). Check the page's console error first.
