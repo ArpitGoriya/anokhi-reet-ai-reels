@@ -17,6 +17,13 @@ See [GUIDE.md](GUIDE.md) section 8.
   `addScene(0, 9999, {html, upd})` so every later scene is still the "current" one.
 - **New cast:** Priya (`PRIYA.home`, `.lehenga`).
 
+## 2026-11-28: room door, pressure cooker, newspaper bundle, Shreya and Sudha (Beta, inki bhi photo achhi kheechna)
+
+- **New props:** `roomDoorSVG(id, x, y, w, h)` + `doorOpen(id, k)` (a room door seen from inside that swings open onto
+  a dark hallway), `pressureCookerSVG()` and `newspaperBundleSVG()` (the "sab bech do" pile).
+- First pink end card: a light-pink gradient with the maroon lockup (`AnokhiReet_logo_maroon.svg`) and red rosettes.
+- **New cast:** Shreya (`SHREYA`, pink suit, ponytail) and her Mummy, Sudha (`SUDHA`, orange saree, bun).
+
 ## 2026-11-27: wedding arch stage, camera, scissors crop, comment box typing, Kabir and friends (Repeat wala ladka)
 
 - **New props:** `archStageBG(id, {x, w, top, wall})` (peach wedding stage: double marigold toran, a red-and-gold arch

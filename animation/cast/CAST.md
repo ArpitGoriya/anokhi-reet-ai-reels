@@ -71,6 +71,8 @@ characters are added here after their first reel (add them to `cast.js`, to the 
 | `KABIR_DOST[0..2]` | **Sahil, Manav, Jigar**, Kabir's teasing friends. | Orange, green, purple kurtas (moustache, glasses, beard) | Repeat wala ladka |
 | `TANVI` | **Tanvi**, 20s, Kabir's crush. | Long hair, pink suit with a light-pink dupatta | Repeat wala ladka |
 | `PHOTOGRAPHER` | A wedding photographer. | Black fedora, black clothes, a camera | Repeat wala ladka |
+| `SHREYA` | **Shreya**, late 20s, the beti who lists her wedding lehenga for rent instead of selling it. | Ponytail, pink suit with a light-pink dupatta | Beta, inki bhi photo achhi kheechna (2026-11-28) |
+| `SUDHA` | **Sudha (Mummy)**, 50s, wanted to sell the lehenga; now lists her own fifteen sarees. | Bun, orange saree with a red border | Beta, inki bhi photo achhi kheechna |
 
 Ideas for the cast's next members (make them when a story needs them): a young woman who rents for college
 functions, a vendor on the Anokhi Reet app.

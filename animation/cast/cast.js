@@ -244,3 +244,7 @@ const PRIYA = {
   home: { top: '#E26A8A', topD: '#B94D6D', pallu: '#F7C548', border: C.gold, hairStyle: 'long', skin: '#C98B62', skin2: '#B9784F', bangles: true, skirt: { c: '#B94D6D', d: '#93394F', b: C.gold, w: 200 } },
   lehenga: { top: C.lehenga, topD: C.lehengaDark, pallu: '#E8C25E', border: '#B8862F', embroidery: true, necklace: true, hairStyle: 'long', skin: '#C98B62', skin2: '#B9784F', skirt: {} },
 };
+// Shreya (late 20s): the beti who lists her wedding lehenga for rent instead of selling it. Sudha (Mummy, 50s): wanted
+// to sell it, then brings her own fifteen sarees to list. (Beta, inki bhi photo achhi kheechna, 2026-11-28)
+const SHREYA = { hairStyle: 'pony', top: '#F49AB8', topD: '#D9779A', pallu: '#FFE3EC', border: C.gold, earrings: true, bangles: true, skin: '#C98B62', skin2: '#B9784F', pants: { c: '#FFE3EC', d: '#F2C8D6', hem: 150 } };
+const SUDHA = { hairStyle: 'bun', top: '#E8822E', topD: '#C9661E', pallu: '#F2A33A', border: C.red, sindoor: true, earrings: true, bangles: true, wide: true, skin: '#B97A55', skin2: '#A0663F', hair: '#3A2A22', drape: { c: '#E8822E', b: C.red }, skirt: { c: '#E8822E', d: '#C9661E', b: C.red, w: 200 } };

@@ -1151,3 +1151,22 @@ function thoughtCloudSVG(w = 760, h = 300) {
 function labelJarSVG(id, label, col = C.goldTan, n = 6) {
   return `<g id="${id}">${coinJarSVG(id + 'j', n, '')}<g transform="translate(0,40)"><rect x="-120" y="-34" width="240" height="68" rx="12" fill="${col}" stroke="${OL}" stroke-width="4"/><text y="12" text-anchor="middle" font-family="Inter" font-weight="900" font-size="34" fill="#fff">${label}</text></g></g>`;
 }
+
+// ===== Mummy ki sarees (2026-11-28) =====
+// a room door seen from inside (hinge on the left); doorOpen(id, k) swings it open (k 0…1) to show the dark hallway
+function roomDoorSVG(id, x, y, w = 260, h = 620) {
+  return `<g transform="translate(${x},${y})"><rect x="-14" y="${-h - 14}" width="${w + 28}" height="${h + 14}" fill="${C.woodDark}" stroke="${OL}" stroke-width="${OW}"/><rect x="0" y="${-h}" width="${w}" height="${h}" fill="#4A3424"/>` +
+    `<g id="${id}"><rect x="0" y="${-h}" width="${w}" height="${h}" fill="${C.wood}" stroke="${OL}" stroke-width="${OW}"/><rect x="34" y="${-h + 40}" width="${w - 68}" height="${h * .36}" rx="8" fill="none" stroke="${C.woodDark}" stroke-width="6"/>` +
+    `<rect x="34" y="${-h * .5}" width="${w - 68}" height="${h * .36}" rx="8" fill="none" stroke="${C.woodDark}" stroke-width="6"/><circle cx="${w - 36}" cy="${-h * .48}" r="14" fill="${C.gold}" stroke="${OL}" stroke-width="4"/></g></g>`;
+}
+function doorOpen(id, k) { tf($(id), 0, 0, lerp(1, .18, E.io(clamp(k))), 0, 0, 0, 1); }
+// an old pressure cooker (the "sab bech do" pile)
+function pressureCookerSVG() {
+  return `<path d="M-90,-10 Q-96,80 -70,96 L70,96 Q96,80 90,-10 Z" fill="#C9CED4" stroke="${OL}" stroke-width="${OW}"/><rect x="-100" y="-34" width="200" height="34" rx="12" fill="#AEB5BD" stroke="${OL}" stroke-width="${OW}"/>` +
+    `<rect x="-14" y="-74" width="28" height="42" rx="8" fill="#2E2E33" stroke="${OL}" stroke-width="4"/><rect x="96" y="-30" width="130" height="26" rx="12" fill="#2E2E33" stroke="${OL}" stroke-width="4"/><path d="M-60,40 Q-40,30 -20,42" fill="none" stroke="#8D949C" stroke-width="5"/>`;
+}
+// a tied bundle of old newspapers
+function newspaperBundleSVG() {
+  return [0, 1, 2, 3].map(i => `<rect x="-110" y="${-i * 26}" width="220" height="30" rx="4" fill="${i % 2 ? '#EDE6D6' : '#F7F2E6'}" stroke="${OL}" stroke-width="4"/><path d="M-90,${-i * 26 + 12} H60" stroke="#B7AE9C" stroke-width="4"/>`).join('') +
+    `<path d="M-20,-84 V30 M-40,-84 Q-20,-110 0,-84" fill="none" stroke="#B5532E" stroke-width="7"/>`;
+}

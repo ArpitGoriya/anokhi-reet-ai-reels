@@ -2,7 +2,7 @@
 
 - **Date started:** 2026-11-27
 - **Made by:** dhruvifewtone-wq
-- **Status:** voice take 1 made (waiting for a listen)
+- **Status:** video 1 sent (2026-11-28)
 
 ## Brief
 
@@ -15,7 +15,7 @@
 - **One message:** Don't sell your wedding outfits cheap: list them for rent on Anokhi Reet. Comment "RENT".
 - **Voice:** female (Vindemiatrix) as the daughter (narrator); she also reads Mummy's lines (speech bubbles show who
   speaks). Female Hindi grammar.
-- **Characters:** New: **Khushi, the beti** (pink suit), **Mummy** (orange saree, hair in a bun).
+- **Characters:** New: **Shreya, the beti** (pink suit), **Mummy** (orange saree, hair in a bun).
 - **Length:** about 60 s (the voice decides).
 - **Music:** none (voice only).
 - **Special wishes:** cream background; a pink end card.
@@ -52,11 +52,11 @@ Voice text: [`script.txt`](script.txt).
 
 ## Voice-over
 
-- Take 1: `output/female-mummy-ki-sarees-take1.mp3` (49 s) — waiting for the teammate's listen
+- Take 1: `output/female-mummy-ki-sarees-take1.mp3` (49 s) — approved: yes, 2026-11-28
 
 ## Video
 
-- (not made yet)
+- `output/2026-11-27-mummy-ki-sarees.mp4` (52 s), video 1 sent 2026-11-28.
 
 ## Feedback rounds
 
@@ -84,7 +84,8 @@ Apni mummy ko tag karo 😄
 
 ## Added to the library (at least two per reel)
 
-- (to come)
+- `roomDoorSVG` + `doorOpen`, `pressureCookerSVG`, `newspaperBundleSVG` in `engine/props.js`.
+- New cast: Shreya and Sudha (Mummy).
 
 ## Suggested default (for the owner)
 
