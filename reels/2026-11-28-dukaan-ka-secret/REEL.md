@@ -3,7 +3,7 @@
 - **Date started:** 2026-11-28
 - **Made by:** teammate (script, from `Anokhireet_Secret_Reel_Script.pdf`; style reference: a 2D story reel sent on
   WhatsApp) + Claude
-- **Status:** script waiting for approval
+- **Status:** script approved; voice take 1 waiting for a listen
 
 ## Brief
 
@@ -11,7 +11,7 @@
   "woh peach wali lehenga". A year ago: customers opened 40 lehengas and left ("sochke batate hain"), 15 visitors →
   2 bookings, a new AC showroom across the road, a "Dukaan bechni hai" board. A college girl asks: "Uncle, aapki
   dukaan phone pe kyun nahi dikhti?" He tears up the board and does one thing. 1 month later: screenshots → trial
-  room, 8 of 6 → 6 of 8 bookings, fold pile 40 → 2-3, calls from Vadodara, Navsari, Bharuch, and the showroom owner
+  room, bookings from 2 of 15 to 6 of 8, fold pile 40 → 2-3, calls from Vadodara, Navsari, Bharuch, and the showroom owner
   asks "kiya kya?". The reveal: he listed the shop on Anokhi Reet. CTA: comment SECRET, the team calls back.
 - **For:** Traditional-wear rental shop owners and boutiques (Gujarat first). Goal: comments "SECRET" = leads.
 - **One message:** Same shop, same stock, same rates… but now the shop opens on the phone too.
@@ -38,7 +38,7 @@ Everything here is applied in every round and never silently reverted.
 - **Story numbers kept** (10x12, 1 ghanta, 40 lehenge, 15 → 2, 8 → 6, 40 → 2-3). (PDF)
 - **Brand name** "Anokhi Reet"; hashtags cut to 5. (round 0)
 
-## Script and storyboard (approved: no)
+## Script and storyboard (approved: yes)
 
 Voice script: [`script.txt`](script.txt) (Devanagari, male voice).
 
@@ -69,7 +69,7 @@ Voice script: [`script.txt`](script.txt) (Devanagari, male voice).
 
 ## Voice-over
 
-- File: — approved: no
+- Take 1: `output/male-dukaan-ka-secret-take1.mp3` (85.1 s) — approved: pending
 - Captions timed with `tools/caption_timing.py` (redo after every new take)
 
 ## Feedback rounds
